@@ -21,7 +21,7 @@
 - [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
 - [ ] **System Power**: SM8102ABC
 - [ ] **Display**: 1.3" SH1106 128 x 64
-- [ ] **LoRa**: XY16P35 (SX1262)
+- [ ] **LoRa**: SX1262
 - [ ] **GPS**: L76K GNSS Module
 
 ### • Wie Kompilieren?
