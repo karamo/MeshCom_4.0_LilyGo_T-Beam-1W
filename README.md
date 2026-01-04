@@ -24,38 +24,41 @@
 - [ ] **LoRa**: XY16P35
 - [ ] **GPS**: L76K GNSS Module
 
-### Wie Kompilieren?
+### • Wie Kompilieren?
 1. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
 2. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
 3. anschließend VSC neu starten.
 4. ...
 
-### Wie Modul Flashen?
+### • Wie Modul Flashen?
 * ...
 * ...
 
-### Pinning
+### • Pinning
 | Pin  | Beschreibung |
 | ------------- | ------------- |
 | IO0 | BOOT |
 | IO1 | LoRa DIO1 |
 | IO3 | LoRa NRESET |
-| IO4 | Battery Voltage sampling VBAT-300k1% - 150k1% - GND |
+| IO4 | Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
 | IO8 | SDA |
 | IO9 | SCL |
 | IO10 | SD_CS |
 | IO11 | LoRa_MOSI & SD_MOSI |
 | IO12 | LoRa_MISO & SD_MISO |
 | IO13 | LoRa_SCK & SD_SCK |
-| IO14 | TEMP-SAMP (NTC) |
+| IO14 | Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
 | IO15 | LoRa_CS |
 | IO17 | UserButton  |
+| IO18 | LED3 |
 | IO21 | LoRa CTL |
 | IO38 | LoRa_BUSY |
 | IO40 | LoRa LDO_EN |
 | IO41 | FANCTRL |
 | IO43 | TxD |
 | IO44 | RxD |
+| VBUS | von USB-C an Buchsenleiste verfügbar |
+| VBAT | IN/OUT max. 7,4 V |
 
 
 
