@@ -23,7 +23,7 @@
 
 ### Wie Kompilieren?
 1. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
-2. In linker vertikaler Icon-Leiste **VSC Extentions** `PlatformIO` plugin suchen und installieren.
+2. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
 3. anschließend VSC neu starten.
 4. ...
 
