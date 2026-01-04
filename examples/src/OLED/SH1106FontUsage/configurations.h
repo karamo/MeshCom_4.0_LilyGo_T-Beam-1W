@@ -1,26 +1,9 @@
 #pragma once
 
-// Support board list , Macro definition below, select the board definition to be used
-
-/***********************************  Model definition start ***********************************/
-
-// 2. --------------T3 V1.6.1 -------------------------------
-// https://lilygo.cc/products/lora3
-// #define T3_V1_6_SX1276
-#define T3_V1_6_SX1278
-
-// --------------LoRa 2W -------------------------------------
-// Product: ...
-// #define T_BEAM_1W
-
-
-/***********************************  Model definition end ***********************************/
-
-
 #define UNUSED_PIN                   (0)
 
+///< TLORA
 #if defined(T3_V1_6_SX1276) || defined(T3_V1_6_SX1278)
-
 
 #if   defined(T3_V1_6_SX1276)
 #ifndef USING_SX1276
@@ -55,6 +38,7 @@
 
 #define BOARD_LED                   25
 #define LED_ON                      HIGH
+#define LED_OFF                     LOW
 
 #define ADC_PIN                     35
 
@@ -69,6 +53,7 @@
 #define BAT_MAX_VOLTAGE             (4.2)
 #define BAT_VOL_COMPENSATION        (0.0)
 
+///< T-Beam 1W
 #elif defined(T_BEAM_1W)
 
 #ifndef USING_SX1262
@@ -136,7 +121,7 @@
 #define BOARD_VARIANT_NAME          "LoRa 2W"
 
 #else
-#error "When using it for the first time, please define the board model in <utilities.h> 首次使用时，请在<utilities.h> 文件最上方定义板卡模型"
+#error "When using it for the first time, please define the board model in <utilities.h>"
 #endif
 
 
