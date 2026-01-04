@@ -14,12 +14,15 @@
 
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
+- [x] **pinning**
 - [ ] **Examples** von der Xinyuan-LilyGo Seite testen
 - [ ] **Key-Components** beschreiben
-- [ ] **pinning**
-- [ ] **Display**: ...
-- [ ] **LoRa**: SX12..
-- [ ] **GPS**: ...
+- [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
+- [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
+- [ ] **System Power**: SM8102ABC
+- [ ] **Display**: SH1106
+- [ ] **LoRa**: XY16P35
+- [ ] **GPS**: L76K GNSS Module
 
 ### Wie Kompilieren?
 1. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
@@ -30,6 +33,31 @@
 ### Wie Modul Flashen?
 * ...
 * ...
+
+### Pinning
+| Pin  | Beschreibung |
+| ------------- | ------------- |
+| IO0 | BOOT |
+| IO1 | LoRa DIO1 |
+| IO3 | LoRa NRESET |
+| IO4 | Battery Voltage sampling VBAT-300k1% - 150k1% - GND |
+| IO8 | SDA |
+| IO9 | SCL |
+| IO10 | SD_CS |
+| IO11 | LoRa_MOSI & SD_MOSI |
+| IO12 | LoRa_MISO & SD_MISO |
+| IO13 | LoRa_SCK & SD_SCK |
+| IO14 | TEMP-SAMP (NTC) |
+| IO15 | LoRa_CS |
+| IO17 | UserButton  |
+| IO21 | LoRa CTL |
+| IO38 | LoRa_BUSY |
+| IO40 | LoRa LDO_EN |
+| IO41 | FANCTRL |
+| IO43 | TxD |
+| IO44 | RxD |
+
+
 
 ### • Link zu den Originaldokumenten:  
 <ins>Hardware Overview:</ins>  
