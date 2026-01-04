@@ -20,8 +20,8 @@
 - [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
 - [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
 - [ ] **System Power**: SM8102ABC
-- [ ] **Display**: SH1106
-- [ ] **LoRa**: XY16P35
+- [ ] **Display**: 1.3" SH1106 128 x 64
+- [ ] **LoRa**: XY16P35 (SX1262)
 - [ ] **GPS**: L76K GNSS Module
 
 ### • Wie Kompilieren?
