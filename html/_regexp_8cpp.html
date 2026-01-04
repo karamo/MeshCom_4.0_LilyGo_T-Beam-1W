@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/Regexp.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_regexp_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Regexp.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;setjmp.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_regexp_8h_source.html">Regexp.h</a>&quot;</code><br />
+</div>
+<p><a href="_regexp_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typdefinitionen</h2></td></tr>
+<tr class="memitem:a0c8186d9b9b7880309c27230bbb5e69d" id="r_a0c8186d9b9b7880309c27230bbb5e69d"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a780b9f43408e455513accbbd577a16ee" id="r_a780b9f43408e455513accbbd577a16ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a780b9f43408e455513accbbd577a16ee">error</a> (char err)</td></tr>
+<tr class="memitem:a12e95b82a8ef9c037dd5f778d73d6d57" id="r_a12e95b82a8ef9c037dd5f778d73d6d57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e95b82a8ef9c037dd5f778d73d6d57">check_capture</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, int l)</td></tr>
+<tr class="memitem:add05c6bbebd711e93942b1aaa1fbbc67" id="r_add05c6bbebd711e93942b1aaa1fbbc67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add05c6bbebd711e93942b1aaa1fbbc67">capture_to_close</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms)</td></tr>
+<tr class="memitem:a0a83a618d52bbc4cccf8b80d0e651487" id="r_a0a83a618d52bbc4cccf8b80d0e651487"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a83a618d52bbc4cccf8b80d0e651487">classend</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *p)</td></tr>
+<tr class="memitem:a511d3c0ddcaf829362667cc17a12c344" id="r_a511d3c0ddcaf829362667cc17a12c344"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a511d3c0ddcaf829362667cc17a12c344">match_class</a> (int c, int cl)</td></tr>
+<tr class="memitem:a3e4ea5b2c429e8b1c638e02c478254c4" id="r_a3e4ea5b2c429e8b1c638e02c478254c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e4ea5b2c429e8b1c638e02c478254c4">matchbracketclass</a> (int c, char *p, char *ec)</td></tr>
+<tr class="memitem:a7f13fe054d0fd7ae6866d749fc23b4cf" id="r_a7f13fe054d0fd7ae6866d749fc23b4cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f13fe054d0fd7ae6866d749fc23b4cf">singlematch</a> (int c, char *p, char *ep)</td></tr>
+<tr class="memitem:a6064e3ca5b41c54cd58a10e1e2e72b5e" id="r_a6064e3ca5b41c54cd58a10e1e2e72b5e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6064e3ca5b41c54cd58a10e1e2e72b5e">match</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p)</td></tr>
+<tr class="memitem:ab6014c9a606e0f1b5af7a9b9deb9cddc" id="r_ab6014c9a606e0f1b5af7a9b9deb9cddc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6014c9a606e0f1b5af7a9b9deb9cddc">matchbalance</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p)</td></tr>
+<tr class="memitem:a6cb71aef3540d72c8eb7bb1874276d41" id="r_a6cb71aef3540d72c8eb7bb1874276d41"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cb71aef3540d72c8eb7bb1874276d41">max_expand</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p, char *ep)</td></tr>
+<tr class="memitem:af11226479d4c55ecb4453c0e284afc7f" id="r_af11226479d4c55ecb4453c0e284afc7f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af11226479d4c55ecb4453c0e284afc7f">min_expand</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p, char *ep)</td></tr>
+<tr class="memitem:a282d1259af10ca53d69c79dd2ec9ee3d" id="r_a282d1259af10ca53d69c79dd2ec9ee3d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282d1259af10ca53d69c79dd2ec9ee3d">start_capture</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p, int what)</td></tr>
+<tr class="memitem:a8fd6f9c02097c5bd7e1fe71288b850ea" id="r_a8fd6f9c02097c5bd7e1fe71288b850ea"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd6f9c02097c5bd7e1fe71288b850ea">end_capture</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, char *p)</td></tr>
+<tr class="memitem:a5ffa68605e4a0907c538a0eceab95ed8" id="r_a5ffa68605e4a0907c538a0eceab95ed8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ffa68605e4a0907c538a0eceab95ed8">match_capture</a> (<a class="el" href="class_match_state.html">MatchState</a> *ms, char *s, int l)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a04d9b5f9b3b37e12ae062675b4220f28" id="r_a04d9b5f9b3b37e12ae062675b4220f28"><td class="memItemLeft" align="right" valign="top">jmp_buf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d9b5f9b3b37e12ae062675b4220f28">regexp_error_return</a></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Dokumentation der benutzerdefinierten Typen</h2>
+<a id="a0c8186d9b9b7880309c27230bbb5e69d" name="a0c8186d9b9b7880309c27230bbb5e69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8186d9b9b7880309c27230bbb5e69d">&#9670;&#160;</a></span>byte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00009">9</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="add05c6bbebd711e93942b1aaa1fbbc67" name="add05c6bbebd711e93942b1aaa1fbbc67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add05c6bbebd711e93942b1aaa1fbbc67">&#9670;&#160;</a></span>capture_to_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int capture_to_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a12e95b82a8ef9c037dd5f778d73d6d57" name="a12e95b82a8ef9c037dd5f778d73d6d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e95b82a8ef9c037dd5f778d73d6d57">&#9670;&#160;</a></span>check_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>l</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00021">21</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a83a618d52bbc4cccf8b80d0e651487" name="a0a83a618d52bbc4cccf8b80d0e651487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a83a618d52bbc4cccf8b80d0e651487">&#9670;&#160;</a></span>classend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * classend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8fd6f9c02097c5bd7e1fe71288b850ea" name="a8fd6f9c02097c5bd7e1fe71288b850ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fd6f9c02097c5bd7e1fe71288b850ea">&#9670;&#160;</a></span>end_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * end_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00190">190</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a780b9f43408e455513accbbd577a16ee" name="a780b9f43408e455513accbbd577a16ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a780b9f43408e455513accbbd577a16ee">&#9670;&#160;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> error </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>err</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00013">13</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6064e3ca5b41c54cd58a10e1e2e72b5e" name="a6064e3ca5b41c54cd58a10e1e2e72b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6064e3ca5b41c54cd58a10e1e2e72b5e">&#9670;&#160;</a></span>match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * match </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00215">215</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ffa68605e4a0907c538a0eceab95ed8" name="a5ffa68605e4a0907c538a0eceab95ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ffa68605e4a0907c538a0eceab95ed8">&#9670;&#160;</a></span>match_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * match_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>l</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00203">203</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a511d3c0ddcaf829362667cc17a12c344" name="a511d3c0ddcaf829362667cc17a12c344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511d3c0ddcaf829362667cc17a12c344">&#9670;&#160;</a></span>match_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int match_class </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00062">62</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab6014c9a606e0f1b5af7a9b9deb9cddc" name="ab6014c9a606e0f1b5af7a9b9deb9cddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6014c9a606e0f1b5af7a9b9deb9cddc">&#9670;&#160;</a></span>matchbalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * matchbalance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00121">121</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e4ea5b2c429e8b1c638e02c478254c4" name="a3e4ea5b2c429e8b1c638e02c478254c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e4ea5b2c429e8b1c638e02c478254c4">&#9670;&#160;</a></span>matchbracketclass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int matchbracketclass </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ec</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00082">82</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6cb71aef3540d72c8eb7bb1874276d41" name="a6cb71aef3540d72c8eb7bb1874276d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb71aef3540d72c8eb7bb1874276d41">&#9670;&#160;</a></span>max_expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * max_expand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00142">142</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af11226479d4c55ecb4453c0e284afc7f" name="af11226479d4c55ecb4453c0e284afc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11226479d4c55ecb4453c0e284afc7f">&#9670;&#160;</a></span>min_expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * min_expand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00159">159</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f13fe054d0fd7ae6866d749fc23b4cf" name="a7f13fe054d0fd7ae6866d749fc23b4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f13fe054d0fd7ae6866d749fc23b4cf">&#9670;&#160;</a></span>singlematch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int singlematch </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00106">106</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a282d1259af10ca53d69c79dd2ec9ee3d" name="a282d1259af10ca53d69c79dd2ec9ee3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282d1259af10ca53d69c79dd2ec9ee3d">&#9670;&#160;</a></span>start_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * start_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_match_state.html">MatchState</a> *</td>          <td class="paramname"><span class="paramname"><em>ms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>what</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00174">174</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a04d9b5f9b3b37e12ae062675b4220f28" name="a04d9b5f9b3b37e12ae062675b4220f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d9b5f9b3b37e12ae062675b4220f28">&#9670;&#160;</a></span>regexp_error_return</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">jmp_buf regexp_error_return</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_regexp_8cpp_source.html#l00008">8</a> der Datei <a class="el" href="_regexp_8cpp_source.html">Regexp.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_regexp_8cpp.html">Regexp.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

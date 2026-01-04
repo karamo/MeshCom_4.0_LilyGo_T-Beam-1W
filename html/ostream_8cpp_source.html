@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/iostream/ostream.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ostream_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ostream.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ostream_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(ESP8266)  &amp;&amp; !defined(ESP32)  </span><span class="comment">// heltec-eink-modules</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="ostream_8h.html">ostream.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifdef __AVR__</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;avr/pgmspace.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef PSTR</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="ostream_8cpp.html#a9c00057fd19e916cc1aa0a5949336beb">   33</a></span><span class="preprocessor">#define PSTR(x) x</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif  </span><span class="comment">// PSTR</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">ostream::do_fill</a>(<span class="keywordtype">unsigned</span> len) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">for</span> (; len &lt; <a class="code hl_function" href="classios__base.html#afa30e7644b4eae5928ad9c487ad387de">width</a>(); len++) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    putch(<a class="code hl_function" href="classios__base.html#ade5bd46462e075999c3a5c2cff2015f1">fill</a>());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="classios__base.html#afa30e7644b4eae5928ad9c487ad387de">width</a>(0);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">ostream::fill_not_left</a>(<span class="keywordtype">unsigned</span> len) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordflow">if</span> ((<a class="code hl_function" href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">flags</a>() &amp; <a class="code hl_variable" href="classios__base.html#adaaf735381254aa096ebe3605e8bbd0a">adjustfield</a>) != <a class="code hl_variable" href="classios__base.html#ad364df9af2cfde1f40bd8e10c62bb215">left</a>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(len);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classostream.html#a9cb156e9728eee5ff9307a3a3ded4d58">   49</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a9cb156e9728eee5ff9307a3a3ded4d58">ostream::putBool</a>(<span class="keywordtype">bool</span> b) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">flags</a>() &amp; <a class="code hl_variable" href="classios__base.html#afa74acd95d4bbc7cc3551251aac2bf00">boolalpha</a>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (b) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <a class="code hl_function" href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">putPgm</a>(<a class="code hl_define" href="ostream_8cpp.html#a9c00057fd19e916cc1aa0a5949336beb">PSTR</a>(<span class="stringliteral">&quot;true&quot;</span>));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_function" href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">putPgm</a>(<a class="code hl_define" href="ostream_8cpp.html#a9c00057fd19e916cc1aa0a5949336beb">PSTR</a>(<span class="stringliteral">&quot;false&quot;</span>));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="classostream.html#a274ada578ffd2335fa220c6ed74f3702">putChar</a>(b ? <span class="charliteral">&#39;1&#39;</span> : <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classostream.html#a274ada578ffd2335fa220c6ed74f3702">   61</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a274ada578ffd2335fa220c6ed74f3702">ostream::putChar</a>(<span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_function" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">fill_not_left</a>(1);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  putch(c);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(1);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classostream.html#a3a77bc22bce5cf5d09f2d3816a11dd18">   67</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a3a77bc22bce5cf5d09f2d3816a11dd18">ostream::putDouble</a>(<span class="keywordtype">double</span> n) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  uint8_t nd = <a class="code hl_function" href="classios__base.html#aba92f0687644fc14f202958635ce276f">precision</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">double</span> round = 0.5;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">char</span> sign;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">char</span> buf[13];  <span class="comment">// room for sign, 10 digits, &#39;.&#39;, and zero byte</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">char</span> *ptr = buf + <span class="keyword">sizeof</span>(buf) - 1;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">char</span> *<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = ptr;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// terminate string</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  *ptr = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// get sign and make nonnegative</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordflow">if</span> (n &lt; 0.0) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    sign = <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    n = -n;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    sign = <a class="code hl_function" href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">flags</a>() &amp; <a class="code hl_variable" href="classios__base.html#a7bfa4a883933105d10f8ce2693cb9f21">showpos</a> ? <span class="charliteral">&#39;+&#39;</span> : <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">// check for larger than uint32_t</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">if</span> (n &gt; 4.0E9) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">putPgm</a>(<a class="code hl_define" href="ostream_8cpp.html#a9c00057fd19e916cc1aa0a5949336beb">PSTR</a>(<span class="stringliteral">&quot;BIG FLT&quot;</span>));</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// round up and separate int and fraction parts</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">for</span> (uint8_t <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> = 0; <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> &lt; nd; ++<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    round *= 0.1;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  n += round;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  uint32_t intPart = n;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">double</span> fractionPart = n - intPart;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="comment">// format intPart and decimal point</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">if</span> (nd || (<a class="code hl_function" href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">flags</a>() &amp; <a class="code hl_variable" href="classios__base.html#ac9bb172682e157f037bd7fb82a236ee6">showpoint</a>)) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;.&#39;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <a class="code hl_function" href="classostream.html#a20eb271c381ad458c9a0b893593b44d7">fmtNum</a>(intPart, <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, 10);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="comment">// calculate length for fill</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  uint8_t len = sign ? 1 : 0;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  len += nd + ptr - <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">// extract adjust field</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_typedef" href="classios__base.html#ac9a54e52cef4f01ac0afd8ae896a3413">fmtflags</a> adj = <a class="code hl_function" href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">flags</a>() &amp; <a class="code hl_variable" href="classios__base.html#adaaf735381254aa096ebe3605e8bbd0a">adjustfield</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">if</span> (adj == <a class="code hl_variable" href="classios__base.html#afc720b7f6f461ec8e9cf5505059e5d7c">internal</a>) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (sign) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      putch(sign);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(len);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="comment">// do fill for right</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_function" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">fill_not_left</a>(len);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">if</span> (sign) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = sign;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  putstr(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="comment">// output fraction</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordflow">while</span> (nd-- &gt; 0) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    fractionPart *= 10.0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">int</span> digit = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(fractionPart);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    putch(digit + <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    fractionPart -= digit;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="comment">// do fill if not done above</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(len);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">  133</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">ostream::putNum</a>(int32_t n) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordtype">bool</span> neg = n &lt; 0 &amp;&amp; <a class="code hl_function" href="classios__base.html#a19ffb796cb95d3744d9bc7739939acf2">flagsToBase</a>() == 10;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <a class="code hl_function" href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">putNum</a>((uint32_t)(neg ? -n : n), neg);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classostream.html#ac52196c3baa926cba3539c585464f4ac">  138</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">ostream::putNum</a>(int64_t n) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordtype">bool</span> neg = n &lt; 0 &amp;&amp; <a class="code hl_function" href="classios__base.html#a19ffb796cb95d3744d9bc7739939acf2">flagsToBase</a>() == 10;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_function" href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">putNum</a>((uint64_t)(neg ? -n : n), neg);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">  143</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">ostream::putPgm</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#ifndef __AVR__</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <a class="code hl_function" href="classostream.html#a435bd154f24800d721b7c2839943d6c5">putStr</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#else   </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  uint8_t c;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keywordflow">for</span> (n = 0; <a class="code hl_define" href="text_8cpp.html#a48c60b057902adf805797f183286728d">pgm_read_byte</a>(&amp;<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>[n]); n++) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_function" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">fill_not_left</a>(n);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">for</span> (n = 0; (c = <a class="code hl_define" href="text_8cpp.html#a48c60b057902adf805797f183286728d">pgm_read_byte</a>(&amp;<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>[n])); n++) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    putch(c);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(n);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classostream.html#a435bd154f24800d721b7c2839943d6c5">  159</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classostream.html#a435bd154f24800d721b7c2839943d6c5">ostream::putStr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keywordtype">unsigned</span> n = strlen(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_function" href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">fill_not_left</a>(n);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  putstr(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <a class="code hl_function" href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">do_fill</a>(n);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassios__base_html_a19ffb796cb95d3744d9bc7739939acf2"><div class="ttname"><a href="classios__base.html#a19ffb796cb95d3744d9bc7739939acf2">ios_base::flagsToBase</a></div><div class="ttdeci">uint8_t flagsToBase()</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00221">ios.h:221</a></div></div>
+<div class="ttc" id="aclassios__base_html_a2a73a30a8b157cc1cc92bb55b0a62e4a"><div class="ttname"><a href="classios__base.html#a2a73a30a8b157cc1cc92bb55b0a62e4a">ios_base::flags</a></div><div class="ttdeci">fmtflags flags() const</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00162">ios.h:162</a></div></div>
+<div class="ttc" id="aclassios__base_html_a7bfa4a883933105d10f8ce2693cb9f21"><div class="ttname"><a href="classios__base.html#a7bfa4a883933105d10f8ce2693cb9f21">ios_base::showpos</a></div><div class="ttdeci">static const fmtflags showpos</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00116">ios.h:116</a></div></div>
+<div class="ttc" id="aclassios__base_html_aba92f0687644fc14f202958635ce276f"><div class="ttname"><a href="classios__base.html#aba92f0687644fc14f202958635ce276f">ios_base::precision</a></div><div class="ttdeci">int precision() const</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00173">ios.h:173</a></div></div>
+<div class="ttc" id="aclassios__base_html_ac9a54e52cef4f01ac0afd8ae896a3413"><div class="ttname"><a href="classios__base.html#ac9a54e52cef4f01ac0afd8ae896a3413">ios_base::fmtflags</a></div><div class="ttdeci">unsigned int fmtflags</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00094">ios.h:94</a></div></div>
+<div class="ttc" id="aclassios__base_html_ac9bb172682e157f037bd7fb82a236ee6"><div class="ttname"><a href="classios__base.html#ac9bb172682e157f037bd7fb82a236ee6">ios_base::showpoint</a></div><div class="ttdeci">static const fmtflags showpoint</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00114">ios.h:114</a></div></div>
+<div class="ttc" id="aclassios__base_html_ad364df9af2cfde1f40bd8e10c62bb215"><div class="ttname"><a href="classios__base.html#ad364df9af2cfde1f40bd8e10c62bb215">ios_base::left</a></div><div class="ttdeci">static const fmtflags left</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00096">ios.h:96</a></div></div>
+<div class="ttc" id="aclassios__base_html_adaaf735381254aa096ebe3605e8bbd0a"><div class="ttname"><a href="classios__base.html#adaaf735381254aa096ebe3605e8bbd0a">ios_base::adjustfield</a></div><div class="ttdeci">static const fmtflags adjustfield</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00123">ios.h:123</a></div></div>
+<div class="ttc" id="aclassios__base_html_ade5bd46462e075999c3a5c2cff2015f1"><div class="ttname"><a href="classios__base.html#ade5bd46462e075999c3a5c2cff2015f1">ios_base::fill</a></div><div class="ttdeci">char fill()</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00151">ios.h:151</a></div></div>
+<div class="ttc" id="aclassios__base_html_afa30e7644b4eae5928ad9c487ad387de"><div class="ttname"><a href="classios__base.html#afa30e7644b4eae5928ad9c487ad387de">ios_base::width</a></div><div class="ttdeci">unsigned width()</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00208">ios.h:208</a></div></div>
+<div class="ttc" id="aclassios__base_html_afa74acd95d4bbc7cc3551251aac2bf00"><div class="ttname"><a href="classios__base.html#afa74acd95d4bbc7cc3551251aac2bf00">ios_base::boolalpha</a></div><div class="ttdeci">static const fmtflags boolalpha</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00110">ios.h:110</a></div></div>
+<div class="ttc" id="aclassios__base_html_afc720b7f6f461ec8e9cf5505059e5d7c"><div class="ttname"><a href="classios__base.html#afc720b7f6f461ec8e9cf5505059e5d7c">ios_base::internal</a></div><div class="ttdeci">static const fmtflags internal</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00100">ios.h:100</a></div></div>
+<div class="ttc" id="aclassostream_html_a20eb271c381ad458c9a0b893593b44d7"><div class="ttname"><a href="classostream.html#a20eb271c381ad458c9a0b893593b44d7">ostream::fmtNum</a></div><div class="ttdeci">char * fmtNum(T n, char *ptr, uint8_t base)</div><div class="ttdef"><b>Definition</b> <a href="ostream_8h_source.html#l00297">ostream.h:297</a></div></div>
+<div class="ttc" id="aclassostream_html_a2620fcbd24176bb159f22e1f054ec3f9"><div class="ttname"><a href="classostream.html#a2620fcbd24176bb159f22e1f054ec3f9">ostream::putNum</a></div><div class="ttdeci">void putNum(int32_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00133">ostream.cpp:133</a></div></div>
+<div class="ttc" id="aclassostream_html_a274ada578ffd2335fa220c6ed74f3702"><div class="ttname"><a href="classostream.html#a274ada578ffd2335fa220c6ed74f3702">ostream::putChar</a></div><div class="ttdeci">void putChar(char c)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">ostream.cpp:61</a></div></div>
+<div class="ttc" id="aclassostream_html_a3a77bc22bce5cf5d09f2d3816a11dd18"><div class="ttname"><a href="classostream.html#a3a77bc22bce5cf5d09f2d3816a11dd18">ostream::putDouble</a></div><div class="ttdeci">void putDouble(double n)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">ostream.cpp:67</a></div></div>
+<div class="ttc" id="aclassostream_html_a435bd154f24800d721b7c2839943d6c5"><div class="ttname"><a href="classostream.html#a435bd154f24800d721b7c2839943d6c5">ostream::putStr</a></div><div class="ttdeci">void putStr(const char *str)</div><div class="ttdef"><b>Definition</b> <a href="#l00159">ostream.cpp:159</a></div></div>
+<div class="ttc" id="aclassostream_html_a8056a7d45f558917c1362c3ede310ef9"><div class="ttname"><a href="classostream.html#a8056a7d45f558917c1362c3ede310ef9">ostream::do_fill</a></div><div class="ttdeci">void do_fill(unsigned len)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">ostream.cpp:36</a></div></div>
+<div class="ttc" id="aclassostream_html_a9cb156e9728eee5ff9307a3a3ded4d58"><div class="ttname"><a href="classostream.html#a9cb156e9728eee5ff9307a3a3ded4d58">ostream::putBool</a></div><div class="ttdeci">void putBool(bool b)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">ostream.cpp:49</a></div></div>
+<div class="ttc" id="aclassostream_html_aa6c0ca9fc60d344bd0080be309c32ccb"><div class="ttname"><a href="classostream.html#aa6c0ca9fc60d344bd0080be309c32ccb">ostream::putPgm</a></div><div class="ttdeci">void putPgm(const char *str)</div><div class="ttdef"><b>Definition</b> <a href="#l00143">ostream.cpp:143</a></div></div>
+<div class="ttc" id="aclassostream_html_ad5027f5ab212cf912b795ba8a26b7808"><div class="ttname"><a href="classostream.html#ad5027f5ab212cf912b795ba8a26b7808">ostream::fill_not_left</a></div><div class="ttdeci">void fill_not_left(unsigned len)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">ostream.cpp:43</a></div></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_aa0e5b670397c0b01582fc3e2ae4a0bfd"><div class="ttname"><a href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a></div><div class="ttdeci">byte i</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00006">onewire_functions.cpp:6</a></div></div>
+<div class="ttc" id="aostream_8cpp_html_a9c00057fd19e916cc1aa0a5949336beb"><div class="ttname"><a href="ostream_8cpp.html#a9c00057fd19e916cc1aa0a5949336beb">PSTR</a></div><div class="ttdeci">#define PSTR(x)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">ostream.cpp:33</a></div></div>
+<div class="ttc" id="aostream_8h_html"><div class="ttname"><a href="ostream_8h.html">ostream.h</a></div><div class="ttdoc">ostream class</div></div>
+<div class="ttc" id="atext_8cpp_html_a48c60b057902adf805797f183286728d"><div class="ttname"><a href="text_8cpp.html#a48c60b057902adf805797f183286728d">pgm_read_byte</a></div><div class="ttdeci">#define pgm_read_byte(addr)</div><div class="ttdef"><b>Definition</b> <a href="text_8cpp_source.html#l00164">text.cpp:164</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_31d1d7879a1997b7d83db029e2251014.html">iostream</a></li><li class="navelem"><a href="ostream_8cpp.html">ostream.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

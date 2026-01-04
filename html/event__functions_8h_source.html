@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t-deck/event_functions.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('event__functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">event_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="event__functions_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef _EVENT_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define _EVENT_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;AceButton.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span>ace_button;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="lvgl_8h.html">lvgl.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="event__functions_8h.html#aa5e30ed15be44a2a32c035717c43fa38">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#aa5e30ed15be44a2a32c035717c43fa38">box_event_cb</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#ae55c6e20bb5d2a75e9473660772253dc">btn_event_handler_aprs</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a0482520375bb06111d5388a9ae9b8c46">btn_event_handler_setup</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a5d7aec446e0c073efb18baf7cdbe90ae">btn_event_handler_switch</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a062553cc791e44d991b6e68640bed9e5">btn_event_handler_dropdown_country</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a3d431104fbb9dba529ae98821bd6ded0">btn_event_handler_dropdown_mapselect</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a523f4bae9328eaebad07376eb93e2ef5">btn_event_handler_dropdown_modusselect</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a560691c47dd43a9573ce1a797de6252f">btn_event_handler_send</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#aa787670935b9d3db92f6c7c7880d361c">btn_event_handler_clear</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a626deac6066f0c068e15dffdb13cc3de">btn_event_handler_up</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#ab69ccbb4d9442d9a2ac75bb491cb8ad0">btn_event_handler_sendpos</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#ab5471a733084f7e0210cdb35930e022a">btn_event_handler_zoomin</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a81ffe1dd72ce5a66b940c34b1e450ff6">btn_event_handler_zoomout</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a37697fa67c3d936b8775a84f485e17a6">handleTrackballPressEvent</a>(AceButton *, uint8_t eventType, uint8_t);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a0ceb4c91d0142a44f5a2c7e650e3129b">tv_event_cb</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#aded1d14308cc1541750d4df83c7fd8d3">tabview_event_cb</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#a986c0f6360637ae885c1dee1d05d798a">position_ta_draw_event</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#acf370ec1f22b6d130d1aaf21bba4bd0f">mheard_ta_draw_event</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="event__functions_8h.html#af993e979d128e15520ba289a385ffdff">path_ta_draw_event</a>(lv_event_t * e);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">// _EVENT_FUNCTIONS_H_</span></div>
+<div class="ttc" id="aevent__functions_8h_html_a0482520375bb06111d5388a9ae9b8c46"><div class="ttname"><a href="event__functions_8h.html#a0482520375bb06111d5388a9ae9b8c46">btn_event_handler_setup</a></div><div class="ttdeci">void btn_event_handler_setup(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00422">event_functions.cpp:422</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a062553cc791e44d991b6e68640bed9e5"><div class="ttname"><a href="event__functions_8h.html#a062553cc791e44d991b6e68640bed9e5">btn_event_handler_dropdown_country</a></div><div class="ttdeci">void btn_event_handler_dropdown_country(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00256">event_functions.cpp:256</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a0ceb4c91d0142a44f5a2c7e650e3129b"><div class="ttname"><a href="event__functions_8h.html#a0ceb4c91d0142a44f5a2c7e650e3129b">tv_event_cb</a></div><div class="ttdeci">void tv_event_cb(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00610">event_functions.cpp:610</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a37697fa67c3d936b8775a84f485e17a6"><div class="ttname"><a href="event__functions_8h.html#a37697fa67c3d936b8775a84f485e17a6">handleTrackballPressEvent</a></div><div class="ttdeci">void handleTrackballPressEvent(AceButton *, uint8_t eventType, uint8_t)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00592">event_functions.cpp:592</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a3d431104fbb9dba529ae98821bd6ded0"><div class="ttname"><a href="event__functions_8h.html#a3d431104fbb9dba529ae98821bd6ded0">btn_event_handler_dropdown_mapselect</a></div><div class="ttdeci">void btn_event_handler_dropdown_mapselect(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00208">event_functions.cpp:208</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a523f4bae9328eaebad07376eb93e2ef5"><div class="ttname"><a href="event__functions_8h.html#a523f4bae9328eaebad07376eb93e2ef5">btn_event_handler_dropdown_modusselect</a></div><div class="ttdeci">void btn_event_handler_dropdown_modusselect(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00132">event_functions.cpp:132</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a560691c47dd43a9573ce1a797de6252f"><div class="ttname"><a href="event__functions_8h.html#a560691c47dd43a9573ce1a797de6252f">btn_event_handler_send</a></div><div class="ttdeci">void btn_event_handler_send(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00549">event_functions.cpp:549</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a5d7aec446e0c073efb18baf7cdbe90ae"><div class="ttname"><a href="event__functions_8h.html#a5d7aec446e0c073efb18baf7cdbe90ae">btn_event_handler_switch</a></div><div class="ttdeci">void btn_event_handler_switch(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8cpp_source.html#l02374">ui_deckpro.cpp:2374</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a626deac6066f0c068e15dffdb13cc3de"><div class="ttname"><a href="event__functions_8h.html#a626deac6066f0c068e15dffdb13cc3de">btn_event_handler_up</a></div><div class="ttdeci">void btn_event_handler_up(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00649">event_functions.cpp:649</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a81ffe1dd72ce5a66b940c34b1e450ff6"><div class="ttname"><a href="event__functions_8h.html#a81ffe1dd72ce5a66b940c34b1e450ff6">btn_event_handler_zoomout</a></div><div class="ttdeci">void btn_event_handler_zoomout(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00722">event_functions.cpp:722</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_a986c0f6360637ae885c1dee1d05d798a"><div class="ttname"><a href="event__functions_8h.html#a986c0f6360637ae885c1dee1d05d798a">position_ta_draw_event</a></div><div class="ttdeci">void position_ta_draw_event(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00794">event_functions.cpp:794</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_aa5e30ed15be44a2a32c035717c43fa38"><div class="ttname"><a href="event__functions_8h.html#aa5e30ed15be44a2a32c035717c43fa38">box_event_cb</a></div><div class="ttdeci">void box_event_cb(lv_event_t *e)</div></div>
+<div class="ttc" id="aevent__functions_8h_html_aa787670935b9d3db92f6c7c7880d361c"><div class="ttname"><a href="event__functions_8h.html#aa787670935b9d3db92f6c7c7880d361c">btn_event_handler_clear</a></div><div class="ttdeci">void btn_event_handler_clear(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00630">event_functions.cpp:630</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_ab5471a733084f7e0210cdb35930e022a"><div class="ttname"><a href="event__functions_8h.html#ab5471a733084f7e0210cdb35930e022a">btn_event_handler_zoomin</a></div><div class="ttdeci">void btn_event_handler_zoomin(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00703">event_functions.cpp:703</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_ab69ccbb4d9442d9a2ac75bb491cb8ad0"><div class="ttname"><a href="event__functions_8h.html#ab69ccbb4d9442d9a2ac75bb491cb8ad0">btn_event_handler_sendpos</a></div><div class="ttdeci">void btn_event_handler_sendpos(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8cpp_source.html#l02039">ui_deckpro.cpp:2039</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_acf370ec1f22b6d130d1aaf21bba4bd0f"><div class="ttname"><a href="event__functions_8h.html#acf370ec1f22b6d130d1aaf21bba4bd0f">mheard_ta_draw_event</a></div><div class="ttdeci">void mheard_ta_draw_event(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00802">event_functions.cpp:802</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_aded1d14308cc1541750d4df83c7fd8d3"><div class="ttname"><a href="event__functions_8h.html#aded1d14308cc1541750d4df83c7fd8d3">tabview_event_cb</a></div><div class="ttdeci">void tabview_event_cb(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00741">event_functions.cpp:741</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_ae55c6e20bb5d2a75e9473660772253dc"><div class="ttname"><a href="event__functions_8h.html#ae55c6e20bb5d2a75e9473660772253dc">btn_event_handler_aprs</a></div><div class="ttdeci">void btn_event_handler_aprs(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00036">event_functions.cpp:36</a></div></div>
+<div class="ttc" id="aevent__functions_8h_html_af993e979d128e15520ba289a385ffdff"><div class="ttname"><a href="event__functions_8h.html#af993e979d128e15520ba289a385ffdff">path_ta_draw_event</a></div><div class="ttdeci">void path_ta_draw_event(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="event__functions_8cpp_source.html#l00810">event_functions.cpp:810</a></div></div>
+<div class="ttc" id="alvgl_8h_html"><div class="ttname"><a href="lvgl_8h.html">lvgl.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_85c8a588854d8ca119cfcc9d467548f2.html">t-deck</a></li><li class="navelem"><a href="event__functions_8h.html">event_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

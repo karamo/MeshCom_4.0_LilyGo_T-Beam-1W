@@ -1,0 +1,28 @@
+var class_s_d_wrapper =
+[
+    [ "~SDWrapper", "class_s_d_wrapper.html#aae882c7901e8726606edbe131cf48099", null ],
+    [ "begin", "class_s_d_wrapper.html#a0427e79fcf58715886b72031f816843e", null ],
+    [ "BMPColorInverted", "class_s_d_wrapper.html#ab4c5aa9889688bd1d371577ed7a85749", null ],
+    [ "BMPHeight", "class_s_d_wrapper.html#a5a5686095dfe3984deff70d8a00dce73", null ],
+    [ "BMPReportedSize", "class_s_d_wrapper.html#ad9f3428f6fff1af8fd353dd3c9af9eba", null ],
+    [ "BMPStart", "class_s_d_wrapper.html#a5095bb908d1b4f748c55eb924a4b334b", null ],
+    [ "BMPWidth", "class_s_d_wrapper.html#a9bf5553f5b7ffeaf66ffa3c8a3acd6b2", null ],
+    [ "exists", "class_s_d_wrapper.html#a9765a1d5ecaba55db7d7feae030da2c2", null ],
+    [ "fileSize", "class_s_d_wrapper.html#a007adf5a34d58843f80b872f896e1fb2", null ],
+    [ "openFile", "class_s_d_wrapper.html#acf854ae59ccfcb22043a8f10831b6641", null ],
+    [ "processFilename", "class_s_d_wrapper.html#a2809be94817176ab33a4955470310437", null ],
+    [ "read", "class_s_d_wrapper.html#a219a9abf38d42d173c6bdf17a2ae39a2", null ],
+    [ "readBMPHeader", "class_s_d_wrapper.html#a953006be01834c6bc33f77339349dbed", null ],
+    [ "remove", "class_s_d_wrapper.html#af7cdb1fd6e8563a2969325d6ed8f17ce", null ],
+    [ "seek", "class_s_d_wrapper.html#a670bb20e803f9bf89dcd9cc2c2254d18", null ],
+    [ "write", "class_s_d_wrapper.html#a321c82ffb9b099c4dff4bb37332f69bf", null ],
+    [ "bmp_color_inverted", "class_s_d_wrapper.html#a9ff712c6494acc7892ffc7a2fa37034c", null ],
+    [ "bmp_height", "class_s_d_wrapper.html#a90ad29cff40f2966aaa97e7d020724ef", null ],
+    [ "bmp_imagestart", "class_s_d_wrapper.html#a94ba4f576a9ddb6b66eddeef62d3b256", null ],
+    [ "bmp_reported_size", "class_s_d_wrapper.html#a3397343bca73c9bebe4bb43beaac6678", null ],
+    [ "bmp_width", "class_s_d_wrapper.html#afff1bdeb98a9b2468d0a8fddb40fb4f4", null ],
+    [ "filename", "class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3", null ],
+    [ "image", "class_s_d_wrapper.html#a9447de039bf5da97878906c8d1fefe90", null ],
+    [ "pin_cs", "class_s_d_wrapper.html#acdadb52e6b06d7df8d9ca348049700ce", null ],
+    [ "SD", "class_s_d_wrapper.html#aa6ed011d8ced1acb668a792f38d82fe2", null ]
+];

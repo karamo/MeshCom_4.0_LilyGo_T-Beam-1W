@@ -1,0 +1,1916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/ui_port.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ui__port_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ui_port.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ui_8h_source.html">ui.h</a>&quot;</code><br />
+<code>#include &quot;Arduino.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="t5-epaper_2utilities_8h_source.html">utilities.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="t5-epaper_2peripheral_8h_source.html">peripheral.h</a>&quot;</code><br />
+<code>#include &quot;epdiy.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ui__port_8h_source.html">ui_port.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="nvs__param_8h_source.html">nvs_param.h</a>&quot;</code><br />
+</div>
+<p><a href="ui__port_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:aea2625393be53b3c40e57d06253d4eba" id="r_aea2625393be53b3c40e57d06253d4eba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea2625393be53b3c40e57d06253d4eba">ui_nvs_set_defaulat_param</a> (void)</td></tr>
+<tr class="memitem:ab245fddb7361e38a67d59f726810c2b8" id="r_ab245fddb7361e38a67d59f726810c2b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab245fddb7361e38a67d59f726810c2b8">ui_indev_touch_en</a> (void)</td></tr>
+<tr class="memitem:a845d92016636a483af1b39f74ce0bfe8" id="r_a845d92016636a483af1b39f74ce0bfe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a845d92016636a483af1b39f74ce0bfe8">ui_indev_touch_dis</a> (void)</td></tr>
+<tr class="memitem:a8254c53e00bde3e01987d5543b26c5a8" id="r_a8254c53e00bde3e01987d5543b26c5a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8254c53e00bde3e01987d5543b26c5a8">ui_refresh_set_mode</a> (int mode)</td></tr>
+<tr class="memitem:a7f2a2baf9d3733e03485c9d5a039fa4b" id="r_a7f2a2baf9d3733e03485c9d5a039fa4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2a2baf9d3733e03485c9d5a039fa4b">ui_refresh_get_mode</a> ()</td></tr>
+<tr class="memitem:ab69783a4e5c548ca0b3e1bb67ea0ead4" id="r_ab69783a4e5c548ca0b3e1bb67ea0ead4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69783a4e5c548ca0b3e1bb67ea0ead4">ui_full_refresh</a> (void)</td></tr>
+<tr class="memitem:a90318c5a4af9648069625981fd8a094e" id="r_a90318c5a4af9648069625981fd8a094e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90318c5a4af9648069625981fd8a094e">ui_full_clean</a> (void)</td></tr>
+<tr class="memitem:a9e299b4d2209c417f26287bcc19d6dfa" id="r_a9e299b4d2209c417f26287bcc19d6dfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e299b4d2209c417f26287bcc19d6dfa">ui_epd_clean</a> (void)</td></tr>
+<tr class="memitem:a23d48ac2a2f8a92721dbb30874659d36" id="r_a23d48ac2a2f8a92721dbb30874659d36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23d48ac2a2f8a92721dbb30874659d36">ui_set_rotation</a> (lv_disp_rot_t rot)</td></tr>
+<tr class="memitem:a161b538f77ba6f4c752dde590dadd2a2" id="r_a161b538f77ba6f4c752dde590dadd2a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a161b538f77ba6f4c752dde590dadd2a2">ui_clock_get_time</a> (uint8_t *h, uint8_t *m, uint8_t *s)</td></tr>
+<tr class="memitem:a6c52c6d287e60955ad0efe4382fc7921" id="r_a6c52c6d287e60955ad0efe4382fc7921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c52c6d287e60955ad0efe4382fc7921">ui_clock_get_data</a> (uint8_t *year, uint8_t *month, uint8_t *day, uint8_t *week)</td></tr>
+<tr class="memitem:ae0c7013784069fb830ea9e91bb974f56" id="r_ae0c7013784069fb830ea9e91bb974f56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0c7013784069fb830ea9e91bb974f56">ui_lora_recv_suspend</a> (void)</td></tr>
+<tr class="memitem:a92ce6a4c20cbbfdfe4fbbeff07963332" id="r_a92ce6a4c20cbbfdfe4fbbeff07963332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92ce6a4c20cbbfdfe4fbbeff07963332">ui_lora_recv_resume</a> (void)</td></tr>
+<tr class="memitem:a7b38fbf9ddb830fcbe1e5500bf9bb985" id="r_a7b38fbf9ddb830fcbe1e5500bf9bb985"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b38fbf9ddb830fcbe1e5500bf9bb985">ui_lora_set_mode</a> (int mode)</td></tr>
+<tr class="memitem:ab8227ac9a3e67a0ea37c6f7875bcc420" id="r_ab8227ac9a3e67a0ea37c6f7875bcc420"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8227ac9a3e67a0ea37c6f7875bcc420">ui_lora_get_mode</a> (void)</td></tr>
+<tr class="memitem:a74757477a3003696fbc5e9d314795226" id="r_a74757477a3003696fbc5e9d314795226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74757477a3003696fbc5e9d314795226">ui_lora_send</a> (const char *<a class="el" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>)</td></tr>
+<tr class="memitem:a857e08bcc475b2657122cdacff895f5d" id="r_a857e08bcc475b2657122cdacff895f5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a857e08bcc475b2657122cdacff895f5d">ui_lora_recv</a> (const char **<a class="el" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, int *rssi)</td></tr>
+<tr class="memitem:a7b92e65c455af56eb272dce7042122fa" id="r_a7b92e65c455af56eb272dce7042122fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b92e65c455af56eb272dce7042122fa">ui_lora_clean_recv_flag</a> (void)</td></tr>
+<tr class="memitem:aec9036e33829bb6c3cfb08e0d8317940" id="r_aec9036e33829bb6c3cfb08e0d8317940"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec9036e33829bb6c3cfb08e0d8317940">ui_lora_get_freq</a> (void)</td></tr>
+<tr class="memitem:ab7ea4dcedfbe8400a572f1c85c2cc706" id="r_ab7ea4dcedfbe8400a572f1c85c2cc706"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7ea4dcedfbe8400a572f1c85c2cc706">ui_lora_get_bandwidth</a> (void)</td></tr>
+<tr class="memitem:ad4c373ea337c377cd35a3a0e1a8a3131" id="r_ad4c373ea337c377cd35a3a0e1a8a3131"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4c373ea337c377cd35a3a0e1a8a3131">ui_lora_get_output_power</a> (void)</td></tr>
+<tr class="memitem:a0ccdbfb311e9d6e136c75b7fa3a9cd99" id="r_a0ccdbfb311e9d6e136c75b7fa3a9cd99"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccdbfb311e9d6e136c75b7fa3a9cd99">ui_lora_get_spread_factor</a> (void)</td></tr>
+<tr class="memitem:a0fba716bc5e308dbf4863393a2e1bf43" id="r_a0fba716bc5e308dbf4863393a2e1bf43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fba716bc5e308dbf4863393a2e1bf43">ui_sd_read</a> (void)</td></tr>
+<tr class="memitem:aff8d8399abcabb1215e02f0479d66d20" id="r_aff8d8399abcabb1215e02f0479d66d20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8d8399abcabb1215e02f0479d66d20">ui_sd_get_capacity</a> (uint64_t *total, uint64_t *used)</td></tr>
+<tr class="memitem:ad1e0276ced28a7fd8aa43f556bbcdc6a" id="r_ad1e0276ced28a7fd8aa43f556bbcdc6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e0276ced28a7fd8aa43f556bbcdc6a">ui_setting_get_vcom</a> (void)</td></tr>
+<tr class="memitem:a16581716463227b1e5f52a5c45b2760d" id="r_a16581716463227b1e5f52a5c45b2760d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16581716463227b1e5f52a5c45b2760d">ui_setting_set_vcom</a> (int v)</td></tr>
+<tr class="memitem:a58b11347ee259459e0f8ee2bbd108297" id="r_a58b11347ee259459e0f8ee2bbd108297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b11347ee259459e0f8ee2bbd108297">ui_setting_set_backlight</a> (int bl)</td></tr>
+<tr class="memitem:ab8b30887f8820bbabf83abd5c73bb14c" id="r_ab8b30887f8820bbabf83abd5c73bb14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b30887f8820bbabf83abd5c73bb14c">ui_setting_set_backlight_level</a> (int level)</td></tr>
+<tr class="memitem:aa99dfa58c57f2c78708c9e408400d20d" id="r_aa99dfa58c57f2c78708c9e408400d20d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa99dfa58c57f2c78708c9e408400d20d">ui_setting_get_backlight</a> (int *ret_bl)</td></tr>
+<tr class="memitem:a372ba03620fceb8166cf00bc1c24b866" id="r_a372ba03620fceb8166cf00bc1c24b866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a372ba03620fceb8166cf00bc1c24b866">ui_setting_set_refresh_speed</a> (int bl)</td></tr>
+<tr class="memitem:a0f1536caf1c9f8154e7533feb3d0ff6c" id="r_a0f1536caf1c9f8154e7533feb3d0ff6c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1536caf1c9f8154e7533feb3d0ff6c">ui_setting_get_refresh_speed</a> (int *ret_bl)</td></tr>
+<tr class="memitem:abaf332dc7b5b87584be8edaacd5a98ff" id="r_abaf332dc7b5b87584be8edaacd5a98ff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf332dc7b5b87584be8edaacd5a98ff">ui_setting_get_sf_ver</a> (void)</td></tr>
+<tr class="memitem:abd6092b1b1c853382363b77549df46c1" id="r_abd6092b1b1c853382363b77549df46c1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd6092b1b1c853382363b77549df46c1">ui_setting_get_hd_ver</a> (void)</td></tr>
+<tr class="memitem:ab99f209b276536de64ce2aa7092a2b5a" id="r_ab99f209b276536de64ce2aa7092a2b5a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab99f209b276536de64ce2aa7092a2b5a">ui_test_get_gps</a> (int *ret_n)</td></tr>
+<tr class="memitem:aec588b763d30ad7dd3ee9558d2f0b5d7" id="r_aec588b763d30ad7dd3ee9558d2f0b5d7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec588b763d30ad7dd3ee9558d2f0b5d7">ui_test_get_lora</a> (int *ret_n)</td></tr>
+<tr class="memitem:af7dfb4dcb5d61accce48fa7a7d458840" id="r_af7dfb4dcb5d61accce48fa7a7d458840"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7dfb4dcb5d61accce48fa7a7d458840">ui_test_get_sd</a> (int *ret_n)</td></tr>
+<tr class="memitem:adfa7273d9d28c05c9cb2dd50a00e0de3" id="r_adfa7273d9d28c05c9cb2dd50a00e0de3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfa7273d9d28c05c9cb2dd50a00e0de3">ui_test_get_rtc</a> (int *ret_n)</td></tr>
+<tr class="memitem:a4c9a83fd577257d17d2485c3a69c63bb" id="r_a4c9a83fd577257d17d2485c3a69c63bb"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c9a83fd577257d17d2485c3a69c63bb">ui_test_get_touch</a> (int *ret_n)</td></tr>
+<tr class="memitem:a4f4f98962ed7d84a32626acf2ec2a148" id="r_a4f4f98962ed7d84a32626acf2ec2a148"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f4f98962ed7d84a32626acf2ec2a148">ui_test_get_BQ25896</a> (int *ret_n)</td></tr>
+<tr class="memitem:a7f195ffba922ebac2c71917032e155ba" id="r_a7f195ffba922ebac2c71917032e155ba"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f195ffba922ebac2c71917032e155ba">ui_test_get_BQ27220</a> (int *ret_n)</td></tr>
+<tr class="memitem:a7daa5ffaa1fb3a8af5805091146ffce7" id="r_a7daa5ffaa1fb3a8af5805091146ffce7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7daa5ffaa1fb3a8af5805091146ffce7">ui_wifi_get_status</a> (void)</td></tr>
+<tr class="memitem:a1560a5b99edd5c741fe21fb9b6e28200" id="r_a1560a5b99edd5c741fe21fb9b6e28200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1560a5b99edd5c741fe21fb9b6e28200">ui_wifi_set_status</a> (bool statue)</td></tr>
+<tr class="memitem:a2086fe7e06d8aa81708651342edac46c" id="r_a2086fe7e06d8aa81708651342edac46c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2086fe7e06d8aa81708651342edac46c">ui_wifi_get_ip</a> (void)</td></tr>
+<tr class="memitem:a1b0397958aaaddd00fb66dee0dea60df" id="r_a1b0397958aaaddd00fb66dee0dea60df"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0397958aaaddd00fb66dee0dea60df">ui_wifi_get_ssid</a> (void)</td></tr>
+<tr class="memitem:aa529a5424bc592d9804e822428c65bae" id="r_aa529a5424bc592d9804e822428c65bae"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa529a5424bc592d9804e822428c65bae">ui_wifi_get_pwd</a> (void)</td></tr>
+<tr class="memitem:a33ae11d35ec8d6629fefa9dda363f126" id="r_a33ae11d35ec8d6629fefa9dda363f126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ae11d35ec8d6629fefa9dda363f126">battery_chg_encharge</a> (void)</td></tr>
+<tr class="memitem:a0ec339933e095afe0d95c2e4fc66d83d" id="r_a0ec339933e095afe0d95c2e4fc66d83d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ec339933e095afe0d95c2e4fc66d83d">battery_chg_discharge</a> (void)</td></tr>
+<tr class="memitem:a0a8a97961ae16c61d3150ee48ec01fd1" id="r_a0a8a97961ae16c61d3150ee48ec01fd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a8a97961ae16c61d3150ee48ec01fd1">battery_25896_is_vaild</a> (void)</td></tr>
+<tr class="memitem:a884afa5260ec19379ac230a2bcc38d82" id="r_a884afa5260ec19379ac230a2bcc38d82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a884afa5260ec19379ac230a2bcc38d82">battery_25896_is_vbus_in</a> (void)</td></tr>
+<tr class="memitem:a08f18c91ad3dbc3db5e1643d158b6dcf" id="r_a08f18c91ad3dbc3db5e1643d158b6dcf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08f18c91ad3dbc3db5e1643d158b6dcf">battery_25896_is_chr</a> (void)</td></tr>
+<tr class="memitem:a96ff2230b439d6ab542346c1aac276a8" id="r_a96ff2230b439d6ab542346c1aac276a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96ff2230b439d6ab542346c1aac276a8">battery_25896_refr</a> (void)</td></tr>
+<tr class="memitem:ac1e5be4e5a2b879482f1a67e41aaa5ea" id="r_ac1e5be4e5a2b879482f1a67e41aaa5ea"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e5be4e5a2b879482f1a67e41aaa5ea">battery_25896_get_CHG_ST</a> (void)</td></tr>
+<tr class="memitem:a93693c13aa91c90fb06a21716d2b3ef2" id="r_a93693c13aa91c90fb06a21716d2b3ef2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93693c13aa91c90fb06a21716d2b3ef2">battery_25896_get_VBUS_ST</a> (void)</td></tr>
+<tr class="memitem:a7c67cee253fb09fa53e44abdef3d9ba7" id="r_a7c67cee253fb09fa53e44abdef3d9ba7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c67cee253fb09fa53e44abdef3d9ba7">battery_25896_get_NTC_ST</a> (void)</td></tr>
+<tr class="memitem:a26f89c352a99b76ba5e3a66c7eb87cef" id="r_a26f89c352a99b76ba5e3a66c7eb87cef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f89c352a99b76ba5e3a66c7eb87cef">battery_25896_get_VBUS</a> (void)</td></tr>
+<tr class="memitem:af5f41252f83815343213bdbfd89bc49c" id="r_af5f41252f83815343213bdbfd89bc49c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5f41252f83815343213bdbfd89bc49c">battery_25896_get_VSYS</a> (void)</td></tr>
+<tr class="memitem:adb789e3e8cf2aee26ffc1218cb6a9f19" id="r_adb789e3e8cf2aee26ffc1218cb6a9f19"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb789e3e8cf2aee26ffc1218cb6a9f19">battery_25896_get_VBAT</a> (void)</td></tr>
+<tr class="memitem:a7529d932e1b4cb19c5376f9cf050acc1" id="r_a7529d932e1b4cb19c5376f9cf050acc1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7529d932e1b4cb19c5376f9cf050acc1">battery_25896_get_targ_VOLT</a> (void)</td></tr>
+<tr class="memitem:a2640cfcb257ec84b10f0e8a93661dc64" id="r_a2640cfcb257ec84b10f0e8a93661dc64"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2640cfcb257ec84b10f0e8a93661dc64">battery_25896_get_CHG_CURR</a> (void)</td></tr>
+<tr class="memitem:a4f0e634cf0b9befb4c0ac001efee837b" id="r_a4f0e634cf0b9befb4c0ac001efee837b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f0e634cf0b9befb4c0ac001efee837b">battery_25896_get_PREC_CURR</a> (void)</td></tr>
+<tr class="memitem:af282fcd2abcd36c4356233df772ce189" id="r_af282fcd2abcd36c4356233df772ce189"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af282fcd2abcd36c4356233df772ce189">ui_battery_27220_is_vaild</a> (void)</td></tr>
+<tr class="memitem:ad2eb86079a59f056aaf4481377b13b4e" id="r_ad2eb86079a59f056aaf4481377b13b4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2eb86079a59f056aaf4481377b13b4e">ui_battery_27220_get_input</a> (void)</td></tr>
+<tr class="memitem:a44a34f33290490dd731c1f93c280d593" id="r_a44a34f33290490dd731c1f93c280d593"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44a34f33290490dd731c1f93c280d593">ui_battery_27220_get_charge_finish</a> (void)</td></tr>
+<tr class="memitem:a9ace07d30e71e5c6ee3960c879896870" id="r_a9ace07d30e71e5c6ee3960c879896870"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ace07d30e71e5c6ee3960c879896870">ui_battery_27220_get_status</a> (void)</td></tr>
+<tr class="memitem:ac6b8c7284b9ba557418bf02eba757500" id="r_ac6b8c7284b9ba557418bf02eba757500"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6b8c7284b9ba557418bf02eba757500">ui_battery_27220_get_voltage</a> (void)</td></tr>
+<tr class="memitem:ad3e7ae5a34981ea43328bfd8bdbe056a" id="r_ad3e7ae5a34981ea43328bfd8bdbe056a"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e7ae5a34981ea43328bfd8bdbe056a">ui_battery_27220_get_current</a> (void)</td></tr>
+<tr class="memitem:a17d8cdcc07806af0af11e3f76b2f7c5e" id="r_a17d8cdcc07806af0af11e3f76b2f7c5e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17d8cdcc07806af0af11e3f76b2f7c5e">ui_battery_27220_get_temperature</a> (void)</td></tr>
+<tr class="memitem:a185068a63ddd36aad6f481347879029f" id="r_a185068a63ddd36aad6f481347879029f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a185068a63ddd36aad6f481347879029f">ui_battery_27220_get_full_capacity</a> (void)</td></tr>
+<tr class="memitem:afe12b9a91e0260813ab5b40464e0b46c" id="r_afe12b9a91e0260813ab5b40464e0b46c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe12b9a91e0260813ab5b40464e0b46c">ui_battery_27220_get_design_capacity</a> (void)</td></tr>
+<tr class="memitem:a1f9cb5a25a4e547a7046a42cc5fc6aea" id="r_a1f9cb5a25a4e547a7046a42cc5fc6aea"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f9cb5a25a4e547a7046a42cc5fc6aea">ui_battery_27220_get_remain_capacity</a> (void)</td></tr>
+<tr class="memitem:a30ca5a3daddd09ed1ef0a92079515211" id="r_a30ca5a3daddd09ed1ef0a92079515211"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ca5a3daddd09ed1ef0a92079515211">ui_battery_27220_get_percent</a> (void)</td></tr>
+<tr class="memitem:a22cc648ec87c1b50956a2517627bfad8" id="r_a22cc648ec87c1b50956a2517627bfad8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22cc648ec87c1b50956a2517627bfad8">ui_battery_27220_get_health</a> (void)</td></tr>
+<tr class="memitem:afc91d50dc61741e5913493294eeb5529" id="r_afc91d50dc61741e5913493294eeb5529"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc91d50dc61741e5913493294eeb5529">ui_battert_27220_get_percent_level</a> (void)</td></tr>
+<tr class="memitem:a67a0d16d56406c433e7a054cfc243011" id="r_a67a0d16d56406c433e7a054cfc243011"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a0d16d56406c433e7a054cfc243011">ui_gps_get_charsProcessed</a> (void)</td></tr>
+<tr class="memitem:a673be9e61e569c7418e9b40743eb1303" id="r_a673be9e61e569c7418e9b40743eb1303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a673be9e61e569c7418e9b40743eb1303">ui_gps_task_suspend</a> (void)</td></tr>
+<tr class="memitem:a7d62405212a5062993ca105f64653878" id="r_a7d62405212a5062993ca105f64653878"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d62405212a5062993ca105f64653878">ui_gps_task_resume</a> (void)</td></tr>
+<tr class="memitem:a525fb3051e5a221ff5b3e2999f2a3795" id="r_a525fb3051e5a221ff5b3e2999f2a3795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a525fb3051e5a221ff5b3e2999f2a3795">ui_gps_get_coord</a> (double *lat, double *lng)</td></tr>
+<tr class="memitem:ac2e05c0bef8f1ad38fc0b7f0c9ede5af" id="r_ac2e05c0bef8f1ad38fc0b7f0c9ede5af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e05c0bef8f1ad38fc0b7f0c9ede5af">ui_gps_get_data</a> (uint16_t *year, uint8_t *month, uint8_t *day)</td></tr>
+<tr class="memitem:a7a2dec2e2073c802aea1a5c3244024f8" id="r_a7a2dec2e2073c802aea1a5c3244024f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a2dec2e2073c802aea1a5c3244024f8">ui_gps_get_time</a> (uint8_t *hour, uint8_t *minute, uint8_t *second)</td></tr>
+<tr class="memitem:a1f4ccc9830a24fdbe150d99b6cb1726e" id="r_a1f4ccc9830a24fdbe150d99b6cb1726e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f4ccc9830a24fdbe150d99b6cb1726e">ui_gps_get_satellites</a> (uint32_t *vsat)</td></tr>
+<tr class="memitem:adac14daa380da581fd8ea1776437cd58" id="r_adac14daa380da581fd8ea1776437cd58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adac14daa380da581fd8ea1776437cd58">ui_gps_get_speed</a> (double *speed)</td></tr>
+<tr class="memitem:a156bd9865ceb56aa78f8aa46f2d62bc5" id="r_a156bd9865ceb56aa78f8aa46f2d62bc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a156bd9865ceb56aa78f8aa46f2d62bc5">ui_shutdown_vcom</a> (int v)</td></tr>
+<tr class="memitem:aeefe64a98d1cb5e40126a9e5188ecac2" id="r_aeefe64a98d1cb5e40126a9e5188ecac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeefe64a98d1cb5e40126a9e5188ecac2">ui_shutdown</a> (void)</td></tr>
+<tr class="memitem:a5bfc9dd716a9673f3fb22aa18f29196d" id="r_a5bfc9dd716a9673f3fb22aa18f29196d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bfc9dd716a9673f3fb22aa18f29196d">ui_sleep</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:ac5b0c528eda2a64f68979ef918a5f42a" id="r_ac5b0c528eda2a64f68979ef918a5f42a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5b0c528eda2a64f68979ef918a5f42a">ui_setting_backlight</a> = 3</td></tr>
+<tr class="memitem:a149f11487154da7decf4b2ed1307d126" id="r_a149f11487154da7decf4b2ed1307d126"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a149f11487154da7decf4b2ed1307d126">epd_vcom_default</a> = 1560</td></tr>
+<tr class="memitem:adf7f530e0ce24fc7c08545d735ef0ec3" id="r_adf7f530e0ce24fc7c08545d735ef0ec3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf7f530e0ce24fc7c08545d735ef0ec3">refresh_mode</a> = <a class="el" href="ui__port_8h.html#a5c0a816bea8f55aea98e85eaf1213b3e">UI_REFRESH_MODE_NORMAL</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a2640cfcb257ec84b10f0e8a93661dc64" name="a2640cfcb257ec84b10f0e8a93661dc64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2640cfcb257ec84b10f0e8a93661dc64">&#9670;&#160;</a></span>battery_25896_get_CHG_CURR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_CHG_CURR </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00431">431</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac1e5be4e5a2b879482f1a67e41aaa5ea" name="ac1e5be4e5a2b879482f1a67e41aaa5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e5be4e5a2b879482f1a67e41aaa5ea">&#9670;&#160;</a></span>battery_25896_get_CHG_ST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * battery_25896_get_CHG_ST </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00396">396</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7c67cee253fb09fa53e44abdef3d9ba7" name="a7c67cee253fb09fa53e44abdef3d9ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c67cee253fb09fa53e44abdef3d9ba7">&#9670;&#160;</a></span>battery_25896_get_NTC_ST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * battery_25896_get_NTC_ST </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00406">406</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f0e634cf0b9befb4c0ac001efee837b" name="a4f0e634cf0b9befb4c0ac001efee837b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0e634cf0b9befb4c0ac001efee837b">&#9670;&#160;</a></span>battery_25896_get_PREC_CURR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_PREC_CURR </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00436">436</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7529d932e1b4cb19c5376f9cf050acc1" name="a7529d932e1b4cb19c5376f9cf050acc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7529d932e1b4cb19c5376f9cf050acc1">&#9670;&#160;</a></span>battery_25896_get_targ_VOLT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_targ_VOLT </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00426">426</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adb789e3e8cf2aee26ffc1218cb6a9f19" name="adb789e3e8cf2aee26ffc1218cb6a9f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb789e3e8cf2aee26ffc1218cb6a9f19">&#9670;&#160;</a></span>battery_25896_get_VBAT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_VBAT </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00421">421</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a26f89c352a99b76ba5e3a66c7eb87cef" name="a26f89c352a99b76ba5e3a66c7eb87cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f89c352a99b76ba5e3a66c7eb87cef">&#9670;&#160;</a></span>battery_25896_get_VBUS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_VBUS </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00411">411</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93693c13aa91c90fb06a21716d2b3ef2" name="a93693c13aa91c90fb06a21716d2b3ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93693c13aa91c90fb06a21716d2b3ef2">&#9670;&#160;</a></span>battery_25896_get_VBUS_ST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * battery_25896_get_VBUS_ST </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00401">401</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af5f41252f83815343213bdbfd89bc49c" name="af5f41252f83815343213bdbfd89bc49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f41252f83815343213bdbfd89bc49c">&#9670;&#160;</a></span>battery_25896_get_VSYS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float battery_25896_get_VSYS </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00416">416</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a08f18c91ad3dbc3db5e1643d158b6dcf" name="a08f18c91ad3dbc3db5e1643d158b6dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f18c91ad3dbc3db5e1643d158b6dcf">&#9670;&#160;</a></span>battery_25896_is_chr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool battery_25896_is_chr </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00387">387</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a8a97961ae16c61d3150ee48ec01fd1" name="a0a8a97961ae16c61d3150ee48ec01fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8a97961ae16c61d3150ee48ec01fd1">&#9670;&#160;</a></span>battery_25896_is_vaild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool battery_25896_is_vaild </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00376">376</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a884afa5260ec19379ac230a2bcc38d82" name="a884afa5260ec19379ac230a2bcc38d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884afa5260ec19379ac230a2bcc38d82">&#9670;&#160;</a></span>battery_25896_is_vbus_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool battery_25896_is_vbus_in </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00382">382</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a96ff2230b439d6ab542346c1aac276a8" name="a96ff2230b439d6ab542346c1aac276a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ff2230b439d6ab542346c1aac276a8">&#9670;&#160;</a></span>battery_25896_refr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void battery_25896_refr </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00392">392</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0ec339933e095afe0d95c2e4fc66d83d" name="a0ec339933e095afe0d95c2e4fc66d83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec339933e095afe0d95c2e4fc66d83d">&#9670;&#160;</a></span>battery_chg_discharge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void battery_chg_discharge </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00371">371</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a33ae11d35ec8d6629fefa9dda363f126" name="a33ae11d35ec8d6629fefa9dda363f126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ae11d35ec8d6629fefa9dda363f126">&#9670;&#160;</a></span>battery_chg_encharge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void battery_chg_encharge </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00366">366</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afc91d50dc61741e5913493294eeb5529" name="afc91d50dc61741e5913493294eeb5529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc91d50dc61741e5913493294eeb5529">&#9670;&#160;</a></span>ui_battert_27220_get_percent_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_battert_27220_get_percent_level </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00459">459</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a44a34f33290490dd731c1f93c280d593" name="a44a34f33290490dd731c1f93c280d593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a34f33290490dd731c1f93c280d593">&#9670;&#160;</a></span>ui_battery_27220_get_charge_finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui_battery_27220_get_charge_finish </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00444">444</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad3e7ae5a34981ea43328bfd8bdbe056a" name="ad3e7ae5a34981ea43328bfd8bdbe056a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e7ae5a34981ea43328bfd8bdbe056a">&#9670;&#160;</a></span>ui_battery_27220_get_current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t ui_battery_27220_get_current </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00452">452</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afe12b9a91e0260813ab5b40464e0b46c" name="afe12b9a91e0260813ab5b40464e0b46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe12b9a91e0260813ab5b40464e0b46c">&#9670;&#160;</a></span>ui_battery_27220_get_design_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_design_capacity </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00455">455</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a185068a63ddd36aad6f481347879029f" name="a185068a63ddd36aad6f481347879029f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185068a63ddd36aad6f481347879029f">&#9670;&#160;</a></span>ui_battery_27220_get_full_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_full_capacity </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00454">454</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a22cc648ec87c1b50956a2517627bfad8" name="a22cc648ec87c1b50956a2517627bfad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cc648ec87c1b50956a2517627bfad8">&#9670;&#160;</a></span>ui_battery_27220_get_health()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_health </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00458">458</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2eb86079a59f056aaf4481377b13b4e" name="ad2eb86079a59f056aaf4481377b13b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2eb86079a59f056aaf4481377b13b4e">&#9670;&#160;</a></span>ui_battery_27220_get_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui_battery_27220_get_input </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00443">443</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a30ca5a3daddd09ed1ef0a92079515211" name="a30ca5a3daddd09ed1ef0a92079515211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ca5a3daddd09ed1ef0a92079515211">&#9670;&#160;</a></span>ui_battery_27220_get_percent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_percent </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00457">457</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1f9cb5a25a4e547a7046a42cc5fc6aea" name="a1f9cb5a25a4e547a7046a42cc5fc6aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f9cb5a25a4e547a7046a42cc5fc6aea">&#9670;&#160;</a></span>ui_battery_27220_get_remain_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_remain_capacity </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00456">456</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ace07d30e71e5c6ee3960c879896870" name="a9ace07d30e71e5c6ee3960c879896870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ace07d30e71e5c6ee3960c879896870">&#9670;&#160;</a></span>ui_battery_27220_get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_status </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00445">445</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17d8cdcc07806af0af11e3f76b2f7c5e" name="a17d8cdcc07806af0af11e3f76b2f7c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d8cdcc07806af0af11e3f76b2f7c5e">&#9670;&#160;</a></span>ui_battery_27220_get_temperature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_temperature </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00453">453</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac6b8c7284b9ba557418bf02eba757500" name="ac6b8c7284b9ba557418bf02eba757500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b8c7284b9ba557418bf02eba757500">&#9670;&#160;</a></span>ui_battery_27220_get_voltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ui_battery_27220_get_voltage </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00451">451</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af282fcd2abcd36c4356233df772ce189" name="af282fcd2abcd36c4356233df772ce189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af282fcd2abcd36c4356233df772ce189">&#9670;&#160;</a></span>ui_battery_27220_is_vaild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui_battery_27220_is_vaild </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00442">442</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6c52c6d287e60955ad0efe4382fc7921" name="a6c52c6d287e60955ad0efe4382fc7921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c52c6d287e60955ad0efe4382fc7921">&#9670;&#160;</a></span>ui_clock_get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_clock_get_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>week</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00114">114</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a161b538f77ba6f4c752dde590dadd2a2" name="a161b538f77ba6f4c752dde590dadd2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a161b538f77ba6f4c752dde590dadd2a2">&#9670;&#160;</a></span>ui_clock_get_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_clock_get_time </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00090">90</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e299b4d2209c417f26287bcc19d6dfa" name="a9e299b4d2209c417f26287bcc19d6dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e299b4d2209c417f26287bcc19d6dfa">&#9670;&#160;</a></span>ui_epd_clean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_epd_clean </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00062">62</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a90318c5a4af9648069625981fd8a094e" name="a90318c5a4af9648069625981fd8a094e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90318c5a4af9648069625981fd8a094e">&#9670;&#160;</a></span>ui_full_clean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_full_clean </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00057">57</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab69783a4e5c548ca0b3e1bb67ea0ead4" name="ab69783a4e5c548ca0b3e1bb67ea0ead4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69783a4e5c548ca0b3e1bb67ea0ead4">&#9670;&#160;</a></span>ui_full_refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_full_refresh </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00052">52</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a67a0d16d56406c433e7a054cfc243011" name="a67a0d16d56406c433e7a054cfc243011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a0d16d56406c433e7a054cfc243011">&#9670;&#160;</a></span>ui_gps_get_charsProcessed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ui_gps_get_charsProcessed </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00472">472</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a525fb3051e5a221ff5b3e2999f2a3795" name="a525fb3051e5a221ff5b3e2999f2a3795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525fb3051e5a221ff5b3e2999f2a3795">&#9670;&#160;</a></span>ui_gps_get_coord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_get_coord </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>lng</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00485">485</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2e05c0bef8f1ad38fc0b7f0c9ede5af" name="ac2e05c0bef8f1ad38fc0b7f0c9ede5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e05c0bef8f1ad38fc0b7f0c9ede5af">&#9670;&#160;</a></span>ui_gps_get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_get_data </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>day</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00489">489</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1f4ccc9830a24fdbe150d99b6cb1726e" name="a1f4ccc9830a24fdbe150d99b6cb1726e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4ccc9830a24fdbe150d99b6cb1726e">&#9670;&#160;</a></span>ui_gps_get_satellites()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_get_satellites </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>vsat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00498">498</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adac14daa380da581fd8ea1776437cd58" name="adac14daa380da581fd8ea1776437cd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac14daa380da581fd8ea1776437cd58">&#9670;&#160;</a></span>ui_gps_get_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_get_speed </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00502">502</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7a2dec2e2073c802aea1a5c3244024f8" name="a7a2dec2e2073c802aea1a5c3244024f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2dec2e2073c802aea1a5c3244024f8">&#9670;&#160;</a></span>ui_gps_get_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_get_time </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>hour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>minute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>second</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00493">493</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d62405212a5062993ca105f64653878" name="a7d62405212a5062993ca105f64653878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d62405212a5062993ca105f64653878">&#9670;&#160;</a></span>ui_gps_task_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_task_resume </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00481">481</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a673be9e61e569c7418e9b40743eb1303" name="a673be9e61e569c7418e9b40743eb1303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673be9e61e569c7418e9b40743eb1303">&#9670;&#160;</a></span>ui_gps_task_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_gps_task_suspend </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00477">477</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a845d92016636a483af1b39f74ce0bfe8" name="a845d92016636a483af1b39f74ce0bfe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845d92016636a483af1b39f74ce0bfe8">&#9670;&#160;</a></span>ui_indev_touch_dis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_indev_touch_dis </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00035">35</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab245fddb7361e38a67d59f726810c2b8" name="ab245fddb7361e38a67d59f726810c2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab245fddb7361e38a67d59f726810c2b8">&#9670;&#160;</a></span>ui_indev_touch_en()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_indev_touch_en </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00030">30</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b92e65c455af56eb272dce7042122fa" name="a7b92e65c455af56eb272dce7042122fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b92e65c455af56eb272dce7042122fa">&#9670;&#160;</a></span>ui_lora_clean_recv_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_lora_clean_recv_flag </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00164">164</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab7ea4dcedfbe8400a572f1c85c2cc706" name="ab7ea4dcedfbe8400a572f1c85c2cc706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ea4dcedfbe8400a572f1c85c2cc706">&#9670;&#160;</a></span>ui_lora_get_bandwidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ui_lora_get_bandwidth </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00170">170</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aec9036e33829bb6c3cfb08e0d8317940" name="aec9036e33829bb6c3cfb08e0d8317940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9036e33829bb6c3cfb08e0d8317940">&#9670;&#160;</a></span>ui_lora_get_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ui_lora_get_freq </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00169">169</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab8227ac9a3e67a0ea37c6f7875bcc420" name="ab8227ac9a3e67a0ea37c6f7875bcc420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8227ac9a3e67a0ea37c6f7875bcc420">&#9670;&#160;</a></span>ui_lora_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_lora_get_mode </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00152">152</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad4c373ea337c377cd35a3a0e1a8a3131" name="ad4c373ea337c377cd35a3a0e1a8a3131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c373ea337c377cd35a3a0e1a8a3131">&#9670;&#160;</a></span>ui_lora_get_output_power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t ui_lora_get_output_power </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00171">171</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0ccdbfb311e9d6e136c75b7fa3a9cd99" name="a0ccdbfb311e9d6e136c75b7fa3a9cd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccdbfb311e9d6e136c75b7fa3a9cd99">&#9670;&#160;</a></span>ui_lora_get_spread_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ui_lora_get_spread_factor </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00172">172</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a857e08bcc475b2657122cdacff895f5d" name="a857e08bcc475b2657122cdacff895f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857e08bcc475b2657122cdacff895f5d">&#9670;&#160;</a></span>ui_lora_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui_lora_recv </td>
+          <td>(</td>
+          <td class="paramtype">const char **</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00160">160</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a92ce6a4c20cbbfdfe4fbbeff07963332" name="a92ce6a4c20cbbfdfe4fbbeff07963332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ce6a4c20cbbfdfe4fbbeff07963332">&#9670;&#160;</a></span>ui_lora_recv_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_lora_recv_resume </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00143">143</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0c7013784069fb830ea9e91bb974f56" name="ae0c7013784069fb830ea9e91bb974f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c7013784069fb830ea9e91bb974f56">&#9670;&#160;</a></span>ui_lora_recv_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_lora_recv_suspend </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00138">138</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a74757477a3003696fbc5e9d314795226" name="a74757477a3003696fbc5e9d314795226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74757477a3003696fbc5e9d314795226">&#9670;&#160;</a></span>ui_lora_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_lora_send </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00156">156</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b38fbf9ddb830fcbe1e5500bf9bb985" name="a7b38fbf9ddb830fcbe1e5500bf9bb985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b38fbf9ddb830fcbe1e5500bf9bb985">&#9670;&#160;</a></span>ui_lora_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_lora_set_mode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00148">148</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aea2625393be53b3c40e57d06253d4eba" name="aea2625393be53b3c40e57d06253d4eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2625393be53b3c40e57d06253d4eba">&#9670;&#160;</a></span>ui_nvs_set_defaulat_param()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_nvs_set_defaulat_param </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00016">16</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f2a2baf9d3733e03485c9d5a039fa4b" name="a7f2a2baf9d3733e03485c9d5a039fa4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2a2baf9d3733e03485c9d5a039fa4b">&#9670;&#160;</a></span>ui_refresh_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_refresh_get_mode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00047">47</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8254c53e00bde3e01987d5543b26c5a8" name="a8254c53e00bde3e01987d5543b26c5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8254c53e00bde3e01987d5543b26c5a8">&#9670;&#160;</a></span>ui_refresh_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_refresh_set_mode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00040">40</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aff8d8399abcabb1215e02f0479d66d20" name="aff8d8399abcabb1215e02f0479d66d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8d8399abcabb1215e02f0479d66d20">&#9670;&#160;</a></span>ui_sd_get_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_sd_get_capacity </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t *</td>          <td class="paramname"><span class="paramname"><em>total</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t *</td>          <td class="paramname"><span class="paramname"><em>used</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00179">179</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0fba716bc5e308dbf4863393a2e1bf43" name="a0fba716bc5e308dbf4863393a2e1bf43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fba716bc5e308dbf4863393a2e1bf43">&#9670;&#160;</a></span>ui_sd_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_sd_read </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00174">174</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a23d48ac2a2f8a92721dbb30874659d36" name="a23d48ac2a2f8a92721dbb30874659d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d48ac2a2f8a92721dbb30874659d36">&#9670;&#160;</a></span>ui_set_rotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_set_rotation </td>
+          <td>(</td>
+          <td class="paramtype">lv_disp_rot_t</td>          <td class="paramname"><span class="paramname"><em>rot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00067">67</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa99dfa58c57f2c78708c9e408400d20d" name="aa99dfa58c57f2c78708c9e408400d20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99dfa58c57f2c78708c9e408400d20d">&#9670;&#160;</a></span>ui_setting_get_backlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_setting_get_backlight </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_bl</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00241">241</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abd6092b1b1c853382363b77549df46c1" name="abd6092b1b1c853382363b77549df46c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6092b1b1c853382363b77549df46c1">&#9670;&#160;</a></span>ui_setting_get_hd_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_setting_get_hd_ver </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00293">293</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f1536caf1c9f8154e7533feb3d0ff6c" name="a0f1536caf1c9f8154e7533feb3d0ff6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1536caf1c9f8154e7533feb3d0ff6c">&#9670;&#160;</a></span>ui_setting_get_refresh_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_setting_get_refresh_speed </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_bl</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00272">272</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abaf332dc7b5b87584be8edaacd5a98ff" name="abaf332dc7b5b87584be8edaacd5a98ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf332dc7b5b87584be8edaacd5a98ff">&#9670;&#160;</a></span>ui_setting_get_sf_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_setting_get_sf_ver </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00289">289</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1e0276ced28a7fd8aa43f556bbcdc6a" name="ad1e0276ced28a7fd8aa43f556bbcdc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e0276ced28a7fd8aa43f556bbcdc6a">&#9670;&#160;</a></span>ui_setting_get_vcom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_setting_get_vcom </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00205">205</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a58b11347ee259459e0f8ee2bbd108297" name="a58b11347ee259459e0f8ee2bbd108297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b11347ee259459e0f8ee2bbd108297">&#9670;&#160;</a></span>ui_setting_set_backlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_setting_set_backlight </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bl</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00219">219</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab8b30887f8820bbabf83abd5c73bb14c" name="ab8b30887f8820bbabf83abd5c73bb14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b30887f8820bbabf83abd5c73bb14c">&#9670;&#160;</a></span>ui_setting_set_backlight_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_setting_set_backlight_level </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00233">233</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a372ba03620fceb8166cf00bc1c24b866" name="a372ba03620fceb8166cf00bc1c24b866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372ba03620fceb8166cf00bc1c24b866">&#9670;&#160;</a></span>ui_setting_set_refresh_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_setting_set_refresh_speed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bl</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00259">259</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a16581716463227b1e5f52a5c45b2760d" name="a16581716463227b1e5f52a5c45b2760d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16581716463227b1e5f52a5c45b2760d">&#9670;&#160;</a></span>ui_setting_set_vcom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_setting_set_vcom </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00210">210</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeefe64a98d1cb5e40126a9e5188ecac2" name="aeefe64a98d1cb5e40126a9e5188ecac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefe64a98d1cb5e40126a9e5188ecac2">&#9670;&#160;</a></span>ui_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_shutdown </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00513">513</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a156bd9865ceb56aa78f8aa46f2d62bc5" name="a156bd9865ceb56aa78f8aa46f2d62bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156bd9865ceb56aa78f8aa46f2d62bc5">&#9670;&#160;</a></span>ui_shutdown_vcom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_shutdown_vcom </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00508">508</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5bfc9dd716a9673f3fb22aa18f29196d" name="a5bfc9dd716a9673f3fb22aa18f29196d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bfc9dd716a9673f3fb22aa18f29196d">&#9670;&#160;</a></span>ui_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_sleep </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00518">518</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f4f98962ed7d84a32626acf2ec2a148" name="a4f4f98962ed7d84a32626acf2ec2a148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4f98962ed7d84a32626acf2ec2a148">&#9670;&#160;</a></span>ui_test_get_BQ25896()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_BQ25896 </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00325">325</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f195ffba922ebac2c71917032e155ba" name="a7f195ffba922ebac2c71917032e155ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f195ffba922ebac2c71917032e155ba">&#9670;&#160;</a></span>ui_test_get_BQ27220()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_BQ27220 </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00330">330</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab99f209b276536de64ce2aa7092a2b5a" name="ab99f209b276536de64ce2aa7092a2b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99f209b276536de64ce2aa7092a2b5a">&#9670;&#160;</a></span>ui_test_get_gps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_gps </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00300">300</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aec588b763d30ad7dd3ee9558d2f0b5d7" name="aec588b763d30ad7dd3ee9558d2f0b5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec588b763d30ad7dd3ee9558d2f0b5d7">&#9670;&#160;</a></span>ui_test_get_lora()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_lora </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00305">305</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adfa7273d9d28c05c9cb2dd50a00e0de3" name="adfa7273d9d28c05c9cb2dd50a00e0de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa7273d9d28c05c9cb2dd50a00e0de3">&#9670;&#160;</a></span>ui_test_get_rtc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_rtc </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00315">315</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af7dfb4dcb5d61accce48fa7a7d458840" name="af7dfb4dcb5d61accce48fa7a7d458840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7dfb4dcb5d61accce48fa7a7d458840">&#9670;&#160;</a></span>ui_test_get_sd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_sd </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00310">310</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c9a83fd577257d17d2485c3a69c63bb" name="a4c9a83fd577257d17d2485c3a69c63bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9a83fd577257d17d2485c3a69c63bb">&#9670;&#160;</a></span>ui_test_get_touch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_test_get_touch </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00320">320</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2086fe7e06d8aa81708651342edac46c" name="a2086fe7e06d8aa81708651342edac46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2086fe7e06d8aa81708651342edac46c">&#9670;&#160;</a></span>ui_wifi_get_ip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String ui_wifi_get_ip </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00346">346</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa529a5424bc592d9804e822428c65bae" name="aa529a5424bc592d9804e822428c65bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa529a5424bc592d9804e822428c65bae">&#9670;&#160;</a></span>ui_wifi_get_pwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_wifi_get_pwd </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00357">357</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b0397958aaaddd00fb66dee0dea60df" name="a1b0397958aaaddd00fb66dee0dea60df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0397958aaaddd00fb66dee0dea60df">&#9670;&#160;</a></span>ui_wifi_get_ssid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ui_wifi_get_ssid </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00351">351</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7daa5ffaa1fb3a8af5805091146ffce7" name="a7daa5ffaa1fb3a8af5805091146ffce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7daa5ffaa1fb3a8af5805091146ffce7">&#9670;&#160;</a></span>ui_wifi_get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ui_wifi_get_status </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00337">337</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1560a5b99edd5c741fe21fb9b6e28200" name="a1560a5b99edd5c741fe21fb9b6e28200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1560a5b99edd5c741fe21fb9b6e28200">&#9670;&#160;</a></span>ui_wifi_set_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_wifi_set_status </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>statue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00341">341</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a149f11487154da7decf4b2ed1307d126" name="a149f11487154da7decf4b2ed1307d126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149f11487154da7decf4b2ed1307d126">&#9670;&#160;</a></span>epd_vcom_default</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int epd_vcom_default = 1560</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00011">11</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adf7f530e0ce24fc7c08545d735ef0ec3" name="adf7f530e0ce24fc7c08545d735ef0ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7f530e0ce24fc7c08545d735ef0ec3">&#9670;&#160;</a></span>refresh_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int refresh_mode = <a class="el" href="ui__port_8h.html#a5c0a816bea8f55aea98e85eaf1213b3e">UI_REFRESH_MODE_NORMAL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00012">12</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac5b0c528eda2a64f68979ef918a5f42a" name="ac5b0c528eda2a64f68979ef918a5f42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b0c528eda2a64f68979ef918a5f42a">&#9670;&#160;</a></span>ui_setting_backlight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_setting_backlight = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui__port_8cpp_source.html#l00010">10</a> der Datei <a class="el" href="ui__port_8cpp_source.html">ui_port.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="ui__port_8cpp.html">ui_port.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

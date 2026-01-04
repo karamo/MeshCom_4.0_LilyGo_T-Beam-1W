@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/ui.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ui_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ui.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ui_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __UI_EPD47H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __UI_EPD47H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *                                  INCLUDES</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * *******************************************************************************/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="lvgl_8h.html">lvgl.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="t5epaper__main_8h.html">t5epaper_main.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *                                   DEFINES</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * *******************************************************************************/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="ui_8h.html#acae6388f85a7fdd5aa28a2d0bdec408e">   13</a></span><span class="preprocessor">#define LCD_HOR_SIZE LV_HOR_RES</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="ui_8h.html#a1cfd04983d0c1e1c3ee50026898ecb80">   14</a></span><span class="preprocessor">#define LCD_VER_SIZE LV_VER_RES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="ui_8h.html#a775769159b07fbaefca47ed993aa857d">   16</a></span><span class="preprocessor">#define UI_SLIDING_DISTANCE     100</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="ui_8h.html#a3516d5ba4e2d3bd425fab3c0d17eac28">   18</a></span><span class="preprocessor">#define EPD_COLOR_BG          0xffffff</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="ui_8h.html#a17de2a41599b7548001c631a1d428c0f">   19</a></span><span class="preprocessor">#define EPD_COLOR_FG          0x000000</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="ui_8h.html#a93a4c8ca7ac216491cc4de2840a07852">   20</a></span><span class="preprocessor">#define EPD_COLOR_FOCUS_ON    0x91B821</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="ui_8h.html#a1a4b57cbcb3961d24453531feb4f4676">   21</a></span><span class="preprocessor">#define EPD_COLOR_TEXT        0x000000</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="ui_8h.html#ae50b1a3112007e208686a015de1d0d83">   22</a></span><span class="preprocessor">#define EPD_COLOR_BORDER      0xBBBBBB</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="ui_8h.html#a5f4cad8897a9f7634dd3d1eeda78b4d3">   23</a></span><span class="preprocessor">#define EPD_COLOR_PROMPT_BG   0x1e1e00</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="ui_8h.html#ad77a14587ad086cffd494f18e29f424d">   24</a></span><span class="preprocessor">#define EPD_COLOR_PROMPT_TXT  0xfffee6</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *                                   MACROS</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> * *******************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *                                  TYPEDEFS</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> * *******************************************************************************/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5aa0acbb56fc925d44156fbf40629b2129">   34</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64aa0acbb56fc925d44156fbf40629b2129">SCREEN0_ID</a> = 0,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a98938d32e1a17429c850ce4a5dc46d60">   35</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a98938d32e1a17429c850ce4a5dc46d60">SCREEN1_ID</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a270b85836cc87d6e272736dcf73954a5">   36</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a270b85836cc87d6e272736dcf73954a5">SCREEN2_ID</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5ab4beb44f92326a23d53365266a2d6415">   37</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64ab4beb44f92326a23d53365266a2d6415">SCREEN2_1_ID</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a7c13e28c7d973cf0071ccb22a178049f">   38</a></span>    <a class="code hl_enumvalue" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a7c13e28c7d973cf0071ccb22a178049f">SCREEN2_2_ID</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5aaf825f567d517f3e5f2661ab8f34e0b7">   39</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64aaf825f567d517f3e5f2661ab8f34e0b7">SCREEN3_ID</a>,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a57ae763a0837aa3e4daf9bf15d66334d">   40</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a57ae763a0837aa3e4daf9bf15d66334d">SCREEN4_ID</a>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a2cc47986b19368a0223115188b4db857">   41</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a2cc47986b19368a0223115188b4db857">SCREEN4_1_ID</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a69bc780850bd7d562e48fc5768b5cf36">   42</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a69bc780850bd7d562e48fc5768b5cf36">SCREEN4_2_ID</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a01a8c76f3bc6c68e72ee1bfc8f5b40fc">   43</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a01a8c76f3bc6c68e72ee1bfc8f5b40fc">SCREEN5_ID</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a57efde42f93d5b519a5efb0f42d5402a">   44</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a57efde42f93d5b519a5efb0f42d5402a">SCREEN6_ID</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a73ac2a67b93da86b2bd17e928af32fa9">   45</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a73ac2a67b93da86b2bd17e928af32fa9">SCREEN7_ID</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5afc6c221a94c7a12c109685a66aa2a269">   46</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64afc6c221a94c7a12c109685a66aa2a269">SCREEN8_ID</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5ac4937f2793ae692a200008ff55c0b1e8">   47</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64ac4937f2793ae692a200008ff55c0b1e8">SCREEN9_ID</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="ui_8h.html#abddceb81ab11938245a55a05536e62e5af32cad2504eb64b9f952ee8f9134ed9c">   48</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64af32cad2504eb64b9f952ee8f9134ed9c">SCREEN10_ID</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899acbfedf33dd4e787309d1d07fdd7c8c83">   52</a></span>    <a class="code hl_enumvalue" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899acbfedf33dd4e787309d1d07fdd7c8c83">TASKBAR_ID_TIME_HOUR</a> = 0,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899ab61abd034b9435892afcc482912efb4d">   53</a></span>    <a class="code hl_enumvalue" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899ab61abd034b9435892afcc482912efb4d">TASKBAR_ID_TIME_MINUTE</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899a1e7eca32f6e3d613d2c7688180db158f">   54</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a1e7eca32f6e3d613d2c7688180db158f">TASKBAR_ID_CHARGE</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899a6b31f190827cc6405dc0d2d8be31a29e">   55</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a6b31f190827cc6405dc0d2d8be31a29e">TASKBAR_ID_CHARGE_FINISH</a>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899a6dd0ae5541eefb53555231166987ade7">   56</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a6dd0ae5541eefb53555231166987ade7">TASKBAR_ID_BATTERY_PERCENT</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899ac59636cac612fdbcdd3bfd36de7cc869">   57</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0ac59636cac612fdbcdd3bfd36de7cc869">TASKBAR_ID_WIFI</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899adda289a16abec0a49c19e899a2f10f9e">   58</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0adda289a16abec0a49c19e899a2f10f9e">TASKBAR_ID_MAX</a>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="ui_8h.html#a786bbcaa962cb916d38dc13b35e0ff83">   61</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="ui__deckpro_8h.html#a786bbcaa962cb916d38dc13b35e0ff83">ui_indev_read_cb</a>)(int);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structmenu__icon.html">   63</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmenu__icon.html">menu_icon</a> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structmenu__icon.html#ab89dd23a748e70ff8c696f966508c892">   64</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code hl_variable" href="structmenu__icon.html#ab89dd23a748e70ff8c696f966508c892">icon_src</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structmenu__icon.html#a46b6ca6fbede1441a9ab188d8e50a6df">   65</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structmenu__icon.html#a46b6ca6fbede1441a9ab188d8e50a6df">icon_str</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structmenu__icon.html#ae7ccb8d8cb19ed8385fe50a31070c7de">   66</a></span>    lv_coord_t <a class="code hl_variable" href="structmenu__icon.html#ae7ccb8d8cb19ed8385fe50a31070c7de">offs_x</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structmenu__icon.html#af9dd0d50e5a2636bf5051fae2f9ffb66">   67</a></span>    lv_coord_t <a class="code hl_variable" href="structmenu__icon.html#af9dd0d50e5a2636bf5051fae2f9ffb66">offs_y</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="ui_8h.html#a3f8a45055b1b832d2155b16a28b613a4a7039fda2a24bc27314ea84ddf586fb4d">   71</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#adb76cb434a21b52cdd74d8126f2e04aca7039fda2a24bc27314ea84ddf586fb4d">UI_SETTING_TYPE_SW</a>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="ui_8h.html#a3f8a45055b1b832d2155b16a28b613a4a042c03fc347ccbda5845ab53e341af39">   72</a></span>    <a class="code hl_enumvalue" href="ui__deckpro_8h.html#adb76cb434a21b52cdd74d8126f2e04aca042c03fc347ccbda5845ab53e341af39">UI_SETTING_TYPE_SUB</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct__ui__setting.html">_ui_setting</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="struct__ui__setting.html#a2c550d160a37b872a684eadde1b99fca">name</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__ui__setting.html#a19e7613e697d073d77e24cadeaa15176">type</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    void (*<a class="code hl_variable" href="struct__ui__setting.html#a95717a101617006542547a5faececfe7">set_cb</a>)(int);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct__ui__setting.html#a0fb84a8678c7262b96d2b7b30f632234">   80</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* (*get_cb)(<span class="keywordtype">int</span> *);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__ui__setting.html#aee67436fba6e2355e4e4f5b359b72434">sub_id</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    lv_obj_t *<a class="code hl_variable" href="struct__ui__setting.html#a407c55eacfeb940732d3f83314cbc2e4">obj</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    lv_obj_t *<a class="code hl_variable" href="struct__ui__setting.html#a2df48831d7042dc8dd3a39a35fc796d1">st</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="ui_8h.html#a05500e9321f804fd4e706a595e645a6d">   84</a></span>} <a class="code hl_typedef" href="ui__deckpro_8h.html#a05500e9321f804fd4e706a595e645a6d">ui_setting_handle</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">/*********************************************************************************</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"> *                              GLOBAL PROTOTYPES</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment"> * *******************************************************************************/</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> <a class="code hl_function" href="ui_8h.html#a3f42b400beed3a423386740657559c4d">ui_entry</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">/* __UI_EPD47H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="alvgl_8h_html"><div class="ttname"><a href="lvgl_8h.html">lvgl.h</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html"><div class="ttname"><a href="struct__ui__setting.html">_ui_setting</a></div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00097">ui_deckpro.h:98</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_a19e7613e697d073d77e24cadeaa15176"><div class="ttname"><a href="struct__ui__setting.html#a19e7613e697d073d77e24cadeaa15176">_ui_setting::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00100">ui_deckpro.h:100</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_a2c550d160a37b872a684eadde1b99fca"><div class="ttname"><a href="struct__ui__setting.html#a2c550d160a37b872a684eadde1b99fca">_ui_setting::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00099">ui_deckpro.h:99</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_a2df48831d7042dc8dd3a39a35fc796d1"><div class="ttname"><a href="struct__ui__setting.html#a2df48831d7042dc8dd3a39a35fc796d1">_ui_setting::st</a></div><div class="ttdeci">lv_obj_t * st</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00105">ui_deckpro.h:105</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_a407c55eacfeb940732d3f83314cbc2e4"><div class="ttname"><a href="struct__ui__setting.html#a407c55eacfeb940732d3f83314cbc2e4">_ui_setting::obj</a></div><div class="ttdeci">lv_obj_t * obj</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00104">ui_deckpro.h:104</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_a95717a101617006542547a5faececfe7"><div class="ttname"><a href="struct__ui__setting.html#a95717a101617006542547a5faececfe7">_ui_setting::set_cb</a></div><div class="ttdeci">void(* set_cb)(bool)</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00101">ui_deckpro.h:101</a></div></div>
+<div class="ttc" id="astruct__ui__setting_html_aee67436fba6e2355e4e4f5b359b72434"><div class="ttname"><a href="struct__ui__setting.html#aee67436fba6e2355e4e4f5b359b72434">_ui_setting::sub_id</a></div><div class="ttdeci">int sub_id</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00103">ui_deckpro.h:103</a></div></div>
+<div class="ttc" id="astructmenu__icon_html"><div class="ttname"><a href="structmenu__icon.html">menu_icon</a></div><div class="ttdef"><b>Definition</b> <a href="#l00063">ui.h:63</a></div></div>
+<div class="ttc" id="astructmenu__icon_html_a46b6ca6fbede1441a9ab188d8e50a6df"><div class="ttname"><a href="structmenu__icon.html#a46b6ca6fbede1441a9ab188d8e50a6df">menu_icon::icon_str</a></div><div class="ttdeci">const char * icon_str</div><div class="ttdef"><b>Definition</b> <a href="#l00065">ui.h:65</a></div></div>
+<div class="ttc" id="astructmenu__icon_html_ab89dd23a748e70ff8c696f966508c892"><div class="ttname"><a href="structmenu__icon.html#ab89dd23a748e70ff8c696f966508c892">menu_icon::icon_src</a></div><div class="ttdeci">const void * icon_src</div><div class="ttdef"><b>Definition</b> <a href="#l00064">ui.h:64</a></div></div>
+<div class="ttc" id="astructmenu__icon_html_ae7ccb8d8cb19ed8385fe50a31070c7de"><div class="ttname"><a href="structmenu__icon.html#ae7ccb8d8cb19ed8385fe50a31070c7de">menu_icon::offs_x</a></div><div class="ttdeci">lv_coord_t offs_x</div><div class="ttdef"><b>Definition</b> <a href="#l00066">ui.h:66</a></div></div>
+<div class="ttc" id="astructmenu__icon_html_af9dd0d50e5a2636bf5051fae2f9ffb66"><div class="ttname"><a href="structmenu__icon.html#af9dd0d50e5a2636bf5051fae2f9ffb66">menu_icon::offs_y</a></div><div class="ttdeci">lv_coord_t offs_y</div><div class="ttdef"><b>Definition</b> <a href="#l00067">ui.h:67</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html"><div class="ttname"><a href="t5epaper__main_8h.html">t5epaper_main.h</a></div></div>
+<div class="ttc" id="aui_8h_html_a3f42b400beed3a423386740657559c4d"><div class="ttname"><a href="ui_8h.html#a3f42b400beed3a423386740657559c4d">ui_entry</a></div><div class="ttdeci">void ui_entry(void)</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l02634">ui.cpp:2634</a></div></div>
+<div class="ttc" id="aui_8h_html_ab16c51f426f0ea4b5031a60f8a23c899ab61abd034b9435892afcc482912efb4d"><div class="ttname"><a href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899ab61abd034b9435892afcc482912efb4d">TASKBAR_ID_TIME_MINUTE</a></div><div class="ttdeci">@ TASKBAR_ID_TIME_MINUTE</div><div class="ttdef"><b>Definition</b> <a href="#l00053">ui.h:53</a></div></div>
+<div class="ttc" id="aui_8h_html_ab16c51f426f0ea4b5031a60f8a23c899acbfedf33dd4e787309d1d07fdd7c8c83"><div class="ttname"><a href="ui_8h.html#ab16c51f426f0ea4b5031a60f8a23c899acbfedf33dd4e787309d1d07fdd7c8c83">TASKBAR_ID_TIME_HOUR</a></div><div class="ttdeci">@ TASKBAR_ID_TIME_HOUR</div><div class="ttdef"><b>Definition</b> <a href="#l00052">ui.h:52</a></div></div>
+<div class="ttc" id="aui_8h_html_abddceb81ab11938245a55a05536e62e5a7c13e28c7d973cf0071ccb22a178049f"><div class="ttname"><a href="ui_8h.html#abddceb81ab11938245a55a05536e62e5a7c13e28c7d973cf0071ccb22a178049f">SCREEN2_2_ID</a></div><div class="ttdeci">@ SCREEN2_2_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00038">ui.h:38</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a05500e9321f804fd4e706a595e645a6d"><div class="ttname"><a href="ui__deckpro_8h.html#a05500e9321f804fd4e706a595e645a6d">ui_setting_handle</a></div><div class="ttdeci">struct _ui_setting ui_setting_handle</div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a01a8c76f3bc6c68e72ee1bfc8f5b40fc"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a01a8c76f3bc6c68e72ee1bfc8f5b40fc">SCREEN5_ID</a></div><div class="ttdeci">@ SCREEN5_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00059">ui_deckpro.h:59</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a270b85836cc87d6e272736dcf73954a5"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a270b85836cc87d6e272736dcf73954a5">SCREEN2_ID</a></div><div class="ttdeci">@ SCREEN2_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00053">ui_deckpro.h:53</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a2cc47986b19368a0223115188b4db857"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a2cc47986b19368a0223115188b4db857">SCREEN4_1_ID</a></div><div class="ttdeci">@ SCREEN4_1_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00057">ui_deckpro.h:57</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a57ae763a0837aa3e4daf9bf15d66334d"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a57ae763a0837aa3e4daf9bf15d66334d">SCREEN4_ID</a></div><div class="ttdeci">@ SCREEN4_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00056">ui_deckpro.h:56</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a57efde42f93d5b519a5efb0f42d5402a"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a57efde42f93d5b519a5efb0f42d5402a">SCREEN6_ID</a></div><div class="ttdeci">@ SCREEN6_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00060">ui_deckpro.h:60</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a69bc780850bd7d562e48fc5768b5cf36"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a69bc780850bd7d562e48fc5768b5cf36">SCREEN4_2_ID</a></div><div class="ttdeci">@ SCREEN4_2_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00058">ui_deckpro.h:58</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a73ac2a67b93da86b2bd17e928af32fa9"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a73ac2a67b93da86b2bd17e928af32fa9">SCREEN7_ID</a></div><div class="ttdeci">@ SCREEN7_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00063">ui_deckpro.h:63</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64a98938d32e1a17429c850ce4a5dc46d60"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64a98938d32e1a17429c850ce4a5dc46d60">SCREEN1_ID</a></div><div class="ttdeci">@ SCREEN1_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00050">ui_deckpro.h:50</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64aa0acbb56fc925d44156fbf40629b2129"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64aa0acbb56fc925d44156fbf40629b2129">SCREEN0_ID</a></div><div class="ttdeci">@ SCREEN0_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00049">ui_deckpro.h:49</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64aaf825f567d517f3e5f2661ab8f34e0b7"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64aaf825f567d517f3e5f2661ab8f34e0b7">SCREEN3_ID</a></div><div class="ttdeci">@ SCREEN3_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00055">ui_deckpro.h:55</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64ab4beb44f92326a23d53365266a2d6415"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64ab4beb44f92326a23d53365266a2d6415">SCREEN2_1_ID</a></div><div class="ttdeci">@ SCREEN2_1_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00054">ui_deckpro.h:54</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64ac4937f2793ae692a200008ff55c0b1e8"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64ac4937f2793ae692a200008ff55c0b1e8">SCREEN9_ID</a></div><div class="ttdeci">@ SCREEN9_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00067">ui_deckpro.h:67</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64af32cad2504eb64b9f952ee8f9134ed9c"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64af32cad2504eb64b9f952ee8f9134ed9c">SCREEN10_ID</a></div><div class="ttdeci">@ SCREEN10_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00068">ui_deckpro.h:68</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a0b95f91aba295a62384546b5f22e2c64afc6c221a94c7a12c109685a66aa2a269"><div class="ttname"><a href="ui__deckpro_8h.html#a0b95f91aba295a62384546b5f22e2c64afc6c221a94c7a12c109685a66aa2a269">SCREEN8_ID</a></div><div class="ttdeci">@ SCREEN8_ID</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00064">ui_deckpro.h:64</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_a786bbcaa962cb916d38dc13b35e0ff83"><div class="ttname"><a href="ui__deckpro_8h.html#a786bbcaa962cb916d38dc13b35e0ff83">ui_indev_read_cb</a></div><div class="ttdeci">void(* ui_indev_read_cb)(int)</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00071">ui_deckpro.h:71</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_adb76cb434a21b52cdd74d8126f2e04aca042c03fc347ccbda5845ab53e341af39"><div class="ttname"><a href="ui__deckpro_8h.html#adb76cb434a21b52cdd74d8126f2e04aca042c03fc347ccbda5845ab53e341af39">UI_SETTING_TYPE_SUB</a></div><div class="ttdeci">@ UI_SETTING_TYPE_SUB</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00094">ui_deckpro.h:94</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_adb76cb434a21b52cdd74d8126f2e04aca7039fda2a24bc27314ea84ddf586fb4d"><div class="ttname"><a href="ui__deckpro_8h.html#adb76cb434a21b52cdd74d8126f2e04aca7039fda2a24bc27314ea84ddf586fb4d">UI_SETTING_TYPE_SW</a></div><div class="ttdeci">@ UI_SETTING_TYPE_SW</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00093">ui_deckpro.h:93</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_af1c2b4540286110cef95f47c785d74a0a1e7eca32f6e3d613d2c7688180db158f"><div class="ttname"><a href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a1e7eca32f6e3d613d2c7688180db158f">TASKBAR_ID_CHARGE</a></div><div class="ttdeci">@ TASKBAR_ID_CHARGE</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00074">ui_deckpro.h:74</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_af1c2b4540286110cef95f47c785d74a0a6b31f190827cc6405dc0d2d8be31a29e"><div class="ttname"><a href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a6b31f190827cc6405dc0d2d8be31a29e">TASKBAR_ID_CHARGE_FINISH</a></div><div class="ttdeci">@ TASKBAR_ID_CHARGE_FINISH</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00075">ui_deckpro.h:75</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_af1c2b4540286110cef95f47c785d74a0a6dd0ae5541eefb53555231166987ade7"><div class="ttname"><a href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0a6dd0ae5541eefb53555231166987ade7">TASKBAR_ID_BATTERY_PERCENT</a></div><div class="ttdeci">@ TASKBAR_ID_BATTERY_PERCENT</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00076">ui_deckpro.h:76</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_af1c2b4540286110cef95f47c785d74a0ac59636cac612fdbcdd3bfd36de7cc869"><div class="ttname"><a href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0ac59636cac612fdbcdd3bfd36de7cc869">TASKBAR_ID_WIFI</a></div><div class="ttdeci">@ TASKBAR_ID_WIFI</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00077">ui_deckpro.h:77</a></div></div>
+<div class="ttc" id="aui__deckpro_8h_html_af1c2b4540286110cef95f47c785d74a0adda289a16abec0a49c19e899a2f10f9e"><div class="ttname"><a href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0adda289a16abec0a49c19e899a2f10f9e">TASKBAR_ID_MAX</a></div><div class="ttdeci">@ TASKBAR_ID_MAX</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8h_source.html#l00081">ui_deckpro.h:81</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="ui_8h.html">ui.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

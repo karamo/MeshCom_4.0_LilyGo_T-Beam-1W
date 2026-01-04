@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/web_functions/web_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('web__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">web_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="web__functions_8h_source.html">web_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="mheard__functions_8h_source.html">mheard_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtc__functions_8h_source.html">rtc_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="time__functions_8h_source.html">time_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="spectral__scan_8h_source.html">spectral_scan.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="web___u_i_components_8h_source.html">web_UIComponents.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="web__setup_8h_source.html">web_setup.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="web__nodefunctioncalls_8h_source.html">web_nodefunctioncalls.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="web__common_server_8h_source.html">web_commonServer.h</a>&quot;</code><br />
+</div>
+<p><a href="web__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a4f37817ebd3db58a8ceb3a5a1185c8b5" id="r_a4f37817ebd3db58a8ceb3a5a1185c8b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f37817ebd3db58a8ceb3a5a1185c8b5">WEB_TIMEOUT_TIME</a>&#160;&#160;&#160;2000</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a62d8bffc53af4311682783b0315384ab" id="r_a62d8bffc53af4311682783b0315384ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62d8bffc53af4311682783b0315384ab">web_client_html</a> (<a class="el" href="class_common_web_client.html">CommonWebClient</a> <a class="el" href="#aad313d0eae7668be9d5e3d86a7efa839">web_client</a>)</td></tr>
+<tr class="memitem:acff891d4bfdb7e356b6ace9d6f4483a1" id="r_acff891d4bfdb7e356b6ace9d6f4483a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff891d4bfdb7e356b6ace9d6f4483a1">startWebserver</a> ()</td></tr>
+<tr class="memitem:a6e2b10d6c7e80f2075dc44c3884050fa" id="r_a6e2b10d6c7e80f2075dc44c3884050fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e2b10d6c7e80f2075dc44c3884050fa">stopWebserver</a> ()</td></tr>
+<tr class="memitem:add290682735fb2ce66b00bb88cd1e295" id="r_add290682735fb2ce66b00bb88cd1e295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add290682735fb2ce66b00bb88cd1e295">loopWebserver</a> ()</td></tr>
+<tr class="memitem:ab4c9c5a9f125123d997cbcc528df0b55" id="r_ab4c9c5a9f125123d997cbcc528df0b55"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4c9c5a9f125123d997cbcc528df0b55">work_webpage</a> (bool bget_password, int webid)</td></tr>
+<tr class="memitem:a38e4ae5d4f460e0678ea093b6abc9689" id="r_a38e4ae5d4f460e0678ea093b6abc9689"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e4ae5d4f460e0678ea093b6abc9689">decodeURLPercentCoding</a> (String input)</td></tr>
+<tr class="memitem:ae3eb03d98eb8ae0eaab2efe1e21ca5e9" id="r_ae3eb03d98eb8ae0eaab2efe1e21ca5e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3eb03d98eb8ae0eaab2efe1e21ca5e9">deliver_scaffold</a> (bool bget_password)</td></tr>
+<tr class="memitem:a93fe9c0f4e1264370084016c00a36619" id="r_a93fe9c0f4e1264370084016c00a36619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93fe9c0f4e1264370084016c00a36619">sub_page_unknown</a> ()</td></tr>
+<tr class="memitem:aef5154574d720a447c5f0b60ecdb6b9b" id="r_aef5154574d720a447c5f0b60ecdb6b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef5154574d720a447c5f0b60ecdb6b9b">sub_page_login</a> ()</td></tr>
+<tr class="memitem:ae0ee2d84cb1a31a4378920abb03dfee5" id="r_ae0ee2d84cb1a31a4378920abb03dfee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0ee2d84cb1a31a4378920abb03dfee5">sub_page_rxlog</a> ()</td></tr>
+<tr class="memitem:a1b1af06cc33eaad2a79ae9d7f5c4ff63" id="r_a1b1af06cc33eaad2a79ae9d7f5c4ff63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b1af06cc33eaad2a79ae9d7f5c4ff63">sub_page_wx</a> ()</td></tr>
+<tr class="memitem:a7454d93dd2b981aaaa23607794fae79b" id="r_a7454d93dd2b981aaaa23607794fae79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7454d93dd2b981aaaa23607794fae79b">sub_page_position</a> ()</td></tr>
+<tr class="memitem:a2a19743072468491bb63a70b501da27f" id="r_a2a19743072468491bb63a70b501da27f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a19743072468491bb63a70b501da27f">sub_page_mheard</a> ()</td></tr>
+<tr class="memitem:a9cdfba4605c7b97c52b812bb7ab72698" id="r_a9cdfba4605c7b97c52b812bb7ab72698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cdfba4605c7b97c52b812bb7ab72698">sub_page_path</a> ()</td></tr>
+<tr class="memitem:a458de002742aff631816b4e35c3d715a" id="r_a458de002742aff631816b4e35c3d715a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a458de002742aff631816b4e35c3d715a">sub_page_messages</a> ()</td></tr>
+<tr class="memitem:a651edb6dde46ccbf86cb6b863762e0b0" id="r_a651edb6dde46ccbf86cb6b863762e0b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a651edb6dde46ccbf86cb6b863762e0b0">sub_page_setup</a> ()</td></tr>
+<tr class="memitem:a3f7aa059c26a5cb2fac0b8e73d66b0d9" id="r_a3f7aa059c26a5cb2fac0b8e73d66b0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f7aa059c26a5cb2fac0b8e73d66b0d9">sub_content_messages</a> ()</td></tr>
+<tr class="memitem:a6065ba6cbb832fccda10a3501a10a39e" id="r_a6065ba6cbb832fccda10a3501a10a39e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6065ba6cbb832fccda10a3501a10a39e">sub_page_spectrum</a> ()</td></tr>
+<tr class="memitem:aa56ba17d20750055fa79015c199590b5" id="r_aa56ba17d20750055fa79015c199590b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa56ba17d20750055fa79015c199590b5">sub_page_info</a> ()</td></tr>
+<tr class="memitem:afe0a9c7cbfbc7bd73a4cf2b430eaa556" id="r_afe0a9c7cbfbc7bd73a4cf2b430eaa556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe0a9c7cbfbc7bd73a4cf2b430eaa556">sub_page_mcp23017</a> ()</td></tr>
+<tr class="memitem:ae2fb58936076e6e372a4477d88f3dcf1" id="r_ae2fb58936076e6e372a4477d88f3dcf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2fb58936076e6e372a4477d88f3dcf1">send_http_header</a> (uint16_t http_status_code, uint8_t content_type)</td></tr>
+<tr class="memitem:afbaeb4f803268bbd580a73cca506b585" id="r_afbaeb4f803268bbd580a73cca506b585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbaeb4f803268bbd580a73cca506b585">_create_meshcom_subheader</a> (String title)</td></tr>
+<tr class="memitem:a13544a2e169f7cdd4e151f687bcfdd18" id="r_a13544a2e169f7cdd4e151f687bcfdd18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13544a2e169f7cdd4e151f687bcfdd18">_create_setup_textinput_element</a> (const char id[], const char labelText[], String inputValue, const char placeHolder[], const char parameterName[], uint8_t maxlength, bool isPassword, bool needConfirm)</td></tr>
+<tr class="memitem:a9a4210908034b61e7349c896b329011c" id="r_a9a4210908034b61e7349c896b329011c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a4210908034b61e7349c896b329011c">_create_setup_switch_element</a> (const char id[], const char labelText[], const char descriptionText[], bool checked)</td></tr>
+<tr class="memitem:ab1f97f7588e4deba65526afdf13d7cc6" id="r_ab1f97f7588e4deba65526afdf13d7cc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1f97f7588e4deba65526afdf13d7cc6">send_message</a> (String <a class="el" href="#aedcc331ad9f055902131b2bd3219e97a">web_header</a>)</td></tr>
+<tr class="memitem:ae1a1a23c6f2612a58356e675543681fc" id="r_ae1a1a23c6f2612a58356e675543681fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1a1a23c6f2612a58356e675543681fc">call_function</a> (String <a class="el" href="#aedcc331ad9f055902131b2bd3219e97a">web_header</a>)</td></tr>
+<tr class="memitem:a894d5f8e2df51a317e838ce4fe94fb58" id="r_a894d5f8e2df51a317e838ce4fe94fb58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a894d5f8e2df51a317e838ce4fe94fb58">setparam</a> (String <a class="el" href="#aedcc331ad9f055902131b2bd3219e97a">web_header</a>)</td></tr>
+<tr class="memitem:aad15a65c8066804973eacc4b1151eddb" id="r_aad15a65c8066804973eacc4b1151eddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad15a65c8066804973eacc4b1151eddb">getparam</a> (String <a class="el" href="#aedcc331ad9f055902131b2bd3219e97a">web_header</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a3d04ef40e773d020c4924df55fa10dfc" id="r_a3d04ef40e773d020c4924df55fa10dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_common_web_server.html">CommonWebServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d04ef40e773d020c4924df55fa10dfc">web_server</a> (80)</td></tr>
+<tr class="memitem:aad313d0eae7668be9d5e3d86a7efa839" id="r_aad313d0eae7668be9d5e3d86a7efa839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_common_web_client.html">CommonWebClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad313d0eae7668be9d5e3d86a7efa839">web_client</a></td></tr>
+<tr class="memitem:aedcc331ad9f055902131b2bd3219e97a" id="r_aedcc331ad9f055902131b2bd3219e97a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedcc331ad9f055902131b2bd3219e97a">web_header</a></td></tr>
+<tr class="memitem:aadea9cdb76dea8dc511f1382840a36fb" id="r_aadea9cdb76dea8dc511f1382840a36fb"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadea9cdb76dea8dc511f1382840a36fb">web_currentTime</a> = millis()</td></tr>
+<tr class="memitem:a861707f76d99c3f90ab17bffdf028d11" id="r_a861707f76d99c3f90ab17bffdf028d11"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a861707f76d99c3f90ab17bffdf028d11">web_previousTime</a> = 0</td></tr>
+<tr class="memitem:a6c32d1f2e9bea5f6a406be15d4d26fa3" id="r_a6c32d1f2e9bea5f6a406be15d4d26fa3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c32d1f2e9bea5f6a406be15d4d26fa3">web_last_message_sent</a> [200]</td></tr>
+<tr class="memitem:aa6b98b2a47ef224a08ac883f388691f2" id="r_aa6b98b2a47ef224a08ac883f388691f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6b98b2a47ef224a08ac883f388691f2">bweb_server_running</a> = false</td></tr>
+<tr class="memitem:ab4977df9c5f20cffadb1f476f69b0bcd" id="r_ab4977df9c5f20cffadb1f476f69b0bcd"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4977df9c5f20cffadb1f476f69b0bcd">web_ip</a> [10][20]</td></tr>
+<tr class="memitem:a384acd1401c881f6e4e5a6aa3cb0a1e5" id="r_a384acd1401c881f6e4e5a6aa3cb0a1e5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384acd1401c881f6e4e5a6aa3cb0a1e5">web_ip_passwd_time</a> [10]</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="a4f37817ebd3db58a8ceb3a5a1185c8b5" name="a4f37817ebd3db58a8ceb3a5a1185c8b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f37817ebd3db58a8ceb3a5a1185c8b5">&#9670;&#160;</a></span>WEB_TIMEOUT_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WEB_TIMEOUT_TIME&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00030">30</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="afbaeb4f803268bbd580a73cca506b585" name="afbaeb4f803268bbd580a73cca506b585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbaeb4f803268bbd580a73cca506b585">&#9670;&#160;</a></span>_create_meshcom_subheader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _create_meshcom_subheader </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates the Sub-Header containing the Title and the Date/Time when that page was created </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01560">1560</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a4210908034b61e7349c896b329011c" name="a9a4210908034b61e7349c896b329011c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4210908034b61e7349c896b329011c">&#9670;&#160;</a></span>_create_setup_switch_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _create_setup_switch_element </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>id</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>labelText</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>descriptionText</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>checked</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Creates a common setup switch-input element including label and description</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the DOM id of that element. Must be unique. </td></tr>
+    <tr><td class="paramname">labelText</td><td>the text in the label </td></tr>
+    <tr><td class="paramname">descriptionText</td><td>the smaller text in brackets </td></tr>
+    <tr><td class="paramname">checked</td><td>TRUE, if the switch should be displayed as activated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01606">1606</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a13544a2e169f7cdd4e151f687bcfdd18" name="a13544a2e169f7cdd4e151f687bcfdd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13544a2e169f7cdd4e151f687bcfdd18">&#9670;&#160;</a></span>_create_setup_textinput_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _create_setup_textinput_element </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>id</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>labelText</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>inputValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>placeHolder</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>parameterName</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>maxlength</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isPassword</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>needConfirm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Creates a common setup text-input elementsrc/web_functions/web_functions.cpp <a class="el" href="web__setup_8cpp.html">src/web_functions/web_setup.cpp</a> including label and apply-button Parameter inputValue is chosen to be String so conversions from integers, floats, etc is easier.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the DOM id of that element. Must be unique. </td></tr>
+    <tr><td class="paramname">labelText</td><td>the text in the label </td></tr>
+    <tr><td class="paramname">inputValue</td><td>the current value of that field </td></tr>
+    <tr><td class="paramname">placeHolder</td><td>the placeholder that is displayed if the textinput is empty </td></tr>
+    <tr><td class="paramname">parameterName</td><td>the name of the parameter wich is used to identify the parameter </td></tr>
+    <tr><td class="paramname">maxlength</td><td>the maximum allowed input length </td></tr>
+    <tr><td class="paramname">isPassword</td><td>if set to TRUE, the input will be a password-type input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01578">1578</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae1a1a23c6f2612a58356e675543681fc" name="ae1a1a23c6f2612a58356e675543681fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a1a23c6f2612a58356e675543681fc">&#9670;&#160;</a></span>call_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void call_function </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>web_header</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Tries to execute a Web-API function call. This will return a JSON containing the result of the function execution ("ok" or "failed") </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01683">1683</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a38e4ae5d4f460e0678ea093b6abc9689" name="a38e4ae5d4f460e0678ea093b6abc9689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e4ae5d4f460e0678ea093b6abc9689">&#9670;&#160;</a></span>decodeURLPercentCoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String decodeURLPercentCoding </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### decodes Percent-Coded Strings (e.g. URLs and its parameters) </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00436">436</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae3eb03d98eb8ae0eaab2efe1e21ca5e9" name="ae3eb03d98eb8ae0eaab2efe1e21ca5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3eb03d98eb8ae0eaab2efe1e21ca5e9">&#9670;&#160;</a></span>deliver_scaffold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deliver_scaffold </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bget_password</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the WebUI scaffold including the info page </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00506">506</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aad15a65c8066804973eacc4b1151eddb" name="aad15a65c8066804973eacc4b1151eddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad15a65c8066804973eacc4b1151eddb">&#9670;&#160;</a></span>getparam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getparam </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>web_header</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Get the Value of a parameter (if known) This will return a JSON containing the result like {"parameterName":"parameterValue"} using a HTTP return code (e.g. 200 or 422) </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01745">1745</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="add290682735fb2ce66b00bb88cd1e295" name="add290682735fb2ce66b00bb88cd1e295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add290682735fb2ce66b00bb88cd1e295">&#9670;&#160;</a></span>loopWebserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loopWebserver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### loop function for Web Server </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00109">109</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2fb58936076e6e372a4477d88f3dcf1" name="ae2fb58936076e6e372a4477d88f3dcf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fb58936076e6e372a4477d88f3dcf1">&#9670;&#160;</a></span>send_http_header()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void send_http_header </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>http_status_code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>content_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Sends a valid HTTP header. Takes care of the status code. We may need to set more status_text cases once we need them. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01520">1520</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab1f97f7588e4deba65526afdf13d7cc6" name="ab1f97f7588e4deba65526afdf13d7cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f97f7588e4deba65526afdf13d7cc6">&#9670;&#160;</a></span>send_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void send_message </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>web_header</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### handles incoming sendmessage request ToDo: this might be better located anywhere else - maybe nodefunctioncalls? ToDo: switch response to JSON </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01618">1618</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a894d5f8e2df51a317e838ce4fe94fb58" name="a894d5f8e2df51a317e838ce4fe94fb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894d5f8e2df51a317e838ce4fe94fb58">&#9670;&#160;</a></span>setparam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setparam </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>web_header</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Set the Value of a parameter (if known) This will return a JSON containing the result like {"parameterName":"parameterValue"} using a HTTP return code (e.g. 200 or 422) </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01711">1711</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acff891d4bfdb7e356b6ace9d6f4483a1" name="acff891d4bfdb7e356b6ace9d6f4483a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff891d4bfdb7e356b6ace9d6f4483a1">&#9670;&#160;</a></span>startWebserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startWebserver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### initialize the Web Server </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00042">42</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e2b10d6c7e80f2075dc44c3884050fa" name="a6e2b10d6c7e80f2075dc44c3884050fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2b10d6c7e80f2075dc44c3884050fa">&#9670;&#160;</a></span>stopWebserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopWebserver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Stop the Web Server </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00096">96</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3f7aa059c26a5cb2fac0b8e73d66b0d9" name="a3f7aa059c26a5cb2fac0b8e73d66b0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7aa059c26a5cb2fac0b8e73d66b0d9">&#9670;&#160;</a></span>sub_content_messages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_content_messages </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### This will only deliver the preformatted messages to be loaded asyncronous into the WebUI scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01109">1109</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa56ba17d20750055fa79015c199590b5" name="aa56ba17d20750055fa79015c199590b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56ba17d20750055fa79015c199590b5">&#9670;&#160;</a></span>sub_page_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_info </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the info-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01318">1318</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef5154574d720a447c5f0b60ecdb6b9b" name="aef5154574d720a447c5f0b60ecdb6b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5154574d720a447c5f0b60ecdb6b9b">&#9670;&#160;</a></span>sub_page_login()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_login </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers a page to enter the nodes web password </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00710">710</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afe0a9c7cbfbc7bd73a4cf2b430eaa556" name="afe0a9c7cbfbc7bd73a4cf2b430eaa556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0a9c7cbfbc7bd73a4cf2b430eaa556">&#9670;&#160;</a></span>sub_page_mcp23017()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_mcp23017 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01417">1417</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a458de002742aff631816b4e35c3d715a" name="a458de002742aff631816b4e35c3d715a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458de002742aff631816b4e35c3d715a">&#9670;&#160;</a></span>sub_page_messages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_messages </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the message-page to be injected into the scaffold Includes all messages received/stored so far. To update message while using the Message Page, there is another callback function (sub_content_messages) that will only deliver the message block </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00891">891</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2a19743072468491bb63a70b501da27f" name="a2a19743072468491bb63a70b501da27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a19743072468491bb63a70b501da27f">&#9670;&#160;</a></span>sub_page_mheard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_mheard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the mheard-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00821">821</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9cdfba4605c7b97c52b812bb7ab72698" name="a9cdfba4605c7b97c52b812bb7ab72698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdfba4605c7b97c52b812bb7ab72698">&#9670;&#160;</a></span>sub_page_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_path </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the path-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00857">857</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7454d93dd2b981aaaa23607794fae79b" name="a7454d93dd2b981aaaa23607794fae79b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7454d93dd2b981aaaa23607794fae79b">&#9670;&#160;</a></span>sub_page_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_position </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the position-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00791">791</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0ee2d84cb1a31a4378920abb03dfee5" name="ae0ee2d84cb1a31a4378920abb03dfee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ee2d84cb1a31a4378920abb03dfee5">&#9670;&#160;</a></span>sub_page_rxlog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_rxlog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the rxlog-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00728">728</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a651edb6dde46ccbf86cb6b863762e0b0" name="a651edb6dde46ccbf86cb6b863762e0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651edb6dde46ccbf86cb6b863762e0b0">&#9670;&#160;</a></span>sub_page_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the setup-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00922">922</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6065ba6cbb832fccda10a3501a10a39e" name="a6065ba6cbb832fccda10a3501a10a39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6065ba6cbb832fccda10a3501a10a39e">&#9670;&#160;</a></span>sub_page_spectrum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_spectrum </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the ispectrumpage to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l01218">1218</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93fe9c0f4e1264370084016c00a36619" name="a93fe9c0f4e1264370084016c00a36619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fe9c0f4e1264370084016c00a36619">&#9670;&#160;</a></span>sub_page_unknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_unknown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers a page telling the user that the requested page is not known </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00697">697</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b1af06cc33eaad2a79ae9d7f5c4ff63" name="a1b1af06cc33eaad2a79ae9d7f5c4ff63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1af06cc33eaad2a79ae9d7f5c4ff63">&#9670;&#160;</a></span>sub_page_wx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sub_page_wx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### delivers the wx-page to be injected into the scaffold </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00749">749</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a62d8bffc53af4311682783b0315384ab" name="a62d8bffc53af4311682783b0315384ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d8bffc53af4311682783b0315384ab">&#9670;&#160;</a></span>web_client_html()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void web_client_html </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_common_web_client.html">CommonWebClient</a></td>          <td class="paramname"><span class="paramname"><em>web_client</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Web Client Handler </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00143">143</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4c9c5a9f125123d997cbcc528df0b55" name="ab4c9c5a9f125123d997cbcc528df0b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c9c5a9f125123d997cbcc528df0b55">&#9670;&#160;</a></span>work_webpage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String work_webpage </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bget_password</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>webid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>########################################################################################################################### Handle Web requests and call the matching sub function </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00233">233</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="aa6b98b2a47ef224a08ac883f388691f2" name="aa6b98b2a47ef224a08ac883f388691f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b98b2a47ef224a08ac883f388691f2">&#9670;&#160;</a></span>bweb_server_running</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bweb_server_running = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00032">32</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aad313d0eae7668be9d5e3d86a7efa839" name="aad313d0eae7668be9d5e3d86a7efa839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad313d0eae7668be9d5e3d86a7efa839">&#9670;&#160;</a></span>web_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_common_web_client.html">CommonWebClient</a> web_client</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00022">22</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aadea9cdb76dea8dc511f1382840a36fb" name="aadea9cdb76dea8dc511f1382840a36fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadea9cdb76dea8dc511f1382840a36fb">&#9670;&#160;</a></span>web_currentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long web_currentTime = millis()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00028">28</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aedcc331ad9f055902131b2bd3219e97a" name="aedcc331ad9f055902131b2bd3219e97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedcc331ad9f055902131b2bd3219e97a">&#9670;&#160;</a></span>web_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String web_header</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00027">27</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4977df9c5f20cffadb1f476f69b0bcd" name="ab4977df9c5f20cffadb1f476f69b0bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4977df9c5f20cffadb1f476f69b0bcd">&#9670;&#160;</a></span>web_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char web_ip[10][20]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00035">35</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a384acd1401c881f6e4e5a6aa3cb0a1e5" name="a384acd1401c881f6e4e5a6aa3cb0a1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384acd1401c881f6e4e5a6aa3cb0a1e5">&#9670;&#160;</a></span>web_ip_passwd_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long web_ip_passwd_time[10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00036">36</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6c32d1f2e9bea5f6a406be15d4d26fa3" name="a6c32d1f2e9bea5f6a406be15d4d26fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c32d1f2e9bea5f6a406be15d4d26fa3">&#9670;&#160;</a></span>web_last_message_sent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char web_last_message_sent[200]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a861707f76d99c3f90ab17bffdf028d11" name="a861707f76d99c3f90ab17bffdf028d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861707f76d99c3f90ab17bffdf028d11">&#9670;&#160;</a></span>web_previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long web_previousTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="web__functions_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="web__functions_8cpp_source.html">web_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d04ef40e773d020c4924df55fa10dfc" name="a3d04ef40e773d020c4924df55fa10dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d04ef40e773d020c4924df55fa10dfc">&#9670;&#160;</a></span>web_server</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_common_web_server.html">CommonWebServer</a> web_server(80) </td>
+          <td>(</td>
+          <td class="paramtype">80</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_830bd9edfdf417e52934e1077cfeec13.html">web_functions</a></li><li class="navelem"><a href="web__functions_8cpp.html">web_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

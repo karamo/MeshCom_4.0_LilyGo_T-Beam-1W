@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/FsLib/FsVolume.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_fs_volume_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FsVolume.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_fs_volume_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(ESP8266)  &amp;&amp; !defined(ESP32)  </span><span class="comment">// heltec-eink-modules</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_fs_lib_8h.html">FsLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_class" href="class_fs_volume.html">FsVolume</a>* <a class="code hl_variable" href="class_fs_volume.html#aea7578fcfa498647cdf758cb69ae6f4f">FsVolume::m_cwv</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_fs_volume.html#a5acb97d16ad71be085886d4d5af2e909">   30</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_fs_volume.html#a5acb97d16ad71be085886d4d5af2e909">FsVolume::begin</a>(<a class="code hl_typedef" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a>* blockDev, <span class="keywordtype">bool</span> setCwv, uint8_t part,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                     uint32_t volStart) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_variable" href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">m_fVol</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_variable" href="class_fs_volume.html#a811bcf71ecb023967ff8f78eeb850003">m_xVol</a> = <span class="keyword">new</span> (<a class="code hl_variable" href="class_fs_volume.html#ad292be4602b793ffc7a3045c73f84127">m_volMem</a>) <a class="code hl_class" href="class_ex_fat_volume.html">ExFatVolume</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_fs_volume.html#a811bcf71ecb023967ff8f78eeb850003">m_xVol</a> &amp;&amp; <a class="code hl_variable" href="class_fs_volume.html#a811bcf71ecb023967ff8f78eeb850003">m_xVol</a>-&gt;begin(blockDev, <span class="keyword">false</span>, part, volStart)) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_variable" href="class_fs_volume.html#a811bcf71ecb023967ff8f78eeb850003">m_xVol</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_variable" href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">m_fVol</a> = <span class="keyword">new</span> (<a class="code hl_variable" href="class_fs_volume.html#ad292be4602b793ffc7a3045c73f84127">m_volMem</a>) <a class="code hl_class" href="class_fat_volume.html">FatVolume</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">m_fVol</a> &amp;&amp; <a class="code hl_variable" href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">m_fVol</a>-&gt;begin(blockDev, <span class="keyword">false</span>, part, volStart)) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_variable" href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">m_fVol</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>done:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">if</span> (setCwv || !<a class="code hl_variable" href="class_fs_volume.html#aea7578fcfa498647cdf758cb69ae6f4f">m_cwv</a>) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_variable" href="class_fs_volume.html#aea7578fcfa498647cdf758cb69ae6f4f">m_cwv</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_fs_volume.html#ab429316ed9e57a52ecfb938aca7dff6c">   52</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_fs_volume.html#aac4bf1f75fd37ba2e5a145569ab0790b">FsVolume::ls</a>(print_t* pr, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, uint8_t flags) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_friend" href="class_fs_volume.html#a1655636bca63e3ac7e7ab6a8d112a2f0">FsBaseFile</a> dir;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">return</span> dir.<a class="code hl_function" href="class_fs_base_file.html#aa767859d4a4b4716ebbc4ea42a6d74df">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) &amp;&amp; dir.<a class="code hl_function" href="class_fs_base_file.html#a866609c0f8883adcf82d9ef420538685">ls</a>(pr, flags);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_fs_volume.html#a6d51ed047796f7d382384c60c7bfac75">   57</a></span><a class="code hl_class" href="class_fs_file.html">FsFile</a> <a class="code hl_function" href="class_fs_volume.html#a6d51ed047796f7d382384c60c7bfac75">FsVolume::open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_class" href="class_fs_file.html">FsFile</a> tmpFile;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  tmpFile.<a class="code hl_function" href="class_fs_base_file.html#aa767859d4a4b4716ebbc4ea42a6d74df">open</a>(<span class="keyword">this</span>, path, oflag);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordflow">return</span> tmpFile;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#if ENABLE_ARDUINO_STRING</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_fs_volume.html#ad41f53fd35fa60aa8972ac2036dae4de">   64</a></span><a class="code hl_class" href="class_fs_file.html">FsFile</a> <a class="code hl_function" href="class_fs_volume.html#a6d51ed047796f7d382384c60c7bfac75">FsVolume::open</a>(<span class="keyword">const</span> String&amp; path, <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="class_fs_volume.html#a6d51ed047796f7d382384c60c7bfac75">open</a>(path.c_str(), oflag);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif  </span><span class="comment">// ENABLE_ARDUINO_STRING</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a39cbe71da20b3a35100d369620187d4f"><div class="ttname"><a href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a></div><div class="ttdeci">uint8_t oflag_t</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00057">FsApiConstants.h:57</a></div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a7a68c9ffaac7dbcd652225dd7c06a54b"><div class="ttname"><a href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a></div><div class="ttdeci">#define O_RDONLY</div><div class="ttdoc">Open for reading only.</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00046">FsApiConstants.h:46</a></div></div>
+<div class="ttc" id="a_fs_block_device_8h_html_a129378d5231b132338fe06a03e7671ad"><div class="ttname"><a href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a></div><div class="ttdeci">SdCard FsBlockDevice</div><div class="ttdef"><b>Definition</b> <a href="_fs_block_device_8h_source.html#l00031">FsBlockDevice.h:31</a></div></div>
+<div class="ttc" id="a_fs_lib_8h_html"><div class="ttname"><a href="_fs_lib_8h.html">FsLib.h</a></div><div class="ttdoc">FsLib include file.</div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html"><div class="ttname"><a href="class_ex_fat_volume.html">ExFatVolume</a></div><div class="ttdoc">exFAT volume.</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00033">ExFatVolume.h:33</a></div></div>
+<div class="ttc" id="aclass_fat_volume_html"><div class="ttname"><a href="class_fat_volume.html">FatVolume</a></div><div class="ttdoc">Integration class for the FatLib library.</div><div class="ttdef"><b>Definition</b> <a href="_fat_volume_8h_source.html#l00037">FatVolume.h:37</a></div></div>
+<div class="ttc" id="aclass_fs_base_file_html_a866609c0f8883adcf82d9ef420538685"><div class="ttname"><a href="class_fs_base_file.html#a866609c0f8883adcf82d9ef420538685">FsBaseFile::ls</a></div><div class="ttdeci">bool ls(uint8_t flags)</div><div class="ttdef"><b>Definition</b> <a href="_fs_file_8h_source.html#l00357">FsFile.h:357</a></div></div>
+<div class="ttc" id="aclass_fs_base_file_html_aa767859d4a4b4716ebbc4ea42a6d74df"><div class="ttname"><a href="class_fs_base_file.html#aa767859d4a4b4716ebbc4ea42a6d74df">FsBaseFile::open</a></div><div class="ttdeci">bool open(FsBaseFile *dir, const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="_fs_file_8cpp_source.html#l00102">FsFile.cpp:102</a></div></div>
+<div class="ttc" id="aclass_fs_file_html"><div class="ttname"><a href="class_fs_file.html">FsFile</a></div><div class="ttdoc">FsBaseFile file with Arduino Stream.</div><div class="ttdef"><b>Definition</b> <a href="_fs_file_8h_source.html#l00869">FsFile.h:869</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html"><div class="ttname"><a href="class_fs_volume.html">FsVolume</a></div><div class="ttdoc">FsVolume class.</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00040">FsVolume.h:40</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_a1655636bca63e3ac7e7ab6a8d112a2f0"><div class="ttname"><a href="class_fs_volume.html#a1655636bca63e3ac7e7ab6a8d112a2f0">FsVolume::FsBaseFile</a></div><div class="ttdeci">friend class FsBaseFile</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00393">FsVolume.h:393</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_a5acb97d16ad71be085886d4d5af2e909"><div class="ttname"><a href="class_fs_volume.html#a5acb97d16ad71be085886d4d5af2e909">FsVolume::begin</a></div><div class="ttdeci">bool begin(FsBlockDevice *blockDev, bool setCwv=true, uint8_t part=1, uint32_t volStart=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">FsVolume.cpp:30</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_a6d51ed047796f7d382384c60c7bfac75"><div class="ttname"><a href="class_fs_volume.html#a6d51ed047796f7d382384c60c7bfac75">FsVolume::open</a></div><div class="ttdeci">FsFile open(const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">FsVolume.cpp:57</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_a811bcf71ecb023967ff8f78eeb850003"><div class="ttname"><a href="class_fs_volume.html#a811bcf71ecb023967ff8f78eeb850003">FsVolume::m_xVol</a></div><div class="ttdeci">ExFatVolume * m_xVol</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00400">FsVolume.h:400</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_aac4bf1f75fd37ba2e5a145569ab0790b"><div class="ttname"><a href="class_fs_volume.html#aac4bf1f75fd37ba2e5a145569ab0790b">FsVolume::ls</a></div><div class="ttdeci">bool ls()</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00273">FsVolume.h:273</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_ac10d32b3b94e8147da1fbd8ed3095830"><div class="ttname"><a href="class_fs_volume.html#ac10d32b3b94e8147da1fbd8ed3095830">FsVolume::m_fVol</a></div><div class="ttdeci">FatVolume * m_fVol</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00399">FsVolume.h:399</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_ad292be4602b793ffc7a3045c73f84127"><div class="ttname"><a href="class_fs_volume.html#ad292be4602b793ffc7a3045c73f84127">FsVolume::m_volMem</a></div><div class="ttdeci">newalign_t m_volMem[FS_ALIGN_DIM(ExFatVolume, FatVolume)]</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00389">FsVolume.h:389</a></div></div>
+<div class="ttc" id="aclass_fs_volume_html_aea7578fcfa498647cdf758cb69ae6f4f"><div class="ttname"><a href="class_fs_volume.html#aea7578fcfa498647cdf758cb69ae6f4f">FsVolume::m_cwv</a></div><div class="ttdeci">static FsVolume * m_cwv</div><div class="ttdef"><b>Definition</b> <a href="_fs_volume_8h_source.html#l00398">FsVolume.h:398</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_cbc6477f14a2120a8c461420a84cf954.html">FsLib</a></li><li class="navelem"><a href="_fs_volume_8cpp.html">FsVolume.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

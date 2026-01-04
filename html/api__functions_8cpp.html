@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/nrf52/api_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('api__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">api_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_wis_block-_a_p_i_8h_source.html">WisBlock-API.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+</div>
+<p><a href="api__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:afd2d69b8f48ded972ad5800cc1824471" id="r_afd2d69b8f48ded972ad5800cc1824471"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd2d69b8f48ded972ad5800cc1824471">mypdMS_TO_TICKS</a>(xTimeInMs)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a408e609b552d76e13346993e0211f4db" id="r_a408e609b552d76e13346993e0211f4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a408e609b552d76e13346993e0211f4db">api_set_version</a> (uint16_t sw_1, uint16_t sw_2, uint16_t sw_3)</td></tr>
+<tr class="memdesc:a408e609b552d76e13346993e0211f4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set application version.  <br /></td></tr>
+<tr class="memitem:a792566c24ab3478d7b538acb071e7610" id="r_a792566c24ab3478d7b538acb071e7610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a792566c24ab3478d7b538acb071e7610">api_set_credentials</a> (void)</td></tr>
+<tr class="memdesc:a792566c24ab3478d7b538acb071e7610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform API that hard coded LoRaWAN credentials are used.  <br /></td></tr>
+<tr class="memitem:ab8561c34f5997aa8dd875ee0446319e3" id="r_ab8561c34f5997aa8dd875ee0446319e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8561c34f5997aa8dd875ee0446319e3">api_read_credentials</a> (void)</td></tr>
+<tr class="memdesc:ab8561c34f5997aa8dd875ee0446319e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force reading the LoRaWAN credentials.  <br /></td></tr>
+<tr class="memitem:ac907815f2a136998f19f850f0ec3d355" id="r_ac907815f2a136998f19f850f0ec3d355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac907815f2a136998f19f850f0ec3d355">api_reset</a> (void)</td></tr>
+<tr class="memdesc:ac907815f2a136998f19f850f0ec3d355"><td class="mdescLeft">&#160;</td><td class="mdescRight">System reset.  <br /></td></tr>
+<tr class="memitem:a66ffe090f56abcf19f5c150a6a0ea733" id="r_a66ffe090f56abcf19f5c150a6a0ea733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ffe090f56abcf19f5c150a6a0ea733">api_wait_wake</a> (void)</td></tr>
+<tr class="memdesc:a66ffe090f56abcf19f5c150a6a0ea733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for a trigger to wake up On FreeRTOS the trigger is release of a semaphore On mbed the trigger is an OS signal.  <br /></td></tr>
+<tr class="memitem:a9c017c5f3a4c3adff1ef2a5799e4cc8e" id="r_a9c017c5f3a4c3adff1ef2a5799e4cc8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c017c5f3a4c3adff1ef2a5799e4cc8e">api_wake_loop</a> (uint16_t reason)</td></tr>
+<tr class="memdesc:a9c017c5f3a4c3adff1ef2a5799e4cc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake up loop task.  <br /></td></tr>
+<tr class="memitem:aabd9450cc297e19bab51e3325463c10e" id="r_aabd9450cc297e19bab51e3325463c10e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd9450cc297e19bab51e3325463c10e">api_init_lora</a> (void)</td></tr>
+<tr class="memdesc:aabd9450cc297e19bab51e3325463c10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize LoRa transceiver.  <br /></td></tr>
+<tr class="memitem:a950a7871015bc965a07e99c79a5f3758" id="r_a950a7871015bc965a07e99c79a5f3758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a950a7871015bc965a07e99c79a5f3758">api_timer_init</a> (void)</td></tr>
+<tr class="memdesc:a950a7871015bc965a07e99c79a5f3758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the timer for frequent sending.  <br /></td></tr>
+<tr class="memitem:a10825292cddecf6c41096a2ac8c5e394" id="r_a10825292cddecf6c41096a2ac8c5e394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10825292cddecf6c41096a2ac8c5e394">api_timer_start</a> (void)</td></tr>
+<tr class="memdesc:a10825292cddecf6c41096a2ac8c5e394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer for frequent sending.  <br /></td></tr>
+<tr class="memitem:a955630ef1f8baa360366a724c22261d2" id="r_a955630ef1f8baa360366a724c22261d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a955630ef1f8baa360366a724c22261d2">api_timer_stop</a> (void)</td></tr>
+<tr class="memdesc:a955630ef1f8baa360366a724c22261d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the timer for frequent sending.  <br /></td></tr>
+<tr class="memitem:a9b90bdf31ec3c614467b800c128357b3" id="r_a9b90bdf31ec3c614467b800c128357b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b90bdf31ec3c614467b800c128357b3">api_timer_restart</a> (uint32_t new_time)</td></tr>
+<tr class="memdesc:a9b90bdf31ec3c614467b800c128357b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart the time with a new time.  <br /></td></tr>
+<tr class="memitem:a5dbb92a38d14fe449335abef7d5e9f60" id="r_a5dbb92a38d14fe449335abef7d5e9f60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dbb92a38d14fe449335abef7d5e9f60">api_log_settings</a> (void)</td></tr>
+<tr class="memdesc:a5dbb92a38d14fe449335abef7d5e9f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print current device status over USB.  <br /></td></tr>
+<tr class="memitem:ad76c113980a6907a050a0a04417edfa0" id="r_ad76c113980a6907a050a0a04417edfa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad76c113980a6907a050a0a04417edfa0">log_settings</a> (void)</td></tr>
+<tr class="memdesc:ad76c113980a6907a050a0a04417edfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Printout of all settings.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a5e9b273facd92378c1cc103e20548665" id="r_a5e9b273facd92378c1cc103e20548665"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e9b273facd92378c1cc103e20548665">g_sw_ver_1</a> = 4</td></tr>
+<tr class="memitem:a7e3eb1e41d05ae1f07a026c923391cca" id="r_a7e3eb1e41d05ae1f07a026c923391cca"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3eb1e41d05ae1f07a026c923391cca">g_sw_ver_2</a> = 29</td></tr>
+<tr class="memitem:a3a9319158c93c096b0711289722872e5" id="r_a3a9319158c93c096b0711289722872e5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a9319158c93c096b0711289722872e5">g_sw_ver_3</a> = 0</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="afd2d69b8f48ded972ad5800cc1824471" name="afd2d69b8f48ded972ad5800cc1824471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2d69b8f48ded972ad5800cc1824471">&#9670;&#160;</a></span>mypdMS_TO_TICKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mypdMS_TO_TICKS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>xTimeInMs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wert:</b><div class="fragment"><div class="line">((TickType_t)(((uint64_t)(xTimeInMs)*configTICK_RATE_HZ) / 1000))</div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00016">16</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="aabd9450cc297e19bab51e3325463c10e" name="aabd9450cc297e19bab51e3325463c10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd9450cc297e19bab51e3325463c10e">&#9670;&#160;</a></span>api_init_lora()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t api_init_lora </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize LoRa transceiver. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>uint32_t result of initialization, 0 = success </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00139">139</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5dbb92a38d14fe449335abef7d5e9f60" name="a5dbb92a38d14fe449335abef7d5e9f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dbb92a38d14fe449335abef7d5e9f60">&#9670;&#160;</a></span>api_log_settings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_log_settings </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print current device status over USB. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00282">282</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab8561c34f5997aa8dd875ee0446319e3" name="ab8561c34f5997aa8dd875ee0446319e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8561c34f5997aa8dd875ee0446319e3">&#9670;&#160;</a></span>api_read_credentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_read_credentials </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force reading the LoRaWAN credentials. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00061">61</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac907815f2a136998f19f850f0ec3d355" name="ac907815f2a136998f19f850f0ec3d355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac907815f2a136998f19f850f0ec3d355">&#9670;&#160;</a></span>api_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_reset </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>System reset. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00070">70</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a792566c24ab3478d7b538acb071e7610" name="a792566c24ab3478d7b538acb071e7610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792566c24ab3478d7b538acb071e7610">&#9670;&#160;</a></span>api_set_credentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_set_credentials </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inform API that hard coded LoRaWAN credentials are used. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00052">52</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a408e609b552d76e13346993e0211f4db" name="a408e609b552d76e13346993e0211f4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408e609b552d76e13346993e0211f4db">&#9670;&#160;</a></span>api_set_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_set_version </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>sw_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>sw_2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>sw_3</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set application version. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sw_1</td><td>SW version major number </td></tr>
+    <tr><td class="paramname">sw_2</td><td>SW version minor number </td></tr>
+    <tr><td class="paramname">sw_3</td><td>SW version patch number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00041">41</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a950a7871015bc965a07e99c79a5f3758" name="a950a7871015bc965a07e99c79a5f3758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950a7871015bc965a07e99c79a5f3758">&#9670;&#160;</a></span>api_timer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_timer_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the timer for frequent sending. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00160">160</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9b90bdf31ec3c614467b800c128357b3" name="a9b90bdf31ec3c614467b800c128357b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b90bdf31ec3c614467b800c128357b3">&#9670;&#160;</a></span>api_timer_restart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_timer_restart </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>new_time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restart the time with a new time. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00238">238</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a10825292cddecf6c41096a2ac8c5e394" name="a10825292cddecf6c41096a2ac8c5e394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10825292cddecf6c41096a2ac8c5e394">&#9670;&#160;</a></span>api_timer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_timer_start </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start the timer for frequent sending. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00180">180</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a955630ef1f8baa360366a724c22261d2" name="a955630ef1f8baa360366a724c22261d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955630ef1f8baa360366a724c22261d2">&#9670;&#160;</a></span>api_timer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_timer_stop </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop the timer for frequent sending. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00209">209</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a66ffe090f56abcf19f5c150a6a0ea733" name="a66ffe090f56abcf19f5c150a6a0ea733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ffe090f56abcf19f5c150a6a0ea733">&#9670;&#160;</a></span>api_wait_wake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_wait_wake </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits for a trigger to wake up On FreeRTOS the trigger is release of a semaphore On mbed the trigger is an OS signal. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00089">89</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9c017c5f3a4c3adff1ef2a5799e4cc8e" name="a9c017c5f3a4c3adff1ef2a5799e4cc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c017c5f3a4c3adff1ef2a5799e4cc8e">&#9670;&#160;</a></span>api_wake_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void api_wake_loop </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>reason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wake up loop task. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>for wakeup </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00114">114</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad76c113980a6907a050a0a04417edfa0" name="ad76c113980a6907a050a0a04417edfa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76c113980a6907a050a0a04417edfa0">&#9670;&#160;</a></span>log_settings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_settings </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Printout of all settings. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00291">291</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a5e9b273facd92378c1cc103e20548665" name="a5e9b273facd92378c1cc103e20548665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9b273facd92378c1cc103e20548665">&#9670;&#160;</a></span>g_sw_ver_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t g_sw_ver_1 = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00021">21</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e3eb1e41d05ae1f07a026c923391cca" name="a7e3eb1e41d05ae1f07a026c923391cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3eb1e41d05ae1f07a026c923391cca">&#9670;&#160;</a></span>g_sw_ver_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t g_sw_ver_2 = 29</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00026">26</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3a9319158c93c096b0711289722872e5" name="a3a9319158c93c096b0711289722872e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9319158c93c096b0711289722872e5">&#9670;&#160;</a></span>g_sw_ver_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t g_sw_ver_3 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="api__functions_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="api__functions_8cpp_source.html">api_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1854326490b7999d1bef60293bec4d48.html">nrf52</a></li><li class="navelem"><a href="api__functions_8cpp.html">api_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

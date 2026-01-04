@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/SdFat.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_sd_fat_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SdFat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sd_fat_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef SdFat_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define SdFat_h</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="_ex_fat_lib_8h.html">ExFatLib/ExFatLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="_fat_lib_8h.html">FatLib/FatLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="_fs_lib_8h.html">FsLib/FsLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="_sd_card_8h.html">SdCard/SdCard.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="_sys_call_8h.html">common/SysCall.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#if INCLUDE_SDIOS</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="sdios_8h.html">sdios.h</a>&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif  </span><span class="comment">// INCLUDE_SDIOS</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_sd_fat_8h.html#aca25ecce379f446043bdee2c55304210">   41</a></span><span class="preprocessor">#define SD_FAT_VERSION 20202</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_sd_fat_8h.html#a9b77ef0822c5e9d27a1f83d4578ea47b">   43</a></span><span class="preprocessor">#define SD_FAT_VERSION_STR &quot;2.2.2&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//==============================================================================</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Vol, <span class="keyword">class</span> Fmt&gt;</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_sd_base.html">   50</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_base.html">SdBase</a> : <span class="keyword">public</span> Vol {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">   58</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">begin</a>(<a class="code hl_typedef" href="_sd_fat_config_8h.html#a7a489fb14a59adf251794342604fc5ea">SdCsPin_t</a> csPin = SS) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#ifdef BUILTIN_SDCARD</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (csPin == BUILTIN_SDCARD) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">begin</a>(<a class="code hl_class" href="class_sdio_config.html">SdioConfig</a>(<a class="code hl_define" href="_sdio_card_8h.html#a1c5d1f4b7ddcc64038cc1b04ba24a8d6">FIFO_SDIO</a>));</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif  </span><span class="comment">// BUILTIN_SDCARD</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a>(csPin, <a class="code hl_variable" href="_sd_spi_driver_8h.html#ae082f61e51c730bca2b753f3e6b0ad2c">SHARED_SPI</a>));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_sd_base.html#ad3757c5f91ff05393708c23cadf65fe2">   73</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#ad3757c5f91ff05393708c23cadf65fe2">begin</a>(<a class="code hl_typedef" href="_sd_fat_config_8h.html#a7a489fb14a59adf251794342604fc5ea">SdCsPin_t</a> csPin, uint32_t maxSck) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a>(csPin, <a class="code hl_variable" href="_sd_spi_driver_8h.html#ae082f61e51c730bca2b753f3e6b0ad2c">SHARED_SPI</a>, maxSck));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_sd_base.html#a41f0388ad2dad15a65e95cbbd93eb181">   82</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#a41f0388ad2dad15a65e95cbbd93eb181">begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> spiConfig) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_base.html#a8806939dc34639ffca5f9663b8ec33ac">cardBegin</a>(spiConfig) &amp;&amp; Vol::begin(<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_sd_base.html#a5ef2328333c99cdb53fa0faee0786216">   91</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#a5ef2328333c99cdb53fa0faee0786216">begin</a>(<a class="code hl_class" href="class_sdio_config.html">SdioConfig</a> sdioConfig) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_base.html#a8806939dc34639ffca5f9663b8ec33ac">cardBegin</a>(sdioConfig) &amp;&amp; Vol::begin(<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_sd_base.html#a95ad724ffcaa81c531596a48758f034e">   96</a></span>  <a class="code hl_typedef" href="_sd_card_8h.html#a14fc08ce19cefbffd26dbbcea7744058">SdCard</a>* <a class="code hl_function" href="class_sd_base.html#a95ad724ffcaa81c531596a48758f034e">card</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>; }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_sd_base.html#a8806939dc34639ffca5f9663b8ec33ac">  103</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#a8806939dc34639ffca5f9663b8ec33ac">cardBegin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> spiConfig) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> = <a class="code hl_variable" href="class_sd_base.html#a7bedbf288966f0a8b086eeac5222306f">m_cardFactory</a>.newCard(spiConfig);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> &amp;&amp; !<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;errorCode();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_sd_base.html#ac6ece0ac775ff721b5186124992eb238">  113</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#ac6ece0ac775ff721b5186124992eb238">cardBegin</a>(<a class="code hl_class" href="class_sdio_config.html">SdioConfig</a> sdioConfig) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> = <a class="code hl_variable" href="class_sd_base.html#a7bedbf288966f0a8b086eeac5222306f">m_cardFactory</a>.newCard(sdioConfig);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> &amp;&amp; !<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;errorCode();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_sd_base.html#a944f39156d399e73c7d64744a7c27329">  119</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a944f39156d399e73c7d64744a7c27329">end</a>() {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    Vol::end();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;end();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_sd_base.html#a1f9691ce3512821681f19e42573f34fc">  130</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a1f9691ce3512821681f19e42573f34fc">errorHalt</a>(print_t* pr) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>()) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;SdError: 0X&quot;</span>));</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      pr-&gt;print(<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>(), HEX);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;,0X&quot;</span>));</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      pr-&gt;println(<a class="code hl_function" href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">sdErrorData</a>(), HEX);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Vol::fatType()) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;Check SD format.&quot;</span>));</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_sd_base.html#a92b0fa6eb17932a14b5e76f74465c536">  148</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a92b0fa6eb17932a14b5e76f74465c536">errorHalt</a>(print_t* pr, <span class="keyword">const</span> <span class="keywordtype">char</span>* msg) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;error: &quot;</span>));</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_function" href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">errorHalt</a>(pr);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_sd_base.html#a73ab03396fa569c3e2c512ba30fbc0e5">  159</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a73ab03396fa569c3e2c512ba30fbc0e5">errorHalt</a>(print_t* pr, <span class="keyword">const</span> __FlashStringHelper* msg) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;error: &quot;</span>));</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_function" href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">errorHalt</a>(pr);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  }</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_sd_base.html#ae7c8ea488f296548f9aa5381bc0bfbcc">  170</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#ae7c8ea488f296548f9aa5381bc0bfbcc">format</a>(print_t* pr = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    Fmt fmt;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    uint8_t* mem = Vol::end();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">if</span> (!mem) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">bool</span> switchSpi = <a class="code hl_function" href="class_sd_base.html#afea6a16651d3988587f6e66e078a8440">hasDedicatedSpi</a>() &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#a230ab356aae10b64d25073b484dbb7aa">isDedicatedSpi</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">if</span> (switchSpi &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">setDedicatedSpi</a>(<span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">bool</span> rtn = fmt.format(<a class="code hl_function" href="class_sd_base.html#a95ad724ffcaa81c531596a48758f034e">card</a>(), mem, pr);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">if</span> (switchSpi &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">setDedicatedSpi</a>(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> rtn;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
+</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="class_sd_base.html#a252b97ab55d9abb8eeaeee2d26f564e6">  188</a></span>  uint32_t <a class="code hl_function" href="class_sd_base.html#a252b97ab55d9abb8eeaeee2d26f564e6">freeClusterCount</a>() {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">bool</span> switchSpi = <a class="code hl_function" href="class_sd_base.html#afea6a16651d3988587f6e66e078a8440">hasDedicatedSpi</a>() &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#a230ab356aae10b64d25073b484dbb7aa">isDedicatedSpi</a>();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">if</span> (switchSpi &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">setDedicatedSpi</a>(<span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    uint32_t rtn = Vol::freeClusterCount();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">if</span> (switchSpi &amp;&amp; !<a class="code hl_function" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">setDedicatedSpi</a>(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> rtn;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_sd_base.html#afea6a16651d3988587f6e66e078a8440">  201</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#afea6a16651d3988587f6e66e078a8440">hasDedicatedSpi</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> ? <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;hasDedicatedSpi() : <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_sd_base.html#a53fac07c8230a4858caf0c8fe1204de0">  207</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a53fac07c8230a4858caf0c8fe1204de0">initErrorHalt</a>(print_t* pr) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_function" href="class_sd_base.html#a40c85051c03d627a928f857b3cd901f3">initErrorPrint</a>(pr);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  }</div>
+</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00218" data-start="{" data-end="}">
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="class_sd_base.html#aa8999c73d235faecefa7576166cf49fa">  218</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#aa8999c73d235faecefa7576166cf49fa">initErrorHalt</a>(print_t* pr, <span class="keyword">const</span> <span class="keywordtype">char</span>* msg) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <a class="code hl_function" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">initErrorHalt</a>(pr);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  }</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="class_sd_base.html#a2f62c5dc9686d163bf024ce9c9cecf12">  228</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a2f62c5dc9686d163bf024ce9c9cecf12">initErrorHalt</a>(print_t* pr, <span class="keyword">const</span> __FlashStringHelper* msg) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_function" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">initErrorHalt</a>(pr);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  }</div>
+</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_sd_base.html#ac3c78d4209a497b038a778f5163d615c">  237</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#ac3c78d4209a497b038a778f5163d615c">initErrorPrint</a>(print_t* pr) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;begin() failed&quot;</span>));</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>()) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;Do not reformat the SD.&quot;</span>));</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>() == SD_CARD_ERROR_CMD0) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;No card, wrong chip select pin, or wiring error?&quot;</span>));</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <a class="code hl_function" href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">errorPrint</a>(pr);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  }</div>
+</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="class_sd_base.html#a230ab356aae10b64d25073b484dbb7aa">  249</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#a230ab356aae10b64d25073b484dbb7aa">isDedicatedSpi</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> ? <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;isDedicatedSpi() : <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_sd_base.html#a1ffd9124808a4b5b9e804b50254bed55">  255</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a1ffd9124808a4b5b9e804b50254bed55">printFatType</a>(print_t* pr) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">if</span> (Vol::fatType() == <a class="code hl_variable" href="_ex_fat_partition_8h.html#ad74089b317bc77bd1e8cbb56fef8046a">FAT_TYPE_EXFAT</a>) {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;exFAT&quot;</span>));</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;FAT&quot;</span>));</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      pr-&gt;print(Vol::fatType());</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
+</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00268" data-start="{" data-end="}">
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">  268</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">errorPrint</a>(print_t* pr) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>()) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;SdError: 0X&quot;</span>));</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      pr-&gt;print(<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>(), HEX);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;,0X&quot;</span>));</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      pr-&gt;println(<a class="code hl_function" href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">sdErrorData</a>(), HEX);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Vol::fatType()) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;Check SD format.&quot;</span>));</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  }</div>
+</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="class_sd_base.html#ab6e769d1fbc906e430bd14d5a60d8e85">  284</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#ab6e769d1fbc906e430bd14d5a60d8e85">errorPrint</a>(print_t* pr, <span class="keywordtype">char</span> <span class="keyword">const</span>* msg) {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;error: &quot;</span>));</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <a class="code hl_function" href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">errorPrint</a>(pr);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  }</div>
+</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span></div>
+<div class="foldopen" id="foldopen00295" data-start="{" data-end="}">
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="class_sd_base.html#a2a90ca72f6a9368856e3cc685fd5de1b">  295</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a2a90ca72f6a9368856e3cc685fd5de1b">errorPrint</a>(print_t* pr, <span class="keyword">const</span> __FlashStringHelper* msg) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;error: &quot;</span>));</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    pr-&gt;println(msg);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <a class="code hl_function" href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">errorPrint</a>(pr);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  }</div>
+</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00305" data-start="{" data-end="}">
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="class_sd_base.html#ae13cf644d5c645fe5dfff8885ca6c039">  305</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#ae13cf644d5c645fe5dfff8885ca6c039">printSdError</a>(print_t* pr) {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>()) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>() == SD_CARD_ERROR_CMD0) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;No card, wrong chip select pin, or wiring error?&quot;</span>));</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;SD error: &quot;</span>));</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      <a class="code hl_function" href="_sd_card_info_8cpp.html#a7e9cdad194e9e7cf8a426028b7fb1809">printSdErrorSymbol</a>(pr, <a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>());</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot; = 0x&quot;</span>));</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      pr-&gt;print(<a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>(), HEX);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>      pr-&gt;print(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;,0x&quot;</span>));</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      pr-&gt;println(<a class="code hl_function" href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">sdErrorData</a>(), HEX);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!Vol::fatType()) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      pr-&gt;println(<a class="code hl_define" href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a>(<span class="stringliteral">&quot;Check SD format.&quot;</span>));</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  }</div>
+</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00322" data-start="{" data-end="}">
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">  322</a></span>  uint8_t <a class="code hl_function" href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">sdErrorCode</a>() {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>) {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;errorCode();</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">return</span> SD_CARD_ERROR_INVALID_CARD_CONFIG;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  }</div>
+</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">  330</a></span>  uint8_t <a class="code hl_function" href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">sdErrorData</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> ? <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;errorData() : 0; }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00336" data-start="{" data-end="}">
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">  336</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">setDedicatedSpi</a>(<span class="keywordtype">bool</span> value) {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>) {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>-&gt;setDedicatedSpi(value);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  }</div>
+</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="class_sd_base.html#a8121e07c8ef606b63d08ba0debfa36f2">  344</a></span>  Vol* <a class="code hl_function" href="class_sd_base.html#a8121e07c8ef606b63d08ba0debfa36f2">vol</a>() { <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>Vol*<span class="keyword">&gt;</span>(<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="class_sd_base.html#afa2024973e4e0f327d2e00e00ff5e187">  350</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_base.html#afa2024973e4e0f327d2e00e00ff5e187">volumeBegin</a>() { <span class="keywordflow">return</span> Vol::begin(<a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a>); }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#if ENABLE_ARDUINO_SERIAL</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="class_sd_base.html#a40c85051c03d627a928f857b3cd901f3">  353</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a40c85051c03d627a928f857b3cd901f3">initErrorPrint</a>() { <a class="code hl_function" href="class_sd_base.html#a40c85051c03d627a928f857b3cd901f3">initErrorPrint</a>(&amp;Serial); }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="class_sd_base.html#a876d07acf069d8ca09df629f342f04a3">  359</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a876d07acf069d8ca09df629f342f04a3">errorHalt</a>(<span class="keyword">const</span> __FlashStringHelper* msg) { <a class="code hl_function" href="class_sd_base.html#a876d07acf069d8ca09df629f342f04a3">errorHalt</a>(&amp;Serial, msg); }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">  362</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">errorHalt</a>() { <a class="code hl_function" href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">errorHalt</a>(&amp;Serial); }</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="class_sd_base.html#af249a7fb4551eff2aead43d257a8bb0a">  368</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#af249a7fb4551eff2aead43d257a8bb0a">errorHalt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg) { <a class="code hl_function" href="class_sd_base.html#af249a7fb4551eff2aead43d257a8bb0a">errorHalt</a>(&amp;Serial, msg); }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">  371</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">initErrorHalt</a>() { <a class="code hl_function" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">initErrorHalt</a>(&amp;Serial); }</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="class_sd_base.html#a74120c065c9497ec26f13097690ddc98">  377</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a74120c065c9497ec26f13097690ddc98">errorPrint</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg) { <a class="code hl_function" href="class_sd_base.html#a74120c065c9497ec26f13097690ddc98">errorPrint</a>(&amp;Serial, msg); }</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="class_sd_base.html#ab7c860151ba43cd930497c7088710b42">  382</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#ab7c860151ba43cd930497c7088710b42">errorPrint</a>(<span class="keyword">const</span> __FlashStringHelper* msg) { <a class="code hl_function" href="class_sd_base.html#ab7c860151ba43cd930497c7088710b42">errorPrint</a>(&amp;Serial, msg); }</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="class_sd_base.html#a1552cd8b56848e030ec0118fa330db8e">  388</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#a1552cd8b56848e030ec0118fa330db8e">initErrorHalt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg) { <a class="code hl_function" href="class_sd_base.html#a1552cd8b56848e030ec0118fa330db8e">initErrorHalt</a>(&amp;Serial, msg); }</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00394" data-start="{" data-end="}">
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="class_sd_base.html#aa2aa6e110d90c79fd05b6142ad71ca2a">  394</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_base.html#aa2aa6e110d90c79fd05b6142ad71ca2a">initErrorHalt</a>(<span class="keyword">const</span> __FlashStringHelper* msg) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <a class="code hl_function" href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">initErrorHalt</a>(&amp;Serial, msg);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  }</div>
+</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="preprocessor">#endif  </span><span class="comment">// ENABLE_ARDUINO_SERIAL</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">  400</a></span>  <a class="code hl_typedef" href="_sd_card_8h.html#a14fc08ce19cefbffd26dbbcea7744058">SdCard</a>* <a class="code hl_variable" href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">m_card</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno"><a class="line" href="class_sd_base.html#a7bedbf288966f0a8b086eeac5222306f">  401</a></span>  <a class="code hl_class" href="class_sd_card_factory.html">SdCardFactory</a> <a class="code hl_variable" href="class_sd_base.html#a7bedbf288966f0a8b086eeac5222306f">m_cardFactory</a>;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>};</div>
+</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00408" data-start="{" data-end="};">
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="class_sd_fat32.html">  408</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_fat32.html">SdFat32</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_sd_base.html">SdBase</a>&lt;FatVolume, FatFormatter&gt; {</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>};</div>
+</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00416" data-start="{" data-end="};">
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno"><a class="line" href="class_sd_ex_fat.html">  416</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_ex_fat.html">SdExFat</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_sd_base.html">SdBase</a>&lt;ExFatVolume, ExFatFormatter&gt; {</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>};</div>
+</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00424" data-start="{" data-end="};">
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno"><a class="line" href="class_sd_fs.html">  424</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_fs.html">SdFs</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_sd_base.html">SdBase</a>&lt;FsVolume, FsFormatter&gt; {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>};</div>
+</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span><span class="preprocessor">#if SDFAT_FILE_TYPE == 1 || defined(DOXYGEN)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">  430</a></span><span class="keyword">typedef</span> <a class="code hl_class" href="class_sd_fat32.html">SdFat32</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a>;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno"><a class="line" href="_sd_fat_8h.html#a3991b0f70199d1a17dbb837bb041e89c">  432</a></span><span class="keyword">typedef</span> <a class="code hl_class" href="class_fat_file.html">FatFile</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a3991b0f70199d1a17dbb837bb041e89c">SdBaseFile</a>;</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="preprocessor">#elif SDFAT_FILE_TYPE == 2</span></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_sd_ex_fat.html">SdExFat</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a>;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_ex_fat_file.html">ExFatFile</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a3991b0f70199d1a17dbb837bb041e89c">SdBaseFile</a>;</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span><span class="preprocessor">#elif SDFAT_FILE_TYPE == 3</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_sd_fs.html">SdFs</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a>;</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_fs_base_file.html">FsBaseFile</a> <a class="code hl_typedef" href="_sd_fat_8h.html#a3991b0f70199d1a17dbb837bb041e89c">SdBaseFile</a>;</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span><span class="preprocessor">#else  </span><span class="comment">// SDFAT_FILE_TYPE</span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="preprocessor">#error Invalid SDFAT_FILE_TYPE</span></div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="preprocessor">#endif  </span><span class="comment">// SDFAT_FILE_TYPE</span></div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="comment">//</span></div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span><span class="comment">// Only define File if FS.h is not included.</span></div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span><span class="comment">// Line with test for __has_include must not have operators or parentheses.</span></div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span><span class="preprocessor">#if defined __has_include</span></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span><span class="preprocessor">#if __has_include(&lt;FS.h&gt;)</span></div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="preprocessor">#define HAS_INCLUDE_FS_H</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="preprocessor">#warning File not defined because __has_include(FS.h)</span></div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="preprocessor">#endif  </span><span class="comment">// __has_include(&lt;FS.h&gt;)</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span><span class="preprocessor">#endif  </span><span class="comment">// defined __has_include</span></div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="preprocessor">#ifndef HAS_INCLUDE_FS_H</span></div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="preprocessor">#if SDFAT_FILE_TYPE == 1 || defined(DOXYGEN)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno"><a class="line" href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">  454</a></span><span class="keyword">typedef</span> <a class="code hl_class" href="class_file32.html">File32</a> <a class="code hl_typedef" href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a>;</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="preprocessor">#elif SDFAT_FILE_TYPE == 2</span></div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_ex_file.html">ExFile</a> <a class="code hl_typedef" href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a>;</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="preprocessor">#elif SDFAT_FILE_TYPE == 3</span></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span><span class="keyword">typedef</span> <a class="code hl_class" href="class_fs_file.html">FsFile</a> <a class="code hl_typedef" href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a>;</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="preprocessor">#endif  </span><span class="comment">// SDFAT_FILE_TYPE</span></div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span><span class="preprocessor">#endif  </span><span class="comment">// HAS_INCLUDE_FS_H</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00465" data-start="{" data-end="};">
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno"><a class="line" href="class_sd_file.html">  465</a></span><span class="keyword">class </span><a class="code hl_function" href="class_sd_file.html#afe0d4370c9edf39cf04a29362704ba5a">SdFile</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_print_file.html">PrintFile</a>&lt;SdBaseFile&gt; {</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="class_sd_file.html#afe0d4370c9edf39cf04a29362704ba5a">  467</a></span>  <a class="code hl_function" href="class_sd_file.html#afe0d4370c9edf39cf04a29362704ba5a">SdFile</a>() {}</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno"><a class="line" href="class_sd_file.html#ad05be3a1fb635448d15a154424b6c33f">  472</a></span>  <a class="code hl_function" href="class_sd_file.html#ad05be3a1fb635448d15a154424b6c33f">SdFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag) { <a class="code hl_function" href="class_fat_file.html#a5f2bbee53059029f7a22c8eaec81cb8a">open</a>(path, oflag); }</div>
+<div class="foldopen" id="foldopen00499" data-start="{" data-end="}">
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno"><a class="line" href="class_sd_file.html#a2d78e6a8cedbf8ce545af68457b43bf1">  499</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_file.html#a2d78e6a8cedbf8ce545af68457b43bf1">dateTimeCallback</a>(<span class="keywordtype">void</span> (*dateTime)(uint16_t* date,</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                                                uint16_t* time)) {</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>    <a class="code hl_function" href="namespace_fs_date_time.html#afae6e23c2ed7d8194023d19d87fb1b62">FsDateTime::setCallback</a>(dateTime);</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>  }</div>
+</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span></div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno"><a class="line" href="class_sd_file.html#ad266770d0a779d1a528a3997aee5142d">  504</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_file.html#ad266770d0a779d1a528a3997aee5142d">dateTimeCallbackCancel</a>() { <a class="code hl_function" href="namespace_fs_date_time.html#af88a1ebd9c91a474c79a641e716729a0">FsDateTime::clearCallback</a>(); }</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>};</div>
+</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="preprocessor">#endif  </span><span class="comment">// SdFat_h</span></div>
+<div class="ttc" id="a_ex_fat_lib_8h_html"><div class="ttname"><a href="_ex_fat_lib_8h.html">ExFatLib.h</a></div></div>
+<div class="ttc" id="a_ex_fat_partition_8h_html_ad74089b317bc77bd1e8cbb56fef8046a"><div class="ttname"><a href="_ex_fat_partition_8h.html#ad74089b317bc77bd1e8cbb56fef8046a">FAT_TYPE_EXFAT</a></div><div class="ttdeci">const uint8_t FAT_TYPE_EXFAT</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_partition_8h_source.html#l00040">ExFatPartition.h:40</a></div></div>
+<div class="ttc" id="a_fat_lib_8h_html"><div class="ttname"><a href="_fat_lib_8h.html">FatLib.h</a></div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a39cbe71da20b3a35100d369620187d4f"><div class="ttname"><a href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a></div><div class="ttdeci">uint8_t oflag_t</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00057">FsApiConstants.h:57</a></div></div>
+<div class="ttc" id="a_fs_lib_8h_html"><div class="ttname"><a href="_fs_lib_8h.html">FsLib.h</a></div><div class="ttdoc">FsLib include file.</div></div>
+<div class="ttc" id="a_sd_card_8h_html"><div class="ttname"><a href="_sd_card_8h.html">SdCard.h</a></div><div class="ttdoc">Top level include for SPI and SDIO cards.</div></div>
+<div class="ttc" id="a_sd_card_8h_html_a14fc08ce19cefbffd26dbbcea7744058"><div class="ttname"><a href="_sd_card_8h.html#a14fc08ce19cefbffd26dbbcea7744058">SdCard</a></div><div class="ttdeci">SdSpiCard SdCard</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_8h_source.html#l00038">SdCard.h:38</a></div></div>
+<div class="ttc" id="a_sd_card_info_8cpp_html_a7e9cdad194e9e7cf8a426028b7fb1809"><div class="ttname"><a href="_sd_card_info_8cpp.html#a7e9cdad194e9e7cf8a426028b7fb1809">printSdErrorSymbol</a></div><div class="ttdeci">void printSdErrorSymbol(print_t *pr, uint8_t code)</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8cpp_source.html#l00034">SdCardInfo.cpp:34</a></div></div>
+<div class="ttc" id="a_sd_fat_8h_html_a3991b0f70199d1a17dbb837bb041e89c"><div class="ttname"><a href="_sd_fat_8h.html#a3991b0f70199d1a17dbb837bb041e89c">SdBaseFile</a></div><div class="ttdeci">FatFile SdBaseFile</div><div class="ttdef"><b>Definition</b> <a href="#l00432">SdFat.h:432</a></div></div>
+<div class="ttc" id="a_sd_fat_8h_html_a6e295d38f798fdc044c3282818cdb064"><div class="ttname"><a href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a></div><div class="ttdeci">SdFat32 SdFat</div><div class="ttdef"><b>Definition</b> <a href="#l00430">SdFat.h:430</a></div></div>
+<div class="ttc" id="a_sd_fat_8h_html_aa0ffd23c3e43af0bcbd2fb4d62f3286d"><div class="ttname"><a href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a></div><div class="ttdeci">File32 File</div><div class="ttdef"><b>Definition</b> <a href="#l00454">SdFat.h:454</a></div></div>
+<div class="ttc" id="a_sd_fat_config_8h_html_a7a489fb14a59adf251794342604fc5ea"><div class="ttname"><a href="_sd_fat_config_8h.html#a7a489fb14a59adf251794342604fc5ea">SdCsPin_t</a></div><div class="ttdeci">uint8_t SdCsPin_t</div><div class="ttdef"><b>Definition</b> <a href="_sd_fat_config_8h_source.html#l00196">SdFatConfig.h:196</a></div></div>
+<div class="ttc" id="a_sd_spi_driver_8h_html_ae082f61e51c730bca2b753f3e6b0ad2c"><div class="ttname"><a href="_sd_spi_driver_8h.html#ae082f61e51c730bca2b753f3e6b0ad2c">SHARED_SPI</a></div><div class="ttdeci">const uint8_t SHARED_SPI</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_driver_8h_source.html#l00047">SdSpiDriver.h:47</a></div></div>
+<div class="ttc" id="a_sdio_card_8h_html_a1c5d1f4b7ddcc64038cc1b04ba24a8d6"><div class="ttname"><a href="_sdio_card_8h.html#a1c5d1f4b7ddcc64038cc1b04ba24a8d6">FIFO_SDIO</a></div><div class="ttdeci">#define FIFO_SDIO</div><div class="ttdef"><b>Definition</b> <a href="_sdio_card_8h_source.html#l00034">SdioCard.h:34</a></div></div>
+<div class="ttc" id="a_sys_call_8h_html"><div class="ttname"><a href="_sys_call_8h.html">SysCall.h</a></div><div class="ttdoc">SysCall class.</div></div>
+<div class="ttc" id="a_sys_call_8h_html_a0e3009529aac180ed5f48296d6670d6b"><div class="ttname"><a href="_sys_call_8h.html#a0e3009529aac180ed5f48296d6670d6b">F</a></div><div class="ttdeci">#define F(str)</div><div class="ttdef"><b>Definition</b> <a href="_sys_call_8h_source.html#l00053">SysCall.h:53</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html"><div class="ttname"><a href="class_ex_fat_file.html">ExFatFile</a></div><div class="ttdoc">Basic file class.</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8h_source.html#l00061">ExFatFile.h:61</a></div></div>
+<div class="ttc" id="aclass_ex_file_html"><div class="ttname"><a href="class_ex_file.html">ExFile</a></div><div class="ttdoc">exFAT file with Arduino Stream.</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8h_source.html#l00822">ExFatFile.h:822</a></div></div>
+<div class="ttc" id="aclass_fat_file_html"><div class="ttname"><a href="class_fat_file.html">FatFile</a></div><div class="ttdoc">Basic file class.</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l00108">FatFile.h:108</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_a5f2bbee53059029f7a22c8eaec81cb8a"><div class="ttname"><a href="class_fat_file.html#a5f2bbee53059029f7a22c8eaec81cb8a">FatFile::open</a></div><div class="ttdeci">bool open(FatVolume *vol, const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l00444">FatFile.cpp:444</a></div></div>
+<div class="ttc" id="aclass_file32_html"><div class="ttname"><a href="class_file32.html">File32</a></div><div class="ttdoc">FAT16/FAT32 file with Arduino Stream.</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l01023">FatFile.h:1023</a></div></div>
+<div class="ttc" id="aclass_fs_base_file_html"><div class="ttname"><a href="class_fs_base_file.html">FsBaseFile</a></div><div class="ttdoc">FsBaseFile class.</div><div class="ttdef"><b>Definition</b> <a href="_fs_file_8h_source.html#l00039">FsFile.h:39</a></div></div>
+<div class="ttc" id="aclass_fs_file_html"><div class="ttname"><a href="class_fs_file.html">FsFile</a></div><div class="ttdoc">FsBaseFile file with Arduino Stream.</div><div class="ttdef"><b>Definition</b> <a href="_fs_file_8h_source.html#l00869">FsFile.h:869</a></div></div>
+<div class="ttc" id="aclass_print_file_html"><div class="ttname"><a href="class_print_file.html">PrintFile</a></div><div class="ttdoc">PrintFile class.</div><div class="ttdef"><b>Definition</b> <a href="_arduino_files_8h_source.html#l00043">ArduinoFiles.h:43</a></div></div>
+<div class="ttc" id="aclass_sd_base_html"><div class="ttname"><a href="class_sd_base.html">SdBase</a></div><div class="ttdoc">base SD file system template class.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SdFat.h:50</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a0d7fd739da00b060ef9ee714d0dbb720"><div class="ttname"><a href="class_sd_base.html#a0d7fd739da00b060ef9ee714d0dbb720">SdBase::sdErrorData</a></div><div class="ttdeci">uint8_t sdErrorData()</div><div class="ttdef"><b>Definition</b> <a href="#l00330">SdFat.h:330</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a1552cd8b56848e030ec0118fa330db8e"><div class="ttname"><a href="class_sd_base.html#a1552cd8b56848e030ec0118fa330db8e">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt(const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00388">SdFat.h:388</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a17b39af0b81b21950572890f975659ed"><div class="ttname"><a href="class_sd_base.html#a17b39af0b81b21950572890f975659ed">SdBase::errorPrint</a></div><div class="ttdeci">void errorPrint(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00268">SdFat.h:268</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a1f9691ce3512821681f19e42573f34fc"><div class="ttname"><a href="class_sd_base.html#a1f9691ce3512821681f19e42573f34fc">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00130">SdFat.h:130</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a1ffd9124808a4b5b9e804b50254bed55"><div class="ttname"><a href="class_sd_base.html#a1ffd9124808a4b5b9e804b50254bed55">SdBase::printFatType</a></div><div class="ttdeci">void printFatType(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00255">SdFat.h:255</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a230ab356aae10b64d25073b484dbb7aa"><div class="ttname"><a href="class_sd_base.html#a230ab356aae10b64d25073b484dbb7aa">SdBase::isDedicatedSpi</a></div><div class="ttdeci">bool isDedicatedSpi()</div><div class="ttdef"><b>Definition</b> <a href="#l00249">SdFat.h:249</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a252b97ab55d9abb8eeaeee2d26f564e6"><div class="ttname"><a href="class_sd_base.html#a252b97ab55d9abb8eeaeee2d26f564e6">SdBase::freeClusterCount</a></div><div class="ttdeci">uint32_t freeClusterCount()</div><div class="ttdef"><b>Definition</b> <a href="#l00188">SdFat.h:188</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a2a90ca72f6a9368856e3cc685fd5de1b"><div class="ttname"><a href="class_sd_base.html#a2a90ca72f6a9368856e3cc685fd5de1b">SdBase::errorPrint</a></div><div class="ttdeci">void errorPrint(print_t *pr, const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00295">SdFat.h:295</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a2f62c5dc9686d163bf024ce9c9cecf12"><div class="ttname"><a href="class_sd_base.html#a2f62c5dc9686d163bf024ce9c9cecf12">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt(print_t *pr, const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00228">SdFat.h:228</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a40c85051c03d627a928f857b3cd901f3"><div class="ttname"><a href="class_sd_base.html#a40c85051c03d627a928f857b3cd901f3">SdBase::initErrorPrint</a></div><div class="ttdeci">void initErrorPrint()</div><div class="ttdef"><b>Definition</b> <a href="#l00353">SdFat.h:353</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a41f0388ad2dad15a65e95cbbd93eb181"><div class="ttname"><a href="class_sd_base.html#a41f0388ad2dad15a65e95cbbd93eb181">SdBase::begin</a></div><div class="ttdeci">bool begin(SdSpiConfig spiConfig)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">SdFat.h:82</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a53fac07c8230a4858caf0c8fe1204de0"><div class="ttname"><a href="class_sd_base.html#a53fac07c8230a4858caf0c8fe1204de0">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00207">SdFat.h:207</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a5ef2328333c99cdb53fa0faee0786216"><div class="ttname"><a href="class_sd_base.html#a5ef2328333c99cdb53fa0faee0786216">SdBase::begin</a></div><div class="ttdeci">bool begin(SdioConfig sdioConfig)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">SdFat.h:91</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a73ab03396fa569c3e2c512ba30fbc0e5"><div class="ttname"><a href="class_sd_base.html#a73ab03396fa569c3e2c512ba30fbc0e5">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt(print_t *pr, const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00159">SdFat.h:159</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a74120c065c9497ec26f13097690ddc98"><div class="ttname"><a href="class_sd_base.html#a74120c065c9497ec26f13097690ddc98">SdBase::errorPrint</a></div><div class="ttdeci">void errorPrint(const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00377">SdFat.h:377</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a7bedbf288966f0a8b086eeac5222306f"><div class="ttname"><a href="class_sd_base.html#a7bedbf288966f0a8b086eeac5222306f">SdBase::m_cardFactory</a></div><div class="ttdeci">SdCardFactory m_cardFactory</div><div class="ttdef"><b>Definition</b> <a href="#l00401">SdFat.h:401</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a8121e07c8ef606b63d08ba0debfa36f2"><div class="ttname"><a href="class_sd_base.html#a8121e07c8ef606b63d08ba0debfa36f2">SdBase::vol</a></div><div class="ttdeci">Vol * vol()</div><div class="ttdef"><b>Definition</b> <a href="#l00344">SdFat.h:344</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a876d07acf069d8ca09df629f342f04a3"><div class="ttname"><a href="class_sd_base.html#a876d07acf069d8ca09df629f342f04a3">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt(const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00359">SdFat.h:359</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a8806939dc34639ffca5f9663b8ec33ac"><div class="ttname"><a href="class_sd_base.html#a8806939dc34639ffca5f9663b8ec33ac">SdBase::cardBegin</a></div><div class="ttdeci">bool cardBegin(SdSpiConfig spiConfig)</div><div class="ttdef"><b>Definition</b> <a href="#l00103">SdFat.h:103</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a92b0fa6eb17932a14b5e76f74465c536"><div class="ttname"><a href="class_sd_base.html#a92b0fa6eb17932a14b5e76f74465c536">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt(print_t *pr, const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00148">SdFat.h:148</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a944f39156d399e73c7d64744a7c27329"><div class="ttname"><a href="class_sd_base.html#a944f39156d399e73c7d64744a7c27329">SdBase::end</a></div><div class="ttdeci">void end()</div><div class="ttdef"><b>Definition</b> <a href="#l00119">SdFat.h:119</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a95ad724ffcaa81c531596a48758f034e"><div class="ttname"><a href="class_sd_base.html#a95ad724ffcaa81c531596a48758f034e">SdBase::card</a></div><div class="ttdeci">SdCard * card()</div><div class="ttdef"><b>Definition</b> <a href="#l00096">SdFat.h:96</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_a9dc2a1ea7c927431c1661ec00ba06fef"><div class="ttname"><a href="class_sd_base.html#a9dc2a1ea7c927431c1661ec00ba06fef">SdBase::m_card</a></div><div class="ttdeci">SdCard * m_card</div><div class="ttdef"><b>Definition</b> <a href="#l00400">SdFat.h:400</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_aa2aa6e110d90c79fd05b6142ad71ca2a"><div class="ttname"><a href="class_sd_base.html#aa2aa6e110d90c79fd05b6142ad71ca2a">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt(const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00394">SdFat.h:394</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_aa8999c73d235faecefa7576166cf49fa"><div class="ttname"><a href="class_sd_base.html#aa8999c73d235faecefa7576166cf49fa">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt(print_t *pr, const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00218">SdFat.h:218</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ab6e769d1fbc906e430bd14d5a60d8e85"><div class="ttname"><a href="class_sd_base.html#ab6e769d1fbc906e430bd14d5a60d8e85">SdBase::errorPrint</a></div><div class="ttdeci">void errorPrint(print_t *pr, char const *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00284">SdFat.h:284</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ab7c860151ba43cd930497c7088710b42"><div class="ttname"><a href="class_sd_base.html#ab7c860151ba43cd930497c7088710b42">SdBase::errorPrint</a></div><div class="ttdeci">void errorPrint(const __FlashStringHelper *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00382">SdFat.h:382</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ac3c78d4209a497b038a778f5163d615c"><div class="ttname"><a href="class_sd_base.html#ac3c78d4209a497b038a778f5163d615c">SdBase::initErrorPrint</a></div><div class="ttdeci">void initErrorPrint(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00237">SdFat.h:237</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ac6ece0ac775ff721b5186124992eb238"><div class="ttname"><a href="class_sd_base.html#ac6ece0ac775ff721b5186124992eb238">SdBase::cardBegin</a></div><div class="ttdeci">bool cardBegin(SdioConfig sdioConfig)</div><div class="ttdef"><b>Definition</b> <a href="#l00113">SdFat.h:113</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_acd92eb6c85dfbe0a946c99df157cba66"><div class="ttname"><a href="class_sd_base.html#acd92eb6c85dfbe0a946c99df157cba66">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt()</div><div class="ttdef"><b>Definition</b> <a href="#l00362">SdFat.h:362</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ad3757c5f91ff05393708c23cadf65fe2"><div class="ttname"><a href="class_sd_base.html#ad3757c5f91ff05393708c23cadf65fe2">SdBase::begin</a></div><div class="ttdeci">bool begin(SdCsPin_t csPin, uint32_t maxSck)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">SdFat.h:73</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_adbfb6bc51f8415f7c8d515a0b9e821e4"><div class="ttname"><a href="class_sd_base.html#adbfb6bc51f8415f7c8d515a0b9e821e4">SdBase::initErrorHalt</a></div><div class="ttdeci">void initErrorHalt()</div><div class="ttdef"><b>Definition</b> <a href="#l00371">SdFat.h:371</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ade05d71dc81d1f40da675f4a89535852"><div class="ttname"><a href="class_sd_base.html#ade05d71dc81d1f40da675f4a89535852">SdBase::sdErrorCode</a></div><div class="ttdeci">uint8_t sdErrorCode()</div><div class="ttdef"><b>Definition</b> <a href="#l00322">SdFat.h:322</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ade2759d12751a2a8b3872bd3915d5caf"><div class="ttname"><a href="class_sd_base.html#ade2759d12751a2a8b3872bd3915d5caf">SdBase::begin</a></div><div class="ttdeci">bool begin(SdCsPin_t csPin=SS)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">SdFat.h:58</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ae13cf644d5c645fe5dfff8885ca6c039"><div class="ttname"><a href="class_sd_base.html#ae13cf644d5c645fe5dfff8885ca6c039">SdBase::printSdError</a></div><div class="ttdeci">void printSdError(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="#l00305">SdFat.h:305</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_ae7c8ea488f296548f9aa5381bc0bfbcc"><div class="ttname"><a href="class_sd_base.html#ae7c8ea488f296548f9aa5381bc0bfbcc">SdBase::format</a></div><div class="ttdeci">bool format(print_t *pr=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00170">SdFat.h:170</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_af249a7fb4551eff2aead43d257a8bb0a"><div class="ttname"><a href="class_sd_base.html#af249a7fb4551eff2aead43d257a8bb0a">SdBase::errorHalt</a></div><div class="ttdeci">void errorHalt(const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00368">SdFat.h:368</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_afa2024973e4e0f327d2e00e00ff5e187"><div class="ttname"><a href="class_sd_base.html#afa2024973e4e0f327d2e00e00ff5e187">SdBase::volumeBegin</a></div><div class="ttdeci">bool volumeBegin()</div><div class="ttdef"><b>Definition</b> <a href="#l00350">SdFat.h:350</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_afb32cffe0f935923bdcc303a3dacdf51"><div class="ttname"><a href="class_sd_base.html#afb32cffe0f935923bdcc303a3dacdf51">SdBase::setDedicatedSpi</a></div><div class="ttdeci">bool setDedicatedSpi(bool value)</div><div class="ttdef"><b>Definition</b> <a href="#l00336">SdFat.h:336</a></div></div>
+<div class="ttc" id="aclass_sd_base_html_afea6a16651d3988587f6e66e078a8440"><div class="ttname"><a href="class_sd_base.html#afea6a16651d3988587f6e66e078a8440">SdBase::hasDedicatedSpi</a></div><div class="ttdeci">bool hasDedicatedSpi()</div><div class="ttdef"><b>Definition</b> <a href="#l00201">SdFat.h:201</a></div></div>
+<div class="ttc" id="aclass_sd_card_factory_html"><div class="ttname"><a href="class_sd_card_factory.html">SdCardFactory</a></div><div class="ttdoc">Setup a SPI card or SDIO card.</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_8h_source.html#l00062">SdCard.h:62</a></div></div>
+<div class="ttc" id="aclass_sd_ex_fat_html"><div class="ttname"><a href="class_sd_ex_fat.html">SdExFat</a></div><div class="ttdoc">SD file system class for exFAT volumes.</div><div class="ttdef"><b>Definition</b> <a href="#l00416">SdFat.h:416</a></div></div>
+<div class="ttc" id="aclass_sd_fat32_html"><div class="ttname"><a href="class_sd_fat32.html">SdFat32</a></div><div class="ttdoc">SD file system class for FAT volumes.</div><div class="ttdef"><b>Definition</b> <a href="#l00408">SdFat.h:408</a></div></div>
+<div class="ttc" id="aclass_sd_file_html_a2d78e6a8cedbf8ce545af68457b43bf1"><div class="ttname"><a href="class_sd_file.html#a2d78e6a8cedbf8ce545af68457b43bf1">SdFile::dateTimeCallback</a></div><div class="ttdeci">static void dateTimeCallback(void(*dateTime)(uint16_t *date, uint16_t *time))</div><div class="ttdef"><b>Definition</b> <a href="#l00499">SdFat.h:499</a></div></div>
+<div class="ttc" id="aclass_sd_file_html_ad05be3a1fb635448d15a154424b6c33f"><div class="ttname"><a href="class_sd_file.html#ad05be3a1fb635448d15a154424b6c33f">SdFile::SdFile</a></div><div class="ttdeci">SdFile(const char *path, oflag_t oflag)</div><div class="ttdef"><b>Definition</b> <a href="#l00472">SdFat.h:472</a></div></div>
+<div class="ttc" id="aclass_sd_file_html_ad266770d0a779d1a528a3997aee5142d"><div class="ttname"><a href="class_sd_file.html#ad266770d0a779d1a528a3997aee5142d">SdFile::dateTimeCallbackCancel</a></div><div class="ttdeci">static void dateTimeCallbackCancel()</div><div class="ttdef"><b>Definition</b> <a href="#l00504">SdFat.h:504</a></div></div>
+<div class="ttc" id="aclass_sd_file_html_afe0d4370c9edf39cf04a29362704ba5a"><div class="ttname"><a href="class_sd_file.html#afe0d4370c9edf39cf04a29362704ba5a">SdFile::SdFile</a></div><div class="ttdeci">SdFile()</div><div class="ttdef"><b>Definition</b> <a href="#l00467">SdFat.h:467</a></div></div>
+<div class="ttc" id="aclass_sd_fs_html"><div class="ttname"><a href="class_sd_fs.html">SdFs</a></div><div class="ttdoc">SD file system class for FAT16, FAT32, and exFAT volumes.</div><div class="ttdef"><b>Definition</b> <a href="#l00424">SdFat.h:424</a></div></div>
+<div class="ttc" id="aclass_sd_spi_config_html"><div class="ttname"><a href="class_sd_spi_config.html">SdSpiConfig</a></div><div class="ttdoc">SPI card configuration.</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_driver_8h_source.html#l00109">SdSpiDriver.h:109</a></div></div>
+<div class="ttc" id="aclass_sdio_config_html"><div class="ttname"><a href="class_sdio_config.html">SdioConfig</a></div><div class="ttdoc">SDIO card configuration.</div><div class="ttdef"><b>Definition</b> <a href="_sdio_card_8h_source.html#l00041">SdioCard.h:41</a></div></div>
+<div class="ttc" id="anamespace_fs_date_time_html_af88a1ebd9c91a474c79a641e716729a0"><div class="ttname"><a href="namespace_fs_date_time.html#af88a1ebd9c91a474c79a641e716729a0">FsDateTime::clearCallback</a></div><div class="ttdeci">void clearCallback()</div><div class="ttdef"><b>Definition</b> <a href="_fs_date_time_8cpp_source.html#l00041">FsDateTime.cpp:41</a></div></div>
+<div class="ttc" id="anamespace_fs_date_time_html_afae6e23c2ed7d8194023d19d87fb1b62"><div class="ttname"><a href="namespace_fs_date_time.html#afae6e23c2ed7d8194023d19d87fb1b62">FsDateTime::setCallback</a></div><div class="ttdeci">void setCallback(void(*dateTime)(uint16_t *date, uint16_t *time))</div><div class="ttdef"><b>Definition</b> <a href="_fs_date_time_8cpp_source.html#l00042">FsDateTime.cpp:42</a></div></div>
+<div class="ttc" id="asdios_8h_html"><div class="ttname"><a href="sdios_8h.html">sdios.h</a></div><div class="ttdoc">C++ IO Streams features.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="_sd_fat_8h.html">SdFat.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

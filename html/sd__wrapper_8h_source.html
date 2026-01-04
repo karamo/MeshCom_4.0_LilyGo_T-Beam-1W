@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/sd_wrapper.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('sd__wrapper_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sd_wrapper.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sd__wrapper_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">    File: sd_wrapper.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">        - Class for SD card interaction</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">            - Combines various &quot;platform-specific&quot; SD classes</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">            - Methods for managing the .bmp format</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef __SD_WRAPPER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define __SD_WRAPPER_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="platforms_8h.html">Platforms/platforms.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#if defined(ESP32)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    #include &lt;SD.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #include &lt;FS.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#elif defined(ESP8266)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// #define NO_GLOBAL_SD</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    #include &lt;SD.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="sd__wrapper_8h.html#abe43e9f3e1421b9fb3770c6c5c62f0f6">   25</a></span><span class="preprocessor">    #define USING_BUNDLED_SDLIB</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    #include &quot;<a class="code" href="_sd_fat_8h.html">SdFat/SdFat.h</a>&quot;</span>            <span class="comment">// Bundled version of SdFat </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    #include &quot;<a class="code" href="_minimum_serial_8h.html">SdFat/MinimumSerial.h</a>&quot;</span>    <span class="comment">// Replacement serial for UNO_ENABLE_SDWRITE</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// Wrapper for the various platform-specific SD implementations</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="class_s_d_wrapper.html">SDWrapper</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="class_s_d_wrapper.html#aae882c7901e8726606edbe131cf48099">~SDWrapper</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_s_d_wrapper.html#a0427e79fcf58715886b72031f816843e">begin</a> (uint8_t <a class="code hl_variable" href="class_s_d_wrapper.html#acdadb52e6b06d7df8d9ca348049700ce">pin_cs</a>, SPIClass *spi);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#a670bb20e803f9bf89dcd9cc2c2254d18">seek</a>(uint32_t pos);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        int16_t <a class="code hl_function" href="class_s_d_wrapper.html#a219a9abf38d42d173c6bdf17a2ae39a2">read</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_s_d_wrapper.html#a9765a1d5ecaba55db7d7feae030da2c2">exists</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">filename</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#a321c82ffb9b099c4dff4bb37332f69bf">write</a>(uint8_t b);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        uint32_t <a class="code hl_function" href="class_s_d_wrapper.html#a007adf5a34d58843f80b872f896e1fb2">fileSize</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#af7cdb1fd6e8563a2969325d6ed8f17ce">remove</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">filename</a>);      <span class="comment">// Delete a file</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#acf854ae59ccfcb22043a8f10831b6641">openFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">filename</a>, <span class="keywordtype">bool</span> writing = <span class="keyword">false</span>);      <span class="comment">// Open a File into &quot;image&quot; member;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        uint16_t <a class="code hl_function" href="class_s_d_wrapper.html#a9bf5553f5b7ffeaf66ffa3c8a3acd6b2">BMPWidth</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        uint16_t <a class="code hl_function" href="class_s_d_wrapper.html#a5a5686095dfe3984deff70d8a00dce73">BMPHeight</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        uint32_t <a class="code hl_function" href="class_s_d_wrapper.html#a5095bb908d1b4f748c55eb924a4b334b">BMPStart</a>();                    <span class="comment">// Get imagedata byte offset in .bmp</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_s_d_wrapper.html#ab4c5aa9889688bd1d371577ed7a85749">BMPColorInverted</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        uint32_t <a class="code hl_function" href="class_s_d_wrapper.html#ad9f3428f6fff1af8fd353dd3c9af9eba">BMPReportedSize</a>();             <span class="comment">// Bytecount, as reported by bitmap header</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#a2809be94817176ab33a4955470310437">processFilename</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* raw);  <span class="comment">// ESP32 requires a leading forward-slash</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_s_d_wrapper.html#a953006be01834c6bc33f77339349dbed">readBMPHeader</a>();                   <span class="comment">// Load metadata from .bmp file</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#acdadb52e6b06d7df8d9ca348049700ce">   54</a></span>        uint8_t <a class="code hl_variable" href="class_s_d_wrapper.html#acdadb52e6b06d7df8d9ca348049700ce">pin_cs</a>;                         <span class="comment">// Pin pased is BaseDisplay::useSD()</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// Metadata from .bmp files</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#afff1bdeb98a9b2468d0a8fddb40fb4f4">   57</a></span>        uint16_t <a class="code hl_variable" href="class_s_d_wrapper.html#afff1bdeb98a9b2468d0a8fddb40fb4f4">bmp_width</a> = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a90ad29cff40f2966aaa97e7d020724ef">   58</a></span>        uint16_t <a class="code hl_variable" href="class_s_d_wrapper.html#a90ad29cff40f2966aaa97e7d020724ef">bmp_height</a> = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a94ba4f576a9ddb6b66eddeef62d3b256">   59</a></span>        uint16_t <a class="code hl_variable" href="class_s_d_wrapper.html#a94ba4f576a9ddb6b66eddeef62d3b256">bmp_imagestart</a> = 0;            <span class="comment">// Offset of start of image data in .bmp</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a9ff712c6494acc7892ffc7a2fa37034c">   60</a></span>        uint16_t <a class="code hl_variable" href="class_s_d_wrapper.html#a9ff712c6494acc7892ffc7a2fa37034c">bmp_color_inverted</a> = <span class="keyword">false</span>;    <span class="comment">// Is .bmp white-on-black or black-on-white?</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a3397343bca73c9bebe4bb43beaac6678">   61</a></span>        uint32_t <a class="code hl_variable" href="class_s_d_wrapper.html#a3397343bca73c9bebe4bb43beaac6678">bmp_reported_size</a> = 0;         <span class="comment">// Size (bytes) reported in the bitmap header</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// If using the bundled SdFat, instantiate the class here. Prevent it being built unnecessarily (save flash).</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">        #if defined(USING_BUNDLED_SDLIB)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#aa6ed011d8ced1acb668a792f38d82fe2">   65</a></span>            <a class="code hl_typedef" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a> <a class="code hl_variable" href="class_s_d_wrapper.html#aa6ed011d8ced1acb668a792f38d82fe2">SD</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a9447de039bf5da97878906c8d1fefe90">   68</a></span>        <a class="code hl_typedef" href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a> <a class="code hl_variable" href="class_s_d_wrapper.html#a9447de039bf5da97878906c8d1fefe90">image</a>;                             <span class="comment">// Set by openFile() (and swapToRead() / swapBack())</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">   69</a></span>        <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">filename</a>;                         <span class="comment">// Output of processFilename() - Fixes filenames for ESP32</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// Fix bugs in ESP32 implementation: no dual &quot;read + write&quot; mode; file truncates unless seek() to end when writing</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">        #ifdef ESP32</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordtype">void</span> swapToRead();                  <span class="comment">// Re-open file: read only</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordtype">void</span> swapBack();                    <span class="comment">// Re-open file: original mode (opened as write)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordtype">void</span> stretch();                     <span class="comment">// Traverse the entire file, to prevent truncation</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordtype">bool</span> opened_as_write = <span class="keyword">false</span>;       <span class="comment">// Remember whether file was requested for read or write. ESP32 bugfix &quot;no read + write mode&quot;.</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            uint32_t cached_size = 0;           <span class="comment">// If opened for writing, open first for read, and cache the filesize, for &quot;traversal&quot; hotfix.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_minimum_serial_8h_html"><div class="ttname"><a href="_minimum_serial_8h.html">MinimumSerial.h</a></div><div class="ttdoc">Minimal AVR Serial driver.</div></div>
+<div class="ttc" id="a_sd_fat_8h_html"><div class="ttname"><a href="_sd_fat_8h.html">SdFat.h</a></div><div class="ttdoc">main SdFs include file.</div></div>
+<div class="ttc" id="a_sd_fat_8h_html_a6e295d38f798fdc044c3282818cdb064"><div class="ttname"><a href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a></div><div class="ttdeci">SdFat32 SdFat</div><div class="ttdef"><b>Definition</b> <a href="_sd_fat_8h_source.html#l00430">SdFat.h:430</a></div></div>
+<div class="ttc" id="a_sd_fat_8h_html_aa0ffd23c3e43af0bcbd2fb4d62f3286d"><div class="ttname"><a href="_sd_fat_8h.html#aa0ffd23c3e43af0bcbd2fb4d62f3286d">File</a></div><div class="ttdeci">File32 File</div><div class="ttdef"><b>Definition</b> <a href="_sd_fat_8h_source.html#l00454">SdFat.h:454</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html"><div class="ttname"><a href="class_s_d_wrapper.html">SDWrapper</a></div><div class="ttdef"><b>Definition</b> <a href="#l00032">sd_wrapper.h:32</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a007adf5a34d58843f80b872f896e1fb2"><div class="ttname"><a href="class_s_d_wrapper.html#a007adf5a34d58843f80b872f896e1fb2">SDWrapper::fileSize</a></div><div class="ttdeci">uint32_t fileSize()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00052">sd_wrapper.cpp:52</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a0427e79fcf58715886b72031f816843e"><div class="ttname"><a href="class_s_d_wrapper.html#a0427e79fcf58715886b72031f816843e">SDWrapper::begin</a></div><div class="ttdeci">bool begin(uint8_t pin_cs, SPIClass *spi)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00025">sd_wrapper.cpp:25</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a219a9abf38d42d173c6bdf17a2ae39a2"><div class="ttname"><a href="class_s_d_wrapper.html#a219a9abf38d42d173c6bdf17a2ae39a2">SDWrapper::read</a></div><div class="ttdeci">int16_t read()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00043">sd_wrapper.cpp:43</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a2809be94817176ab33a4955470310437"><div class="ttname"><a href="class_s_d_wrapper.html#a2809be94817176ab33a4955470310437">SDWrapper::processFilename</a></div><div class="ttdeci">void processFilename(const char *raw)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00154">sd_wrapper.cpp:154</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a321c82ffb9b099c4dff4bb37332f69bf"><div class="ttname"><a href="class_s_d_wrapper.html#a321c82ffb9b099c4dff4bb37332f69bf">SDWrapper::write</a></div><div class="ttdeci">void write(uint8_t b)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00048">sd_wrapper.cpp:48</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a3397343bca73c9bebe4bb43beaac6678"><div class="ttname"><a href="class_s_d_wrapper.html#a3397343bca73c9bebe4bb43beaac6678">SDWrapper::bmp_reported_size</a></div><div class="ttdeci">uint32_t bmp_reported_size</div><div class="ttdef"><b>Definition</b> <a href="#l00061">sd_wrapper.h:61</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a5095bb908d1b4f748c55eb924a4b334b"><div class="ttname"><a href="class_s_d_wrapper.html#a5095bb908d1b4f748c55eb924a4b334b">SDWrapper::BMPStart</a></div><div class="ttdeci">uint32_t BMPStart()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00130">sd_wrapper.cpp:130</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a5a5686095dfe3984deff70d8a00dce73"><div class="ttname"><a href="class_s_d_wrapper.html#a5a5686095dfe3984deff70d8a00dce73">SDWrapper::BMPHeight</a></div><div class="ttdeci">uint16_t BMPHeight()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00122">sd_wrapper.cpp:122</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a6375b219740c50b129a2a803921c48e3"><div class="ttname"><a href="class_s_d_wrapper.html#a6375b219740c50b129a2a803921c48e3">SDWrapper::filename</a></div><div class="ttdeci">char * filename</div><div class="ttdef"><b>Definition</b> <a href="#l00069">sd_wrapper.h:69</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a670bb20e803f9bf89dcd9cc2c2254d18"><div class="ttname"><a href="class_s_d_wrapper.html#a670bb20e803f9bf89dcd9cc2c2254d18">SDWrapper::seek</a></div><div class="ttdeci">void seek(uint32_t pos)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00034">sd_wrapper.cpp:34</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a90ad29cff40f2966aaa97e7d020724ef"><div class="ttname"><a href="class_s_d_wrapper.html#a90ad29cff40f2966aaa97e7d020724ef">SDWrapper::bmp_height</a></div><div class="ttdeci">uint16_t bmp_height</div><div class="ttdef"><b>Definition</b> <a href="#l00058">sd_wrapper.h:58</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a9447de039bf5da97878906c8d1fefe90"><div class="ttname"><a href="class_s_d_wrapper.html#a9447de039bf5da97878906c8d1fefe90">SDWrapper::image</a></div><div class="ttdeci">File image</div><div class="ttdef"><b>Definition</b> <a href="#l00068">sd_wrapper.h:68</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a94ba4f576a9ddb6b66eddeef62d3b256"><div class="ttname"><a href="class_s_d_wrapper.html#a94ba4f576a9ddb6b66eddeef62d3b256">SDWrapper::bmp_imagestart</a></div><div class="ttdeci">uint16_t bmp_imagestart</div><div class="ttdef"><b>Definition</b> <a href="#l00059">sd_wrapper.h:59</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a953006be01834c6bc33f77339349dbed"><div class="ttname"><a href="class_s_d_wrapper.html#a953006be01834c6bc33f77339349dbed">SDWrapper::readBMPHeader</a></div><div class="ttdeci">void readBMPHeader()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00072">sd_wrapper.cpp:72</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a9765a1d5ecaba55db7d7feae030da2c2"><div class="ttname"><a href="class_s_d_wrapper.html#a9765a1d5ecaba55db7d7feae030da2c2">SDWrapper::exists</a></div><div class="ttdeci">bool exists(const char *filename)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00038">sd_wrapper.cpp:38</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a9bf5553f5b7ffeaf66ffa3c8a3acd6b2"><div class="ttname"><a href="class_s_d_wrapper.html#a9bf5553f5b7ffeaf66ffa3c8a3acd6b2">SDWrapper::BMPWidth</a></div><div class="ttdeci">uint16_t BMPWidth()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00115">sd_wrapper.cpp:115</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_a9ff712c6494acc7892ffc7a2fa37034c"><div class="ttname"><a href="class_s_d_wrapper.html#a9ff712c6494acc7892ffc7a2fa37034c">SDWrapper::bmp_color_inverted</a></div><div class="ttdeci">uint16_t bmp_color_inverted</div><div class="ttdef"><b>Definition</b> <a href="#l00060">sd_wrapper.h:60</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_aa6ed011d8ced1acb668a792f38d82fe2"><div class="ttname"><a href="class_s_d_wrapper.html#aa6ed011d8ced1acb668a792f38d82fe2">SDWrapper::SD</a></div><div class="ttdeci">SdFat SD</div><div class="ttdef"><b>Definition</b> <a href="#l00065">sd_wrapper.h:65</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_aae882c7901e8726606edbe131cf48099"><div class="ttname"><a href="class_s_d_wrapper.html#aae882c7901e8726606edbe131cf48099">SDWrapper::~SDWrapper</a></div><div class="ttdeci">~SDWrapper()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00013">sd_wrapper.cpp:13</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_ab4c5aa9889688bd1d371577ed7a85749"><div class="ttname"><a href="class_s_d_wrapper.html#ab4c5aa9889688bd1d371577ed7a85749">SDWrapper::BMPColorInverted</a></div><div class="ttdeci">bool BMPColorInverted()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00138">sd_wrapper.cpp:138</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_acdadb52e6b06d7df8d9ca348049700ce"><div class="ttname"><a href="class_s_d_wrapper.html#acdadb52e6b06d7df8d9ca348049700ce">SDWrapper::pin_cs</a></div><div class="ttdeci">uint8_t pin_cs</div><div class="ttdef"><b>Definition</b> <a href="#l00054">sd_wrapper.h:54</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_acf854ae59ccfcb22043a8f10831b6641"><div class="ttname"><a href="class_s_d_wrapper.html#acf854ae59ccfcb22043a8f10831b6641">SDWrapper::openFile</a></div><div class="ttdeci">void openFile(const char *filename, bool writing=false)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00176">sd_wrapper.cpp:176</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_ad9f3428f6fff1af8fd353dd3c9af9eba"><div class="ttname"><a href="class_s_d_wrapper.html#ad9f3428f6fff1af8fd353dd3c9af9eba">SDWrapper::BMPReportedSize</a></div><div class="ttdeci">uint32_t BMPReportedSize()</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00146">sd_wrapper.cpp:146</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_af7cdb1fd6e8563a2969325d6ed8f17ce"><div class="ttname"><a href="class_s_d_wrapper.html#af7cdb1fd6e8563a2969325d6ed8f17ce">SDWrapper::remove</a></div><div class="ttdeci">void remove(const char *filename)</div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8cpp_source.html#l00066">sd_wrapper.cpp:66</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html_afff1bdeb98a9b2468d0a8fddb40fb4f4"><div class="ttname"><a href="class_s_d_wrapper.html#afff1bdeb98a9b2468d0a8fddb40fb4f4">SDWrapper::bmp_width</a></div><div class="ttdeci">uint16_t bmp_width</div><div class="ttdef"><b>Definition</b> <a href="#l00057">sd_wrapper.h:57</a></div></div>
+<div class="ttc" id="aplatforms_8h_html"><div class="ttname"><a href="platforms_8h.html">platforms.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="sd__wrapper_8h.html">sd_wrapper.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

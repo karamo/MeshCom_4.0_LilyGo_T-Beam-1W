@@ -1,0 +1,26 @@
+var structaprs_message =
+[
+    [ "max_hop", "structaprs_message.html#aa5b09414247136973e1bc62d447a739c", null ],
+    [ "msg_app_offline", "structaprs_message.html#aa9685ab11afac05536846e25e9c7fb75", null ],
+    [ "msg_destination_call", "structaprs_message.html#a22626d1b74939d83d9a794d24caff1fe", null ],
+    [ "msg_destination_last", "structaprs_message.html#aeeaa6b7d8ee1136c618954c8e3bedeb4", null ],
+    [ "msg_destination_path", "structaprs_message.html#a7f6b77ad326eca209c8f0fa6cdf034d7", null ],
+    [ "msg_fcs", "structaprs_message.html#a80a03a59e631b6ef2233584b5458cf55", null ],
+    [ "msg_gateway_call", "structaprs_message.html#a6bb0230bfd7355a7926a346e5d4289a7", null ],
+    [ "msg_id", "structaprs_message.html#a629f749c8ebed545394645fc5035ca9b", null ],
+    [ "msg_last_hw", "structaprs_message.html#ac896d9243fe8581e474ecdef42f22dd2", null ],
+    [ "msg_last_path_cnt", "structaprs_message.html#ad5145a2c05f38f9b64f641fc1bf8c77c", null ],
+    [ "msg_len", "structaprs_message.html#add252b10de35eed47f6330032375d3a5", null ],
+    [ "msg_mesh", "structaprs_message.html#af77f2cebf294efd8ee04732ca3390143", null ],
+    [ "msg_payload", "structaprs_message.html#a284bf6b180fb3b58b255ceca155f7a80", null ],
+    [ "msg_server", "structaprs_message.html#a3163673603a0bd40cbf0229043be0675", null ],
+    [ "msg_source_call", "structaprs_message.html#a651f469a3e0c07aeef0b667f37dd725f", null ],
+    [ "msg_source_fw_sub_version", "structaprs_message.html#a20d09abd313cbc2bd0dbccd1badccd4a", null ],
+    [ "msg_source_fw_version", "structaprs_message.html#a4c0c107a7986a6b5edd1d17e2389fb2d", null ],
+    [ "msg_source_hw", "structaprs_message.html#aee72343d9e00c9857b35bf4fcc42bea4", null ],
+    [ "msg_source_last", "structaprs_message.html#a96d6075498e2e6b169e126da78b17de3", null ],
+    [ "msg_source_mod", "structaprs_message.html#af2dcc191ddb8221d824760ff11613c4b", null ],
+    [ "msg_source_path", "structaprs_message.html#a5071f0b74d7c273993497389c0af6048", null ],
+    [ "msg_track", "structaprs_message.html#aacbf3d878e20110909f2c93f8fe501d5", null ],
+    [ "payload_type", "structaprs_message.html#ab17ad7464ec87ea101a82aba1c55e1d9", null ]
+];

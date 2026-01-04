@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/lora_setchip.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('lora__setchip_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lora_setchip.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lora__setchip_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _LORA_SETCHIP_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _LORA_SETCHIP_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//#ifndef BOARD_TLORA_OLV216</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;configuration.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="debugconf_8h.html">debugconf.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="lora__setchip_8h.html#a9f050c14e238da044a1cdb5bcb514dfe">   10</a></span><span class="preprocessor">#define max_country 16</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">extern</span> String <a class="code hl_variable" href="lora__setchip_8cpp.html#af1bc104bb33fe51801ae60493b343f70">strCountry</a>[<a class="code hl_define" href="lora__setchip_8h.html#a9f050c14e238da044a1cdb5bcb514dfe">max_country</a>];</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">float</span> <a class="code hl_function" href="lora__setchip_8h.html#a333cce2ea99685a3bf73a0a46c0b734c">getFreq</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>int8_t <a class="code hl_function" href="lora__setchip_8h.html#a351026a3392cfd43f7ec7f92eafac7a9">getPower</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">float</span> <a class="code hl_function" href="lora__setchip_8h.html#a70210447e2db3d24c9d8d9117e5d73fe">getBW</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> <a class="code hl_function" href="lora__setchip_8h.html#ae41dd59d284b8c79ceec01fff9b5780a">getSF</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">int</span> <a class="code hl_function" href="lora__setchip_8h.html#a2ad06c1cf0c6b70577fe62cc1536d98f">getCR</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="lora__setchip_8h.html#a0c9a528917a87c65d1fe19b83660fc86">getMOD</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>String <a class="code hl_function" href="lora__setchip_8h.html#abca4d309d093f42ebb41049ad0a3d72f">getCountry</a>(<span class="keywordtype">int</span> iCtry);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="lora__setchip_8h.html#afe564e45c60568103d93c8586680c731">getCountryID</a>(String strCtry);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="lora__setchip_8h.html#adda3bf26fa4b761f2ac58432d0bcfff5">lora_setcountry</a>(<span class="keywordtype">int</span> iCtry);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lora__setchip_8h.html#a61b79d45c3e61aa0fce0bac048ae7e13">lora_setchip_meshcom</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lora__setchip_8h.html#a74a5cfa6f2e716d7c141d0459e92fa85">lora_setchip_aprs</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lora__setchip_8h.html#acdbc64316d4b27023c3e84b98aaaec65">lora_setchip_new</a>(<span class="keywordtype">float</span> rf_freq, <span class="keywordtype">float</span> rf_bw, <span class="keywordtype">int</span> rf_sf, <span class="keywordtype">int</span> rf_cr, <span class="keywordtype">int</span> rf_syncword, uint16_t <a class="code hl_variable" href="lora__setchip_8cpp.html#a219961b520f055e0985a53eb7e84ac9e">rf_preamble_length</a>, <span class="keywordtype">bool</span> <a class="code hl_variable" href="lora__setchip_8cpp.html#ab09fd12df8b667eb98f818af724459f7">rf_crc</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//#endif</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adebugconf_8h_html"><div class="ttname"><a href="debugconf_8h.html">debugconf.h</a></div></div>
+<div class="ttc" id="alora__setchip_8cpp_html_a219961b520f055e0985a53eb7e84ac9e"><div class="ttname"><a href="lora__setchip_8cpp.html#a219961b520f055e0985a53eb7e84ac9e">rf_preamble_length</a></div><div class="ttdeci">uint16_t rf_preamble_length</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00057">lora_setchip.cpp:57</a></div></div>
+<div class="ttc" id="alora__setchip_8cpp_html_ab09fd12df8b667eb98f818af724459f7"><div class="ttname"><a href="lora__setchip_8cpp.html#ab09fd12df8b667eb98f818af724459f7">rf_crc</a></div><div class="ttdeci">bool rf_crc</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00056">lora_setchip.cpp:56</a></div></div>
+<div class="ttc" id="alora__setchip_8cpp_html_af1bc104bb33fe51801ae60493b343f70"><div class="ttname"><a href="lora__setchip_8cpp.html#af1bc104bb33fe51801ae60493b343f70">strCountry</a></div><div class="ttdeci">String strCountry[max_country]</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00060">lora_setchip.cpp:60</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a0c9a528917a87c65d1fe19b83660fc86"><div class="ttname"><a href="lora__setchip_8h.html#a0c9a528917a87c65d1fe19b83660fc86">getMOD</a></div><div class="ttdeci">int getMOD()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00172">lora_setchip.cpp:172</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a2ad06c1cf0c6b70577fe62cc1536d98f"><div class="ttname"><a href="lora__setchip_8h.html#a2ad06c1cf0c6b70577fe62cc1536d98f">getCR</a></div><div class="ttdeci">int getCR()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00128">lora_setchip.cpp:128</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a333cce2ea99685a3bf73a0a46c0b734c"><div class="ttname"><a href="lora__setchip_8h.html#a333cce2ea99685a3bf73a0a46c0b734c">getFreq</a></div><div class="ttdeci">float getFreq()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00083">lora_setchip.cpp:83</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a351026a3392cfd43f7ec7f92eafac7a9"><div class="ttname"><a href="lora__setchip_8h.html#a351026a3392cfd43f7ec7f92eafac7a9">getPower</a></div><div class="ttdeci">int8_t getPower()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00151">lora_setchip.cpp:151</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a61b79d45c3e61aa0fce0bac048ae7e13"><div class="ttname"><a href="lora__setchip_8h.html#a61b79d45c3e61aa0fce0bac048ae7e13">lora_setchip_meshcom</a></div><div class="ttdeci">bool lora_setchip_meshcom()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00444">lora_setchip.cpp:444</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a70210447e2db3d24c9d8d9117e5d73fe"><div class="ttname"><a href="lora__setchip_8h.html#a70210447e2db3d24c9d8d9117e5d73fe">getBW</a></div><div class="ttdeci">float getBW()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00098">lora_setchip.cpp:98</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a74a5cfa6f2e716d7c141d0459e92fa85"><div class="ttname"><a href="lora__setchip_8h.html#a74a5cfa6f2e716d7c141d0459e92fa85">lora_setchip_aprs</a></div><div class="ttdeci">bool lora_setchip_aprs()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00523">lora_setchip.cpp:523</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_a9f050c14e238da044a1cdb5bcb514dfe"><div class="ttname"><a href="lora__setchip_8h.html#a9f050c14e238da044a1cdb5bcb514dfe">max_country</a></div><div class="ttdeci">#define max_country</div><div class="ttdef"><b>Definition</b> <a href="#l00010">lora_setchip.h:10</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_abca4d309d093f42ebb41049ad0a3d72f"><div class="ttname"><a href="lora__setchip_8h.html#abca4d309d093f42ebb41049ad0a3d72f">getCountry</a></div><div class="ttdeci">String getCountry(int iCtry)</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00062">lora_setchip.cpp:62</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_acdbc64316d4b27023c3e84b98aaaec65"><div class="ttname"><a href="lora__setchip_8h.html#acdbc64316d4b27023c3e84b98aaaec65">lora_setchip_new</a></div><div class="ttdeci">bool lora_setchip_new(float rf_freq, float rf_bw, int rf_sf, int rf_cr, int rf_syncword, uint16_t rf_preamble_length, bool rf_crc)</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00590">lora_setchip.cpp:590</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_adda3bf26fa4b761f2ac58432d0bcfff5"><div class="ttname"><a href="lora__setchip_8h.html#adda3bf26fa4b761f2ac58432d0bcfff5">lora_setcountry</a></div><div class="ttdeci">void lora_setcountry(int iCtry)</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00196">lora_setchip.cpp:196</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_ae41dd59d284b8c79ceec01fff9b5780a"><div class="ttname"><a href="lora__setchip_8h.html#ae41dd59d284b8c79ceec01fff9b5780a">getSF</a></div><div class="ttdeci">int getSF()</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00119">lora_setchip.cpp:119</a></div></div>
+<div class="ttc" id="alora__setchip_8h_html_afe564e45c60568103d93c8586680c731"><div class="ttname"><a href="lora__setchip_8h.html#afe564e45c60568103d93c8586680c731">getCountryID</a></div><div class="ttdeci">int getCountryID(String strCtry)</div><div class="ttdef"><b>Definition</b> <a href="lora__setchip_8cpp_source.html#l00072">lora_setchip.cpp:72</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="lora__setchip_8h.html">lora_setchip.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/ui.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ui_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ui.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lvgl_8h_source.html">lvgl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scr__mrg_8h_source.html">scr_mrg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ui_8h_source.html">ui.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ui__port_8h_source.html">ui_port.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="t5-epaper_2t5-src_2assets_8h_source.html">t5-src/assets.h</a>&quot;</code><br />
+</div>
+<p><a href="ui_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:ab9129b977a587b50ea801daac75e178f" id="r_ab9129b977a587b50ea801daac75e178f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9129b977a587b50ea801daac75e178f">ARRAY_LEN</a>(a)</td></tr>
+<tr class="memitem:a0f70d6028408d84daa610f763c949cd1" id="r_a0f70d6028408d84daa610f763c949cd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f70d6028408d84daa610f763c949cd1">SETTING_PAGE_MAX_ITEM</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:a608bb844c2752208ddbc914ff0140c5b" id="r_a608bb844c2752208ddbc914ff0140c5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a608bb844c2752208ddbc914ff0140c5b">UI_LIST_CREATE</a>(func,  handle,  list,  num,  page_num,  curr_page)</td></tr>
+<tr class="memitem:aca99d367d2a8f01f870146367f1546df" id="r_aca99d367d2a8f01f870146367f1546df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca99d367d2a8f01f870146367f1546df">UI_LIST_BTN_CREATE</a>(func,  list,  page,  num,  page_num,  curr_page)</td></tr>
+<tr class="memitem:a4984511a988c5ab6cfad6143a99ce6b4" id="r_a4984511a988c5ab6cfad6143a99ce6b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4984511a988c5ab6cfad6143a99ce6b4">LORA_RECV_INFO_MAX_LINE</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memitem:a3d6520928df063969bd1b33610c729db" id="r_a3d6520928df063969bd1b33610c729db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d6520928df063969bd1b33610c729db">MANUAL_SEND_LINE_MAX</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memitem:a5491865d7874adb5a34b56ff4f65da6f" id="r_a5491865d7874adb5a34b56ff4f65da6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5491865d7874adb5a34b56ff4f65da6f">MANUAL_SEND_LINE_MAX_CH</a>&#160;&#160;&#160;34</td></tr>
+<tr class="memitem:a2925586f1d4b22579596692cde3b321c" id="r_a2925586f1d4b22579596692cde3b321c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2925586f1d4b22579596692cde3b321c">SET_RANGE</a>(opt,  num,  <a class="el" href="_g_f_x_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>,  max,  num_lab)</td></tr>
+<tr class="memitem:acc54f4de7e2ceef11a0f5fbad6e9a63d" id="r_acc54f4de7e2ceef11a0f5fbad6e9a63d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc54f4de7e2ceef11a0f5fbad6e9a63d">line_max</a>&#160;&#160;&#160;28</td></tr>
+<tr class="memitem:ade5d4f59ac25c37160510109eac53aef" id="r_ade5d4f59ac25c37160510109eac53aef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade5d4f59ac25c37160510109eac53aef">line_max</a>&#160;&#160;&#160;32</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a782c244bf11dfd5656b4f6ffdd74f8a1" id="r_a782c244bf11dfd5656b4f6ffdd74f8a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a782c244bf11dfd5656b4f6ffdd74f8a1">scr_back_btn_create</a> (lv_obj_t *parent, const char *text, lv_event_cb_t cb)</td></tr>
+<tr class="memitem:a4d849f543eafec73e471d7b1e9aad2b2" id="r_a4d849f543eafec73e471d7b1e9aad2b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d849f543eafec73e471d7b1e9aad2b2">scr_middle_line</a> (lv_obj_t *parent)</td></tr>
+<tr class="memitem:aee06d1fd5913972172ebbf93d9e241cb" id="r_aee06d1fd5913972172ebbf93d9e241cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee06d1fd5913972172ebbf93d9e241cb">ui_list_btn_create</a> (lv_obj_t *parent, lv_event_cb_t event_cb)</td></tr>
+<tr class="memitem:ae279919233ccade84947054c1258d57b" id="r_ae279919233ccade84947054c1258d57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae279919233ccade84947054c1258d57b">set_cb</a> (int n)</td></tr>
+<tr class="memitem:aed7d76948efbfca32c232a2606c55a39" id="r_aed7d76948efbfca32c232a2606c55a39"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed7d76948efbfca32c232a2606c55a39">get_cb</a> (int *ret_n)</td></tr>
+<tr class="memitem:af1ee3cd96ec0ae3adb6912453f7da3fd" id="r_af1ee3cd96ec0ae3adb6912453f7da3fd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1ee3cd96ec0ae3adb6912453f7da3fd">get_vcom_cb</a> (int *ret_n)</td></tr>
+<tr class="memitem:aaefe6fa2ba50dd433c5a3ed7067863de" id="r_aaefe6fa2ba50dd433c5a3ed7067863de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaefe6fa2ba50dd433c5a3ed7067863de">test_set_cb</a> (int n)</td></tr>
+<tr class="memitem:a22c7ac3a658fd4067fdbed292c020956" id="r_a22c7ac3a658fd4067fdbed292c020956"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c7ac3a658fd4067fdbed292c020956">test_get_cb</a> (int *ret_n)</td></tr>
+<tr class="memitem:af5ab5fc46daf4c886ffdcf08e52086bd" id="r_af5ab5fc46daf4c886ffdcf08e52086bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5ab5fc46daf4c886ffdcf08e52086bd">menu_taskbar_update_timer_cb</a> (lv_timer_t *t)</td></tr>
+<tr class="memitem:a3f42b400beed3a423386740657559c4d" id="r_a3f42b400beed3a423386740657559c4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f42b400beed3a423386740657559c4d">ui_entry</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a4b3cdcdfb279aae47020eb57152a2ff1" id="r_a4b3cdcdfb279aae47020eb57152a2ff1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b3cdcdfb279aae47020eb57152a2ff1">taskbar_statue</a> [<a class="el" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0adda289a16abec0a49c19e899a2f10f9e">TASKBAR_ID_MAX</a>] = {0}</td></tr>
+<tr class="memitem:a0fe23e6116ec3d23cb699f4c1b49579c" id="r_a0fe23e6116ec3d23cb699f4c1b49579c"><td class="memItemLeft" align="right" valign="top">struct tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe23e6116ec3d23cb699f4c1b49579c">timeinfo</a> = {0}</td></tr>
+<tr class="memitem:a456ab59449f679db2d115e19024259f0" id="r_a456ab59449f679db2d115e19024259f0"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structmenu__icon.html">menu_icon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a456ab59449f679db2d115e19024259f0">icon_buf</a> []</td></tr>
+<tr class="memitem:adbd9418e510a29b7222ce1f55dc1dca0" id="r_adbd9418e510a29b7222ce1f55dc1dca0"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structmenu__icon.html">menu_icon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd9418e510a29b7222ce1f55dc1dca0">icon_buf2</a> []</td></tr>
+<tr class="memitem:a92da764df445a0a6b6982ca60f832957" id="r_a92da764df445a0a6b6982ca60f832957"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92da764df445a0a6b6982ca60f832957">scr2_list</a></td></tr>
+<tr class="memitem:a33ff42387694d915282777daab3c33ed" id="r_a33ff42387694d915282777daab3c33ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ff42387694d915282777daab3c33ed">lab_idx</a> = 0</td></tr>
+<tr class="memitem:aaa8416b34c271b66decd7da55848b037" id="r_aaa8416b34c271b66decd7da55848b037"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8416b34c271b66decd7da55848b037">scr6_root</a></td></tr>
+<tr class="memitem:a1d46af80a7e03251ed4a1a9dda230d4c" id="r_a1d46af80a7e03251ed4a1a9dda230d4c"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d46af80a7e03251ed4a1a9dda230d4c">wifi_st_lab</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a6bdef7bd9e1ee1d8ae2a3f9a2df633e0" id="r_a6bdef7bd9e1ee1d8ae2a3f9a2df633e0"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bdef7bd9e1ee1d8ae2a3f9a2df633e0">ip_lab</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:ae66c4e30db328b63717c54b3d87d9323" id="r_ae66c4e30db328b63717c54b3d87d9323"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66c4e30db328b63717c54b3d87d9323">ssid_lab</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a7969510e96b8d1a0d7730977f42f2c28" id="r_a7969510e96b8d1a0d7730977f42f2c28"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7969510e96b8d1a0d7730977f42f2c28">pwd_lab</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="ab9129b977a587b50ea801daac75e178f" name="ab9129b977a587b50ea801daac75e178f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9129b977a587b50ea801daac75e178f">&#9670;&#160;</a></span>ARRAY_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARRAY_LEN</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wert:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[0]))</div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00011">11</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ade5d4f59ac25c37160510109eac53aef" name="ade5d4f59ac25c37160510109eac53aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5d4f59ac25c37160510109eac53aef">&#9670;&#160;</a></span>line_max <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define line_max&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l02076">2076</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc54f4de7e2ceef11a0f5fbad6e9a63d" name="acc54f4de7e2ceef11a0f5fbad6e9a63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc54f4de7e2ceef11a0f5fbad6e9a63d">&#9670;&#160;</a></span>line_max <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define line_max&#160;&#160;&#160;28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l02076">2076</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4984511a988c5ab6cfad6143a99ce6b4" name="a4984511a988c5ab6cfad6143a99ce6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4984511a988c5ab6cfad6143a99ce6b4">&#9670;&#160;</a></span>LORA_RECV_INFO_MAX_LINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LORA_RECV_INFO_MAX_LINE&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00954">954</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d6520928df063969bd1b33610c729db" name="a3d6520928df063969bd1b33610c729db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6520928df063969bd1b33610c729db">&#9670;&#160;</a></span>MANUAL_SEND_LINE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MANUAL_SEND_LINE_MAX&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00955">955</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5491865d7874adb5a34b56ff4f65da6f" name="a5491865d7874adb5a34b56ff4f65da6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5491865d7874adb5a34b56ff4f65da6f">&#9670;&#160;</a></span>MANUAL_SEND_LINE_MAX_CH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MANUAL_SEND_LINE_MAX_CH&#160;&#160;&#160;34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00956">956</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2925586f1d4b22579596692cde3b321c" name="a2925586f1d4b22579596692cde3b321c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2925586f1d4b22579596692cde3b321c">&#9670;&#160;</a></span>SET_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_RANGE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>opt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="_g_f_x_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_lab</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wert:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (opt == <span class="charliteral">&#39;+&#39;</span>)                            \</div>
+<div class="line">    {                                          \</div>
+<div class="line">        num++;                                 \</div>
+<div class="line">    }                                          \</div>
+<div class="line">    <span class="keywordflow">else</span>                                       \</div>
+<div class="line">    {                                          \</div>
+<div class="line">        num--;                                 \</div>
+<div class="line">    }                                          \</div>
+<div class="line">    num = num &gt; max ? max : num;               \</div>
+<div class="line">    num = num &lt; <a class="code hl_define" href="_g_f_x_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a> ? <a class="code hl_define" href="_g_f_x_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a> : num;               \</div>
+<div class="line">    lv_label_set_text_fmt(num_lab, <span class="stringliteral">&quot;%d&quot;</span>, num);</div>
+<div class="ttc" id="a_g_f_x_8cpp_html_ac6afabdc09a49a433ee19d8a9486056d"><div class="ttname"><a href="_g_f_x_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a></div><div class="ttdeci">#define min(a, b)</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8cpp_source.html#l00090">GFX.cpp:90</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01426">1426</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f70d6028408d84daa610f763c949cd1" name="a0f70d6028408d84daa610f763c949cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f70d6028408d84daa610f763c949cd1">&#9670;&#160;</a></span>SETTING_PAGE_MAX_ITEM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SETTING_PAGE_MAX_ITEM&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00092">92</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aca99d367d2a8f01f870146367f1546df" name="aca99d367d2a8f01f870146367f1546df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca99d367d2a8f01f870146367f1546df">&#9670;&#160;</a></span>UI_LIST_BTN_CREATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UI_LIST_BTN_CREATE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>page</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>page_num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>curr_page</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wert:</b><div class="fragment"><div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> func##_page_switch_cb(lv_event_t *e)                   \</div>
+<div class="line">    {                                                                  \</div>
+<div class="line">        <span class="keywordtype">char</span> opt = (int)e-&gt;user_data;                                  \</div>
+<div class="line">                                                                       \</div>
+<div class="line">        if (num &lt; <a class="code hl_define" href="ui__deckpro_8cpp.html#a0f70d6028408d84daa610f763c949cd1">SETTING_PAGE_MAX_ITEM</a>)                               \</div>
+<div class="line">            <span class="keywordflow">return</span>;                                                    \</div>
+<div class="line">                                                                       \</div>
+<div class="line">        <span class="keywordtype">int</span> child_cnt = lv_obj_get_child_cnt(list);                    \</div>
+<div class="line">                                                                       \</div>
+<div class="line">        for (<span class="keywordtype">int</span> <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> = 0; <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> &lt; child_cnt; <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>++)                            \</div>
+<div class="line">        {                                                              \</div>
+<div class="line">            lv_obj_t *child = lv_obj_get_child(list, 0);               \</div>
+<div class="line">            if (child)                                                 \</div>
+<div class="line">                lv_obj_del(child);                                     \</div>
+<div class="line">        }                                                              \</div>
+<div class="line">                                                                       \</div>
+<div class="line">        if (opt == <span class="charliteral">&#39;p&#39;</span>)                                                \</div>
+<div class="line">        {                                                              \</div>
+<div class="line">            curr_page = (curr_page &lt; page_num) ? curr_page + 1 : 0;    \</div>
+<div class="line">        }                                                              \</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opt == <span class="charliteral">&#39;n&#39;</span>)                                           \</div>
+<div class="line">        {                                                              \</div>
+<div class="line">            curr_page = (curr_page &gt; 0) ? curr_page - 1 : page_num;    \</div>
+<div class="line">        }                                                              \</div>
+<div class="line">                                                                       \</div>
+<div class="line">        func##_item_create();                                          \</div>
+<div class="line">        lv_label_set_text_fmt(page, <span class="stringliteral">&quot;%d / %d&quot;</span>, curr_page, page_num);   \</div>
+<div class="line">    }</div>
+<div class="ttc" id="aonewire__functions_8cpp_html_aa0e5b670397c0b01582fc3e2ae4a0bfd"><div class="ttname"><a href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a></div><div class="ttdeci">byte i</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00006">onewire_functions.cpp:6</a></div></div>
+<div class="ttc" id="aui__deckpro_8cpp_html_a0f70d6028408d84daa610f763c949cd1"><div class="ttname"><a href="ui__deckpro_8cpp.html#a0f70d6028408d84daa610f763c949cd1">SETTING_PAGE_MAX_ITEM</a></div><div class="ttdeci">#define SETTING_PAGE_MAX_ITEM</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8cpp_source.html#l00015">ui_deckpro.cpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00161">161</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a608bb844c2752208ddbc914ff0140c5b" name="a608bb844c2752208ddbc914ff0140c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608bb844c2752208ddbc914ff0140c5b">&#9670;&#160;</a></span>UI_LIST_CREATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UI_LIST_CREATE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>page_num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>curr_page</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00094">94</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="aed7d76948efbfca32c232a2606c55a39" name="aed7d76948efbfca32c232a2606c55a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7d76948efbfca32c232a2606c55a39">&#9670;&#160;</a></span>get_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * get_cb </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01614">1614</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af1ee3cd96ec0ae3adb6912453f7da3fd" name="af1ee3cd96ec0ae3adb6912453f7da3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ee3cd96ec0ae3adb6912453f7da3fd">&#9670;&#160;</a></span>get_vcom_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * get_vcom_cb </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01619">1619</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af5ab5fc46daf4c886ffdcf08e52086bd" name="af5ab5fc46daf4c886ffdcf08e52086bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ab5fc46daf4c886ffdcf08e52086bd">&#9670;&#160;</a></span>menu_taskbar_update_timer_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menu_taskbar_update_timer_cb </td>
+          <td>(</td>
+          <td class="paramtype">lv_timer_t *</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l02567">2567</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a782c244bf11dfd5656b4f6ffdd74f8a1" name="a782c244bf11dfd5656b4f6ffdd74f8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782c244bf11dfd5656b4f6ffdd74f8a1">&#9670;&#160;</a></span>scr_back_btn_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scr_back_btn_create </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_event_cb_t</td>          <td class="paramname"><span class="paramname"><em>cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00019">19</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d849f543eafec73e471d7b1e9aad2b2" name="a4d849f543eafec73e471d7b1e9aad2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d849f543eafec73e471d7b1e9aad2b2">&#9670;&#160;</a></span>scr_middle_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scr_middle_line </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00045">45</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae279919233ccade84947054c1258d57b" name="ae279919233ccade84947054c1258d57b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae279919233ccade84947054c1258d57b">&#9670;&#160;</a></span>set_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_cb </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01612">1612</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a22c7ac3a658fd4067fdbed292c020956" name="a22c7ac3a658fd4067fdbed292c020956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c7ac3a658fd4067fdbed292c020956">&#9670;&#160;</a></span>test_get_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * test_get_cb </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ret_n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01714">1714</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaefe6fa2ba50dd433c5a3ed7067863de" name="aaefe6fa2ba50dd433c5a3ed7067863de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefe6fa2ba50dd433c5a3ed7067863de">&#9670;&#160;</a></span>test_set_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_set_cb </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01712">1712</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3f42b400beed3a423386740657559c4d" name="a3f42b400beed3a423386740657559c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f42b400beed3a423386740657559c4d">&#9670;&#160;</a></span>ui_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_entry </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l02634">2634</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aee06d1fd5913972172ebbf93d9e241cb" name="aee06d1fd5913972172ebbf93d9e241cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee06d1fd5913972172ebbf93d9e241cb">&#9670;&#160;</a></span>ui_list_btn_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_list_btn_create </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_event_cb_t</td>          <td class="paramname"><span class="paramname"><em>event_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags</p>
+<p>Flags</p>
+<p>1</p>
+<p>1</p>
+<p>Flags</p>
+<p>Flags</p>
+<p>1</p>
+<p>1</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00192">192</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a456ab59449f679db2d115e19024259f0" name="a456ab59449f679db2d115e19024259f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456ab59449f679db2d115e19024259f0">&#9670;&#160;</a></span>icon_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structmenu__icon.html">menu_icon</a> icon_buf[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="img__clock_8c.html#ab972afb605761b08554184ebf8fbf946">img_clock</a>,    <span class="stringliteral">&quot;clock&quot;</span>   , 45,   45  }, </div>
+<div class="line">    {&amp;<a class="code hl_variable" href="t-deck-pro_2src_2img__lora_8c.html#ad2a95b0039126e2d852d594b5471413d">img_lora</a>,     <span class="stringliteral">&quot;lora&quot;</span>    , 210,  45  },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="img__sd__card_8c.html#af50993c7bf35d02156a3ab1ea863d98b">img_sd_card</a>,  <span class="stringliteral">&quot;sd card&quot;</span> , 375,  45  },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="t-deck-pro_2src_2img__setting_8c.html#a9b148b601e41d1351d93d9ced497a44f">img_setting</a>,  <span class="stringliteral">&quot;setting&quot;</span> , 45,   250 },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="t-deck-pro_2src_2img__test_8c.html#a19ce67e719ef30b609601844e63239d8">img_test</a>,     <span class="stringliteral">&quot;test&quot;</span>    , 210,  250 },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="t-deck-pro_2src_2img__wifi_8c.html#acf3e49704faae679958a767a0b8b96b0">img_wifi</a>,     <span class="stringliteral">&quot;wifi&quot;</span>    , 375,  250 },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="img__battery_8c.html#afb997cbc88a859ed4cb54273308e9ab3">img_battery</a>,  <span class="stringliteral">&quot;battery&quot;</span> , 45,   455 },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="t5-epaper_2t5-src_2img___g_p_s_8c.html#af107e2b84b3915df2bf0664e707160d4">img_gps</a>,      <span class="stringliteral">&quot;gps&quot;</span>,      210,  455 },</div>
+<div class="line">    </div>
+<div class="line">}</div>
+<div class="ttc" id="aimg__battery_8c_html_afb997cbc88a859ed4cb54273308e9ab3"><div class="ttname"><a href="img__battery_8c.html#afb997cbc88a859ed4cb54273308e9ab3">img_battery</a></div><div class="ttdeci">const lv_img_dsc_t img_battery</div><div class="ttdef"><b>Definition</b> <a href="img__battery_8c_source.html#l00678">img_battery.c:678</a></div></div>
+<div class="ttc" id="aimg__clock_8c_html_ab972afb605761b08554184ebf8fbf946"><div class="ttname"><a href="img__clock_8c.html#ab972afb605761b08554184ebf8fbf946">img_clock</a></div><div class="ttdeci">const lv_img_dsc_t img_clock</div><div class="ttdef"><b>Definition</b> <a href="img__clock_8c_source.html#l00678">img_clock.c:678</a></div></div>
+<div class="ttc" id="aimg__sd__card_8c_html_af50993c7bf35d02156a3ab1ea863d98b"><div class="ttname"><a href="img__sd__card_8c.html#af50993c7bf35d02156a3ab1ea863d98b">img_sd_card</a></div><div class="ttdeci">const lv_img_dsc_t img_sd_card</div><div class="ttdef"><b>Definition</b> <a href="img__sd__card_8c_source.html#l00678">img_sd_card.c:678</a></div></div>
+<div class="ttc" id="at-deck-pro_2src_2img__lora_8c_html_ad2a95b0039126e2d852d594b5471413d"><div class="ttname"><a href="t-deck-pro_2src_2img__lora_8c.html#ad2a95b0039126e2d852d594b5471413d">img_lora</a></div><div class="ttdeci">const lv_img_dsc_t img_lora</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2src_2img__lora_8c_source.html#l00069">img_lora.c:69</a></div></div>
+<div class="ttc" id="at-deck-pro_2src_2img__setting_8c_html_a9b148b601e41d1351d93d9ced497a44f"><div class="ttname"><a href="t-deck-pro_2src_2img__setting_8c.html#a9b148b601e41d1351d93d9ced497a44f">img_setting</a></div><div class="ttdeci">const lv_img_dsc_t img_setting</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2src_2img__setting_8c_source.html#l00069">img_setting.c:69</a></div></div>
+<div class="ttc" id="at-deck-pro_2src_2img__test_8c_html_a19ce67e719ef30b609601844e63239d8"><div class="ttname"><a href="t-deck-pro_2src_2img__test_8c.html#a19ce67e719ef30b609601844e63239d8">img_test</a></div><div class="ttdeci">const lv_img_dsc_t img_test</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2src_2img__test_8c_source.html#l00069">img_test.c:69</a></div></div>
+<div class="ttc" id="at-deck-pro_2src_2img__wifi_8c_html_acf3e49704faae679958a767a0b8b96b0"><div class="ttname"><a href="t-deck-pro_2src_2img__wifi_8c.html#acf3e49704faae679958a767a0b8b96b0">img_wifi</a></div><div class="ttdeci">const lv_img_dsc_t img_wifi</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2src_2img__wifi_8c_source.html#l00069">img_wifi.c:69</a></div></div>
+<div class="ttc" id="at5-epaper_2t5-src_2img___g_p_s_8c_html_af107e2b84b3915df2bf0664e707160d4"><div class="ttname"><a href="t5-epaper_2t5-src_2img___g_p_s_8c.html#af107e2b84b3915df2bf0664e707160d4">img_gps</a></div><div class="ttdeci">const lv_img_dsc_t img_gps</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2t5-src_2img___g_p_s_8c_source.html#l00678">img_gps.c:678</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00251">251</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adbd9418e510a29b7222ce1f55dc1dca0" name="adbd9418e510a29b7222ce1f55dc1dca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd9418e510a29b7222ce1f55dc1dca0">&#9670;&#160;</a></span>icon_buf2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structmenu__icon.html">menu_icon</a> icon_buf2[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="img__shutdown_8c.html#afd86c0fdc1482d32ff3c1f3ba713d78e">img_shutdown</a>, <span class="stringliteral">&quot;shutdown&quot;</span>, 45,  45 },</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="img__sleep_8c.html#a0575c5822ec7406e9a8cfaaf2ec3b2a2">img_sleep</a>,    <span class="stringliteral">&quot;sleep&quot;</span> ,   210, 45 },</div>
+<div class="line">}</div>
+<div class="ttc" id="aimg__shutdown_8c_html_afd86c0fdc1482d32ff3c1f3ba713d78e"><div class="ttname"><a href="img__shutdown_8c.html#afd86c0fdc1482d32ff3c1f3ba713d78e">img_shutdown</a></div><div class="ttdeci">const lv_img_dsc_t img_shutdown</div><div class="ttdef"><b>Definition</b> <a href="img__shutdown_8c_source.html#l00678">img_shutdown.c:678</a></div></div>
+<div class="ttc" id="aimg__sleep_8c_html_a0575c5822ec7406e9a8cfaaf2ec3b2a2"><div class="ttname"><a href="img__sleep_8c.html#a0575c5822ec7406e9a8cfaaf2ec3b2a2">img_sleep</a></div><div class="ttdeci">const lv_img_dsc_t img_sleep</div><div class="ttdef"><b>Definition</b> <a href="img__sleep_8c_source.html#l00678">img_sleep.c:678</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00263">263</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bdef7bd9e1ee1d8ae2a3f9a2df633e0" name="a6bdef7bd9e1ee1d8ae2a3f9a2df633e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdef7bd9e1ee1d8ae2a3f9a2df633e0">&#9670;&#160;</a></span>ip_lab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* ip_lab = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01808">1808</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a33ff42387694d915282777daab3c33ed" name="a33ff42387694d915282777daab3c33ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ff42387694d915282777daab3c33ed">&#9670;&#160;</a></span>lab_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lab_idx = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00969">969</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7969510e96b8d1a0d7730977f42f2c28" name="a7969510e96b8d1a0d7730977f42f2c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7969510e96b8d1a0d7730977f42f2c28">&#9670;&#160;</a></span>pwd_lab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* pwd_lab = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01810">1810</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a92da764df445a0a6b6982ca60f832957" name="a92da764df445a0a6b6982ca60f832957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92da764df445a0a6b6982ca60f832957">&#9670;&#160;</a></span>scr2_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* scr2_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00695">695</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaa8416b34c271b66decd7da55848b037" name="aaa8416b34c271b66decd7da55848b037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8416b34c271b66decd7da55848b037">&#9670;&#160;</a></span>scr6_root</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* scr6_root</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01806">1806</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae66c4e30db328b63717c54b3d87d9323" name="ae66c4e30db328b63717c54b3d87d9323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66c4e30db328b63717c54b3d87d9323">&#9670;&#160;</a></span>ssid_lab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* ssid_lab = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01809">1809</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4b3cdcdfb279aae47020eb57152a2ff1" name="a4b3cdcdfb279aae47020eb57152a2ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3cdcdfb279aae47020eb57152a2ff1">&#9670;&#160;</a></span>taskbar_statue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t taskbar_statue[<a class="el" href="ui__deckpro_8h.html#af1c2b4540286110cef95f47c785d74a0adda289a16abec0a49c19e899a2f10f9e">TASKBAR_ID_MAX</a>] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00015">15</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0fe23e6116ec3d23cb699f4c1b49579c" name="a0fe23e6116ec3d23cb699f4c1b49579c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe23e6116ec3d23cb699f4c1b49579c">&#9670;&#160;</a></span>timeinfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct tm timeinfo = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l00016">16</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1d46af80a7e03251ed4a1a9dda230d4c" name="a1d46af80a7e03251ed4a1a9dda230d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d46af80a7e03251ed4a1a9dda230d4c">&#9670;&#160;</a></span>wifi_st_lab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* wifi_st_lab = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="ui_8cpp_source.html#l01807">1807</a> der Datei <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="ui_8cpp.html">ui.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

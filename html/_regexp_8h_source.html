@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/Regexp.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_regexp_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Regexp.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_regexp_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> Regular-expression matching library for Arduino.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"></span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> Written by Nick Gammon.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> Date: 30 April 2011</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> Heavily based on the Lua regular expression matching library written by Roberto Ierusalimschy.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> Adapted to run on the Arduino by Nick Gammon.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"></span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> VERSION</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"></span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">  Version 1.0  - 30th April 2011 : initial release.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">  Version 1.1  - 1st May 2011    : added some helper functions, made more modular.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">  Version 1.2  - 19th May 2011   : added more helper functions for replacing etc.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"></span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// Maximum of captures we can return.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// Increase if you need more, decrease to save memory.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a24a2348c020e529abe11f5c7958c988c">   27</a></span><span class="preprocessor">#define MAXCAPTURES 32</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// the &quot;magic escape&quot; character</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_regexp_8h.html#af427f5c37ecce6937264b854815b8123">   30</a></span><span class="preprocessor">#define REGEXP_ESC      &#39;%&#39;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// special characters that have to be escaped</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// (not used in the library, but you might need this)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_regexp_8h.html#ab98c6a751482a12309ccad982f8b5d50">   34</a></span><span class="preprocessor">#define REGEXP_SPECIALS &quot;^$*+?.([%-&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Result codes from calling regexp:</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// we got a match</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a78624526146f9b695a3c2edc2fa5a3d8">   39</a></span><span class="preprocessor">#define REGEXP_MATCHED 1</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// no match, or not attempted to match yet</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a15a1b0b05d80697b07b52821f95f18d8">   42</a></span><span class="preprocessor">#define REGEXP_NOMATCH 0</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// errors when matching</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a7249bc4233bc435478b1b56525360b8b">   45</a></span><span class="preprocessor">#define ERR_INVALID_CAPTURE_INDEX -1</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a3346dc07d36e43343a8053c578614592">   46</a></span><span class="preprocessor">#define ERR_INVALID_PATTERN_CAPTURE -2</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a225ad2479739c53d795caf43830b3361">   47</a></span><span class="preprocessor">#define ERR_MALFORMED_PATTERN_ENDS_WITH_ESCAPE -3</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="_regexp_8h.html#aa7b6669b0b11754043dca71c3e0dc451">   48</a></span><span class="preprocessor">#define ERR_MALFORMED_PATTERN_ENDS_WITH_RH_SQUARE_BRACKET -4</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_regexp_8h.html#ae30ad12212a8a20934b80c9a22bbf5e6">   49</a></span><span class="preprocessor">#define ERR_UNBALANCED_PATTERN -5</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a94992657d7b01cd888bb2e78600e805b">   50</a></span><span class="preprocessor">#define ERR_TOO_MANY_CAPTURES -6</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a4f3f3ef11fa658e3662c0d9d5df0384e">   51</a></span><span class="preprocessor">#define ERR_MISSING_LH_SQUARE_BRACKET_AFTER_ESC_F -7</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_regexp_8h.html#ab05798b4fc649b7f0e1571675c06be4e">   52</a></span><span class="preprocessor">#define ERR_NO_TARGET_STRING -8</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/* macro to `unsign&#39; a character */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a6688a561ddcc83633d4fabc5d3409539">   56</a></span><span class="preprocessor">#define uchar(c)        ((unsigned char)(c))</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// special capture &quot;lengths&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a414cda9a27ce2f01d4a6bb9a20787250">   59</a></span><span class="preprocessor">#define CAP_UNFINISHED  (-1)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a921f0f27e58ca4be1e9b0cf12447e118">   60</a></span><span class="preprocessor">#define CAP_POSITION    (-2)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">class </span><a class="code hl_class" href="class_match_state.html">MatchState</a>;  <span class="comment">// forward definition for the callback routines</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="_regexp_8h.html#ac18bc7788a307102d9307130193d0de7">   64</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="_regexp_8h.html#ac18bc7788a307102d9307130193d0de7">GlobalMatchCallback</a>)   (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * <a class="code hl_function" href="_regexp_8cpp.html#a6064e3ca5b41c54cd58a10e1e2e72b5e">match</a>,          <span class="comment">// matching string (not null-terminated)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                       <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length,   <span class="comment">// length of matching string</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                       <span class="comment">/*const*/</span> <a class="code hl_class" href="class_match_state.html">MatchState</a> &amp; ms);      <span class="comment">// MatchState in use (to get captures)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a76b6a756c9db8a570299125bf38215c1">   67</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="_regexp_8h.html#a76b6a756c9db8a570299125bf38215c1">GlobalReplaceCallback</a>) (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * <a class="code hl_function" href="_regexp_8cpp.html#a6064e3ca5b41c54cd58a10e1e2e72b5e">match</a>,          <span class="comment">// matching string (not null-terminated)</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                       <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length,   <span class="comment">// length of matching string</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                       <span class="comment">/*const*/</span> <span class="keywordtype">char</span> * &amp; replacement,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp; replacement_length,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                                       <span class="comment">/*const*/</span> <a class="code hl_class" href="class_match_state.html">MatchState</a> &amp; ms);      <span class="comment">// MatchState in use (to get captures)</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_match_state.html">   72</a></span><span class="keyword">typedef</span> <span class="keyword">class </span><a class="code hl_function" href="class_match_state.html#aba6244dbf72edce59628ea2b14c73249">MatchState</a> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">   75</a></span>  <span class="keywordtype">char</span> <a class="code hl_variable" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">result</a>;  <span class="comment">// result of last Match call</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_match_state.html#aba6244dbf72edce59628ea2b14c73249">   79</a></span>  <a class="code hl_function" href="class_match_state.html#aba6244dbf72edce59628ea2b14c73249">MatchState</a> () : <a class="code hl_variable" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">result</a> (<a class="code hl_define" href="_regexp_8h.html#a15a1b0b05d80697b07b52821f95f18d8">REGEXP_NOMATCH</a>), <a class="code hl_variable" href="class_match_state.html#a51a8f4637e1fe9af1cee3906fe0b1194">src</a> (0) {};  <span class="comment">// constructor</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_match_state.html#a475569ef84524780d2983442169d6750">   80</a></span>  <a class="code hl_function" href="class_match_state.html#a475569ef84524780d2983442169d6750">MatchState</a> (<span class="keywordtype">char</span> * s) : <a class="code hl_variable" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">result</a> (<a class="code hl_define" href="_regexp_8h.html#a15a1b0b05d80697b07b52821f95f18d8">REGEXP_NOMATCH</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { <a class="code hl_function" href="class_match_state.html#a0acb5a02b2b6f374903754334e964e73">Target</a> (s); };  <span class="comment">// constructor from null-terminated string</span></div>
+</div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_match_state.html#a7d46232acb4144f7a7dc9ee68735e6b6">   82</a></span>  <a class="code hl_function" href="class_match_state.html#a7d46232acb4144f7a7dc9ee68735e6b6">MatchState</a> (<span class="keywordtype">char</span> * s, <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">len</a>) : <a class="code hl_variable" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">result</a> (<a class="code hl_define" href="_regexp_8h.html#a15a1b0b05d80697b07b52821f95f18d8">REGEXP_NOMATCH</a>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    { <a class="code hl_function" href="class_match_state.html#a0acb5a02b2b6f374903754334e964e73">Target</a> (s, <a class="code hl_variable" href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">len</a>); };  <span class="comment">// constructor from string and length</span></div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="comment">// supply these two:</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_match_state.html#a51a8f4637e1fe9af1cee3906fe0b1194">   86</a></span>  <span class="keywordtype">char</span> *<a class="code hl_variable" href="class_match_state.html#a51a8f4637e1fe9af1cee3906fe0b1194">src</a>;  <span class="comment">/* source string */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_match_state.html#a27aaa6e8a6b13c01fcdf6175b3e3944c">   87</a></span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a27aaa6e8a6b13c01fcdf6175b3e3944c">src_len</a>;    <span class="comment">/* length of source string */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// used internally</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_match_state.html#a21fbe6d0807b5f4d16bcb52d55a0cf8d">   90</a></span>  <span class="keywordtype">char</span> *<a class="code hl_variable" href="class_match_state.html#a21fbe6d0807b5f4d16bcb52d55a0cf8d">src_end</a>;  <span class="comment">/* end of source string */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="comment">// returned fields:</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_match_state.html#af72a0c206f2d712a294082c9cfc5fe60">   94</a></span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#af72a0c206f2d712a294082c9cfc5fe60">MatchStart</a>;    <span class="comment">// zero-relative offset of start of match</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_match_state.html#a6c48c81bd6f664cde63f688846f64dc7">   95</a></span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a6c48c81bd6f664cde63f688846f64dc7">MatchLength</a>;   <span class="comment">// length of match</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_match_state.html#a0f87e2f7accab0805741673e93654d7e">   97</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a0f87e2f7accab0805741673e93654d7e">level</a>;  <span class="comment">/* total number of captures in array below (finished or unfinished) */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// capture addresses and lengths</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_match_state.html#a6debf4acfdf9343e2532f383a38624c1">  102</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="class_match_state.html#a6debf4acfdf9343e2532f383a38624c1">init</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">  103</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">len</a>;              <span class="comment">// might be CAP_UNFINISHED or CAP_POSITION</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_match_state.html#aca698f1e54c026e0acec081c9494c63b">  104</a></span>  } <a class="code hl_variable" href="class_match_state.html#aca698f1e54c026e0acec081c9494c63b">capture</a>[<a class="code hl_define" href="_regexp_8h.html#a24a2348c020e529abe11f5c7958c988c">MAXCAPTURES</a>];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="comment">// add target string, null-terminated</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_match_state.html#a0acb5a02b2b6f374903754334e964e73">Target</a> (<span class="keywordtype">char</span> * s);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="comment">// add target string, with specified length</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_match_state.html#a0acb5a02b2b6f374903754334e964e73">Target</a> (<span class="keywordtype">char</span> * s, <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">len</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">// do a match on a supplied pattern and zero-relative starting point</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordtype">char</span> <a class="code hl_function" href="class_match_state.html#a4b0e3c05b2a27c77fe4136e3d5b6bad8">Match</a> (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * pattern, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index = 0);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// return the matching string</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordtype">char</span> * <a class="code hl_function" href="class_match_state.html#a4988c02b248ecd9cf928d890c688c2eb">GetMatch</a> (<span class="keywordtype">char</span> * s) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// return capture string n</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordtype">char</span> * <a class="code hl_function" href="class_match_state.html#ab0ee9f1170962e547a3cc0fdcf98c1d2">GetCapture</a> (<span class="keywordtype">char</span> * s, <span class="comment">/*const*/</span> <span class="keywordtype">int</span> n) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="comment">// get result of previous match</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_match_state.html#a50b54b04ac68e593086f6bf47556914a">  117</a></span>  <span class="keywordtype">char</span> <a class="code hl_function" href="class_match_state.html#a50b54b04ac68e593086f6bf47556914a">GetResult</a> () <span class="comment">/*const*/</span> { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">result</a>; }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="comment">// count number of matches on a supplied pattern</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_match_state.html#ab1ca2985f31aa0dd4a4b890bd253f577">MatchCount</a> (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * pattern);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="comment">// iterate with a supplied pattern, call function f for each match</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="comment">// returns count of matches</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_match_state.html#ae7dc3cdb04d3cca3e24cc4f3e89b948b">GlobalMatch</a> (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * pattern, <a class="code hl_typedef" href="_regexp_8h.html#ac18bc7788a307102d9307130193d0de7">GlobalMatchCallback</a> f);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="comment">// iterate with a supplied pattern, call function f for each match, maximum of max_count matches if max_count &gt; 0</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">// returns count of replacements</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_match_state.html#a01e7a382408319fc7d1db07cbd981e44">GlobalReplace</a> (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * pattern, <a class="code hl_typedef" href="_regexp_8h.html#a76b6a756c9db8a570299125bf38215c1">GlobalReplaceCallback</a> f, <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_count = 0);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// iterate with a supplied pattern, replaces with replacement string, maximum of max_count matches if max_count &gt; 0</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="comment">// returns count of replacements</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_match_state.html#a01e7a382408319fc7d1db07cbd981e44">GlobalReplace</a> (<span class="comment">/*const*/</span> <span class="keywordtype">char</span> * pattern, <span class="comment">/*const*/</span> <span class="keywordtype">char</span> * replacement, <span class="comment">/*const*/</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_count = 0);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="_regexp_8h.html#a900ae9430d04fa2d0dd785177b2a6333">  131</a></span>} <a class="code hl_class" href="class_match_state.html">MatchState</a>;</div>
+</div>
+<div class="ttc" id="a_regexp_8cpp_html_a6064e3ca5b41c54cd58a10e1e2e72b5e"><div class="ttname"><a href="_regexp_8cpp.html#a6064e3ca5b41c54cd58a10e1e2e72b5e">match</a></div><div class="ttdeci">char * match(MatchState *ms, char *s, char *p)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00215">Regexp.cpp:215</a></div></div>
+<div class="ttc" id="a_regexp_8h_html_a15a1b0b05d80697b07b52821f95f18d8"><div class="ttname"><a href="_regexp_8h.html#a15a1b0b05d80697b07b52821f95f18d8">REGEXP_NOMATCH</a></div><div class="ttdeci">#define REGEXP_NOMATCH</div><div class="ttdef"><b>Definition</b> <a href="#l00042">Regexp.h:42</a></div></div>
+<div class="ttc" id="a_regexp_8h_html_a24a2348c020e529abe11f5c7958c988c"><div class="ttname"><a href="_regexp_8h.html#a24a2348c020e529abe11f5c7958c988c">MAXCAPTURES</a></div><div class="ttdeci">#define MAXCAPTURES</div><div class="ttdef"><b>Definition</b> <a href="#l00027">Regexp.h:27</a></div></div>
+<div class="ttc" id="a_regexp_8h_html_a76b6a756c9db8a570299125bf38215c1"><div class="ttname"><a href="_regexp_8h.html#a76b6a756c9db8a570299125bf38215c1">GlobalReplaceCallback</a></div><div class="ttdeci">void(* GlobalReplaceCallback)(char *match, unsigned int length, char *&amp;replacement, unsigned int &amp;replacement_length, MatchState &amp;ms)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Regexp.h:67</a></div></div>
+<div class="ttc" id="a_regexp_8h_html_ac18bc7788a307102d9307130193d0de7"><div class="ttname"><a href="_regexp_8h.html#ac18bc7788a307102d9307130193d0de7">GlobalMatchCallback</a></div><div class="ttdeci">void(* GlobalMatchCallback)(char *match, unsigned int length, MatchState &amp;ms)</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Regexp.h:64</a></div></div>
+<div class="ttc" id="aclass_match_state_html"><div class="ttname"><a href="class_match_state.html">MatchState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00072">Regexp.h:72</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a01e7a382408319fc7d1db07cbd981e44"><div class="ttname"><a href="class_match_state.html#a01e7a382408319fc7d1db07cbd981e44">MatchState::GlobalReplace</a></div><div class="ttdeci">unsigned int GlobalReplace(char *pattern, GlobalReplaceCallback f, unsigned int max_count=0)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00414">Regexp.cpp:414</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a0acb5a02b2b6f374903754334e964e73"><div class="ttname"><a href="class_match_state.html#a0acb5a02b2b6f374903754334e964e73">MatchState::Target</a></div><div class="ttdeci">void Target(char *s)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00335">Regexp.cpp:335</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a0f87e2f7accab0805741673e93654d7e"><div class="ttname"><a href="class_match_state.html#a0f87e2f7accab0805741673e93654d7e">MatchState::level</a></div><div class="ttdeci">int level</div><div class="ttdef"><b>Definition</b> <a href="#l00097">Regexp.h:97</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a21fbe6d0807b5f4d16bcb52d55a0cf8d"><div class="ttname"><a href="class_match_state.html#a21fbe6d0807b5f4d16bcb52d55a0cf8d">MatchState::src_end</a></div><div class="ttdeci">char * src_end</div><div class="ttdef"><b>Definition</b> <a href="#l00090">Regexp.h:90</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a2275b04bb8c4e23adfe1aceda6c65f81"><div class="ttname"><a href="class_match_state.html#a2275b04bb8c4e23adfe1aceda6c65f81">MatchState::result</a></div><div class="ttdeci">char result</div><div class="ttdef"><b>Definition</b> <a href="#l00075">Regexp.h:75</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a27aaa6e8a6b13c01fcdf6175b3e3944c"><div class="ttname"><a href="class_match_state.html#a27aaa6e8a6b13c01fcdf6175b3e3944c">MatchState::src_len</a></div><div class="ttdeci">unsigned int src_len</div><div class="ttdef"><b>Definition</b> <a href="#l00087">Regexp.h:87</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a475569ef84524780d2983442169d6750"><div class="ttname"><a href="class_match_state.html#a475569ef84524780d2983442169d6750">MatchState::MatchState</a></div><div class="ttdeci">MatchState(char *s)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">Regexp.h:80</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a4988c02b248ecd9cf928d890c688c2eb"><div class="ttname"><a href="class_match_state.html#a4988c02b248ecd9cf928d890c688c2eb">MatchState::GetMatch</a></div><div class="ttdeci">char * GetMatch(char *s) const</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00349">Regexp.cpp:349</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a4b0e3c05b2a27c77fe4136e3d5b6bad8"><div class="ttname"><a href="class_match_state.html#a4b0e3c05b2a27c77fe4136e3d5b6bad8">MatchState::Match</a></div><div class="ttdeci">char Match(char *pattern, unsigned int index=0)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00297">Regexp.cpp:297</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a50b54b04ac68e593086f6bf47556914a"><div class="ttname"><a href="class_match_state.html#a50b54b04ac68e593086f6bf47556914a">MatchState::GetResult</a></div><div class="ttdeci">char GetResult()</div><div class="ttdef"><b>Definition</b> <a href="#l00117">Regexp.h:117</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a51a8f4637e1fe9af1cee3906fe0b1194"><div class="ttname"><a href="class_match_state.html#a51a8f4637e1fe9af1cee3906fe0b1194">MatchState::src</a></div><div class="ttdeci">char * src</div><div class="ttdef"><b>Definition</b> <a href="#l00086">Regexp.h:86</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a628adbf283ac6173babc1d1d8ad64c29"><div class="ttname"><a href="class_match_state.html#a628adbf283ac6173babc1d1d8ad64c29">MatchState::len</a></div><div class="ttdeci">int len</div><div class="ttdef"><b>Definition</b> <a href="#l00103">Regexp.h:103</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a6c48c81bd6f664cde63f688846f64dc7"><div class="ttname"><a href="class_match_state.html#a6c48c81bd6f664cde63f688846f64dc7">MatchState::MatchLength</a></div><div class="ttdeci">unsigned int MatchLength</div><div class="ttdef"><b>Definition</b> <a href="#l00095">Regexp.h:95</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a6debf4acfdf9343e2532f383a38624c1"><div class="ttname"><a href="class_match_state.html#a6debf4acfdf9343e2532f383a38624c1">MatchState::init</a></div><div class="ttdeci">char * init</div><div class="ttdef"><b>Definition</b> <a href="#l00102">Regexp.h:102</a></div></div>
+<div class="ttc" id="aclass_match_state_html_a7d46232acb4144f7a7dc9ee68735e6b6"><div class="ttname"><a href="class_match_state.html#a7d46232acb4144f7a7dc9ee68735e6b6">MatchState::MatchState</a></div><div class="ttdeci">MatchState(char *s, unsigned int len)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">Regexp.h:82</a></div></div>
+<div class="ttc" id="aclass_match_state_html_ab0ee9f1170962e547a3cc0fdcf98c1d2"><div class="ttname"><a href="class_match_state.html#ab0ee9f1170962e547a3cc0fdcf98c1d2">MatchState::GetCapture</a></div><div class="ttdeci">char * GetCapture(char *s, int n) const</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00363">Regexp.cpp:363</a></div></div>
+<div class="ttc" id="aclass_match_state_html_ab1ca2985f31aa0dd4a4b890bd253f577"><div class="ttname"><a href="class_match_state.html#ab1ca2985f31aa0dd4a4b890bd253f577">MatchState::MatchCount</a></div><div class="ttdeci">unsigned int MatchCount(char *pattern)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00376">Regexp.cpp:376</a></div></div>
+<div class="ttc" id="aclass_match_state_html_aba6244dbf72edce59628ea2b14c73249"><div class="ttname"><a href="class_match_state.html#aba6244dbf72edce59628ea2b14c73249">MatchState::MatchState</a></div><div class="ttdeci">MatchState()</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Regexp.h:79</a></div></div>
+<div class="ttc" id="aclass_match_state_html_aca698f1e54c026e0acec081c9494c63b"><div class="ttname"><a href="class_match_state.html#aca698f1e54c026e0acec081c9494c63b">MatchState::capture</a></div><div class="ttdeci">struct MatchState::@245367305111121316341302305063335020204227041160 capture[MAXCAPTURES]</div></div>
+<div class="ttc" id="aclass_match_state_html_ae7dc3cdb04d3cca3e24cc4f3e89b948b"><div class="ttname"><a href="class_match_state.html#ae7dc3cdb04d3cca3e24cc4f3e89b948b">MatchState::GlobalMatch</a></div><div class="ttdeci">unsigned int GlobalMatch(char *pattern, GlobalMatchCallback f)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00393">Regexp.cpp:393</a></div></div>
+<div class="ttc" id="aclass_match_state_html_af72a0c206f2d712a294082c9cfc5fe60"><div class="ttname"><a href="class_match_state.html#af72a0c206f2d712a294082c9cfc5fe60">MatchState::MatchStart</a></div><div class="ttdeci">unsigned int MatchStart</div><div class="ttdef"><b>Definition</b> <a href="#l00094">Regexp.h:94</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_regexp_8h.html">Regexp.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/SpiDriver/SdSpiBareUnoDriver.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_sd_spi_bare_uno_driver_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SdSpiBareUnoDriver.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sd_spi_bare_uno_driver_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef SdSpiBareUnoDriver_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define SdSpiBareUnoDriver_h</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;avr/interrupt.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="_sys_call_8h.html">../common/SysCall.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">   35</a></span><span class="preprocessor">#define nop asm volatile(&quot;nop\n\t&quot;)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifndef HIGH</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">   37</a></span><span class="preprocessor">#define HIGH 1</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif  </span><span class="comment">// HIGH</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#ifndef LOW</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#ab811d8c6ff3a505312d3276590444289">   40</a></span><span class="preprocessor">#define LOW 0</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif  </span><span class="comment">// LOW</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#ifndef INPUT</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a1bb283bd7893b9855e2f23013891fc82">   43</a></span><span class="preprocessor">#define INPUT 0</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif  </span><span class="comment">// INPUT</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#ifndef OUTPUT</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">   46</a></span><span class="preprocessor">#define OUTPUT 1</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif  </span><span class="comment">// OUTPUT</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">   49</a></span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">unoBit</a>(uint8_t pin) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">return</span> 1 &lt;&lt; (pin &lt; 8 ? pin : pin &lt; 14 ? pin - 8 : pin - 14);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#ae2bb06146015d9834474b55c8819ced9">   52</a></span><span class="keyword">inline</span> uint8_t <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#ae2bb06146015d9834474b55c8819ced9">unoDigitalRead</a>(uint8_t pin) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keyword">volatile</span> uint8_t* reg = pin &lt; 8 ? &amp;PIND : pin &lt; 14 ? &amp;PINB : &amp;PINC;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">return</span> *reg &amp; <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">unoBit</a>(pin);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">   56</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(uint8_t pin, uint8_t value) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keyword">volatile</span> uint8_t* <a class="code hl_variable" href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a> = pin &lt; 8 ? &amp;PORTD : pin &lt; 14 ? &amp;PORTB : &amp;PORTC;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  uint8_t bit = <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">unoBit</a>(pin);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  cli();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    *<a class="code hl_variable" href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a> |= bit;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    *<a class="code hl_variable" href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a> &amp;= ~bit;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  sei();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">   68</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a>(uint8_t pin, uint8_t mode) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  uint8_t bit = <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">unoBit</a>(pin);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">volatile</span> uint8_t* reg = pin &lt; 8 ? &amp;DDRD : pin &lt; 14 ? &amp;DDRB : &amp;DDRC;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  cli();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span> (mode == <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    *reg |= bit;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    *reg &amp;= ~bit;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// handle INPUT pull-up</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(pin, mode != <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  sei();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a4d27d150198211d7829b19894eb98f98">   83</a></span><span class="preprocessor">#define UNO_SS 10</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a6935052f926ab36fd296efa935bc648d">   84</a></span><span class="preprocessor">#define UNO_MOSI 11</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a7d4b107b66ea4016cacb482cca57161f">   85</a></span><span class="preprocessor">#define UNO_MISO 12</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="_sd_spi_bare_uno_driver_8h.html#a8fc14d2a1594c2400fa9267e85bee4bb">   86</a></span><span class="preprocessor">#define UNO_SCK 13</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="};">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html">   92</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_spi_driver_bare_uno.html">SdSpiDriverBareUno</a> {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a0a533c71cac3d0f6d08fcd978dba5264">   95</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a0a533c71cac3d0f6d08fcd978dba5264">activate</a>() {}</div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#af00d168eadae72752cf95850f57e3214">  100</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#af00d168eadae72752cf95850f57e3214">begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> spiConfig) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a> = spiConfig.<a class="code hl_variable" href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">csPin</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a>(<a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(<a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(<a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a4d27d150198211d7829b19894eb98f98">UNO_SS</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a>(<a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a4d27d150198211d7829b19894eb98f98">UNO_SS</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    SPCR |= _BV(MSTR);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    SPCR |= _BV(SPE);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    SPSR = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a>(<a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a8fc14d2a1594c2400fa9267e85bee4bb">UNO_SCK</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a>(<a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a6935052f926ab36fd296efa935bc648d">UNO_MOSI</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a129080578667f0336d2f2b125cd5eddd">  113</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a129080578667f0336d2f2b125cd5eddd">deactivate</a>() {}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a5ec0bd08f2e02abf6133135b98ed5618">  115</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a5ec0bd08f2e02abf6133135b98ed5618">end</a>() {}</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#ad445af894cff57ad60fc2e8bea8b617b">  120</a></span>  uint8_t <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#ad445af894cff57ad60fc2e8bea8b617b">receive</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a58fed8a55e7a19b21d7d7faaf3a6fd7a">transfer</a>(0XFF); }</div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a6bc7433220632039890d026fc5205004">  128</a></span>  uint8_t <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a6bc7433220632039890d026fc5205004">receive</a>(uint8_t* buf, <span class="keywordtype">size_t</span> count) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span> (count == 0) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    uint8_t* pr = buf;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    SPDR = 0XFF;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">while</span> (--count &gt; 0) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordflow">while</span> (!(SPSR &amp; _BV(SPIF))) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      uint8_t in = SPDR;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      SPDR = 0XFF;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      *pr++ = in;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="comment">// nops to optimize loop for 16MHz CPU 8 MHz SPI</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">nop</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">nop</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">while</span> (!(SPSR &amp; _BV(SPIF))) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    *pr = SPDR;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a012666ce7273e5e242901b7190fac163">  153</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a012666ce7273e5e242901b7190fac163">send</a>(uint8_t <a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>) { <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a58fed8a55e7a19b21d7d7faaf3a6fd7a">transfer</a>(<a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>); }</div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#aec7afe5f609c21d8fe35764aa925f87a">  159</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#aec7afe5f609c21d8fe35764aa925f87a">send</a>(<span class="keyword">const</span> uint8_t* buf, <span class="keywordtype">size_t</span> count) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">if</span> (count == 0) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    SPDR = *buf++;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">while</span> (--count &gt; 0) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      uint8_t b = *buf++;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keywordflow">while</span> (!(SPSR &amp; (1 &lt;&lt; SPIF))) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      SPDR = b;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="comment">// nops to optimize loop for 16MHz CPU 8 MHz SPI</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">nop</a>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">nop</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">while</span> (!(SPSR &amp; (1 &lt;&lt; SPIF))) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a9b8f0bdcbcedfecfbbae41fe7f73d9d2">  177</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a9b8f0bdcbcedfecfbbae41fe7f73d9d2">select</a>() { <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(<a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#ab811d8c6ff3a505312d3276590444289">LOW</a>); }</div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a300d64967cb3ae2ff2f25cc6258f4d6d">  182</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a300d64967cb3ae2ff2f25cc6258f4d6d">setSckSpeed</a>(uint32_t maxSck) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    (void)maxSck;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    SPSR |= 1 &lt;&lt; SPI2X;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
+</div>
+<div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a58fed8a55e7a19b21d7d7faaf3a6fd7a">  186</a></span>  <span class="keyword">static</span> uint8_t <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a58fed8a55e7a19b21d7d7faaf3a6fd7a">transfer</a>(uint8_t <a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    SPDR = <a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">while</span> (!(SPSR &amp; _BV(SPIF))) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }  <span class="comment">// wait</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> SPDR;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
+</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a6fea70826eceace5df933fb7b528a729">  193</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_driver_bare_uno.html#a6fea70826eceace5df933fb7b528a729">unselect</a>() { <a class="code hl_function" href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a>(<a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>); }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">  196</a></span>  <a class="code hl_typedef" href="_sd_fat_config_8h.html#a7a489fb14a59adf251794342604fc5ea">SdCsPin_t</a> <a class="code hl_variable" href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">m_csPin</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#endif  </span><span class="comment">// SdSpiBareUnoDriver_h</span></div>
+<div class="ttc" id="a_sd_fat_config_8h_html_a7a489fb14a59adf251794342604fc5ea"><div class="ttname"><a href="_sd_fat_config_8h.html#a7a489fb14a59adf251794342604fc5ea">SdCsPin_t</a></div><div class="ttdeci">uint8_t SdCsPin_t</div><div class="ttdef"><b>Definition</b> <a href="_sd_fat_config_8h_source.html#l00196">SdFatConfig.h:196</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a1bb283bd7893b9855e2f23013891fc82"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a></div><div class="ttdeci">#define INPUT</div><div class="ttdef"><b>Definition</b> <a href="#l00043">SdSpiBareUnoDriver.h:43</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a49578525a0181431dd606a7b20b53c55"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a49578525a0181431dd606a7b20b53c55">unoDigitalWrite</a></div><div class="ttdeci">void unoDigitalWrite(uint8_t pin, uint8_t value)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">SdSpiBareUnoDriver.h:56</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a4d27d150198211d7829b19894eb98f98"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a4d27d150198211d7829b19894eb98f98">UNO_SS</a></div><div class="ttdeci">#define UNO_SS</div><div class="ttdef"><b>Definition</b> <a href="#l00083">SdSpiBareUnoDriver.h:83</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a51158539d4d6022c9a445e78b0abfa94"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a51158539d4d6022c9a445e78b0abfa94">nop</a></div><div class="ttdeci">#define nop</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SdSpiBareUnoDriver.h:35</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a5bb885982ff66a2e0a0a45a8ee9c35e2"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a></div><div class="ttdeci">#define HIGH</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SdSpiBareUnoDriver.h:37</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a61a3c9a18380aafb6e430e79bf596557"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a></div><div class="ttdeci">#define OUTPUT</div><div class="ttdef"><b>Definition</b> <a href="#l00046">SdSpiBareUnoDriver.h:46</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a6935052f926ab36fd296efa935bc648d"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a6935052f926ab36fd296efa935bc648d">UNO_MOSI</a></div><div class="ttdeci">#define UNO_MOSI</div><div class="ttdef"><b>Definition</b> <a href="#l00084">SdSpiBareUnoDriver.h:84</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a8fc14d2a1594c2400fa9267e85bee4bb"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a8fc14d2a1594c2400fa9267e85bee4bb">UNO_SCK</a></div><div class="ttdeci">#define UNO_SCK</div><div class="ttdef"><b>Definition</b> <a href="#l00086">SdSpiBareUnoDriver.h:86</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_ab811d8c6ff3a505312d3276590444289"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#ab811d8c6ff3a505312d3276590444289">LOW</a></div><div class="ttdeci">#define LOW</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SdSpiBareUnoDriver.h:40</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_ae2bb06146015d9834474b55c8819ced9"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#ae2bb06146015d9834474b55c8819ced9">unoDigitalRead</a></div><div class="ttdeci">uint8_t unoDigitalRead(uint8_t pin)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">SdSpiBareUnoDriver.h:52</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_ae5b9fccefe396ed911ec41fdd1a9e260"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#ae5b9fccefe396ed911ec41fdd1a9e260">unoBit</a></div><div class="ttdeci">uint8_t unoBit(uint8_t pin)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">SdSpiBareUnoDriver.h:49</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_aeddaf6b02157c047e31ae9ac94b9aef9"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#aeddaf6b02157c047e31ae9ac94b9aef9">unoPinMode</a></div><div class="ttdeci">void unoPinMode(uint8_t pin, uint8_t mode)</div><div class="ttdef"><b>Definition</b> <a href="#l00068">SdSpiBareUnoDriver.h:68</a></div></div>
+<div class="ttc" id="a_sys_call_8h_html"><div class="ttname"><a href="_sys_call_8h.html">SysCall.h</a></div><div class="ttdoc">SysCall class.</div></div>
+<div class="ttc" id="aclass_sd_spi_config_html"><div class="ttname"><a href="class_sd_spi_config.html">SdSpiConfig</a></div><div class="ttdoc">SPI card configuration.</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_driver_8h_source.html#l00109">SdSpiDriver.h:109</a></div></div>
+<div class="ttc" id="aclass_sd_spi_config_html_a0c1797197fbd4e4c4499daf4b51628e6"><div class="ttname"><a href="class_sd_spi_config.html#a0c1797197fbd4e4c4499daf4b51628e6">SdSpiConfig::csPin</a></div><div class="ttdeci">const SdCsPin_t csPin</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_driver_8h_source.html#l00142">SdSpiDriver.h:142</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html">SdSpiDriverBareUno</a></div><div class="ttdoc">Optimized SPI class for access to SD and SDHC flash memory cards.</div><div class="ttdef"><b>Definition</b> <a href="#l00092">SdSpiBareUnoDriver.h:92</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a012666ce7273e5e242901b7190fac163"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a012666ce7273e5e242901b7190fac163">SdSpiDriverBareUno::send</a></div><div class="ttdeci">void send(uint8_t data)</div><div class="ttdef"><b>Definition</b> <a href="#l00153">SdSpiBareUnoDriver.h:153</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a0a533c71cac3d0f6d08fcd978dba5264"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a0a533c71cac3d0f6d08fcd978dba5264">SdSpiDriverBareUno::activate</a></div><div class="ttdeci">void activate()</div><div class="ttdef"><b>Definition</b> <a href="#l00095">SdSpiBareUnoDriver.h:95</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a129080578667f0336d2f2b125cd5eddd"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a129080578667f0336d2f2b125cd5eddd">SdSpiDriverBareUno::deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition</b> <a href="#l00113">SdSpiBareUnoDriver.h:113</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a300d64967cb3ae2ff2f25cc6258f4d6d"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a300d64967cb3ae2ff2f25cc6258f4d6d">SdSpiDriverBareUno::setSckSpeed</a></div><div class="ttdeci">void setSckSpeed(uint32_t maxSck)</div><div class="ttdef"><b>Definition</b> <a href="#l00182">SdSpiBareUnoDriver.h:182</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a58fed8a55e7a19b21d7d7faaf3a6fd7a"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a58fed8a55e7a19b21d7d7faaf3a6fd7a">SdSpiDriverBareUno::transfer</a></div><div class="ttdeci">static uint8_t transfer(uint8_t data)</div><div class="ttdef"><b>Definition</b> <a href="#l00186">SdSpiBareUnoDriver.h:186</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a5ec0bd08f2e02abf6133135b98ed5618"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a5ec0bd08f2e02abf6133135b98ed5618">SdSpiDriverBareUno::end</a></div><div class="ttdeci">void end()</div><div class="ttdef"><b>Definition</b> <a href="#l00115">SdSpiBareUnoDriver.h:115</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a6bc7433220632039890d026fc5205004"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a6bc7433220632039890d026fc5205004">SdSpiDriverBareUno::receive</a></div><div class="ttdeci">uint8_t receive(uint8_t *buf, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="#l00128">SdSpiBareUnoDriver.h:128</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a6fea70826eceace5df933fb7b528a729"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a6fea70826eceace5df933fb7b528a729">SdSpiDriverBareUno::unselect</a></div><div class="ttdeci">void unselect()</div><div class="ttdef"><b>Definition</b> <a href="#l00193">SdSpiBareUnoDriver.h:193</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a9129ae33a36463361310edc9fb192a5f"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a9129ae33a36463361310edc9fb192a5f">SdSpiDriverBareUno::m_csPin</a></div><div class="ttdeci">SdCsPin_t m_csPin</div><div class="ttdef"><b>Definition</b> <a href="#l00196">SdSpiBareUnoDriver.h:196</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_a9b8f0bdcbcedfecfbbae41fe7f73d9d2"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#a9b8f0bdcbcedfecfbbae41fe7f73d9d2">SdSpiDriverBareUno::select</a></div><div class="ttdeci">void select()</div><div class="ttdef"><b>Definition</b> <a href="#l00177">SdSpiBareUnoDriver.h:177</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_ad445af894cff57ad60fc2e8bea8b617b"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#ad445af894cff57ad60fc2e8bea8b617b">SdSpiDriverBareUno::receive</a></div><div class="ttdeci">uint8_t receive()</div><div class="ttdef"><b>Definition</b> <a href="#l00120">SdSpiBareUnoDriver.h:120</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_aec7afe5f609c21d8fe35764aa925f87a"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#aec7afe5f609c21d8fe35764aa925f87a">SdSpiDriverBareUno::send</a></div><div class="ttdeci">void send(const uint8_t *buf, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="#l00159">SdSpiBareUnoDriver.h:159</a></div></div>
+<div class="ttc" id="aclass_sd_spi_driver_bare_uno_html_af00d168eadae72752cf95850f57e3214"><div class="ttname"><a href="class_sd_spi_driver_bare_uno.html#af00d168eadae72752cf95850f57e3214">SdSpiDriverBareUno::begin</a></div><div class="ttdeci">void begin(SdSpiConfig spiConfig)</div><div class="ttdef"><b>Definition</b> <a href="#l00100">SdSpiBareUnoDriver.h:100</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_ab96bbc0b9c1cec78058d5e387476c322"><div class="ttname"><a href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a></div><div class="ttdeci">byte data[9]</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00009">onewire_functions.cpp:9</a></div></div>
+<div class="ttc" id="asafeboot_2main_8cpp_html_a2ac307bc5772df716f29e0e8375035ba"><div class="ttname"><a href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a></div><div class="ttdeci">const unsigned int port</div><div class="ttdef"><b>Definition</b> <a href="safeboot_2main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_1873fa8fa4cb97d6aaf2eb8f10a4beb8.html">SpiDriver</a></li><li class="navelem"><a href="_sd_spi_bare_uno_driver_8h.html">SdSpiBareUnoDriver.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

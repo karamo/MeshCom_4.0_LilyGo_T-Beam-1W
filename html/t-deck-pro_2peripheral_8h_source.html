@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t-deck-pro/peripheral.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t-deck-pro_2peripheral_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">peripheral.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="t-deck-pro_2peripheral_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __PERIPHERAL_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __PERIPHERAL_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a1bbc80093152641daa049c9fffd689da">    6</a></span><span class="preprocessor">#define GPS_PRIORITY     (configMAX_PRIORITIES - 1)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a00bf1002da38c370673764aa0e0f6752">    7</a></span><span class="preprocessor">#define LORA_PRIORITY    (configMAX_PRIORITIES - 2)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a95ee5759e1b8c7e4fe451b885955a794">    8</a></span><span class="preprocessor">#define WS2812_PRIORITY  (configMAX_PRIORITIES - 3)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#ac8de409e6dc6b07e1fe20fb7739544d1">    9</a></span><span class="preprocessor">#define BATTERY_PRIORITY (configMAX_PRIORITIES - 4)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#ae918ff4b0af7d0acb351377b3b0ff868">   10</a></span><span class="preprocessor">#define A7682E_PRIORITY  (configMAX_PRIORITIES - 5)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">   13</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a> = 0,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">   14</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff">   15</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff">E_PERI_KYEPAD</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">   16</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">   17</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b">   18</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b">E_PERI_SD</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">   19</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a">   20</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a">E_PERI_BHI260AP</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b">   21</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b">E_PERI_LTR_553ALS</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa">   22</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa">E_PERI_A7682E</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009">   23</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009">E_PERI_PCM5102A</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4">   24</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4">E_PERI_INK_SCREEN</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908">   25</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908">E_PERI_MIC</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf">   26</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf">E_PERI_NUM_MAX</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// lora sx1262</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a8461c850b1d7178f60aef63994266860">   30</a></span><span class="preprocessor">#define LORA_FREQ      433.175</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#af5a544fcd18db67b52398cbeca46ce37">   31</a></span><span class="preprocessor">#define LORA_MODE_SEND 0</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#ab5142b9e2a5d4b910c8a2836972e9478">   32</a></span><span class="preprocessor">#define LORA_MODE_RECV 1</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a02872a48966c9765325bbbd3deaacd99">lora_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a126db35082708c1e7c728998afbba978">lora_set_mode</a>(<span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aac3d4c51204037637d1cf9dcb0763c08">lora_get_mode</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a6fb9259b44f05a9517cf80043815937c">lora_receive_loop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#abd3d2b1154869b501a4564acef294d58">lora_transmit</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aeb9b920b61c9743f047c76e216e8d4ec">lora_get_recv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> **<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, <span class="keywordtype">int</span> *rssi);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#ad89556b30b0abed8e515e4ca8081eb8e">lora_set_recv_flag</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// keypad</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#ad5cc9ef3c3c003f1676fa9d7bcd7f9ce">   43</a></span><span class="preprocessor">#define KEYPAD_PRESS   1</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#a7bbc578dd9a0b0753e7843edad276e50">   44</a></span><span class="preprocessor">#define KEYPAD_RELEASE 0</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="t-deck-pro_2peripheral_8h.html#ab8869e7847101f3b2b441f570193265e">   46</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="t-deck-pro_2peripheral_8h.html#ab8869e7847101f3b2b441f570193265e">keypad_cb</a>)(<span class="keywordtype">int</span> <a class="code hl_variable" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a>, <span class="keywordtype">char</span> val);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#ab1aea5e838d0f8ded72cce5b4d1cef7e">keypad_init</a>(<span class="keywordtype">int</span> address);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a01116ecc449b9e73d785b7bcfb9e9246">keypad_get_val</a>(<span class="keywordtype">char</span> *c);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a3e2ed9a0575f9837da6f5e1bf8fe3628">keypad_loop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a6fbad7254002c69d0f05af236a8218c6">keypad_register_cb</a>(<a class="code hl_typedef" href="t-deck-pro_2peripheral_8h.html#ab8869e7847101f3b2b441f570193265e">keypad_cb</a> cb);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#accb3010dc854fcb1be01bc89a5565174">keypad_set_flag</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a2cf17c68455a7b71e60642d057702937">keypad_set_layer</a>(<span class="keywordtype">int</span> ilayer);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// gyro</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#abcc73762984b6907a26d50a5c638fb52">BHI260AP_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a7738b7c2b48f1e151a0eee91c9603a75">BHI260AP_get_val</a>(<span class="keywordtype">int</span> val_type, <span class="keywordtype">float</span> *x, <span class="keywordtype">float</span> *y, <span class="keywordtype">float</span> *z);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// LTR553</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a9ff096d7d1a9e882750329ed93347c2b">LTR553_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>uint16_t <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a7115568879199869dc1552f8c8a4bc52">LTR_553ALS_get_channel</a>(<span class="keywordtype">int</span> ch); <span class="comment">// ch 0~1</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>uint16_t <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a4fa1cd9766dae9878b1eae28bcd4cd76">LTR_553ALS_get_ps</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// gps u-blox m10q</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#abb4c3fd64e4c8290c87124a292bde621">gps_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aa614de21bcc89a8ddf49884e234ae024">gps_task_create</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a8ac766329012d1bd295370cb579a1ffd">gps_task_suspend</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#af5837893d989ca05abf11d7528b90c6d">gps_task_resume</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aebe481bd9a57062e4f0e417ebb8be979">gps_get_coord</a>(<span class="keywordtype">double</span> *lat, <span class="keywordtype">double</span> *lng, <span class="keywordtype">double</span> *alt);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a32513b732fe7d8aa712b8b0d0d6eec27">gps_get_data</a>(uint16_t *year, uint8_t *month, uint8_t *day);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aff4e3cc23d0aaff17dcd2f476d2e5294">gps_get_time</a>(uint8_t *hour, uint8_t *minute, uint8_t *second);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a32a7fcb936bcecfddfdb2563340771a7">gps_get_satellites</a>(uint32_t *vsat, <span class="keywordtype">int</span> *hdop);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a0559413d9fdb9198aadafb8ff6ca35b3">gps_get_speed</a>(<span class="keywordtype">double</span> *speed);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a7674b99d2be53c8b53196195e1f449c8">gps_get_fix</a>(uint8_t *fix);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="anrf52__main_8cpp_html_a89f234133d3efe315836311cbf21c64b"><div class="ttname"><a href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition</b> <a href="nrf52__main_8cpp_source.html#l00080">nrf52_main.cpp:80</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a01116ecc449b9e73d785b7bcfb9e9246"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a01116ecc449b9e73d785b7bcfb9e9246">keypad_get_val</a></div><div class="ttdeci">int keypad_get_val(char *c)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00084">peri_keypad.cpp:84</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a02872a48966c9765325bbbd3deaacd99"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a02872a48966c9765325bbbd3deaacd99">lora_init</a></div><div class="ttdeci">bool lora_init(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00030">peri_lora.cpp:30</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a0559413d9fdb9198aadafb8ff6ca35b3"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a0559413d9fdb9198aadafb8ff6ca35b3">gps_get_speed</a></div><div class="ttdeci">void gps_get_speed(double *speed)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00119">peri_gps.cpp:119</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a126db35082708c1e7c728998afbba978"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a126db35082708c1e7c728998afbba978">lora_set_mode</a></div><div class="ttdeci">void lora_set_mode(int mode)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00126">peri_lora.cpp:126</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a2cf17c68455a7b71e60642d057702937"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a2cf17c68455a7b71e60642d057702937">keypad_set_layer</a></div><div class="ttdeci">void keypad_set_layer(int ilayer)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00104">peri_keypad.cpp:104</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a32513b732fe7d8aa712b8b0d0d6eec27"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a32513b732fe7d8aa712b8b0d0d6eec27">gps_get_data</a></div><div class="ttdeci">void gps_get_data(uint16_t *year, uint8_t *month, uint8_t *day)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00099">peri_gps.cpp:99</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a32a7fcb936bcecfddfdb2563340771a7"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a32a7fcb936bcecfddfdb2563340771a7">gps_get_satellites</a></div><div class="ttdeci">void gps_get_satellites(uint32_t *vsat, int *hdop)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00113">peri_gps.cpp:113</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a></div><div class="ttdeci">@ E_PERI_LORA</div><div class="ttdef"><b>Definition</b> <a href="#l00013">peripheral.h:13</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a></div><div class="ttdeci">@ E_PERI_BQ27220</div><div class="ttdef"><b>Definition</b> <a href="#l00017">peripheral.h:17</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4">E_PERI_INK_SCREEN</a></div><div class="ttdeci">@ E_PERI_INK_SCREEN</div><div class="ttdef"><b>Definition</b> <a href="#l00024">peripheral.h:24</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff">E_PERI_KYEPAD</a></div><div class="ttdeci">@ E_PERI_KYEPAD</div><div class="ttdef"><b>Definition</b> <a href="#l00015">peripheral.h:15</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa">E_PERI_A7682E</a></div><div class="ttdeci">@ E_PERI_A7682E</div><div class="ttdef"><b>Definition</b> <a href="#l00022">peripheral.h:22</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a">E_PERI_BHI260AP</a></div><div class="ttdeci">@ E_PERI_BHI260AP</div><div class="ttdef"><b>Definition</b> <a href="#l00020">peripheral.h:20</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908">E_PERI_MIC</a></div><div class="ttdeci">@ E_PERI_MIC</div><div class="ttdef"><b>Definition</b> <a href="#l00025">peripheral.h:25</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a></div><div class="ttdeci">@ E_PERI_BQ25896</div><div class="ttdef"><b>Definition</b> <a href="#l00016">peripheral.h:16</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b">E_PERI_SD</a></div><div class="ttdeci">@ E_PERI_SD</div><div class="ttdef"><b>Definition</b> <a href="#l00018">peripheral.h:18</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009">E_PERI_PCM5102A</a></div><div class="ttdeci">@ E_PERI_PCM5102A</div><div class="ttdef"><b>Definition</b> <a href="#l00023">peripheral.h:23</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a></div><div class="ttdeci">@ E_PERI_GPS</div><div class="ttdef"><b>Definition</b> <a href="#l00019">peripheral.h:19</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf">E_PERI_NUM_MAX</a></div><div class="ttdeci">@ E_PERI_NUM_MAX</div><div class="ttdef"><b>Definition</b> <a href="#l00026">peripheral.h:26</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b">E_PERI_LTR_553ALS</a></div><div class="ttdeci">@ E_PERI_LTR_553ALS</div><div class="ttdef"><b>Definition</b> <a href="#l00021">peripheral.h:21</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a></div><div class="ttdeci">@ E_PERI_TOUCH</div><div class="ttdef"><b>Definition</b> <a href="#l00014">peripheral.h:14</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a3e2ed9a0575f9837da6f5e1bf8fe3628"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a3e2ed9a0575f9837da6f5e1bf8fe3628">keypad_loop</a></div><div class="ttdeci">void keypad_loop(void)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00110">peri_keypad.cpp:110</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a4fa1cd9766dae9878b1eae28bcd4cd76"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a4fa1cd9766dae9878b1eae28bcd4cd76">LTR_553ALS_get_ps</a></div><div class="ttdeci">uint16_t LTR_553ALS_get_ps(void)</div><div class="ttdef"><b>Definition</b> <a href="peri__ltr553_8cpp_source.html#l00119">peri_ltr553.cpp:119</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a6fb9259b44f05a9517cf80043815937c"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a6fb9259b44f05a9517cf80043815937c">lora_receive_loop</a></div><div class="ttdeci">void lora_receive_loop(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00153">peri_lora.cpp:153</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a6fbad7254002c69d0f05af236a8218c6"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a6fbad7254002c69d0f05af236a8218c6">keypad_register_cb</a></div><div class="ttdeci">void keypad_register_cb(keypad_cb cb)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00312">peri_keypad.cpp:312</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a7115568879199869dc1552f8c8a4bc52"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a7115568879199869dc1552f8c8a4bc52">LTR_553ALS_get_channel</a></div><div class="ttdeci">uint16_t LTR_553ALS_get_channel(int ch)</div><div class="ttdef"><b>Definition</b> <a href="peri__ltr553_8cpp_source.html#l00114">peri_ltr553.cpp:114</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a7674b99d2be53c8b53196195e1f449c8"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a7674b99d2be53c8b53196195e1f449c8">gps_get_fix</a></div><div class="ttdeci">void gps_get_fix(uint8_t *fix)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00124">peri_gps.cpp:124</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a7738b7c2b48f1e151a0eee91c9603a75"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a7738b7c2b48f1e151a0eee91c9603a75">BHI260AP_get_val</a></div><div class="ttdeci">void BHI260AP_get_val(int val_type, float *x, float *y, float *z)</div><div class="ttdef"><b>Definition</b> <a href="peri__gyroscope_8cpp_source.html#l00063">peri_gyroscope.cpp:63</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a8ac766329012d1bd295370cb579a1ffd"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a8ac766329012d1bd295370cb579a1ffd">gps_task_suspend</a></div><div class="ttdeci">void gps_task_suspend(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00082">peri_gps.cpp:82</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a9ff096d7d1a9e882750329ed93347c2b"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a9ff096d7d1a9e882750329ed93347c2b">LTR553_init</a></div><div class="ttdeci">bool LTR553_init(void)</div><div class="ttdef"><b>Definition</b> <a href="peri__ltr553_8cpp_source.html#l00010">peri_ltr553.cpp:10</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aa614de21bcc89a8ddf49884e234ae024"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aa614de21bcc89a8ddf49884e234ae024">gps_task_create</a></div><div class="ttdeci">void gps_task_create(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00076">peri_gps.cpp:76</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aac3d4c51204037637d1cf9dcb0763c08"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aac3d4c51204037637d1cf9dcb0763c08">lora_get_mode</a></div><div class="ttdeci">int lora_get_mode(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00148">peri_lora.cpp:148</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_ab1aea5e838d0f8ded72cce5b4d1cef7e"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#ab1aea5e838d0f8ded72cce5b4d1cef7e">keypad_init</a></div><div class="ttdeci">bool keypad_init(int address)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00060">peri_keypad.cpp:60</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_ab8869e7847101f3b2b441f570193265e"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#ab8869e7847101f3b2b441f570193265e">keypad_cb</a></div><div class="ttdeci">void(* keypad_cb)(int state, char val)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">peripheral.h:46</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_abb4c3fd64e4c8290c87124a292bde621"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#abb4c3fd64e4c8290c87124a292bde621">gps_init</a></div><div class="ttdeci">bool gps_init(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00026">peri_gps.cpp:26</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_abcc73762984b6907a26d50a5c638fb52"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#abcc73762984b6907a26d50a5c638fb52">BHI260AP_init</a></div><div class="ttdeci">bool BHI260AP_init(void)</div><div class="ttdef"><b>Definition</b> <a href="peri__gyroscope_8cpp_source.html#l00091">peri_gyroscope.cpp:91</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_abd3d2b1154869b501a4564acef294d58"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#abd3d2b1154869b501a4564acef294d58">lora_transmit</a></div><div class="ttdeci">void lora_transmit(const char *str)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00182">peri_lora.cpp:182</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_accb3010dc854fcb1be01bc89a5565174"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#accb3010dc854fcb1be01bc89a5565174">keypad_set_flag</a></div><div class="ttdeci">void keypad_set_flag(void)</div><div class="ttdef"><b>Definition</b> <a href="peri__keypad_8cpp_source.html#l00099">peri_keypad.cpp:99</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_ad89556b30b0abed8e515e4ca8081eb8e"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#ad89556b30b0abed8e515e4ca8081eb8e">lora_set_recv_flag</a></div><div class="ttdeci">void lora_set_recv_flag(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00210">peri_lora.cpp:210</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aeb9b920b61c9743f047c76e216e8d4ec"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aeb9b920b61c9743f047c76e216e8d4ec">lora_get_recv</a></div><div class="ttdeci">bool lora_get_recv(const char **str, int *rssi)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00201">peri_lora.cpp:201</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aebe481bd9a57062e4f0e417ebb8be979"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aebe481bd9a57062e4f0e417ebb8be979">gps_get_coord</a></div><div class="ttdeci">void gps_get_coord(double *lat, double *lng, double *alt)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00092">peri_gps.cpp:92</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_af5837893d989ca05abf11d7528b90c6d"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#af5837893d989ca05abf11d7528b90c6d">gps_task_resume</a></div><div class="ttdeci">void gps_task_resume(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00087">peri_gps.cpp:87</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aff4e3cc23d0aaff17dcd2f476d2e5294"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aff4e3cc23d0aaff17dcd2f476d2e5294">gps_get_time</a></div><div class="ttdeci">void gps_get_time(uint8_t *hour, uint8_t *minute, uint8_t *second)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00106">peri_gps.cpp:106</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_9ab235b9a1467ce2a3b0de0718712492.html">t-deck-pro</a></li><li class="navelem"><a href="t-deck-pro_2peripheral_8h.html">peripheral.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

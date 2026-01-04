@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/nvs_param.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('nvs__param_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">nvs_param.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+</div>
+<p><a href="nvs__param_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:nvs_5Fdata" id="r_nvs_5Fdata"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionnvs__data.html">nvs_data</a></td></tr>
+<tr class="memitem:nvs_5Fparam" id="r_nvs_5Fparam"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvs__param.html">nvs_param</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:aae0c10b48b2067d5c0c29e30ccebbabc" id="r_aae0c10b48b2067d5c0c29e30ccebbabc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> { <a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabcae91e0c5c742b27da683bb4182891382d">NVS_ID_BACKLIGHT</a> = 0
+, <a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabcad4502c10b1fbff34b1a7198c02dbde03">NVS_ID_EPD_VCOM</a>
+, <a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabca4c1db75d2e4e9e4e5d13d3ee39f61109">NVS_ID_REFRESH_MODE</a>
+, <a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabcafc4295b46ee6fdcd1c60c546d933b011">NVS_ID_MAX</a>
+ }</td></tr>
+<tr class="memitem:a2ffcd00c2ba08216662e20f8bef14b13" id="r_a2ffcd00c2ba08216662e20f8bef14b13"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13">NVSType</a> { <br />
+&#160;&#160;<a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13ae25a514a0ffde19a6ac8ba559e781d8a">NVS_I8</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a23e9cb0976cbf6317469e5c631de3f20">NVS_U8</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a8ce011fd6c4e0f90a993c24e2b8a9960">NVS_I16</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a1bd8cdb539d7473ff632021e277af089">NVS_U16</a>
+, <br />
+&#160;&#160;<a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a843815331098b22d10842e96b44e4a21">NVS_I32</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13af60eedeef8c2ea1e730b442eef9c9d36">NVS_U32</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a4e86cf3cc8e87da2388f708685d09145">NVS_I64</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a8cbee5faabfba2ad5741b59563e561e7">NVS_U64</a>
+, <br />
+&#160;&#160;<a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13ae32fe32094407ff9b7289f470c7004cc">NVS_FLOAT</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a97230f2d3fef3247f45c3ee1b2e890a4">NVS_DOUBLE</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a6efb9ea446ca6e920db3bd46229473d3">NVS_STR</a>
+, <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a43f23cc1851707ad39809ed40c9ba3b6">NVS_BLOB</a>
+, <br />
+&#160;&#160;<a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13a1fd0fb4a86787f8a6af4068af2e40a42">NVS_INVALID</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a1aeb8a3579d5baaf08caba4a2c86adab" id="r_a1aeb8a3579d5baaf08caba4a2c86adab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aeb8a3579d5baaf08caba4a2c86adab">nsv_param_init</a> (void)</td></tr>
+<tr class="memitem:aea6d3aa921b2bb41c23fbb086448782c" id="r_aea6d3aa921b2bb41c23fbb086448782c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea6d3aa921b2bb41c23fbb086448782c">nvs_param_set_i8</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, int8_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a6f6481b7ae58523d2e83f2f774ce7929" id="r_a6f6481b7ae58523d2e83f2f774ce7929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f6481b7ae58523d2e83f2f774ce7929">nvs_param_set_u8</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, uint8_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a008e72bcf55605dcd7928fcf992af7d6" id="r_a008e72bcf55605dcd7928fcf992af7d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a008e72bcf55605dcd7928fcf992af7d6">nvs_param_set_i16</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, int16_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:aed0c800ef588a8b4cc135272c0e61008" id="r_aed0c800ef588a8b4cc135272c0e61008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed0c800ef588a8b4cc135272c0e61008">nvs_param_set_u16</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, uint16_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:ae52d762a435a5cce11acde56af4f501a" id="r_ae52d762a435a5cce11acde56af4f501a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae52d762a435a5cce11acde56af4f501a">nvs_param_set_i32</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, int32_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:aa50851478fe4595f087a16a8e0ce90f7" id="r_aa50851478fe4595f087a16a8e0ce90f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa50851478fe4595f087a16a8e0ce90f7">nvs_param_set_u32</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, uint32_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:acd1dbde02cc33bf3dafbc9f6f6423a82" id="r_acd1dbde02cc33bf3dafbc9f6f6423a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd1dbde02cc33bf3dafbc9f6f6423a82">nvs_param_set_i64</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, int64_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a59d16edf4fff4617f9cae04f34bc1a5a" id="r_a59d16edf4fff4617f9cae04f34bc1a5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d16edf4fff4617f9cae04f34bc1a5a">nvs_param_set_u64</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, uint64_t <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a9d020439353eb105cf07fc658ab22523" id="r_a9d020439353eb105cf07fc658ab22523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d020439353eb105cf07fc658ab22523">nvs_param_set_ff</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, float <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a27043f4e893263b90eac088bcb8b386a" id="r_a27043f4e893263b90eac088bcb8b386a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27043f4e893263b90eac088bcb8b386a">nvs_param_set_dd</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, double <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a80a99021e302b1c5cb764340d400cec7" id="r_a80a99021e302b1c5cb764340d400cec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80a99021e302b1c5cb764340d400cec7">nvs_param_set_bb</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, bool <a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:ad2e6a4f12aeecce95754c1749973d3f7" id="r_ad2e6a4f12aeecce95754c1749973d3f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2e6a4f12aeecce95754c1749973d3f7">nvs_param_set_str</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id, const char *<a class="el" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>)</td></tr>
+<tr class="memitem:a84e2bdf280e0b4d0488de91a5d8d8b4d" id="r_a84e2bdf280e0b4d0488de91a5d8d8b4d"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e2bdf280e0b4d0488de91a5d8d8b4d">nvs_param_get_i8</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a17c3e169e0a96fc83d78f510fdf5d012" id="r_a17c3e169e0a96fc83d78f510fdf5d012"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17c3e169e0a96fc83d78f510fdf5d012">nvs_param_get_u8</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a62d0c2c32dd0824e11d1a9d5cd3013d8" id="r_a62d0c2c32dd0824e11d1a9d5cd3013d8"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62d0c2c32dd0824e11d1a9d5cd3013d8">nvs_param_get_i16</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a010d37dc341fdf825a95ff61ec2d11e8" id="r_a010d37dc341fdf825a95ff61ec2d11e8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010d37dc341fdf825a95ff61ec2d11e8">nvs_param_get_u16</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a603f7baf0676a7b2b1279cc97bb0232b" id="r_a603f7baf0676a7b2b1279cc97bb0232b"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a603f7baf0676a7b2b1279cc97bb0232b">nvs_param_get_i32</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a90418f8ec5ec91b9353e014ad3726419" id="r_a90418f8ec5ec91b9353e014ad3726419"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90418f8ec5ec91b9353e014ad3726419">nvs_param_get_u32</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a03d3469213c3961a8c3c598710bb0213" id="r_a03d3469213c3961a8c3c598710bb0213"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03d3469213c3961a8c3c598710bb0213">nvs_param_get_i64</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:ad2c47d8bf345bb5c44dd8974d10590a6" id="r_ad2c47d8bf345bb5c44dd8974d10590a6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2c47d8bf345bb5c44dd8974d10590a6">nvs_param_get_u64</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a33b6144596c81379a3720b6450fd3d40" id="r_a33b6144596c81379a3720b6450fd3d40"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33b6144596c81379a3720b6450fd3d40">nvs_param_get_ff</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a9e569e3c2166e5772d2c15dbe11bbffb" id="r_a9e569e3c2166e5772d2c15dbe11bbffb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e569e3c2166e5772d2c15dbe11bbffb">nvs_param_get_dd</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:ac15e2aa3000ae9f39ea3f94fd34c8b62" id="r_ac15e2aa3000ae9f39ea3f94fd34c8b62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac15e2aa3000ae9f39ea3f94fd34c8b62">nvs_param_get_bb</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+<tr class="memitem:a17a662f9932b1fcb33786bad2741d416" id="r_a17a662f9932b1fcb33786bad2741d416"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a662f9932b1fcb33786bad2741d416">nvs_param_get_str</a> (<a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a> id)</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="aae0c10b48b2067d5c0c29e30ccebbabc" name="aae0c10b48b2067d5c0c29e30ccebbabc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0c10b48b2067d5c0c29e30ccebbabc">&#9670;&#160;</a></span>NVSDataID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="aae0c10b48b2067d5c0c29e30ccebbabcae91e0c5c742b27da683bb4182891382d" name="aae0c10b48b2067d5c0c29e30ccebbabcae91e0c5c742b27da683bb4182891382d"></a>NVS_ID_BACKLIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aae0c10b48b2067d5c0c29e30ccebbabcad4502c10b1fbff34b1a7198c02dbde03" name="aae0c10b48b2067d5c0c29e30ccebbabcad4502c10b1fbff34b1a7198c02dbde03"></a>NVS_ID_EPD_VCOM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aae0c10b48b2067d5c0c29e30ccebbabca4c1db75d2e4e9e4e5d13d3ee39f61109" name="aae0c10b48b2067d5c0c29e30ccebbabca4c1db75d2e4e9e4e5d13d3ee39f61109"></a>NVS_ID_REFRESH_MODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aae0c10b48b2067d5c0c29e30ccebbabcafc4295b46ee6fdcd1c60c546d933b011" name="aae0c10b48b2067d5c0c29e30ccebbabcafc4295b46ee6fdcd1c60c546d933b011"></a>NVS_ID_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nvs__param_8h_source.html#l00005">5</a> der Datei <a class="el" href="nvs__param_8h_source.html">nvs_param.h</a>.</p>
+
+</div>
+</div>
+<a id="a2ffcd00c2ba08216662e20f8bef14b13" name="a2ffcd00c2ba08216662e20f8bef14b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffcd00c2ba08216662e20f8bef14b13">&#9670;&#160;</a></span>NVSType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a2ffcd00c2ba08216662e20f8bef14b13">NVSType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13ae25a514a0ffde19a6ac8ba559e781d8a" name="a2ffcd00c2ba08216662e20f8bef14b13ae25a514a0ffde19a6ac8ba559e781d8a"></a>NVS_I8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a23e9cb0976cbf6317469e5c631de3f20" name="a2ffcd00c2ba08216662e20f8bef14b13a23e9cb0976cbf6317469e5c631de3f20"></a>NVS_U8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a8ce011fd6c4e0f90a993c24e2b8a9960" name="a2ffcd00c2ba08216662e20f8bef14b13a8ce011fd6c4e0f90a993c24e2b8a9960"></a>NVS_I16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a1bd8cdb539d7473ff632021e277af089" name="a2ffcd00c2ba08216662e20f8bef14b13a1bd8cdb539d7473ff632021e277af089"></a>NVS_U16&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a843815331098b22d10842e96b44e4a21" name="a2ffcd00c2ba08216662e20f8bef14b13a843815331098b22d10842e96b44e4a21"></a>NVS_I32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13af60eedeef8c2ea1e730b442eef9c9d36" name="a2ffcd00c2ba08216662e20f8bef14b13af60eedeef8c2ea1e730b442eef9c9d36"></a>NVS_U32&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a4e86cf3cc8e87da2388f708685d09145" name="a2ffcd00c2ba08216662e20f8bef14b13a4e86cf3cc8e87da2388f708685d09145"></a>NVS_I64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a8cbee5faabfba2ad5741b59563e561e7" name="a2ffcd00c2ba08216662e20f8bef14b13a8cbee5faabfba2ad5741b59563e561e7"></a>NVS_U64&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13ae32fe32094407ff9b7289f470c7004cc" name="a2ffcd00c2ba08216662e20f8bef14b13ae32fe32094407ff9b7289f470c7004cc"></a>NVS_FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a97230f2d3fef3247f45c3ee1b2e890a4" name="a2ffcd00c2ba08216662e20f8bef14b13a97230f2d3fef3247f45c3ee1b2e890a4"></a>NVS_DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a6efb9ea446ca6e920db3bd46229473d3" name="a2ffcd00c2ba08216662e20f8bef14b13a6efb9ea446ca6e920db3bd46229473d3"></a>NVS_STR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a43f23cc1851707ad39809ed40c9ba3b6" name="a2ffcd00c2ba08216662e20f8bef14b13a43f23cc1851707ad39809ed40c9ba3b6"></a>NVS_BLOB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ffcd00c2ba08216662e20f8bef14b13a1fd0fb4a86787f8a6af4068af2e40a42" name="a2ffcd00c2ba08216662e20f8bef14b13a1fd0fb4a86787f8a6af4068af2e40a42"></a>NVS_INVALID&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nvs__param_8h_source.html#l00013">13</a> der Datei <a class="el" href="nvs__param_8h_source.html">nvs_param.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a1aeb8a3579d5baaf08caba4a2c86adab" name="a1aeb8a3579d5baaf08caba4a2c86adab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aeb8a3579d5baaf08caba4a2c86adab">&#9670;&#160;</a></span>nsv_param_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nsv_param_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nvs__param_8cpp_source.html#l00015">15</a> der Datei <a class="el" href="nvs__param_8cpp_source.html">nvs_param.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac15e2aa3000ae9f39ea3f94fd34c8b62" name="ac15e2aa3000ae9f39ea3f94fd34c8b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac15e2aa3000ae9f39ea3f94fd34c8b62">&#9670;&#160;</a></span>nvs_param_get_bb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nvs_param_get_bb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e569e3c2166e5772d2c15dbe11bbffb" name="a9e569e3c2166e5772d2c15dbe11bbffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e569e3c2166e5772d2c15dbe11bbffb">&#9670;&#160;</a></span>nvs_param_get_dd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double nvs_param_get_dd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33b6144596c81379a3720b6450fd3d40" name="a33b6144596c81379a3720b6450fd3d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b6144596c81379a3720b6450fd3d40">&#9670;&#160;</a></span>nvs_param_get_ff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float nvs_param_get_ff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62d0c2c32dd0824e11d1a9d5cd3013d8" name="a62d0c2c32dd0824e11d1a9d5cd3013d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d0c2c32dd0824e11d1a9d5cd3013d8">&#9670;&#160;</a></span>nvs_param_get_i16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t nvs_param_get_i16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a603f7baf0676a7b2b1279cc97bb0232b" name="a603f7baf0676a7b2b1279cc97bb0232b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603f7baf0676a7b2b1279cc97bb0232b">&#9670;&#160;</a></span>nvs_param_get_i32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t nvs_param_get_i32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03d3469213c3961a8c3c598710bb0213" name="a03d3469213c3961a8c3c598710bb0213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d3469213c3961a8c3c598710bb0213">&#9670;&#160;</a></span>nvs_param_get_i64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t nvs_param_get_i64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84e2bdf280e0b4d0488de91a5d8d8b4d" name="a84e2bdf280e0b4d0488de91a5d8d8b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e2bdf280e0b4d0488de91a5d8d8b4d">&#9670;&#160;</a></span>nvs_param_get_i8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t nvs_param_get_i8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17a662f9932b1fcb33786bad2741d416" name="a17a662f9932b1fcb33786bad2741d416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a662f9932b1fcb33786bad2741d416">&#9670;&#160;</a></span>nvs_param_get_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * nvs_param_get_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a010d37dc341fdf825a95ff61ec2d11e8" name="a010d37dc341fdf825a95ff61ec2d11e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010d37dc341fdf825a95ff61ec2d11e8">&#9670;&#160;</a></span>nvs_param_get_u16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t nvs_param_get_u16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90418f8ec5ec91b9353e014ad3726419" name="a90418f8ec5ec91b9353e014ad3726419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90418f8ec5ec91b9353e014ad3726419">&#9670;&#160;</a></span>nvs_param_get_u32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t nvs_param_get_u32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c47d8bf345bb5c44dd8974d10590a6" name="ad2c47d8bf345bb5c44dd8974d10590a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c47d8bf345bb5c44dd8974d10590a6">&#9670;&#160;</a></span>nvs_param_get_u64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t nvs_param_get_u64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17c3e169e0a96fc83d78f510fdf5d012" name="a17c3e169e0a96fc83d78f510fdf5d012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c3e169e0a96fc83d78f510fdf5d012">&#9670;&#160;</a></span>nvs_param_get_u8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t nvs_param_get_u8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80a99021e302b1c5cb764340d400cec7" name="a80a99021e302b1c5cb764340d400cec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a99021e302b1c5cb764340d400cec7">&#9670;&#160;</a></span>nvs_param_set_bb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_bb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27043f4e893263b90eac088bcb8b386a" name="a27043f4e893263b90eac088bcb8b386a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27043f4e893263b90eac088bcb8b386a">&#9670;&#160;</a></span>nvs_param_set_dd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_dd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d020439353eb105cf07fc658ab22523" name="a9d020439353eb105cf07fc658ab22523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d020439353eb105cf07fc658ab22523">&#9670;&#160;</a></span>nvs_param_set_ff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_ff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a008e72bcf55605dcd7928fcf992af7d6" name="a008e72bcf55605dcd7928fcf992af7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a008e72bcf55605dcd7928fcf992af7d6">&#9670;&#160;</a></span>nvs_param_set_i16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_i16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae52d762a435a5cce11acde56af4f501a" name="ae52d762a435a5cce11acde56af4f501a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52d762a435a5cce11acde56af4f501a">&#9670;&#160;</a></span>nvs_param_set_i32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_i32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd1dbde02cc33bf3dafbc9f6f6423a82" name="acd1dbde02cc33bf3dafbc9f6f6423a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1dbde02cc33bf3dafbc9f6f6423a82">&#9670;&#160;</a></span>nvs_param_set_i64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_i64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea6d3aa921b2bb41c23fbb086448782c" name="aea6d3aa921b2bb41c23fbb086448782c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6d3aa921b2bb41c23fbb086448782c">&#9670;&#160;</a></span>nvs_param_set_i8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_i8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2e6a4f12aeecce95754c1749973d3f7" name="ad2e6a4f12aeecce95754c1749973d3f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e6a4f12aeecce95754c1749973d3f7">&#9670;&#160;</a></span>nvs_param_set_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed0c800ef588a8b4cc135272c0e61008" name="aed0c800ef588a8b4cc135272c0e61008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0c800ef588a8b4cc135272c0e61008">&#9670;&#160;</a></span>nvs_param_set_u16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_u16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa50851478fe4595f087a16a8e0ce90f7" name="aa50851478fe4595f087a16a8e0ce90f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50851478fe4595f087a16a8e0ce90f7">&#9670;&#160;</a></span>nvs_param_set_u32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_u32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59d16edf4fff4617f9cae04f34bc1a5a" name="a59d16edf4fff4617f9cae04f34bc1a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d16edf4fff4617f9cae04f34bc1a5a">&#9670;&#160;</a></span>nvs_param_set_u64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_u64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f6481b7ae58523d2e83f2f774ce7929" name="a6f6481b7ae58523d2e83f2f774ce7929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6481b7ae58523d2e83f2f774ce7929">&#9670;&#160;</a></span>nvs_param_set_u8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nvs_param_set_u8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aae0c10b48b2067d5c0c29e30ccebbabc">NVSDataID</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="nvs__param_8h.html">nvs_param.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

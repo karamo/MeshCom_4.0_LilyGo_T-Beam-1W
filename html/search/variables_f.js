@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['obj_0',['obj',['../struct__ui__setting.html#a407c55eacfeb940732d3f83314cbc2e4',1,'_ui_setting::obj'],['../struct__ui__test.html#a7ea013cff63d4eae0eada62bf7148899',1,'_ui_test::obj'],['../struct__ui__a7682.html#a7e9a898601ca81ec998bcaf6472c07bf',1,'_ui_a7682::obj'],['../struct__ui__pcm5102.html#ac6d7512d51ed444c46127a61268fda2e',1,'_ui_pcm5102::obj'],['../structscr__card.html#acd8ea9c6dd892fa1788375c12db0fc67',1,'scr_card::obj']]],
+  ['oct_1',['oct',['../classios__base.html#a4155540f8d3ffdb8d25a2f50ee4df08f',1,'ios_base']]],
+  ['ocvcomp_2',['OCVCOMP',['../struct_battery_status_1_1____reg.html#a9cfc3c6ef4bbd26f00e9ef52ea627ed4',1,'BatteryStatus::__reg']]],
+  ['ocvfall_3',['OCVFALL',['../struct_battery_status_1_1____reg.html#a6bde5a08e4ef687a3c9ad6e777971766',1,'BatteryStatus::__reg']]],
+  ['ocvgd_4',['OCVGD',['../struct_battery_status_1_1____reg.html#ab33b5185dd58e22b4198c484c79bb3e7',1,'BatteryStatus::__reg']]],
+  ['oemname_5',['oemName',['../structpartition_boot_sector.html#a9e633deb11206a8eb01731d26ddce49b',1,'partitionBootSector::oemName'],['../structpartition_boot_sector_fat.html#aaa845fab3f0c4061a0f099ff67c47fe4',1,'partitionBootSectorFat::oemName'],['../struct_ex_fat_boot_sector.html#aeb25da614c64e85ff723a8de8dadd2dc',1,'ExFatBootSector::oemName']]],
+  ['off_6',['off',['../structmap16.html#a3611edfafab422578e3dd34f38b0d3e5',1,'map16']]],
+  ['offs_5fx_7',['offs_x',['../structmenu__icon.html#ae7ccb8d8cb19ed8385fe50a31070c7de',1,'menu_icon']]],
+  ['offs_5fy_8',['offs_y',['../structmenu__icon.html#af9dd0d50e5a2636bf5051fae2f9ffb66',1,'menu_icon']]],
+  ['oid_9',['oid',['../structcid__t.html#a8fcb684c469e0564332b1bc59cc86bfe',1,'cid_t::oid'],['../_sd_card_info_8h.html#a0e7c3c74464b5888d6e4dde057c4d2c9',1,'oid:&#160;SdCardInfo.h']]],
+  ['olddeviceconnected_10',['oldDeviceConnected',['../esp32__main_8cpp.html#a75192623c088d57de02f8803296eaa96',1,'esp32_main.cpp']]],
+  ['one_5ffound_11',['one_found',['../loop__functions_8cpp.html#a6ed26f8c867d7acb53b22f5c37999b5b',1,'one_found:&#160;loop_functions.cpp'],['../loop__functions__extern_8h.html#a6ed26f8c867d7acb53b22f5c37999b5b',1,'one_found:&#160;loop_functions.cpp']]],
+  ['one_5fstart_12',['one_start',['../loop__functions_8cpp.html#adfece3855d57e10f464293250a32f231',1,'one_start:&#160;loop_functions.cpp'],['../loop__functions__extern_8h.html#adfece3855d57e10f464293250a32f231',1,'one_start:&#160;loop_functions.cpp']]],
+  ['onewiretimewait_13',['onewireTimeWait',['../loop__functions__extern_8h.html#ade0c9647e68ca3d1d4b78e536ca5b211',1,'loop_functions_extern.h']]],
+  ['options_14',['options',['../class_sd_spi_config.html#a6292855eeea89636ad2b4da9675dbc96',1,'SdSpiConfig']]],
+  ['order_15',['order',['../struct_dir_lfn__t.html#a8bfeaef3a1a08bc1961c7289c90dafce',1,'DirLfn_t']]],
+  ['ota_5fhtml_16',['ota_html',['../ota_8h.html#a0a00c5d5abc51434f6d80d4569e0c492',1,'ota.h']]],
+  ['ota_5fhtml_5flen_17',['ota_html_len',['../ota_8h.html#a3c920b5994d61decaa5f3d08cfa0d676',1,'ota.h']]],
+  ['ota_5fprogress_5fmillis_18',['ota_progress_millis',['../safeboot_2main_8cpp.html#a38b5dc9b727a1df773b80c9379612fce',1,'main.cpp']]],
+  ['ota_5ftimeout_5ftimer_19',['ota_timeout_timer',['../safeboot_2main_8cpp.html#a67c2c6a95452e67f6ab0ae979bf67571',1,'main.cpp']]],
+  ['otaadevaddr_20',['otaaDevAddr',['../_wis_block-_a_p_i_8h.html#ac8bac6253aaaeb722fb18261f7711d15',1,'WisBlock-API.h']]],
+  ['otc_21',['OTC',['../struct_battery_status_1_1____reg.html#a15f467b9cbab57c041229d510638f97b',1,'BatteryStatus::__reg']]],
+  ['otd_22',['OTD',['../struct_battery_status_1_1____reg.html#ad2334651147aedd4f96c0fc6f18a253d',1,'BatteryStatus::__reg']]],
+  ['out_23',['out',['../classios__base.html#a4c1d517774c0d11af3424e90395f26ae',1,'ios_base']]],
+  ['own_5fmsg_5fid_24',['own_msg_id',['../loop__functions_8cpp.html#a207511bae65f6df3eaad32df07babf1c',1,'own_msg_id:&#160;loop_functions.cpp'],['../loop__functions__extern_8h.html#a207511bae65f6df3eaad32df07babf1c',1,'own_msg_id:&#160;loop_functions.cpp']]]
+];

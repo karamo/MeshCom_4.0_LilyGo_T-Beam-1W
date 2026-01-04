@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/loop_functions.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('loop__functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">loop_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="loop__functions_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _LOOP_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _LOOP_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;configuration.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="debugconf_8h.html">debugconf.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="aprs__functions_8h.html">aprs_functions.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">    #include &lt;<a class="code" href="esp32__flash_8h.html">esp32/esp32_flash.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">    #include &lt;<a class="code" href="_wis_block-_a_p_i_8h.html">nrf52/WisBlock-API.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// OLED Display 1306 128 x 64 px</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#if !defined (BOARD_E290) &amp;&amp; !defined (BOARD_TRACKER) &amp;&amp; !defined (BOARD_T_DECK) &amp;&amp; !defined (BOARD_T_DECK_PLUS) &amp;&amp; !defined (BOARD_T5_EPAPER) &amp;&amp; !defined (BOARD_T_DECK_PRO)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;U8g2lib.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_function" href="loop__functions_8h.html#a30dc76b04ff471f224cf15591e48c6b0">getUnixClock</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a0a2eb7ea02f59830711d1accca089af2">sendDisplay1306</a>(<span class="keywordtype">bool</span> bClear, <span class="keywordtype">bool</span> bTransfer, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">char</span> *text);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#ae3688e7fc22c3b71c1a036762fc2753b">sendDisplayHead</a>(<span class="keywordtype">bool</span> bInit);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a246e1964eb74f3ebf246f8f479f5d03f">sendDisplayTrack</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a1ed5080d73b3f48b1f206a09947e5023">sendDisplayWX</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#aaf42f2c6a358758806cf112187fb7e53">sendDisplayMainline</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a3c050e403c5d7ed8c84efe5bc0a6406f">sendDisplayTime</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#ad7111852f49931a3403d408a4c93b070">mainStartTimeLoop</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a4d48ff4495c67247fad471f18c244b4a">E290DisplayUpdate</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a5e06d377d73b5dbb3d55cb86f9458a09">init_loop_function</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#aa2609faed73d8ce345e4678ae8f73d8b">initAnalogPin</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a308f376be3cd8a138c0e3f4bef2f2fb1">sendDisplayText</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg, int16_t rssi, int8_t snr);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a5678f33ef1385fe7c0685d076d2fc302">sendDisplayPosition</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg, int16_t rssi, int8_t snr);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>String <a class="code hl_function" href="loop__functions_8h.html#a33f71d20ac08ffa62a306a1e60cd810d">getDateString</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>String <a class="code hl_function" href="loop__functions_8h.html#aca080c88b69ab110a45bd061c7dc7efa">getTimeString</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a924eb40e27b9a26ab4fd39d31a80c185">printBuffer</a>(uint8_t *<a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a5c8e5c3b74e15a411567e133270fd90b">printAsciiBuffer</a>(uint8_t *<a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a2785bfa0157d878c6082f2ec7d31c4cc">printBuffer_aprs</a>(<span class="keywordtype">char</span> *msg_source, <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;<a class="code hl_struct" href="structaprs_message.html">aprsMessage</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>String <a class="code hl_function" href="loop__functions_8h.html#a96375eb94b911939f4cf97a704727693">charBuffer_aprs</a>(<span class="keywordtype">char</span> *msg_source, <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;<a class="code hl_struct" href="structaprs_message.html">aprsMessage</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#add288d6c7090a2f1d1065a650762cd36">printBuffer_ack</a>(<span class="keywordtype">char</span> *msgSource, uint8_t payload[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+10], int8_t size);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#af2a7f7e5f55d97a8eb7162373c934bd0">addBLEOutBuffer</a>(uint8_t *<a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, uint16_t len);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a38bce470595d4a236a37188e911864c7">addBLEComToOutBuffer</a>(uint8_t *<a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, uint16_t len);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="loop__functions_8h.html#a05ead5354c4f17c41856d9bc62d91838">   51</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a05ead5354c4f17c41856d9bc62d91838">addBLECommandBack</a>(<span class="keywordtype">char</span> *text);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a9b313a5f26ebdecf14eb451faf9bbfbc">addLoraRxBuffer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> msg_id, <span class="keywordtype">bool</span> msg_server);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#a589a347ec3321d1ee522eefd2e1e2378">checkOwnRx</a>(uint8_t compBuffer[4]);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">bool</span> <a class="code hl_function" href="loop__functions_8h.html#a20b750964a32a6cfc6367cfa72c1d62a">checkServerRx</a>(uint8_t compBuffer[4]);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#a10097564cefcf1b09b64fc096888f5b1">checkOwnTx</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> msg_id);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#ae07254fdec7b2fb86fa49e80bb752e9f">insertOwnTx</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#a9d3679214bd57f572342b87d0b97ba43">esp32_isSSD1306</a>(<span class="keywordtype">int</span> address);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a7c8c897daefce843b5e95704a0469a13">sendMessage</a>(<span class="keywordtype">char</span> *<a class="code hl_variable" href="loop__functions_8cpp.html#abf2ced83928dc8f50f99f6774b4cf5fc">msg_text</a>, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="loop__functions_8h.html#aa78315df1c6efadf15eee92e78ad361d">   62</a></span>String <a class="code hl_function" href="loop__functions_8h.html#aa78315df1c6efadf15eee92e78ad361d">PositionToAPRS</a>(<span class="keywordtype">bool</span> bConvPos, <span class="keywordtype">bool</span> bWeather, <span class="keywordtype">bool</span> bFuss, <span class="keywordtype">double</span> lat, <span class="keywordtype">char</span> lat_c, <span class="keywordtype">double</span> lon, <span class="keywordtype">char</span> lon_c, <span class="keywordtype">int</span> alt, <span class="keywordtype">float</span> press, <span class="keywordtype">float</span> hum, <span class="keywordtype">float</span> temp, <span class="keywordtype">float</span> temp2, <span class="keywordtype">float</span> gasres, <span class="keywordtype">int</span> qfe, <span class="keywordtype">float</span> qnh);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#ae42df391be12b1f625af20abe0165fe5">sendPosition</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> intervall, <span class="keywordtype">double</span> lat, <span class="keywordtype">char</span> lat_c, <span class="keywordtype">double</span> lon, <span class="keywordtype">char</span> lon_c, <span class="keywordtype">int</span> alt, <span class="keywordtype">float</span> press, <span class="keywordtype">float</span> hum, <span class="keywordtype">float</span> temp, <span class="keywordtype">float</span> temp2, <span class="keywordtype">float</span> gasres, <span class="keywordtype">float</span> co2, <span class="keywordtype">int</span> qfe, <span class="keywordtype">float</span> qnh);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#aa1915cadf1bedf5f867b13f94159d8f5">sendAPPPosition</a>(<span class="keywordtype">double</span> lat, <span class="keywordtype">char</span> lat_c, <span class="keywordtype">double</span> lon, <span class="keywordtype">char</span> lon_c, <span class="keywordtype">float</span> temp2);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a8b3e61e99f59684a3e9aac1b91d7df65">SendAckMessage</a>(String dest_call, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iAckId);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a1b4712eb4f1bf887575b06822a6b7a4a">sendHey</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a59c481e895e314b155ca2183b9f30afb">sendTelemetry</a>(<span class="keywordtype">int</span> ID);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">bool</span> <a class="code hl_function" href="loop__functions_8h.html#a6236cc13879f09bb6a2ae4e46e63e20a">checkMesh</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#aa37110f574f07bbcf7972fa455b5d5be">setSMartBeaconing</a>(<span class="keywordtype">double</span> flat, <span class="keywordtype">double</span> flon);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>String <a class="code hl_function" href="loop__functions_8h.html#ae31b831a8f7c8e7a4306e8ab28999b3e">convertCallToShort</a>(<span class="keywordtype">char</span> callsign[10]);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>uint8_t <a class="code hl_function" href="loop__functions_8h.html#a8d4ea39f574f89a0d16f23e1a5ee2998">shortVERSION</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">double</span> <a class="code hl_function" href="loop__functions_8h.html#a08d8c58b23a1d0ad1f4dad2fd19b0556">cround4</a>(<span class="keywordtype">double</span> dvar);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">double</span> <a class="code hl_function" href="loop__functions_8h.html#a556c69d68b9382b6352e27f8e79dd7f5">cround4abs</a>(<span class="keywordtype">double</span> dvar);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#ad614fc3f465472543e68eb1b507abbdd">conv_fuss</a>(<span class="keywordtype">int</span> alt_meter);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#ab70f72dc1b55d1a7545129106da88d0b">conv_meter</a>(<span class="keywordtype">int</span> alt_fuss);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#ifdef BOARD_E290</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> DrawDirection(<span class="keywordtype">float</span> angle, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy, <span class="keywordtype">int</span> radius);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> DrawRssi(<span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy, int16_t rssi);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">double</span> degreesToRadians(<span class="keywordtype">double</span> degrees);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">byte</span> <a class="code hl_function" href="loop__functions_8h.html#ac87167e353134b0435c61dfd715ae17d">utf8ascii</a>(<span class="keywordtype">byte</span> ascii);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>String <a class="code hl_function" href="loop__functions_8h.html#ac87167e353134b0435c61dfd715ae17d">utf8ascii</a>(String s);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#ac87167e353134b0435c61dfd715ae17d">utf8ascii</a>(<span class="keywordtype">char</span>* s);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>String <a class="code hl_function" href="loop__functions_8h.html#a263263f9fa122dc6722f8f0e74aa04dc">getTimeZone</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">int</span> <a class="code hl_function" href="loop__functions_8h.html#a7521f4b657d9ba224cfad0a0ad7f76ca">count_char</a>(String s, <span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> <a class="code hl_function" href="loop__functions_8h.html#a49012e0304ff0b48800dca643f90ed27">addRingPointer</a>(<span class="keywordtype">int</span> &amp;toWrite, <span class="keywordtype">int</span> &amp;toRead, <span class="keywordtype">int</span> iMAX);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">// _LOOP_FUNCTIONS_H_</span></div>
+<div class="ttc" id="a_wis_block-_a_p_i_8h_html"><div class="ttname"><a href="_wis_block-_a_p_i_8h.html">WisBlock-API.h</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html"><div class="ttname"><a href="aprs__functions_8h.html">aprs_functions.h</a></div></div>
+<div class="ttc" id="aconfiguration__global_8h_html_a5d20473a838368ac190f608f4cf46f27"><div class="ttname"><a href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a></div><div class="ttdeci">#define UDP_TX_BUF_SIZE</div><div class="ttdef"><b>Definition</b> <a href="configuration__global_8h_source.html#l00043">configuration_global.h:43</a></div></div>
+<div class="ttc" id="adebugconf_8h_html"><div class="ttname"><a href="debugconf_8h.html">debugconf.h</a></div></div>
+<div class="ttc" id="aesp32__flash_8h_html"><div class="ttname"><a href="esp32__flash_8h.html">esp32_flash.h</a></div></div>
+<div class="ttc" id="aloop__functions_8cpp_html_abf2ced83928dc8f50f99f6774b4cf5fc"><div class="ttname"><a href="loop__functions_8cpp.html#abf2ced83928dc8f50f99f6774b4cf5fc">msg_text</a></div><div class="ttdeci">char msg_text[MAX_MSG_LEN_PHONE *2]</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00181">loop_functions.cpp:181</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a05ead5354c4f17c41856d9bc62d91838"><div class="ttname"><a href="loop__functions_8h.html#a05ead5354c4f17c41856d9bc62d91838">addBLECommandBack</a></div><div class="ttdeci">void addBLECommandBack(char *text)</div></div>
+<div class="ttc" id="aloop__functions_8h_html_a08d8c58b23a1d0ad1f4dad2fd19b0556"><div class="ttname"><a href="loop__functions_8h.html#a08d8c58b23a1d0ad1f4dad2fd19b0556">cround4</a></div><div class="ttdeci">double cround4(double dvar)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03523">loop_functions.cpp:3523</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a0a2eb7ea02f59830711d1accca089af2"><div class="ttname"><a href="loop__functions_8h.html#a0a2eb7ea02f59830711d1accca089af2">sendDisplay1306</a></div><div class="ttdeci">void sendDisplay1306(bool bClear, bool bTransfer, int x, int y, char *text)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00649">loop_functions.cpp:649</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a10097564cefcf1b09b64fc096888f5b1"><div class="ttname"><a href="loop__functions_8h.html#a10097564cefcf1b09b64fc096888f5b1">checkOwnTx</a></div><div class="ttdeci">int checkOwnTx(unsigned int msg_id)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00493">loop_functions.cpp:493</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a1b4712eb4f1bf887575b06822a6b7a4a"><div class="ttname"><a href="loop__functions_8h.html#a1b4712eb4f1bf887575b06822a6b7a4a">sendHey</a></div><div class="ttdeci">void sendHey()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03006">loop_functions.cpp:3006</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a1ed5080d73b3f48b1f206a09947e5023"><div class="ttname"><a href="loop__functions_8h.html#a1ed5080d73b3f48b1f206a09947e5023">sendDisplayWX</a></div><div class="ttdeci">void sendDisplayWX()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01028">loop_functions.cpp:1028</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a20b750964a32a6cfc6367cfa72c1d62a"><div class="ttname"><a href="loop__functions_8h.html#a20b750964a32a6cfc6367cfa72c1d62a">checkServerRx</a></div><div class="ttdeci">bool checkServerRx(uint8_t compBuffer[4])</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00476">loop_functions.cpp:476</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a246e1964eb74f3ebf246f8f479f5d03f"><div class="ttname"><a href="loop__functions_8h.html#a246e1964eb74f3ebf246f8f479f5d03f">sendDisplayTrack</a></div><div class="ttdeci">void sendDisplayTrack()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00971">loop_functions.cpp:971</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a263263f9fa122dc6722f8f0e74aa04dc"><div class="ttname"><a href="loop__functions_8h.html#a263263f9fa122dc6722f8f0e74aa04dc">getTimeZone</a></div><div class="ttdeci">String getTimeZone()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03671">loop_functions.cpp:3671</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a2785bfa0157d878c6082f2ec7d31c4cc"><div class="ttname"><a href="loop__functions_8h.html#a2785bfa0157d878c6082f2ec7d31c4cc">printBuffer_aprs</a></div><div class="ttdeci">void printBuffer_aprs(char *msg_source, struct aprsMessage &amp;aprsMessage)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02074">loop_functions.cpp:2074</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a308f376be3cd8a138c0e3f4bef2f2fb1"><div class="ttname"><a href="loop__functions_8h.html#a308f376be3cd8a138c0e3f4bef2f2fb1">sendDisplayText</a></div><div class="ttdeci">void sendDisplayText(struct aprsMessage &amp;aprsmsg, int16_t rssi, int8_t snr)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01282">loop_functions.cpp:1282</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a30dc76b04ff471f224cf15591e48c6b0"><div class="ttname"><a href="loop__functions_8h.html#a30dc76b04ff471f224cf15591e48c6b0">getUnixClock</a></div><div class="ttdeci">unsigned long getUnixClock()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00324">loop_functions.cpp:324</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a33f71d20ac08ffa62a306a1e60cd810d"><div class="ttname"><a href="loop__functions_8h.html#a33f71d20ac08ffa62a306a1e60cd810d">getDateString</a></div><div class="ttdeci">String getDateString()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02037">loop_functions.cpp:2037</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a38bce470595d4a236a37188e911864c7"><div class="ttname"><a href="loop__functions_8h.html#a38bce470595d4a236a37188e911864c7">addBLEComToOutBuffer</a></div><div class="ttdeci">void addBLEComToOutBuffer(uint8_t *buffer, uint16_t len)</div><div class="ttdoc">Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer.</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00398">loop_functions.cpp:398</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a3c050e403c5d7ed8c84efe5bc0a6406f"><div class="ttname"><a href="loop__functions_8h.html#a3c050e403c5d7ed8c84efe5bc0a6406f">sendDisplayTime</a></div><div class="ttdeci">void sendDisplayTime()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01072">loop_functions.cpp:1072</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a49012e0304ff0b48800dca643f90ed27"><div class="ttname"><a href="loop__functions_8h.html#a49012e0304ff0b48800dca643f90ed27">addRingPointer</a></div><div class="ttdeci">void addRingPointer(int &amp;toWrite, int &amp;toRead, int iMAX)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03690">loop_functions.cpp:3690</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a4d48ff4495c67247fad471f18c244b4a"><div class="ttname"><a href="loop__functions_8h.html#a4d48ff4495c67247fad471f18c244b4a">E290DisplayUpdate</a></div><div class="ttdeci">void E290DisplayUpdate()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00642">loop_functions.cpp:642</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a556c69d68b9382b6352e27f8e79dd7f5"><div class="ttname"><a href="loop__functions_8h.html#a556c69d68b9382b6352e27f8e79dd7f5">cround4abs</a></div><div class="ttdeci">double cround4abs(double dvar)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03533">loop_functions.cpp:3533</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a5678f33ef1385fe7c0685d076d2fc302"><div class="ttname"><a href="loop__functions_8h.html#a5678f33ef1385fe7c0685d076d2fc302">sendDisplayPosition</a></div><div class="ttdeci">void sendDisplayPosition(struct aprsMessage &amp;aprsmsg, int16_t rssi, int8_t snr)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01750">loop_functions.cpp:1750</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a589a347ec3321d1ee522eefd2e1e2378"><div class="ttname"><a href="loop__functions_8h.html#a589a347ec3321d1ee522eefd2e1e2378">checkOwnRx</a></div><div class="ttdeci">int checkOwnRx(uint8_t compBuffer[4])</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00465">loop_functions.cpp:465</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a59c481e895e314b155ca2183b9f30afb"><div class="ttname"><a href="loop__functions_8h.html#a59c481e895e314b155ca2183b9f30afb">sendTelemetry</a></div><div class="ttdeci">void sendTelemetry(int ID)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03071">loop_functions.cpp:3071</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a5c8e5c3b74e15a411567e133270fd90b"><div class="ttname"><a href="loop__functions_8h.html#a5c8e5c3b74e15a411567e133270fd90b">printAsciiBuffer</a></div><div class="ttdeci">void printAsciiBuffer(uint8_t *buffer, int len)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02018">loop_functions.cpp:2018</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a5e06d377d73b5dbb3d55cb86f9458a09"><div class="ttname"><a href="loop__functions_8h.html#a5e06d377d73b5dbb3d55cb86f9458a09">init_loop_function</a></div><div class="ttdeci">void init_loop_function()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01716">loop_functions.cpp:1716</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a6236cc13879f09bb6a2ae4e46e63e20a"><div class="ttname"><a href="loop__functions_8h.html#a6236cc13879f09bb6a2ae4e46e63e20a">checkMesh</a></div><div class="ttdeci">bool checkMesh()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03558">loop_functions.cpp:3558</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a7521f4b657d9ba224cfad0a0ad7f76ca"><div class="ttname"><a href="loop__functions_8h.html#a7521f4b657d9ba224cfad0a0ad7f76ca">count_char</a></div><div class="ttdeci">int count_char(String s, char c)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03679">loop_functions.cpp:3679</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a7c8c897daefce843b5e95704a0469a13"><div class="ttname"><a href="loop__functions_8h.html#a7c8c897daefce843b5e95704a0469a13">sendMessage</a></div><div class="ttdeci">void sendMessage(char *msg_text, int len)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02093">loop_functions.cpp:2093</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a8b3e61e99f59684a3e9aac1b91d7df65"><div class="ttname"><a href="loop__functions_8h.html#a8b3e61e99f59684a3e9aac1b91d7df65">SendAckMessage</a></div><div class="ttdeci">void SendAckMessage(String dest_call, unsigned int iAckId)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02935">loop_functions.cpp:2935</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a8d4ea39f574f89a0d16f23e1a5ee2998"><div class="ttname"><a href="loop__functions_8h.html#a8d4ea39f574f89a0d16f23e1a5ee2998">shortVERSION</a></div><div class="ttdeci">uint8_t shortVERSION()</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00016">aprs_functions.cpp:16</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a924eb40e27b9a26ab4fd39d31a80c185"><div class="ttname"><a href="loop__functions_8h.html#a924eb40e27b9a26ab4fd39d31a80c185">printBuffer</a></div><div class="ttdeci">void printBuffer(uint8_t *buffer, int len)</div><div class="ttdoc">Method to print our buffers.</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02009">loop_functions.cpp:2009</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a96375eb94b911939f4cf97a704727693"><div class="ttname"><a href="loop__functions_8h.html#a96375eb94b911939f4cf97a704727693">charBuffer_aprs</a></div><div class="ttdeci">String charBuffer_aprs(char *msg_source, struct aprsMessage &amp;aprsMessage)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02053">loop_functions.cpp:2053</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a9b313a5f26ebdecf14eb451faf9bbfbc"><div class="ttname"><a href="loop__functions_8h.html#a9b313a5f26ebdecf14eb451faf9bbfbc">addLoraRxBuffer</a></div><div class="ttdeci">void addLoraRxBuffer(unsigned int msg_id, bool msg_server)</div><div class="ttdoc">Function adding messages into outgoing UDP ringbuffer.</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00447">loop_functions.cpp:447</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_a9d3679214bd57f572342b87d0b97ba43"><div class="ttname"><a href="loop__functions_8h.html#a9d3679214bd57f572342b87d0b97ba43">esp32_isSSD1306</a></div><div class="ttdeci">int esp32_isSSD1306(int address)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00563">loop_functions.cpp:563</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_aa1915cadf1bedf5f867b13f94159d8f5"><div class="ttname"><a href="loop__functions_8h.html#aa1915cadf1bedf5f867b13f94159d8f5">sendAPPPosition</a></div><div class="ttdeci">void sendAPPPosition(double lat, char lat_c, double lon, char lon_c, float temp2)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02872">loop_functions.cpp:2872</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_aa2609faed73d8ce345e4678ae8f73d8b"><div class="ttname"><a href="loop__functions_8h.html#aa2609faed73d8ce345e4678ae8f73d8b">initAnalogPin</a></div><div class="ttdeci">void initAnalogPin()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01725">loop_functions.cpp:1725</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_aa37110f574f07bbcf7972fa455b5d5be"><div class="ttname"><a href="loop__functions_8h.html#aa37110f574f07bbcf7972fa455b5d5be">setSMartBeaconing</a></div><div class="ttdeci">unsigned int setSMartBeaconing(double flat, double flon)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03361">loop_functions.cpp:3361</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_aa78315df1c6efadf15eee92e78ad361d"><div class="ttname"><a href="loop__functions_8h.html#aa78315df1c6efadf15eee92e78ad361d">PositionToAPRS</a></div><div class="ttdeci">String PositionToAPRS(bool bConvPos, bool bWeather, bool bFuss, double lat, char lat_c, double lon, char lon_c, int alt, float press, float hum, float temp, float temp2, float gasres, int qfe, float qnh)</div></div>
+<div class="ttc" id="aloop__functions_8h_html_aaf42f2c6a358758806cf112187fb7e53"><div class="ttname"><a href="loop__functions_8h.html#aaf42f2c6a358758806cf112187fb7e53">sendDisplayMainline</a></div><div class="ttdeci">void sendDisplayMainline()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01153">loop_functions.cpp:1153</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ab70f72dc1b55d1a7545129106da88d0b"><div class="ttname"><a href="loop__functions_8h.html#ab70f72dc1b55d1a7545129106da88d0b">conv_meter</a></div><div class="ttdeci">int conv_meter(int alt_fuss)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03553">loop_functions.cpp:3553</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ac87167e353134b0435c61dfd715ae17d"><div class="ttname"><a href="loop__functions_8h.html#ac87167e353134b0435c61dfd715ae17d">utf8ascii</a></div><div class="ttdeci">byte utf8ascii(byte ascii)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03568">loop_functions.cpp:3568</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_aca080c88b69ab110a45bd061c7dc7efa"><div class="ttname"><a href="loop__functions_8h.html#aca080c88b69ab110a45bd061c7dc7efa">getTimeString</a></div><div class="ttdeci">String getTimeString()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02045">loop_functions.cpp:2045</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ad614fc3f465472543e68eb1b507abbdd"><div class="ttname"><a href="loop__functions_8h.html#ad614fc3f465472543e68eb1b507abbdd">conv_fuss</a></div><div class="ttdeci">int conv_fuss(int alt_meter)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03545">loop_functions.cpp:3545</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ad7111852f49931a3403d408a4c93b070"><div class="ttname"><a href="loop__functions_8h.html#ad7111852f49931a3403d408a4c93b070">mainStartTimeLoop</a></div><div class="ttdeci">void mainStartTimeLoop()</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l01193">loop_functions.cpp:1193</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_add288d6c7090a2f1d1065a650762cd36"><div class="ttname"><a href="loop__functions_8h.html#add288d6c7090a2f1d1065a650762cd36">printBuffer_ack</a></div><div class="ttdeci">void printBuffer_ack(char *msgSource, uint8_t payload[UDP_TX_BUF_SIZE+10], int8_t size)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02081">loop_functions.cpp:2081</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ae07254fdec7b2fb86fa49e80bb752e9f"><div class="ttname"><a href="loop__functions_8h.html#ae07254fdec7b2fb86fa49e80bb752e9f">insertOwnTx</a></div><div class="ttdeci">void insertOwnTx(unsigned int id)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00518">loop_functions.cpp:518</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ae31b831a8f7c8e7a4306e8ab28999b3e"><div class="ttname"><a href="loop__functions_8h.html#ae31b831a8f7c8e7a4306e8ab28999b3e">convertCallToShort</a></div><div class="ttdeci">String convertCallToShort(char callsign[10])</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l03502">loop_functions.cpp:3502</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ae3688e7fc22c3b71c1a036762fc2753b"><div class="ttname"><a href="loop__functions_8h.html#ae3688e7fc22c3b71c1a036762fc2753b">sendDisplayHead</a></div><div class="ttdeci">void sendDisplayHead(bool bInit)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00922">loop_functions.cpp:922</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_ae42df391be12b1f625af20abe0165fe5"><div class="ttname"><a href="loop__functions_8h.html#ae42df391be12b1f625af20abe0165fe5">sendPosition</a></div><div class="ttdeci">void sendPosition(unsigned int intervall, double lat, char lat_c, double lon, char lon_c, int alt, float press, float hum, float temp, float temp2, float gasres, float co2, int qfe, float qnh)</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l02632">loop_functions.cpp:2632</a></div></div>
+<div class="ttc" id="aloop__functions_8h_html_af2a7f7e5f55d97a8eb7162373c934bd0"><div class="ttname"><a href="loop__functions_8h.html#af2a7f7e5f55d97a8eb7162373c934bd0">addBLEOutBuffer</a></div><div class="ttdeci">void addBLEOutBuffer(uint8_t *buffer, uint16_t len)</div><div class="ttdoc">Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer.</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00349">loop_functions.cpp:349</a></div></div>
+<div class="ttc" id="astructaprs_message_html"><div class="ttname"><a href="structaprs_message.html">aprsMessage</a></div><div class="ttdef"><b>Definition</b> <a href="aprs__structures_8h_source.html#l00008">aprs_structures.h:9</a></div></div>
+<div class="ttc" id="at-deck-pro_2peri__gps_8cpp_html_a7b13e39c43296f16ce75848767f94edc"><div class="ttname"><a href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a></div><div class="ttdeci">uint8_t buffer[256]</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00024">peri_gps.cpp:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="loop__functions_8h.html">loop_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

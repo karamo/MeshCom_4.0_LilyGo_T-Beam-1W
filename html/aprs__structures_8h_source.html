@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/aprs_structures.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('aprs__structures_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">aprs_structures.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="aprs__structures_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _APRS_STRUCTURES_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _APRS_STRUCTURES_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// APRS protokol</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structaprs_message.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaprs_message.html">aprsMessage</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structaprs_message.html#add252b10de35eed47f6330032375d3a5">   10</a></span>    uint16_t <a class="code hl_variable" href="structaprs_message.html#add252b10de35eed47f6330032375d3a5">msg_len</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structaprs_message.html#ab17ad7464ec87ea101a82aba1c55e1d9">   11</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_message.html#ab17ad7464ec87ea101a82aba1c55e1d9">payload_type</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structaprs_message.html#a629f749c8ebed545394645fc5035ca9b">   12</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_message.html#a629f749c8ebed545394645fc5035ca9b">msg_id</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structaprs_message.html#aa5b09414247136973e1bc62d447a739c">   14</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#aa5b09414247136973e1bc62d447a739c">max_hop</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structaprs_message.html#a3163673603a0bd40cbf0229043be0675">   15</a></span>    <span class="keywordtype">bool</span>  <a class="code hl_variable" href="structaprs_message.html#a3163673603a0bd40cbf0229043be0675">msg_server</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structaprs_message.html#aacbf3d878e20110909f2c93f8fe501d5">   16</a></span>    <span class="keywordtype">bool</span>  <a class="code hl_variable" href="structaprs_message.html#aacbf3d878e20110909f2c93f8fe501d5">msg_track</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structaprs_message.html#aa9685ab11afac05536846e25e9c7fb75">   17</a></span>    <span class="keywordtype">bool</span>  <a class="code hl_variable" href="structaprs_message.html#aa9685ab11afac05536846e25e9c7fb75">msg_app_offline</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structaprs_message.html#af77f2cebf294efd8ee04732ca3390143">   18</a></span>    <span class="keywordtype">bool</span>  <a class="code hl_variable" href="structaprs_message.html#af77f2cebf294efd8ee04732ca3390143">msg_mesh</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structaprs_message.html#a5071f0b74d7c273993497389c0af6048">   20</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a5071f0b74d7c273993497389c0af6048">msg_source_path</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structaprs_message.html#a651f469a3e0c07aeef0b667f37dd725f">   21</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a651f469a3e0c07aeef0b667f37dd725f">msg_source_call</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structaprs_message.html#a96d6075498e2e6b169e126da78b17de3">   22</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a96d6075498e2e6b169e126da78b17de3">msg_source_last</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structaprs_message.html#a7f6b77ad326eca209c8f0fa6cdf034d7">   23</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a7f6b77ad326eca209c8f0fa6cdf034d7">msg_destination_path</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structaprs_message.html#a22626d1b74939d83d9a794d24caff1fe">   24</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a22626d1b74939d83d9a794d24caff1fe">msg_destination_call</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structaprs_message.html#aeeaa6b7d8ee1136c618954c8e3bedeb4">   25</a></span>    String <a class="code hl_variable" href="structaprs_message.html#aeeaa6b7d8ee1136c618954c8e3bedeb4">msg_destination_last</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structaprs_message.html#a284bf6b180fb3b58b255ceca155f7a80">   26</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a284bf6b180fb3b58b255ceca155f7a80">msg_payload</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structaprs_message.html#a6bb0230bfd7355a7926a346e5d4289a7">   27</a></span>    String <a class="code hl_variable" href="structaprs_message.html#a6bb0230bfd7355a7926a346e5d4289a7">msg_gateway_call</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structaprs_message.html#a80a03a59e631b6ef2233584b5458cf55">   28</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_message.html#a80a03a59e631b6ef2233584b5458cf55">msg_fcs</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structaprs_message.html#aee72343d9e00c9857b35bf4fcc42bea4">   29</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#aee72343d9e00c9857b35bf4fcc42bea4">msg_source_hw</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structaprs_message.html#af2dcc191ddb8221d824760ff11613c4b">   30</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#af2dcc191ddb8221d824760ff11613c4b">msg_source_mod</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structaprs_message.html#a4c0c107a7986a6b5edd1d17e2389fb2d">   31</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#a4c0c107a7986a6b5edd1d17e2389fb2d">msg_source_fw_version</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structaprs_message.html#a20d09abd313cbc2bd0dbccd1badccd4a">   32</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_message.html#a20d09abd313cbc2bd0dbccd1badccd4a">msg_source_fw_sub_version</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structaprs_message.html#ac896d9243fe8581e474ecdef42f22dd2">   33</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#ac896d9243fe8581e474ecdef42f22dd2">msg_last_hw</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structaprs_message.html#ad5145a2c05f38f9b64f641fc1bf8c77c">   34</a></span>    uint8_t <a class="code hl_variable" href="structaprs_message.html#ad5145a2c05f38f9b64f641fc1bf8c77c">msg_last_path_cnt</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structaprs_position.html">   37</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaprs_position.html">aprsPosition</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structaprs_position.html#a5d1a7498404813dd567769d79f5266a3">   39</a></span>    String <a class="code hl_variable" href="structaprs_position.html#a5d1a7498404813dd567769d79f5266a3">pos_atxt</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structaprs_position.html#a4d4b53bbda3d03fad6e829ad2d63239a">   41</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structaprs_position.html#a4d4b53bbda3d03fad6e829ad2d63239a">lat</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structaprs_position.html#a2a40bcafebb0985084b38d27b6e79137">   42</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_position.html#a2a40bcafebb0985084b38d27b6e79137">lat_c</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structaprs_position.html#a8a8d8e173713ce73d968c825e241dc80">   43</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structaprs_position.html#a8a8d8e173713ce73d968c825e241dc80">lon</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structaprs_position.html#ae74a80055478d72deaea410ab9199cbb">   44</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_position.html#ae74a80055478d72deaea410ab9199cbb">lon_c</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structaprs_position.html#a80aec232ab9679fafce0a9e72d60b608">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_position.html#a80aec232ab9679fafce0a9e72d60b608">alt</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structaprs_position.html#a52148fdc1b39a10faa77a5e0420b323e">   46</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_position.html#a52148fdc1b39a10faa77a5e0420b323e">bat</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structaprs_position.html#a5d88656534eb9e2c00878729df990670">   47</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structaprs_position.html#a5d88656534eb9e2c00878729df990670">lat_d</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structaprs_position.html#aec17ea3852632ee53a33ccaa8fc60d98">   48</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structaprs_position.html#aec17ea3852632ee53a33ccaa8fc60d98">lon_d</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structaprs_position.html#ac10b3e7d19b54e97e8f98b3ba23015cd">   49</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_position.html#ac10b3e7d19b54e97e8f98b3ba23015cd">aprs_group</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structaprs_position.html#aa449d0c7293c59e971ccc448cc526245">   50</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structaprs_position.html#aa449d0c7293c59e971ccc448cc526245">aprs_symbol</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// wx</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structaprs_position.html#a18b370fb5b4c431171498e34c564f051">   53</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#a18b370fb5b4c431171498e34c564f051">press</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structaprs_position.html#ab92136c29be3de315449ae793a18f0ac">   54</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#ab92136c29be3de315449ae793a18f0ac">hum</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structaprs_position.html#a2b55f01d89d936646d586973a37d85d9">   55</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#a2b55f01d89d936646d586973a37d85d9">temp</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structaprs_position.html#a900b715f28d6a1ff5d6a958ba6f9b0de">   56</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#a900b715f28d6a1ff5d6a958ba6f9b0de">temp2</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structaprs_position.html#a160a52f5737f4dd308809329e32aa92d">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_position.html#a160a52f5737f4dd308809329e32aa92d">qfe</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structaprs_position.html#a23a79b1e4ed7606ce631a26bf3fcaf47">   58</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#a23a79b1e4ed7606ce631a26bf3fcaf47">qnh</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structaprs_position.html#af25bf20efc9d93874fddc3ec13f0e4a5">   59</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#af25bf20efc9d93874fddc3ec13f0e4a5">gasres</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structaprs_position.html#af236ced1b0d1c2a63aa1c48302fa3de7">   60</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structaprs_position.html#af236ced1b0d1c2a63aa1c48302fa3de7">co2</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// more</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structaprs_position.html#a6ffb3299321930cc9a3b94a7bc1c9ab2">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_position.html#a6ffb3299321930cc9a3b94a7bc1c9ab2">version</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structaprs_position.html#ad7495880b2086d6c9e6796f318a80a63">   64</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structaprs_position.html#ad7495880b2086d6c9e6796f318a80a63">telemetry</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structmheard_line.html">   67</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmheard_line.html">mheardLine</a></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structmheard_line.html#afbd3f9668ae8f31cf1609c4b2d302fdb">   69</a></span>    String <a class="code hl_variable" href="structmheard_line.html#afbd3f9668ae8f31cf1609c4b2d302fdb">mh_callsign</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structmheard_line.html#a2cd3b3407ea647c199c515fecba6e333">   70</a></span>    String <a class="code hl_variable" href="structmheard_line.html#a2cd3b3407ea647c199c515fecba6e333">mh_date</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structmheard_line.html#a442336594c4510282d03ad7715d3bc3e">   71</a></span>    String <a class="code hl_variable" href="structmheard_line.html#a442336594c4510282d03ad7715d3bc3e">mh_time</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structmheard_line.html#a8cd58b8fe92326d94517d3e4fe31221d">   72</a></span>    String <a class="code hl_variable" href="structmheard_line.html#a8cd58b8fe92326d94517d3e4fe31221d">mh_sourcecallsign</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structmheard_line.html#a030433b8c7c0146d47c6e5c8460908ef">   73</a></span>    String <a class="code hl_variable" href="structmheard_line.html#a030433b8c7c0146d47c6e5c8460908ef">mh_sourcepath</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structmheard_line.html#af623ac892b6dc7ad202daa52802bb01d">   74</a></span>    String <a class="code hl_variable" href="structmheard_line.html#af623ac892b6dc7ad202daa52802bb01d">mh_destinationpath</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structmheard_line.html#a691cc93a73a31585b0125218d444cf87">   75</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structmheard_line.html#a691cc93a73a31585b0125218d444cf87">mh_payload_type</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structmheard_line.html#ad121fe6ddd6bf0ee8d64917c00fd0f01">   76</a></span>    uint8_t <a class="code hl_variable" href="structmheard_line.html#ad121fe6ddd6bf0ee8d64917c00fd0f01">mh_hw</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structmheard_line.html#a5b6f5240c73b77f3fcd1877f1bdb1ac3">   77</a></span>    uint8_t <a class="code hl_variable" href="structmheard_line.html#a5b6f5240c73b77f3fcd1877f1bdb1ac3">mh_mod</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structmheard_line.html#a97a681aa0025e8f57acbcbc7ffbea736">   78</a></span>    int16_t <a class="code hl_variable" href="structmheard_line.html#a97a681aa0025e8f57acbcbc7ffbea736">mh_rssi</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structmheard_line.html#ae5a01c413fb6effc4f6992626b50a89d">   79</a></span>    int8_t <a class="code hl_variable" href="structmheard_line.html#ae5a01c413fb6effc4f6992626b50a89d">mh_snr</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structmheard_line.html#af4097d12505afbadbdc706dcea6c9c37">   80</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structmheard_line.html#af4097d12505afbadbdc706dcea6c9c37">mh_dist</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structmheard_line.html#aeb6f17ccd2673da8a96b385cd98169b8">   81</a></span>    uint8_t <a class="code hl_variable" href="structmheard_line.html#aeb6f17ccd2673da8a96b385cd98169b8">mh_path_len</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structmheard_line.html#a847d27140fc872ce6ec5e2693c0b8ed8">   82</a></span>    uint8_t <a class="code hl_variable" href="structmheard_line.html#a847d27140fc872ce6ec5e2693c0b8ed8">mh_mesh</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span><span class="comment">// _APRS_STRUCTURES_H_</span></div>
+<div class="ttc" id="astructaprs_message_html"><div class="ttname"><a href="structaprs_message.html">aprsMessage</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">aprs_structures.h:9</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a20d09abd313cbc2bd0dbccd1badccd4a"><div class="ttname"><a href="structaprs_message.html#a20d09abd313cbc2bd0dbccd1badccd4a">aprsMessage::msg_source_fw_sub_version</a></div><div class="ttdeci">char msg_source_fw_sub_version</div><div class="ttdef"><b>Definition</b> <a href="#l00032">aprs_structures.h:32</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a22626d1b74939d83d9a794d24caff1fe"><div class="ttname"><a href="structaprs_message.html#a22626d1b74939d83d9a794d24caff1fe">aprsMessage::msg_destination_call</a></div><div class="ttdeci">String msg_destination_call</div><div class="ttdef"><b>Definition</b> <a href="#l00024">aprs_structures.h:24</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a284bf6b180fb3b58b255ceca155f7a80"><div class="ttname"><a href="structaprs_message.html#a284bf6b180fb3b58b255ceca155f7a80">aprsMessage::msg_payload</a></div><div class="ttdeci">String msg_payload</div><div class="ttdef"><b>Definition</b> <a href="#l00026">aprs_structures.h:26</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a3163673603a0bd40cbf0229043be0675"><div class="ttname"><a href="structaprs_message.html#a3163673603a0bd40cbf0229043be0675">aprsMessage::msg_server</a></div><div class="ttdeci">bool msg_server</div><div class="ttdef"><b>Definition</b> <a href="#l00015">aprs_structures.h:15</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a4c0c107a7986a6b5edd1d17e2389fb2d"><div class="ttname"><a href="structaprs_message.html#a4c0c107a7986a6b5edd1d17e2389fb2d">aprsMessage::msg_source_fw_version</a></div><div class="ttdeci">uint8_t msg_source_fw_version</div><div class="ttdef"><b>Definition</b> <a href="#l00031">aprs_structures.h:31</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a5071f0b74d7c273993497389c0af6048"><div class="ttname"><a href="structaprs_message.html#a5071f0b74d7c273993497389c0af6048">aprsMessage::msg_source_path</a></div><div class="ttdeci">String msg_source_path</div><div class="ttdef"><b>Definition</b> <a href="#l00020">aprs_structures.h:20</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a629f749c8ebed545394645fc5035ca9b"><div class="ttname"><a href="structaprs_message.html#a629f749c8ebed545394645fc5035ca9b">aprsMessage::msg_id</a></div><div class="ttdeci">unsigned int msg_id</div><div class="ttdef"><b>Definition</b> <a href="#l00012">aprs_structures.h:12</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a651f469a3e0c07aeef0b667f37dd725f"><div class="ttname"><a href="structaprs_message.html#a651f469a3e0c07aeef0b667f37dd725f">aprsMessage::msg_source_call</a></div><div class="ttdeci">String msg_source_call</div><div class="ttdef"><b>Definition</b> <a href="#l00021">aprs_structures.h:21</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a6bb0230bfd7355a7926a346e5d4289a7"><div class="ttname"><a href="structaprs_message.html#a6bb0230bfd7355a7926a346e5d4289a7">aprsMessage::msg_gateway_call</a></div><div class="ttdeci">String msg_gateway_call</div><div class="ttdef"><b>Definition</b> <a href="#l00027">aprs_structures.h:27</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a7f6b77ad326eca209c8f0fa6cdf034d7"><div class="ttname"><a href="structaprs_message.html#a7f6b77ad326eca209c8f0fa6cdf034d7">aprsMessage::msg_destination_path</a></div><div class="ttdeci">String msg_destination_path</div><div class="ttdef"><b>Definition</b> <a href="#l00023">aprs_structures.h:23</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a80a03a59e631b6ef2233584b5458cf55"><div class="ttname"><a href="structaprs_message.html#a80a03a59e631b6ef2233584b5458cf55">aprsMessage::msg_fcs</a></div><div class="ttdeci">unsigned int msg_fcs</div><div class="ttdef"><b>Definition</b> <a href="#l00028">aprs_structures.h:28</a></div></div>
+<div class="ttc" id="astructaprs_message_html_a96d6075498e2e6b169e126da78b17de3"><div class="ttname"><a href="structaprs_message.html#a96d6075498e2e6b169e126da78b17de3">aprsMessage::msg_source_last</a></div><div class="ttdeci">String msg_source_last</div><div class="ttdef"><b>Definition</b> <a href="#l00022">aprs_structures.h:22</a></div></div>
+<div class="ttc" id="astructaprs_message_html_aa5b09414247136973e1bc62d447a739c"><div class="ttname"><a href="structaprs_message.html#aa5b09414247136973e1bc62d447a739c">aprsMessage::max_hop</a></div><div class="ttdeci">uint8_t max_hop</div><div class="ttdef"><b>Definition</b> <a href="#l00014">aprs_structures.h:14</a></div></div>
+<div class="ttc" id="astructaprs_message_html_aa9685ab11afac05536846e25e9c7fb75"><div class="ttname"><a href="structaprs_message.html#aa9685ab11afac05536846e25e9c7fb75">aprsMessage::msg_app_offline</a></div><div class="ttdeci">bool msg_app_offline</div><div class="ttdef"><b>Definition</b> <a href="#l00017">aprs_structures.h:17</a></div></div>
+<div class="ttc" id="astructaprs_message_html_aacbf3d878e20110909f2c93f8fe501d5"><div class="ttname"><a href="structaprs_message.html#aacbf3d878e20110909f2c93f8fe501d5">aprsMessage::msg_track</a></div><div class="ttdeci">bool msg_track</div><div class="ttdef"><b>Definition</b> <a href="#l00016">aprs_structures.h:16</a></div></div>
+<div class="ttc" id="astructaprs_message_html_ab17ad7464ec87ea101a82aba1c55e1d9"><div class="ttname"><a href="structaprs_message.html#ab17ad7464ec87ea101a82aba1c55e1d9">aprsMessage::payload_type</a></div><div class="ttdeci">char payload_type</div><div class="ttdef"><b>Definition</b> <a href="#l00011">aprs_structures.h:11</a></div></div>
+<div class="ttc" id="astructaprs_message_html_ac896d9243fe8581e474ecdef42f22dd2"><div class="ttname"><a href="structaprs_message.html#ac896d9243fe8581e474ecdef42f22dd2">aprsMessage::msg_last_hw</a></div><div class="ttdeci">uint8_t msg_last_hw</div><div class="ttdef"><b>Definition</b> <a href="#l00033">aprs_structures.h:33</a></div></div>
+<div class="ttc" id="astructaprs_message_html_ad5145a2c05f38f9b64f641fc1bf8c77c"><div class="ttname"><a href="structaprs_message.html#ad5145a2c05f38f9b64f641fc1bf8c77c">aprsMessage::msg_last_path_cnt</a></div><div class="ttdeci">uint8_t msg_last_path_cnt</div><div class="ttdef"><b>Definition</b> <a href="#l00034">aprs_structures.h:34</a></div></div>
+<div class="ttc" id="astructaprs_message_html_add252b10de35eed47f6330032375d3a5"><div class="ttname"><a href="structaprs_message.html#add252b10de35eed47f6330032375d3a5">aprsMessage::msg_len</a></div><div class="ttdeci">uint16_t msg_len</div><div class="ttdef"><b>Definition</b> <a href="#l00010">aprs_structures.h:10</a></div></div>
+<div class="ttc" id="astructaprs_message_html_aee72343d9e00c9857b35bf4fcc42bea4"><div class="ttname"><a href="structaprs_message.html#aee72343d9e00c9857b35bf4fcc42bea4">aprsMessage::msg_source_hw</a></div><div class="ttdeci">uint8_t msg_source_hw</div><div class="ttdef"><b>Definition</b> <a href="#l00029">aprs_structures.h:29</a></div></div>
+<div class="ttc" id="astructaprs_message_html_aeeaa6b7d8ee1136c618954c8e3bedeb4"><div class="ttname"><a href="structaprs_message.html#aeeaa6b7d8ee1136c618954c8e3bedeb4">aprsMessage::msg_destination_last</a></div><div class="ttdeci">String msg_destination_last</div><div class="ttdef"><b>Definition</b> <a href="#l00025">aprs_structures.h:25</a></div></div>
+<div class="ttc" id="astructaprs_message_html_af2dcc191ddb8221d824760ff11613c4b"><div class="ttname"><a href="structaprs_message.html#af2dcc191ddb8221d824760ff11613c4b">aprsMessage::msg_source_mod</a></div><div class="ttdeci">uint8_t msg_source_mod</div><div class="ttdef"><b>Definition</b> <a href="#l00030">aprs_structures.h:30</a></div></div>
+<div class="ttc" id="astructaprs_message_html_af77f2cebf294efd8ee04732ca3390143"><div class="ttname"><a href="structaprs_message.html#af77f2cebf294efd8ee04732ca3390143">aprsMessage::msg_mesh</a></div><div class="ttdeci">bool msg_mesh</div><div class="ttdef"><b>Definition</b> <a href="#l00018">aprs_structures.h:18</a></div></div>
+<div class="ttc" id="astructaprs_position_html"><div class="ttname"><a href="structaprs_position.html">aprsPosition</a></div><div class="ttdef"><b>Definition</b> <a href="#l00037">aprs_structures.h:38</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a160a52f5737f4dd308809329e32aa92d"><div class="ttname"><a href="structaprs_position.html#a160a52f5737f4dd308809329e32aa92d">aprsPosition::qfe</a></div><div class="ttdeci">int qfe</div><div class="ttdef"><b>Definition</b> <a href="#l00057">aprs_structures.h:57</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a18b370fb5b4c431171498e34c564f051"><div class="ttname"><a href="structaprs_position.html#a18b370fb5b4c431171498e34c564f051">aprsPosition::press</a></div><div class="ttdeci">float press</div><div class="ttdef"><b>Definition</b> <a href="#l00053">aprs_structures.h:53</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a23a79b1e4ed7606ce631a26bf3fcaf47"><div class="ttname"><a href="structaprs_position.html#a23a79b1e4ed7606ce631a26bf3fcaf47">aprsPosition::qnh</a></div><div class="ttdeci">float qnh</div><div class="ttdef"><b>Definition</b> <a href="#l00058">aprs_structures.h:58</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a2a40bcafebb0985084b38d27b6e79137"><div class="ttname"><a href="structaprs_position.html#a2a40bcafebb0985084b38d27b6e79137">aprsPosition::lat_c</a></div><div class="ttdeci">char lat_c</div><div class="ttdef"><b>Definition</b> <a href="#l00042">aprs_structures.h:42</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a2b55f01d89d936646d586973a37d85d9"><div class="ttname"><a href="structaprs_position.html#a2b55f01d89d936646d586973a37d85d9">aprsPosition::temp</a></div><div class="ttdeci">float temp</div><div class="ttdef"><b>Definition</b> <a href="#l00055">aprs_structures.h:55</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a4d4b53bbda3d03fad6e829ad2d63239a"><div class="ttname"><a href="structaprs_position.html#a4d4b53bbda3d03fad6e829ad2d63239a">aprsPosition::lat</a></div><div class="ttdeci">double lat</div><div class="ttdef"><b>Definition</b> <a href="#l00041">aprs_structures.h:41</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a52148fdc1b39a10faa77a5e0420b323e"><div class="ttname"><a href="structaprs_position.html#a52148fdc1b39a10faa77a5e0420b323e">aprsPosition::bat</a></div><div class="ttdeci">int bat</div><div class="ttdef"><b>Definition</b> <a href="#l00046">aprs_structures.h:46</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a5d1a7498404813dd567769d79f5266a3"><div class="ttname"><a href="structaprs_position.html#a5d1a7498404813dd567769d79f5266a3">aprsPosition::pos_atxt</a></div><div class="ttdeci">String pos_atxt</div><div class="ttdef"><b>Definition</b> <a href="#l00039">aprs_structures.h:39</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a5d88656534eb9e2c00878729df990670"><div class="ttname"><a href="structaprs_position.html#a5d88656534eb9e2c00878729df990670">aprsPosition::lat_d</a></div><div class="ttdeci">double lat_d</div><div class="ttdef"><b>Definition</b> <a href="#l00047">aprs_structures.h:47</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a6ffb3299321930cc9a3b94a7bc1c9ab2"><div class="ttname"><a href="structaprs_position.html#a6ffb3299321930cc9a3b94a7bc1c9ab2">aprsPosition::version</a></div><div class="ttdeci">int version</div><div class="ttdef"><b>Definition</b> <a href="#l00063">aprs_structures.h:63</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a80aec232ab9679fafce0a9e72d60b608"><div class="ttname"><a href="structaprs_position.html#a80aec232ab9679fafce0a9e72d60b608">aprsPosition::alt</a></div><div class="ttdeci">int alt</div><div class="ttdef"><b>Definition</b> <a href="#l00045">aprs_structures.h:45</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a8a8d8e173713ce73d968c825e241dc80"><div class="ttname"><a href="structaprs_position.html#a8a8d8e173713ce73d968c825e241dc80">aprsPosition::lon</a></div><div class="ttdeci">double lon</div><div class="ttdef"><b>Definition</b> <a href="#l00043">aprs_structures.h:43</a></div></div>
+<div class="ttc" id="astructaprs_position_html_a900b715f28d6a1ff5d6a958ba6f9b0de"><div class="ttname"><a href="structaprs_position.html#a900b715f28d6a1ff5d6a958ba6f9b0de">aprsPosition::temp2</a></div><div class="ttdeci">float temp2</div><div class="ttdef"><b>Definition</b> <a href="#l00056">aprs_structures.h:56</a></div></div>
+<div class="ttc" id="astructaprs_position_html_aa449d0c7293c59e971ccc448cc526245"><div class="ttname"><a href="structaprs_position.html#aa449d0c7293c59e971ccc448cc526245">aprsPosition::aprs_symbol</a></div><div class="ttdeci">char aprs_symbol</div><div class="ttdef"><b>Definition</b> <a href="#l00050">aprs_structures.h:50</a></div></div>
+<div class="ttc" id="astructaprs_position_html_ab92136c29be3de315449ae793a18f0ac"><div class="ttname"><a href="structaprs_position.html#ab92136c29be3de315449ae793a18f0ac">aprsPosition::hum</a></div><div class="ttdeci">float hum</div><div class="ttdef"><b>Definition</b> <a href="#l00054">aprs_structures.h:54</a></div></div>
+<div class="ttc" id="astructaprs_position_html_ac10b3e7d19b54e97e8f98b3ba23015cd"><div class="ttname"><a href="structaprs_position.html#ac10b3e7d19b54e97e8f98b3ba23015cd">aprsPosition::aprs_group</a></div><div class="ttdeci">char aprs_group</div><div class="ttdef"><b>Definition</b> <a href="#l00049">aprs_structures.h:49</a></div></div>
+<div class="ttc" id="astructaprs_position_html_ad7495880b2086d6c9e6796f318a80a63"><div class="ttname"><a href="structaprs_position.html#ad7495880b2086d6c9e6796f318a80a63">aprsPosition::telemetry</a></div><div class="ttdeci">int telemetry</div><div class="ttdef"><b>Definition</b> <a href="#l00064">aprs_structures.h:64</a></div></div>
+<div class="ttc" id="astructaprs_position_html_ae74a80055478d72deaea410ab9199cbb"><div class="ttname"><a href="structaprs_position.html#ae74a80055478d72deaea410ab9199cbb">aprsPosition::lon_c</a></div><div class="ttdeci">char lon_c</div><div class="ttdef"><b>Definition</b> <a href="#l00044">aprs_structures.h:44</a></div></div>
+<div class="ttc" id="astructaprs_position_html_aec17ea3852632ee53a33ccaa8fc60d98"><div class="ttname"><a href="structaprs_position.html#aec17ea3852632ee53a33ccaa8fc60d98">aprsPosition::lon_d</a></div><div class="ttdeci">double lon_d</div><div class="ttdef"><b>Definition</b> <a href="#l00048">aprs_structures.h:48</a></div></div>
+<div class="ttc" id="astructaprs_position_html_af236ced1b0d1c2a63aa1c48302fa3de7"><div class="ttname"><a href="structaprs_position.html#af236ced1b0d1c2a63aa1c48302fa3de7">aprsPosition::co2</a></div><div class="ttdeci">float co2</div><div class="ttdef"><b>Definition</b> <a href="#l00060">aprs_structures.h:60</a></div></div>
+<div class="ttc" id="astructaprs_position_html_af25bf20efc9d93874fddc3ec13f0e4a5"><div class="ttname"><a href="structaprs_position.html#af25bf20efc9d93874fddc3ec13f0e4a5">aprsPosition::gasres</a></div><div class="ttdeci">float gasres</div><div class="ttdef"><b>Definition</b> <a href="#l00059">aprs_structures.h:59</a></div></div>
+<div class="ttc" id="astructmheard_line_html"><div class="ttname"><a href="structmheard_line.html">mheardLine</a></div><div class="ttdef"><b>Definition</b> <a href="#l00067">aprs_structures.h:68</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a030433b8c7c0146d47c6e5c8460908ef"><div class="ttname"><a href="structmheard_line.html#a030433b8c7c0146d47c6e5c8460908ef">mheardLine::mh_sourcepath</a></div><div class="ttdeci">String mh_sourcepath</div><div class="ttdef"><b>Definition</b> <a href="#l00073">aprs_structures.h:73</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a2cd3b3407ea647c199c515fecba6e333"><div class="ttname"><a href="structmheard_line.html#a2cd3b3407ea647c199c515fecba6e333">mheardLine::mh_date</a></div><div class="ttdeci">String mh_date</div><div class="ttdef"><b>Definition</b> <a href="#l00070">aprs_structures.h:70</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a442336594c4510282d03ad7715d3bc3e"><div class="ttname"><a href="structmheard_line.html#a442336594c4510282d03ad7715d3bc3e">mheardLine::mh_time</a></div><div class="ttdeci">String mh_time</div><div class="ttdef"><b>Definition</b> <a href="#l00071">aprs_structures.h:71</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a5b6f5240c73b77f3fcd1877f1bdb1ac3"><div class="ttname"><a href="structmheard_line.html#a5b6f5240c73b77f3fcd1877f1bdb1ac3">mheardLine::mh_mod</a></div><div class="ttdeci">uint8_t mh_mod</div><div class="ttdef"><b>Definition</b> <a href="#l00077">aprs_structures.h:77</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a691cc93a73a31585b0125218d444cf87"><div class="ttname"><a href="structmheard_line.html#a691cc93a73a31585b0125218d444cf87">mheardLine::mh_payload_type</a></div><div class="ttdeci">char mh_payload_type</div><div class="ttdef"><b>Definition</b> <a href="#l00075">aprs_structures.h:75</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a847d27140fc872ce6ec5e2693c0b8ed8"><div class="ttname"><a href="structmheard_line.html#a847d27140fc872ce6ec5e2693c0b8ed8">mheardLine::mh_mesh</a></div><div class="ttdeci">uint8_t mh_mesh</div><div class="ttdef"><b>Definition</b> <a href="#l00082">aprs_structures.h:82</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a8cd58b8fe92326d94517d3e4fe31221d"><div class="ttname"><a href="structmheard_line.html#a8cd58b8fe92326d94517d3e4fe31221d">mheardLine::mh_sourcecallsign</a></div><div class="ttdeci">String mh_sourcecallsign</div><div class="ttdef"><b>Definition</b> <a href="#l00072">aprs_structures.h:72</a></div></div>
+<div class="ttc" id="astructmheard_line_html_a97a681aa0025e8f57acbcbc7ffbea736"><div class="ttname"><a href="structmheard_line.html#a97a681aa0025e8f57acbcbc7ffbea736">mheardLine::mh_rssi</a></div><div class="ttdeci">int16_t mh_rssi</div><div class="ttdef"><b>Definition</b> <a href="#l00078">aprs_structures.h:78</a></div></div>
+<div class="ttc" id="astructmheard_line_html_ad121fe6ddd6bf0ee8d64917c00fd0f01"><div class="ttname"><a href="structmheard_line.html#ad121fe6ddd6bf0ee8d64917c00fd0f01">mheardLine::mh_hw</a></div><div class="ttdeci">uint8_t mh_hw</div><div class="ttdef"><b>Definition</b> <a href="#l00076">aprs_structures.h:76</a></div></div>
+<div class="ttc" id="astructmheard_line_html_ae5a01c413fb6effc4f6992626b50a89d"><div class="ttname"><a href="structmheard_line.html#ae5a01c413fb6effc4f6992626b50a89d">mheardLine::mh_snr</a></div><div class="ttdeci">int8_t mh_snr</div><div class="ttdef"><b>Definition</b> <a href="#l00079">aprs_structures.h:79</a></div></div>
+<div class="ttc" id="astructmheard_line_html_aeb6f17ccd2673da8a96b385cd98169b8"><div class="ttname"><a href="structmheard_line.html#aeb6f17ccd2673da8a96b385cd98169b8">mheardLine::mh_path_len</a></div><div class="ttdeci">uint8_t mh_path_len</div><div class="ttdef"><b>Definition</b> <a href="#l00081">aprs_structures.h:81</a></div></div>
+<div class="ttc" id="astructmheard_line_html_af4097d12505afbadbdc706dcea6c9c37"><div class="ttname"><a href="structmheard_line.html#af4097d12505afbadbdc706dcea6c9c37">mheardLine::mh_dist</a></div><div class="ttdeci">double mh_dist</div><div class="ttdef"><b>Definition</b> <a href="#l00080">aprs_structures.h:80</a></div></div>
+<div class="ttc" id="astructmheard_line_html_af623ac892b6dc7ad202daa52802bb01d"><div class="ttname"><a href="structmheard_line.html#af623ac892b6dc7ad202daa52802bb01d">mheardLine::mh_destinationpath</a></div><div class="ttdeci">String mh_destinationpath</div><div class="ttdef"><b>Definition</b> <a href="#l00074">aprs_structures.h:74</a></div></div>
+<div class="ttc" id="astructmheard_line_html_afbd3f9668ae8f31cf1609c4b2d302fdb"><div class="ttname"><a href="structmheard_line.html#afbd3f9668ae8f31cf1609c4b2d302fdb">mheardLine::mh_callsign</a></div><div class="ttdeci">String mh_callsign</div><div class="ttdef"><b>Definition</b> <a href="#l00069">aprs_structures.h:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="aprs__structures_8h.html">aprs_structures.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/esp32/esp32_audio.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('esp32__audio_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">esp32_audio.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="esp32__audio_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef _ESP32_AUDIO_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define _ESP32_AUDIO_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Audio.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Morse output parameters</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a8531b727a1ae3b559fa68b6fdf884d44">   16</a></span><span class="preprocessor">#define TONE_FREQ       700     </span><span class="comment">// 700 Hz Ton</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a4b76a0c2859cfd819a343a780070ee2b">   17</a></span><span class="preprocessor">#define SAMPLE_RATE     44100   </span><span class="comment">// Audio-Sample-Rate</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// duration Morsecode (in ms)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a5e071e9c7a8b484d195e61df90174bf1">   19</a></span><span class="preprocessor">#define DOT_DURATION    100</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a4cc45947fbf5bba21389692ebafdffb3">   20</a></span><span class="preprocessor">#define DASH_DURATION   (3 * DOT_DURATION)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a8d3884f2b08cb231f9de80ab1f885784">   21</a></span><span class="preprocessor">#define SYMBOL_PAUSE    DOT_DURATION</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a50d7d5370cbca8e90040850dc7ddad03">   22</a></span><span class="preprocessor">#define LETTER_PAUSE    (3 * DOT_DURATION)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#ad3ee2768a5213b631d9c2bbc8d518cb7">   23</a></span><span class="preprocessor">#define WORD_PAUSE      (7 * DOT_DURATION)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Buffergröße für einen Millisekunden-Ton</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a6b20d41d6252e9871430c242cb1a56e7">   25</a></span><span class="preprocessor">#define BUFFER_SIZE     (SAMPLE_RATE / 1000)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a58dd333d62d5930862baa6fe16ea71d3">   27</a></span><span class="preprocessor">#define I2S_NUM         I2S_NUM_0</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">extern</span> Audio <a class="code hl_variable" href="esp32__audio_8h.html#a7847003349895733abf9599f1cd9ca93">audio</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a72aef54bbf8430ce6d860206deb2d1ce">   31</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="esp32__audio_8h.html#a72aef54bbf8430ce6d860206deb2d1ce">init_audio</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a0c26784e672d917654be42affd2a2e87">   32</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="esp32__audio_8h.html#a0c26784e672d917654be42affd2a2e87">play_file_from_sd</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#aa739cc7c6fdf8d88916b1f1f6e6a14a4">   33</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="esp32__audio_8h.html#a0c26784e672d917654be42affd2a2e87">play_file_from_sd</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <span class="keywordtype">int</span> volume);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a6ece9d586b70f7485675fecd8990ea1d">   34</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="esp32__audio_8h.html#a6ece9d586b70f7485675fecd8990ea1d">play_file_from_sd_blocking</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#adb7efad119df5e63f9f2e464e53155aa">   35</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="esp32__audio_8h.html#a6ece9d586b70f7485675fecd8990ea1d">play_file_from_sd_blocking</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <span class="keywordtype">int</span> volume);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#af0b04b2bb6bdf9d06b1db88fb967c8dc">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="esp32__audio_8h.html#af0b04b2bb6bdf9d06b1db88fb967c8dc">play_cw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> character);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#abaf749d9a442110fc652ec5b1d79df90">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="esp32__audio_8h.html#af0b04b2bb6bdf9d06b1db88fb967c8dc">play_cw</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> character, <span class="keywordtype">int</span> volume);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a35c7837c053afd3120aa39504929a7b3">   38</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="esp32__audio_8h.html#a35c7837c053afd3120aa39504929a7b3">play_cw_start</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="esp32__audio_8h.html#a1d923c11b24292a2f5b9d6e6e3c0a08f">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="esp32__audio_8h.html#a1d923c11b24292a2f5b9d6e6e3c0a08f">play_function</a>(<span class="keywordtype">void</span> *parameter);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aesp32__audio_8h_html_a0c26784e672d917654be42affd2a2e87"><div class="ttname"><a href="esp32__audio_8h.html#a0c26784e672d917654be42affd2a2e87">play_file_from_sd</a></div><div class="ttdeci">bool play_file_from_sd(const char *filename)</div></div>
+<div class="ttc" id="aesp32__audio_8h_html_a1d923c11b24292a2f5b9d6e6e3c0a08f"><div class="ttname"><a href="esp32__audio_8h.html#a1d923c11b24292a2f5b9d6e6e3c0a08f">play_function</a></div><div class="ttdeci">void play_function(void *parameter)</div></div>
+<div class="ttc" id="aesp32__audio_8h_html_a35c7837c053afd3120aa39504929a7b3"><div class="ttname"><a href="esp32__audio_8h.html#a35c7837c053afd3120aa39504929a7b3">play_cw_start</a></div><div class="ttdeci">void play_cw_start()</div></div>
+<div class="ttc" id="aesp32__audio_8h_html_a6ece9d586b70f7485675fecd8990ea1d"><div class="ttname"><a href="esp32__audio_8h.html#a6ece9d586b70f7485675fecd8990ea1d">play_file_from_sd_blocking</a></div><div class="ttdeci">bool play_file_from_sd_blocking(const char *filename)</div></div>
+<div class="ttc" id="aesp32__audio_8h_html_a72aef54bbf8430ce6d860206deb2d1ce"><div class="ttname"><a href="esp32__audio_8h.html#a72aef54bbf8430ce6d860206deb2d1ce">init_audio</a></div><div class="ttdeci">void init_audio()</div></div>
+<div class="ttc" id="aesp32__audio_8h_html_a7847003349895733abf9599f1cd9ca93"><div class="ttname"><a href="esp32__audio_8h.html#a7847003349895733abf9599f1cd9ca93">audio</a></div><div class="ttdeci">Audio audio</div><div class="ttdef"><b>Definition</b> <a href="tdeck__pro_8cpp_source.html#l00034">tdeck_pro.cpp:34</a></div></div>
+<div class="ttc" id="aesp32__audio_8h_html_af0b04b2bb6bdf9d06b1db88fb967c8dc"><div class="ttname"><a href="esp32__audio_8h.html#af0b04b2bb6bdf9d06b1db88fb967c8dc">play_cw</a></div><div class="ttdeci">void play_cw(const char character)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_d35e8d9c847c512a0480f8070ffef7ed.html">esp32</a></li><li class="navelem"><a href="esp32__audio_8h.html">esp32_audio.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

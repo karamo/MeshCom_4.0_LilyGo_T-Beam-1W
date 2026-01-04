@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/esp32/esp32_audio.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('esp32__audio_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">esp32_audio.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>functions for handling audio playback on ESP32  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &lt;Audio.h&gt;</code><br />
+</div>
+<p><a href="esp32__audio_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a8531b727a1ae3b559fa68b6fdf884d44" id="r_a8531b727a1ae3b559fa68b6fdf884d44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8531b727a1ae3b559fa68b6fdf884d44">TONE_FREQ</a>&#160;&#160;&#160;700</td></tr>
+<tr class="memitem:a4b76a0c2859cfd819a343a780070ee2b" id="r_a4b76a0c2859cfd819a343a780070ee2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b76a0c2859cfd819a343a780070ee2b">SAMPLE_RATE</a>&#160;&#160;&#160;44100</td></tr>
+<tr class="memitem:a5e071e9c7a8b484d195e61df90174bf1" id="r_a5e071e9c7a8b484d195e61df90174bf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>&#160;&#160;&#160;100</td></tr>
+<tr class="memitem:a4cc45947fbf5bba21389692ebafdffb3" id="r_a4cc45947fbf5bba21389692ebafdffb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc45947fbf5bba21389692ebafdffb3">DASH_DURATION</a>&#160;&#160;&#160;(3 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td></tr>
+<tr class="memitem:a8d3884f2b08cb231f9de80ab1f885784" id="r_a8d3884f2b08cb231f9de80ab1f885784"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d3884f2b08cb231f9de80ab1f885784">SYMBOL_PAUSE</a>&#160;&#160;&#160;<a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a></td></tr>
+<tr class="memitem:a50d7d5370cbca8e90040850dc7ddad03" id="r_a50d7d5370cbca8e90040850dc7ddad03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50d7d5370cbca8e90040850dc7ddad03">LETTER_PAUSE</a>&#160;&#160;&#160;(3 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td></tr>
+<tr class="memitem:ad3ee2768a5213b631d9c2bbc8d518cb7" id="r_ad3ee2768a5213b631d9c2bbc8d518cb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3ee2768a5213b631d9c2bbc8d518cb7">WORD_PAUSE</a>&#160;&#160;&#160;(7 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;(<a class="el" href="#a4b76a0c2859cfd819a343a780070ee2b">SAMPLE_RATE</a> / 1000)</td></tr>
+<tr class="memitem:a58dd333d62d5930862baa6fe16ea71d3" id="r_a58dd333d62d5930862baa6fe16ea71d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58dd333d62d5930862baa6fe16ea71d3">I2S_NUM</a>&#160;&#160;&#160;I2S_NUM_0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a72aef54bbf8430ce6d860206deb2d1ce" id="r_a72aef54bbf8430ce6d860206deb2d1ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72aef54bbf8430ce6d860206deb2d1ce">init_audio</a> ()</td></tr>
+<tr class="memitem:a0c26784e672d917654be42affd2a2e87" id="r_a0c26784e672d917654be42affd2a2e87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c26784e672d917654be42affd2a2e87">play_file_from_sd</a> (const char *filename)</td></tr>
+<tr class="memitem:aa739cc7c6fdf8d88916b1f1f6e6a14a4" id="r_aa739cc7c6fdf8d88916b1f1f6e6a14a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa739cc7c6fdf8d88916b1f1f6e6a14a4">play_file_from_sd</a> (const char *filename, int volume)</td></tr>
+<tr class="memitem:a6ece9d586b70f7485675fecd8990ea1d" id="r_a6ece9d586b70f7485675fecd8990ea1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ece9d586b70f7485675fecd8990ea1d">play_file_from_sd_blocking</a> (const char *filename)</td></tr>
+<tr class="memitem:adb7efad119df5e63f9f2e464e53155aa" id="r_adb7efad119df5e63f9f2e464e53155aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7efad119df5e63f9f2e464e53155aa">play_file_from_sd_blocking</a> (const char *filename, int volume)</td></tr>
+<tr class="memitem:af0b04b2bb6bdf9d06b1db88fb967c8dc" id="r_af0b04b2bb6bdf9d06b1db88fb967c8dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0b04b2bb6bdf9d06b1db88fb967c8dc">play_cw</a> (const char character)</td></tr>
+<tr class="memitem:abaf749d9a442110fc652ec5b1d79df90" id="r_abaf749d9a442110fc652ec5b1d79df90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf749d9a442110fc652ec5b1d79df90">play_cw</a> (const char character, int volume)</td></tr>
+<tr class="memitem:a35c7837c053afd3120aa39504929a7b3" id="r_a35c7837c053afd3120aa39504929a7b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35c7837c053afd3120aa39504929a7b3">play_cw_start</a> ()</td></tr>
+<tr class="memitem:a1d923c11b24292a2f5b9d6e6e3c0a08f" id="r_a1d923c11b24292a2f5b9d6e6e3c0a08f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d923c11b24292a2f5b9d6e6e3c0a08f">play_function</a> (void *parameter)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a7847003349895733abf9599f1cd9ca93" id="r_a7847003349895733abf9599f1cd9ca93"><td class="memItemLeft" align="right" valign="top">Audio&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7847003349895733abf9599f1cd9ca93">audio</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>functions for handling audio playback on ESP32 </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Jakob Gurnhofer (OE3GJC) @license MIT </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 ICSSW.org </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2025-05-28 </dd></dl>
+
+<p class="definition">Definiert in Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;(<a class="el" href="#a4b76a0c2859cfd819a343a780070ee2b">SAMPLE_RATE</a> / 1000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00025">25</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cc45947fbf5bba21389692ebafdffb3" name="a4cc45947fbf5bba21389692ebafdffb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc45947fbf5bba21389692ebafdffb3">&#9670;&#160;</a></span>DASH_DURATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DASH_DURATION&#160;&#160;&#160;(3 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00020">20</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e071e9c7a8b484d195e61df90174bf1" name="a5e071e9c7a8b484d195e61df90174bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e071e9c7a8b484d195e61df90174bf1">&#9670;&#160;</a></span>DOT_DURATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOT_DURATION&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00019">19</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a58dd333d62d5930862baa6fe16ea71d3" name="a58dd333d62d5930862baa6fe16ea71d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58dd333d62d5930862baa6fe16ea71d3">&#9670;&#160;</a></span>I2S_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2S_NUM&#160;&#160;&#160;I2S_NUM_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00027">27</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a50d7d5370cbca8e90040850dc7ddad03" name="a50d7d5370cbca8e90040850dc7ddad03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d7d5370cbca8e90040850dc7ddad03">&#9670;&#160;</a></span>LETTER_PAUSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LETTER_PAUSE&#160;&#160;&#160;(3 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00022">22</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b76a0c2859cfd819a343a780070ee2b" name="a4b76a0c2859cfd819a343a780070ee2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b76a0c2859cfd819a343a780070ee2b">&#9670;&#160;</a></span>SAMPLE_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_RATE&#160;&#160;&#160;44100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00017">17</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d3884f2b08cb231f9de80ab1f885784" name="a8d3884f2b08cb231f9de80ab1f885784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3884f2b08cb231f9de80ab1f885784">&#9670;&#160;</a></span>SYMBOL_PAUSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYMBOL_PAUSE&#160;&#160;&#160;<a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00021">21</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="a8531b727a1ae3b559fa68b6fdf884d44" name="a8531b727a1ae3b559fa68b6fdf884d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8531b727a1ae3b559fa68b6fdf884d44">&#9670;&#160;</a></span>TONE_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TONE_FREQ&#160;&#160;&#160;700</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00016">16</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a id="ad3ee2768a5213b631d9c2bbc8d518cb7" name="ad3ee2768a5213b631d9c2bbc8d518cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ee2768a5213b631d9c2bbc8d518cb7">&#9670;&#160;</a></span>WORD_PAUSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORD_PAUSE&#160;&#160;&#160;(7 * <a class="el" href="#a5e071e9c7a8b484d195e61df90174bf1">DOT_DURATION</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__audio_8h_source.html#l00023">23</a> der Datei <a class="el" href="esp32__audio_8h_source.html">esp32_audio.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a72aef54bbf8430ce6d860206deb2d1ce" name="a72aef54bbf8430ce6d860206deb2d1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72aef54bbf8430ce6d860206deb2d1ce">&#9670;&#160;</a></span>init_audio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_audio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0b04b2bb6bdf9d06b1db88fb967c8dc" name="af0b04b2bb6bdf9d06b1db88fb967c8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b04b2bb6bdf9d06b1db88fb967c8dc">&#9670;&#160;</a></span>play_cw() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_cw </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>character</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaf749d9a442110fc652ec5b1d79df90" name="abaf749d9a442110fc652ec5b1d79df90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf749d9a442110fc652ec5b1d79df90">&#9670;&#160;</a></span>play_cw() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_cw </td>
+          <td>(</td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>character</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35c7837c053afd3120aa39504929a7b3" name="a35c7837c053afd3120aa39504929a7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c7837c053afd3120aa39504929a7b3">&#9670;&#160;</a></span>play_cw_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_cw_start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c26784e672d917654be42affd2a2e87" name="a0c26784e672d917654be42affd2a2e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c26784e672d917654be42affd2a2e87">&#9670;&#160;</a></span>play_file_from_sd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool play_file_from_sd </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa739cc7c6fdf8d88916b1f1f6e6a14a4" name="aa739cc7c6fdf8d88916b1f1f6e6a14a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa739cc7c6fdf8d88916b1f1f6e6a14a4">&#9670;&#160;</a></span>play_file_from_sd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool play_file_from_sd </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ece9d586b70f7485675fecd8990ea1d" name="a6ece9d586b70f7485675fecd8990ea1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ece9d586b70f7485675fecd8990ea1d">&#9670;&#160;</a></span>play_file_from_sd_blocking() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool play_file_from_sd_blocking </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb7efad119df5e63f9f2e464e53155aa" name="adb7efad119df5e63f9f2e464e53155aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7efad119df5e63f9f2e464e53155aa">&#9670;&#160;</a></span>play_file_from_sd_blocking() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool play_file_from_sd_blocking </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d923c11b24292a2f5b9d6e6e3c0a08f" name="a1d923c11b24292a2f5b9d6e6e3c0a08f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d923c11b24292a2f5b9d6e6e3c0a08f">&#9670;&#160;</a></span>play_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_function </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>parameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a7847003349895733abf9599f1cd9ca93" name="a7847003349895733abf9599f1cd9ca93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7847003349895733abf9599f1cd9ca93">&#9670;&#160;</a></span>audio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Audio audio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="tdeck__pro_8cpp_source.html#l00034">34</a> der Datei <a class="el" href="tdeck__pro_8cpp_source.html">tdeck_pro.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_d35e8d9c847c512a0480f8070ffef7ed.html">esp32</a></li><li class="navelem"><a href="esp32__audio_8h.html">esp32_audio.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

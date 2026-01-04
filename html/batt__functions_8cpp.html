@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/batt_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('batt__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">batt_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &quot;esp_adc_cal.h&quot;</code><br />
+</div>
+<p><a href="batt__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a63baed8df076ce9dddaea1ae8694c1d8" id="r_a63baed8df076ce9dddaea1ae8694c1d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63baed8df076ce9dddaea1ae8694c1d8">DEFAULT_VREF</a>&#160;&#160;&#160;1100</td></tr>
+<tr class="memitem:ad4189ffd3a90a1d83afbc51359211d55" id="r_ad4189ffd3a90a1d83afbc51359211d55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4189ffd3a90a1d83afbc51359211d55">NO_OF_SAMPLES</a>&#160;&#160;&#160;64</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:ae6538c5b8119c06031c516b44009e82b" id="r_ae6538c5b8119c06031c516b44009e82b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6538c5b8119c06031c516b44009e82b">check_efuse</a> (void)</td></tr>
+<tr class="memitem:af85584ec8c514506b08c28ab4626fe06" id="r_af85584ec8c514506b08c28ab4626fe06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af85584ec8c514506b08c28ab4626fe06">print_char_val_type</a> (esp_adc_cal_value_t val_type)</td></tr>
+<tr class="memitem:a3b162e00d4348ab6a16d04d0d57fea64" id="r_a3b162e00d4348ab6a16d04d0d57fea64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b162e00d4348ab6a16d04d0d57fea64">init_batt</a> (void)</td></tr>
+<tr class="memdesc:a3b162e00d4348ab6a16d04d0d57fea64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the battery analog input.  <br /></td></tr>
+<tr class="memitem:ad625f6cda5a663cdeedf9d258a4bad40" id="r_ad625f6cda5a663cdeedf9d258a4bad40"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad625f6cda5a663cdeedf9d258a4bad40">read_batt</a> (void)</td></tr>
+<tr class="memdesc:ad625f6cda5a663cdeedf9d258a4bad40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the analog value from the battery analog pin and convert it to milli volt.  <br /></td></tr>
+<tr class="memitem:a55447c904a00113e6fd0e8631c9f27ab" id="r_a55447c904a00113e6fd0e8631c9f27ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55447c904a00113e6fd0e8631c9f27ab">setMaxBatt</a> (float u_max_batt)</td></tr>
+<tr class="memitem:a5ecb52b229b289b92f4da422ec22f576" id="r_a5ecb52b229b289b92f4da422ec22f576"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ecb52b229b289b92f4da422ec22f576">mv_to_percent</a> (float mvolts)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:aedb67ea8e6535aafefe6450f27d1809c" id="r_aedb67ea8e6535aafefe6450f27d1809c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedb67ea8e6535aafefe6450f27d1809c">global_batt</a> = 0</td></tr>
+<tr class="memitem:a1b7005d65461e38d791d1ad94f1cf9bf" id="r_a1b7005d65461e38d791d1ad94f1cf9bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b7005d65461e38d791d1ad94f1cf9bf">global_proz</a> = 0</td></tr>
+<tr class="memitem:a0cabc235971a35abd43a7f0612bcee91" id="r_a0cabc235971a35abd43a7f0612bcee91"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cabc235971a35abd43a7f0612bcee91">BattTimeWait</a> = 0</td></tr>
+<tr class="memitem:a53e01ac76ded1c16014d4f0e2f4b42b5" id="r_a53e01ac76ded1c16014d4f0e2f4b42b5"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53e01ac76ded1c16014d4f0e2f4b42b5">BattTimeAPP</a> = 0</td></tr>
+<tr class="memitem:a1899d3edf642e42fe236c1ffff522786" id="r_a1899d3edf642e42fe236c1ffff522786"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1899d3edf642e42fe236c1ffff522786">is_receiving</a></td></tr>
+<tr class="memitem:aab58964dc06c3a15ea34b9d8588d2efb" id="r_aab58964dc06c3a15ea34b9d8588d2efb"><td class="memItemLeft" align="right" valign="top">esp_adc_cal_characteristics_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab58964dc06c3a15ea34b9d8588d2efb">adc_chars</a> [sizeof(esp_adc_cal_characteristics_t)]</td></tr>
+<tr class="memitem:aa12acc42ac2e72796be577bede1301eb" id="r_aa12acc42ac2e72796be577bede1301eb"><td class="memItemLeft" align="right" valign="top">adc_atten_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa12acc42ac2e72796be577bede1301eb">atten</a> = ADC_ATTEN_DB_0</td></tr>
+<tr class="memitem:a9829c0f9b6e88193dc9e7d08bad23c06" id="r_a9829c0f9b6e88193dc9e7d08bad23c06"><td class="memItemLeft" align="right" valign="top">adc_unit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9829c0f9b6e88193dc9e7d08bad23c06">unit</a> = ADC_UNIT_1</td></tr>
+<tr class="memitem:a36f7cd46284753237ec61cbc5cd59cc7" id="r_a36f7cd46284753237ec61cbc5cd59cc7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36f7cd46284753237ec61cbc5cd59cc7">max_batt</a> = 4.125</td></tr>
+<tr class="memdesc:a36f7cd46284753237ec61cbc5cd59cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate the battery level in percentage from milli volts.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="a63baed8df076ce9dddaea1ae8694c1d8" name="a63baed8df076ce9dddaea1ae8694c1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63baed8df076ce9dddaea1ae8694c1d8">&#9670;&#160;</a></span>DEFAULT_VREF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_VREF&#160;&#160;&#160;1100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00064">64</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad4189ffd3a90a1d83afbc51359211d55" name="ad4189ffd3a90a1d83afbc51359211d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4189ffd3a90a1d83afbc51359211d55">&#9670;&#160;</a></span>NO_OF_SAMPLES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NO_OF_SAMPLES&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00065">65</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="ae6538c5b8119c06031c516b44009e82b" name="ae6538c5b8119c06031c516b44009e82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6538c5b8119c06031c516b44009e82b">&#9670;&#160;</a></span>check_efuse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_efuse </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00119">119</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3b162e00d4348ab6a16d04d0d57fea64" name="a3b162e00d4348ab6a16d04d0d57fea64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b162e00d4348ab6a16d04d0d57fea64">&#9670;&#160;</a></span>init_batt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_batt </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the battery analog input. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00198">198</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ecb52b229b289b92f4da422ec22f576" name="a5ecb52b229b289b92f4da422ec22f576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecb52b229b289b92f4da422ec22f576">&#9670;&#160;</a></span>mv_to_percent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t mv_to_percent </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>mvolts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00460">460</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af85584ec8c514506b08c28ab4626fe06" name="af85584ec8c514506b08c28ab4626fe06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85584ec8c514506b08c28ab4626fe06">&#9670;&#160;</a></span>print_char_val_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_char_val_type </td>
+          <td>(</td>
+          <td class="paramtype">esp_adc_cal_value_t</td>          <td class="paramname"><span class="paramname"><em>val_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00161">161</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad625f6cda5a663cdeedf9d258a4bad40" name="ad625f6cda5a663cdeedf9d258a4bad40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad625f6cda5a663cdeedf9d258a4bad40">&#9670;&#160;</a></span>read_batt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float read_batt </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the analog value from the battery analog pin and convert it to milli volt. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>float Battery level in milli volts 0 ... 4200 </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00272">272</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a55447c904a00113e6fd0e8631c9f27ab" name="a55447c904a00113e6fd0e8631c9f27ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55447c904a00113e6fd0e8631c9f27ab">&#9670;&#160;</a></span>setMaxBatt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMaxBatt </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>u_max_batt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00455">455</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="aab58964dc06c3a15ea34b9d8588d2efb" name="aab58964dc06c3a15ea34b9d8588d2efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab58964dc06c3a15ea34b9d8588d2efb">&#9670;&#160;</a></span>adc_chars</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_adc_cal_characteristics_t adc_chars[sizeof(esp_adc_cal_characteristics_t)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00069">69</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa12acc42ac2e72796be577bede1301eb" name="aa12acc42ac2e72796be577bede1301eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12acc42ac2e72796be577bede1301eb">&#9670;&#160;</a></span>atten</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">adc_atten_t atten = ADC_ATTEN_DB_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00112">112</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a53e01ac76ded1c16014d4f0e2f4b42b5" name="a53e01ac76ded1c16014d4f0e2f4b42b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e01ac76ded1c16014d4f0e2f4b42b5">&#9670;&#160;</a></span>BattTimeAPP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long BattTimeAPP = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00011">11</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0cabc235971a35abd43a7f0612bcee91" name="a0cabc235971a35abd43a7f0612bcee91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cabc235971a35abd43a7f0612bcee91">&#9670;&#160;</a></span>BattTimeWait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long BattTimeWait = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00010">10</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aedb67ea8e6535aafefe6450f27d1809c" name="aedb67ea8e6535aafefe6450f27d1809c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb67ea8e6535aafefe6450f27d1809c">&#9670;&#160;</a></span>global_batt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float global_batt = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00007">7</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b7005d65461e38d791d1ad94f1cf9bf" name="a1b7005d65461e38d791d1ad94f1cf9bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7005d65461e38d791d1ad94f1cf9bf">&#9670;&#160;</a></span>global_proz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_proz = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00008">8</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1899d3edf642e42fe236c1ffff522786" name="a1899d3edf642e42fe236c1ffff522786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1899d3edf642e42fe236c1ffff522786">&#9670;&#160;</a></span>is_receiving</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_receiving</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00277">277</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a36f7cd46284753237ec61cbc5cd59cc7" name="a36f7cd46284753237ec61cbc5cd59cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f7cd46284753237ec61cbc5cd59cc7">&#9670;&#160;</a></span>max_batt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float max_batt = 4.125</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimate the battery level in percentage from milli volts. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mvolts</td><td>Milli volts measured from analog pin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>uint8_t Battery level as percentage (0 to 100) </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00453">453</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9829c0f9b6e88193dc9e7d08bad23c06" name="a9829c0f9b6e88193dc9e7d08bad23c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9829c0f9b6e88193dc9e7d08bad23c06">&#9670;&#160;</a></span>unit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">adc_unit_t unit = ADC_UNIT_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="batt__functions_8cpp_source.html#l00114">114</a> der Datei <a class="el" href="batt__functions_8cpp_source.html">batt_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="batt__functions_8cpp.html">batt_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

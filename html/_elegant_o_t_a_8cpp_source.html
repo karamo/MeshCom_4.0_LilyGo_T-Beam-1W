@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/safeboot/ElegantOTA.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_elegant_o_t_a_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ElegantOTA.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_elegant_o_t_a_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_elegant_o_t_a_8h.html">ElegantOTA.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="ota_8h.html">ota.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">    5</a></span><a class="code hl_function" href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">ElegantOTAClass::ElegantOTAClass</a>(){}</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ac6e516d54f6f83ee06c5e30990fd4526">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#ac6e516d54f6f83ee06c5e30990fd4526">ElegantOTAClass::begin</a>(ELEGANTOTA_WEBSERVER *server, <span class="keyword">const</span> <span class="keywordtype">char</span> * username, <span class="keyword">const</span> <span class="keywordtype">char</span> * password){</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a> = server;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_function" href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">setAuth</a>(username, password);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">  #if defined(TARGET_RP2040)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span> (!__isPicoW) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;RP2040: Not a Pico W, skipping OTA setup\n&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/update&quot;</span>, HTTP_GET, [&amp;](AsyncWebServerRequest *request){</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !request-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())){</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> request-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">      #if defined(ASYNCWEBSERVER_VERSION) &amp;&amp; ASYNCWEBSERVER_VERSION_MAJOR &gt; 2  </span><span class="comment">// This means we are using recommended fork of AsyncWebServer</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        AsyncWebServerResponse *response = request-&gt;beginResponse(200, <span class="stringliteral">&quot;text/html&quot;</span>, <a class="code hl_variable" href="ota_8h.html#a0a00c5d5abc51434f6d80d4569e0c492">ota_html</a>, <a class="code hl_variable" href="ota_8h.html#a3c920b5994d61decaa5f3d08cfa0d676">ota_html_len</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">      #else</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        AsyncWebServerResponse *response = request-&gt;beginResponse_P(200, <span class="stringliteral">&quot;text/html&quot;</span>, <a class="code hl_variable" href="ota_8h.html#a0a00c5d5abc51434f6d80d4569e0c492">ota_html</a>, <a class="code hl_variable" href="ota_8h.html#a3c920b5994d61decaa5f3d08cfa0d676">ota_html_len</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="comment">//response-&gt;addHeader(&quot;Content-Encoding&quot;, &quot;gzip&quot;);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      response-&gt;addHeader(<span class="stringliteral">&quot;Server&quot;</span>,<span class="stringliteral">&quot;ESP Async Web Server&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      request-&gt;send(response);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    });</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">  #else</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/update&quot;</span>, HTTP_GET, [&amp;](){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="comment">//_server-&gt;sendHeader(&quot;Content-Encoding&quot;, &quot;gzip&quot;);</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>&gt;sendHeader(<span class="stringliteral">&quot;Server&quot;</span>,<span class="stringliteral">&quot;ESP Async Web Server&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;send_P(200, <span class="stringliteral">&quot;text/html&quot;</span>, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)<a class="code hl_variable" href="ota_8h.html#a0a00c5d5abc51434f6d80d4569e0c492">ota_html</a>, <a class="code hl_variable" href="ota_8h.html#a3c920b5994d61decaa5f3d08cfa0d676">ota_html_len</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/ota/start&quot;</span>, HTTP_GET, [&amp;](AsyncWebServerRequest *request) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !request-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> request-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="comment">// Get header x-ota-mode value, if present</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <a class="code hl_enumeration" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">OTA_Mode</a> mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="comment">// Get mode from arg</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">if</span> (request-&gt;hasParam(<span class="stringliteral">&quot;mode&quot;</span>)) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        String argValue = request-&gt;getParam(<span class="stringliteral">&quot;mode&quot;</span>)-&gt;value();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (argValue == <span class="stringliteral">&quot;fs&quot;</span>) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>          Serial.print(<span class="stringliteral">&quot;OTA Mode: Filesystem\n&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>          mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          Serial.print(<span class="stringliteral">&quot;OTA Mode: Firmware\n&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>          mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">      #if UPDATE_DEBUG == 1</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// Serial output must be active to see the callback serial prints</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        Serial.setDebugOutput(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="comment">// Pre-OTA update callback</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="comment">// Start update process</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">      #if defined(ESP8266)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        uint32_t update_size = mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? ((size_t)FS_end - (size_t)FS_start) : ((ESP.getFreeSketchSpace() - 0x1000) &amp; 0xFFFFF000);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a>) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>          close_all_fs();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        Update.runAsync(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (!Update.begin(update_size, mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? U_FS : U_FLASH)) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;Failed to start update process\n&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          <span class="comment">// Save error to string</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>          StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>          Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">      #elif defined(ESP32)  </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (!Update.begin(UPDATE_SIZE_UNKNOWN, mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? U_SPIFFS : U_FLASH)) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          Serial.print(<span class="stringliteral">&quot;Failed to start update process\n&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          <span class="comment">// Save error to string</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>          StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>          Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>          Serial.println(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }     </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">// Get file MD5 hash from arg</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (request-&gt;hasParam(<span class="stringliteral">&quot;hash&quot;</span>)) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>          String hash = request-&gt;getParam(<span class="stringliteral">&quot;hash&quot;</span>)-&gt;value();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>          Serial.print(String(<span class="stringliteral">&quot;MD5 from client: &quot;</span>+hash+<span class="stringliteral">&quot;\n&quot;</span>).c_str());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>          <span class="keywordflow">if</span> (!Update.setMD5(hash.c_str())) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            Serial.print(<span class="stringliteral">&quot;ERROR: MD5 hash not valid\n&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> request-&gt;send(400, <span class="stringliteral">&quot;text/plain&quot;</span>, <span class="stringliteral">&quot;MD5 parameter invalid&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>          }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }   </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordflow">return</span> request-&gt;send((Update.hasError()) ? 400 : 200, <span class="stringliteral">&quot;text/plain&quot;</span>, (Update.hasError()) ? <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str() : <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    });</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">  #else</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/ota/start&quot;</span>, HTTP_GET, [&amp;]() {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="comment">// Get header x-ota-mode value, if present</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_enumeration" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">OTA_Mode</a> mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="comment">// Get mode from arg</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;hasArg(<span class="stringliteral">&quot;mode&quot;</span>)) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        String argValue = <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;arg(<span class="stringliteral">&quot;mode&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span> (argValue == <span class="stringliteral">&quot;fs&quot;</span>) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;OTA Mode: Filesystem\n&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>          mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;OTA Mode: Firmware\n&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>          mode = <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="comment">// Get file MD5 hash from arg</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;hasArg(<span class="stringliteral">&quot;hash&quot;</span>)) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        String hash = <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;arg(<span class="stringliteral">&quot;hash&quot;</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(String(<span class="stringliteral">&quot;MD5: &quot;</span>+hash+<span class="stringliteral">&quot;\n&quot;</span>).c_str());</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (!Update.setMD5(hash.c_str())) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;ERROR: MD5 hash not valid\n&quot;</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;send(400, <span class="stringliteral">&quot;text/plain&quot;</span>, <span class="stringliteral">&quot;MD5 parameter invalid&quot;</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">      #if UPDATE_DEBUG == 1</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">// Serial output must be active to see the callback serial prints</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        Serial.setDebugOutput(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="comment">// Pre-OTA update callback</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <span class="comment">// Start update process</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">      #if defined(ESP8266)</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        uint32_t update_size = mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? ((size_t)FS_end - (size_t)FS_start) : ((ESP.getFreeSketchSpace() - 0x1000) &amp; 0xFFFFF000);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a>) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>          close_all_fs();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        Update.runAsync(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!Update.begin(update_size, mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? U_FS : U_FLASH)) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;Failed to start update process\n&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>          <span class="comment">// Save error to string</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>          StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>          Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">      #elif defined(ESP32)  </span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">if</span> (!Update.begin(UPDATE_SIZE_UNKNOWN, mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? U_SPIFFS : U_FLASH)) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;Failed to start update process\n&quot;</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          <span class="comment">// Save error to string</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>          StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">      #elif defined(TARGET_RP2040)</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        uint32_t update_size = 0;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="comment">// Gather FS Size</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a>) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>          update_size = ((size_t)&amp;_FS_end - (size_t)&amp;_FS_start);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>          LittleFS.end();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>          FSInfo <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>          LittleFS.begin();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>          LittleFS.info(<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          update_size = <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>.totalBytes - <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>.usedBytes;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="comment">// Start update process</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">if</span> (!Update.begin(update_size, mode == <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> ? U_FS : U_FLASH)) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;Failed to start update process because there is not enough space\n&quot;</span>);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <span class="stringliteral">&quot;Not enough space&quot;</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>          <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;send(400, <span class="stringliteral">&quot;text/plain&quot;</span>, <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">      #endif</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;send((Update.hasError()) ? 400 : 200, <span class="stringliteral">&quot;text/plain&quot;</span>, (Update.hasError()) ? <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str() : <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    });</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/ota/upload&quot;</span>, HTTP_POST, [&amp;](AsyncWebServerRequest *request) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !request-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())){</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          <span class="keywordflow">return</span> request-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="comment">// Post-OTA update callback</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          Serial.println(<span class="stringliteral">&quot;Calling postUpdateCallback&quot;</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a>(!Update.hasError());</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="comment">// Set reboot flag</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">if</span> (!Update.hasError()) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">_auto_reboot</a>) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">_reboot_request_millis</a> = millis();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">_reboot</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>          }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        delay(100);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        Serial.println(<span class="stringliteral">&quot;Sending response&quot;</span>);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        request-&gt;send((Update.hasError()) ? 400 : 200, <span class="stringliteral">&quot;text/plain&quot;</span>, (Update.hasError()) ? <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str() : <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }, [&amp;](AsyncWebServerRequest *request, String filename, <span class="keywordtype">size_t</span> index, uint8_t *<a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>, <span class="keywordtype">size_t</span> len, <span class="keywordtype">bool</span> <span class="keyword">final</span>) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="comment">//Upload handler chunks in data</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a>){</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">if</span>(!request-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())){</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keywordflow">return</span> request-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!index) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          <span class="comment">// Reset progress size on first frame</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a> = 0;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="comment">// Write chunked data to the free sketch space</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">if</span>(len){</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (Update.write(<a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>, len) != len) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">return</span> request-&gt;send(400, <span class="stringliteral">&quot;text/plain&quot;</span>, <span class="stringliteral">&quot;Failed to write chunked data to free space&quot;</span>);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a> += len;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="comment">// Progress update callback</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a>, request-&gt;contentLength());</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">if</span> (<span class="keyword">final</span>) { <span class="comment">// if the final flag is set then this is the last frame of data</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          Serial.println(<span class="stringliteral">&quot;Final frame received&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keywordflow">if</span> (!Update.end(<span class="keyword">true</span>)) { <span class="comment">//true to set the size to the current progress</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                <span class="comment">// Save error to string</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                Serial.println(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    });</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">  #else</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;on(<span class="stringliteral">&quot;/ota/upload&quot;</span>, HTTP_POST, [&amp;](){</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())) {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;requestAuthentication();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="comment">// Post-OTA update callback</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a>(!Update.hasError());</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;sendHeader(<span class="stringliteral">&quot;Connection&quot;</span>, <span class="stringliteral">&quot;close&quot;</span>);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;send((Update.hasError()) ? 400 : 200, <span class="stringliteral">&quot;text/plain&quot;</span>, (Update.hasError()) ? <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str() : <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <span class="comment">// Set reboot flag</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">if</span> (!Update.hasError()) {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">_auto_reboot</a>) {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">_reboot_request_millis</a> = millis();</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">_reboot</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }, [&amp;](){</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="comment">// Actual OTA Download</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      HTTPUpload&amp; upload = <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;upload();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <span class="keywordflow">if</span> (upload.status == UPLOAD_FILE_START) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="comment">// Check authentication</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> &amp;&amp; !<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>-&gt;authenticate(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.c_str(), <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.c_str())) {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>          <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;Authentication Failed on UPLOAD_FILE_START\n&quot;</span>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        Serial.printf(<span class="stringliteral">&quot;Update Received: %s\n&quot;</span>, upload.filename.c_str());</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a> = 0;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (upload.status == UPLOAD_FILE_WRITE) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          <span class="keywordflow">if</span> (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">            #if UPDATE_DEBUG == 1</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>              Update.printError(Serial);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">            #endif</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>          }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>          <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a> += upload.currentSize;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>          <span class="comment">// Progress update callback</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a> != <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a>, upload.totalSize);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (upload.status == UPLOAD_FILE_END) {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          <span class="keywordflow">if</span> (Update.end(<span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>              <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(String(<span class="stringliteral">&quot;Update Success: &quot;</span>+String(upload.totalSize)+<span class="stringliteral">&quot;\n&quot;</span>).c_str());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>              <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<span class="stringliteral">&quot;[!] Update Failed\n&quot;</span>);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>              <span class="comment">// Store error to string</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>              StreamString <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>              Update.printError(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>              <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>.c_str();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>              <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.concat(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>              <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a>.c_str());</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>          }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="preprocessor">          #if UPDATE_DEBUG == 1</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            Serial.setDebugOutput(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">          #endif</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <a class="code hl_define" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a>(String(<span class="stringliteral">&quot;Update Failed Unexpectedly (likely broken connection): status=&quot;</span>+String(upload.status)+<span class="stringliteral">&quot;\n&quot;</span>).c_str());</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    });</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>}</div>
+</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="foldopen" id="foldopen00320" data-start="{" data-end="}">
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">  320</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">ElegantOTAClass::setAuth</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * username, <span class="keyword">const</span> <span class="keywordtype">char</span> * password){</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a> = username;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a> = password;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> = <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>.length() &amp;&amp; <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>.length();</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}</div>
+</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="foldopen" id="foldopen00326" data-start="{" data-end="}">
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ac29865147434c5c4fbabe67df5ed9217">  326</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#ac29865147434c5c4fbabe67df5ed9217">ElegantOTAClass::clearAuth</a>(){</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>}</div>
+</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="foldopen" id="foldopen00330" data-start="{" data-end="}">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a0496430c0c9dad2dfd9c47874e24af91">  330</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a0496430c0c9dad2dfd9c47874e24af91">ElegantOTAClass::setAutoReboot</a>(<span class="keywordtype">bool</span> enable){</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <a class="code hl_variable" href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">_auto_reboot</a> = enable;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
+</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a70d0ef232cd38ed4cac4c45954167748">  334</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a70d0ef232cd38ed4cac4c45954167748">ElegantOTAClass::loop</a>() {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <span class="comment">// Check if 2 seconds have passed since _reboot_request_millis was set</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">_reboot</a> &amp;&amp; millis() - <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">_reboot_request_millis</a> &gt; 2500) {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">_reboot</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    Serial.println(<span class="stringliteral">&quot;Rebooting...\n&quot;</span>);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">    #if defined(ESP8266) || defined(ESP32)</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      ESP.restart();</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">    #elif defined(TARGET_RP2040)</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      rp2040.reboot();</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
+</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="foldopen" id="foldopen00347" data-start="{" data-end="}">
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a864b31eb8fc1de53489d971f9c5e8372">  347</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a864b31eb8fc1de53489d971f9c5e8372">ElegantOTAClass::onStart</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; callable){</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a> = callable;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>}</div>
+</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="foldopen" id="foldopen00351" data-start="{" data-end="}">
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a041ffd1a3a85656cf0d13f947d325685">  351</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a041ffd1a3a85656cf0d13f947d325685">ElegantOTAClass::onProgress</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span> current, <span class="keywordtype">size_t</span> <span class="keyword">final</span>)&gt; callable){</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a>= callable;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>}</div>
+</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="foldopen" id="foldopen00355" data-start="{" data-end="}">
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a09133d076f8a4a26373ba422dbfbe4ac">  355</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a09133d076f8a4a26373ba422dbfbe4ac">ElegantOTAClass::onEnd</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">bool</span> success)&gt; callable){</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a> = callable;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>}</div>
+</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8cpp.html#a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8">  360</a></span><a class="code hl_class" href="class_elegant_o_t_a_class.html">ElegantOTAClass</a> <a class="code hl_variable" href="_elegant_o_t_a_8cpp.html#a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8">ElegantOTA</a>;</div>
+<div class="ttc" id="a_elegant_o_t_a_8cpp_html_a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8"><div class="ttname"><a href="_elegant_o_t_a_8cpp.html#a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8">ElegantOTA</a></div><div class="ttdeci">ElegantOTAClass ElegantOTA</div><div class="ttdef"><b>Definition</b> <a href="#l00360">ElegantOTA.cpp:360</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html"><div class="ttname"><a href="_elegant_o_t_a_8h.html">ElegantOTA.h</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">OTA_Mode</a></div><div class="ttdeci">OTA_Mode</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00097">ElegantOTA.h:97</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a></div><div class="ttdeci">@ OTA_MODE_FILESYSTEM</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00099">ElegantOTA.h:99</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a></div><div class="ttdeci">@ OTA_MODE_FIRMWARE</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00098">ElegantOTA.h:98</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_afe98804404fe99e10b2d376afd538800"><div class="ttname"><a href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">ELEGANTOTA_DEBUG_MSG</a></div><div class="ttdeci">#define ELEGANTOTA_DEBUG_MSG(x)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00038">ElegantOTA.h:38</a></div></div>
+<div class="ttc" id="a_stdio_stream_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="_stdio_stream_8h_source.html#l00093">StdioStream.h:93</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html"><div class="ttname"><a href="class_elegant_o_t_a_class.html">ElegantOTAClass</a></div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00102">ElegantOTA.h:102</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a041ffd1a3a85656cf0d13f947d325685"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a041ffd1a3a85656cf0d13f947d325685">ElegantOTAClass::onProgress</a></div><div class="ttdeci">void onProgress(std::function&lt; void(size_t current, size_t final)&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="#l00351">ElegantOTA.cpp:351</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a0496430c0c9dad2dfd9c47874e24af91"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a0496430c0c9dad2dfd9c47874e24af91">ElegantOTAClass::setAutoReboot</a></div><div class="ttdeci">void setAutoReboot(bool enable)</div><div class="ttdef"><b>Definition</b> <a href="#l00330">ElegantOTA.cpp:330</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a09133d076f8a4a26373ba422dbfbe4ac"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a09133d076f8a4a26373ba422dbfbe4ac">ElegantOTAClass::onEnd</a></div><div class="ttdeci">void onEnd(std::function&lt; void(bool success)&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="#l00355">ElegantOTA.cpp:355</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a22f27ace6db91d064dcc945b0e18c643"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">ElegantOTAClass::preUpdateCallback</a></div><div class="ttdeci">std::function&lt; void()&gt; preUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00131">ElegantOTA.h:131</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a252706c85039235806818b839fd46843"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">ElegantOTAClass::_authenticate</a></div><div class="ttdeci">bool _authenticate</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00120">ElegantOTA.h:120</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a4b19a13da00b8fa870188887665126c9"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">ElegantOTAClass::postUpdateCallback</a></div><div class="ttdeci">std::function&lt; void(bool success)&gt; postUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00133">ElegantOTA.h:133</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a52fa914ea55de7a684f8d103ef5a2d51"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">ElegantOTAClass::ElegantOTAClass</a></div><div class="ttdeci">ElegantOTAClass()</div><div class="ttdef"><b>Definition</b> <a href="#l00005">ElegantOTA.cpp:5</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a7068a5b8ec4c9bf5e923527b5aee7f3c"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">ElegantOTAClass::_username</a></div><div class="ttdeci">String _username</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00121">ElegantOTA.h:121</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a70d0ef232cd38ed4cac4c45954167748"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a70d0ef232cd38ed4cac4c45954167748">ElegantOTAClass::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition</b> <a href="#l00334">ElegantOTA.cpp:334</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a729c7b5d3c558ef36298208b56236317"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">ElegantOTAClass::_reboot</a></div><div class="ttdeci">bool _reboot</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00125">ElegantOTA.h:125</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a75a21404fc6ce81e7eb8f077e8b4e824"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">ElegantOTAClass::_current_progress_size</a></div><div class="ttdeci">unsigned long _current_progress_size</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00129">ElegantOTA.h:129</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a8640d005bc14563fcd0ccbff84777ad7"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">ElegantOTAClass::progressUpdateCallback</a></div><div class="ttdeci">std::function&lt; void(size_t current, size_t final)&gt; progressUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00132">ElegantOTA.h:132</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a864b31eb8fc1de53489d971f9c5e8372"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a864b31eb8fc1de53489d971f9c5e8372">ElegantOTAClass::onStart</a></div><div class="ttdeci">void onStart(std::function&lt; void()&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="#l00347">ElegantOTA.cpp:347</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_aa8a5a678ced41aa8ba25b679e857a050"><div class="ttname"><a href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">ElegantOTAClass::setAuth</a></div><div class="ttdeci">void setAuth(const char *username, const char *password)</div><div class="ttdef"><b>Definition</b> <a href="#l00320">ElegantOTA.cpp:320</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ab0c7aa796608e73f04fb8e3565754793"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">ElegantOTAClass::_reboot_request_millis</a></div><div class="ttdeci">unsigned long _reboot_request_millis</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00126">ElegantOTA.h:126</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ab97e3948aace5879edca89976fd35ca1"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">ElegantOTAClass::_password</a></div><div class="ttdeci">String _password</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00122">ElegantOTA.h:122</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ac29865147434c5c4fbabe67df5ed9217"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ac29865147434c5c4fbabe67df5ed9217">ElegantOTAClass::clearAuth</a></div><div class="ttdeci">void clearAuth()</div><div class="ttdef"><b>Definition</b> <a href="#l00326">ElegantOTA.cpp:326</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ac6e516d54f6f83ee06c5e30990fd4526"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ac6e516d54f6f83ee06c5e30990fd4526">ElegantOTAClass::begin</a></div><div class="ttdeci">void begin(ELEGANTOTA_WEBSERVER *server, const char *username=&quot;&quot;, const char *password=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> <a href="#l00007">ElegantOTA.cpp:7</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ae76c95c4d63232e41fd9b16bac174711"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">ElegantOTAClass::_server</a></div><div class="ttdeci">ELEGANTOTA_WEBSERVER * _server</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00118">ElegantOTA.h:118</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ae9094decd44f374fa3339a9b5b12132c"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">ElegantOTAClass::_update_error_str</a></div><div class="ttdeci">String _update_error_str</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00128">ElegantOTA.h:128</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_af2dd6675ca116b8ade27dfebc6503b57"><div class="ttname"><a href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">ElegantOTAClass::_auto_reboot</a></div><div class="ttdeci">bool _auto_reboot</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8h_source.html#l00124">ElegantOTA.h:124</a></div></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_aa0e5b670397c0b01582fc3e2ae4a0bfd"><div class="ttname"><a href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a></div><div class="ttdeci">byte i</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00006">onewire_functions.cpp:6</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_ab96bbc0b9c1cec78058d5e387476c322"><div class="ttname"><a href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a></div><div class="ttdeci">byte data[9]</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00009">onewire_functions.cpp:9</a></div></div>
+<div class="ttc" id="aota_8h_html"><div class="ttname"><a href="ota_8h.html">ota.h</a></div></div>
+<div class="ttc" id="aota_8h_html_a0a00c5d5abc51434f6d80d4569e0c492"><div class="ttname"><a href="ota_8h.html#a0a00c5d5abc51434f6d80d4569e0c492">ota_html</a></div><div class="ttdeci">unsigned char ota_html[]</div><div class="ttdef"><b>Definition</b> <a href="ota_8h_source.html#l00001">ota.h:1</a></div></div>
+<div class="ttc" id="aota_8h_html_a3c920b5994d61decaa5f3d08cfa0d676"><div class="ttname"><a href="ota_8h.html#a3c920b5994d61decaa5f3d08cfa0d676">ota_html_len</a></div><div class="ttdeci">unsigned int ota_html_len</div><div class="ttdef"><b>Definition</b> <a href="ota_8h_source.html#l02030">ota.h:2030</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_08d4520ad68cc743a042ee343405e546.html">safeboot</a></li><li class="navelem"><a href="_elegant_o_t_a_8cpp.html">ElegantOTA.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

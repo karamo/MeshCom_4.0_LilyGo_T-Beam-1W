@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/peripheral.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t5-epaper_2peripheral_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">peripheral.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="t5-epaper_2peripheral_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __PERIPHERAL_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __PERIPHERAL_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a1bbc80093152641daa049c9fffd689da">    6</a></span><span class="preprocessor">#define GPS_PRIORITY     (configMAX_PRIORITIES - 1)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a00bf1002da38c370673764aa0e0f6752">    7</a></span><span class="preprocessor">#define LORA_PRIORITY    (configMAX_PRIORITIES - 2)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a95ee5759e1b8c7e4fe451b885955a794">    8</a></span><span class="preprocessor">#define WS2812_PRIORITY  (configMAX_PRIORITIES - 3)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#ac8de409e6dc6b07e1fe20fb7739544d1">    9</a></span><span class="preprocessor">#define BATTERY_PRIORITY (configMAX_PRIORITIES - 4)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a145b038bbe63449034e55a46e394ef6f">   10</a></span><span class="preprocessor">#define INFARED_PRIORITY (configMAX_PRIORITIES - 5)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// lora sx1262</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#acea22fb22ebb1c9c10be067ba452067c">   13</a></span><span class="preprocessor">#define LORA_FREQUENNCY     433.175</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a33702007527b9cea6e029b919322a7a5">   14</a></span><span class="preprocessor">#define LORA_BANDWIDTH      250.0</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a85f023404afa6ec72b6dc7fbfe6742f5">   15</a></span><span class="preprocessor">#define LORA_OUTPUT_POWER   22 </span><span class="comment">// -17 - 22 dBm</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#af91e85f2312c140036971a9a519590c4">   16</a></span><span class="preprocessor">#define LORA_SPREAD_FACTOR  11</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a4c6536f4c2d7ce68b90100bf64d7c17e">   17</a></span><span class="preprocessor">#define LORA_CODING_RATE    6</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a1e5b496aeaf1062018a929480d244284">   18</a></span><span class="preprocessor">#define LORA_PREAMBLE_LENGTH    8</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#afee68257e40cc36d88aba60b651f0a08">   19</a></span><span class="preprocessor">#define SYNC_WORD_SX127x 0x2b  </span><span class="comment">// MeshCom Sync Word!!</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#a8bfe67a3ac52984c90f112f77bc0de2f">   20</a></span><span class="preprocessor">#define SYNC_WORD_SX127x_2BYTE 0x2b24 </span><span class="comment">// MeshCom Sync Word!!</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#af5a544fcd18db67b52398cbeca46ce37">   22</a></span><span class="preprocessor">#define LORA_MODE_SEND 0</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="t5-epaper_2peripheral_8h.html#ab5142b9e2a5d4b910c8a2836972e9478">   23</a></span><span class="preprocessor">#define LORA_MODE_RECV 1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t5-epaper_2peripheral_8h.html#aa9fa7f936a4a409e01909a4b1e642daa">lora_sx1262_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a126db35082708c1e7c728998afbba978">lora_set_mode</a>(<span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aac3d4c51204037637d1cf9dcb0763c08">lora_get_mode</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a6fb9259b44f05a9517cf80043815937c">lora_receive_loop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#abd3d2b1154869b501a4564acef294d58">lora_transmit</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aeb9b920b61c9743f047c76e216e8d4ec">lora_get_recv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> **<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, <span class="keywordtype">int</span> *rssi);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#ad89556b30b0abed8e515e4ca8081eb8e">lora_set_recv_flag</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5-epaper_2peripheral_8h.html#a2d2bb0886573ce56aafedbb8cb6ddd08">lora_sleep</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5-epaper_2peripheral_8h.html#a988d6998b46e47ade11431e85a035ea4">lora_recv_suspend</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5-epaper_2peripheral_8h.html#a2836bdaa080bcda32b00982bcecd365a">lora_recv_resume</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// gps u-blox m10q</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">bool</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#abb4c3fd64e4c8290c87124a292bde621">gps_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aa614de21bcc89a8ddf49884e234ae024">gps_task_create</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>uint32_t <a class="code hl_function" href="t5-epaper_2peripheral_8h.html#a307a4a3d8b5ea372b96ce0478a32f0f8">gps_get_charsProcessed</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a8ac766329012d1bd295370cb579a1ffd">gps_task_suspend</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#af5837893d989ca05abf11d7528b90c6d">gps_task_resume</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aebe481bd9a57062e4f0e417ebb8be979">gps_get_coord</a>(<span class="keywordtype">double</span> *lat, <span class="keywordtype">double</span> *lng);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a32513b732fe7d8aa712b8b0d0d6eec27">gps_get_data</a>(uint16_t *year, uint8_t *month, uint8_t *day);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#aff4e3cc23d0aaff17dcd2f476d2e5294">gps_get_time</a>(uint8_t *hour, uint8_t *minute, uint8_t *second);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a32a7fcb936bcecfddfdb2563340771a7">gps_get_satellites</a>(uint32_t *vsat);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="t-deck-pro_2peripheral_8h.html#a0559413d9fdb9198aadafb8ff6ca35b3">gps_get_speed</a>(<span class="keywordtype">double</span> *speed);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a0559413d9fdb9198aadafb8ff6ca35b3"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a0559413d9fdb9198aadafb8ff6ca35b3">gps_get_speed</a></div><div class="ttdeci">void gps_get_speed(double *speed)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00119">peri_gps.cpp:119</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a126db35082708c1e7c728998afbba978"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a126db35082708c1e7c728998afbba978">lora_set_mode</a></div><div class="ttdeci">void lora_set_mode(int mode)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00126">peri_lora.cpp:126</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a32513b732fe7d8aa712b8b0d0d6eec27"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a32513b732fe7d8aa712b8b0d0d6eec27">gps_get_data</a></div><div class="ttdeci">void gps_get_data(uint16_t *year, uint8_t *month, uint8_t *day)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00099">peri_gps.cpp:99</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a32a7fcb936bcecfddfdb2563340771a7"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a32a7fcb936bcecfddfdb2563340771a7">gps_get_satellites</a></div><div class="ttdeci">void gps_get_satellites(uint32_t *vsat, int *hdop)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00113">peri_gps.cpp:113</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a6fb9259b44f05a9517cf80043815937c"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a6fb9259b44f05a9517cf80043815937c">lora_receive_loop</a></div><div class="ttdeci">void lora_receive_loop(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00153">peri_lora.cpp:153</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a8ac766329012d1bd295370cb579a1ffd"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a8ac766329012d1bd295370cb579a1ffd">gps_task_suspend</a></div><div class="ttdeci">void gps_task_suspend(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00082">peri_gps.cpp:82</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aa614de21bcc89a8ddf49884e234ae024"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aa614de21bcc89a8ddf49884e234ae024">gps_task_create</a></div><div class="ttdeci">void gps_task_create(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00076">peri_gps.cpp:76</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aac3d4c51204037637d1cf9dcb0763c08"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aac3d4c51204037637d1cf9dcb0763c08">lora_get_mode</a></div><div class="ttdeci">int lora_get_mode(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00148">peri_lora.cpp:148</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_abb4c3fd64e4c8290c87124a292bde621"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#abb4c3fd64e4c8290c87124a292bde621">gps_init</a></div><div class="ttdeci">bool gps_init(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00026">peri_gps.cpp:26</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_abd3d2b1154869b501a4564acef294d58"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#abd3d2b1154869b501a4564acef294d58">lora_transmit</a></div><div class="ttdeci">void lora_transmit(const char *str)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00182">peri_lora.cpp:182</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_ad89556b30b0abed8e515e4ca8081eb8e"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#ad89556b30b0abed8e515e4ca8081eb8e">lora_set_recv_flag</a></div><div class="ttdeci">void lora_set_recv_flag(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00210">peri_lora.cpp:210</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aeb9b920b61c9743f047c76e216e8d4ec"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aeb9b920b61c9743f047c76e216e8d4ec">lora_get_recv</a></div><div class="ttdeci">bool lora_get_recv(const char **str, int *rssi)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__lora_8cpp_source.html#l00201">peri_lora.cpp:201</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aebe481bd9a57062e4f0e417ebb8be979"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aebe481bd9a57062e4f0e417ebb8be979">gps_get_coord</a></div><div class="ttdeci">void gps_get_coord(double *lat, double *lng, double *alt)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00092">peri_gps.cpp:92</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_af5837893d989ca05abf11d7528b90c6d"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#af5837893d989ca05abf11d7528b90c6d">gps_task_resume</a></div><div class="ttdeci">void gps_task_resume(void)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00087">peri_gps.cpp:87</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_aff4e3cc23d0aaff17dcd2f476d2e5294"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#aff4e3cc23d0aaff17dcd2f476d2e5294">gps_get_time</a></div><div class="ttdeci">void gps_get_time(uint8_t *hour, uint8_t *minute, uint8_t *second)</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00106">peri_gps.cpp:106</a></div></div>
+<div class="ttc" id="at5-epaper_2peripheral_8h_html_a2836bdaa080bcda32b00982bcecd365a"><div class="ttname"><a href="t5-epaper_2peripheral_8h.html#a2836bdaa080bcda32b00982bcecd365a">lora_recv_resume</a></div><div class="ttdeci">void lora_recv_resume(void)</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2peri__lora_8cpp_source.html#l00283">peri_lora.cpp:283</a></div></div>
+<div class="ttc" id="at5-epaper_2peripheral_8h_html_a2d2bb0886573ce56aafedbb8cb6ddd08"><div class="ttname"><a href="t5-epaper_2peripheral_8h.html#a2d2bb0886573ce56aafedbb8cb6ddd08">lora_sleep</a></div><div class="ttdeci">void lora_sleep(void)</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2peri__lora_8cpp_source.html#l00274">peri_lora.cpp:274</a></div></div>
+<div class="ttc" id="at5-epaper_2peripheral_8h_html_a307a4a3d8b5ea372b96ce0478a32f0f8"><div class="ttname"><a href="t5-epaper_2peripheral_8h.html#a307a4a3d8b5ea372b96ce0478a32f0f8">gps_get_charsProcessed</a></div><div class="ttdeci">uint32_t gps_get_charsProcessed(void)</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2peri__gps_8cpp_source.html#l00081">peri_gps.cpp:81</a></div></div>
+<div class="ttc" id="at5-epaper_2peripheral_8h_html_a988d6998b46e47ade11431e85a035ea4"><div class="ttname"><a href="t5-epaper_2peripheral_8h.html#a988d6998b46e47ade11431e85a035ea4">lora_recv_suspend</a></div><div class="ttdeci">void lora_recv_suspend(void)</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2peri__lora_8cpp_source.html#l00279">peri_lora.cpp:279</a></div></div>
+<div class="ttc" id="at5-epaper_2peripheral_8h_html_aa9fa7f936a4a409e01909a4b1e642daa"><div class="ttname"><a href="t5-epaper_2peripheral_8h.html#aa9fa7f936a4a409e01909a4b1e642daa">lora_sx1262_init</a></div><div class="ttdeci">bool lora_sx1262_init(void)</div><div class="ttdef"><b>Definition</b> <a href="t5-epaper_2peri__lora_8cpp_source.html#l00043">peri_lora.cpp:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="t5-epaper_2peripheral_8h.html">peripheral.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

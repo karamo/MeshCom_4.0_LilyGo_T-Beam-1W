@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/extudp_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('extudp__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">extudp_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &quot;ArduinoJson.h&quot;</code><br />
+<code>#include &lt;RAK13800_W5100S.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="nrf__eth_8h_source.html">nrf52/nrf_eth.h</a>&gt;</code><br />
+</div>
+<p><a href="extudp__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a24d48fec98f18ac567774c608dcb5967" id="r_a24d48fec98f18ac567774c608dcb5967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d48fec98f18ac567774c608dcb5967">startExternUDP</a> ()</td></tr>
+<tr class="memitem:ad5effb200d9122ee1d58c8acfc22a25b" id="r_ad5effb200d9122ee1d58c8acfc22a25b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5effb200d9122ee1d58c8acfc22a25b">getExtern</a> (unsigned char incoming[], int len)</td></tr>
+<tr class="memitem:af8cb6e8032b03434cfd8d7ebc91afcdf" id="r_af8cb6e8032b03434cfd8d7ebc91afcdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8cb6e8032b03434cfd8d7ebc91afcdf">getExternUDP</a> ()</td></tr>
+<tr class="memitem:a467d2808c0e2834677199338a2d60b63" id="r_a467d2808c0e2834677199338a2d60b63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467d2808c0e2834677199338a2d60b63">sendExtern</a> (bool bUDP, char *src_type, uint8_t <a class="el" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>[500], uint16_t buflen)</td></tr>
+<tr class="memitem:a90a2d27e9760bdb0e2c7c126e45948f5" id="r_a90a2d27e9760bdb0e2c7c126e45948f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a2d27e9760bdb0e2c7c126e45948f5">sendExternHeartbeat</a> ()</td></tr>
+<tr class="memitem:a69100324d2e26dd4b9e246749b270f9f" id="r_a69100324d2e26dd4b9e246749b270f9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69100324d2e26dd4b9e246749b270f9f">resetExternUDP</a> ()</td></tr>
+<tr class="memitem:aec0bf9f591f0a538122951c8e0cdc6f5" id="r_aec0bf9f591f0a538122951c8e0cdc6f5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec0bf9f591f0a538122951c8e0cdc6f5">strEsc</a> (String strInput)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a2d3aeae64066c8d1b5657de9e59fa345" id="r_a2d3aeae64066c8d1b5657de9e59fa345"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3aeae64066c8d1b5657de9e59fa345">hasExternIPaddress</a> = false</td></tr>
+<tr class="memitem:a4e845529794e160b029663bbb557e5b7" id="r_a4e845529794e160b029663bbb557e5b7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e845529794e160b029663bbb557e5b7">s_extern_node_ip</a> = &quot;&quot;</td></tr>
+<tr class="memitem:a1414e22a2d91428456975c17ec735a82" id="r_a1414e22a2d91428456975c17ec735a82"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1414e22a2d91428456975c17ec735a82">strExtOutput</a></td></tr>
+<tr class="memitem:aee4741ce96f448287247b94a7e3abdcb" id="r_aee4741ce96f448287247b94a7e3abdcb"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee4741ce96f448287247b94a7e3abdcb">str_ip</a></td></tr>
+<tr class="memitem:ad14ffc82e270cafe55113ec3f8e21576" id="r_ad14ffc82e270cafe55113ec3f8e21576"><td class="memItemLeft" align="right" valign="top">EthernetUDP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad14ffc82e270cafe55113ec3f8e21576">UdpExtern</a></td></tr>
+<tr class="memitem:a7548f9b3db5ebee8a97e9eee9322c4ac" id="r_a7548f9b3db5ebee8a97e9eee9322c4ac"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7548f9b3db5ebee8a97e9eee9322c4ac">extern_node_ip</a></td></tr>
+<tr class="memitem:a5995227c0c4c7817179b2a905463f9d7" id="r_a5995227c0c4c7817179b2a905463f9d7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5995227c0c4c7817179b2a905463f9d7">incomingExtPacket</a> [<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>]</td></tr>
+<tr class="memitem:a307312db3333ed4a3f5c4aab15338636" id="r_a307312db3333ed4a3f5c4aab15338636"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a307312db3333ed4a3f5c4aab15338636">packetExtSize</a> =0</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="ad5effb200d9122ee1d58c8acfc22a25b" name="ad5effb200d9122ee1d58c8acfc22a25b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5effb200d9122ee1d58c8acfc22a25b">&#9670;&#160;</a></span>getExtern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getExtern </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char</td>          <td class="paramname"><span class="paramname"><em>incoming</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00071">71</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af8cb6e8032b03434cfd8d7ebc91afcdf" name="af8cb6e8032b03434cfd8d7ebc91afcdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8cb6e8032b03434cfd8d7ebc91afcdf">&#9670;&#160;</a></span>getExternUDP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getExternUDP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00122">122</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a69100324d2e26dd4b9e246749b270f9f" name="a69100324d2e26dd4b9e246749b270f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69100324d2e26dd4b9e246749b270f9f">&#9670;&#160;</a></span>resetExternUDP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetExternUDP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00388">388</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a467d2808c0e2834677199338a2d60b63" name="a467d2808c0e2834677199338a2d60b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467d2808c0e2834677199338a2d60b63">&#9670;&#160;</a></span>sendExtern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendExtern </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bUDP</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>[500], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00157">157</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a90a2d27e9760bdb0e2c7c126e45948f5" name="a90a2d27e9760bdb0e2c7c126e45948f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a2d27e9760bdb0e2c7c126e45948f5">&#9670;&#160;</a></span>sendExternHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendExternHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00383">383</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a24d48fec98f18ac567774c608dcb5967" name="a24d48fec98f18ac567774c608dcb5967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d48fec98f18ac567774c608dcb5967">&#9670;&#160;</a></span>startExternUDP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startExternUDP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00036">36</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aec0bf9f591f0a538122951c8e0cdc6f5" name="aec0bf9f591f0a538122951c8e0cdc6f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0bf9f591f0a538122951c8e0cdc6f5">&#9670;&#160;</a></span>strEsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strEsc </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>strInput</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00405">405</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a7548f9b3db5ebee8a97e9eee9322c4ac" name="a7548f9b3db5ebee8a97e9eee9322c4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7548f9b3db5ebee8a97e9eee9322c4ac">&#9670;&#160;</a></span>extern_node_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IPAddress extern_node_ip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2d3aeae64066c8d1b5657de9e59fa345" name="a2d3aeae64066c8d1b5657de9e59fa345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3aeae64066c8d1b5657de9e59fa345">&#9670;&#160;</a></span>hasExternIPaddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasExternIPaddress = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00017">17</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5995227c0c4c7817179b2a905463f9d7" name="a5995227c0c4c7817179b2a905463f9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5995227c0c4c7817179b2a905463f9d7">&#9670;&#160;</a></span>incomingExtPacket</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char incomingExtPacket[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00032">32</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a307312db3333ed4a3f5c4aab15338636" name="a307312db3333ed4a3f5c4aab15338636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307312db3333ed4a3f5c4aab15338636">&#9670;&#160;</a></span>packetExtSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int packetExtSize =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00033">33</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e845529794e160b029663bbb557e5b7" name="a4e845529794e160b029663bbb557e5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e845529794e160b029663bbb557e5b7">&#9670;&#160;</a></span>s_extern_node_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String s_extern_node_ip = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00019">19</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aee4741ce96f448287247b94a7e3abdcb" name="aee4741ce96f448287247b94a7e3abdcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4741ce96f448287247b94a7e3abdcb">&#9670;&#160;</a></span>str_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String str_ip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00022">22</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1414e22a2d91428456975c17ec735a82" name="a1414e22a2d91428456975c17ec735a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1414e22a2d91428456975c17ec735a82">&#9670;&#160;</a></span>strExtOutput</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strExtOutput</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00021">21</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad14ffc82e270cafe55113ec3f8e21576" name="ad14ffc82e270cafe55113ec3f8e21576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14ffc82e270cafe55113ec3f8e21576">&#9670;&#160;</a></span>UdpExtern</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EthernetUDP UdpExtern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="extudp__functions_8cpp_source.html#l00028">28</a> der Datei <a class="el" href="extudp__functions_8cpp_source.html">extudp_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="extudp__functions_8cpp.html">extudp_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/SdCard/SdCardInterface.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_sd_card_interface_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SdCardInterface.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sd_card_interface_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef SdCardInterface_h</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define SdCardInterface_h</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="_fs_block_device_interface_8h.html">../common/FsBlockDeviceInterface.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="_sd_card_info_8h.html">SdCardInfo.h</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_card_interface.html">SdCardInterface</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_fs_block_device_interface.html">FsBlockDeviceInterface</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#aa662dabc0e7755d645ec0eea6a682047">   45</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#aa662dabc0e7755d645ec0eea6a682047">cardCMD6</a>(uint32_t arg, uint8_t* <a class="code hl_function" href="class_sd_card_interface.html#a6315bf0d5852bc24563b7977f7c7e5b4">status</a>) = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a6a57c5bced670759b7c278c7a5988fd1">   53</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a6a57c5bced670759b7c278c7a5988fd1">erase</a>(uint32_t firstSector, uint32_t lastSector) = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#af83618545960af2f1ceec84927c12fc9">   55</a></span>  <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="class_sd_card_interface.html#af83618545960af2f1ceec84927c12fc9">errorCode</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#ab84d7a9506d49366d8ec105e239ab0e1">   57</a></span>  <span class="keyword">virtual</span> uint32_t <a class="code hl_function" href="class_sd_card_interface.html#ab84d7a9506d49366d8ec105e239ab0e1">errorData</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#aa8bfd8318a3e0cd0966e2bda5b27417a">   59</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#aa8bfd8318a3e0cd0966e2bda5b27417a">hasDedicatedSpi</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a2350062d975cb76919d70f2e335ec29c">   61</a></span>  <span class="keywordtype">bool</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_sd_card_interface.html#a2350062d975cb76919d70f2e335ec29c">isDedicatedSpi</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a11bc2129c8e746e854bf0cf5368edc35">   66</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a11bc2129c8e746e854bf0cf5368edc35">setDedicatedSpi</a>(<span class="keywordtype">bool</span> value) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    (void)value;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#ab61ea0c742074271de0552c46be8ae51">   77</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#ab61ea0c742074271de0552c46be8ae51">readCID</a>(<a class="code hl_class" href="structcid__t.html">cid_t</a>* cid) = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a8aaf7a014423034652f2a1ded1aaa127">   85</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a8aaf7a014423034652f2a1ded1aaa127">readCSD</a>(<a class="code hl_class" href="structcsd__t.html">csd_t</a>* csd) = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#abb2742e6e81d18552308519a0dfb72a6">   91</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#abb2742e6e81d18552308519a0dfb72a6">readOCR</a>(uint32_t* ocr) = 0;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a698705062e33330849b09f860ee2d9c2">   97</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a698705062e33330849b09f860ee2d9c2">readSCR</a>(<a class="code hl_class" href="structscr__t.html">scr_t</a>* scr) = 0;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a82ebe728854216e615e490e9bc0730d8">  102</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a82ebe728854216e615e490e9bc0730d8">readSDS</a>(<a class="code hl_class" href="structsds__t.html">sds_t</a>* sds) = 0;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a6315bf0d5852bc24563b7977f7c7e5b4">  104</a></span>  <span class="keyword">virtual</span> uint32_t <a class="code hl_function" href="class_sd_card_interface.html#a6315bf0d5852bc24563b7977f7c7e5b4">status</a>() { <span class="keywordflow">return</span> 0XFFFFFFFF; }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a80796bc06b4090c15b3d46e651dd38c8">  108</a></span>  <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="class_sd_card_interface.html#a80796bc06b4090c15b3d46e651dd38c8">type</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#ad12a0053d3e832da694bd8d3d66adbc1">  114</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#ad12a0053d3e832da694bd8d3d66adbc1">writeData</a>(<span class="keyword">const</span> uint8_t* src) = 0;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#abf04f87ec5c49fe6d9e23c8ac4cf482d">  121</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#abf04f87ec5c49fe6d9e23c8ac4cf482d">writeStart</a>(uint32_t sector) = 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_sd_card_interface.html#a2eac04896a05bd57730e96708934970f">  125</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sd_card_interface.html#a2eac04896a05bd57730e96708934970f">writeStop</a>() = 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif  </span><span class="comment">// SdCardInterface_h</span></div>
+<div class="ttc" id="a_fs_block_device_interface_8h_html"><div class="ttname"><a href="_fs_block_device_interface_8h.html">FsBlockDeviceInterface.h</a></div><div class="ttdoc">FsBlockDeviceInterface include file.</div></div>
+<div class="ttc" id="a_sd_card_info_8h_html"><div class="ttname"><a href="_sd_card_info_8h.html">SdCardInfo.h</a></div><div class="ttdoc">Definitions for SD cards.</div></div>
+<div class="ttc" id="aclass_fs_block_device_interface_html"><div class="ttname"><a href="class_fs_block_device_interface.html">FsBlockDeviceInterface</a></div><div class="ttdoc">FsBlockDeviceInterface class.</div><div class="ttdef"><b>Definition</b> <a href="_fs_block_device_interface_8h_source.html#l00037">FsBlockDeviceInterface.h:37</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html"><div class="ttname"><a href="class_sd_card_interface.html">SdCardInterface</a></div><div class="ttdoc">Abstract interface for an SD card.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SdCardInterface.h:37</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a11bc2129c8e746e854bf0cf5368edc35"><div class="ttname"><a href="class_sd_card_interface.html#a11bc2129c8e746e854bf0cf5368edc35">SdCardInterface::setDedicatedSpi</a></div><div class="ttdeci">virtual bool setDedicatedSpi(bool value)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">SdCardInterface.h:66</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a2350062d975cb76919d70f2e335ec29c"><div class="ttname"><a href="class_sd_card_interface.html#a2350062d975cb76919d70f2e335ec29c">SdCardInterface::isDedicatedSpi</a></div><div class="ttdeci">virtual bool isDedicatedSpi()</div><div class="ttdef"><b>Definition</b> <a href="#l00061">SdCardInterface.h:61</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a2eac04896a05bd57730e96708934970f"><div class="ttname"><a href="class_sd_card_interface.html#a2eac04896a05bd57730e96708934970f">SdCardInterface::writeStop</a></div><div class="ttdeci">virtual bool writeStop()=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a6315bf0d5852bc24563b7977f7c7e5b4"><div class="ttname"><a href="class_sd_card_interface.html#a6315bf0d5852bc24563b7977f7c7e5b4">SdCardInterface::status</a></div><div class="ttdeci">virtual uint32_t status()</div><div class="ttdef"><b>Definition</b> <a href="#l00104">SdCardInterface.h:104</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a698705062e33330849b09f860ee2d9c2"><div class="ttname"><a href="class_sd_card_interface.html#a698705062e33330849b09f860ee2d9c2">SdCardInterface::readSCR</a></div><div class="ttdeci">virtual bool readSCR(scr_t *scr)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a6a57c5bced670759b7c278c7a5988fd1"><div class="ttname"><a href="class_sd_card_interface.html#a6a57c5bced670759b7c278c7a5988fd1">SdCardInterface::erase</a></div><div class="ttdeci">virtual bool erase(uint32_t firstSector, uint32_t lastSector)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a80796bc06b4090c15b3d46e651dd38c8"><div class="ttname"><a href="class_sd_card_interface.html#a80796bc06b4090c15b3d46e651dd38c8">SdCardInterface::type</a></div><div class="ttdeci">virtual uint8_t type() const =0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a82ebe728854216e615e490e9bc0730d8"><div class="ttname"><a href="class_sd_card_interface.html#a82ebe728854216e615e490e9bc0730d8">SdCardInterface::readSDS</a></div><div class="ttdeci">virtual bool readSDS(sds_t *sds)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_a8aaf7a014423034652f2a1ded1aaa127"><div class="ttname"><a href="class_sd_card_interface.html#a8aaf7a014423034652f2a1ded1aaa127">SdCardInterface::readCSD</a></div><div class="ttdeci">virtual bool readCSD(csd_t *csd)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_aa662dabc0e7755d645ec0eea6a682047"><div class="ttname"><a href="class_sd_card_interface.html#aa662dabc0e7755d645ec0eea6a682047">SdCardInterface::cardCMD6</a></div><div class="ttdeci">virtual bool cardCMD6(uint32_t arg, uint8_t *status)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_aa8bfd8318a3e0cd0966e2bda5b27417a"><div class="ttname"><a href="class_sd_card_interface.html#aa8bfd8318a3e0cd0966e2bda5b27417a">SdCardInterface::hasDedicatedSpi</a></div><div class="ttdeci">virtual bool hasDedicatedSpi()</div><div class="ttdef"><b>Definition</b> <a href="#l00059">SdCardInterface.h:59</a></div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_ab61ea0c742074271de0552c46be8ae51"><div class="ttname"><a href="class_sd_card_interface.html#ab61ea0c742074271de0552c46be8ae51">SdCardInterface::readCID</a></div><div class="ttdeci">virtual bool readCID(cid_t *cid)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_ab84d7a9506d49366d8ec105e239ab0e1"><div class="ttname"><a href="class_sd_card_interface.html#ab84d7a9506d49366d8ec105e239ab0e1">SdCardInterface::errorData</a></div><div class="ttdeci">virtual uint32_t errorData() const =0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_abb2742e6e81d18552308519a0dfb72a6"><div class="ttname"><a href="class_sd_card_interface.html#abb2742e6e81d18552308519a0dfb72a6">SdCardInterface::readOCR</a></div><div class="ttdeci">virtual bool readOCR(uint32_t *ocr)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_abf04f87ec5c49fe6d9e23c8ac4cf482d"><div class="ttname"><a href="class_sd_card_interface.html#abf04f87ec5c49fe6d9e23c8ac4cf482d">SdCardInterface::writeStart</a></div><div class="ttdeci">virtual bool writeStart(uint32_t sector)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_ad12a0053d3e832da694bd8d3d66adbc1"><div class="ttname"><a href="class_sd_card_interface.html#ad12a0053d3e832da694bd8d3d66adbc1">SdCardInterface::writeData</a></div><div class="ttdeci">virtual bool writeData(const uint8_t *src)=0</div></div>
+<div class="ttc" id="aclass_sd_card_interface_html_af83618545960af2f1ceec84927c12fc9"><div class="ttname"><a href="class_sd_card_interface.html#af83618545960af2f1ceec84927c12fc9">SdCardInterface::errorCode</a></div><div class="ttdeci">virtual uint8_t errorCode() const =0</div></div>
+<div class="ttc" id="astructcid__t_html"><div class="ttname"><a href="structcid__t.html">cid_t</a></div><div class="ttdoc">Card Identification (CID) register.</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8h_source.html#l00279">SdCardInfo.h:279</a></div></div>
+<div class="ttc" id="astructcsd__t_html"><div class="ttname"><a href="structcsd__t.html">csd_t</a></div><div class="ttdoc">Union of old and new style CSD register.</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8h_source.html#l00321">SdCardInfo.h:321</a></div></div>
+<div class="ttc" id="astructscr__t_html"><div class="ttname"><a href="structscr__t.html">scr_t</a></div><div class="ttdoc">SCR register.</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8h_source.html#l00360">SdCardInfo.h:360</a></div></div>
+<div class="ttc" id="astructsds__t_html"><div class="ttname"><a href="structsds__t.html">sds_t</a></div><div class="ttdoc">SD Status.</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8h_source.html#l00402">SdCardInfo.h:402</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_e88db20539bcbaab1cd980425d447a47.html">SdCard</a></li><li class="navelem"><a href="_sd_card_interface_8h.html">SdCardInterface.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

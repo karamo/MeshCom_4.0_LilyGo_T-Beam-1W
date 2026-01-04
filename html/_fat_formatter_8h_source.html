@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/FatLib/FatFormatter.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_fat_formatter_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FatFormatter.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_fat_formatter_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef FatFormatter_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define FatFormatter_h</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_fs_block_device_8h.html">../common/FsBlockDevice.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="_sys_call_8h.html">../common/SysCall.h</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_fat_formatter.html">   33</a></span><span class="keyword">class </span><a class="code hl_function" href="class_fat_formatter.html#a9ba8056488dcc360aa5d21e02fdc52a2">FatFormatter</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a9ba8056488dcc360aa5d21e02fdc52a2">   36</a></span>  <a class="code hl_function" href="class_fat_formatter.html#a9ba8056488dcc360aa5d21e02fdc52a2">FatFormatter</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_formatter.html#ab225be993dcdd0220b88ced1e794f6fa">format</a>(<a class="code hl_typedef" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a>* dev, uint8_t* secBuffer, print_t* pr = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_formatter.html#afb65ae6ae8d5dc13720955643451aaa4">initFatDir</a>(uint8_t fatType, uint32_t sectorCount);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_fat_formatter.html#a119d530132839305fb40e12ff989dab8">initPbs</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_formatter.html#a24d2c65f32499933ade3fe1dd0addce4">makeFat16</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_formatter.html#a60d2c3809e3abbcfa6b4bed82bada8f1">makeFat32</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_formatter.html#abca37f702400b0cb277970b8fc0af980">writeMbr</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a677f58bfde679d61c3a8b46bb3e510c6">   54</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#a677f58bfde679d61c3a8b46bb3e510c6">m_capacityMB</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a0a5f67f4cd89a40d807043dd93dce91f">   55</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#a0a5f67f4cd89a40d807043dd93dce91f">m_dataStart</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a6837953b4a2c80ee094ba3f1e837f8e7">   56</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#a6837953b4a2c80ee094ba3f1e837f8e7">m_fatSize</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#afcc3ff7d4c358cb7ef076e258aab102a">   57</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#afcc3ff7d4c358cb7ef076e258aab102a">m_fatStart</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a7194452d4812d0cf3e5873c834390fff">   58</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#a7194452d4812d0cf3e5873c834390fff">m_relativeSectors</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a692d90a3f241a83cf588a81a06a198f2">   59</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#a692d90a3f241a83cf588a81a06a198f2">m_sectorCount</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#abd223e175fc78d24020f5f81ccdc4b60">   60</a></span>  uint32_t <a class="code hl_variable" href="class_fat_formatter.html#abd223e175fc78d24020f5f81ccdc4b60">m_totalSectors</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a97f7d14cb74101b78e525fdaf614a672">   61</a></span>  <a class="code hl_typedef" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a>* <a class="code hl_variable" href="class_fat_formatter.html#a97f7d14cb74101b78e525fdaf614a672">m_dev</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#ad2dff539b758f50dfaeabe3f6e9e9192">   62</a></span>  print_t* <a class="code hl_variable" href="class_fat_formatter.html#ad2dff539b758f50dfaeabe3f6e9e9192">m_pr</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a6bfbe9316dcb83d2d0be2f749713698d">   63</a></span>  uint8_t* <a class="code hl_variable" href="class_fat_formatter.html#a6bfbe9316dcb83d2d0be2f749713698d">m_secBuf</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#a788d846f30a76383525fe7240a672077">   64</a></span>  uint16_t <a class="code hl_variable" href="class_fat_formatter.html#a788d846f30a76383525fe7240a672077">m_reservedSectorCount</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#aaee8fdde7c82446d5d009d77cb9722cc">   65</a></span>  uint8_t <a class="code hl_variable" href="class_fat_formatter.html#aaee8fdde7c82446d5d009d77cb9722cc">m_partType</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_fat_formatter.html#af728c3e549143dc20988495490dd12d2">   66</a></span>  uint8_t <a class="code hl_variable" href="class_fat_formatter.html#af728c3e549143dc20988495490dd12d2">m_sectorsPerCluster</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif  </span><span class="comment">// FatFormatter_h</span></div>
+<div class="ttc" id="a_fs_block_device_8h_html"><div class="ttname"><a href="_fs_block_device_8h.html">FsBlockDevice.h</a></div></div>
+<div class="ttc" id="a_fs_block_device_8h_html_a129378d5231b132338fe06a03e7671ad"><div class="ttname"><a href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a></div><div class="ttdeci">SdCard FsBlockDevice</div><div class="ttdef"><b>Definition</b> <a href="_fs_block_device_8h_source.html#l00031">FsBlockDevice.h:31</a></div></div>
+<div class="ttc" id="a_sys_call_8h_html"><div class="ttname"><a href="_sys_call_8h.html">SysCall.h</a></div><div class="ttdoc">SysCall class.</div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a0a5f67f4cd89a40d807043dd93dce91f"><div class="ttname"><a href="class_fat_formatter.html#a0a5f67f4cd89a40d807043dd93dce91f">FatFormatter::m_dataStart</a></div><div class="ttdeci">uint32_t m_dataStart</div><div class="ttdef"><b>Definition</b> <a href="#l00055">FatFormatter.h:55</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a119d530132839305fb40e12ff989dab8"><div class="ttname"><a href="class_fat_formatter.html#a119d530132839305fb40e12ff989dab8">FatFormatter::initPbs</a></div><div class="ttdeci">void initPbs()</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00111">FatFormatter.cpp:111</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a24d2c65f32499933ade3fe1dd0addce4"><div class="ttname"><a href="class_fat_formatter.html#a24d2c65f32499933ade3fe1dd0addce4">FatFormatter::makeFat16</a></div><div class="ttdeci">bool makeFat16()</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00136">FatFormatter.cpp:136</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a60d2c3809e3abbcfa6b4bed82bada8f1"><div class="ttname"><a href="class_fat_formatter.html#a60d2c3809e3abbcfa6b4bed82bada8f1">FatFormatter::makeFat32</a></div><div class="ttdeci">bool makeFat32()</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00187">FatFormatter.cpp:187</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a677f58bfde679d61c3a8b46bb3e510c6"><div class="ttname"><a href="class_fat_formatter.html#a677f58bfde679d61c3a8b46bb3e510c6">FatFormatter::m_capacityMB</a></div><div class="ttdeci">uint32_t m_capacityMB</div><div class="ttdef"><b>Definition</b> <a href="#l00054">FatFormatter.h:54</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a6837953b4a2c80ee094ba3f1e837f8e7"><div class="ttname"><a href="class_fat_formatter.html#a6837953b4a2c80ee094ba3f1e837f8e7">FatFormatter::m_fatSize</a></div><div class="ttdeci">uint32_t m_fatSize</div><div class="ttdef"><b>Definition</b> <a href="#l00056">FatFormatter.h:56</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a692d90a3f241a83cf588a81a06a198f2"><div class="ttname"><a href="class_fat_formatter.html#a692d90a3f241a83cf588a81a06a198f2">FatFormatter::m_sectorCount</a></div><div class="ttdeci">uint32_t m_sectorCount</div><div class="ttdef"><b>Definition</b> <a href="#l00059">FatFormatter.h:59</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a6bfbe9316dcb83d2d0be2f749713698d"><div class="ttname"><a href="class_fat_formatter.html#a6bfbe9316dcb83d2d0be2f749713698d">FatFormatter::m_secBuf</a></div><div class="ttdeci">uint8_t * m_secBuf</div><div class="ttdef"><b>Definition</b> <a href="#l00063">FatFormatter.h:63</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a7194452d4812d0cf3e5873c834390fff"><div class="ttname"><a href="class_fat_formatter.html#a7194452d4812d0cf3e5873c834390fff">FatFormatter::m_relativeSectors</a></div><div class="ttdeci">uint32_t m_relativeSectors</div><div class="ttdef"><b>Definition</b> <a href="#l00058">FatFormatter.h:58</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a788d846f30a76383525fe7240a672077"><div class="ttname"><a href="class_fat_formatter.html#a788d846f30a76383525fe7240a672077">FatFormatter::m_reservedSectorCount</a></div><div class="ttdeci">uint16_t m_reservedSectorCount</div><div class="ttdef"><b>Definition</b> <a href="#l00064">FatFormatter.h:64</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a97f7d14cb74101b78e525fdaf614a672"><div class="ttname"><a href="class_fat_formatter.html#a97f7d14cb74101b78e525fdaf614a672">FatFormatter::m_dev</a></div><div class="ttdeci">FsBlockDevice * m_dev</div><div class="ttdef"><b>Definition</b> <a href="#l00061">FatFormatter.h:61</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_a9ba8056488dcc360aa5d21e02fdc52a2"><div class="ttname"><a href="class_fat_formatter.html#a9ba8056488dcc360aa5d21e02fdc52a2">FatFormatter::FatFormatter</a></div><div class="ttdeci">FatFormatter()=default</div></div>
+<div class="ttc" id="aclass_fat_formatter_html_aaee8fdde7c82446d5d009d77cb9722cc"><div class="ttname"><a href="class_fat_formatter.html#aaee8fdde7c82446d5d009d77cb9722cc">FatFormatter::m_partType</a></div><div class="ttdeci">uint8_t m_partType</div><div class="ttdef"><b>Definition</b> <a href="#l00065">FatFormatter.h:65</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_ab225be993dcdd0220b88ced1e794f6fa"><div class="ttname"><a href="class_fat_formatter.html#ab225be993dcdd0220b88ced1e794f6fa">FatFormatter::format</a></div><div class="ttdeci">bool format(FsBlockDevice *dev, uint8_t *secBuffer, print_t *pr=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00052">FatFormatter.cpp:52</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_abca37f702400b0cb277970b8fc0af980"><div class="ttname"><a href="class_fat_formatter.html#abca37f702400b0cb277970b8fc0af980">FatFormatter::writeMbr</a></div><div class="ttdeci">bool writeMbr()</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00260">FatFormatter.cpp:260</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_abd223e175fc78d24020f5f81ccdc4b60"><div class="ttname"><a href="class_fat_formatter.html#abd223e175fc78d24020f5f81ccdc4b60">FatFormatter::m_totalSectors</a></div><div class="ttdeci">uint32_t m_totalSectors</div><div class="ttdef"><b>Definition</b> <a href="#l00060">FatFormatter.h:60</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_ad2dff539b758f50dfaeabe3f6e9e9192"><div class="ttname"><a href="class_fat_formatter.html#ad2dff539b758f50dfaeabe3f6e9e9192">FatFormatter::m_pr</a></div><div class="ttdeci">print_t * m_pr</div><div class="ttdef"><b>Definition</b> <a href="#l00062">FatFormatter.h:62</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_af728c3e549143dc20988495490dd12d2"><div class="ttname"><a href="class_fat_formatter.html#af728c3e549143dc20988495490dd12d2">FatFormatter::m_sectorsPerCluster</a></div><div class="ttdeci">uint8_t m_sectorsPerCluster</div><div class="ttdef"><b>Definition</b> <a href="#l00066">FatFormatter.h:66</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_afb65ae6ae8d5dc13720955643451aaa4"><div class="ttname"><a href="class_fat_formatter.html#afb65ae6ae8d5dc13720955643451aaa4">FatFormatter::initFatDir</a></div><div class="ttdeci">bool initFatDir(uint8_t fatType, uint32_t sectorCount)</div><div class="ttdef"><b>Definition</b> <a href="_fat_formatter_8cpp_source.html#l00088">FatFormatter.cpp:88</a></div></div>
+<div class="ttc" id="aclass_fat_formatter_html_afcc3ff7d4c358cb7ef076e258aab102a"><div class="ttname"><a href="class_fat_formatter.html#afcc3ff7d4c358cb7ef076e258aab102a">FatFormatter::m_fatStart</a></div><div class="ttdeci">uint32_t m_fatStart</div><div class="ttdef"><b>Definition</b> <a href="#l00057">FatFormatter.h:57</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_a35695e0255837bc30fc09e1901a417f.html">FatLib</a></li><li class="navelem"><a href="_fat_formatter_8h.html">FatFormatter.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

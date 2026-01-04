@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/adc_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('adc__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">adc_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;configuration.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="command__functions_8h_source.html">command_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="adc__functions_8h_source.html">adc_functions.h</a>&gt;</code><br />
+<code>#include &lt;esp_adc_cal.h&gt;</code><br />
+</div>
+<p><a href="adc__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a817cb854ea9978cf4791a51e94acdeb5" id="r_a817cb854ea9978cf4791a51e94acdeb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a817cb854ea9978cf4791a51e94acdeb5">loop_ADCFunctions</a> ()</td></tr>
+<tr class="memdesc:a817cb854ea9978cf4791a51e94acdeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">### [OE3WAS] Smoothing of ADC values version 1  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:ab7e483293c215bbd95ba5ae41a538163" id="r_ab7e483293c215bbd95ba5ae41a538163"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7e483293c215bbd95ba5ae41a538163">analog_oversample_timer</a> = 0</td></tr>
+<tr class="memitem:a45d01e55feafa34763ed78d6e51f5bf8" id="r_a45d01e55feafa34763ed78d6e51f5bf8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45d01e55feafa34763ed78d6e51f5bf8">ADCraw</a> = 0</td></tr>
+<tr class="memitem:a040675e1dc0f3c1b9ecf17565d50c7ee" id="r_a040675e1dc0f3c1b9ecf17565d50c7ee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a040675e1dc0f3c1b9ecf17565d50c7ee">ADCalpha</a> = 0.1</td></tr>
+<tr class="memitem:a3df22afaeb2d9bce8240aa129305db30" id="r_a3df22afaeb2d9bce8240aa129305db30"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df22afaeb2d9bce8240aa129305db30">ADCexp1</a> = 0.0</td></tr>
+<tr class="memitem:acf5d51376d5ff23bfd430959523d8cdd" id="r_acf5d51376d5ff23bfd430959523d8cdd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf5d51376d5ff23bfd430959523d8cdd">ADCexp1pre</a> = 0.0</td></tr>
+<tr class="memitem:acf73567de2b6738b344808844098cffe" id="r_acf73567de2b6738b344808844098cffe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf73567de2b6738b344808844098cffe">ADCexp12</a> = 0.0</td></tr>
+<tr class="memitem:a04c390f26cd091660ac6da78787b7234" id="r_a04c390f26cd091660ac6da78787b7234"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c390f26cd091660ac6da78787b7234">ADCexp12pre</a> = 0.0</td></tr>
+<tr class="memitem:a089e64bedaf03bfaf0a06fa99fc4989f" id="r_a089e64bedaf03bfaf0a06fa99fc4989f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a089e64bedaf03bfaf0a06fa99fc4989f">ADCexp2</a> = 0.0</td></tr>
+<tr class="memitem:a686d1e8257a46b398cb6a99d2ad6a660" id="r_a686d1e8257a46b398cb6a99d2ad6a660"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a686d1e8257a46b398cb6a99d2ad6a660">analog_show_timer</a> = 0</td></tr>
+<tr class="memitem:a6872504f5814b8368acb7587618dda39" id="r_a6872504f5814b8368acb7587618dda39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6872504f5814b8368acb7587618dda39">ADCslope</a> = 1.0</td></tr>
+<tr class="memitem:a0b75539534c38760a11e66b2a3585c5e" id="r_a0b75539534c38760a11e66b2a3585c5e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b75539534c38760a11e66b2a3585c5e">ADCoffset</a> = 0</td></tr>
+<tr class="memitem:a1a74a7068f9835f65f98d1ff9f95ee0f" id="r_a1a74a7068f9835f65f98d1ff9f95ee0f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a74a7068f9835f65f98d1ff9f95ee0f">SampleCount</a> = 0</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a817cb854ea9978cf4791a51e94acdeb5" name="a817cb854ea9978cf4791a51e94acdeb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a817cb854ea9978cf4791a51e94acdeb5">&#9670;&#160;</a></span>loop_ADCFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop_ADCFunctions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>### [OE3WAS] Smoothing of ADC values version 1 </p>
+<p>#### &ndash;analogset = Abfrage der Paramter</p>
+<p>#### &ndash;analog check {on|off} = Serielle Ausgabe ON/OFF </p><dl class="section attention"><dt>Achtung</dt><dd>- noch keine Verareitung ev. verfügbarem Vref (konnte noch nicht gelesen werden) </dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node_analog_pin</td><td>ADC-GPIO [&ndash;analog GPIO {0..99} (aber nur bestimmte GPIO gültig!)] </td></tr>
+    <tr><td class="paramname">ADCatten</td><td>{0..3} Abschwächer intern [&ndash;analog atten {0|1|2|3}] </td></tr>
+    <tr><td class="paramname">node_analog_faktor</td><td>Kalibrierungsfaktor [&ndash;analog factor 99.999] </td></tr>
+    <tr><td class="paramname">ADCslope</td><td>9.999 (1.0 default) [&ndash;analog slope 9.999] </td></tr>
+    <tr><td class="paramname">ADCoffset</td><td>999 [mV] (0.0 default) [&ndash;analog offset 999 [mV]] </td></tr>
+    <tr><td class="paramname">node_analog_alpha</td><td>float xxxx.xxx [&ndash;analog alpha 9999.999 (Kombinationswert für mehrere Parameter)] </td></tr>
+    <tr><td class="paramname">ADCalpha</td><td>xxxx.999 [.001 .. .999] (=Filter-Koeffizient) </td></tr>
+    <tr><td class="paramname">ADCintervall</td><td>xx99.xxx [02 .. 99 ms] (=Sampling Intervall) </td></tr>
+    <tr><td class="paramname">ADCshowtime</td><td>99xx.xxx [01 .. 99 s] (=Ausgabe Intervall) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Ausgabe ist vorbereitet für .csv Weiterverarbeitung: </dd>
+<dd>
+- [ADC1]; GPIOx; Time; SampleCount; ADCalpha; ADCraw; ADCexp1; ADCexp2 </dd>
+<dd>
+- ADCalpha = 0.001 .. 0.999 [0.10 default] </dd>
+<dd>
+- ADCraw = 0..4095 12bit-Messwert ohne Umrechnung </dd>
+<dd>
+- ADCexp1 = Messwert exponentielle Glättung 1. Ordnung </dd>
+<dd>
+- ADCexp2 = Messwert exponentielle Glättung 2. Ordnung </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00053">53</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a040675e1dc0f3c1b9ecf17565d50c7ee" name="a040675e1dc0f3c1b9ecf17565d50c7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040675e1dc0f3c1b9ecf17565d50c7ee">&#9670;&#160;</a></span>ADCalpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCalpha = 0.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00017">17</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3df22afaeb2d9bce8240aa129305db30" name="a3df22afaeb2d9bce8240aa129305db30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df22afaeb2d9bce8240aa129305db30">&#9670;&#160;</a></span>ADCexp1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCexp1 = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00018">18</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acf73567de2b6738b344808844098cffe" name="acf73567de2b6738b344808844098cffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf73567de2b6738b344808844098cffe">&#9670;&#160;</a></span>ADCexp12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCexp12 = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00020">20</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a04c390f26cd091660ac6da78787b7234" name="a04c390f26cd091660ac6da78787b7234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c390f26cd091660ac6da78787b7234">&#9670;&#160;</a></span>ADCexp12pre</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCexp12pre = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00021">21</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acf5d51376d5ff23bfd430959523d8cdd" name="acf5d51376d5ff23bfd430959523d8cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf5d51376d5ff23bfd430959523d8cdd">&#9670;&#160;</a></span>ADCexp1pre</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCexp1pre = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00019">19</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a089e64bedaf03bfaf0a06fa99fc4989f" name="a089e64bedaf03bfaf0a06fa99fc4989f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089e64bedaf03bfaf0a06fa99fc4989f">&#9670;&#160;</a></span>ADCexp2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCexp2 = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00022">22</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0b75539534c38760a11e66b2a3585c5e" name="a0b75539534c38760a11e66b2a3585c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b75539534c38760a11e66b2a3585c5e">&#9670;&#160;</a></span>ADCoffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCoffset = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00028">28</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a45d01e55feafa34763ed78d6e51f5bf8" name="a45d01e55feafa34763ed78d6e51f5bf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d01e55feafa34763ed78d6e51f5bf8">&#9670;&#160;</a></span>ADCraw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ADCraw = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00016">16</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6872504f5814b8368acb7587618dda39" name="a6872504f5814b8368acb7587618dda39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6872504f5814b8368acb7587618dda39">&#9670;&#160;</a></span>ADCslope</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ADCslope = 1.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00027">27</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab7e483293c215bbd95ba5ae41a538163" name="ab7e483293c215bbd95ba5ae41a538163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e483293c215bbd95ba5ae41a538163">&#9670;&#160;</a></span>analog_oversample_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long analog_oversample_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00013">13</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a686d1e8257a46b398cb6a99d2ad6a660" name="a686d1e8257a46b398cb6a99d2ad6a660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686d1e8257a46b398cb6a99d2ad6a660">&#9670;&#160;</a></span>analog_show_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long analog_show_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00026">26</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1a74a7068f9835f65f98d1ff9f95ee0f" name="a1a74a7068f9835f65f98d1ff9f95ee0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a74a7068f9835f65f98d1ff9f95ee0f">&#9670;&#160;</a></span>SampleCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t SampleCount = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="adc__functions_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="adc__functions_8cpp_source.html">adc_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="adc__functions_8cpp.html">adc_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

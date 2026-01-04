@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/safeboot/ElegantOTA.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_elegant_o_t_a_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ElegantOTA.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_elegant_o_t_a_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef ElegantOTA_h</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define ElegantOTA_h</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;Arduino.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;stdlib_noniso.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef ELEGANTOTA_USE_ASYNC_WEBSERVER</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#a1a1eae71de1216bf63631ae1fe526f1c">   26</a></span><span class="preprocessor">  #define ELEGANTOTA_USE_ASYNC_WEBSERVER 0</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef ELEGANTOTA_DEBUG</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#adbdb2bdae5f14a3d8e15bf7087811a4f">   30</a></span><span class="preprocessor">  #define ELEGANTOTA_DEBUG 1</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#ifndef UPDATE_DEBUG</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#aa97935048ad53fa7393fbd2796b3d006">   34</a></span><span class="preprocessor">  #define UPDATE_DEBUG 1</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if ELEGANTOTA_DEBUG</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#afe98804404fe99e10b2d376afd538800">   38</a></span><span class="preprocessor">  #define ELEGANTOTA_DEBUG_MSG(x) Serial.printf(&quot;%s %s&quot;, &quot;[ElegantOTA] &quot;, x)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">  #define ELEGANTOTA_DEBUG_MSG(x)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#if defined(ESP8266)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">  #include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">  #include &quot;FS.h&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">  #include &quot;LittleFS.h&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">  #include &quot;Updater.h&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">  #include &quot;StreamString.h&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    #include &quot;ESPAsyncTCP.h&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    #include &quot;ESPAsyncWebServer.h&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #define ELEGANTOTA_WEBSERVER AsyncWebServer</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">  #else</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    #include &quot;ESP8266WiFi.h&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    #include &quot;WiFiClient.h&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #include &quot;ESP8266WebServer.h&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    #define ELEGANTOTA_WEBSERVER ESP8266WebServer</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">  #define HARDWARE &quot;ESP8266&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#elif defined(ESP32)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">  #include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">  #include &quot;FS.h&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">  #include &quot;Update.h&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  #include &quot;StreamString.h&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    #include &quot;AsyncTCP.h&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    #include &quot;ESPAsyncWebServer.h&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    #define ELEGANTOTA_WEBSERVER AsyncWebServer</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">  #else</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    #include &quot;WiFi.h&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    #include &quot;WiFiClient.h&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    #include &quot;WebServer.h&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    #define ELEGANTOTA_WEBSERVER WebServer</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">  #define HARDWARE &quot;ESP32&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#elif defined(TARGET_RP2040)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">  #include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">  #include &quot;Arduino.h&quot;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">  #include &quot;FS.h&quot;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">  #include &quot;LittleFS.h&quot;</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">  #include &quot;WiFiClient.h&quot;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">  #include &quot;WiFiServer.h&quot;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">  #include &quot;WebServer.h&quot;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">  #include &quot;WiFiUdp.h&quot;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">  #include &quot;StreamString.h&quot;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">  #include &quot;Updater.h&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">  #define HARDWARE              &quot;RP2040&quot;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">  #define ELEGANTOTA_WEBSERVER  WebServer</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// Throw an error if async mode is enabled</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">  #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">    #error &quot;Async mode is not supported on RP2040. Please set ELEGANTOTA_USE_ASYNC_WEBSERVER to 0.&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">extern</span> uint8_t _FS_start;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">extern</span> uint8_t _FS_end;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="};">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">   97</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">OTA_Mode</a> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">   98</a></span>    <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a> = 0,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">   99</a></span>    <a class="code hl_enumvalue" href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a> = 1</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="};">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html">  102</a></span><span class="keyword">class </span><a class="code hl_function" href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">ElegantOTAClass</a>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_function" href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">ElegantOTAClass</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#ac6e516d54f6f83ee06c5e30990fd4526">begin</a>(ELEGANTOTA_WEBSERVER *server, <span class="keyword">const</span> <span class="keywordtype">char</span> * username = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> * password = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">setAuth</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * username, <span class="keyword">const</span> <span class="keywordtype">char</span> * password);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#ac29865147434c5c4fbabe67df5ed9217">clearAuth</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a0496430c0c9dad2dfd9c47874e24af91">setAutoReboot</a>(<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a70d0ef232cd38ed4cac4c45954167748">loop</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a864b31eb8fc1de53489d971f9c5e8372">onStart</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; callable);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a041ffd1a3a85656cf0d13f947d325685">onProgress</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span> current, <span class="keywordtype">size_t</span> <span class="keyword">final</span>)&gt; callable);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_elegant_o_t_a_class.html#a09133d076f8a4a26373ba422dbfbe4ac">onEnd</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">bool</span> success)&gt; callable);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">  118</a></span>    ELEGANTOTA_WEBSERVER *<a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">_server</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">  120</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">_authenticate</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">  121</a></span>    String <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">_username</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">  122</a></span>    String <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">_password</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">  124</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">_auto_reboot</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">  125</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">_reboot</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">  126</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">_reboot_request_millis</a> = 0;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">  128</a></span>    String <a class="code hl_variable" href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">_update_error_str</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">  129</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">_current_progress_size</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">  131</a></span>    std::function&lt;void()&gt; <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">preUpdateCallback</a> = <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">  132</a></span>    std::function&lt;void(<span class="keywordtype">size_t</span> current, <span class="keywordtype">size_t</span> <span class="keyword">final</span>)&gt; <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">progressUpdateCallback</a> = <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">  133</a></span>    std::function&lt;void(<span class="keywordtype">bool</span> success)&gt; <a class="code hl_variable" href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">postUpdateCallback</a> = <a class="code hl_define" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">extern</span> <a class="code hl_class" href="class_elegant_o_t_a_class.html">ElegantOTAClass</a> <a class="code hl_variable" href="_elegant_o_t_a_8cpp.html#a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8">ElegantOTA</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_elegant_o_t_a_8cpp_html_a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8"><div class="ttname"><a href="_elegant_o_t_a_8cpp.html#a6dfc4a0af6adfbe5fd7e7b3ee0ced7e8">ElegantOTA</a></div><div class="ttdeci">ElegantOTAClass ElegantOTA</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00360">ElegantOTA.cpp:360</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501">OTA_Mode</a></div><div class="ttdeci">OTA_Mode</div><div class="ttdef"><b>Definition</b> <a href="#l00097">ElegantOTA.h:97</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501a508978031619e525e65fed914f54b5d5">OTA_MODE_FILESYSTEM</a></div><div class="ttdeci">@ OTA_MODE_FILESYSTEM</div><div class="ttdef"><b>Definition</b> <a href="#l00099">ElegantOTA.h:99</a></div></div>
+<div class="ttc" id="a_elegant_o_t_a_8h_html_a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc"><div class="ttname"><a href="_elegant_o_t_a_8h.html#a45b83d9602c7308c190529a081ff5501ad9bdabb52a33babe798119250febc4bc">OTA_MODE_FIRMWARE</a></div><div class="ttdeci">@ OTA_MODE_FIRMWARE</div><div class="ttdef"><b>Definition</b> <a href="#l00098">ElegantOTA.h:98</a></div></div>
+<div class="ttc" id="a_stdio_stream_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="_stdio_stream_8h_source.html#l00093">StdioStream.h:93</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html"><div class="ttname"><a href="class_elegant_o_t_a_class.html">ElegantOTAClass</a></div><div class="ttdef"><b>Definition</b> <a href="#l00102">ElegantOTA.h:102</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a041ffd1a3a85656cf0d13f947d325685"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a041ffd1a3a85656cf0d13f947d325685">ElegantOTAClass::onProgress</a></div><div class="ttdeci">void onProgress(std::function&lt; void(size_t current, size_t final)&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00351">ElegantOTA.cpp:351</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a0496430c0c9dad2dfd9c47874e24af91"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a0496430c0c9dad2dfd9c47874e24af91">ElegantOTAClass::setAutoReboot</a></div><div class="ttdeci">void setAutoReboot(bool enable)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00330">ElegantOTA.cpp:330</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a09133d076f8a4a26373ba422dbfbe4ac"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a09133d076f8a4a26373ba422dbfbe4ac">ElegantOTAClass::onEnd</a></div><div class="ttdeci">void onEnd(std::function&lt; void(bool success)&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00355">ElegantOTA.cpp:355</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a22f27ace6db91d064dcc945b0e18c643"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a22f27ace6db91d064dcc945b0e18c643">ElegantOTAClass::preUpdateCallback</a></div><div class="ttdeci">std::function&lt; void()&gt; preUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="#l00131">ElegantOTA.h:131</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a252706c85039235806818b839fd46843"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a252706c85039235806818b839fd46843">ElegantOTAClass::_authenticate</a></div><div class="ttdeci">bool _authenticate</div><div class="ttdef"><b>Definition</b> <a href="#l00120">ElegantOTA.h:120</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a4b19a13da00b8fa870188887665126c9"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a4b19a13da00b8fa870188887665126c9">ElegantOTAClass::postUpdateCallback</a></div><div class="ttdeci">std::function&lt; void(bool success)&gt; postUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="#l00133">ElegantOTA.h:133</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a52fa914ea55de7a684f8d103ef5a2d51"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a52fa914ea55de7a684f8d103ef5a2d51">ElegantOTAClass::ElegantOTAClass</a></div><div class="ttdeci">ElegantOTAClass()</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00005">ElegantOTA.cpp:5</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a7068a5b8ec4c9bf5e923527b5aee7f3c"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a7068a5b8ec4c9bf5e923527b5aee7f3c">ElegantOTAClass::_username</a></div><div class="ttdeci">String _username</div><div class="ttdef"><b>Definition</b> <a href="#l00121">ElegantOTA.h:121</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a70d0ef232cd38ed4cac4c45954167748"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a70d0ef232cd38ed4cac4c45954167748">ElegantOTAClass::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00334">ElegantOTA.cpp:334</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a729c7b5d3c558ef36298208b56236317"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a729c7b5d3c558ef36298208b56236317">ElegantOTAClass::_reboot</a></div><div class="ttdeci">bool _reboot</div><div class="ttdef"><b>Definition</b> <a href="#l00125">ElegantOTA.h:125</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a75a21404fc6ce81e7eb8f077e8b4e824"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a75a21404fc6ce81e7eb8f077e8b4e824">ElegantOTAClass::_current_progress_size</a></div><div class="ttdeci">unsigned long _current_progress_size</div><div class="ttdef"><b>Definition</b> <a href="#l00129">ElegantOTA.h:129</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a8640d005bc14563fcd0ccbff84777ad7"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a8640d005bc14563fcd0ccbff84777ad7">ElegantOTAClass::progressUpdateCallback</a></div><div class="ttdeci">std::function&lt; void(size_t current, size_t final)&gt; progressUpdateCallback</div><div class="ttdef"><b>Definition</b> <a href="#l00132">ElegantOTA.h:132</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_a864b31eb8fc1de53489d971f9c5e8372"><div class="ttname"><a href="class_elegant_o_t_a_class.html#a864b31eb8fc1de53489d971f9c5e8372">ElegantOTAClass::onStart</a></div><div class="ttdeci">void onStart(std::function&lt; void()&gt; callable)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00347">ElegantOTA.cpp:347</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_aa8a5a678ced41aa8ba25b679e857a050"><div class="ttname"><a href="class_elegant_o_t_a_class.html#aa8a5a678ced41aa8ba25b679e857a050">ElegantOTAClass::setAuth</a></div><div class="ttdeci">void setAuth(const char *username, const char *password)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00320">ElegantOTA.cpp:320</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ab0c7aa796608e73f04fb8e3565754793"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ab0c7aa796608e73f04fb8e3565754793">ElegantOTAClass::_reboot_request_millis</a></div><div class="ttdeci">unsigned long _reboot_request_millis</div><div class="ttdef"><b>Definition</b> <a href="#l00126">ElegantOTA.h:126</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ab97e3948aace5879edca89976fd35ca1"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ab97e3948aace5879edca89976fd35ca1">ElegantOTAClass::_password</a></div><div class="ttdeci">String _password</div><div class="ttdef"><b>Definition</b> <a href="#l00122">ElegantOTA.h:122</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ac29865147434c5c4fbabe67df5ed9217"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ac29865147434c5c4fbabe67df5ed9217">ElegantOTAClass::clearAuth</a></div><div class="ttdeci">void clearAuth()</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00326">ElegantOTA.cpp:326</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ac6e516d54f6f83ee06c5e30990fd4526"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ac6e516d54f6f83ee06c5e30990fd4526">ElegantOTAClass::begin</a></div><div class="ttdeci">void begin(ELEGANTOTA_WEBSERVER *server, const char *username=&quot;&quot;, const char *password=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> <a href="_elegant_o_t_a_8cpp_source.html#l00007">ElegantOTA.cpp:7</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ae76c95c4d63232e41fd9b16bac174711"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ae76c95c4d63232e41fd9b16bac174711">ElegantOTAClass::_server</a></div><div class="ttdeci">ELEGANTOTA_WEBSERVER * _server</div><div class="ttdef"><b>Definition</b> <a href="#l00118">ElegantOTA.h:118</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_ae9094decd44f374fa3339a9b5b12132c"><div class="ttname"><a href="class_elegant_o_t_a_class.html#ae9094decd44f374fa3339a9b5b12132c">ElegantOTAClass::_update_error_str</a></div><div class="ttdeci">String _update_error_str</div><div class="ttdef"><b>Definition</b> <a href="#l00128">ElegantOTA.h:128</a></div></div>
+<div class="ttc" id="aclass_elegant_o_t_a_class_html_af2dd6675ca116b8ade27dfebc6503b57"><div class="ttname"><a href="class_elegant_o_t_a_class.html#af2dd6675ca116b8ade27dfebc6503b57">ElegantOTAClass::_auto_reboot</a></div><div class="ttdeci">bool _auto_reboot</div><div class="ttdef"><b>Definition</b> <a href="#l00124">ElegantOTA.h:124</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_08d4520ad68cc743a042ee343405e546.html">safeboot</a></li><li class="navelem"><a href="_elegant_o_t_a_8h.html">ElegantOTA.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

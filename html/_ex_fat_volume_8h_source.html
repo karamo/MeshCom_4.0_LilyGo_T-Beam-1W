@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/ExFatLib/ExFatVolume.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ex_fat_volume_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExFatVolume.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_ex_fat_volume_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef ExFatVolume_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define ExFatVolume_h</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_ex_fat_file_8h.html">ExFatFile.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//==============================================================================</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html">   33</a></span><span class="keyword">class </span><a class="code hl_function" href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">ExFatVolume</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_ex_fat_partition.html#a85ff5d8445418b0f4308c46af392fd2e">ExFatPartition</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">   35</a></span>  <a class="code hl_function" href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">ExFatVolume</a>() {}</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a4b089dc93a25d9d87d8dc3fc42a139d5">   40</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_ex_fat_volume.html#a4b089dc93a25d9d87d8dc3fc42a139d5">attrib</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> tmpFile;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> tmpFile.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) ? tmpFile.<a class="code hl_function" href="class_ex_fat_file.html#a7cbb53da7a6ee80ce80f640e7303446e">attrib</a>() : -1;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ae79fbebf59d900b845ade864d9d3c4dd">   51</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae79fbebf59d900b845ade864d9d3c4dd">attrib</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, uint8_t bits) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> tmpFile;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> tmpFile.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) ? tmpFile.<a class="code hl_function" href="class_ex_fat_file.html#a7cbb53da7a6ee80ce80f640e7303446e">attrib</a>(bits) : <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a95b0bb19acf96c5a3cc8ea7aea1b1ff8">   63</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a95b0bb19acf96c5a3cc8ea7aea1b1ff8">begin</a>(<a class="code hl_typedef" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a>* dev, <span class="keywordtype">bool</span> setCwv = <span class="keyword">true</span>, uint8_t part = 1,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>             uint32_t volStart = 0) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_ex_fat_partition.html#a425d1ab1b7a10c3b0ed6ba744424690a">init</a>(dev, part, volStart)) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">chdir</a>()) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (setCwv || !<a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">m_cwv</a>) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">m_cwv</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">   80</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">chdir</a>() {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a>.close();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a>.openRoot(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">chdir</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a6bcabab1ded2e71c1272c1baf009c2ab">   92</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ex_fat_volume.html#a6bcabab1ded2e71c1272c1baf009c2ab">chvol</a>() { <a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">m_cwv</a> = <span class="keyword">this</span>; }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a5e2e029b02d3c98bc0b8fcbdab566af6">  101</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a5e2e029b02d3c98bc0b8fcbdab566af6">exists</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> tmp;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> tmp.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#abe1e8cad0a5922984b28edfd987bc856">  120</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abe1e8cad0a5922984b28edfd987bc856">ls</a>(print_t* pr, uint8_t flags = 0) { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a>.ls(pr, flags); }</div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a2e44d5d26a25d610c4b0d97fa5b1f505">  137</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a2e44d5d26a25d610c4b0d97fa5b1f505">ls</a>(print_t* pr, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, uint8_t flags) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> dir;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> dir.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) &amp;&amp; dir.<a class="code hl_function" href="class_ex_fat_file.html#aa0e074c891f3db5ea2ebd491667b03a6">ls</a>(pr, flags);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#abb00cfff7943fe637a99b292798865e0">  149</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abb00cfff7943fe637a99b292798865e0">mkdir</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keywordtype">bool</span> pFlag = <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> sub;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> sub.<a class="code hl_function" href="class_ex_fat_file.html#ad9ca8c5ba1de8965e65b9f25f31baeff">mkdir</a>(<a class="code hl_function" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">vwd</a>(), path, pFlag);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ae5d8f37ac6505471ef78fb4db518fb8b">  159</a></span>  <a class="code hl_class" href="class_ex_file.html">ExFile</a> <a class="code hl_function" href="class_ex_fat_volume.html#ae5d8f37ac6505471ef78fb4db518fb8b">open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag = <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_class" href="class_ex_file.html">ExFile</a> tmpFile;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    tmpFile.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, oflag);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">return</span> tmpFile;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  }</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ac4d15484d30dd40ecdb4d331d29534d9">  170</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#ac4d15484d30dd40ecdb4d331d29534d9">remove</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> tmp;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">return</span> tmp.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a11b644a8526139c4cc1850dac1271ced">O_WRONLY</a>) &amp;&amp; tmp.<a class="code hl_function" href="class_ex_fat_file.html#a8e88c8e79551a72cc98310038514c47a">remove</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  }</div>
+</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a6a31fd969e29608509e75adbf46fcd5d">  188</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a6a31fd969e29608509e75adbf46fcd5d">rename</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* oldPath, <span class="keyword">const</span> <span class="keywordtype">char</span>* newPath) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> file;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> file.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<a class="code hl_function" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">vwd</a>(), oldPath, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) &amp;&amp; file.<a class="code hl_function" href="class_ex_fat_file.html#a12aafd4cb4a241bf5e941393db83c871">rename</a>(<a class="code hl_function" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">vwd</a>(), newPath);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
+</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
+<div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#afaa44ad57398f8c293b9a35aa150ce75">  200</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#afaa44ad57398f8c293b9a35aa150ce75">rmdir</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> sub;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> sub.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) &amp;&amp; sub.<a class="code hl_function" href="class_ex_fat_file.html#a0165e0fde12a53e419bd92cd37f9cfed">rmdir</a>();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
+</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="foldopen" id="foldopen00212" data-start="{" data-end="}">
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a1af3c481f14ff2d390aabe6226658b01">  212</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a1af3c481f14ff2d390aabe6226658b01">truncate</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, uint64_t length) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> file;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">if</span> (!file.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<span class="keyword">this</span>, path, <a class="code hl_define" href="_fs_api_constants_8h.html#a11b644a8526139c4cc1850dac1271ced">O_WRONLY</a>)) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">return</span> file.<a class="code hl_function" href="class_ex_fat_file.html#aca37955d3c7cce40f7f9e1ea078e5636">truncate</a>(length);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  }</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#if ENABLE_ARDUINO_SERIAL</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#abe74c248cfe9d57d9a10f651203df9dc">  224</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abe74c248cfe9d57d9a10f651203df9dc">ls</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#abe74c248cfe9d57d9a10f651203df9dc">ls</a>(&amp;Serial); }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ae883a72fbfe40f9a6fe6c6bf349d5c1f">  237</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae883a72fbfe40f9a6fe6c6bf349d5c1f">ls</a>(uint8_t flags) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae883a72fbfe40f9a6fe6c6bf349d5c1f">ls</a>(&amp;Serial, flags); }</div>
+<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a20b6b946974f5eee4768d2f812a1e0ec">  252</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a20b6b946974f5eee4768d2f812a1e0ec">ls</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, uint8_t flags = 0) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#abe74c248cfe9d57d9a10f651203df9dc">ls</a>(&amp;Serial, path, flags);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  }</div>
+</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#endif  </span><span class="comment">// ENABLE_ARDUINO_SERIAL</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#if ENABLE_ARDUINO_STRING</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#afb7a1d7e4de9690b2c63cc8cd22ab4b5">  262</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#afb7a1d7e4de9690b2c63cc8cd22ab4b5">chdir</a>(<span class="keyword">const</span> String&amp; path) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#afb7a1d7e4de9690b2c63cc8cd22ab4b5">chdir</a>(path.c_str()); }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#af705d3a2434d64efebaa5b3615131dc5">  269</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#af705d3a2434d64efebaa5b3615131dc5">exists</a>(<span class="keyword">const</span> String&amp; path) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#af705d3a2434d64efebaa5b3615131dc5">exists</a>(path.c_str()); }</div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a0f4cf7e2853225380574724314327597">  278</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a0f4cf7e2853225380574724314327597">mkdir</a>(<span class="keyword">const</span> String&amp; path, <span class="keywordtype">bool</span> pFlag = <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#abb00cfff7943fe637a99b292798865e0">mkdir</a>(path.c_str(), pFlag);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  }</div>
+</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span></div>
+<div class="foldopen" id="foldopen00287" data-start="{" data-end="}">
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a29b670f7086e74ad5c50ecdad2e72d5b">  287</a></span>  <a class="code hl_class" href="class_ex_file.html">ExFile</a> <a class="code hl_function" href="class_ex_fat_volume.html#a29b670f7086e74ad5c50ecdad2e72d5b">open</a>(<span class="keyword">const</span> String&amp; path, <a class="code hl_typedef" href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a> oflag = <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae5d8f37ac6505471ef78fb4db518fb8b">open</a>(path.c_str(), oflag);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  }</div>
+</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#adc22ad4ce966654944b18d31fc6ac5ee">  296</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#adc22ad4ce966654944b18d31fc6ac5ee">remove</a>(<span class="keyword">const</span> String&amp; path) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#adc22ad4ce966654944b18d31fc6ac5ee">remove</a>(path.c_str()); }</div>
+<div class="foldopen" id="foldopen00311" data-start="{" data-end="}">
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a1396c06f6c5e138889125d2f62cdbdcb">  311</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#a1396c06f6c5e138889125d2f62cdbdcb">rename</a>(<span class="keyword">const</span> String&amp; oldPath, <span class="keyword">const</span> String&amp; newPath) {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#a6a31fd969e29608509e75adbf46fcd5d">rename</a>(oldPath.c_str(), newPath.c_str());</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  }</div>
+</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#af0adfad817e085d676479fefbb343197">  322</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#af0adfad817e085d676479fefbb343197">rmdir</a>(<span class="keyword">const</span> String&amp; path) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#af0adfad817e085d676479fefbb343197">rmdir</a>(path.c_str()); }</div>
+<div class="foldopen" id="foldopen00331" data-start="{" data-end="}">
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ae6d409b7f24593dca7aae70513e18b70">  331</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae6d409b7f24593dca7aae70513e18b70">truncate</a>(<span class="keyword">const</span> String&amp; path, uint64_t length) {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_ex_fat_volume.html#a1af3c481f14ff2d390aabe6226658b01">truncate</a>(path.c_str(), length);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  }</div>
+</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">#endif  </span><span class="comment">// ENABLE_ARDUINO_STRING</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">  337</a></span>  <span class="keyword">friend</span> <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#ac7176d78d0b69a430086e9f59f8232ca">  338</a></span>  <span class="keyword">static</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">ExFatVolume</a>* <a class="code hl_function" href="class_ex_fat_volume.html#ac7176d78d0b69a430086e9f59f8232ca">cwv</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">m_cwv</a>; }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">  339</a></span>  <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a>* <a class="code hl_function" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">vwd</a>() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a>; }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">  340</a></span>  <span class="keyword">static</span> <a class="code hl_function" href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">ExFatVolume</a>* <a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">m_cwv</a>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">  341</a></span>  <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> <a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a>;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>};</div>
+</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">#endif  </span><span class="comment">// ExFatVolume_h</span></div>
+<div class="ttc" id="a_ex_fat_file_8h_html"><div class="ttname"><a href="_ex_fat_file_8h.html">ExFatFile.h</a></div><div class="ttdoc">ExFatFile class.</div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a11b644a8526139c4cc1850dac1271ced"><div class="ttname"><a href="_fs_api_constants_8h.html#a11b644a8526139c4cc1850dac1271ced">O_WRONLY</a></div><div class="ttdeci">#define O_WRONLY</div><div class="ttdoc">Open for writing only.</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00047">FsApiConstants.h:47</a></div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a39cbe71da20b3a35100d369620187d4f"><div class="ttname"><a href="_fs_api_constants_8h.html#a39cbe71da20b3a35100d369620187d4f">oflag_t</a></div><div class="ttdeci">uint8_t oflag_t</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00057">FsApiConstants.h:57</a></div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a7a68c9ffaac7dbcd652225dd7c06a54b"><div class="ttname"><a href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a></div><div class="ttdeci">#define O_RDONLY</div><div class="ttdoc">Open for reading only.</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00046">FsApiConstants.h:46</a></div></div>
+<div class="ttc" id="a_fs_block_device_8h_html_a129378d5231b132338fe06a03e7671ad"><div class="ttname"><a href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a></div><div class="ttdeci">SdCard FsBlockDevice</div><div class="ttdef"><b>Definition</b> <a href="_fs_block_device_8h_source.html#l00031">FsBlockDevice.h:31</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a0165e0fde12a53e419bd92cd37f9cfed"><div class="ttname"><a href="class_ex_fat_file.html#a0165e0fde12a53e419bd92cd37f9cfed">ExFatFile::rmdir</a></div><div class="ttdeci">bool rmdir()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_write_8cpp_source.html#l00335">ExFatFileWrite.cpp:335</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a12aafd4cb4a241bf5e941393db83c871"><div class="ttname"><a href="class_ex_fat_file.html#a12aafd4cb4a241bf5e941393db83c871">ExFatFile::rename</a></div><div class="ttdeci">bool rename(const char *newPath)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_write_8cpp_source.html#l00295">ExFatFileWrite.cpp:295</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a5b115247c8e1a8cd643412f4d548e673"><div class="ttname"><a href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">ExFatFile::open</a></div><div class="ttdeci">bool open(ExFatFile *dirFile, const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8cpp_source.html#l00195">ExFatFile.cpp:195</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a7cbb53da7a6ee80ce80f640e7303446e"><div class="ttname"><a href="class_ex_fat_file.html#a7cbb53da7a6ee80ce80f640e7303446e">ExFatFile::attrib</a></div><div class="ttdeci">int attrib()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8h_source.html#l00090">ExFatFile.h:90</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a8e88c8e79551a72cc98310038514c47a"><div class="ttname"><a href="class_ex_fat_file.html#a8e88c8e79551a72cc98310038514c47a">ExFatFile::remove</a></div><div class="ttdeci">bool remove()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_write_8cpp_source.html#l00253">ExFatFileWrite.cpp:253</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_aa0e074c891f3db5ea2ebd491667b03a6"><div class="ttname"><a href="class_ex_fat_file.html#aa0e074c891f3db5ea2ebd491667b03a6">ExFatFile::ls</a></div><div class="ttdeci">bool ls(print_t *pr)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_print_8cpp_source.html#l00032">ExFatFilePrint.cpp:32</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_aca37955d3c7cce40f7f9e1ea078e5636"><div class="ttname"><a href="class_ex_fat_file.html#aca37955d3c7cce40f7f9e1ea078e5636">ExFatFile::truncate</a></div><div class="ttdeci">bool truncate()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_write_8cpp_source.html#l00540">ExFatFileWrite.cpp:540</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_ad9ca8c5ba1de8965e65b9f25f31baeff"><div class="ttname"><a href="class_ex_fat_file.html#ad9ca8c5ba1de8965e65b9f25f31baeff">ExFatFile::mkdir</a></div><div class="ttdeci">bool mkdir(ExFatFile *parent, const char *path, bool pFlag=true)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_write_8cpp_source.html#l00152">ExFatFileWrite.cpp:152</a></div></div>
+<div class="ttc" id="aclass_ex_fat_partition_html_a425d1ab1b7a10c3b0ed6ba744424690a"><div class="ttname"><a href="class_ex_fat_partition.html#a425d1ab1b7a10c3b0ed6ba744424690a">ExFatPartition::init</a></div><div class="ttdeci">bool init(FsBlockDevice *dev, uint8_t part, uint32_t volStart=0)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_partition_8cpp_source.html#l00270">ExFatPartition.cpp:270</a></div></div>
+<div class="ttc" id="aclass_ex_fat_partition_html_a85ff5d8445418b0f4308c46af392fd2e"><div class="ttname"><a href="class_ex_fat_partition.html#a85ff5d8445418b0f4308c46af392fd2e">ExFatPartition::ExFatPartition</a></div><div class="ttdeci">ExFatPartition()=default</div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a0f4cf7e2853225380574724314327597"><div class="ttname"><a href="class_ex_fat_volume.html#a0f4cf7e2853225380574724314327597">ExFatVolume::mkdir</a></div><div class="ttdeci">bool mkdir(const String &amp;path, bool pFlag=true)</div><div class="ttdef"><b>Definition</b> <a href="#l00278">ExFatVolume.h:278</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a1396c06f6c5e138889125d2f62cdbdcb"><div class="ttname"><a href="class_ex_fat_volume.html#a1396c06f6c5e138889125d2f62cdbdcb">ExFatVolume::rename</a></div><div class="ttdeci">bool rename(const String &amp;oldPath, const String &amp;newPath)</div><div class="ttdef"><b>Definition</b> <a href="#l00311">ExFatVolume.h:311</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a1af3c481f14ff2d390aabe6226658b01"><div class="ttname"><a href="class_ex_fat_volume.html#a1af3c481f14ff2d390aabe6226658b01">ExFatVolume::truncate</a></div><div class="ttdeci">bool truncate(const char *path, uint64_t length)</div><div class="ttdef"><b>Definition</b> <a href="#l00212">ExFatVolume.h:212</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a20b6b946974f5eee4768d2f812a1e0ec"><div class="ttname"><a href="class_ex_fat_volume.html#a20b6b946974f5eee4768d2f812a1e0ec">ExFatVolume::ls</a></div><div class="ttdeci">bool ls(const char *path, uint8_t flags=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00252">ExFatVolume.h:252</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a28d6d4c2b4c1ee8654c21abd4d5bbec5"><div class="ttname"><a href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatVolume::ExFatFile</a></div><div class="ttdeci">friend ExFatFile</div><div class="ttdef"><b>Definition</b> <a href="#l00337">ExFatVolume.h:337</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a29b670f7086e74ad5c50ecdad2e72d5b"><div class="ttname"><a href="class_ex_fat_volume.html#a29b670f7086e74ad5c50ecdad2e72d5b">ExFatVolume::open</a></div><div class="ttdeci">ExFile open(const String &amp;path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="#l00287">ExFatVolume.h:287</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a2e44d5d26a25d610c4b0d97fa5b1f505"><div class="ttname"><a href="class_ex_fat_volume.html#a2e44d5d26a25d610c4b0d97fa5b1f505">ExFatVolume::ls</a></div><div class="ttdeci">bool ls(print_t *pr, const char *path, uint8_t flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00137">ExFatVolume.h:137</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a375166a5ed2d6085efd5189b43fd7251"><div class="ttname"><a href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">ExFatVolume::vwd</a></div><div class="ttdeci">ExFatFile * vwd()</div><div class="ttdef"><b>Definition</b> <a href="#l00339">ExFatVolume.h:339</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a399f14daa9baead5f5a472db6be075fd"><div class="ttname"><a href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">ExFatVolume::m_cwv</a></div><div class="ttdeci">static ExFatVolume * m_cwv</div><div class="ttdef"><b>Definition</b> <a href="#l00340">ExFatVolume.h:340</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a4b089dc93a25d9d87d8dc3fc42a139d5"><div class="ttname"><a href="class_ex_fat_volume.html#a4b089dc93a25d9d87d8dc3fc42a139d5">ExFatVolume::attrib</a></div><div class="ttdeci">int attrib(const char *path)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">ExFatVolume.h:40</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a4e1e6dd2b095d83029370e87d76823bd"><div class="ttname"><a href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">ExFatVolume::m_vwd</a></div><div class="ttdeci">ExFatFile m_vwd</div><div class="ttdef"><b>Definition</b> <a href="#l00341">ExFatVolume.h:341</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a5e2e029b02d3c98bc0b8fcbdab566af6"><div class="ttname"><a href="class_ex_fat_volume.html#a5e2e029b02d3c98bc0b8fcbdab566af6">ExFatVolume::exists</a></div><div class="ttdeci">bool exists(const char *path)</div><div class="ttdef"><b>Definition</b> <a href="#l00101">ExFatVolume.h:101</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a6a31fd969e29608509e75adbf46fcd5d"><div class="ttname"><a href="class_ex_fat_volume.html#a6a31fd969e29608509e75adbf46fcd5d">ExFatVolume::rename</a></div><div class="ttdeci">bool rename(const char *oldPath, const char *newPath)</div><div class="ttdef"><b>Definition</b> <a href="#l00188">ExFatVolume.h:188</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a6bcabab1ded2e71c1272c1baf009c2ab"><div class="ttname"><a href="class_ex_fat_volume.html#a6bcabab1ded2e71c1272c1baf009c2ab">ExFatVolume::chvol</a></div><div class="ttdeci">void chvol()</div><div class="ttdef"><b>Definition</b> <a href="#l00092">ExFatVolume.h:92</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a95b0bb19acf96c5a3cc8ea7aea1b1ff8"><div class="ttname"><a href="class_ex_fat_volume.html#a95b0bb19acf96c5a3cc8ea7aea1b1ff8">ExFatVolume::begin</a></div><div class="ttdeci">bool begin(FsBlockDevice *dev, bool setCwv=true, uint8_t part=1, uint32_t volStart=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00063">ExFatVolume.h:63</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_abb00cfff7943fe637a99b292798865e0"><div class="ttname"><a href="class_ex_fat_volume.html#abb00cfff7943fe637a99b292798865e0">ExFatVolume::mkdir</a></div><div class="ttdeci">bool mkdir(const char *path, bool pFlag=true)</div><div class="ttdef"><b>Definition</b> <a href="#l00149">ExFatVolume.h:149</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_abdc1addfc9474bf42cab31bcb49b4b65"><div class="ttname"><a href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">ExFatVolume::chdir</a></div><div class="ttdeci">bool chdir()</div><div class="ttdef"><b>Definition</b> <a href="#l00080">ExFatVolume.h:80</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_abe1e8cad0a5922984b28edfd987bc856"><div class="ttname"><a href="class_ex_fat_volume.html#abe1e8cad0a5922984b28edfd987bc856">ExFatVolume::ls</a></div><div class="ttdeci">bool ls(print_t *pr, uint8_t flags=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00120">ExFatVolume.h:120</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_abe74c248cfe9d57d9a10f651203df9dc"><div class="ttname"><a href="class_ex_fat_volume.html#abe74c248cfe9d57d9a10f651203df9dc">ExFatVolume::ls</a></div><div class="ttdeci">bool ls()</div><div class="ttdef"><b>Definition</b> <a href="#l00224">ExFatVolume.h:224</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ac4d15484d30dd40ecdb4d331d29534d9"><div class="ttname"><a href="class_ex_fat_volume.html#ac4d15484d30dd40ecdb4d331d29534d9">ExFatVolume::remove</a></div><div class="ttdeci">bool remove(const char *path)</div><div class="ttdef"><b>Definition</b> <a href="#l00170">ExFatVolume.h:170</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ac7176d78d0b69a430086e9f59f8232ca"><div class="ttname"><a href="class_ex_fat_volume.html#ac7176d78d0b69a430086e9f59f8232ca">ExFatVolume::cwv</a></div><div class="ttdeci">static ExFatVolume * cwv()</div><div class="ttdef"><b>Definition</b> <a href="#l00338">ExFatVolume.h:338</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_adc22ad4ce966654944b18d31fc6ac5ee"><div class="ttname"><a href="class_ex_fat_volume.html#adc22ad4ce966654944b18d31fc6ac5ee">ExFatVolume::remove</a></div><div class="ttdeci">bool remove(const String &amp;path)</div><div class="ttdef"><b>Definition</b> <a href="#l00296">ExFatVolume.h:296</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ae564d128a7a70ec45079c14f0580c223"><div class="ttname"><a href="class_ex_fat_volume.html#ae564d128a7a70ec45079c14f0580c223">ExFatVolume::ExFatVolume</a></div><div class="ttdeci">ExFatVolume()</div><div class="ttdef"><b>Definition</b> <a href="#l00035">ExFatVolume.h:35</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ae5d8f37ac6505471ef78fb4db518fb8b"><div class="ttname"><a href="class_ex_fat_volume.html#ae5d8f37ac6505471ef78fb4db518fb8b">ExFatVolume::open</a></div><div class="ttdeci">ExFile open(const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="#l00159">ExFatVolume.h:159</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ae6d409b7f24593dca7aae70513e18b70"><div class="ttname"><a href="class_ex_fat_volume.html#ae6d409b7f24593dca7aae70513e18b70">ExFatVolume::truncate</a></div><div class="ttdeci">bool truncate(const String &amp;path, uint64_t length)</div><div class="ttdef"><b>Definition</b> <a href="#l00331">ExFatVolume.h:331</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ae79fbebf59d900b845ade864d9d3c4dd"><div class="ttname"><a href="class_ex_fat_volume.html#ae79fbebf59d900b845ade864d9d3c4dd">ExFatVolume::attrib</a></div><div class="ttdeci">bool attrib(const char *path, uint8_t bits)</div><div class="ttdef"><b>Definition</b> <a href="#l00051">ExFatVolume.h:51</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_ae883a72fbfe40f9a6fe6c6bf349d5c1f"><div class="ttname"><a href="class_ex_fat_volume.html#ae883a72fbfe40f9a6fe6c6bf349d5c1f">ExFatVolume::ls</a></div><div class="ttdeci">bool ls(uint8_t flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00237">ExFatVolume.h:237</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_af0adfad817e085d676479fefbb343197"><div class="ttname"><a href="class_ex_fat_volume.html#af0adfad817e085d676479fefbb343197">ExFatVolume::rmdir</a></div><div class="ttdeci">bool rmdir(const String &amp;path)</div><div class="ttdef"><b>Definition</b> <a href="#l00322">ExFatVolume.h:322</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_af705d3a2434d64efebaa5b3615131dc5"><div class="ttname"><a href="class_ex_fat_volume.html#af705d3a2434d64efebaa5b3615131dc5">ExFatVolume::exists</a></div><div class="ttdeci">bool exists(const String &amp;path)</div><div class="ttdef"><b>Definition</b> <a href="#l00269">ExFatVolume.h:269</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_afaa44ad57398f8c293b9a35aa150ce75"><div class="ttname"><a href="class_ex_fat_volume.html#afaa44ad57398f8c293b9a35aa150ce75">ExFatVolume::rmdir</a></div><div class="ttdeci">bool rmdir(const char *path)</div><div class="ttdef"><b>Definition</b> <a href="#l00200">ExFatVolume.h:200</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_afb7a1d7e4de9690b2c63cc8cd22ab4b5"><div class="ttname"><a href="class_ex_fat_volume.html#afb7a1d7e4de9690b2c63cc8cd22ab4b5">ExFatVolume::chdir</a></div><div class="ttdeci">bool chdir(const String &amp;path)</div><div class="ttdef"><b>Definition</b> <a href="#l00262">ExFatVolume.h:262</a></div></div>
+<div class="ttc" id="aclass_ex_file_html"><div class="ttname"><a href="class_ex_file.html">ExFile</a></div><div class="ttdoc">exFAT file with Arduino Stream.</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8h_source.html#l00822">ExFatFile.h:822</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_aaa3210726406c590456ceeb503c8991.html">ExFatLib</a></li><li class="navelem"><a href="_ex_fat_volume_8h.html">ExFatVolume.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

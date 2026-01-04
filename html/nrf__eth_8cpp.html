@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/nrf52/nrf_eth.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('nrf__eth_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">nrf_eth.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;RAK13800_W5100S.h&gt;</code><br />
+<code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="nrf__eth_8h_source.html">nrf_eth.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="command__functions_8h_source.html">command_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="time__functions_8h_source.html">time_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&gt;</code><br />
+<code>#include &lt;NTPClient.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div>
+<p><a href="nrf__eth_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a62e01097652e9eb1d22c7d79eb639fcb" id="r_a62e01097652e9eb1d22c7d79eb639fcb"><td class="memItemLeft" align="right" valign="top">NTPClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62e01097652e9eb1d22c7d79eb639fcb">timeClient</a> (<a class="el" href="#ac12f4a699dd1eac03facdc1ebf3028d4">Udp</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:ac12f4a699dd1eac03facdc1ebf3028d4" id="r_ac12f4a699dd1eac03facdc1ebf3028d4"><td class="memItemLeft" align="right" valign="top">EthernetUDP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac12f4a699dd1eac03facdc1ebf3028d4">Udp</a></td></tr>
+<tr class="memdesc:ac12f4a699dd1eac03facdc1ebf3028d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up a UDP client to transmit the buffers we receive from Lora.  <br /></td></tr>
+<tr class="memitem:a869e60ba0b9f49c2e6d26f0291038f9a" id="r_a869e60ba0b9f49c2e6d26f0291038f9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a869e60ba0b9f49c2e6d26f0291038f9a">btimeClient</a> = false</td></tr>
+<tr class="memitem:ad6ffa7743848d35021d59a06df02d7cb" id="r_ad6ffa7743848d35021d59a06df02d7cb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6ffa7743848d35021d59a06df02d7cb">macaddr</a> [6] = {0}</td></tr>
+<tr class="memitem:aac5c08461d6523ad04ae483d64f0373b" id="r_aac5c08461d6523ad04ae483d64f0373b"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5c08461d6523ad04ae483d64f0373b">inc_udp_buffer</a> [<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+5]</td></tr>
+<tr class="memitem:a4762ad365f785fd777bac180f7a3c25d" id="r_a4762ad365f785fd777bac180f7a3c25d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4762ad365f785fd777bac180f7a3c25d">s_node_ip</a></td></tr>
+<tr class="memitem:aeba2e56eb95bd9d8adf1d6640774e96c" id="r_aeba2e56eb95bd9d8adf1d6640774e96c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeba2e56eb95bd9d8adf1d6640774e96c">s_node_hostip</a></td></tr>
+<tr class="memitem:a5ffc6251b932924bc0caa26190f0d870" id="r_a5ffc6251b932924bc0caa26190f0d870"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ffc6251b932924bc0caa26190f0d870">strSource_call</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a62e01097652e9eb1d22c7d79eb639fcb" name="a62e01097652e9eb1d22c7d79eb639fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e01097652e9eb1d22c7d79eb639fcb">&#9670;&#160;</a></span>timeClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NTPClient timeClient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac12f4a699dd1eac03facdc1ebf3028d4">Udp</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a869e60ba0b9f49c2e6d26f0291038f9a" name="a869e60ba0b9f49c2e6d26f0291038f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869e60ba0b9f49c2e6d26f0291038f9a">&#9670;&#160;</a></span>btimeClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool btimeClient = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00024">24</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aac5c08461d6523ad04ae483d64f0373b" name="aac5c08461d6523ad04ae483d64f0373b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5c08461d6523ad04ae483d64f0373b">&#9670;&#160;</a></span>inc_udp_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char inc_udp_buffer[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad6ffa7743848d35021d59a06df02d7cb" name="ad6ffa7743848d35021d59a06df02d7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ffa7743848d35021d59a06df02d7cb">&#9670;&#160;</a></span>macaddr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t macaddr[6] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00027">27</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeba2e56eb95bd9d8adf1d6640774e96c" name="aeba2e56eb95bd9d8adf1d6640774e96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba2e56eb95bd9d8adf1d6640774e96c">&#9670;&#160;</a></span>s_node_hostip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String s_node_hostip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00032">32</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4762ad365f785fd777bac180f7a3c25d" name="a4762ad365f785fd777bac180f7a3c25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4762ad365f785fd777bac180f7a3c25d">&#9670;&#160;</a></span>s_node_ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String s_node_ip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ffc6251b932924bc0caa26190f0d870" name="a5ffc6251b932924bc0caa26190f0d870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ffc6251b932924bc0caa26190f0d870">&#9670;&#160;</a></span>strSource_call</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strSource_call</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00033">33</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac12f4a699dd1eac03facdc1ebf3028d4" name="ac12f4a699dd1eac03facdc1ebf3028d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12f4a699dd1eac03facdc1ebf3028d4">&#9670;&#160;</a></span>Udp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EthernetUDP Udp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets up a UDP client to transmit the buffers we receive from Lora. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf__eth_8cpp_source.html#l00020">20</a> der Datei <a class="el" href="nrf__eth_8cpp_source.html">nrf_eth.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1854326490b7999d1bef60293bec4d48.html">nrf52</a></li><li class="navelem"><a href="nrf__eth_8cpp.html">nrf_eth.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

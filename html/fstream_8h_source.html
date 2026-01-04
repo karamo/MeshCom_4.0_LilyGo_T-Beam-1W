@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/iostream/fstream.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('fstream_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">fstream.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="fstream_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef fstream_h</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define fstream_h</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="iostream_8h.html">iostream.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_stream_base_class.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="class_stream_base_class.html">StreamBaseClass</a> : <span class="keyword">protected</span> <a class="code hl_typedef" href="ios_8h.html#a77934df7b6e6d581c762dd387e2b5162">StreamBaseFile</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code hl_function" href="classios.html#adc5dbd7b69da79493ebc84aa1e681aaa">ios</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#a27590dcf7b044e6dd8b88b696a6f132a">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a27590dcf7b044e6dd8b88b696a6f132a">clearWriteError</a>() { <a class="code hl_function" href="class_fat_file.html#aeca2a2eff91e6aa55fe1b0e3860c9a05">StreamBaseFile::clearWriteError</a>(); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">/* Internal do not use</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">   * \return mode</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">   */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  int16_t <a class="code hl_function" href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">getch</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#a0d4d2a36a9fcbfb8ab3b685bfceae5e1">   44</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a0d4d2a36a9fcbfb8ab3b685bfceae5e1">getWriteError</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#ac5c7b5894ff8deee63b4db0663975321">StreamBaseFile::getWriteError</a>(); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#ae35297f11506f154597015f9216b72df">open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">ios::openmode</a> mode);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#aefa3ede87ae53cd01a2eedee166e062e">   49</a></span>  <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">ios::openmode</a> <a class="code hl_function" href="class_stream_base_class.html#aefa3ede87ae53cd01a2eedee166e062e">getmode</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_stream_base_class.html#ad850d968f79dcc2e16405cbd940c0348">m_mode</a>; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">putch</a>(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">putstr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">seekoff</a>(<a class="code hl_typedef" href="classios__base.html#a45de7cca0d01da781f4b886179c65c22">off_type</a> off, <a class="code hl_enumeration" href="classios__base.html#ab01103ba35f6ba93a704b3ec0c86191e">seekdir</a> way);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">   56</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">seekpos</a>(<a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> pos) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#ab067190d25733ed7e697d9890f61fd7a">StreamBaseFile::seekSet</a>(pos); }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#af5c94c8ad2618278f5a480ba984afbc9">   60</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#af5c94c8ad2618278f5a480ba984afbc9">setmode</a>(<a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">ios::openmode</a> mode) { <a class="code hl_variable" href="class_stream_base_class.html#ad850d968f79dcc2e16405cbd940c0348">m_mode</a> = mode; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_stream_base_class.html#ab977b356d28e6f6ac71d913a80b5af6a">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buf, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#ab977b356d28e6f6ac71d913a80b5af6a">write</a>(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_stream_base_class.html#ad850d968f79dcc2e16405cbd940c0348">   65</a></span>  <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">ios::openmode</a> <a class="code hl_variable" href="class_stream_base_class.html#ad850d968f79dcc2e16405cbd940c0348">m_mode</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//==============================================================================</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classfstream.html">   72</a></span><span class="keyword">class </span><a class="code hl_function" href="classfstream.html#a551556f5c5d2abd9e0f0e27951a45655">fstream</a> : <span class="keyword">public</span> <a class="code hl_class" href="classiostream.html">iostream</a>, <a class="code hl_class" href="class_stream_base_class.html">StreamBaseClass</a> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">using </span><a class="code hl_function" href="classistream.html#a4022265e0ede3698454f1ff59348c14a">iostream::peek</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classfstream.html#a551556f5c5d2abd9e0f0e27951a45655">   75</a></span>  <a class="code hl_function" href="classfstream.html#a551556f5c5d2abd9e0f0e27951a45655">fstream</a>() {}</div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classfstream.html#aed23877c52f828cab8de7a23603b3b6c">   80</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classfstream.html#aed23877c52f828cab8de7a23603b3b6c">fstream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">in</a> | <a class="code hl_variable" href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">out</a>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="classfstream.html#a85b24d94552991f33caf4c3a83420879">open</a>(path, mode);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#if DESTRUCTOR_CLOSES_FILE</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_class" href="classfstream.html">~fstream</a>() {}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif  </span><span class="comment">// DESTRUCTOR_CLOSES_FILE</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classfstream.html#a682b278a6a299ffb21b8737717ff12bf">   89</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classfstream.html#a682b278a6a299ffb21b8737717ff12bf">clear</a>(<a class="code hl_typedef" href="classios__base.html#aef19291eeae0f072ac42c6ba1fe3033c">iostate</a> <a class="code hl_variable" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a> = <a class="code hl_variable" href="classios__base.html#a07a00996a6e525b88bdfe7935d5ead05">goodbit</a>) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_function" href="classios.html#aa49ed6670d1743e7a373b2d915ec739a">ios::clear</a>(<a class="code hl_variable" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="class_stream_base_class.html#a27590dcf7b044e6dd8b88b696a6f132a">StreamBaseClass::clearWriteError</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classfstream.html#ac5720ee620c09d63dd186823e688ea9a">   96</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classfstream.html#ac5720ee620c09d63dd186823e688ea9a">close</a>() { <a class="code hl_function" href="class_fat_file.html#afd16af325e0642e4bff6430b7d8bb18b">StreamBaseClass::close</a>(); }</div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classfstream.html#a85b24d94552991f33caf4c3a83420879">  119</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classfstream.html#a85b24d94552991f33caf4c3a83420879">open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">in</a> | <a class="code hl_variable" href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">out</a>) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_function" href="class_stream_base_class.html#ae35297f11506f154597015f9216b72df">StreamBaseClass::open</a>(path, mode);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classfstream.html#ae4a71c6f3da2f168ec222739d796fc8b">  123</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classfstream.html#ae4a71c6f3da2f168ec222739d796fc8b">is_open</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a8b8a2850c086d3ce79bee64a23fbf7a6">StreamBaseFile::isOpen</a>(); }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  int16_t <a class="code hl_function" href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">getch</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">StreamBaseClass::getch</a>(); }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordtype">void</span> getpos(<a class="code hl_typedef" href="ios_8h.html#aae8adaedc486a4b2f67576fdeaf0a585">pos_t</a>* pos) { <a class="code hl_function" href="class_fat_file.html#a8593cb31d4e857adf1cb5312c08ad7c3">StreamBaseFile::fgetpos</a>(pos); }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">putch</a>(<span class="keywordtype">char</span> c) { <a class="code hl_function" href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">StreamBaseClass::putch</a>(c); }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">putstr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>) { <a class="code hl_function" href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">StreamBaseClass::putstr</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>); }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">seekoff</a>(<a class="code hl_typedef" href="classios__base.html#a45de7cca0d01da781f4b886179c65c22">off_type</a> off, <a class="code hl_enumeration" href="classios__base.html#ab01103ba35f6ba93a704b3ec0c86191e">seekdir</a> way) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">StreamBaseClass::seekoff</a>(off, way);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">seekpos</a>(<a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> pos) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">StreamBaseClass::seekpos</a>(pos); }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordtype">void</span> setpos(<a class="code hl_typedef" href="ios_8h.html#aae8adaedc486a4b2f67576fdeaf0a585">pos_t</a>* pos) { <a class="code hl_function" href="class_fat_file.html#ac042c43d41ecfff4e101b88f3f82086e">StreamBaseFile::fsetpos</a>(pos); }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_file.html#a67f3dc4896c542d695e11aac927f585e">sync</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a67f3dc4896c542d695e11aac927f585e">StreamBaseClass::sync</a>(); }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> tellpos() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a97e0620949f97e9b9c91ed1094d728aa">StreamBaseFile::curPosition</a>(); }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>};</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">//==============================================================================</span></div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="};">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classifstream.html">  160</a></span><span class="keyword">class </span><a class="code hl_function" href="classifstream.html#a25b585f3088164a09ee7076cb6d10387">ifstream</a> : <span class="keyword">public</span> <a class="code hl_function" href="classistream.html#addc5126126b85763f6b10d3b25f4709e">istream</a>, <a class="code hl_class" href="class_stream_base_class.html">StreamBaseClass</a> {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keyword">using </span><a class="code hl_function" href="classistream.html#a4022265e0ede3698454f1ff59348c14a">istream::peek</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classifstream.html#a25b585f3088164a09ee7076cb6d10387">  163</a></span>  <a class="code hl_function" href="classifstream.html#a25b585f3088164a09ee7076cb6d10387">ifstream</a>() {}</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classifstream.html#a11f4bfaa5c37cfcf8878c367fd861a88">  168</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classifstream.html#a11f4bfaa5c37cfcf8878c367fd861a88">ifstream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">in</a>) { <a class="code hl_function" href="classifstream.html#a169694d6535fd551fd6db48a2867590e">open</a>(path, mode); }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#if DESTRUCTOR_CLOSES_FILE</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_class" href="classifstream.html">~ifstream</a>() {}</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#endif  </span><span class="comment">// DESTRUCTOR_CLOSES_FILE</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classifstream.html#ac5892f472afdef6160f5fe2401b16dce">  175</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classifstream.html#ac5892f472afdef6160f5fe2401b16dce">close</a>() { <a class="code hl_function" href="class_fat_file.html#afd16af325e0642e4bff6430b7d8bb18b">StreamBaseClass::close</a>(); }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classifstream.html#aaa16c6422ea371995d02159f2e6707b2">  177</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classifstream.html#aaa16c6422ea371995d02159f2e6707b2">is_open</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a8b8a2850c086d3ce79bee64a23fbf7a6">StreamBaseFile::isOpen</a>(); }</div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classifstream.html#a169694d6535fd551fd6db48a2867590e">  184</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classifstream.html#a169694d6535fd551fd6db48a2867590e">open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">in</a>) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_function" href="class_stream_base_class.html#ae35297f11506f154597015f9216b72df">StreamBaseClass::open</a>(path, mode | <a class="code hl_variable" href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">in</a>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  int16_t <a class="code hl_function" href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">getch</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">StreamBaseClass::getch</a>(); }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keywordtype">void</span> getpos(<a class="code hl_typedef" href="ios_8h.html#aae8adaedc486a4b2f67576fdeaf0a585">pos_t</a>* pos)<span class="keyword"> override </span>{ <a class="code hl_function" href="class_fat_file.html#a8593cb31d4e857adf1cb5312c08ad7c3">StreamBaseFile::fgetpos</a>(pos); }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">seekoff</a>(<a class="code hl_typedef" href="classios__base.html#a45de7cca0d01da781f4b886179c65c22">off_type</a> off, <a class="code hl_enumeration" href="classios__base.html#ab01103ba35f6ba93a704b3ec0c86191e">seekdir</a> way)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">StreamBaseClass::seekoff</a>(off, way);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">seekpos</a>(<a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> pos)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">StreamBaseClass::seekpos</a>(pos); }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">void</span> setpos(<a class="code hl_typedef" href="ios_8h.html#aae8adaedc486a4b2f67576fdeaf0a585">pos_t</a>* pos)<span class="keyword"> override </span>{ <a class="code hl_function" href="class_fat_file.html#ac042c43d41ecfff4e101b88f3f82086e">StreamBaseFile::fsetpos</a>(pos); }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> tellpos()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a97e0620949f97e9b9c91ed1094d728aa">StreamBaseFile::curPosition</a>(); }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>};</div>
+</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">//==============================================================================</span></div>
+<div class="foldopen" id="foldopen00214" data-start="{" data-end="};">
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classofstream.html">  214</a></span><span class="keyword">class </span><a class="code hl_function" href="classofstream.html#aa03b6ce19e306247d6facc7fcbce5d93">ofstream</a> : <span class="keyword">public</span> <a class="code hl_function" href="classostream.html#ab826edab9b1f7409be3aac5603283a90">ostream</a>, <a class="code hl_class" href="class_stream_base_class.html">StreamBaseClass</a> {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classofstream.html#aa03b6ce19e306247d6facc7fcbce5d93">  216</a></span>  <a class="code hl_function" href="classofstream.html#aa03b6ce19e306247d6facc7fcbce5d93">ofstream</a>() {}</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classofstream.html#abd1a07c492699c44f149da45b8d593c1">  221</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classofstream.html#abd1a07c492699c44f149da45b8d593c1">ofstream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">out</a>) { <a class="code hl_function" href="classofstream.html#a4b9d30c742fbe01baa336406c7afdcb2">open</a>(path, mode); }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#if DESTRUCTOR_CLOSES_FILE</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <a class="code hl_class" href="classofstream.html">~ofstream</a>() {}</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif  </span><span class="comment">// DESTRUCTOR_CLOSES_FILE</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classofstream.html#a09edfdb3dbda20aff105e751001313f0">  228</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classofstream.html#a09edfdb3dbda20aff105e751001313f0">clear</a>(<a class="code hl_typedef" href="classios__base.html#aef19291eeae0f072ac42c6ba1fe3033c">iostate</a> <a class="code hl_variable" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a> = <a class="code hl_variable" href="classios__base.html#a07a00996a6e525b88bdfe7935d5ead05">goodbit</a>) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_function" href="classios.html#aa49ed6670d1743e7a373b2d915ec739a">ios::clear</a>(<a class="code hl_variable" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_function" href="class_stream_base_class.html#a27590dcf7b044e6dd8b88b696a6f132a">StreamBaseClass::clearWriteError</a>();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  }</div>
+</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classofstream.html#a240f3752c7ff7a78d10c143d2083715f">  235</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classofstream.html#a240f3752c7ff7a78d10c143d2083715f">close</a>() { <a class="code hl_function" href="class_fat_file.html#afd16af325e0642e4bff6430b7d8bb18b">StreamBaseClass::close</a>(); }</div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classofstream.html#a4b9d30c742fbe01baa336406c7afdcb2">  242</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classofstream.html#a4b9d30c742fbe01baa336406c7afdcb2">open</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, <a class="code hl_typedef" href="classios__base.html#aaa192ec0dccc43050715553a34644523">openmode</a> mode = <a class="code hl_variable" href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">out</a>) {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <a class="code hl_function" href="class_stream_base_class.html#ae35297f11506f154597015f9216b72df">StreamBaseClass::open</a>(path, mode | <a class="code hl_variable" href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">out</a>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  }</div>
+</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classofstream.html#a9c97eb2eb6e35ae87cf7f7453a67e70a">  246</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classofstream.html#a9c97eb2eb6e35ae87cf7f7453a67e70a">is_open</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a8b8a2850c086d3ce79bee64a23fbf7a6">StreamBaseFile::isOpen</a>(); }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">putch</a>(<span class="keywordtype">char</span> c)<span class="keyword"> override </span>{ <a class="code hl_function" href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">StreamBaseClass::putch</a>(c); }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">putstr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>)<span class="keyword"> override </span>{ <a class="code hl_function" href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">StreamBaseClass::putstr</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>); }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">seekoff</a>(<a class="code hl_typedef" href="classios__base.html#a45de7cca0d01da781f4b886179c65c22">off_type</a> off, <a class="code hl_enumeration" href="classios__base.html#ab01103ba35f6ba93a704b3ec0c86191e">seekdir</a> way)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">StreamBaseClass::seekoff</a>(off, way);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">seekpos</a>(<a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> pos)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">StreamBaseClass::seekpos</a>(pos); }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fat_file.html#a67f3dc4896c542d695e11aac927f585e">sync</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a67f3dc4896c542d695e11aac927f585e">StreamBaseClass::sync</a>(); }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <a class="code hl_typedef" href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">pos_type</a> tellpos()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_fat_file.html#a97e0620949f97e9b9c91ed1094d728aa">StreamBaseFile::curPosition</a>(); }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>};</div>
+</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif  </span><span class="comment">// fstream_h</span></div>
+<div class="ttc" id="aclass_fat_file_html_a67f3dc4896c542d695e11aac927f585e"><div class="ttname"><a href="class_fat_file.html#a67f3dc4896c542d695e11aac927f585e">FatFile::sync</a></div><div class="ttdeci">bool sync()</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l01237">FatFile.cpp:1237</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_a8593cb31d4e857adf1cb5312c08ad7c3"><div class="ttname"><a href="class_fat_file.html#a8593cb31d4e857adf1cb5312c08ad7c3">FatFile::fgetpos</a></div><div class="ttdeci">void fgetpos(fspos_t *pos) const</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l00270">FatFile.cpp:270</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_a8b8a2850c086d3ce79bee64a23fbf7a6"><div class="ttname"><a href="class_fat_file.html#a8b8a2850c086d3ce79bee64a23fbf7a6">FatFile::isOpen</a></div><div class="ttdeci">bool isOpen() const</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l00382">FatFile.h:382</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_a97e0620949f97e9b9c91ed1094d728aa"><div class="ttname"><a href="class_fat_file.html#a97e0620949f97e9b9c91ed1094d728aa">FatFile::curPosition</a></div><div class="ttdeci">uint32_t curPosition() const</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l00207">FatFile.h:207</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_ab067190d25733ed7e697d9890f61fd7a"><div class="ttname"><a href="class_fat_file.html#ab067190d25733ed7e697d9890f61fd7a">FatFile::seekSet</a></div><div class="ttdeci">bool seekSet(uint32_t pos)</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l01172">FatFile.cpp:1172</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_ac042c43d41ecfff4e101b88f3f82086e"><div class="ttname"><a href="class_fat_file.html#ac042c43d41ecfff4e101b88f3f82086e">FatFile::fsetpos</a></div><div class="ttdeci">void fsetpos(const fspos_t *pos)</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l00279">FatFile.cpp:279</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_ac5c7b5894ff8deee63b4db0663975321"><div class="ttname"><a href="class_fat_file.html#ac5c7b5894ff8deee63b4db0663975321">FatFile::getWriteError</a></div><div class="ttdeci">bool getWriteError() const</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l00360">FatFile.h:360</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_aeca2a2eff91e6aa55fe1b0e3860c9a05"><div class="ttname"><a href="class_fat_file.html#aeca2a2eff91e6aa55fe1b0e3860c9a05">FatFile::clearWriteError</a></div><div class="ttdeci">void clearWriteError()</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8h_source.html#l00169">FatFile.h:169</a></div></div>
+<div class="ttc" id="aclass_fat_file_html_afd16af325e0642e4bff6430b7d8bb18b"><div class="ttname"><a href="class_fat_file.html#afd16af325e0642e4bff6430b7d8bb18b">FatFile::close</a></div><div class="ttdeci">bool close()</div><div class="ttdef"><b>Definition</b> <a href="_fat_file_8cpp_source.html#l00129">FatFile.cpp:129</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html"><div class="ttname"><a href="class_stream_base_class.html">StreamBaseClass</a></div><div class="ttdoc">base type for FAT and exFAT streams</div><div class="ttdef"><b>Definition</b> <a href="#l00037">fstream.h:37</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a0d4d2a36a9fcbfb8ab3b685bfceae5e1"><div class="ttname"><a href="class_stream_base_class.html#a0d4d2a36a9fcbfb8ab3b685bfceae5e1">StreamBaseClass::getWriteError</a></div><div class="ttdeci">bool getWriteError()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">fstream.h:44</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a27590dcf7b044e6dd8b88b696a6f132a"><div class="ttname"><a href="class_stream_base_class.html#a27590dcf7b044e6dd8b88b696a6f132a">StreamBaseClass::clearWriteError</a></div><div class="ttdeci">void clearWriteError()</div><div class="ttdef"><b>Definition</b> <a href="#l00039">fstream.h:39</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a4ed3159dab346275537ebbfa8eb2b81a"><div class="ttname"><a href="class_stream_base_class.html#a4ed3159dab346275537ebbfa8eb2b81a">StreamBaseClass::putch</a></div><div class="ttdeci">void putch(char c)</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00103">StreamBaseClass.cpp:103</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a6711d63f2b5d21ef997a3cd4ac17d019"><div class="ttname"><a href="class_stream_base_class.html#a6711d63f2b5d21ef997a3cd4ac17d019">StreamBaseClass::seekoff</a></div><div class="ttdeci">bool seekoff(off_type off, seekdir way)</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00135">StreamBaseClass.cpp:135</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a6b797b9a578157d2caa52fc89c25e020"><div class="ttname"><a href="class_stream_base_class.html#a6b797b9a578157d2caa52fc89c25e020">StreamBaseClass::getch</a></div><div class="ttdeci">int16_t getch()</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00029">StreamBaseClass.cpp:29</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a86d7f74859715feb998f8f477a60c619"><div class="ttname"><a href="class_stream_base_class.html#a86d7f74859715feb998f8f477a60c619">StreamBaseClass::seekpos</a></div><div class="ttdeci">bool seekpos(pos_type pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">fstream.h:56</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_a8b39f32bfb5a8cc93be3d1541f7f1901"><div class="ttname"><a href="class_stream_base_class.html#a8b39f32bfb5a8cc93be3d1541f7f1901">StreamBaseClass::putstr</a></div><div class="ttdeci">void putstr(const char *str)</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00113">StreamBaseClass.cpp:113</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_ab977b356d28e6f6ac71d913a80b5af6a"><div class="ttname"><a href="class_stream_base_class.html#ab977b356d28e6f6ac71d913a80b5af6a">StreamBaseClass::write</a></div><div class="ttdeci">int write(const void *buf, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00156">StreamBaseClass.cpp:156</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_ad850d968f79dcc2e16405cbd940c0348"><div class="ttname"><a href="class_stream_base_class.html#ad850d968f79dcc2e16405cbd940c0348">StreamBaseClass::m_mode</a></div><div class="ttdeci">ios::openmode m_mode</div><div class="ttdef"><b>Definition</b> <a href="#l00065">fstream.h:65</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_ae35297f11506f154597015f9216b72df"><div class="ttname"><a href="class_stream_base_class.html#ae35297f11506f154597015f9216b72df">StreamBaseClass::open</a></div><div class="ttdeci">void open(const char *path, ios::openmode mode)</div><div class="ttdef"><b>Definition</b> <a href="_stream_base_class_8cpp_source.html#l00053">StreamBaseClass.cpp:53</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_aefa3ede87ae53cd01a2eedee166e062e"><div class="ttname"><a href="class_stream_base_class.html#aefa3ede87ae53cd01a2eedee166e062e">StreamBaseClass::getmode</a></div><div class="ttdeci">ios::openmode getmode()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">fstream.h:49</a></div></div>
+<div class="ttc" id="aclass_stream_base_class_html_af5c94c8ad2618278f5a480ba984afbc9"><div class="ttname"><a href="class_stream_base_class.html#af5c94c8ad2618278f5a480ba984afbc9">StreamBaseClass::setmode</a></div><div class="ttdeci">void setmode(ios::openmode mode)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">fstream.h:60</a></div></div>
+<div class="ttc" id="aclassfstream_html"><div class="ttname"><a href="classfstream.html">fstream</a></div><div class="ttdoc">file input/output stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">fstream.h:72</a></div></div>
+<div class="ttc" id="aclassfstream_html_a551556f5c5d2abd9e0f0e27951a45655"><div class="ttname"><a href="classfstream.html#a551556f5c5d2abd9e0f0e27951a45655">fstream::fstream</a></div><div class="ttdeci">fstream()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">fstream.h:75</a></div></div>
+<div class="ttc" id="aclassfstream_html_a682b278a6a299ffb21b8737717ff12bf"><div class="ttname"><a href="classfstream.html#a682b278a6a299ffb21b8737717ff12bf">fstream::clear</a></div><div class="ttdeci">void clear(iostate state=goodbit)</div><div class="ttdef"><b>Definition</b> <a href="#l00089">fstream.h:89</a></div></div>
+<div class="ttc" id="aclassfstream_html_a85b24d94552991f33caf4c3a83420879"><div class="ttname"><a href="classfstream.html#a85b24d94552991f33caf4c3a83420879">fstream::open</a></div><div class="ttdeci">void open(const char *path, openmode mode=in|out)</div><div class="ttdef"><b>Definition</b> <a href="#l00119">fstream.h:119</a></div></div>
+<div class="ttc" id="aclassfstream_html_ac5720ee620c09d63dd186823e688ea9a"><div class="ttname"><a href="classfstream.html#ac5720ee620c09d63dd186823e688ea9a">fstream::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition</b> <a href="#l00096">fstream.h:96</a></div></div>
+<div class="ttc" id="aclassfstream_html_ae4a71c6f3da2f168ec222739d796fc8b"><div class="ttname"><a href="classfstream.html#ae4a71c6f3da2f168ec222739d796fc8b">fstream::is_open</a></div><div class="ttdeci">bool is_open()</div><div class="ttdef"><b>Definition</b> <a href="#l00123">fstream.h:123</a></div></div>
+<div class="ttc" id="aclassfstream_html_aed23877c52f828cab8de7a23603b3b6c"><div class="ttname"><a href="classfstream.html#aed23877c52f828cab8de7a23603b3b6c">fstream::fstream</a></div><div class="ttdeci">fstream(const char *path, openmode mode=in|out)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">fstream.h:80</a></div></div>
+<div class="ttc" id="aclassifstream_html"><div class="ttname"><a href="classifstream.html">ifstream</a></div><div class="ttdoc">file input stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00160">fstream.h:160</a></div></div>
+<div class="ttc" id="aclassifstream_html_a11f4bfaa5c37cfcf8878c367fd861a88"><div class="ttname"><a href="classifstream.html#a11f4bfaa5c37cfcf8878c367fd861a88">ifstream::ifstream</a></div><div class="ttdeci">ifstream(const char *path, openmode mode=in)</div><div class="ttdef"><b>Definition</b> <a href="#l00168">fstream.h:168</a></div></div>
+<div class="ttc" id="aclassifstream_html_a169694d6535fd551fd6db48a2867590e"><div class="ttname"><a href="classifstream.html#a169694d6535fd551fd6db48a2867590e">ifstream::open</a></div><div class="ttdeci">void open(const char *path, openmode mode=in)</div><div class="ttdef"><b>Definition</b> <a href="#l00184">fstream.h:184</a></div></div>
+<div class="ttc" id="aclassifstream_html_a25b585f3088164a09ee7076cb6d10387"><div class="ttname"><a href="classifstream.html#a25b585f3088164a09ee7076cb6d10387">ifstream::ifstream</a></div><div class="ttdeci">ifstream()</div><div class="ttdef"><b>Definition</b> <a href="#l00163">fstream.h:163</a></div></div>
+<div class="ttc" id="aclassifstream_html_aaa16c6422ea371995d02159f2e6707b2"><div class="ttname"><a href="classifstream.html#aaa16c6422ea371995d02159f2e6707b2">ifstream::is_open</a></div><div class="ttdeci">bool is_open()</div><div class="ttdef"><b>Definition</b> <a href="#l00177">fstream.h:177</a></div></div>
+<div class="ttc" id="aclassifstream_html_ac5892f472afdef6160f5fe2401b16dce"><div class="ttname"><a href="classifstream.html#ac5892f472afdef6160f5fe2401b16dce">ifstream::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition</b> <a href="#l00175">fstream.h:175</a></div></div>
+<div class="ttc" id="aclassios__base_html_a07a00996a6e525b88bdfe7935d5ead05"><div class="ttname"><a href="classios__base.html#a07a00996a6e525b88bdfe7935d5ead05">ios_base::goodbit</a></div><div class="ttdeci">static const iostate goodbit</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00056">ios.h:56</a></div></div>
+<div class="ttc" id="aclassios__base_html_a45de7cca0d01da781f4b886179c65c22"><div class="ttname"><a href="classios__base.html#a45de7cca0d01da781f4b886179c65c22">ios_base::off_type</a></div><div class="ttdeci">int32_t off_type</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00072">ios.h:72</a></div></div>
+<div class="ttc" id="aclassios__base_html_a4c1d517774c0d11af3424e90395f26ae"><div class="ttname"><a href="classios__base.html#a4c1d517774c0d11af3424e90395f26ae">ios_base::out</a></div><div class="ttdeci">static const openmode out</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00141">ios.h:141</a></div></div>
+<div class="ttc" id="aclassios__base_html_aaa192ec0dccc43050715553a34644523"><div class="ttname"><a href="classios__base.html#aaa192ec0dccc43050715553a34644523">ios_base::openmode</a></div><div class="ttdeci">uint8_t openmode</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00129">ios.h:129</a></div></div>
+<div class="ttc" id="aclassios__base_html_ab01103ba35f6ba93a704b3ec0c86191e"><div class="ttname"><a href="classios__base.html#ab01103ba35f6ba93a704b3ec0c86191e">ios_base::seekdir</a></div><div class="ttdeci">seekdir</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00085">ios.h:85</a></div></div>
+<div class="ttc" id="aclassios__base_html_abe85cf1f181b8bce8022f05ab76aae7f"><div class="ttname"><a href="classios__base.html#abe85cf1f181b8bce8022f05ab76aae7f">ios_base::pos_type</a></div><div class="ttdeci">uint32_t pos_type</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00070">ios.h:70</a></div></div>
+<div class="ttc" id="aclassios__base_html_ae5432e3c269064480652c4602f5f74ad"><div class="ttname"><a href="classios__base.html#ae5432e3c269064480652c4602f5f74ad">ios_base::in</a></div><div class="ttdeci">static const openmode in</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00139">ios.h:139</a></div></div>
+<div class="ttc" id="aclassios__base_html_aef19291eeae0f072ac42c6ba1fe3033c"><div class="ttname"><a href="classios__base.html#aef19291eeae0f072ac42c6ba1fe3033c">ios_base::iostate</a></div><div class="ttdeci">unsigned char iostate</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00053">ios.h:53</a></div></div>
+<div class="ttc" id="aclassios_html_aa49ed6670d1743e7a373b2d915ec739a"><div class="ttname"><a href="classios.html#aa49ed6670d1743e7a373b2d915ec739a">ios::clear</a></div><div class="ttdeci">void clear(iostate state=goodbit)</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00415">ios.h:415</a></div></div>
+<div class="ttc" id="aclassios_html_adc5dbd7b69da79493ebc84aa1e681aaa"><div class="ttname"><a href="classios.html#adc5dbd7b69da79493ebc84aa1e681aaa">ios::ios</a></div><div class="ttdeci">ios()</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00385">ios.h:385</a></div></div>
+<div class="ttc" id="aclassiostream_html"><div class="ttname"><a href="classiostream.html">iostream</a></div><div class="ttdoc">Input/Output stream.</div><div class="ttdef"><b>Definition</b> <a href="iostream_8h_source.html#l00156">iostream.h:156</a></div></div>
+<div class="ttc" id="aclassistream_html_a4022265e0ede3698454f1ff59348c14a"><div class="ttname"><a href="classistream.html#a4022265e0ede3698454f1ff59348c14a">istream::peek</a></div><div class="ttdeci">int peek()</div><div class="ttdef"><b>Definition</b> <a href="istream_8cpp_source.html#l00366">istream.cpp:366</a></div></div>
+<div class="ttc" id="aclassistream_html_addc5126126b85763f6b10d3b25f4709e"><div class="ttname"><a href="classistream.html#addc5126126b85763f6b10d3b25f4709e">istream::istream</a></div><div class="ttdeci">istream()=default</div></div>
+<div class="ttc" id="aclassofstream_html"><div class="ttname"><a href="classofstream.html">ofstream</a></div><div class="ttdoc">file output stream.</div><div class="ttdef"><b>Definition</b> <a href="#l00214">fstream.h:214</a></div></div>
+<div class="ttc" id="aclassofstream_html_a09edfdb3dbda20aff105e751001313f0"><div class="ttname"><a href="classofstream.html#a09edfdb3dbda20aff105e751001313f0">ofstream::clear</a></div><div class="ttdeci">void clear(iostate state=goodbit)</div><div class="ttdef"><b>Definition</b> <a href="#l00228">fstream.h:228</a></div></div>
+<div class="ttc" id="aclassofstream_html_a240f3752c7ff7a78d10c143d2083715f"><div class="ttname"><a href="classofstream.html#a240f3752c7ff7a78d10c143d2083715f">ofstream::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition</b> <a href="#l00235">fstream.h:235</a></div></div>
+<div class="ttc" id="aclassofstream_html_a4b9d30c742fbe01baa336406c7afdcb2"><div class="ttname"><a href="classofstream.html#a4b9d30c742fbe01baa336406c7afdcb2">ofstream::open</a></div><div class="ttdeci">void open(const char *path, openmode mode=out)</div><div class="ttdef"><b>Definition</b> <a href="#l00242">fstream.h:242</a></div></div>
+<div class="ttc" id="aclassofstream_html_a9c97eb2eb6e35ae87cf7f7453a67e70a"><div class="ttname"><a href="classofstream.html#a9c97eb2eb6e35ae87cf7f7453a67e70a">ofstream::is_open</a></div><div class="ttdeci">bool is_open()</div><div class="ttdef"><b>Definition</b> <a href="#l00246">fstream.h:246</a></div></div>
+<div class="ttc" id="aclassofstream_html_aa03b6ce19e306247d6facc7fcbce5d93"><div class="ttname"><a href="classofstream.html#aa03b6ce19e306247d6facc7fcbce5d93">ofstream::ofstream</a></div><div class="ttdeci">ofstream()</div><div class="ttdef"><b>Definition</b> <a href="#l00216">fstream.h:216</a></div></div>
+<div class="ttc" id="aclassofstream_html_abd1a07c492699c44f149da45b8d593c1"><div class="ttname"><a href="classofstream.html#abd1a07c492699c44f149da45b8d593c1">ofstream::ofstream</a></div><div class="ttdeci">ofstream(const char *path, openmode mode=out)</div><div class="ttdef"><b>Definition</b> <a href="#l00221">fstream.h:221</a></div></div>
+<div class="ttc" id="aclassostream_html_ab826edab9b1f7409be3aac5603283a90"><div class="ttname"><a href="classostream.html#ab826edab9b1f7409be3aac5603283a90">ostream::ostream</a></div><div class="ttdeci">ostream()</div><div class="ttdef"><b>Definition</b> <a href="ostream_8h_source.html#l00039">ostream.h:39</a></div></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="aios_8h_html_a77934df7b6e6d581c762dd387e2b5162"><div class="ttname"><a href="ios_8h.html#a77934df7b6e6d581c762dd387e2b5162">StreamBaseFile</a></div><div class="ttdeci">FatFile StreamBaseFile</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00038">ios.h:38</a></div></div>
+<div class="ttc" id="aios_8h_html_aae8adaedc486a4b2f67576fdeaf0a585"><div class="ttname"><a href="ios_8h.html#aae8adaedc486a4b2f67576fdeaf0a585">pos_t</a></div><div class="ttdeci">fspos_t pos_t</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00034">ios.h:34</a></div></div>
+<div class="ttc" id="aiostream_8h_html"><div class="ttname"><a href="iostream_8h.html">iostream.h</a></div><div class="ttdoc">iostream class</div></div>
+<div class="ttc" id="anrf52__main_8cpp_html_a89f234133d3efe315836311cbf21c64b"><div class="ttname"><a href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition</b> <a href="nrf52__main_8cpp_source.html#l00080">nrf52_main.cpp:80</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_31d1d7879a1997b7d83db029e2251014.html">iostream</a></li><li class="navelem"><a href="fstream_8h.html">fstream.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

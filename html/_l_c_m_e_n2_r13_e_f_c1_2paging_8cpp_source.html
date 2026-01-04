@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/Displays/LCMEN2R13EFC1/paging.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_l_c_m_e_n2_r13_e_f_c1_2paging_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">paging.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_c_m_e_n2_r13_e_f_c1_2paging_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_l_c_m_e_n2_r13_e_f_c1_8h.html">LCMEN2R13EFC1.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Clear page area where new window-data will go - overriden if display doesn&#39;t support &quot;partial window&quot;</span></div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_l_c_m_e_n2_r13_e_f_c1.html#ab764ad0b10c515a96b7942b3e19ab582">    4</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#ab764ad0b10c515a96b7942b3e19ab582">LCMEN2R13EFC1::clearPageWindow</a>() {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="comment">// Instead of the &quot;window&quot; data being written at the start of the pagefile, we&#39;re just putting it where it would normally go if fullscreen</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="comment">// Means we can&#39;t just wipe the whole pagefile, need to actively fill the window region with default color</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    uint8_t blank_byte = (<a class="code hl_variable" href="class_base_display.html#a9a20d3862297009e228835946bc09724">default_color</a> &amp; <a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50">WHITE</a>) * 255;    <span class="comment">// We&#39;re filling in bulk here; bits are either all on or all off</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Selectively clear bytes from the middle of the (otherwise-intact) display buffer</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">for</span> (uint16_t y = <a class="code hl_variable" href="class_base_display.html#a0e6a81eb3ee56301b4f54b004cb5c86f">winrot_top</a>; y &lt;= <a class="code hl_variable" href="class_base_display.html#a588ef5410945fe2bfb2cbb00b79a7b05">winrot_bottom</a>; y++) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">for</span>(uint16_t x = <a class="code hl_variable" href="class_base_display.html#a3eeddb871495b5c08e1bc45e3ca0d698">winrot_left</a>; x &lt;= <a class="code hl_variable" href="class_base_display.html#a300de505dcca8410a18fc3be1ece12c1">winrot_right</a>; x+=8) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <a class="code hl_variable" href="class_base_display.html#a2ddb5b934d7369617057aa7078212d68">page_black</a>[((y * <a class="code hl_variable" href="class_l_c_m_e_n2_r13_e_f_c1.html#a8185fbfd0c0208d6679c89ae28abb6e6">panel_width</a>) + x) / 8] = blank_byte;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+</div>
+<div class="ttc" id="a_l_c_m_e_n2_r13_e_f_c1_8h_html"><div class="ttname"><a href="_l_c_m_e_n2_r13_e_f_c1_8h.html">LCMEN2R13EFC1.h</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a0e6a81eb3ee56301b4f54b004cb5c86f"><div class="ttname"><a href="class_base_display.html#a0e6a81eb3ee56301b4f54b004cb5c86f">BaseDisplay::winrot_top</a></div><div class="ttdeci">uint16_t winrot_top</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a2ddb5b934d7369617057aa7078212d68"><div class="ttname"><a href="class_base_display.html#a2ddb5b934d7369617057aa7078212d68">BaseDisplay::page_black</a></div><div class="ttdeci">uint8_t * page_black</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00305">base.h:305</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a300de505dcca8410a18fc3be1ece12c1"><div class="ttname"><a href="class_base_display.html#a300de505dcca8410a18fc3be1ece12c1">BaseDisplay::winrot_right</a></div><div class="ttdeci">uint16_t winrot_right</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a3eeddb871495b5c08e1bc45e3ca0d698"><div class="ttname"><a href="class_base_display.html#a3eeddb871495b5c08e1bc45e3ca0d698">BaseDisplay::winrot_left</a></div><div class="ttdeci">uint16_t winrot_left</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a588ef5410945fe2bfb2cbb00b79a7b05"><div class="ttname"><a href="class_base_display.html#a588ef5410945fe2bfb2cbb00b79a7b05">BaseDisplay::winrot_bottom</a></div><div class="ttdeci">uint16_t winrot_bottom</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a9a20d3862297009e228835946bc09724"><div class="ttname"><a href="class_base_display.html#a9a20d3862297009e228835946bc09724">BaseDisplay::default_color</a></div><div class="ttdeci">uint16_t default_color</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00295">base.h:295</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a8185fbfd0c0208d6679c89ae28abb6e6"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a8185fbfd0c0208d6679c89ae28abb6e6">LCMEN2R13EFC1::panel_width</a></div><div class="ttdeci">static const uint16_t panel_width</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_8h_source.html#l00011">LCMEN2R13EFC1.h:11</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_ab764ad0b10c515a96b7942b3e19ab582"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#ab764ad0b10c515a96b7942b3e19ab582">LCMEN2R13EFC1::clearPageWindow</a></div><div class="ttdeci">void clearPageWindow()</div><div class="ttdef"><b>Definition</b> <a href="#l00004">paging.cpp:4</a></div></div>
+<div class="ttc" id="aenums_8h_html_aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50"><div class="ttname"><a href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50">WHITE</a></div><div class="ttdeci">@ WHITE</div><div class="ttdef"><b>Definition</b> <a href="enums_8h_source.html#l00005">enums.h:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_32b6f4273c1202b2f07c43b5e6de1a39.html">Displays</a></li><li class="navelem"><a href="dir_f1569d0e701a4957ca08d25663f13492.html">LCMEN2R13EFC1</a></li><li class="navelem"><a href="_l_c_m_e_n2_r13_e_f_c1_2paging_8cpp.html">paging.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

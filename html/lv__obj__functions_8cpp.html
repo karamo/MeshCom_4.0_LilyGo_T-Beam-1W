@@ -1,0 +1,1932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t-deck/lv_obj_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('lv__obj__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_obj_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>object functions for lvgl  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__obj__functions_8h_source.html">lv_obj_functions.h</a>&quot;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="aprs__structures_8h_source.html">aprs_structures.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="tdeck__main_8h_source.html">tdeck_main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tdeck__extern_8h_source.html">tdeck_extern.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__functions__extern_8h_source.html">lv_obj_functions_extern.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tdeck__helpers_8h_source.html">tdeck_helpers.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="event__functions_8h_source.html">event_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="esp32__flash_8h_source.html">esp32/esp32_flash.h</a>&gt;</code><br />
+</div>
+<p><a href="lv__obj__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:ad345e25b575343c379e4b255f642c7f3" id="r_ad345e25b575343c379e4b255f642c7f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad345e25b575343c379e4b255f642c7f3">LV_IMG_DECLARE</a> (<a class="el" href="map__europe_8c.html#afaa5b8b0c6580b3edbc344e71ed4dbe4">map_europe</a>)</td></tr>
+<tr class="memitem:ae430cbd5f1c8db61df2d4cb74cd04a30" id="r_ae430cbd5f1c8db61df2d4cb74cd04a30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae430cbd5f1c8db61df2d4cb74cd04a30">LV_IMG_DECLARE</a> (<a class="el" href="map__deutschland_8c.html#a9edd4b58eb247b65fb4cec491d65c0dd">map_deutschland</a>)</td></tr>
+<tr class="memitem:a260d4f44a4ac34284bc7472735b32ae8" id="r_a260d4f44a4ac34284bc7472735b32ae8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a260d4f44a4ac34284bc7472735b32ae8">LV_IMG_DECLARE</a> (<a class="el" href="map__oesterreich_8c.html#a7180d7662a8e3baf266b6104ae3b80fa">map_oesterreich</a>)</td></tr>
+<tr class="memitem:accf04594835c855efe1138136e4d5f1e" id="r_accf04594835c855efe1138136e4d5f1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accf04594835c855efe1138136e4d5f1e">LV_IMG_DECLARE</a> (<a class="el" href="map__wien__umgebung_8c.html#a1248dc833626f558a73ff34a31a319c5">map_wien_umgebung</a>)</td></tr>
+<tr class="memitem:ae603c3513494fc1ce5afaaaf228cf875" id="r_ae603c3513494fc1ce5afaaaf228cf875"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae603c3513494fc1ce5afaaaf228cf875">LV_IMG_DECLARE</a> (<a class="el" href="map__wien_8c.html#ac6274a72588314f8e0901b641c1beb4f">map_wien</a>)</td></tr>
+<tr class="memitem:a59cdbcb8f0fec31a1defc8fb09856274" id="r_a59cdbcb8f0fec31a1defc8fb09856274"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cdbcb8f0fec31a1defc8fb09856274">getCountryDropbox</a> ()</td></tr>
+<tr class="memitem:a8d62b0175a2d93458f5ef016359a260f" id="r_a8d62b0175a2d93458f5ef016359a260f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d62b0175a2d93458f5ef016359a260f">setDisplayLayout</a> (lv_obj_t *parent)</td></tr>
+<tr class="memitem:afa1d304b0a1c67fd3ccc00a0a33f41b5" id="r_afa1d304b0a1c67fd3ccc00a0a33f41b5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa1d304b0a1c67fd3ccc00a0a33f41b5">getMap</a> (int iMap)</td></tr>
+<tr class="memitem:a8730ef8cd9507af34f6b94d343418622" id="r_a8730ef8cd9507af34f6b94d343418622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8730ef8cd9507af34f6b94d343418622">getMapID</a> (String strMap)</td></tr>
+<tr class="memitem:ace955475639d561a773428564efb0be3" id="r_ace955475639d561a773428564efb0be3"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace955475639d561a773428564efb0be3">getMapDropbox</a> ()</td></tr>
+<tr class="memitem:ac6c2c547f4bde26bcb1075d0ffd3182f" id="r_ac6c2c547f4bde26bcb1075d0ffd3182f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c2c547f4bde26bcb1075d0ffd3182f">getMapDropboxID</a> (String strMap)</td></tr>
+<tr class="memitem:a2ef99d1f00fa90ec1ce3daf43e310474" id="r_a2ef99d1f00fa90ec1ce3daf43e310474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef99d1f00fa90ec1ce3daf43e310474">add_map_point</a> (String callsign, double dlat, double dlon, bool bHome)</td></tr>
+<tr class="memitem:a5f1586659681cf692359f7c8c003dd8b" id="r_a5f1586659681cf692359f7c8c003dd8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1586659681cf692359f7c8c003dd8b">init_map</a> ()</td></tr>
+<tr class="memitem:a3857feb98dd23d969e6e2896682b5325" id="r_a3857feb98dd23d969e6e2896682b5325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3857feb98dd23d969e6e2896682b5325">refresh_map</a> (int iMap)</td></tr>
+<tr class="memitem:abb872b14237a5f7b0245992bc46129a7" id="r_abb872b14237a5f7b0245992bc46129a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb872b14237a5f7b0245992bc46129a7">set_map</a> (int iMap)</td></tr>
+<tr class="memitem:a60beee3dfc76c5298e6c2baed72de03d" id="r_a60beee3dfc76c5298e6c2baed72de03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60beee3dfc76c5298e6c2baed72de03d">tft_on</a> ()</td></tr>
+<tr class="memitem:ab3cfb9297e3eb7ea72acfc4b1080db41" id="r_ab3cfb9297e3eb7ea72acfc4b1080db41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3cfb9297e3eb7ea72acfc4b1080db41">tft_off</a> ()</td></tr>
+<tr class="memitem:ac55111716cdc2036d32e5f8a7a216469" id="r_ac55111716cdc2036d32e5f8a7a216469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac55111716cdc2036d32e5f8a7a216469">tdeck_update_batt_label</a> (float batt, int proz)</td></tr>
+<tr class="memitem:abd70a0ee9577cd401e0d4dff72c697bb" id="r_abd70a0ee9577cd401e0d4dff72c697bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd70a0ee9577cd401e0d4dff72c697bb">tdeck_update_time_label</a> ()</td></tr>
+<tr class="memitem:aed8a033f41901dd13e9b15ea2f562004" id="r_aed8a033f41901dd13e9b15ea2f562004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed8a033f41901dd13e9b15ea2f562004">tdeck_add_pos_point</a> (String callsign, double u_dlat, char lat_c, double u_dlon, char lon_c)</td></tr>
+<tr class="memitem:af3e19b3b71c3e5c1d074104a4736b30e" id="r_af3e19b3b71c3e5c1d074104a4736b30e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3e19b3b71c3e5c1d074104a4736b30e">tdeck_add_to_pos_view</a> (String callsign, double u_dlat, char lat_c, double u_dlon, char lon_c, int alt)</td></tr>
+<tr class="memitem:ac92d4a1c4adbe118ffc513e60b59403d" id="r_ac92d4a1c4adbe118ffc513e60b59403d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92d4a1c4adbe118ffc513e60b59403d">tdeck_refresh_SET_view</a> ()</td></tr>
+<tr class="memitem:a8ce96ec5df19de09a099819e14e1df2a" id="r_a8ce96ec5df19de09a099819e14e1df2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ce96ec5df19de09a099819e14e1df2a">tdeck_send_track_view</a> ()</td></tr>
+<tr class="memitem:af933e4c13cd867fd9c0f8b9d31a56312" id="r_af933e4c13cd867fd9c0f8b9d31a56312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af933e4c13cd867fd9c0f8b9d31a56312">tdeck_refresh_track_view</a> ()</td></tr>
+<tr class="memitem:af7cd26bea1776659ebc3f846fa2d757e" id="r_af7cd26bea1776659ebc3f846fa2d757e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7cd26bea1776659ebc3f846fa2d757e">tdeck_add_MSG</a> (<a class="el" href="structaprs_message.html">aprsMessage</a> aprsmsg, bool bWithAudio)</td></tr>
+<tr class="memitem:ae45232e0cc3915621019c60bda03bce2" id="r_ae45232e0cc3915621019c60bda03bce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae45232e0cc3915621019c60bda03bce2">tdeck_add_MSG</a> (String callsign, String path, String message, bool bWithAudio)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a77f3eccdf27a95b758b236853f2370d7" id="r_a77f3eccdf27a95b758b236853f2370d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77f3eccdf27a95b758b236853f2370d7">iKeyBoardType</a> =1</td></tr>
+<tr class="memitem:a44dc806d7a1c102aac8ccc50f62fca1d" id="r_a44dc806d7a1c102aac8ccc50f62fca1d"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44dc806d7a1c102aac8ccc50f62fca1d">btnlabelup</a></td></tr>
+<tr class="memitem:ab3376fd3b9a064e38d3df383e55c69a8" id="r_ab3376fd3b9a064e38d3df383e55c69a8"><td class="memItemLeft" align="right" valign="top">lv_indev_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3376fd3b9a064e38d3df383e55c69a8">kb_indev</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a5dec1e0aba1810a32dbc66c7116787a8" id="r_a5dec1e0aba1810a32dbc66c7116787a8"><td class="memItemLeft" align="right" valign="top">lv_indev_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dec1e0aba1810a32dbc66c7116787a8">mouse_indev</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a32db6d99f3f0253f2632040d93b5335b" id="r_a32db6d99f3f0253f2632040d93b5335b"><td class="memItemLeft" align="right" valign="top">lv_indev_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32db6d99f3f0253f2632040d93b5335b">touch_indev</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a2123fed33f9b67bd26fce955edb1b1cf" id="r_a2123fed33f9b67bd26fce955edb1b1cf"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2123fed33f9b67bd26fce955edb1b1cf">setup_callsign</a></td></tr>
+<tr class="memitem:adc03ea38937013fe117df65eedc6d2dc" id="r_adc03ea38937013fe117df65eedc6d2dc"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc03ea38937013fe117df65eedc6d2dc">setup_lat</a></td></tr>
+<tr class="memitem:a053aff75df5f92e806bceb751a012118" id="r_a053aff75df5f92e806bceb751a012118"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a053aff75df5f92e806bceb751a012118">setup_lon</a></td></tr>
+<tr class="memitem:a00cb8a174fcab9bfaeb2b1065e903bcf" id="r_a00cb8a174fcab9bfaeb2b1065e903bcf"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00cb8a174fcab9bfaeb2b1065e903bcf">setup_lat_c</a></td></tr>
+<tr class="memitem:a220466bcf96fa62e739ac5763d3c9401" id="r_a220466bcf96fa62e739ac5763d3c9401"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220466bcf96fa62e739ac5763d3c9401">setup_lon_c</a></td></tr>
+<tr class="memitem:a3b345d5dcfeaf7e152cf0271ed8aece2" id="r_a3b345d5dcfeaf7e152cf0271ed8aece2"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b345d5dcfeaf7e152cf0271ed8aece2">setup_alt</a></td></tr>
+<tr class="memitem:ad9aecd00b228acdf7bc0a7a4b8de6cf4" id="r_ad9aecd00b228acdf7bc0a7a4b8de6cf4"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9aecd00b228acdf7bc0a7a4b8de6cf4">setup_aprsgroup</a></td></tr>
+<tr class="memitem:a718fbc31a52489d148481ef180d7872b" id="r_a718fbc31a52489d148481ef180d7872b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718fbc31a52489d148481ef180d7872b">setup_aprssymbol</a></td></tr>
+<tr class="memitem:af362d2c08bccbf5d18407d3f469823cc" id="r_af362d2c08bccbf5d18407d3f469823cc"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af362d2c08bccbf5d18407d3f469823cc">setup_stone</a></td></tr>
+<tr class="memitem:ac1e2fa015eb06a1e5ec265dd21843932" id="r_ac1e2fa015eb06a1e5ec265dd21843932"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e2fa015eb06a1e5ec265dd21843932">setup_mtone</a></td></tr>
+<tr class="memitem:a42f5950fefff45111b53aaeb4fe319e2" id="r_a42f5950fefff45111b53aaeb4fe319e2"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42f5950fefff45111b53aaeb4fe319e2">setup_name</a></td></tr>
+<tr class="memitem:a86566eaf60e29f8d4682d0e8867d6af7" id="r_a86566eaf60e29f8d4682d0e8867d6af7"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86566eaf60e29f8d4682d0e8867d6af7">setup_grc0</a></td></tr>
+<tr class="memitem:a5565fdb2c11d4402510106f01155778b" id="r_a5565fdb2c11d4402510106f01155778b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5565fdb2c11d4402510106f01155778b">setup_grc1</a></td></tr>
+<tr class="memitem:a275d3af126fc34afe2f0f96068e05da7" id="r_a275d3af126fc34afe2f0f96068e05da7"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275d3af126fc34afe2f0f96068e05da7">setup_grc2</a></td></tr>
+<tr class="memitem:a2e2382f4906d1d9dd9ee121756c16c73" id="r_a2e2382f4906d1d9dd9ee121756c16c73"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e2382f4906d1d9dd9ee121756c16c73">setup_grc3</a></td></tr>
+<tr class="memitem:a343d2112f3829615e1abb0f5a4c83b4b" id="r_a343d2112f3829615e1abb0f5a4c83b4b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343d2112f3829615e1abb0f5a4c83b4b">setup_grc4</a></td></tr>
+<tr class="memitem:af2e2d48d7832264f61cd8e987ae9419c" id="r_af2e2d48d7832264f61cd8e987ae9419c"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2e2d48d7832264f61cd8e987ae9419c">setup_grc5</a></td></tr>
+<tr class="memitem:a0ea13d07ec3792d1ce210cfed901dda9" id="r_a0ea13d07ec3792d1ce210cfed901dda9"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ea13d07ec3792d1ce210cfed901dda9">setup_utc</a></td></tr>
+<tr class="memitem:a0a6b671515b6c827bfe5db7c88ca979e" id="r_a0a6b671515b6c827bfe5db7c88ca979e"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a6b671515b6c827bfe5db7c88ca979e">btn_msg_id_label</a></td></tr>
+<tr class="memitem:ad01a35e2e79ce33e18be94d46fe36b8e" id="r_ad01a35e2e79ce33e18be94d46fe36b8e"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad01a35e2e79ce33e18be94d46fe36b8e">btn_ack_id_label</a></td></tr>
+<tr class="memitem:a2e03c7021d8942bf02f7f9c1badd7bc6" id="r_a2e03c7021d8942bf02f7f9c1badd7bc6"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e03c7021d8942bf02f7f9c1badd7bc6">text_ta</a></td></tr>
+<tr class="memitem:a40d2fe9eb895d6541d0f950b35ce9d35" id="r_a40d2fe9eb895d6541d0f950b35ce9d35"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40d2fe9eb895d6541d0f950b35ce9d35">track_ta</a></td></tr>
+<tr class="memitem:a1b9434269a80deeba6772a0d84715f6b" id="r_a1b9434269a80deeba6772a0d84715f6b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b9434269a80deeba6772a0d84715f6b">btn_time_label</a></td></tr>
+<tr class="memitem:aabbddd4cfc9a19964daef97e3dedf3ec" id="r_aabbddd4cfc9a19964daef97e3dedf3ec"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabbddd4cfc9a19964daef97e3dedf3ec">btn_time_label1</a></td></tr>
+<tr class="memitem:a61606815fb27980581874659a44f80f8" id="r_a61606815fb27980581874659a44f80f8"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61606815fb27980581874659a44f80f8">btn_time_label2</a></td></tr>
+<tr class="memitem:a1dddc31d4bae19644d07889374ea01d9" id="r_a1dddc31d4bae19644d07889374ea01d9"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dddc31d4bae19644d07889374ea01d9">btn_time_label4</a></td></tr>
+<tr class="memitem:a591b20e47af1df705c5e25e97b4e4d19" id="r_a591b20e47af1df705c5e25e97b4e4d19"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591b20e47af1df705c5e25e97b4e4d19">btn_batt_label</a></td></tr>
+<tr class="memitem:a096b41782bf811e4057883c2b0b9b24a" id="r_a096b41782bf811e4057883c2b0b9b24a"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a096b41782bf811e4057883c2b0b9b24a">btn_batt_label1</a></td></tr>
+<tr class="memitem:abc31d843ed3210631934809b9e9df974" id="r_abc31d843ed3210631934809b9e9df974"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc31d843ed3210631934809b9e9df974">btn_batt_label2</a></td></tr>
+<tr class="memitem:a3c3378fb020a6c370ccb94f688b34d66" id="r_a3c3378fb020a6c370ccb94f688b34d66"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3378fb020a6c370ccb94f688b34d66">btn_batt_label4</a></td></tr>
+<tr class="memitem:a98ca8add90664bcd47a2ed33cf223f88" id="r_a98ca8add90664bcd47a2ed33cf223f88"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98ca8add90664bcd47a2ed33cf223f88">text_input</a></td></tr>
+<tr class="memitem:a96c53cd4d461bb3eee0af79cfaf13958" id="r_a96c53cd4d461bb3eee0af79cfaf13958"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96c53cd4d461bb3eee0af79cfaf13958">position_ta</a></td></tr>
+<tr class="memitem:ac08b6afffed775524f0aa7a8f09c4d3c" id="r_ac08b6afffed775524f0aa7a8f09c4d3c"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08b6afffed775524f0aa7a8f09c4d3c">map_ta</a></td></tr>
+<tr class="memitem:a8c49f817ed597822f824ced93954d98e" id="r_a8c49f817ed597822f824ced93954d98e"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c49f817ed597822f824ced93954d98e">mheard_ta</a></td></tr>
+<tr class="memitem:aef6ec49c8974f04dbe6146d1ee06b864" id="r_aef6ec49c8974f04dbe6146d1ee06b864"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef6ec49c8974f04dbe6146d1ee06b864">path_ta</a></td></tr>
+<tr class="memitem:ae16f91cd6321a53e6abf76b0739b74ce" id="r_ae16f91cd6321a53e6abf76b0739b74ce"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae16f91cd6321a53e6abf76b0739b74ce">tv</a></td></tr>
+<tr class="memitem:a73aadf748c5bca25548115ef2dbc7c1b" id="r_a73aadf748c5bca25548115ef2dbc7c1b"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73aadf748c5bca25548115ef2dbc7c1b">dm_callsign</a></td></tr>
+<tr class="memitem:ac93828a1bdd8e88684a2c591a38a1b5d" id="r_ac93828a1bdd8e88684a2c591a38a1b5d"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93828a1bdd8e88684a2c591a38a1b5d">dropdown_aprs</a></td></tr>
+<tr class="memitem:a7e7e2068d3cddd06c0398c9390a70637" id="r_a7e7e2068d3cddd06c0398c9390a70637"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7e2068d3cddd06c0398c9390a70637">dropdown_country</a></td></tr>
+<tr class="memitem:ac597063b602032493b76e575c17dbdc5" id="r_ac597063b602032493b76e575c17dbdc5"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac597063b602032493b76e575c17dbdc5">dropdown_mapselect</a></td></tr>
+<tr class="memitem:a39722eb466db3522c0d82553088263b4" id="r_a39722eb466db3522c0d82553088263b4"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39722eb466db3522c0d82553088263b4">dropdown_modusselect</a></td></tr>
+<tr class="memitem:a11c3a148d9d309f72158f80624d0bf51" id="r_a11c3a148d9d309f72158f80624d0bf51"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11c3a148d9d309f72158f80624d0bf51">web_sw</a></td></tr>
+<tr class="memitem:a9361dfab8aa84bdc27fdbf7243b38a49" id="r_a9361dfab8aa84bdc27fdbf7243b38a49"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9361dfab8aa84bdc27fdbf7243b38a49">mesh_sw</a></td></tr>
+<tr class="memitem:ac0fecb75458240b0ae9cc4a933f18b82" id="r_ac0fecb75458240b0ae9cc4a933f18b82"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0fecb75458240b0ae9cc4a933f18b82">noallmsg_sw</a></td></tr>
+<tr class="memitem:afc7055d9691c8543dfc40ec211661f1a" id="r_afc7055d9691c8543dfc40ec211661f1a"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7055d9691c8543dfc40ec211661f1a">gpson_sw</a></td></tr>
+<tr class="memitem:ad1cfd6139b17bceeb6648fea432733e4" id="r_ad1cfd6139b17bceeb6648fea432733e4"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1cfd6139b17bceeb6648fea432733e4">track_sw</a></td></tr>
+<tr class="memitem:a636c31f15f048bb1d6dc78a19319a357" id="r_a636c31f15f048bb1d6dc78a19319a357"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636c31f15f048bb1d6dc78a19319a357">wifiap_sw</a></td></tr>
+<tr class="memitem:ac2f731d1b454c23d4a0162a60955d384" id="r_ac2f731d1b454c23d4a0162a60955d384"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f731d1b454c23d4a0162a60955d384">mute_sw</a></td></tr>
+<tr class="memitem:ac69ed7d8bd1fe1b73076a19e2d808561" id="r_ac69ed7d8bd1fe1b73076a19e2d808561"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac69ed7d8bd1fe1b73076a19e2d808561">map_lat_min</a> [MAX_MAP] ={0}</td></tr>
+<tr class="memitem:a3c9254ecd4b23b6f4542503f750b192f" id="r_a3c9254ecd4b23b6f4542503f750b192f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c9254ecd4b23b6f4542503f750b192f">map_lat_max</a> [MAX_MAP] ={0}</td></tr>
+<tr class="memitem:ae8a8f6f08f0b507f3208f95939cb0949" id="r_ae8a8f6f08f0b507f3208f95939cb0949"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8a8f6f08f0b507f3208f95939cb0949">map_lon_min</a> [MAX_MAP] ={0}</td></tr>
+<tr class="memitem:ab4a23803dd9f338facbb803599f6110e" id="r_ab4a23803dd9f338facbb803599f6110e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4a23803dd9f338facbb803599f6110e">map_lon_max</a> [MAX_MAP] ={0}</td></tr>
+<tr class="memitem:ae46777b3741e8c77583d41840962ed4b" id="r_ae46777b3741e8c77583d41840962ed4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae46777b3741e8c77583d41840962ed4b">map_x</a> [MAX_MAP] = {0}</td></tr>
+<tr class="memitem:a4a6173539558186e3c1c11cfc1cfa297" id="r_a4a6173539558186e3c1c11cfc1cfa297"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a6173539558186e3c1c11cfc1cfa297">map_y</a> [MAX_MAP] = {0}</td></tr>
+<tr class="memitem:af47cad72cd7f18fe529733b7f39e01a2" id="r_af47cad72cd7f18fe529733b7f39e01a2"><td class="memItemLeft" align="right" valign="top">lv_obj_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af47cad72cd7f18fe529733b7f39e01a2">map_point</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:afd167575151d648e89135f03c59ce8c8" id="r_afd167575151d648e89135f03c59ce8c8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd167575151d648e89135f03c59ce8c8">map_point_call</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:a5181f5c783ba98c4a67c4eeddf42695a" id="r_a5181f5c783ba98c4a67c4eeddf42695a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5181f5c783ba98c4a67c4eeddf42695a">map_point_lat</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:ab55620ad762245090c900f208edfe699" id="r_ab55620ad762245090c900f208edfe699"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab55620ad762245090c900f208edfe699">map_point_lon</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:af04effe8610e99cfc15cfd774808ab25" id="r_af04effe8610e99cfc15cfd774808ab25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af04effe8610e99cfc15cfd774808ab25">map_point_count</a> = 0</td></tr>
+<tr class="memitem:a2edc093395cfcc601c3c5a9a0de054ef" id="r_a2edc093395cfcc601c3c5a9a0de054ef"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2edc093395cfcc601c3c5a9a0de054ef">map_pos_call</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:aade3d3b1ddcb2715810b8ba9ef044807" id="r_aade3d3b1ddcb2715810b8ba9ef044807"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aade3d3b1ddcb2715810b8ba9ef044807">map_pos_lat</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:ab20ff52e80120577d31341b3ce961573" id="r_ab20ff52e80120577d31341b3ce961573"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20ff52e80120577d31341b3ce961573">map_pos_lon</a> [MAX_POINTS]</td></tr>
+<tr class="memitem:a8fc2d7ecbfaf68ae25f944f62e114820" id="r_a8fc2d7ecbfaf68ae25f944f62e114820"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc2d7ecbfaf68ae25f944f62e114820">map_pos_count</a> = 0</td></tr>
+<tr class="memitem:af4fea39986cbb5ccdbba582425738860" id="r_af4fea39986cbb5ccdbba582425738860"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4fea39986cbb5ccdbba582425738860">ctrack</a> [300]</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>object functions for lvgl </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Jakob Gurnhofer (OE3GJC) </dd>
+<dd>
+Ing. Kurt Baumann (OE1KBC) @license MIT </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 ICSSW.org </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2025-03-24 </dd></dl>
+
+<p class="definition">Definiert in Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a2ef99d1f00fa90ec1ce3daf43e310474" name="a2ef99d1f00fa90ec1ce3daf43e310474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef99d1f00fa90ec1ce3daf43e310474">&#9670;&#160;</a></span>add_map_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_map_point </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dlat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dlon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bHome</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>add a point to the map </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01066">1066</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a59cdbcb8f0fec31a1defc8fb09856274" name="a59cdbcb8f0fec31a1defc8fb09856274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cdbcb8f0fec31a1defc8fb09856274">&#9670;&#160;</a></span>getCountryDropbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getCountryDropbox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01022">1022</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afa1d304b0a1c67fd3ccc00a0a33f41b5" name="afa1d304b0a1c67fd3ccc00a0a33f41b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1d304b0a1c67fd3ccc00a0a33f41b5">&#9670;&#160;</a></span>getMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getMap </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iMap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00972">972</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ace955475639d561a773428564efb0be3" name="ace955475639d561a773428564efb0be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace955475639d561a773428564efb0be3">&#9670;&#160;</a></span>getMapDropbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getMapDropbox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00999">999</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac6c2c547f4bde26bcb1075d0ffd3182f" name="ac6c2c547f4bde26bcb1075d0ffd3182f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c2c547f4bde26bcb1075d0ffd3182f">&#9670;&#160;</a></span>getMapDropboxID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMapDropboxID </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>strMap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01046">1046</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8730ef8cd9507af34f6b94d343418622" name="a8730ef8cd9507af34f6b94d343418622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8730ef8cd9507af34f6b94d343418622">&#9670;&#160;</a></span>getMapID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMapID </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>strMap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00985">985</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f1586659681cf692359f7c8c003dd8b" name="a5f1586659681cf692359f7c8c003dd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1586659681cf692359f7c8c003dd8b">&#9670;&#160;</a></span>init_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_map </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initializes the default maps </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01172">1172</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae430cbd5f1c8db61df2d4cb74cd04a30" name="ae430cbd5f1c8db61df2d4cb74cd04a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae430cbd5f1c8db61df2d4cb74cd04a30">&#9670;&#160;</a></span>LV_IMG_DECLARE() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map__deutschland_8c.html#a9edd4b58eb247b65fb4cec491d65c0dd">map_deutschland</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad345e25b575343c379e4b255f642c7f3" name="ad345e25b575343c379e4b255f642c7f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad345e25b575343c379e4b255f642c7f3">&#9670;&#160;</a></span>LV_IMG_DECLARE() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map__europe_8c.html#afaa5b8b0c6580b3edbc344e71ed4dbe4">map_europe</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a260d4f44a4ac34284bc7472735b32ae8" name="a260d4f44a4ac34284bc7472735b32ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260d4f44a4ac34284bc7472735b32ae8">&#9670;&#160;</a></span>LV_IMG_DECLARE() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map__oesterreich_8c.html#a7180d7662a8e3baf266b6104ae3b80fa">map_oesterreich</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae603c3513494fc1ce5afaaaf228cf875" name="ae603c3513494fc1ce5afaaaf228cf875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae603c3513494fc1ce5afaaaf228cf875">&#9670;&#160;</a></span>LV_IMG_DECLARE() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map__wien_8c.html#ac6274a72588314f8e0901b641c1beb4f">map_wien</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accf04594835c855efe1138136e4d5f1e" name="accf04594835c855efe1138136e4d5f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf04594835c855efe1138136e4d5f1e">&#9670;&#160;</a></span>LV_IMG_DECLARE() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="map__wien__umgebung_8c.html#a1248dc833626f558a73ff34a31a319c5">map_wien_umgebung</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3857feb98dd23d969e6e2896682b5325" name="a3857feb98dd23d969e6e2896682b5325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3857feb98dd23d969e6e2896682b5325">&#9670;&#160;</a></span>refresh_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void refresh_map </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iMap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>redraws the map </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01224">1224</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb872b14237a5f7b0245992bc46129a7" name="abb872b14237a5f7b0245992bc46129a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb872b14237a5f7b0245992bc46129a7">&#9670;&#160;</a></span>set_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_map </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iMap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>sets a map as active </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01246">1246</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8d62b0175a2d93458f5ef016359a260f" name="a8d62b0175a2d93458f5ef016359a260f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d62b0175a2d93458f5ef016359a260f">&#9670;&#160;</a></span>setDisplayLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDisplayLayout </td>
+          <td>(</td>
+          <td class="paramtype">lv_obj_t *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>defines GUI layout </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00129">129</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af7cd26bea1776659ebc3f846fa2d757e" name="af7cd26bea1776659ebc3f846fa2d757e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cd26bea1776659ebc3f846fa2d757e">&#9670;&#160;</a></span>tdeck_add_MSG() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_add_MSG </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaprs_message.html">aprsMessage</a></td>          <td class="paramname"><span class="paramname"><em>aprsmsg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bWithAudio</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds an message to the MSG view </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01678">1678</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae45232e0cc3915621019c60bda03bce2" name="ae45232e0cc3915621019c60bda03bce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45232e0cc3915621019c60bda03bce2">&#9670;&#160;</a></span>tdeck_add_MSG() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_add_MSG </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bWithAudio</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds an message to the MSG view </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01694">1694</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aed8a033f41901dd13e9b15ea2f562004" name="aed8a033f41901dd13e9b15ea2f562004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8a033f41901dd13e9b15ea2f562004">&#9670;&#160;</a></span>tdeck_add_pos_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_add_pos_point </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u_dlat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u_dlon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>add a point to map position </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01375">1375</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af3e19b3b71c3e5c1d074104a4736b30e" name="af3e19b3b71c3e5c1d074104a4736b30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e19b3b71c3e5c1d074104a4736b30e">&#9670;&#160;</a></span>tdeck_add_to_pos_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_add_to_pos_view </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u_dlat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u_dlon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds a position to the POS view </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01428">1428</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac92d4a1c4adbe118ffc513e60b59403d" name="ac92d4a1c4adbe118ffc513e60b59403d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92d4a1c4adbe118ffc513e60b59403d">&#9670;&#160;</a></span>tdeck_refresh_SET_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_refresh_SET_view </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>refresh SET view with current values </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01481">1481</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af933e4c13cd867fd9c0f8b9d31a56312" name="af933e4c13cd867fd9c0f8b9d31a56312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af933e4c13cd867fd9c0f8b9d31a56312">&#9670;&#160;</a></span>tdeck_refresh_track_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_refresh_track_view </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>refresh GPS view </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01578">1578</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ce96ec5df19de09a099819e14e1df2a" name="a8ce96ec5df19de09a099819e14e1df2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce96ec5df19de09a099819e14e1df2a">&#9670;&#160;</a></span>tdeck_send_track_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_send_track_view </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>show GPS Posítion sent </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01565">1565</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac55111716cdc2036d32e5f8a7a216469" name="ac55111716cdc2036d32e5f8a7a216469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55111716cdc2036d32e5f8a7a216469">&#9670;&#160;</a></span>tdeck_update_batt_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_update_batt_label </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>batt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>proz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>update the battery label </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01321">1321</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abd70a0ee9577cd401e0d4dff72c697bb" name="abd70a0ee9577cd401e0d4dff72c697bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd70a0ee9577cd401e0d4dff72c697bb">&#9670;&#160;</a></span>tdeck_update_time_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tdeck_update_time_label </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>update the time label </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01355">1355</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab3cfb9297e3eb7ea72acfc4b1080db41" name="ab3cfb9297e3eb7ea72acfc4b1080db41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cfb9297e3eb7ea72acfc4b1080db41">&#9670;&#160;</a></span>tft_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tft_off </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>turn tft backlight off </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01311">1311</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60beee3dfc76c5298e6c2baed72de03d" name="a60beee3dfc76c5298e6c2baed72de03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60beee3dfc76c5298e6c2baed72de03d">&#9670;&#160;</a></span>tft_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tft_on </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>turn tft backlight on </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01302">1302</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="ad01a35e2e79ce33e18be94d46fe36b8e" name="ad01a35e2e79ce33e18be94d46fe36b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01a35e2e79ce33e18be94d46fe36b8e">&#9670;&#160;</a></span>btn_ack_id_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_ack_id_label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00059">59</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a591b20e47af1df705c5e25e97b4e4d19" name="a591b20e47af1df705c5e25e97b4e4d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591b20e47af1df705c5e25e97b4e4d19">&#9670;&#160;</a></span>btn_batt_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_batt_label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00068">68</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a096b41782bf811e4057883c2b0b9b24a" name="a096b41782bf811e4057883c2b0b9b24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096b41782bf811e4057883c2b0b9b24a">&#9670;&#160;</a></span>btn_batt_label1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_batt_label1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00069">69</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abc31d843ed3210631934809b9e9df974" name="abc31d843ed3210631934809b9e9df974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc31d843ed3210631934809b9e9df974">&#9670;&#160;</a></span>btn_batt_label2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_batt_label2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00070">70</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c3378fb020a6c370ccb94f688b34d66" name="a3c3378fb020a6c370ccb94f688b34d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3378fb020a6c370ccb94f688b34d66">&#9670;&#160;</a></span>btn_batt_label4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_batt_label4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00071">71</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a6b671515b6c827bfe5db7c88ca979e" name="a0a6b671515b6c827bfe5db7c88ca979e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6b671515b6c827bfe5db7c88ca979e">&#9670;&#160;</a></span>btn_msg_id_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_msg_id_label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00058">58</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b9434269a80deeba6772a0d84715f6b" name="a1b9434269a80deeba6772a0d84715f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9434269a80deeba6772a0d84715f6b">&#9670;&#160;</a></span>btn_time_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_time_label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00064">64</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aabbddd4cfc9a19964daef97e3dedf3ec" name="aabbddd4cfc9a19964daef97e3dedf3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbddd4cfc9a19964daef97e3dedf3ec">&#9670;&#160;</a></span>btn_time_label1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_time_label1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00065">65</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a61606815fb27980581874659a44f80f8" name="a61606815fb27980581874659a44f80f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61606815fb27980581874659a44f80f8">&#9670;&#160;</a></span>btn_time_label2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_time_label2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00066">66</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1dddc31d4bae19644d07889374ea01d9" name="a1dddc31d4bae19644d07889374ea01d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dddc31d4bae19644d07889374ea01d9">&#9670;&#160;</a></span>btn_time_label4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btn_time_label4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00067">67</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a44dc806d7a1c102aac8ccc50f62fca1d" name="a44dc806d7a1c102aac8ccc50f62fca1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44dc806d7a1c102aac8ccc50f62fca1d">&#9670;&#160;</a></span>btnlabelup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* btnlabelup</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00033">33</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af4fea39986cbb5ccdbba582425738860" name="af4fea39986cbb5ccdbba582425738860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fea39986cbb5ccdbba582425738860">&#9670;&#160;</a></span>ctrack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ctrack[300]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l01560">1560</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a73aadf748c5bca25548115ef2dbc7c1b" name="a73aadf748c5bca25548115ef2dbc7c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73aadf748c5bca25548115ef2dbc7c1b">&#9670;&#160;</a></span>dm_callsign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* dm_callsign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00078">78</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac93828a1bdd8e88684a2c591a38a1b5d" name="ac93828a1bdd8e88684a2c591a38a1b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93828a1bdd8e88684a2c591a38a1b5d">&#9670;&#160;</a></span>dropdown_aprs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* dropdown_aprs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00079">79</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e7e2068d3cddd06c0398c9390a70637" name="a7e7e2068d3cddd06c0398c9390a70637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7e2068d3cddd06c0398c9390a70637">&#9670;&#160;</a></span>dropdown_country</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* dropdown_country</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00080">80</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac597063b602032493b76e575c17dbdc5" name="ac597063b602032493b76e575c17dbdc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac597063b602032493b76e575c17dbdc5">&#9670;&#160;</a></span>dropdown_mapselect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* dropdown_mapselect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00081">81</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a39722eb466db3522c0d82553088263b4" name="a39722eb466db3522c0d82553088263b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39722eb466db3522c0d82553088263b4">&#9670;&#160;</a></span>dropdown_modusselect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* dropdown_modusselect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00082">82</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afc7055d9691c8543dfc40ec211661f1a" name="afc7055d9691c8543dfc40ec211661f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7055d9691c8543dfc40ec211661f1a">&#9670;&#160;</a></span>gpson_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* gpson_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00086">86</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a77f3eccdf27a95b758b236853f2370d7" name="a77f3eccdf27a95b758b236853f2370d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f3eccdf27a95b758b236853f2370d7">&#9670;&#160;</a></span>iKeyBoardType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iKeyBoardType =1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab3376fd3b9a064e38d3df383e55c69a8" name="ab3376fd3b9a064e38d3df383e55c69a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3376fd3b9a064e38d3df383e55c69a8">&#9670;&#160;</a></span>kb_indev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_indev_t* kb_indev = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00035">35</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c9254ecd4b23b6f4542503f750b192f" name="a3c9254ecd4b23b6f4542503f750b192f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9254ecd4b23b6f4542503f750b192f">&#9670;&#160;</a></span>map_lat_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_lat_max[MAX_MAP] ={0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00100">100</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac69ed7d8bd1fe1b73076a19e2d808561" name="ac69ed7d8bd1fe1b73076a19e2d808561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69ed7d8bd1fe1b73076a19e2d808561">&#9670;&#160;</a></span>map_lat_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_lat_min[MAX_MAP] ={0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00099">99</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4a23803dd9f338facbb803599f6110e" name="ab4a23803dd9f338facbb803599f6110e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a23803dd9f338facbb803599f6110e">&#9670;&#160;</a></span>map_lon_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_lon_max[MAX_MAP] ={0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00102">102</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae8a8f6f08f0b507f3208f95939cb0949" name="ae8a8f6f08f0b507f3208f95939cb0949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a8f6f08f0b507f3208f95939cb0949">&#9670;&#160;</a></span>map_lon_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_lon_min[MAX_MAP] ={0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00101">101</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af47cad72cd7f18fe529733b7f39e01a2" name="af47cad72cd7f18fe529733b7f39e01a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af47cad72cd7f18fe529733b7f39e01a2">&#9670;&#160;</a></span>map_point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* map_point[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00109">109</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afd167575151d648e89135f03c59ce8c8" name="afd167575151d648e89135f03c59ce8c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd167575151d648e89135f03c59ce8c8">&#9670;&#160;</a></span>map_point_call</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String map_point_call[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00111">111</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af04effe8610e99cfc15cfd774808ab25" name="af04effe8610e99cfc15cfd774808ab25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04effe8610e99cfc15cfd774808ab25">&#9670;&#160;</a></span>map_point_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_point_count = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00114">114</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5181f5c783ba98c4a67c4eeddf42695a" name="a5181f5c783ba98c4a67c4eeddf42695a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5181f5c783ba98c4a67c4eeddf42695a">&#9670;&#160;</a></span>map_point_lat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_point_lat[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00112">112</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab55620ad762245090c900f208edfe699" name="ab55620ad762245090c900f208edfe699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55620ad762245090c900f208edfe699">&#9670;&#160;</a></span>map_point_lon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_point_lon[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00113">113</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2edc093395cfcc601c3c5a9a0de054ef" name="a2edc093395cfcc601c3c5a9a0de054ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2edc093395cfcc601c3c5a9a0de054ef">&#9670;&#160;</a></span>map_pos_call</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String map_pos_call[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00119">119</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8fc2d7ecbfaf68ae25f944f62e114820" name="a8fc2d7ecbfaf68ae25f944f62e114820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc2d7ecbfaf68ae25f944f62e114820">&#9670;&#160;</a></span>map_pos_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_pos_count = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00122">122</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aade3d3b1ddcb2715810b8ba9ef044807" name="aade3d3b1ddcb2715810b8ba9ef044807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade3d3b1ddcb2715810b8ba9ef044807">&#9670;&#160;</a></span>map_pos_lat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_pos_lat[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00120">120</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab20ff52e80120577d31341b3ce961573" name="ab20ff52e80120577d31341b3ce961573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20ff52e80120577d31341b3ce961573">&#9670;&#160;</a></span>map_pos_lon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_pos_lon[MAX_POINTS]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00121">121</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac08b6afffed775524f0aa7a8f09c4d3c" name="ac08b6afffed775524f0aa7a8f09c4d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08b6afffed775524f0aa7a8f09c4d3c">&#9670;&#160;</a></span>map_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* map_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00074">74</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae46777b3741e8c77583d41840962ed4b" name="ae46777b3741e8c77583d41840962ed4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46777b3741e8c77583d41840962ed4b">&#9670;&#160;</a></span>map_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_x[MAX_MAP] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00104">104</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4a6173539558186e3c1c11cfc1cfa297" name="a4a6173539558186e3c1c11cfc1cfa297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6173539558186e3c1c11cfc1cfa297">&#9670;&#160;</a></span>map_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_y[MAX_MAP] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00105">105</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9361dfab8aa84bdc27fdbf7243b38a49" name="a9361dfab8aa84bdc27fdbf7243b38a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9361dfab8aa84bdc27fdbf7243b38a49">&#9670;&#160;</a></span>mesh_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* mesh_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00084">84</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c49f817ed597822f824ced93954d98e" name="a8c49f817ed597822f824ced93954d98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c49f817ed597822f824ced93954d98e">&#9670;&#160;</a></span>mheard_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* mheard_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00075">75</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5dec1e0aba1810a32dbc66c7116787a8" name="a5dec1e0aba1810a32dbc66c7116787a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dec1e0aba1810a32dbc66c7116787a8">&#9670;&#160;</a></span>mouse_indev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_indev_t* mouse_indev = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00036">36</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2f731d1b454c23d4a0162a60955d384" name="ac2f731d1b454c23d4a0162a60955d384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f731d1b454c23d4a0162a60955d384">&#9670;&#160;</a></span>mute_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* mute_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00089">89</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac0fecb75458240b0ae9cc4a933f18b82" name="ac0fecb75458240b0ae9cc4a933f18b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fecb75458240b0ae9cc4a933f18b82">&#9670;&#160;</a></span>noallmsg_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* noallmsg_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00085">85</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef6ec49c8974f04dbe6146d1ee06b864" name="aef6ec49c8974f04dbe6146d1ee06b864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6ec49c8974f04dbe6146d1ee06b864">&#9670;&#160;</a></span>path_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* path_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00076">76</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a96c53cd4d461bb3eee0af79cfaf13958" name="a96c53cd4d461bb3eee0af79cfaf13958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c53cd4d461bb3eee0af79cfaf13958">&#9670;&#160;</a></span>position_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* position_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00073">73</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3b345d5dcfeaf7e152cf0271ed8aece2" name="a3b345d5dcfeaf7e152cf0271ed8aece2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b345d5dcfeaf7e152cf0271ed8aece2">&#9670;&#160;</a></span>setup_alt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_alt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00044">44</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad9aecd00b228acdf7bc0a7a4b8de6cf4" name="ad9aecd00b228acdf7bc0a7a4b8de6cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9aecd00b228acdf7bc0a7a4b8de6cf4">&#9670;&#160;</a></span>setup_aprsgroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_aprsgroup</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00045">45</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a718fbc31a52489d148481ef180d7872b" name="a718fbc31a52489d148481ef180d7872b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718fbc31a52489d148481ef180d7872b">&#9670;&#160;</a></span>setup_aprssymbol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_aprssymbol</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00046">46</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2123fed33f9b67bd26fce955edb1b1cf" name="a2123fed33f9b67bd26fce955edb1b1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2123fed33f9b67bd26fce955edb1b1cf">&#9670;&#160;</a></span>setup_callsign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_callsign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00039">39</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a86566eaf60e29f8d4682d0e8867d6af7" name="a86566eaf60e29f8d4682d0e8867d6af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86566eaf60e29f8d4682d0e8867d6af7">&#9670;&#160;</a></span>setup_grc0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00050">50</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5565fdb2c11d4402510106f01155778b" name="a5565fdb2c11d4402510106f01155778b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5565fdb2c11d4402510106f01155778b">&#9670;&#160;</a></span>setup_grc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00051">51</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a275d3af126fc34afe2f0f96068e05da7" name="a275d3af126fc34afe2f0f96068e05da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275d3af126fc34afe2f0f96068e05da7">&#9670;&#160;</a></span>setup_grc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00052">52</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2e2382f4906d1d9dd9ee121756c16c73" name="a2e2382f4906d1d9dd9ee121756c16c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2382f4906d1d9dd9ee121756c16c73">&#9670;&#160;</a></span>setup_grc3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00053">53</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a343d2112f3829615e1abb0f5a4c83b4b" name="a343d2112f3829615e1abb0f5a4c83b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343d2112f3829615e1abb0f5a4c83b4b">&#9670;&#160;</a></span>setup_grc4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00054">54</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af2e2d48d7832264f61cd8e987ae9419c" name="af2e2d48d7832264f61cd8e987ae9419c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e2d48d7832264f61cd8e987ae9419c">&#9670;&#160;</a></span>setup_grc5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_grc5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00055">55</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adc03ea38937013fe117df65eedc6d2dc" name="adc03ea38937013fe117df65eedc6d2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc03ea38937013fe117df65eedc6d2dc">&#9670;&#160;</a></span>setup_lat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_lat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00040">40</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a00cb8a174fcab9bfaeb2b1065e903bcf" name="a00cb8a174fcab9bfaeb2b1065e903bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cb8a174fcab9bfaeb2b1065e903bcf">&#9670;&#160;</a></span>setup_lat_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_lat_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00042">42</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a053aff75df5f92e806bceb751a012118" name="a053aff75df5f92e806bceb751a012118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053aff75df5f92e806bceb751a012118">&#9670;&#160;</a></span>setup_lon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_lon</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00041">41</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a220466bcf96fa62e739ac5763d3c9401" name="a220466bcf96fa62e739ac5763d3c9401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220466bcf96fa62e739ac5763d3c9401">&#9670;&#160;</a></span>setup_lon_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_lon_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00043">43</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac1e2fa015eb06a1e5ec265dd21843932" name="ac1e2fa015eb06a1e5ec265dd21843932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e2fa015eb06a1e5ec265dd21843932">&#9670;&#160;</a></span>setup_mtone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_mtone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00048">48</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a42f5950fefff45111b53aaeb4fe319e2" name="a42f5950fefff45111b53aaeb4fe319e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f5950fefff45111b53aaeb4fe319e2">&#9670;&#160;</a></span>setup_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00049">49</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af362d2c08bccbf5d18407d3f469823cc" name="af362d2c08bccbf5d18407d3f469823cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af362d2c08bccbf5d18407d3f469823cc">&#9670;&#160;</a></span>setup_stone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_stone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00047">47</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0ea13d07ec3792d1ce210cfed901dda9" name="a0ea13d07ec3792d1ce210cfed901dda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea13d07ec3792d1ce210cfed901dda9">&#9670;&#160;</a></span>setup_utc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* setup_utc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00056">56</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a98ca8add90664bcd47a2ed33cf223f88" name="a98ca8add90664bcd47a2ed33cf223f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ca8add90664bcd47a2ed33cf223f88">&#9670;&#160;</a></span>text_input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* text_input</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00072">72</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2e03c7021d8942bf02f7f9c1badd7bc6" name="a2e03c7021d8942bf02f7f9c1badd7bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e03c7021d8942bf02f7f9c1badd7bc6">&#9670;&#160;</a></span>text_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* text_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00061">61</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a32db6d99f3f0253f2632040d93b5335b" name="a32db6d99f3f0253f2632040d93b5335b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32db6d99f3f0253f2632040d93b5335b">&#9670;&#160;</a></span>touch_indev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_indev_t* touch_indev = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1cfd6139b17bceeb6648fea432733e4" name="ad1cfd6139b17bceeb6648fea432733e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1cfd6139b17bceeb6648fea432733e4">&#9670;&#160;</a></span>track_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* track_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00087">87</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a40d2fe9eb895d6541d0f950b35ce9d35" name="a40d2fe9eb895d6541d0f950b35ce9d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d2fe9eb895d6541d0f950b35ce9d35">&#9670;&#160;</a></span>track_ta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* track_ta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00062">62</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae16f91cd6321a53e6abf76b0739b74ce" name="ae16f91cd6321a53e6abf76b0739b74ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16f91cd6321a53e6abf76b0739b74ce">&#9670;&#160;</a></span>tv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* tv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00077">77</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a11c3a148d9d309f72158f80624d0bf51" name="a11c3a148d9d309f72158f80624d0bf51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c3a148d9d309f72158f80624d0bf51">&#9670;&#160;</a></span>web_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* web_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00083">83</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a636c31f15f048bb1d6dc78a19319a357" name="a636c31f15f048bb1d6dc78a19319a357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636c31f15f048bb1d6dc78a19319a357">&#9670;&#160;</a></span>wifiap_sw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_obj_t* wifiap_sw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lv__obj__functions_8cpp_source.html#l00088">88</a> der Datei <a class="el" href="lv__obj__functions_8cpp_source.html">lv_obj_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_85c8a588854d8ca119cfcc9d467548f2.html">t-deck</a></li><li class="navelem"><a href="lv__obj__functions_8cpp.html">lv_obj_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

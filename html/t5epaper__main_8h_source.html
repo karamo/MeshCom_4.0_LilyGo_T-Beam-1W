@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/t5epaper_main.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t5epaper__main_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">t5epaper_main.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="t5epaper__main_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// include </span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// #include &quot;epd_driver.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="t5-epaper_2utilities_8h.html">utilities.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// #include &quot;firasans.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;esp_adc_cal.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Wire.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;TouchDrvGT911.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;SensorPCF8563.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;WiFi.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;esp_sntp.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;RadioLib.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;FS.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;SPI.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;SD.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;EEPROM.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="bq27220_8h.html">bq27220.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#a2083be6a990605d065733dea84a419ae">   19</a></span><span class="preprocessor">#define XPOWERS_CHIP_BQ25896</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;XPowersLib.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;board/pca9555.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;TinyGPS++.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;FS.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;SD.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;SPI.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#a5b1f1e65d2093088bfbf14cc60ad56fb">   28</a></span><span class="preprocessor">#define GLOBAL_BUF_LEN 48</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">extern</span> <span class="keywordtype">char</span> global_buf[<a class="code hl_define" href="ui__deckpro_8cpp.html#a5b1f1e65d2093088bfbf14cc60ad56fb">GLOBAL_BUF_LEN</a>];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// io_extend</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a518392d3fd144e40865844a8cad6b8ce">io_extend_lora_gps_power_on</a>(<span class="keywordtype">bool</span> en);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    uint8_t <a class="code hl_function" href="t5epaper__main_8h.html#ad85a93f3f550d8333aab9e7c16f02b06">read_io</a>(<span class="keywordtype">int</span> io);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a15b6fa8c673193dced813ab6081a5eae">set_config</a>(i2c_port_t <a class="code hl_variable" href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a>, uint8_t config_value, <span class="keywordtype">int</span> high_port);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="t5epaper__main_8h.html#af79bf6d54c03a8a6095100d0889569c6">button_read</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// peripheral</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// |        RTC (PCF8563)         |</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// | :--------------------------: |</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// |        BQ25896 (MPU)         |</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// |     BQ27220 (Coulometer)     |</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// |           SD Card            |</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// |        GT911 (Tocuh)         |</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// |     PCA9535 (IO extend)      |</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// | TPS651851 (Ink Screen Power) |</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// |        Lora (SX1262)         |</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// |             GPS              |</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631">   51</a></span>    <a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631">E_PERI_INK_POWER</a> = 0,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a824f80cf370d485c398759ffafcaedf6">   52</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a21d8bc3aa25bf426952bd4c251873854">   53</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e">   54</a></span>    <a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e">E_PERI_RTC</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55aed439bd46f1760ada81f203988d6ccaf">   55</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a0e6924494dd23cc7ae47a5ffe614386c">   56</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5">   57</a></span>    <a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5">E_PERI_SD_CARD</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55acb145fa77b3831e0a340ed08c2f0bdc9">   58</a></span>    <a class="code hl_enumvalue" href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286">   59</a></span>    <a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286">E_PERI_WIFI</a>,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">   60</a></span>    <a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="t5epaper__main_8cpp.html#a810a5c9fb2ee91307d90db51cd610b1c">peri_buf</a>[<a class="code hl_enumvalue" href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a>];</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// gps</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">extern</span> TaskHandle_t gps_handle;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">extern</span> TinyGPSPlus <a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a169c53997a7da1d0fb99aec1b4675ce8">gps</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#aaeb329bf029c305771c3b6d2d88c451d">   68</a></span><span class="keyword">extern</span> <span class="keywordtype">double</span> gps_lat, gps_lng;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">extern</span> uint16_t gps_year;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#a2489c945958ebe1f9c5be9bada11cbdc">   70</a></span><span class="keyword">extern</span> uint8_t gps_month, gps_day;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="t5epaper__main_8h.html#aa289d11e830a6cac5d3d21bb6057520f">   71</a></span><span class="keyword">extern</span> uint8_t gps_hour, gps_minute, gps_second;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// lora</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">extern</span> SX1262 radio;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">extern</span> <a class="code hl_class" href="class_b_q27220.html">BQ27220</a> <a class="code hl_variable" href="tdeck__pro_8cpp.html#ab2d8f8edf2caedad43af660c0a591cf1">bq27220</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// bq25896</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">extern</span> XPowersPPM <a class="code hl_variable" href="tdeck__pro_8cpp.html#aa1521db18c0543a39d476baf5e4efc16">PPM</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// display refresh mode</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a4cf4fa6a00ac739365cf04b522b4be64">disp_full_refresh</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a3dd4efaa5974c738a6c66735718d322d">disp_full_clean</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a3a50ff18d34056a205f76fb45a2a3e5e">disp_clean</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a116a748f2b6b167a883eda499f98721a">disp_refresh_screen</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//MC40</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a295e3092aeaed003574c949586023b63">idf_setup</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#aeeaa485eb26a4818fddfd00ea074332b">idf_loop</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a3dd4efaa5974c738a6c66735718d322d">disp_full_clean</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a0c7b6ddcddc7beb81f258d9409c62d94">disp_next_status</a>(String name, <span class="keywordtype">int</span> *x, <span class="keywordtype">int</span> *y, <span class="keywordtype">bool</span> font_large);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#aff8e2fa97f53ee7fe5702f26ac75a539">disp_next_power</a>(<span class="keywordtype">bool</span> power);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#accd685bfc76121c612ae189f1d149dc4">indev_touch_en</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> <a class="code hl_function" href="t5epaper__main_8h.html#a9133f9d5bc98603c74978628218f49e0">indev_touch_dis</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// Touch</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">extern</span> TouchDrvGT911 <a class="code hl_variable" href="tdeck__pro_8cpp.html#a4203e02975778d07fa421e83710ba5d8">touch</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// RTC</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">extern</span> SensorPCF8563 <a class="code hl_variable" href="t5epaper__main_8cpp.html#a0b86871732ae64714bd3d4b291e04db9">rtc</a>;</div>
+<div class="ttc" id="abq27220_8h_html"><div class="ttname"><a href="bq27220_8h.html">bq27220.h</a></div></div>
+<div class="ttc" id="aclass_b_q27220_html"><div class="ttname"><a href="class_b_q27220.html">BQ27220</a></div><div class="ttdef"><b>Definition</b> <a href="bq27220_8h_source.html#l00107">bq27220.h:107</a></div></div>
+<div class="ttc" id="asafeboot_2main_8cpp_html_a2ac307bc5772df716f29e0e8375035ba"><div class="ttname"><a href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a></div><div class="ttdeci">const unsigned int port</div><div class="ttdef"><b>Definition</b> <a href="safeboot_2main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
+<div class="ttc" id="at-deck-pro_2peri__gps_8cpp_html_a169c53997a7da1d0fb99aec1b4675ce8"><div class="ttname"><a href="t-deck-pro_2peri__gps_8cpp.html#a169c53997a7da1d0fb99aec1b4675ce8">gps</a></div><div class="ttdeci">TinyGPSPlus gps</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00011">peri_gps.cpp:11</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a></div><div class="ttdeci">@ E_PERI_LORA</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peripheral_8h_source.html#l00013">peripheral.h:13</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a></div><div class="ttdeci">@ E_PERI_BQ27220</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peripheral_8h_source.html#l00017">peripheral.h:17</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a></div><div class="ttdeci">@ E_PERI_BQ25896</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peripheral_8h_source.html#l00016">peripheral.h:16</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a></div><div class="ttdeci">@ E_PERI_GPS</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peripheral_8h_source.html#l00019">peripheral.h:19</a></div></div>
+<div class="ttc" id="at-deck-pro_2peripheral_8h_html_a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf"><div class="ttname"><a href="t-deck-pro_2peripheral_8h.html#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a></div><div class="ttdeci">@ E_PERI_TOUCH</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peripheral_8h_source.html#l00014">peripheral.h:14</a></div></div>
+<div class="ttc" id="at5-epaper_2utilities_8h_html"><div class="ttname"><a href="t5-epaper_2utilities_8h.html">utilities.h</a></div></div>
+<div class="ttc" id="at5epaper__main_8cpp_html_a0b86871732ae64714bd3d4b291e04db9"><div class="ttname"><a href="t5epaper__main_8cpp.html#a0b86871732ae64714bd3d4b291e04db9">rtc</a></div><div class="ttdeci">SensorPCF8563 rtc</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00059">t5epaper_main.cpp:59</a></div></div>
+<div class="ttc" id="at5epaper__main_8cpp_html_a810a5c9fb2ee91307d90db51cd610b1c"><div class="ttname"><a href="t5epaper__main_8cpp.html#a810a5c9fb2ee91307d90db51cd610b1c">peri_buf</a></div><div class="ttdeci">bool peri_buf[E_PERI_MAX]</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00042">t5epaper_main.cpp:42</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a0c7b6ddcddc7beb81f258d9409c62d94"><div class="ttname"><a href="t5epaper__main_8h.html#a0c7b6ddcddc7beb81f258d9409c62d94">disp_next_status</a></div><div class="ttdeci">void disp_next_status(String name, int *x, int *y, bool font_large)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00384">t5epaper_main.cpp:384</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a116a748f2b6b167a883eda499f98721a"><div class="ttname"><a href="t5epaper__main_8h.html#a116a748f2b6b167a883eda499f98721a">disp_refresh_screen</a></div><div class="ttdeci">void disp_refresh_screen(void)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00142">t5epaper_main.cpp:142</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a15b6fa8c673193dced813ab6081a5eae"><div class="ttname"><a href="t5epaper__main_8h.html#a15b6fa8c673193dced813ab6081a5eae">set_config</a></div><div class="ttdeci">void set_config(i2c_port_t port, uint8_t config_value, int high_port)</div><div class="ttdef"><b>Definition</b> <a href="io__extend_8c_source.html#l00081">io_extend.c:81</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a295e3092aeaed003574c949586023b63"><div class="ttname"><a href="t5epaper__main_8h.html#a295e3092aeaed003574c949586023b63">idf_setup</a></div><div class="ttdeci">void idf_setup()</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00569">t5epaper_main.cpp:569</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a3a50ff18d34056a205f76fb45a2a3e5e"><div class="ttname"><a href="t5epaper__main_8h.html#a3a50ff18d34056a205f76fb45a2a3e5e">disp_clean</a></div><div class="ttdeci">void disp_clean(void)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00137">t5epaper_main.cpp:137</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a3dd4efaa5974c738a6c66735718d322d"><div class="ttname"><a href="t5epaper__main_8h.html#a3dd4efaa5974c738a6c66735718d322d">disp_full_clean</a></div><div class="ttdeci">void disp_full_clean(void)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00117">t5epaper_main.cpp:117</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a4cf4fa6a00ac739365cf04b522b4be64"><div class="ttname"><a href="t5epaper__main_8h.html#a4cf4fa6a00ac739365cf04b522b4be64">disp_full_refresh</a></div><div class="ttdeci">void disp_full_refresh(void)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00109">t5epaper_main.cpp:109</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a518392d3fd144e40865844a8cad6b8ce"><div class="ttname"><a href="t5epaper__main_8h.html#a518392d3fd144e40865844a8cad6b8ce">io_extend_lora_gps_power_on</a></div><div class="ttdeci">void io_extend_lora_gps_power_on(bool en)</div><div class="ttdef"><b>Definition</b> <a href="io__extend_8c_source.html#l00035">io_extend.c:35</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_a9133f9d5bc98603c74978628218f49e0"><div class="ttname"><a href="t5epaper__main_8h.html#a9133f9d5bc98603c74978628218f49e0">indev_touch_dis</a></div><div class="ttdeci">void indev_touch_dis()</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00104">t5epaper_main.cpp:104</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_accd685bfc76121c612ae189f1d149dc4"><div class="ttname"><a href="t5epaper__main_8h.html#accd685bfc76121c612ae189f1d149dc4">indev_touch_en</a></div><div class="ttdeci">void indev_touch_en()</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00099">t5epaper_main.cpp:99</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_ad85a93f3f550d8333aab9e7c16f02b06"><div class="ttname"><a href="t5epaper__main_8h.html#ad85a93f3f550d8333aab9e7c16f02b06">read_io</a></div><div class="ttdeci">uint8_t read_io(int io)</div><div class="ttdef"><b>Definition</b> <a href="io__extend_8c_source.html#l00075">io_extend.c:75</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_aeeaa485eb26a4818fddfd00ea074332b"><div class="ttname"><a href="t5epaper__main_8h.html#aeeaa485eb26a4818fddfd00ea074332b">idf_loop</a></div><div class="ttdeci">void idf_loop()</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00666">t5epaper_main.cpp:666</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286"><div class="ttname"><a href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286">E_PERI_WIFI</a></div><div class="ttdeci">@ E_PERI_WIFI</div><div class="ttdef"><b>Definition</b> <a href="#l00059">t5epaper_main.h:59</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5"><div class="ttname"><a href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5">E_PERI_SD_CARD</a></div><div class="ttdeci">@ E_PERI_SD_CARD</div><div class="ttdef"><b>Definition</b> <a href="#l00057">t5epaper_main.h:57</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241"><div class="ttname"><a href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a></div><div class="ttdeci">@ E_PERI_MAX</div><div class="ttdef"><b>Definition</b> <a href="#l00060">t5epaper_main.h:60</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631"><div class="ttname"><a href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631">E_PERI_INK_POWER</a></div><div class="ttdeci">@ E_PERI_INK_POWER</div><div class="ttdef"><b>Definition</b> <a href="#l00051">t5epaper_main.h:51</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e"><div class="ttname"><a href="t5epaper__main_8h.html#af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e">E_PERI_RTC</a></div><div class="ttdeci">@ E_PERI_RTC</div><div class="ttdef"><b>Definition</b> <a href="#l00054">t5epaper_main.h:54</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_af79bf6d54c03a8a6095100d0889569c6"><div class="ttname"><a href="t5epaper__main_8h.html#af79bf6d54c03a8a6095100d0889569c6">button_read</a></div><div class="ttdeci">bool button_read(void)</div><div class="ttdef"><b>Definition</b> <a href="io__extend_8c_source.html#l00067">io_extend.c:67</a></div></div>
+<div class="ttc" id="at5epaper__main_8h_html_aff8e2fa97f53ee7fe5702f26ac75a539"><div class="ttname"><a href="t5epaper__main_8h.html#aff8e2fa97f53ee7fe5702f26ac75a539">disp_next_power</a></div><div class="ttdeci">void disp_next_power(bool power)</div><div class="ttdef"><b>Definition</b> <a href="t5epaper__main_8cpp_source.html#l00350">t5epaper_main.cpp:350</a></div></div>
+<div class="ttc" id="atdeck__pro_8cpp_html_a4203e02975778d07fa421e83710ba5d8"><div class="ttname"><a href="tdeck__pro_8cpp.html#a4203e02975778d07fa421e83710ba5d8">touch</a></div><div class="ttdeci">TouchDrvCSTXXX touch</div><div class="ttdef"><b>Definition</b> <a href="tdeck__pro_8cpp_source.html#l00036">tdeck_pro.cpp:36</a></div></div>
+<div class="ttc" id="atdeck__pro_8cpp_html_aa1521db18c0543a39d476baf5e4efc16"><div class="ttname"><a href="tdeck__pro_8cpp.html#aa1521db18c0543a39d476baf5e4efc16">PPM</a></div><div class="ttdeci">XPowersPPM PPM</div><div class="ttdef"><b>Definition</b> <a href="tdeck__pro_8cpp_source.html#l00032">tdeck_pro.cpp:32</a></div></div>
+<div class="ttc" id="atdeck__pro_8cpp_html_ab2d8f8edf2caedad43af660c0a591cf1"><div class="ttname"><a href="tdeck__pro_8cpp.html#ab2d8f8edf2caedad43af660c0a591cf1">bq27220</a></div><div class="ttdeci">BQ27220 bq27220</div><div class="ttdef"><b>Definition</b> <a href="tdeck__pro_8cpp_source.html#l00033">tdeck_pro.cpp:33</a></div></div>
+<div class="ttc" id="aui__deckpro_8cpp_html_a5b1f1e65d2093088bfbf14cc60ad56fb"><div class="ttname"><a href="ui__deckpro_8cpp.html#a5b1f1e65d2093088bfbf14cc60ad56fb">GLOBAL_BUF_LEN</a></div><div class="ttdeci">#define GLOBAL_BUF_LEN</div><div class="ttdef"><b>Definition</b> <a href="ui__deckpro_8cpp_source.html#l00032">ui_deckpro.cpp:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="t5epaper__main_8h.html">t5epaper_main.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

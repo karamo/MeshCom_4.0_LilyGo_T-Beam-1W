@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/BufferedPrint.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_buffered_print_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BufferedPrint.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_buffered_print_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef BufferedPrint_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define BufferedPrint_h</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifdef __AVR__</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;avr/pgmspace.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="_fmt_number_8h.html">common/FmtNumber.h</a>&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> WriteClass, u<span class="keywordtype">int</span>8_t BUF_DIM&gt;</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_buffered_print.html">   40</a></span><span class="keyword">class </span><a class="code hl_function" href="class_buffered_print.html#a24d3d1f8f6ca21e2ff950b17892386e2">BufferedPrint</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a24d3d1f8f6ca21e2ff950b17892386e2">   42</a></span>  <a class="code hl_function" href="class_buffered_print.html#a24d3d1f8f6ca21e2ff950b17892386e2">BufferedPrint</a>() : <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a>(<a class="code hl_define" href="_sys_call_8h.html#ab979d9d4b4923f7c54d6caa6e1a61936">nullptr</a>), <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>(0) {}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_buffered_print.html#af879eab3e69cfd9d15768451e091c6a2">   46</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="class_buffered_print.html#af879eab3e69cfd9d15768451e091c6a2">BufferedPrint</a>(WriteClass* <a class="code hl_define" href="_base_display_2_s_d_8cpp.html#aef8052ac2ce873aedc59b3bf7cb85c86">wr</a>) : <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a>(<a class="code hl_define" href="_base_display_2_s_d_8cpp.html#aef8052ac2ce873aedc59b3bf7cb85c86">wr</a>), <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>(0) {}</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a1382e2cedf67d12aa3ba056b0e7b10d3">   50</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_buffered_print.html#a1382e2cedf67d12aa3ba056b0e7b10d3">begin</a>(WriteClass* <a class="code hl_define" href="_base_display_2_s_d_8cpp.html#aef8052ac2ce873aedc59b3bf7cb85c86">wr</a>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a> = <a class="code hl_define" href="_base_display_2_s_d_8cpp.html#aef8052ac2ce873aedc59b3bf7cb85c86">wr</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a> = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a3fcb4970129a6fbfbd125ed8f2869d9b">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_buffered_print.html#a3fcb4970129a6fbfbd125ed8f2869d9b">flush</a>() { <a class="code hl_function" href="class_buffered_print.html#a2253d1e7f231b94b18eab1281c123a49">sync</a>(); }</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">   61</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(<span class="keywordtype">char</span> c, <span class="keywordtype">char</span> term) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">char</span> buf[3];</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = buf + <span class="keyword">sizeof</span>(buf);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (term) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = term;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">if</span> (term == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = c;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, buf + <span class="keyword">sizeof</span>(buf) - <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_buffered_print.html#ac18cc8c86b73b073a28db85075215f4f">   78</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#ac18cc8c86b73b073a28db85075215f4f">printField</a>(<span class="keyword">const</span> __FlashStringHelper* fsh, <span class="keywordtype">char</span> term) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#ifdef __AVR__</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">size_t</span> rtn = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    PGM_P p = <span class="keyword">reinterpret_cast&lt;</span>PGM_P<span class="keyword">&gt;</span>(fsh);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">char</span> c;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">while</span> ((c = <a class="code hl_define" href="text_8cpp.html#a48c60b057902adf805797f183286728d">pgm_read_byte</a>(p++))) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(&amp;c, 1)) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      rtn++;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (term) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordtype">char</span> buf[2];</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = buf + <span class="keyword">sizeof</span>(buf);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = term;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keywordflow">if</span> (term == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      rtn += <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, buf + <span class="keyword">sizeof</span>(buf) - <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> rtn;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#else   </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(fsh), term);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_buffered_print.html#ac49d0beb5fdad68e82f741bbaad4bb1b">  108</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#ac49d0beb5fdad68e82f741bbaad4bb1b">printField</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, <span class="keywordtype">char</span> term) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">size_t</span> rtn = <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, strlen(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (term) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordtype">char</span> buf[2];</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordtype">char</span>* ptr = buf + <span class="keyword">sizeof</span>(buf);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      *--ptr = term;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordflow">if</span> (term == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        *--ptr = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      rtn += <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(ptr, buf + <span class="keyword">sizeof</span>(buf) - ptr);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> rtn;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a5b5b11f01adf91a1854a44b131886219">  127</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a5b5b11f01adf91a1854a44b131886219">printField</a>(<span class="keywordtype">double</span> d, <span class="keywordtype">char</span> term, uint8_t prec = 2) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">char</span> buf[24];</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = buf + <span class="keyword">sizeof</span>(buf);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (term) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = term;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">if</span> (term == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <a class="code hl_function" href="_fmt_number_8cpp.html#aa406e3ddeb7cfe6c5bc9c681f1f68b02">fmtDouble</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, d, prec, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, buf + <span class="keyword">sizeof</span>(buf) - <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a93369fc042366488ef40426f9fd3286d">  145</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a93369fc042366488ef40426f9fd3286d">printField</a>(<span class="keywordtype">float</span> f, <span class="keywordtype">char</span> term, uint8_t prec = 2) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(f), term, prec);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_buffered_print.html#af680cf36170347287d20ed92ae5f6c9b">  154</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#af680cf36170347287d20ed92ae5f6c9b">printField</a>(Type n, <span class="keywordtype">char</span> term) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">const</span> uint8_t DIM = <span class="keyword">sizeof</span>(Type) &lt;= 2 ? 8 : 13;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">char</span> buf[DIM];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = buf + <span class="keyword">sizeof</span>(buf);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">if</span> (term) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = term;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="keywordflow">if</span> (term == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    Type p = n &lt; 0 ? -n : n;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span> (<span class="keyword">sizeof</span>(Type) &lt;= 2) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <a class="code hl_function" href="_fmt_number_8cpp.html#af68574870cae526800333ab6a615f955">fmtBase10</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, (uint16_t)p);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <a class="code hl_function" href="_fmt_number_8cpp.html#af68574870cae526800333ab6a615f955">fmtBase10</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, (uint32_t)p);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">if</span> (n &lt; 0) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      *--<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a> = <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, buf + <span class="keyword">sizeof</span>(buf) - <a class="code hl_variable" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="foldopen" id="foldopen00179" data-start="{" data-end="}">
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a7bd188ccc8b38b83cf44b96164a1d816">  179</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a7bd188ccc8b38b83cf44b96164a1d816">println</a>() {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">char</span> buf[2];</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    buf[0] = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    buf[1] = <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(buf, 2);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  }</div>
+</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a95f984c4702b0e20d781efd9d1ea8f27">  190</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a95f984c4702b0e20d781efd9d1ea8f27">print</a>(<span class="keywordtype">double</span> d, uint8_t prec = 2) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(d, 0, prec); }</div>
+<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_buffered_print.html#aaeaceb452361377ce73db0041edbcdff">  196</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#aaeaceb452361377ce73db0041edbcdff">println</a>(<span class="keywordtype">double</span> d, uint8_t prec = 2) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(d, <span class="charliteral">&#39;\n&#39;</span>, prec);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span></div>
+<div class="foldopen" id="foldopen00204" data-start="{" data-end="}">
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="class_buffered_print.html#aeed86ef2ea320cd8ff47ee871663a8ce">  204</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#aeed86ef2ea320cd8ff47ee871663a8ce">print</a>(<span class="keywordtype">float</span> f, uint8_t prec = 2) {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(f), 0, prec);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  }</div>
+</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
+<div class="foldopen" id="foldopen00212" data-start="{" data-end="}">
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="class_buffered_print.html#afc449966c5c7357fde925c6888669698">  212</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#afc449966c5c7357fde925c6888669698">println</a>(<span class="keywordtype">float</span> f, uint8_t prec) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(f), <span class="charliteral">&#39;\n&#39;</span>, prec);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  }</div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_buffered_print.html#ae9472f3acd3f7d3187500e60754963bb">  220</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#ae9472f3acd3f7d3187500e60754963bb">print</a>(Type v) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(v, 0);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  }</div>
+</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a0945ed373bd17a309bb6661faad3be9c">  228</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#a0945ed373bd17a309bb6661faad3be9c">println</a>(Type v) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">printField</a>(v, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  }</div>
+</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span></div>
+<div class="foldopen" id="foldopen00235" data-start="{" data-end="}">
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a2253d1e7f231b94b18eab1281c123a49">  235</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_buffered_print.html#a2253d1e7f231b94b18eab1281c123a49">sync</a>() {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a> || <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a>-&gt;write(<a class="code hl_variable" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">m_buf</a>, <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>) != <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>) {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a> = 0;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  }</div>
+</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span></div>
+<div class="foldopen" id="foldopen00250" data-start="{" data-end="}">
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">  250</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a> + n) &gt; <span class="keyword">sizeof</span>(<a class="code hl_variable" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">m_buf</a>)) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_buffered_print.html#a2253d1e7f231b94b18eab1281c123a49">sync</a>()) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">if</span> (n &gt;= <span class="keyword">sizeof</span>(<a class="code hl_variable" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">m_buf</a>)) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">return</span> n == <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a>-&gt;write((<span class="keyword">const</span> uint8_t*)src, n) ? n : 0;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    memcpy(<a class="code hl_variable" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">m_buf</a> + <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>, src, n);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a> += n;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
+</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">  265</a></span>  WriteClass* <a class="code hl_variable" href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">m_wr</a>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">  266</a></span>  uint8_t <a class="code hl_variable" href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">m_in</a>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="comment">// Insure room for double.</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">  268</a></span>  uint8_t <a class="code hl_variable" href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">m_buf</a>[BUF_DIM &lt; 24 ? 24 : BUF_DIM];  <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>};</div>
+</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#endif  </span><span class="comment">// BufferedPrint_h</span></div>
+<div class="ttc" id="a_base_display_2_s_d_8cpp_html_aef8052ac2ce873aedc59b3bf7cb85c86"><div class="ttname"><a href="_base_display_2_s_d_8cpp.html#aef8052ac2ce873aedc59b3bf7cb85c86">wr</a></div><div class="ttdeci">#define wr(b)</div></div>
+<div class="ttc" id="a_fmt_number_8cpp_html_aa406e3ddeb7cfe6c5bc9c681f1f68b02"><div class="ttname"><a href="_fmt_number_8cpp.html#aa406e3ddeb7cfe6c5bc9c681f1f68b02">fmtDouble</a></div><div class="ttdeci">char * fmtDouble(char *str, double num, uint8_t prec, bool altFmt)</div><div class="ttdef"><b>Definition</b> <a href="_fmt_number_8cpp_source.html#l00252">FmtNumber.cpp:252</a></div></div>
+<div class="ttc" id="a_fmt_number_8cpp_html_af68574870cae526800333ab6a615f955"><div class="ttname"><a href="_fmt_number_8cpp.html#af68574870cae526800333ab6a615f955">fmtBase10</a></div><div class="ttdeci">char * fmtBase10(char *str, uint16_t n)</div><div class="ttdef"><b>Definition</b> <a href="_fmt_number_8cpp_source.html#l00166">FmtNumber.cpp:166</a></div></div>
+<div class="ttc" id="a_fmt_number_8h_html"><div class="ttname"><a href="_fmt_number_8h.html">FmtNumber.h</a></div></div>
+<div class="ttc" id="a_sys_call_8h_html_ab979d9d4b4923f7c54d6caa6e1a61936"><div class="ttname"><a href="_sys_call_8h.html#ab979d9d4b4923f7c54d6caa6e1a61936">nullptr</a></div><div class="ttdeci">#define nullptr</div><div class="ttdef"><b>Definition</b> <a href="_sys_call_8h_source.html#l00038">SysCall.h:38</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a02a9f337c96b6e6e5a42f9968c260e39"><div class="ttname"><a href="class_buffered_print.html#a02a9f337c96b6e6e5a42f9968c260e39">BufferedPrint::m_wr</a></div><div class="ttdeci">WriteClass * m_wr</div><div class="ttdef"><b>Definition</b> <a href="#l00265">BufferedPrint.h:265</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a0945ed373bd17a309bb6661faad3be9c"><div class="ttname"><a href="class_buffered_print.html#a0945ed373bd17a309bb6661faad3be9c">BufferedPrint::println</a></div><div class="ttdeci">size_t println(Type v)</div><div class="ttdef"><b>Definition</b> <a href="#l00228">BufferedPrint.h:228</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a1382e2cedf67d12aa3ba056b0e7b10d3"><div class="ttname"><a href="class_buffered_print.html#a1382e2cedf67d12aa3ba056b0e7b10d3">BufferedPrint::begin</a></div><div class="ttdeci">void begin(WriteClass *wr)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">BufferedPrint.h:50</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a1c6621a394258b5fda72c31b139f28b8"><div class="ttname"><a href="class_buffered_print.html#a1c6621a394258b5fda72c31b139f28b8">BufferedPrint::m_in</a></div><div class="ttdeci">uint8_t m_in</div><div class="ttdef"><b>Definition</b> <a href="#l00266">BufferedPrint.h:266</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a2253d1e7f231b94b18eab1281c123a49"><div class="ttname"><a href="class_buffered_print.html#a2253d1e7f231b94b18eab1281c123a49">BufferedPrint::sync</a></div><div class="ttdeci">bool sync()</div><div class="ttdef"><b>Definition</b> <a href="#l00235">BufferedPrint.h:235</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a24d3d1f8f6ca21e2ff950b17892386e2"><div class="ttname"><a href="class_buffered_print.html#a24d3d1f8f6ca21e2ff950b17892386e2">BufferedPrint::BufferedPrint</a></div><div class="ttdeci">BufferedPrint()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">BufferedPrint.h:42</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a3fcb4970129a6fbfbd125ed8f2869d9b"><div class="ttname"><a href="class_buffered_print.html#a3fcb4970129a6fbfbd125ed8f2869d9b">BufferedPrint::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition</b> <a href="#l00055">BufferedPrint.h:55</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a5b5b11f01adf91a1854a44b131886219"><div class="ttname"><a href="class_buffered_print.html#a5b5b11f01adf91a1854a44b131886219">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(double d, char term, uint8_t prec=2)</div><div class="ttdef"><b>Definition</b> <a href="#l00127">BufferedPrint.h:127</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a69ea9541fb854448b9fe3aff44583975"><div class="ttname"><a href="class_buffered_print.html#a69ea9541fb854448b9fe3aff44583975">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(char c, char term)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">BufferedPrint.h:61</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a7bd188ccc8b38b83cf44b96164a1d816"><div class="ttname"><a href="class_buffered_print.html#a7bd188ccc8b38b83cf44b96164a1d816">BufferedPrint::println</a></div><div class="ttdeci">size_t println()</div><div class="ttdef"><b>Definition</b> <a href="#l00179">BufferedPrint.h:179</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a93369fc042366488ef40426f9fd3286d"><div class="ttname"><a href="class_buffered_print.html#a93369fc042366488ef40426f9fd3286d">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(float f, char term, uint8_t prec=2)</div><div class="ttdef"><b>Definition</b> <a href="#l00145">BufferedPrint.h:145</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_a95f984c4702b0e20d781efd9d1ea8f27"><div class="ttname"><a href="class_buffered_print.html#a95f984c4702b0e20d781efd9d1ea8f27">BufferedPrint::print</a></div><div class="ttdeci">size_t print(double d, uint8_t prec=2)</div><div class="ttdef"><b>Definition</b> <a href="#l00190">BufferedPrint.h:190</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_aa3c87681d711101ec69c10f86d5e60c3"><div class="ttname"><a href="class_buffered_print.html#aa3c87681d711101ec69c10f86d5e60c3">BufferedPrint::m_buf</a></div><div class="ttdeci">uint8_t m_buf[BUF_DIM&lt; 24 ? 24 :BUF_DIM]</div><div class="ttdef"><b>Definition</b> <a href="#l00268">BufferedPrint.h:268</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_aaeaceb452361377ce73db0041edbcdff"><div class="ttname"><a href="class_buffered_print.html#aaeaceb452361377ce73db0041edbcdff">BufferedPrint::println</a></div><div class="ttdeci">size_t println(double d, uint8_t prec=2)</div><div class="ttdef"><b>Definition</b> <a href="#l00196">BufferedPrint.h:196</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_ab41de6eca77a04a49a6fc965b1950fc5"><div class="ttname"><a href="class_buffered_print.html#ab41de6eca77a04a49a6fc965b1950fc5">BufferedPrint::write</a></div><div class="ttdeci">size_t write(const void *src, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00250">BufferedPrint.h:250</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_ac18cc8c86b73b073a28db85075215f4f"><div class="ttname"><a href="class_buffered_print.html#ac18cc8c86b73b073a28db85075215f4f">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(const __FlashStringHelper *fsh, char term)</div><div class="ttdef"><b>Definition</b> <a href="#l00078">BufferedPrint.h:78</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_ac49d0beb5fdad68e82f741bbaad4bb1b"><div class="ttname"><a href="class_buffered_print.html#ac49d0beb5fdad68e82f741bbaad4bb1b">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(const char *str, char term)</div><div class="ttdef"><b>Definition</b> <a href="#l00108">BufferedPrint.h:108</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_ae9472f3acd3f7d3187500e60754963bb"><div class="ttname"><a href="class_buffered_print.html#ae9472f3acd3f7d3187500e60754963bb">BufferedPrint::print</a></div><div class="ttdeci">size_t print(Type v)</div><div class="ttdef"><b>Definition</b> <a href="#l00220">BufferedPrint.h:220</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_aeed86ef2ea320cd8ff47ee871663a8ce"><div class="ttname"><a href="class_buffered_print.html#aeed86ef2ea320cd8ff47ee871663a8ce">BufferedPrint::print</a></div><div class="ttdeci">size_t print(float f, uint8_t prec=2)</div><div class="ttdef"><b>Definition</b> <a href="#l00204">BufferedPrint.h:204</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_af680cf36170347287d20ed92ae5f6c9b"><div class="ttname"><a href="class_buffered_print.html#af680cf36170347287d20ed92ae5f6c9b">BufferedPrint::printField</a></div><div class="ttdeci">size_t printField(Type n, char term)</div><div class="ttdef"><b>Definition</b> <a href="#l00154">BufferedPrint.h:154</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_af879eab3e69cfd9d15768451e091c6a2"><div class="ttname"><a href="class_buffered_print.html#af879eab3e69cfd9d15768451e091c6a2">BufferedPrint::BufferedPrint</a></div><div class="ttdeci">BufferedPrint(WriteClass *wr)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">BufferedPrint.h:46</a></div></div>
+<div class="ttc" id="aclass_buffered_print_html_afc449966c5c7357fde925c6888669698"><div class="ttname"><a href="class_buffered_print.html#afc449966c5c7357fde925c6888669698">BufferedPrint::println</a></div><div class="ttdeci">size_t println(float f, uint8_t prec)</div><div class="ttdef"><b>Definition</b> <a href="#l00212">BufferedPrint.h:212</a></div></div>
+<div class="ttc" id="aesp32__main_8cpp_html_a27f3fd6bae71e73f3c13bb57945845a6"><div class="ttname"><a href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a></div><div class="ttdeci">String str</div><div class="ttdef"><b>Definition</b> <a href="esp32__main_8cpp_source.html#l00142">esp32_main.cpp:142</a></div></div>
+<div class="ttc" id="atext_8cpp_html_a48c60b057902adf805797f183286728d"><div class="ttname"><a href="text_8cpp.html#a48c60b057902adf805797f183286728d">pgm_read_byte</a></div><div class="ttdeci">#define pgm_read_byte(addr)</div><div class="ttdef"><b>Definition</b> <a href="text_8cpp_source.html#l00164">text.cpp:164</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="_buffered_print_8h.html">BufferedPrint.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

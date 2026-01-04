@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/common/ArduinoFiles.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_arduino_files_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ArduinoFiles.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_arduino_files_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef ArduinoFiles_h</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define ArduinoFiles_h</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_sys_call_8h.html">SysCall.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef FILE_READ</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_arduino_files_8h.html#ad52d51659a75e25d96fb04d22ff718cb">   31</a></span><span class="preprocessor">#define FILE_READ O_RDONLY</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif  </span><span class="comment">// FILE_READ</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef FILE_WRITE</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_arduino_files_8h.html#ace34e503254fa9004599ddf122264c8f">   35</a></span><span class="preprocessor">#define FILE_WRITE (O_RDWR | O_CREAT | O_AT_END)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif  </span><span class="comment">// FILE_WRITE</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseFile&gt;</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_print_file.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="class_print_file.html">PrintFile</a> : <span class="keyword">public</span> print_t, <span class="keyword">public</span> BaseFile {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">using </span>BaseFile::clearWriteError;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">using </span>BaseFile::getWriteError;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">using </span>BaseFile::read;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">using </span>BaseFile::write;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_print_file.html#a52f78f160083b416d66e23c680e0577d">   53</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_print_file.html#a52f78f160083b416d66e23c680e0577d">write</a>(uint8_t b) { <span class="keywordflow">return</span> BaseFile::write(&amp;b, 1); }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> BaseFile, <span class="keyword">typename</span> PosType&gt;</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_stream_file.html">   61</a></span><span class="keyword">class </span><a class="code hl_function" href="class_stream_file.html#a1089cf17a36822b908d16f301f3ba315">StreamFile</a> : <span class="keyword">public</span> stream_t, <span class="keyword">public</span> BaseFile {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keyword">using </span>BaseFile::clearWriteError;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">using </span>BaseFile::getWriteError;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">using </span>BaseFile::read;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keyword">using </span>BaseFile::write;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_stream_file.html#a1089cf17a36822b908d16f301f3ba315">   68</a></span>  <a class="code hl_function" href="class_stream_file.html#a1089cf17a36822b908d16f301f3ba315">StreamFile</a>() {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_stream_file.html#a0112cc39b64aac6f1ec47741397a7582">   73</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_stream_file.html#a0112cc39b64aac6f1ec47741397a7582">available</a>() { <span class="keywordflow">return</span> BaseFile::available(); }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_stream_file.html#a32f813e659414892a58aa5157fe14f82">   75</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_file.html#a32f813e659414892a58aa5157fe14f82">flush</a>() { BaseFile::sync(); }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_stream_file.html#a586ad44055eca4c1b2b457299b829d44">   79</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_file.html#a586ad44055eca4c1b2b457299b829d44">isDirectory</a>() { <span class="keywordflow">return</span> BaseFile::isDir(); }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_stream_file.html#a33cbce0d95842ed4a8ce2c6bdef8a0ee">   81</a></span>  <span class="keywordtype">char</span>* <a class="code hl_function" href="class_stream_file.html#a33cbce0d95842ed4a8ce2c6bdef8a0ee">__attribute__</a>((<a class="code hl_function" href="_regexp_8cpp.html#a780b9f43408e455513accbbd577a16ee">error</a>(<span class="stringliteral">&quot;use getName(name, size)&quot;</span>))) name();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif  </span><span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_stream_file.html#af0da96e502485133ca0cff27fa130082">   87</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_stream_file.html#af0da96e502485133ca0cff27fa130082">peek</a>() { <span class="keywordflow">return</span> BaseFile::peek(); }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_stream_file.html#a18a04d1e68a0c1e3e38e5712cd9bbc03">   89</a></span>  PosType <a class="code hl_function" href="class_stream_file.html#a18a04d1e68a0c1e3e38e5712cd9bbc03">position</a>() { <span class="keywordflow">return</span> BaseFile::curPosition(); }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_stream_file.html#a249a5d428f303e2a8e7c3ae476e74829">   95</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_stream_file.html#a249a5d428f303e2a8e7c3ae476e74829">read</a>() { <span class="keywordflow">return</span> BaseFile::read(); }</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_stream_file.html#a91e8cfbde27d6879b4f51d2ceb2a9f06">   97</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_stream_file.html#a91e8cfbde27d6879b4f51d2ceb2a9f06">rewindDirectory</a>() {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (BaseFile::isDir()) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      BaseFile::rewind();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_stream_file.html#a773ee6f661fc689a5187f51cb5498086">  109</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_stream_file.html#a773ee6f661fc689a5187f51cb5498086">seek</a>(PosType pos) { <span class="keywordflow">return</span> BaseFile::seekSet(pos); }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_stream_file.html#a5813d451e7f7ba57a04d177caffc5a9f">  111</a></span>  PosType <a class="code hl_function" href="class_stream_file.html#a5813d451e7f7ba57a04d177caffc5a9f">size</a>() { <span class="keywordflow">return</span> BaseFile::fileSize(); }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_stream_file.html#a0695220134825199b39dee82f18ab1ec">  117</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_stream_file.html#a0695220134825199b39dee82f18ab1ec">write</a>(uint8_t b) { <span class="keywordflow">return</span> BaseFile::write(b); }</div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_stream_file.html#a0ace3aaaf6d0fb673a43059c0664fab6">  130</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_stream_file.html#a0ace3aaaf6d0fb673a43059c0664fab6">write</a>(<span class="keyword">const</span> uint8_t* <a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_stream_file.html#a5813d451e7f7ba57a04d177caffc5a9f">size</a>) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">return</span> BaseFile::write(<a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, <a class="code hl_function" href="class_stream_file.html#a5813d451e7f7ba57a04d177caffc5a9f">size</a>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>};</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif  </span><span class="comment">// ArduinoFiles_h</span></div>
+<div class="ttc" id="a_regexp_8cpp_html_a780b9f43408e455513accbbd577a16ee"><div class="ttname"><a href="_regexp_8cpp.html#a780b9f43408e455513accbbd577a16ee">error</a></div><div class="ttdeci">byte error(char err)</div><div class="ttdef"><b>Definition</b> <a href="_regexp_8cpp_source.html#l00013">Regexp.cpp:13</a></div></div>
+<div class="ttc" id="a_sys_call_8h_html"><div class="ttname"><a href="_sys_call_8h.html">SysCall.h</a></div><div class="ttdoc">SysCall class.</div></div>
+<div class="ttc" id="aclass_print_file_html"><div class="ttname"><a href="class_print_file.html">PrintFile</a></div><div class="ttdoc">PrintFile class.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">ArduinoFiles.h:43</a></div></div>
+<div class="ttc" id="aclass_print_file_html_a52f78f160083b416d66e23c680e0577d"><div class="ttname"><a href="class_print_file.html#a52f78f160083b416d66e23c680e0577d">PrintFile::write</a></div><div class="ttdeci">size_t write(uint8_t b)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">ArduinoFiles.h:53</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a0112cc39b64aac6f1ec47741397a7582"><div class="ttname"><a href="class_stream_file.html#a0112cc39b64aac6f1ec47741397a7582">StreamFile::available</a></div><div class="ttdeci">int available()</div><div class="ttdef"><b>Definition</b> <a href="#l00073">ArduinoFiles.h:73</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a0695220134825199b39dee82f18ab1ec"><div class="ttname"><a href="class_stream_file.html#a0695220134825199b39dee82f18ab1ec">StreamFile::write</a></div><div class="ttdeci">size_t write(uint8_t b)</div><div class="ttdef"><b>Definition</b> <a href="#l00117">ArduinoFiles.h:117</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a0ace3aaaf6d0fb673a43059c0664fab6"><div class="ttname"><a href="class_stream_file.html#a0ace3aaaf6d0fb673a43059c0664fab6">StreamFile::write</a></div><div class="ttdeci">size_t write(const uint8_t *buffer, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="#l00130">ArduinoFiles.h:130</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a1089cf17a36822b908d16f301f3ba315"><div class="ttname"><a href="class_stream_file.html#a1089cf17a36822b908d16f301f3ba315">StreamFile::StreamFile</a></div><div class="ttdeci">StreamFile()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">ArduinoFiles.h:68</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a18a04d1e68a0c1e3e38e5712cd9bbc03"><div class="ttname"><a href="class_stream_file.html#a18a04d1e68a0c1e3e38e5712cd9bbc03">StreamFile::position</a></div><div class="ttdeci">PosType position()</div><div class="ttdef"><b>Definition</b> <a href="#l00089">ArduinoFiles.h:89</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a249a5d428f303e2a8e7c3ae476e74829"><div class="ttname"><a href="class_stream_file.html#a249a5d428f303e2a8e7c3ae476e74829">StreamFile::read</a></div><div class="ttdeci">int read()</div><div class="ttdef"><b>Definition</b> <a href="#l00095">ArduinoFiles.h:95</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a32f813e659414892a58aa5157fe14f82"><div class="ttname"><a href="class_stream_file.html#a32f813e659414892a58aa5157fe14f82">StreamFile::flush</a></div><div class="ttdeci">void flush()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">ArduinoFiles.h:75</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a33cbce0d95842ed4a8ce2c6bdef8a0ee"><div class="ttname"><a href="class_stream_file.html#a33cbce0d95842ed4a8ce2c6bdef8a0ee">StreamFile::__attribute__</a></div><div class="ttdeci">char * __attribute__((error(&quot;use getName(name, size)&quot;))) name()</div></div>
+<div class="ttc" id="aclass_stream_file_html_a5813d451e7f7ba57a04d177caffc5a9f"><div class="ttname"><a href="class_stream_file.html#a5813d451e7f7ba57a04d177caffc5a9f">StreamFile::size</a></div><div class="ttdeci">PosType size()</div><div class="ttdef"><b>Definition</b> <a href="#l00111">ArduinoFiles.h:111</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a586ad44055eca4c1b2b457299b829d44"><div class="ttname"><a href="class_stream_file.html#a586ad44055eca4c1b2b457299b829d44">StreamFile::isDirectory</a></div><div class="ttdeci">bool isDirectory()</div><div class="ttdef"><b>Definition</b> <a href="#l00079">ArduinoFiles.h:79</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a773ee6f661fc689a5187f51cb5498086"><div class="ttname"><a href="class_stream_file.html#a773ee6f661fc689a5187f51cb5498086">StreamFile::seek</a></div><div class="ttdeci">bool seek(PosType pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00109">ArduinoFiles.h:109</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_a91e8cfbde27d6879b4f51d2ceb2a9f06"><div class="ttname"><a href="class_stream_file.html#a91e8cfbde27d6879b4f51d2ceb2a9f06">StreamFile::rewindDirectory</a></div><div class="ttdeci">void rewindDirectory()</div><div class="ttdef"><b>Definition</b> <a href="#l00097">ArduinoFiles.h:97</a></div></div>
+<div class="ttc" id="aclass_stream_file_html_af0da96e502485133ca0cff27fa130082"><div class="ttname"><a href="class_stream_file.html#af0da96e502485133ca0cff27fa130082">StreamFile::peek</a></div><div class="ttdeci">int peek()</div><div class="ttdef"><b>Definition</b> <a href="#l00087">ArduinoFiles.h:87</a></div></div>
+<div class="ttc" id="at-deck-pro_2peri__gps_8cpp_html_a7b13e39c43296f16ce75848767f94edc"><div class="ttname"><a href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a></div><div class="ttdeci">uint8_t buffer[256]</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00024">peri_gps.cpp:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_3319115675f748350501b74316565a77.html">common</a></li><li class="navelem"><a href="_arduino_files_8h.html">ArduinoFiles.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

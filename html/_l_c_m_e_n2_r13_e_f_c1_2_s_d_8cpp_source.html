@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/Displays/LCMEN2R13EFC1/SD.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_l_c_m_e_n2_r13_e_f_c1_2_s_d_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SD.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_c_m_e_n2_r13_e_f_c1_2_s_d_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_l_c_m_e_n2_r13_e_f_c1_8h.html">Displays/LCMEN2R13EFC1/LCMEN2R13EFC1.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef DISABLE_SDCARD</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_l_c_m_e_n2_r13_e_f_c1.html#aef16bbf9181a34056d69a9828ee44531">    5</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#aef16bbf9181a34056d69a9828ee44531">LCMEN2R13EFC1::loadFullscreenBMP</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename) {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_function" href="class_base_display.html#aa823be09eb53d0fb81b191a2119c9ad8">begin</a>();</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// Method writes direct to display. Have to make sure hardware init is done</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_base_display.html#a29e44e8362f5a981774fff5b7258cbc9">fastmode_state</a> == <a class="code hl_enumvalue" href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a351f882ec3e1a25eb7e6acc2667782d4">NOT_SET</a>)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <a class="code hl_function" href="class_base_display.html#a8c01cf4816fe5986d98ebbf6985277d4">fastmodeOff</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Need to return to fullscreen to load - store the current window and restore later</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    uint16_t oldwin_left = <a class="code hl_variable" href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">bounds</a>.window.left();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    uint16_t oldwin_top = <a class="code hl_variable" href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">bounds</a>.window.top();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    uint16_t oldwin_width = <a class="code hl_variable" href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">bounds</a>.window.width();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    uint16_t oldwin_height = <a class="code hl_variable" href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">bounds</a>.window.height();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="class_base_display.html#ad34f17494b16058978bea6b709cf7d7c">fullscreen</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// The SD class instance takes a lot of RAM; create as needed (some platforms only)</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="class_base_display.html#a65465bc2510d89f00e57272784d6f83d">sd</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_s_d_wrapper.html">SDWrapper</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Open card</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_variable" href="class_base_display.html#a65465bc2510d89f00e57272784d6f83d">sd</a>-&gt;begin(<a class="code hl_variable" href="class_base_display.html#a100a94190f221fb28376ca0a7f5f729a">pin_cs_card</a>, <a class="code hl_variable" href="class_base_display.html#aa2acfa70f34ec68b13e02ab6716b4042">display_spi</a>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Open image</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="class_base_display.html#a65465bc2510d89f00e57272784d6f83d">sd</a>-&gt;openFile(filename, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// Tell the display that we will write the full screen</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    int16_t sx, sy, ex, ey;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#a3e601d7ec75b9c9a1ec44ed7f73c10b8">calculateMemoryArea</a>(sx, sy, ex, ey, 0, 0, <a class="code hl_variable" href="class_l_c_m_e_n2_r13_e_f_c1.html#a8185fbfd0c0208d6679c89ae28abb6e6">panel_width</a> - 1, <a class="code hl_variable" href="class_l_c_m_e_n2_r13_e_f_c1.html#acc7449002f7088243f59a48a5a0be83b">panel_height</a> - 1);  <span class="comment">// Virtual, derived class</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#a7c4a15adf1c26bc85e0ae619f371fd08">setMemoryArea</a>(sx, sy, ex, ey);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Send the data to the display</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_base_display.html#ab248c9b91195c28abf9438a0fdcb34ff">sendCommand</a>(0x13); <span class="comment">// Write to &quot;NEW&quot; memory</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="class_base_display.html#afda5f6bf3bcc561d64127fa369d77ea6">send24BitBMP</a>(<a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// Write second ram: fastmodeOFF</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_base_display.html#a29e44e8362f5a981774fff5b7258cbc9">fastmode_state</a> == <a class="code hl_enumvalue" href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a9f833fbff6b62d28d68fa3942583fe25">OFF</a>) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// Write to &quot;OLD&quot; ram</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="class_base_display.html#ab248c9b91195c28abf9438a0fdcb34ff">sendCommand</a>(0x10);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="class_base_display.html#afda5f6bf3bcc561d64127fa369d77ea6">send24BitBMP</a>(<a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// Display the result</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#a1c0dfa2e325d1c6a9403e3fffa39dd49">activate</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// If fastmodeON</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_base_display.html#a29e44e8362f5a981774fff5b7258cbc9">fastmode_state</a> == <a class="code hl_enumvalue" href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a6a49233aaf706507cd5c40cf5a4af2c7">ON</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// Update the display first,</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#a1c0dfa2e325d1c6a9403e3fffa39dd49">activate</a>();        </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// Then send the data again, before final update</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// setMemoryArea(sx, sy, ex, ey);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="class_base_display.html#ab248c9b91195c28abf9438a0fdcb34ff">sendCommand</a>(0x10);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="class_base_display.html#afda5f6bf3bcc561d64127fa369d77ea6">send24BitBMP</a>(<a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_function" href="class_l_c_m_e_n2_r13_e_f_c1.html#a0fd413a93231e6b5bb9e02cca192f12d">endImageTxQuiet</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Free memory from SD instance</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="class_base_display.html#a65465bc2510d89f00e57272784d6f83d">sd</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Restore the previous window setting</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="class_base_display.html#ab0df534d62531f56e28552c79a13fb63">setWindow</a>(oldwin_left, oldwin_top, oldwin_width, oldwin_height);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_l_c_m_e_n2_r13_e_f_c1_8h_html"><div class="ttname"><a href="_l_c_m_e_n2_r13_e_f_c1_8h.html">LCMEN2R13EFC1.h</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a100a94190f221fb28376ca0a7f5f729a"><div class="ttname"><a href="class_base_display.html#a100a94190f221fb28376ca0a7f5f729a">BaseDisplay::pin_cs_card</a></div><div class="ttdeci">uint8_t pin_cs_card</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00283">base.h:283</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a29e44e8362f5a981774fff5b7258cbc9"><div class="ttname"><a href="class_base_display.html#a29e44e8362f5a981774fff5b7258cbc9">BaseDisplay::fastmode_state</a></div><div class="ttdeci">Fastmode fastmode_state</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00318">base.h:318</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a65465bc2510d89f00e57272784d6f83d"><div class="ttname"><a href="class_base_display.html#a65465bc2510d89f00e57272784d6f83d">BaseDisplay::sd</a></div><div class="ttdeci">SDWrapper * sd</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00281">base.h:281</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a75e923f350c1b152dbee0b9a546b99e2a351f882ec3e1a25eb7e6acc2667782d4"><div class="ttname"><a href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a351f882ec3e1a25eb7e6acc2667782d4">BaseDisplay::NOT_SET</a></div><div class="ttdeci">@ NOT_SET</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00047">base.h:47</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a75e923f350c1b152dbee0b9a546b99e2a6a49233aaf706507cd5c40cf5a4af2c7"><div class="ttname"><a href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a6a49233aaf706507cd5c40cf5a4af2c7">BaseDisplay::ON</a></div><div class="ttdeci">@ ON</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00047">base.h:47</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a75e923f350c1b152dbee0b9a546b99e2a9f833fbff6b62d28d68fa3942583fe25"><div class="ttname"><a href="class_base_display.html#a75e923f350c1b152dbee0b9a546b99e2a9f833fbff6b62d28d68fa3942583fe25">BaseDisplay::OFF</a></div><div class="ttdeci">@ OFF</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00047">base.h:47</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a8c01cf4816fe5986d98ebbf6985277d4"><div class="ttname"><a href="class_base_display.html#a8c01cf4816fe5986d98ebbf6985277d4">BaseDisplay::fastmodeOff</a></div><div class="ttdeci">void fastmodeOff()</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2mode_8cpp_source.html#l00010">mode.cpp:10</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a92392bdffbc19fb1f1f97eaae23cbb09"><div class="ttname"><a href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">BaseDisplay::bounds</a></div><div class="ttdeci">Bounds bounds</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00160">base.h:160</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aa2acfa70f34ec68b13e02ab6716b4042"><div class="ttname"><a href="class_base_display.html#aa2acfa70f34ec68b13e02ab6716b4042">BaseDisplay::display_spi</a></div><div class="ttdeci">SPIClass * display_spi</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00275">base.h:275</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aa823be09eb53d0fb81b191a2119c9ad8"><div class="ttname"><a href="class_base_display.html#aa823be09eb53d0fb81b191a2119c9ad8">BaseDisplay::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2setup_8cpp_source.html#l00027">setup.cpp:27</a></div></div>
+<div class="ttc" id="aclass_base_display_html_ab0df534d62531f56e28552c79a13fb63"><div class="ttname"><a href="class_base_display.html#ab0df534d62531f56e28552c79a13fb63">BaseDisplay::setWindow</a></div><div class="ttdeci">void setWindow(uint16_t left, uint16_t top, uint16_t width, uint16_t height)</div><div class="ttdef"><b>Definition</b> <a href="layout_8cpp_source.html#l00079">layout.cpp:79</a></div></div>
+<div class="ttc" id="aclass_base_display_html_ab248c9b91195c28abf9438a0fdcb34ff"><div class="ttname"><a href="class_base_display.html#ab248c9b91195c28abf9438a0fdcb34ff">BaseDisplay::sendCommand</a></div><div class="ttdeci">void sendCommand(uint8_t command)</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2hardware_8cpp_source.html#l00025">hardware.cpp:25</a></div></div>
+<div class="ttc" id="aclass_base_display_html_ad34f17494b16058978bea6b709cf7d7c"><div class="ttname"><a href="class_base_display.html#ad34f17494b16058978bea6b709cf7d7c">BaseDisplay::fullscreen</a></div><div class="ttdeci">void fullscreen()</div><div class="ttdef"><b>Definition</b> <a href="layout_8cpp_source.html#l00062">layout.cpp:62</a></div></div>
+<div class="ttc" id="aclass_base_display_html_afda5f6bf3bcc561d64127fa369d77ea6"><div class="ttname"><a href="class_base_display.html#afda5f6bf3bcc561d64127fa369d77ea6">BaseDisplay::send24BitBMP</a></div><div class="ttdeci">void send24BitBMP(Color target)</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2_s_d_8cpp_source.html#l00526">SD.cpp:526</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a0fd413a93231e6b5bb9e02cca192f12d"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a0fd413a93231e6b5bb9e02cca192f12d">LCMEN2R13EFC1::endImageTxQuiet</a></div><div class="ttdeci">void endImageTxQuiet()</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_8h_source.html#l00076">LCMEN2R13EFC1.h:76</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a1c0dfa2e325d1c6a9403e3fffa39dd49"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a1c0dfa2e325d1c6a9403e3fffa39dd49">LCMEN2R13EFC1::activate</a></div><div class="ttdeci">void activate()</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_2hardware_8cpp_source.html#l00015">hardware.cpp:15</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a3e601d7ec75b9c9a1ec44ed7f73c10b8"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a3e601d7ec75b9c9a1ec44ed7f73c10b8">LCMEN2R13EFC1::calculateMemoryArea</a></div><div class="ttdeci">void calculateMemoryArea(int16_t &amp;sx, int16_t &amp;sy, int16_t &amp;ex, int16_t &amp;ey, int16_t region_left, int16_t region_top, int16_t region_right, int16_t region_bottom)</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_2hardware_8cpp_source.html#l00003">hardware.cpp:3</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a7c4a15adf1c26bc85e0ae619f371fd08"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a7c4a15adf1c26bc85e0ae619f371fd08">LCMEN2R13EFC1::setMemoryArea</a></div><div class="ttdeci">void setMemoryArea(uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey)</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_8h_source.html#l00070">LCMEN2R13EFC1.h:70</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_a8185fbfd0c0208d6679c89ae28abb6e6"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#a8185fbfd0c0208d6679c89ae28abb6e6">LCMEN2R13EFC1::panel_width</a></div><div class="ttdeci">static const uint16_t panel_width</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_8h_source.html#l00011">LCMEN2R13EFC1.h:11</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_acc7449002f7088243f59a48a5a0be83b"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#acc7449002f7088243f59a48a5a0be83b">LCMEN2R13EFC1::panel_height</a></div><div class="ttdeci">static const uint16_t panel_height</div><div class="ttdef"><b>Definition</b> <a href="_l_c_m_e_n2_r13_e_f_c1_8h_source.html#l00012">LCMEN2R13EFC1.h:12</a></div></div>
+<div class="ttc" id="aclass_l_c_m_e_n2_r13_e_f_c1_html_aef16bbf9181a34056d69a9828ee44531"><div class="ttname"><a href="class_l_c_m_e_n2_r13_e_f_c1.html#aef16bbf9181a34056d69a9828ee44531">LCMEN2R13EFC1::loadFullscreenBMP</a></div><div class="ttdeci">void loadFullscreenBMP(const char *filename)</div><div class="ttdef"><b>Definition</b> <a href="#l00005">SD.cpp:5</a></div></div>
+<div class="ttc" id="aclass_s_d_wrapper_html"><div class="ttname"><a href="class_s_d_wrapper.html">SDWrapper</a></div><div class="ttdef"><b>Definition</b> <a href="sd__wrapper_8h_source.html#l00032">sd_wrapper.h:32</a></div></div>
+<div class="ttc" id="aenums_8h_html_aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3"><div class="ttname"><a href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a></div><div class="ttdeci">@ BLACK</div><div class="ttdef"><b>Definition</b> <a href="enums_8h_source.html#l00005">enums.h:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_32b6f4273c1202b2f07c43b5e6de1a39.html">Displays</a></li><li class="navelem"><a href="dir_f1569d0e701a4957ca08d25663f13492.html">LCMEN2R13EFC1</a></li><li class="navelem"><a href="_l_c_m_e_n2_r13_e_f_c1_2_s_d_8cpp.html">SD.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

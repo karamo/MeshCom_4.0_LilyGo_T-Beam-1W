@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/lora_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('lora__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lora_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;Arduino.h&quot;</code><br />
+<code>#include &quot;configuration.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="lora__functions_8h_source.html">lora_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="batt__functions_8h_source.html">batt_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mheard__functions_8h_source.html">mheard_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="udp__functions_8h_source.html">udp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="softser__functions_8h_source.html">softser_functions.h</a>&quot;</code><br />
+<code>#include &quot;TinyGPSPlus.h&quot;</code><br />
+</div>
+<p><a href="lora__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a110fa69817f6afafb4df3d7ebbc51bf7" id="r_a110fa69817f6afafb4df3d7ebbc51bf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a110fa69817f6afafb4df3d7ebbc51bf7">OnRxDone</a> (uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr)</td></tr>
+<tr class="memitem:a1c71484aad63462cce84a5087eef4603" id="r_a1c71484aad63462cce84a5087eef4603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c71484aad63462cce84a5087eef4603">OnRxTimeout</a> (void)</td></tr>
+<tr class="memdesc:a1c71484aad63462cce84a5087eef4603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to be executed on Radio Rx <a class="el" href="class_timeout.html">Timeout</a> event.  <br /></td></tr>
+<tr class="memitem:a17c074df1296329f7fed1abc4f8a17b9" id="r_a17c074df1296329f7fed1abc4f8a17b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17c074df1296329f7fed1abc4f8a17b9">OnRxError</a> (void)</td></tr>
+<tr class="memdesc:a17c074df1296329f7fed1abc4f8a17b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to be executed on Radio Rx Error event.  <br /></td></tr>
+<tr class="memitem:a5badc0ee7c0a22ff61cfa036498c5a21" id="r_a5badc0ee7c0a22ff61cfa036498c5a21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5badc0ee7c0a22ff61cfa036498c5a21">is_new_packet</a> (uint8_t compBuffer[4])</td></tr>
+<tr class="memdesc:a5badc0ee7c0a22ff61cfa036498c5a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check if we have a Lora packet already received.  <br /></td></tr>
+<tr class="memitem:a108234db18d76cfc82fb53a88fd79bfe" id="r_a108234db18d76cfc82fb53a88fd79bfe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a108234db18d76cfc82fb53a88fd79bfe">doTX</a> ()</td></tr>
+<tr class="memdesc:a108234db18d76cfc82fb53a88fd79bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">our Lora TX sequence  <br /></td></tr>
+<tr class="memitem:a315a11a800e12d594c96dbaf2e2d6070" id="r_a315a11a800e12d594c96dbaf2e2d6070"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a315a11a800e12d594c96dbaf2e2d6070">updateRetransmissionStatus</a> ()</td></tr>
+<tr class="memitem:af3eca2145f72543188f720317a59928e" id="r_af3eca2145f72543188f720317a59928e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3eca2145f72543188f720317a59928e">OnTxDone</a> (void)</td></tr>
+<tr class="memdesc:af3eca2145f72543188f720317a59928e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to be executed on Radio Tx Done event.  <br /></td></tr>
+<tr class="memitem:a4bf38bca437ea5c5b0bba7d52723be64" id="r_a4bf38bca437ea5c5b0bba7d52723be64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bf38bca437ea5c5b0bba7d52723be64">OnTxTimeout</a> (void)</td></tr>
+<tr class="memdesc:a4bf38bca437ea5c5b0bba7d52723be64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to be executed on Radio Tx <a class="el" href="class_timeout.html">Timeout</a> event.  <br /></td></tr>
+<tr class="memitem:a5f8758a97df7be51c34d56415ca912c0" id="r_a5f8758a97df7be51c34d56415ca912c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8758a97df7be51c34d56415ca912c0">OnPreambleDetect</a> (void)</td></tr>
+<tr class="memdesc:a5f8758a97df7be51c34d56415ca912c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">fires when a preamble is detected currently not used!  <br /></td></tr>
+<tr class="memitem:acb914be1152b8319d498e041414a8065" id="r_acb914be1152b8319d498e041414a8065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb914be1152b8319d498e041414a8065">OnHeaderDetect</a> (void)</td></tr>
+<tr class="memdesc:acb914be1152b8319d498e041414a8065"><td class="mdescLeft">&#160;</td><td class="mdescRight">fires when a header is detected  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a04d82117ceb8d728b5f3db7b99e034dc" id="r_a04d82117ceb8d728b5f3db7b99e034dc"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d82117ceb8d728b5f3db7b99e034dc">iReceiveTimeOutTime</a></td></tr>
+<tr class="memitem:a9f153e37dba6049e0b78335c3762fd9f" id="r_a9f153e37dba6049e0b78335c3762fd9f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f153e37dba6049e0b78335c3762fd9f">mheardCalls</a> [<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>][10]</td></tr>
+<tr class="memitem:a03b2a6372a1f93a263ae04cd0effe670" id="r_a03b2a6372a1f93a263ae04cd0effe670"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03b2a6372a1f93a263ae04cd0effe670">mheardLat</a> [<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>]</td></tr>
+<tr class="memitem:a1f731a0c903cde3673f12753ed75420b" id="r_a1f731a0c903cde3673f12753ed75420b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f731a0c903cde3673f12753ed75420b">mheardLon</a> [<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>]</td></tr>
+<tr class="memitem:a141d9b52c06c70c3442126a09751b75e" id="r_a141d9b52c06c70c3442126a09751b75e"><td class="memItemLeft" align="right" valign="top">TinyGPSPlus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a141d9b52c06c70c3442126a09751b75e">tinyGPSPLus</a></td></tr>
+<tr class="memitem:a441ca77275be4863282be7e43dd7c069" id="r_a441ca77275be4863282be7e43dd7c069"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441ca77275be4863282be7e43dd7c069">sendlng</a> = 0</td></tr>
+<tr class="memitem:ade0277c5f1683fd7fd8ee48c3e96adca" id="r_ade0277c5f1683fd7fd8ee48c3e96adca"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade0277c5f1683fd7fd8ee48c3e96adca">lora_tx_buffer</a> [<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+10]</td></tr>
+<tr class="memitem:a811db6799fc0221f2d1f14c1d37649f7" id="r_a811db6799fc0221f2d1f14c1d37649f7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a811db6799fc0221f2d1f14c1d37649f7">preamble_cnt</a> = 0</td></tr>
+<tr class="memitem:ab395339da90b023965eec18baf1b4960" id="r_ab395339da90b023965eec18baf1b4960"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab395339da90b023965eec18baf1b4960">track_to_meshcom_timer</a> = 0</td></tr>
+<tr class="memitem:aeea53762d24034b75a2e1d770b5c13ea" id="r_aeea53762d24034b75a2e1d770b5c13ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeea53762d24034b75a2e1d770b5c13ea">bNewLine</a> = false</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a108234db18d76cfc82fb53a88fd79bfe" name="a108234db18d76cfc82fb53a88fd79bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108234db18d76cfc82fb53a88fd79bfe">&#9670;&#160;</a></span>doTX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool doTX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>our Lora TX sequence </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00926">926</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5badc0ee7c0a22ff61cfa036498c5a21" name="a5badc0ee7c0a22ff61cfa036498c5a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5badc0ee7c0a22ff61cfa036498c5a21">&#9670;&#160;</a></span>is_new_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_new_packet </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>compBuffer</em></span>[4]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to check if we have a Lora packet already received. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00902">902</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acb914be1152b8319d498e041414a8065" name="acb914be1152b8319d498e041414a8065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb914be1152b8319d498e041414a8065">&#9670;&#160;</a></span>OnHeaderDetect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnHeaderDetect </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fires when a header is detected </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l01233">1233</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f8758a97df7be51c34d56415ca912c0" name="a5f8758a97df7be51c34d56415ca912c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8758a97df7be51c34d56415ca912c0">&#9670;&#160;</a></span>OnPreambleDetect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnPreambleDetect </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fires when a preamble is detected currently not used! </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l01226">1226</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a110fa69817f6afafb4df3d7ebbc51bf7" name="a110fa69817f6afafb4df3d7ebbc51bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110fa69817f6afafb4df3d7ebbc51bf7">&#9670;&#160;</a></span>OnRxDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnRxDone </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>payload</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>snr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00095">95</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17c074df1296329f7fed1abc4f8a17b9" name="a17c074df1296329f7fed1abc4f8a17b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c074df1296329f7fed1abc4f8a17b9">&#9670;&#160;</a></span>OnRxError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnRxError </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to be executed on Radio Rx Error event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00888">888</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c71484aad63462cce84a5087eef4603" name="a1c71484aad63462cce84a5087eef4603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c71484aad63462cce84a5087eef4603">&#9670;&#160;</a></span>OnRxTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnRxTimeout </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to be executed on Radio Rx <a class="el" href="class_timeout.html">Timeout</a> event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00873">873</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af3eca2145f72543188f720317a59928e" name="af3eca2145f72543188f720317a59928e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3eca2145f72543188f720317a59928e">&#9670;&#160;</a></span>OnTxDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnTxDone </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to be executed on Radio Tx Done event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l01179">1179</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4bf38bca437ea5c5b0bba7d52723be64" name="a4bf38bca437ea5c5b0bba7d52723be64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf38bca437ea5c5b0bba7d52723be64">&#9670;&#160;</a></span>OnTxTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnTxTimeout </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to be executed on Radio Tx <a class="el" href="class_timeout.html">Timeout</a> event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l01202">1202</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a315a11a800e12d594c96dbaf2e2d6070" name="a315a11a800e12d594c96dbaf2e2d6070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315a11a800e12d594c96dbaf2e2d6070">&#9670;&#160;</a></span>updateRetransmissionStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool updateRetransmissionStatus </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l01110">1110</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="aeea53762d24034b75a2e1d770b5c13ea" name="aeea53762d24034b75a2e1d770b5c13ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea53762d24034b75a2e1d770b5c13ea">&#9670;&#160;</a></span>bNewLine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bNewLine = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00091">91</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a04d82117ceb8d728b5f3db7b99e034dc" name="a04d82117ceb8d728b5f3db7b99e034dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d82117ceb8d728b5f3db7b99e034dc">&#9670;&#160;</a></span>iReceiveTimeOutTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long iReceiveTimeOutTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00359">359</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ade0277c5f1683fd7fd8ee48c3e96adca" name="ade0277c5f1683fd7fd8ee48c3e96adca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0277c5f1683fd7fd8ee48c3e96adca">&#9670;&#160;</a></span>lora_tx_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t lora_tx_buffer[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00086">86</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9f153e37dba6049e0b78335c3762fd9f" name="a9f153e37dba6049e0b78335c3762fd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f153e37dba6049e0b78335c3762fd9f">&#9670;&#160;</a></span>mheardCalls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char mheardCalls[<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>][10]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="mheard__functions_8cpp_source.html#l00017">17</a> der Datei <a class="el" href="mheard__functions_8cpp_source.html">mheard_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a03b2a6372a1f93a263ae04cd0effe670" name="a03b2a6372a1f93a263ae04cd0effe670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b2a6372a1f93a263ae04cd0effe670">&#9670;&#160;</a></span>mheardLat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double mheardLat[<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="mheard__functions_8cpp_source.html#l00018">18</a> der Datei <a class="el" href="mheard__functions_8cpp_source.html">mheard_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1f731a0c903cde3673f12753ed75420b" name="a1f731a0c903cde3673f12753ed75420b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f731a0c903cde3673f12753ed75420b">&#9670;&#160;</a></span>mheardLon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double mheardLon[<a class="el" href="configuration__global_8h.html#a62a34531da992a38c1402fb52adef647">MAX_MHEARD</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="mheard__functions_8cpp_source.html#l00019">19</a> der Datei <a class="el" href="mheard__functions_8cpp_source.html">mheard_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a811db6799fc0221f2d1f14c1d37649f7" name="a811db6799fc0221f2d1f14c1d37649f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811db6799fc0221f2d1f14c1d37649f7">&#9670;&#160;</a></span>preamble_cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t preamble_cnt = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00087">87</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a441ca77275be4863282be7e43dd7c069" name="a441ca77275be4863282be7e43dd7c069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441ca77275be4863282be7e43dd7c069">&#9670;&#160;</a></span>sendlng</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sendlng = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00085">85</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a141d9b52c06c70c3442126a09751b75e" name="a141d9b52c06c70c3442126a09751b75e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a141d9b52c06c70c3442126a09751b75e">&#9670;&#160;</a></span>tinyGPSPLus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TinyGPSPlus tinyGPSPLus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab395339da90b023965eec18baf1b4960" name="ab395339da90b023965eec18baf1b4960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab395339da90b023965eec18baf1b4960">&#9670;&#160;</a></span>track_to_meshcom_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long track_to_meshcom_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00089">89</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="lora__functions_8cpp.html">lora_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

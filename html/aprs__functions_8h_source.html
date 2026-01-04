@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/aprs_functions.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('aprs__functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">aprs_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="aprs__functions_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _APRS_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _APRS_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;configuration.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="aprs__structures_8h.html">aprs_structures.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> <a class="code hl_function" href="aprs__functions_8h.html#aca04e119423b87ae4683dd46924c513f">initAPRS</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;<a class="code hl_struct" href="structaprs_message.html">aprsMessage</a>, <span class="keywordtype">char</span> msgType);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#ac30f6e48cf0f824f1fd38de474342dfd">decodeAPRS</a>(uint8_t <a class="code hl_variable" href="loop__functions_8cpp.html#a1ebf31fe871960d95af837609585d684">RcvBuffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], uint16_t size, <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;<a class="code hl_struct" href="structaprs_message.html">aprsMessage</a>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#aa0d1fd9c33db08548ca16ae744c80b00">encodeAPRS</a>(uint8_t <a class="code hl_variable" href="loop__functions_8cpp.html#a1ebf31fe871960d95af837609585d684">RcvBuffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;<a class="code hl_struct" href="structaprs_message.html">aprsMessage</a>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="aprs__functions_8h.html#a2197686ae474d7c9809fdcf76742c505">   11</a></span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#a2197686ae474d7c9809fdcf76742c505">encodeStartAPRS</a>(uint8_t <a class="code hl_variable" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>], <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#a32292f3a0d7bb14607b7afb158a50c24">encodePayloadAPRS</a>(uint8_t <a class="code hl_variable" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>], <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="aprs__functions_8h.html#aa72f1993a81ffb2d2c6195fb00e52769">initAPRSPOS</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_position.html">aprsPosition</a> &amp;<a class="code hl_struct" href="structaprs_position.html">aprsPosition</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#aa76156605bcebfaac6adbb4431f73ffb">decodeAPRSPOS</a>(String PayloadBuffer, <span class="keyword">struct</span> <a class="code hl_struct" href="structaprs_position.html">aprsPosition</a> &amp;<a class="code hl_struct" href="structaprs_position.html">aprsPosition</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#a26e4a69d6a3f6ca0ea1f9cd01721b60d">encodeLoRaAPRS</a>(uint8_t <a class="code hl_variable" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], <span class="keywordtype">char</span> strSourceCall[10], <span class="keywordtype">double</span> lat, <span class="keywordtype">char</span> lat_c, <span class="keywordtype">double</span> lon, <span class="keywordtype">char</span> lon_c, <span class="keywordtype">int</span> alt);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#a53865f9d1f7873a4d161fe3f5602abaf">encodeLoRaAPRScompressed</a>(uint8_t <a class="code hl_variable" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], <span class="keywordtype">char</span> cSourceCall[10], <span class="keywordtype">double</span> lat, <span class="keywordtype">char</span> lat_c, <span class="keywordtype">double</span> lon, <span class="keywordtype">char</span> lon_c, <span class="keywordtype">int</span> alt);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>uint16_t <a class="code hl_function" href="aprs__functions_8h.html#aec0f21f5fb90713e295286682438acd2">encodeLoRaAPRSText</a>(uint8_t <a class="code hl_variable" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], <span class="keywordtype">char</span> cSourceCall[10], <span class="keywordtype">char</span> cText[100]);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">double</span> <a class="code hl_function" href="aprs__functions_8h.html#aad106ca2831e0b6d70819849b1664aab">conv_coord_to_dec</a>(<span class="keywordtype">double</span> coord);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="aprs__functions_8h.html#ab300495df101ab218d19b20c7a66856a">CheckGroup</a>(String callsign);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">bool</span> <a class="code hl_function" href="aprs__functions_8h.html#a06de0b07eafc826f98494c4b7b3bdcc9">CheckOwnGroup</a>(String callsign);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aaprs__functions_8h_html_a06de0b07eafc826f98494c4b7b3bdcc9"><div class="ttname"><a href="aprs__functions_8h.html#a06de0b07eafc826f98494c4b7b3bdcc9">CheckOwnGroup</a></div><div class="ttdeci">bool CheckOwnGroup(String callsign)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00050">aprs_functions.cpp:50</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_a2197686ae474d7c9809fdcf76742c505"><div class="ttname"><a href="aprs__functions_8h.html#a2197686ae474d7c9809fdcf76742c505">encodeStartAPRS</a></div><div class="ttdeci">uint16_t encodeStartAPRS(uint8_t msg_buffer[MAX_MSG_LEN_PHONE], struct aprsMessage &amp;aprsmsg)</div></div>
+<div class="ttc" id="aaprs__functions_8h_html_a26e4a69d6a3f6ca0ea1f9cd01721b60d"><div class="ttname"><a href="aprs__functions_8h.html#a26e4a69d6a3f6ca0ea1f9cd01721b60d">encodeLoRaAPRS</a></div><div class="ttdeci">uint16_t encodeLoRaAPRS(uint8_t msg_buffer[UDP_TX_BUF_SIZE], char strSourceCall[10], double lat, char lat_c, double lon, char lon_c, int alt)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l01031">aprs_functions.cpp:1031</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_a32292f3a0d7bb14607b7afb158a50c24"><div class="ttname"><a href="aprs__functions_8h.html#a32292f3a0d7bb14607b7afb158a50c24">encodePayloadAPRS</a></div><div class="ttdeci">uint16_t encodePayloadAPRS(uint8_t msg_buffer[MAX_MSG_LEN_PHONE], struct aprsMessage &amp;aprsmsg)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00948">aprs_functions.cpp:948</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_a53865f9d1f7873a4d161fe3f5602abaf"><div class="ttname"><a href="aprs__functions_8h.html#a53865f9d1f7873a4d161fe3f5602abaf">encodeLoRaAPRScompressed</a></div><div class="ttdeci">uint16_t encodeLoRaAPRScompressed(uint8_t msg_buffer[UDP_TX_BUF_SIZE], char cSourceCall[10], double lat, char lat_c, double lon, char lon_c, int alt)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l01084">aprs_functions.cpp:1084</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aa0d1fd9c33db08548ca16ae744c80b00"><div class="ttname"><a href="aprs__functions_8h.html#aa0d1fd9c33db08548ca16ae744c80b00">encodeAPRS</a></div><div class="ttdeci">uint16_t encodeAPRS(uint8_t RcvBuffer[UDP_TX_BUF_SIZE], struct aprsMessage &amp;aprsMessage)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00968">aprs_functions.cpp:968</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aa72f1993a81ffb2d2c6195fb00e52769"><div class="ttname"><a href="aprs__functions_8h.html#aa72f1993a81ffb2d2c6195fb00e52769">initAPRSPOS</a></div><div class="ttdeci">void initAPRSPOS(struct aprsPosition &amp;aprsPosition)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00450">aprs_functions.cpp:450</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aa76156605bcebfaac6adbb4431f73ffb"><div class="ttname"><a href="aprs__functions_8h.html#aa76156605bcebfaac6adbb4431f73ffb">decodeAPRSPOS</a></div><div class="ttdeci">uint16_t decodeAPRSPOS(String PayloadBuffer, struct aprsPosition &amp;aprsPosition)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00479">aprs_functions.cpp:479</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aad106ca2831e0b6d70819849b1664aab"><div class="ttname"><a href="aprs__functions_8h.html#aad106ca2831e0b6d70819849b1664aab">conv_coord_to_dec</a></div><div class="ttdeci">double conv_coord_to_dec(double coord)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l01228">aprs_functions.cpp:1228</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_ab300495df101ab218d19b20c7a66856a"><div class="ttname"><a href="aprs__functions_8h.html#ab300495df101ab218d19b20c7a66856a">CheckGroup</a></div><div class="ttdeci">int CheckGroup(String callsign)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00025">aprs_functions.cpp:25</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_ac30f6e48cf0f824f1fd38de474342dfd"><div class="ttname"><a href="aprs__functions_8h.html#ac30f6e48cf0f824f1fd38de474342dfd">decodeAPRS</a></div><div class="ttdeci">uint16_t decodeAPRS(uint8_t RcvBuffer[UDP_TX_BUF_SIZE], uint16_t size, struct aprsMessage &amp;aprsMessage)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00120">aprs_functions.cpp:120</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aca04e119423b87ae4683dd46924c513f"><div class="ttname"><a href="aprs__functions_8h.html#aca04e119423b87ae4683dd46924c513f">initAPRS</a></div><div class="ttdeci">void initAPRS(struct aprsMessage &amp;aprsMessage, char msgType)</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l00091">aprs_functions.cpp:91</a></div></div>
+<div class="ttc" id="aaprs__functions_8h_html_aec0f21f5fb90713e295286682438acd2"><div class="ttname"><a href="aprs__functions_8h.html#aec0f21f5fb90713e295286682438acd2">encodeLoRaAPRSText</a></div><div class="ttdeci">uint16_t encodeLoRaAPRSText(uint8_t msg_buffer[UDP_TX_BUF_SIZE], char cSourceCall[10], char cText[100])</div><div class="ttdef"><b>Definition</b> <a href="aprs__functions_8cpp_source.html#l01193">aprs_functions.cpp:1193</a></div></div>
+<div class="ttc" id="aaprs__structures_8h_html"><div class="ttname"><a href="aprs__structures_8h.html">aprs_structures.h</a></div></div>
+<div class="ttc" id="acommand__functions_8cpp_html_a3c0a10de3c2dabefd0f892f17ff52f3a"><div class="ttname"><a href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a></div><div class="ttdeci">uint8_t msg_buffer[MAX_MSG_LEN_PHONE]</div><div class="ttdef"><b>Definition</b> <a href="command__functions_8cpp_source.html#l00104">command_functions.cpp:104</a></div></div>
+<div class="ttc" id="aconfiguration__global_8h_html_a5d20473a838368ac190f608f4cf46f27"><div class="ttname"><a href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a></div><div class="ttdeci">#define UDP_TX_BUF_SIZE</div><div class="ttdef"><b>Definition</b> <a href="configuration__global_8h_source.html#l00043">configuration_global.h:43</a></div></div>
+<div class="ttc" id="aconfiguration__global_8h_html_a8b8c824d38702a4457c6af2203b09485"><div class="ttname"><a href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a></div><div class="ttdeci">#define MAX_MSG_LEN_PHONE</div><div class="ttdef"><b>Definition</b> <a href="configuration__global_8h_source.html#l00100">configuration_global.h:100</a></div></div>
+<div class="ttc" id="aloop__functions_8cpp_html_a1ebf31fe871960d95af837609585d684"><div class="ttname"><a href="loop__functions_8cpp.html#a1ebf31fe871960d95af837609585d684">RcvBuffer</a></div><div class="ttdeci">uint8_t RcvBuffer[UDP_TX_BUF_SIZE *2]</div><div class="ttdef"><b>Definition</b> <a href="loop__functions_8cpp_source.html#l00237">loop_functions.cpp:237</a></div></div>
+<div class="ttc" id="astructaprs_message_html"><div class="ttname"><a href="structaprs_message.html">aprsMessage</a></div><div class="ttdef"><b>Definition</b> <a href="aprs__structures_8h_source.html#l00008">aprs_structures.h:9</a></div></div>
+<div class="ttc" id="astructaprs_position_html"><div class="ttname"><a href="structaprs_position.html">aprsPosition</a></div><div class="ttdef"><b>Definition</b> <a href="aprs__structures_8h_source.html#l00037">aprs_structures.h:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="aprs__functions_8h.html">aprs_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t-deck-pro/peripheral.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t-deck-pro_2peripheral_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">peripheral.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+</div>
+<p><a href="t-deck-pro_2peripheral_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a1bbc80093152641daa049c9fffd689da" id="r_a1bbc80093152641daa049c9fffd689da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bbc80093152641daa049c9fffd689da">GPS_PRIORITY</a>&#160;&#160;&#160;(configMAX_PRIORITIES - 1)</td></tr>
+<tr class="memitem:a00bf1002da38c370673764aa0e0f6752" id="r_a00bf1002da38c370673764aa0e0f6752"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00bf1002da38c370673764aa0e0f6752">LORA_PRIORITY</a>&#160;&#160;&#160;(configMAX_PRIORITIES - 2)</td></tr>
+<tr class="memitem:a95ee5759e1b8c7e4fe451b885955a794" id="r_a95ee5759e1b8c7e4fe451b885955a794"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95ee5759e1b8c7e4fe451b885955a794">WS2812_PRIORITY</a>&#160;&#160;&#160;(configMAX_PRIORITIES - 3)</td></tr>
+<tr class="memitem:ac8de409e6dc6b07e1fe20fb7739544d1" id="r_ac8de409e6dc6b07e1fe20fb7739544d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8de409e6dc6b07e1fe20fb7739544d1">BATTERY_PRIORITY</a>&#160;&#160;&#160;(configMAX_PRIORITIES - 4)</td></tr>
+<tr class="memitem:ae918ff4b0af7d0acb351377b3b0ff868" id="r_ae918ff4b0af7d0acb351377b3b0ff868"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae918ff4b0af7d0acb351377b3b0ff868">A7682E_PRIORITY</a>&#160;&#160;&#160;(configMAX_PRIORITIES - 5)</td></tr>
+<tr class="memitem:a8461c850b1d7178f60aef63994266860" id="r_a8461c850b1d7178f60aef63994266860"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8461c850b1d7178f60aef63994266860">LORA_FREQ</a>&#160;&#160;&#160;433.175</td></tr>
+<tr class="memitem:af5a544fcd18db67b52398cbeca46ce37" id="r_af5a544fcd18db67b52398cbeca46ce37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a544fcd18db67b52398cbeca46ce37">LORA_MODE_SEND</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:ab5142b9e2a5d4b910c8a2836972e9478" id="r_ab5142b9e2a5d4b910c8a2836972e9478"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5142b9e2a5d4b910c8a2836972e9478">LORA_MODE_RECV</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ad5cc9ef3c3c003f1676fa9d7bcd7f9ce" id="r_ad5cc9ef3c3c003f1676fa9d7bcd7f9ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5cc9ef3c3c003f1676fa9d7bcd7f9ce">KEYPAD_PRESS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a7bbc578dd9a0b0753e7843edad276e50" id="r_a7bbc578dd9a0b0753e7843edad276e50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bbc578dd9a0b0753e7843edad276e50">KEYPAD_RELEASE</a>&#160;&#160;&#160;0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typdefinitionen</h2></td></tr>
+<tr class="memitem:ab8869e7847101f3b2b441f570193265e" id="r_ab8869e7847101f3b2b441f570193265e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8869e7847101f3b2b441f570193265e">keypad_cb</a>) (int <a class="el" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a>, char val)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:a34322e9f6860ddfcdf9639dc8b7b9801" id="r_a34322e9f6860ddfcdf9639dc8b7b9801"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a> = 0
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff">E_PERI_KYEPAD</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a>
+, <br />
+&#160;&#160;<a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b">E_PERI_SD</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a">E_PERI_BHI260AP</a>
+, <br />
+&#160;&#160;<a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b">E_PERI_LTR_553ALS</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa">E_PERI_A7682E</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009">E_PERI_PCM5102A</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4">E_PERI_INK_SCREEN</a>
+, <br />
+&#160;&#160;<a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908">E_PERI_MIC</a>
+, <a class="el" href="#a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf">E_PERI_NUM_MAX</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a02872a48966c9765325bbbd3deaacd99" id="r_a02872a48966c9765325bbbd3deaacd99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02872a48966c9765325bbbd3deaacd99">lora_init</a> (void)</td></tr>
+<tr class="memitem:a126db35082708c1e7c728998afbba978" id="r_a126db35082708c1e7c728998afbba978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a126db35082708c1e7c728998afbba978">lora_set_mode</a> (int mode)</td></tr>
+<tr class="memitem:aac3d4c51204037637d1cf9dcb0763c08" id="r_aac3d4c51204037637d1cf9dcb0763c08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac3d4c51204037637d1cf9dcb0763c08">lora_get_mode</a> (void)</td></tr>
+<tr class="memitem:a6fb9259b44f05a9517cf80043815937c" id="r_a6fb9259b44f05a9517cf80043815937c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fb9259b44f05a9517cf80043815937c">lora_receive_loop</a> (void)</td></tr>
+<tr class="memitem:abd3d2b1154869b501a4564acef294d58" id="r_abd3d2b1154869b501a4564acef294d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd3d2b1154869b501a4564acef294d58">lora_transmit</a> (const char *<a class="el" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>)</td></tr>
+<tr class="memitem:aeb9b920b61c9743f047c76e216e8d4ec" id="r_aeb9b920b61c9743f047c76e216e8d4ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb9b920b61c9743f047c76e216e8d4ec">lora_get_recv</a> (const char **<a class="el" href="esp32__main_8cpp.html#a27f3fd6bae71e73f3c13bb57945845a6">str</a>, int *rssi)</td></tr>
+<tr class="memitem:ad89556b30b0abed8e515e4ca8081eb8e" id="r_ad89556b30b0abed8e515e4ca8081eb8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad89556b30b0abed8e515e4ca8081eb8e">lora_set_recv_flag</a> (void)</td></tr>
+<tr class="memitem:ab1aea5e838d0f8ded72cce5b4d1cef7e" id="r_ab1aea5e838d0f8ded72cce5b4d1cef7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1aea5e838d0f8ded72cce5b4d1cef7e">keypad_init</a> (int address)</td></tr>
+<tr class="memitem:a01116ecc449b9e73d785b7bcfb9e9246" id="r_a01116ecc449b9e73d785b7bcfb9e9246"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01116ecc449b9e73d785b7bcfb9e9246">keypad_get_val</a> (char *c)</td></tr>
+<tr class="memitem:a3e2ed9a0575f9837da6f5e1bf8fe3628" id="r_a3e2ed9a0575f9837da6f5e1bf8fe3628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e2ed9a0575f9837da6f5e1bf8fe3628">keypad_loop</a> (void)</td></tr>
+<tr class="memitem:a6fbad7254002c69d0f05af236a8218c6" id="r_a6fbad7254002c69d0f05af236a8218c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fbad7254002c69d0f05af236a8218c6">keypad_register_cb</a> (<a class="el" href="#ab8869e7847101f3b2b441f570193265e">keypad_cb</a> cb)</td></tr>
+<tr class="memitem:accb3010dc854fcb1be01bc89a5565174" id="r_accb3010dc854fcb1be01bc89a5565174"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accb3010dc854fcb1be01bc89a5565174">keypad_set_flag</a> (void)</td></tr>
+<tr class="memitem:a2cf17c68455a7b71e60642d057702937" id="r_a2cf17c68455a7b71e60642d057702937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf17c68455a7b71e60642d057702937">keypad_set_layer</a> (int ilayer)</td></tr>
+<tr class="memitem:abcc73762984b6907a26d50a5c638fb52" id="r_abcc73762984b6907a26d50a5c638fb52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc73762984b6907a26d50a5c638fb52">BHI260AP_init</a> (void)</td></tr>
+<tr class="memitem:a7738b7c2b48f1e151a0eee91c9603a75" id="r_a7738b7c2b48f1e151a0eee91c9603a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7738b7c2b48f1e151a0eee91c9603a75">BHI260AP_get_val</a> (int val_type, float *x, float *y, float *z)</td></tr>
+<tr class="memitem:a9ff096d7d1a9e882750329ed93347c2b" id="r_a9ff096d7d1a9e882750329ed93347c2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ff096d7d1a9e882750329ed93347c2b">LTR553_init</a> (void)</td></tr>
+<tr class="memitem:a7115568879199869dc1552f8c8a4bc52" id="r_a7115568879199869dc1552f8c8a4bc52"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7115568879199869dc1552f8c8a4bc52">LTR_553ALS_get_channel</a> (int ch)</td></tr>
+<tr class="memitem:a4fa1cd9766dae9878b1eae28bcd4cd76" id="r_a4fa1cd9766dae9878b1eae28bcd4cd76"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa1cd9766dae9878b1eae28bcd4cd76">LTR_553ALS_get_ps</a> (void)</td></tr>
+<tr class="memitem:abb4c3fd64e4c8290c87124a292bde621" id="r_abb4c3fd64e4c8290c87124a292bde621"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4c3fd64e4c8290c87124a292bde621">gps_init</a> (void)</td></tr>
+<tr class="memitem:aa614de21bcc89a8ddf49884e234ae024" id="r_aa614de21bcc89a8ddf49884e234ae024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa614de21bcc89a8ddf49884e234ae024">gps_task_create</a> (void)</td></tr>
+<tr class="memitem:a8ac766329012d1bd295370cb579a1ffd" id="r_a8ac766329012d1bd295370cb579a1ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ac766329012d1bd295370cb579a1ffd">gps_task_suspend</a> (void)</td></tr>
+<tr class="memitem:af5837893d989ca05abf11d7528b90c6d" id="r_af5837893d989ca05abf11d7528b90c6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5837893d989ca05abf11d7528b90c6d">gps_task_resume</a> (void)</td></tr>
+<tr class="memitem:aebe481bd9a57062e4f0e417ebb8be979" id="r_aebe481bd9a57062e4f0e417ebb8be979"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe481bd9a57062e4f0e417ebb8be979">gps_get_coord</a> (double *lat, double *lng, double *alt)</td></tr>
+<tr class="memitem:a32513b732fe7d8aa712b8b0d0d6eec27" id="r_a32513b732fe7d8aa712b8b0d0d6eec27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32513b732fe7d8aa712b8b0d0d6eec27">gps_get_data</a> (uint16_t *year, uint8_t *month, uint8_t *day)</td></tr>
+<tr class="memitem:aff4e3cc23d0aaff17dcd2f476d2e5294" id="r_aff4e3cc23d0aaff17dcd2f476d2e5294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4e3cc23d0aaff17dcd2f476d2e5294">gps_get_time</a> (uint8_t *hour, uint8_t *minute, uint8_t *second)</td></tr>
+<tr class="memitem:a32a7fcb936bcecfddfdb2563340771a7" id="r_a32a7fcb936bcecfddfdb2563340771a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32a7fcb936bcecfddfdb2563340771a7">gps_get_satellites</a> (uint32_t *vsat, int *hdop)</td></tr>
+<tr class="memitem:a0559413d9fdb9198aadafb8ff6ca35b3" id="r_a0559413d9fdb9198aadafb8ff6ca35b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0559413d9fdb9198aadafb8ff6ca35b3">gps_get_speed</a> (double *speed)</td></tr>
+<tr class="memitem:a7674b99d2be53c8b53196195e1f449c8" id="r_a7674b99d2be53c8b53196195e1f449c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7674b99d2be53c8b53196195e1f449c8">gps_get_fix</a> (uint8_t *fix)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="ae918ff4b0af7d0acb351377b3b0ff868" name="ae918ff4b0af7d0acb351377b3b0ff868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae918ff4b0af7d0acb351377b3b0ff868">&#9670;&#160;</a></span>A7682E_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A7682E_PRIORITY&#160;&#160;&#160;(configMAX_PRIORITIES - 5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00010">10</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="ac8de409e6dc6b07e1fe20fb7739544d1" name="ac8de409e6dc6b07e1fe20fb7739544d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8de409e6dc6b07e1fe20fb7739544d1">&#9670;&#160;</a></span>BATTERY_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BATTERY_PRIORITY&#160;&#160;&#160;(configMAX_PRIORITIES - 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00009">9</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="a1bbc80093152641daa049c9fffd689da" name="a1bbc80093152641daa049c9fffd689da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbc80093152641daa049c9fffd689da">&#9670;&#160;</a></span>GPS_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPS_PRIORITY&#160;&#160;&#160;(configMAX_PRIORITIES - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00006">6</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="ad5cc9ef3c3c003f1676fa9d7bcd7f9ce" name="ad5cc9ef3c3c003f1676fa9d7bcd7f9ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cc9ef3c3c003f1676fa9d7bcd7f9ce">&#9670;&#160;</a></span>KEYPAD_PRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEYPAD_PRESS&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00043">43</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="a7bbc578dd9a0b0753e7843edad276e50" name="a7bbc578dd9a0b0753e7843edad276e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bbc578dd9a0b0753e7843edad276e50">&#9670;&#160;</a></span>KEYPAD_RELEASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEYPAD_RELEASE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00044">44</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="a8461c850b1d7178f60aef63994266860" name="a8461c850b1d7178f60aef63994266860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8461c850b1d7178f60aef63994266860">&#9670;&#160;</a></span>LORA_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LORA_FREQ&#160;&#160;&#160;433.175</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00030">30</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="ab5142b9e2a5d4b910c8a2836972e9478" name="ab5142b9e2a5d4b910c8a2836972e9478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5142b9e2a5d4b910c8a2836972e9478">&#9670;&#160;</a></span>LORA_MODE_RECV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LORA_MODE_RECV&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00032">32</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="af5a544fcd18db67b52398cbeca46ce37" name="af5a544fcd18db67b52398cbeca46ce37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a544fcd18db67b52398cbeca46ce37">&#9670;&#160;</a></span>LORA_MODE_SEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LORA_MODE_SEND&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00031">31</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="a00bf1002da38c370673764aa0e0f6752" name="a00bf1002da38c370673764aa0e0f6752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00bf1002da38c370673764aa0e0f6752">&#9670;&#160;</a></span>LORA_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LORA_PRIORITY&#160;&#160;&#160;(configMAX_PRIORITIES - 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00007">7</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a id="a95ee5759e1b8c7e4fe451b885955a794" name="a95ee5759e1b8c7e4fe451b885955a794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ee5759e1b8c7e4fe451b885955a794">&#9670;&#160;</a></span>WS2812_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WS2812_PRIORITY&#160;&#160;&#160;(configMAX_PRIORITIES - 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00008">8</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Dokumentation der benutzerdefinierten Typen</h2>
+<a id="ab8869e7847101f3b2b441f570193265e" name="ab8869e7847101f3b2b441f570193265e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8869e7847101f3b2b441f570193265e">&#9670;&#160;</a></span>keypad_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* keypad_cb) (int <a class="el" href="nrf52__main_8cpp.html#a89f234133d3efe315836311cbf21c64b">state</a>, char val)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00046">46</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="a34322e9f6860ddfcdf9639dc8b7b9801" name="a34322e9f6860ddfcdf9639dc8b7b9801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34322e9f6860ddfcdf9639dc8b7b9801">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c" name="a34322e9f6860ddfcdf9639dc8b7b9801a0e6924494dd23cc7ae47a5ffe614386c"></a>E_PERI_LORA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf" name="a34322e9f6860ddfcdf9639dc8b7b9801aed439bd46f1760ada81f203988d6ccaf"></a>E_PERI_TOUCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff" name="a34322e9f6860ddfcdf9639dc8b7b9801a34bbb1ffbe896ee97ae713bdfbf3d6ff"></a>E_PERI_KYEPAD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6" name="a34322e9f6860ddfcdf9639dc8b7b9801a824f80cf370d485c398759ffafcaedf6"></a>E_PERI_BQ25896&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854" name="a34322e9f6860ddfcdf9639dc8b7b9801a21d8bc3aa25bf426952bd4c251873854"></a>E_PERI_BQ27220&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b" name="a34322e9f6860ddfcdf9639dc8b7b9801aa04686c9f9ac09a372d4fdeafeaf046b"></a>E_PERI_SD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9" name="a34322e9f6860ddfcdf9639dc8b7b9801acb145fa77b3831e0a340ed08c2f0bdc9"></a>E_PERI_GPS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a" name="a34322e9f6860ddfcdf9639dc8b7b9801a416aaca1baf88fed2e7608719565202a"></a>E_PERI_BHI260AP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b" name="a34322e9f6860ddfcdf9639dc8b7b9801ae8acc2dcf49b84b815e55b8ee689ca0b"></a>E_PERI_LTR_553ALS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa" name="a34322e9f6860ddfcdf9639dc8b7b9801a3d5f13211d0930d70790ebdb1a5c3baa"></a>E_PERI_A7682E&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009" name="a34322e9f6860ddfcdf9639dc8b7b9801aa3473a578eff3c43984f9c6b4a105009"></a>E_PERI_PCM5102A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4" name="a34322e9f6860ddfcdf9639dc8b7b9801a2d00b97fa9ea098f2934adcfa173c8a4"></a>E_PERI_INK_SCREEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908" name="a34322e9f6860ddfcdf9639dc8b7b9801a41b08259ad09714ba28e57420f9ec908"></a>E_PERI_MIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf" name="a34322e9f6860ddfcdf9639dc8b7b9801ae260a106a957f4cab07aea36dcfc5dbf"></a>E_PERI_NUM_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peripheral_8h_source.html#l00012">12</a> der Datei <a class="el" href="t-deck-pro_2peripheral_8h_source.html">peripheral.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a7738b7c2b48f1e151a0eee91c9603a75" name="a7738b7c2b48f1e151a0eee91c9603a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7738b7c2b48f1e151a0eee91c9603a75">&#9670;&#160;</a></span>BHI260AP_get_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BHI260AP_get_val </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>val_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>int val_type 1 &mdash; acceleration 2 &mdash; gyroscope 3 &mdash; Magnetometer </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__gyroscope_8cpp_source.html#l00063">63</a> der Datei <a class="el" href="peri__gyroscope_8cpp_source.html">peri_gyroscope.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abcc73762984b6907a26d50a5c638fb52" name="abcc73762984b6907a26d50a5c638fb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc73762984b6907a26d50a5c638fb52">&#9670;&#160;</a></span>BHI260AP_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BHI260AP_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__gyroscope_8cpp_source.html#l00091">91</a> der Datei <a class="el" href="peri__gyroscope_8cpp_source.html">peri_gyroscope.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aebe481bd9a57062e4f0e417ebb8be979" name="aebe481bd9a57062e4f0e417ebb8be979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe481bd9a57062e4f0e417ebb8be979">&#9670;&#160;</a></span>gps_get_coord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_coord </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>lng</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00092">92</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a32513b732fe7d8aa712b8b0d0d6eec27" name="a32513b732fe7d8aa712b8b0d0d6eec27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32513b732fe7d8aa712b8b0d0d6eec27">&#9670;&#160;</a></span>gps_get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_data </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>day</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00099">99</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7674b99d2be53c8b53196195e1f449c8" name="a7674b99d2be53c8b53196195e1f449c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7674b99d2be53c8b53196195e1f449c8">&#9670;&#160;</a></span>gps_get_fix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_fix </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>fix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00124">124</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a32a7fcb936bcecfddfdb2563340771a7" name="a32a7fcb936bcecfddfdb2563340771a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a7fcb936bcecfddfdb2563340771a7">&#9670;&#160;</a></span>gps_get_satellites()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_satellites </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>vsat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>hdop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00113">113</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0559413d9fdb9198aadafb8ff6ca35b3" name="a0559413d9fdb9198aadafb8ff6ca35b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0559413d9fdb9198aadafb8ff6ca35b3">&#9670;&#160;</a></span>gps_get_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_speed </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00119">119</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aff4e3cc23d0aaff17dcd2f476d2e5294" name="aff4e3cc23d0aaff17dcd2f476d2e5294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4e3cc23d0aaff17dcd2f476d2e5294">&#9670;&#160;</a></span>gps_get_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_get_time </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>hour</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>minute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>second</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00106">106</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb4c3fd64e4c8290c87124a292bde621" name="abb4c3fd64e4c8290c87124a292bde621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4c3fd64e4c8290c87124a292bde621">&#9670;&#160;</a></span>gps_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gps_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00026">26</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa614de21bcc89a8ddf49884e234ae024" name="aa614de21bcc89a8ddf49884e234ae024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa614de21bcc89a8ddf49884e234ae024">&#9670;&#160;</a></span>gps_task_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_task_create </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00076">76</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af5837893d989ca05abf11d7528b90c6d" name="af5837893d989ca05abf11d7528b90c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5837893d989ca05abf11d7528b90c6d">&#9670;&#160;</a></span>gps_task_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_task_resume </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00087">87</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ac766329012d1bd295370cb579a1ffd" name="a8ac766329012d1bd295370cb579a1ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac766329012d1bd295370cb579a1ffd">&#9670;&#160;</a></span>gps_task_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gps_task_suspend </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00082">82</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a01116ecc449b9e73d785b7bcfb9e9246" name="a01116ecc449b9e73d785b7bcfb9e9246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01116ecc449b9e73d785b7bcfb9e9246">&#9670;&#160;</a></span>keypad_get_val()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int keypad_get_val </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00084">84</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab1aea5e838d0f8ded72cce5b4d1cef7e" name="ab1aea5e838d0f8ded72cce5b4d1cef7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1aea5e838d0f8ded72cce5b4d1cef7e">&#9670;&#160;</a></span>keypad_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool keypad_init </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00060">60</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e2ed9a0575f9837da6f5e1bf8fe3628" name="a3e2ed9a0575f9837da6f5e1bf8fe3628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2ed9a0575f9837da6f5e1bf8fe3628">&#9670;&#160;</a></span>keypad_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keypad_loop </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00110">110</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6fbad7254002c69d0f05af236a8218c6" name="a6fbad7254002c69d0f05af236a8218c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbad7254002c69d0f05af236a8218c6">&#9670;&#160;</a></span>keypad_register_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keypad_register_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab8869e7847101f3b2b441f570193265e">keypad_cb</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00312">312</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="accb3010dc854fcb1be01bc89a5565174" name="accb3010dc854fcb1be01bc89a5565174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb3010dc854fcb1be01bc89a5565174">&#9670;&#160;</a></span>keypad_set_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keypad_set_flag </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00099">99</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2cf17c68455a7b71e60642d057702937" name="a2cf17c68455a7b71e60642d057702937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf17c68455a7b71e60642d057702937">&#9670;&#160;</a></span>keypad_set_layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keypad_set_layer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ilayer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__keypad_8cpp_source.html#l00104">104</a> der Datei <a class="el" href="peri__keypad_8cpp_source.html">peri_keypad.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aac3d4c51204037637d1cf9dcb0763c08" name="aac3d4c51204037637d1cf9dcb0763c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3d4c51204037637d1cf9dcb0763c08">&#9670;&#160;</a></span>lora_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lora_get_mode </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00148">148</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeb9b920b61c9743f047c76e216e8d4ec" name="aeb9b920b61c9743f047c76e216e8d4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9b920b61c9743f047c76e216e8d4ec">&#9670;&#160;</a></span>lora_get_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lora_get_recv </td>
+          <td>(</td>
+          <td class="paramtype">const char **</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00201">201</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a02872a48966c9765325bbbd3deaacd99" name="a02872a48966c9765325bbbd3deaacd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02872a48966c9765325bbbd3deaacd99">&#9670;&#160;</a></span>lora_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lora_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00030">30</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6fb9259b44f05a9517cf80043815937c" name="a6fb9259b44f05a9517cf80043815937c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb9259b44f05a9517cf80043815937c">&#9670;&#160;</a></span>lora_receive_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lora_receive_loop </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00153">153</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a126db35082708c1e7c728998afbba978" name="a126db35082708c1e7c728998afbba978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126db35082708c1e7c728998afbba978">&#9670;&#160;</a></span>lora_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lora_set_mode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00126">126</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad89556b30b0abed8e515e4ca8081eb8e" name="ad89556b30b0abed8e515e4ca8081eb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89556b30b0abed8e515e4ca8081eb8e">&#9670;&#160;</a></span>lora_set_recv_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lora_set_recv_flag </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00210">210</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abd3d2b1154869b501a4564acef294d58" name="abd3d2b1154869b501a4564acef294d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d2b1154869b501a4564acef294d58">&#9670;&#160;</a></span>lora_transmit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lora_transmit </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html#l00182">182</a> der Datei <a class="el" href="t-deck-pro_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ff096d7d1a9e882750329ed93347c2b" name="a9ff096d7d1a9e882750329ed93347c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff096d7d1a9e882750329ed93347c2b">&#9670;&#160;</a></span>LTR553_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LTR553_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__ltr553_8cpp_source.html#l00010">10</a> der Datei <a class="el" href="peri__ltr553_8cpp_source.html">peri_ltr553.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7115568879199869dc1552f8c8a4bc52" name="a7115568879199869dc1552f8c8a4bc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7115568879199869dc1552f8c8a4bc52">&#9670;&#160;</a></span>LTR_553ALS_get_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LTR_553ALS_get_channel </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ch</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__ltr553_8cpp_source.html#l00114">114</a> der Datei <a class="el" href="peri__ltr553_8cpp_source.html">peri_ltr553.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4fa1cd9766dae9878b1eae28bcd4cd76" name="a4fa1cd9766dae9878b1eae28bcd4cd76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa1cd9766dae9878b1eae28bcd4cd76">&#9670;&#160;</a></span>LTR_553ALS_get_ps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LTR_553ALS_get_ps </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="peri__ltr553_8cpp_source.html#l00119">119</a> der Datei <a class="el" href="peri__ltr553_8cpp_source.html">peri_ltr553.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_9ab235b9a1467ce2a3b0de0718712492.html">t-deck-pro</a></li><li class="navelem"><a href="t-deck-pro_2peripheral_8h.html">peripheral.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

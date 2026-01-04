@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/web_functions/web_functions.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('web__functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">web_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="web__functions_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef _WEB_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define _WEB_FUNCTIONS_H_</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="web__functions_8h.html#a646ccae985c71129fb14cc17cc2e4c23">    9</a></span><span class="preprocessor">#define RESPONSE_TYPE_TEXT 0</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="web__functions_8h.html#a037132b8af304587bd72e1266a710049">   10</a></span><span class="preprocessor">#define RESPONSE_TYPE_JSON 1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// WebServer</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#acff891d4bfdb7e356b6ace9d6f4483a1">startWebserver</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#add290682735fb2ce66b00bb88cd1e295">loopWebserver</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a6e2b10d6c7e80f2075dc44c3884050fa">stopWebserver</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Common functions</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>String <a class="code hl_function" href="web__functions_8h.html#a38e4ae5d4f460e0678ea093b6abc9689">decodeURLPercentCoding</a>(String input);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>String <a class="code hl_function" href="web__functions_8h.html#a2dd0c2b7e8b9930526d630636ac902a2">work_webpage</a>(<span class="keywordtype">bool</span> get_password, <span class="keywordtype">int</span> webid);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Pages</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#ae3eb03d98eb8ae0eaab2efe1e21ca5e9">deliver_scaffold</a>(<span class="keywordtype">bool</span> bget_password);        <span class="comment">// delivers the scaffold to the browser. Includes the info-page as initial content OR a login page, if (bget_password) is TRUE.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="web__functions_8h.html#a7457f27160ac48a89e3ec36c56f43d80">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a7457f27160ac48a89e3ec36c56f43d80">pwd_webpage</a>();             <span class="comment">// ToDo </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// dynamically loaded page contents</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#aa56ba17d20750055fa79015c199590b5">sub_page_info</a>();           <span class="comment">// info page</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a7454d93dd2b981aaaa23607794fae79b">sub_page_position</a>();       <span class="comment">// position page</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a1b1af06cc33eaad2a79ae9d7f5c4ff63">sub_page_wx</a>();             <span class="comment">// WX page</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a651edb6dde46ccbf86cb6b863762e0b0">sub_page_setup</a>();          <span class="comment">// setup page</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a458de002742aff631816b4e35c3d715a">sub_page_messages</a>();       <span class="comment">// messages page</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#ae0ee2d84cb1a31a4378920abb03dfee5">sub_page_rxlog</a>();          <span class="comment">// RX Log page</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a9cdfba4605c7b97c52b812bb7ab72698">sub_page_path</a>();           <span class="comment">// path page</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a2a19743072468491bb63a70b501da27f">sub_page_mheard</a>();         <span class="comment">// mheard page</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a6065ba6cbb832fccda10a3501a10a39e">sub_page_spectrum</a>();       <span class="comment">// spectrum scan page</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a93fe9c0f4e1264370084016c00a36619">sub_page_unknown</a>();        <span class="comment">// a 404 - page</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a3f7aa059c26a5cb2fac0b8e73d66b0d9">sub_content_messages</a>();    <span class="comment">// only the formatted messages, not the complete message page</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#aef5154574d720a447c5f0b60ecdb6b9b">sub_page_login</a>();          <span class="comment">// login page</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#afe0a9c7cbfbc7bd73a4cf2b430eaa556">sub_page_mcp23017</a>();       <span class="comment">// mcp23017 page</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// related functions</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#aa2ef2d532ca99ac7fc31cb961a33d9b2">send_http_header</a>(uint16_t http_status_code, uint8_t response_type);        <span class="comment">// create and send a HTML Header </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a13544a2e169f7cdd4e151f687bcfdd18">_create_setup_textinput_element</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> <span class="keywordtype">id</span>[], <span class="keyword">const</span> <span class="keywordtype">char</span> labelText[], String inputValue, <span class="keyword">const</span> <span class="keywordtype">char</span> placeHolder[], <span class="keyword">const</span> <span class="keywordtype">char</span> parameterName[], uint8_t maxlength, <span class="keywordtype">bool</span> isPassword, <span class="keywordtype">bool</span> needConfirm);  <span class="comment">// create and send a textinput element used in setup</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a9a4210908034b61e7349c896b329011c">_create_setup_switch_element</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> <span class="keywordtype">id</span>[], <span class="keyword">const</span> <span class="keywordtype">char</span> labelText[], <span class="keyword">const</span> <span class="keywordtype">char</span> descriptionText[], <span class="keywordtype">bool</span> checked);     <span class="comment">// create and send a switch element used in setup</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#afbaeb4f803268bbd580a73cca506b585">_create_meshcom_subheader</a>(String title);                                   <span class="comment">// create the sub-page sub-header ( that header containing the date, time and title)</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="web__functions_8h.html#a0ac3196beea6b2ed301ebc155ef8ec43">   49</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a0ac3196beea6b2ed301ebc155ef8ec43">_create_button_component</a>(<span class="keywordtype">bool</span> needConfirm, String confirmText, String onClickHandler, String buttonCaption);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// WEB REST API</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#ac326f8268c508c5feaf2d255dde6a609">send_message</a>(String);                  <span class="comment">// send a message to the mesh</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#ae1a1a23c6f2612a58356e675543681fc">call_function</a>(String <a class="code hl_variable" href="web__functions_8cpp.html#aedcc331ad9f055902131b2bd3219e97a">web_header</a>);      <span class="comment">// call a node funtion (e.g. sendpos)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#ad84ac5bcc905cfc9f068c3fb9e96ec38">setparam</a>(String);                      <span class="comment">// set a parameter (also used in setup)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__functions_8h.html#a9497bbc5a45890f30c32ef8ade86b788">getparam</a>(String);                      <span class="comment">// get a parameter (also used in setup)</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//ToDo: get messages as json</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aweb__functions_8cpp_html_aedcc331ad9f055902131b2bd3219e97a"><div class="ttname"><a href="web__functions_8cpp.html#aedcc331ad9f055902131b2bd3219e97a">web_header</a></div><div class="ttdeci">String web_header</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00027">web_functions.cpp:27</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a0ac3196beea6b2ed301ebc155ef8ec43"><div class="ttname"><a href="web__functions_8h.html#a0ac3196beea6b2ed301ebc155ef8ec43">_create_button_component</a></div><div class="ttdeci">void _create_button_component(bool needConfirm, String confirmText, String onClickHandler, String buttonCaption)</div></div>
+<div class="ttc" id="aweb__functions_8h_html_a13544a2e169f7cdd4e151f687bcfdd18"><div class="ttname"><a href="web__functions_8h.html#a13544a2e169f7cdd4e151f687bcfdd18">_create_setup_textinput_element</a></div><div class="ttdeci">void _create_setup_textinput_element(const char id[], const char labelText[], String inputValue, const char placeHolder[], const char parameterName[], uint8_t maxlength, bool isPassword, bool needConfirm)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01578">web_functions.cpp:1578</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a1b1af06cc33eaad2a79ae9d7f5c4ff63"><div class="ttname"><a href="web__functions_8h.html#a1b1af06cc33eaad2a79ae9d7f5c4ff63">sub_page_wx</a></div><div class="ttdeci">void sub_page_wx()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00749">web_functions.cpp:749</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a2a19743072468491bb63a70b501da27f"><div class="ttname"><a href="web__functions_8h.html#a2a19743072468491bb63a70b501da27f">sub_page_mheard</a></div><div class="ttdeci">void sub_page_mheard()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00821">web_functions.cpp:821</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a2dd0c2b7e8b9930526d630636ac902a2"><div class="ttname"><a href="web__functions_8h.html#a2dd0c2b7e8b9930526d630636ac902a2">work_webpage</a></div><div class="ttdeci">String work_webpage(bool get_password, int webid)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00233">web_functions.cpp:233</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a38e4ae5d4f460e0678ea093b6abc9689"><div class="ttname"><a href="web__functions_8h.html#a38e4ae5d4f460e0678ea093b6abc9689">decodeURLPercentCoding</a></div><div class="ttdeci">String decodeURLPercentCoding(String input)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00436">web_functions.cpp:436</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a3f7aa059c26a5cb2fac0b8e73d66b0d9"><div class="ttname"><a href="web__functions_8h.html#a3f7aa059c26a5cb2fac0b8e73d66b0d9">sub_content_messages</a></div><div class="ttdeci">void sub_content_messages()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01109">web_functions.cpp:1109</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a458de002742aff631816b4e35c3d715a"><div class="ttname"><a href="web__functions_8h.html#a458de002742aff631816b4e35c3d715a">sub_page_messages</a></div><div class="ttdeci">void sub_page_messages()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00891">web_functions.cpp:891</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a6065ba6cbb832fccda10a3501a10a39e"><div class="ttname"><a href="web__functions_8h.html#a6065ba6cbb832fccda10a3501a10a39e">sub_page_spectrum</a></div><div class="ttdeci">void sub_page_spectrum()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01218">web_functions.cpp:1218</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a651edb6dde46ccbf86cb6b863762e0b0"><div class="ttname"><a href="web__functions_8h.html#a651edb6dde46ccbf86cb6b863762e0b0">sub_page_setup</a></div><div class="ttdeci">void sub_page_setup()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00922">web_functions.cpp:922</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a6e2b10d6c7e80f2075dc44c3884050fa"><div class="ttname"><a href="web__functions_8h.html#a6e2b10d6c7e80f2075dc44c3884050fa">stopWebserver</a></div><div class="ttdeci">void stopWebserver()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00096">web_functions.cpp:96</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a7454d93dd2b981aaaa23607794fae79b"><div class="ttname"><a href="web__functions_8h.html#a7454d93dd2b981aaaa23607794fae79b">sub_page_position</a></div><div class="ttdeci">void sub_page_position()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00791">web_functions.cpp:791</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a7457f27160ac48a89e3ec36c56f43d80"><div class="ttname"><a href="web__functions_8h.html#a7457f27160ac48a89e3ec36c56f43d80">pwd_webpage</a></div><div class="ttdeci">void pwd_webpage()</div></div>
+<div class="ttc" id="aweb__functions_8h_html_a93fe9c0f4e1264370084016c00a36619"><div class="ttname"><a href="web__functions_8h.html#a93fe9c0f4e1264370084016c00a36619">sub_page_unknown</a></div><div class="ttdeci">void sub_page_unknown()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00697">web_functions.cpp:697</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a9497bbc5a45890f30c32ef8ade86b788"><div class="ttname"><a href="web__functions_8h.html#a9497bbc5a45890f30c32ef8ade86b788">getparam</a></div><div class="ttdeci">void getparam(String)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01745">web_functions.cpp:1745</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a9a4210908034b61e7349c896b329011c"><div class="ttname"><a href="web__functions_8h.html#a9a4210908034b61e7349c896b329011c">_create_setup_switch_element</a></div><div class="ttdeci">void _create_setup_switch_element(const char id[], const char labelText[], const char descriptionText[], bool checked)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01606">web_functions.cpp:1606</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_a9cdfba4605c7b97c52b812bb7ab72698"><div class="ttname"><a href="web__functions_8h.html#a9cdfba4605c7b97c52b812bb7ab72698">sub_page_path</a></div><div class="ttdeci">void sub_page_path()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00857">web_functions.cpp:857</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_aa2ef2d532ca99ac7fc31cb961a33d9b2"><div class="ttname"><a href="web__functions_8h.html#aa2ef2d532ca99ac7fc31cb961a33d9b2">send_http_header</a></div><div class="ttdeci">void send_http_header(uint16_t http_status_code, uint8_t response_type)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01520">web_functions.cpp:1520</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_aa56ba17d20750055fa79015c199590b5"><div class="ttname"><a href="web__functions_8h.html#aa56ba17d20750055fa79015c199590b5">sub_page_info</a></div><div class="ttdeci">void sub_page_info()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01318">web_functions.cpp:1318</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_ac326f8268c508c5feaf2d255dde6a609"><div class="ttname"><a href="web__functions_8h.html#ac326f8268c508c5feaf2d255dde6a609">send_message</a></div><div class="ttdeci">void send_message(String)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01618">web_functions.cpp:1618</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_acff891d4bfdb7e356b6ace9d6f4483a1"><div class="ttname"><a href="web__functions_8h.html#acff891d4bfdb7e356b6ace9d6f4483a1">startWebserver</a></div><div class="ttdeci">void startWebserver()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00042">web_functions.cpp:42</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_ad84ac5bcc905cfc9f068c3fb9e96ec38"><div class="ttname"><a href="web__functions_8h.html#ad84ac5bcc905cfc9f068c3fb9e96ec38">setparam</a></div><div class="ttdeci">void setparam(String)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01711">web_functions.cpp:1711</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_add290682735fb2ce66b00bb88cd1e295"><div class="ttname"><a href="web__functions_8h.html#add290682735fb2ce66b00bb88cd1e295">loopWebserver</a></div><div class="ttdeci">void loopWebserver()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00109">web_functions.cpp:109</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_ae0ee2d84cb1a31a4378920abb03dfee5"><div class="ttname"><a href="web__functions_8h.html#ae0ee2d84cb1a31a4378920abb03dfee5">sub_page_rxlog</a></div><div class="ttdeci">void sub_page_rxlog()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00728">web_functions.cpp:728</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_ae1a1a23c6f2612a58356e675543681fc"><div class="ttname"><a href="web__functions_8h.html#ae1a1a23c6f2612a58356e675543681fc">call_function</a></div><div class="ttdeci">void call_function(String web_header)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01683">web_functions.cpp:1683</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_ae3eb03d98eb8ae0eaab2efe1e21ca5e9"><div class="ttname"><a href="web__functions_8h.html#ae3eb03d98eb8ae0eaab2efe1e21ca5e9">deliver_scaffold</a></div><div class="ttdeci">void deliver_scaffold(bool bget_password)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00506">web_functions.cpp:506</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_aef5154574d720a447c5f0b60ecdb6b9b"><div class="ttname"><a href="web__functions_8h.html#aef5154574d720a447c5f0b60ecdb6b9b">sub_page_login</a></div><div class="ttdeci">void sub_page_login()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l00710">web_functions.cpp:710</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_afbaeb4f803268bbd580a73cca506b585"><div class="ttname"><a href="web__functions_8h.html#afbaeb4f803268bbd580a73cca506b585">_create_meshcom_subheader</a></div><div class="ttdeci">void _create_meshcom_subheader(String title)</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01560">web_functions.cpp:1560</a></div></div>
+<div class="ttc" id="aweb__functions_8h_html_afe0a9c7cbfbc7bd73a4cf2b430eaa556"><div class="ttname"><a href="web__functions_8h.html#afe0a9c7cbfbc7bd73a4cf2b430eaa556">sub_page_mcp23017</a></div><div class="ttdeci">void sub_page_mcp23017()</div><div class="ttdef"><b>Definition</b> <a href="web__functions_8cpp_source.html#l01417">web_functions.cpp:1417</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_830bd9edfdf417e52934e1077cfeec13.html">web_functions</a></li><li class="navelem"><a href="web__functions_8h.html">web_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

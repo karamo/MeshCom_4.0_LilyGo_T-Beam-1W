@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/ExFatLib/ExFatVolume.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ex_fat_volume_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExFatVolume.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_ex_fat_volume_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(ESP8266)  &amp;&amp; !defined(ESP32)  </span><span class="comment">// heltec-eink-modules</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_ex_fat_volume_8cpp.html#a247aabef4f899fd0d8d2a5564f527b9b">   27</a></span><span class="preprocessor">#define DBG_FILE &quot;ExFatVolume.cpp&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="_debug_macros_8h.html">../common/DebugMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="_ex_fat_lib_8h.html">ExFatLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_class" href="class_ex_fat_volume.html">ExFatVolume</a>* <a class="code hl_variable" href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">ExFatVolume::m_cwv</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//-----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_ex_fat_volume.html#a0f9c04da8382686190df76ff957e9a19">   32</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">ExFatVolume::chdir</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_variable" href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatFile</a> dir;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">if</span> (!dir.<a class="code hl_function" href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">open</a>(<a class="code hl_function" href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">vwd</a>(), path, <a class="code hl_define" href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>)) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_define" href="_debug_macros_8h.html#a37bec5b50aeab45dfcad2149552d73fc">DBG_FAIL_MACRO</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordflow">if</span> (!dir.<a class="code hl_function" href="class_ex_fat_file.html#ad0a3687bd95bed5b216651335e66b500">isDir</a>()) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="_debug_macros_8h.html#a37bec5b50aeab45dfcad2149552d73fc">DBG_FAIL_MACRO</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_variable" href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">m_vwd</a> = dir;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>fail:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_debug_macros_8h_html"><div class="ttname"><a href="_debug_macros_8h.html">DebugMacros.h</a></div></div>
+<div class="ttc" id="a_debug_macros_8h_html_a37bec5b50aeab45dfcad2149552d73fc"><div class="ttname"><a href="_debug_macros_8h.html#a37bec5b50aeab45dfcad2149552d73fc">DBG_FAIL_MACRO</a></div><div class="ttdeci">#define DBG_FAIL_MACRO</div><div class="ttdef"><b>Definition</b> <a href="_debug_macros_8h_source.html#l00060">DebugMacros.h:60</a></div></div>
+<div class="ttc" id="a_ex_fat_lib_8h_html"><div class="ttname"><a href="_ex_fat_lib_8h.html">ExFatLib.h</a></div></div>
+<div class="ttc" id="a_fs_api_constants_8h_html_a7a68c9ffaac7dbcd652225dd7c06a54b"><div class="ttname"><a href="_fs_api_constants_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a></div><div class="ttdeci">#define O_RDONLY</div><div class="ttdoc">Open for reading only.</div><div class="ttdef"><b>Definition</b> <a href="_fs_api_constants_8h_source.html#l00046">FsApiConstants.h:46</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_a5b115247c8e1a8cd643412f4d548e673"><div class="ttname"><a href="class_ex_fat_file.html#a5b115247c8e1a8cd643412f4d548e673">ExFatFile::open</a></div><div class="ttdeci">bool open(ExFatFile *dirFile, const char *path, oflag_t oflag=O_RDONLY)</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8cpp_source.html#l00195">ExFatFile.cpp:195</a></div></div>
+<div class="ttc" id="aclass_ex_fat_file_html_ad0a3687bd95bed5b216651335e66b500"><div class="ttname"><a href="class_ex_fat_file.html#ad0a3687bd95bed5b216651335e66b500">ExFatFile::isDir</a></div><div class="ttdeci">bool isDir() const</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_file_8h_source.html#l00262">ExFatFile.h:262</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html"><div class="ttname"><a href="class_ex_fat_volume.html">ExFatVolume</a></div><div class="ttdoc">exFAT volume.</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00033">ExFatVolume.h:33</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a28d6d4c2b4c1ee8654c21abd4d5bbec5"><div class="ttname"><a href="class_ex_fat_volume.html#a28d6d4c2b4c1ee8654c21abd4d5bbec5">ExFatVolume::ExFatFile</a></div><div class="ttdeci">friend ExFatFile</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00337">ExFatVolume.h:337</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a375166a5ed2d6085efd5189b43fd7251"><div class="ttname"><a href="class_ex_fat_volume.html#a375166a5ed2d6085efd5189b43fd7251">ExFatVolume::vwd</a></div><div class="ttdeci">ExFatFile * vwd()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00339">ExFatVolume.h:339</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a399f14daa9baead5f5a472db6be075fd"><div class="ttname"><a href="class_ex_fat_volume.html#a399f14daa9baead5f5a472db6be075fd">ExFatVolume::m_cwv</a></div><div class="ttdeci">static ExFatVolume * m_cwv</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00340">ExFatVolume.h:340</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_a4e1e6dd2b095d83029370e87d76823bd"><div class="ttname"><a href="class_ex_fat_volume.html#a4e1e6dd2b095d83029370e87d76823bd">ExFatVolume::m_vwd</a></div><div class="ttdeci">ExFatFile m_vwd</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00341">ExFatVolume.h:341</a></div></div>
+<div class="ttc" id="aclass_ex_fat_volume_html_abdc1addfc9474bf42cab31bcb49b4b65"><div class="ttname"><a href="class_ex_fat_volume.html#abdc1addfc9474bf42cab31bcb49b4b65">ExFatVolume::chdir</a></div><div class="ttdeci">bool chdir()</div><div class="ttdef"><b>Definition</b> <a href="_ex_fat_volume_8h_source.html#l00080">ExFatVolume.h:80</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_aaa3210726406c590456ceeb503c8991.html">ExFatLib</a></li><li class="navelem"><a href="_ex_fat_volume_8cpp.html">ExFatVolume.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

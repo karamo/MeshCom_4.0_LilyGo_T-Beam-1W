@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/common/upcase.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('upcase_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">upcase.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="upcase_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(ESP8266)  &amp;&amp; !defined(ESP32)  </span><span class="comment">// heltec-eink-modules</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="upcase_8h.html">upcase.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifdef __AVR__</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;avr/pgmspace.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define TABLE_MEM PROGMEM</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define readTable8(sym) pgm_read_byte(&amp;sym)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define readTable16(sym) pgm_read_word(&amp;sym)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#else  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#a715236fc98433cb8f2033dc8634cbb6f">   36</a></span><span class="preprocessor">#define TABLE_MEM</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#abd2ab3e0c56c26aead09b4d445825c72">   37</a></span><span class="preprocessor">#define readTable8(sym) (sym)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">   38</a></span><span class="preprocessor">#define readTable16(sym) (sym)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif  </span><span class="comment">// __AVR__</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmap16.html">   41</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmap16.html">map16</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structmap16.html#a08504c03516d8b7161f7a259978d1a5e">   42</a></span>  uint16_t <a class="code hl_variable" href="structmap16.html#a08504c03516d8b7161f7a259978d1a5e">base</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structmap16.html#a3611edfafab422578e3dd34f38b0d3e5">   43</a></span>  int8_t <a class="code hl_variable" href="structmap16.html#a3611edfafab422578e3dd34f38b0d3e5">off</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structmap16.html#a2027738e87a40666c3f21744aa8e396b">   44</a></span>  uint8_t <a class="code hl_variable" href="structmap16.html#a2027738e87a40666c3f21744aa8e396b">count</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#afaa4b73ac3941023a3dd32455a86045c">   46</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structmap16.html">map16</a> <a class="code hl_typedef" href="upcase_8cpp.html#afaa4b73ac3941023a3dd32455a86045c">map16_t</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structpair16.html">   48</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpair16.html">pair16</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">   49</a></span>  uint16_t <a class="code hl_variable" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">key</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structpair16.html#a878ff9fb8d30fa9a1f8e72c22cfae5be">   50</a></span>  uint16_t <a class="code hl_variable" href="structpair16.html#a878ff9fb8d30fa9a1f8e72c22cfae5be">val</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">   52</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structpair16.html">pair16</a> <a class="code hl_typedef" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="upcase_8cpp.html#afaa4b73ac3941023a3dd32455a86045c">map16_t</a> mapTable[] <a class="code hl_define" href="upcase_8cpp.html#a715236fc98433cb8f2033dc8634cbb6f">TABLE_MEM</a> = {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {0X0061, -32, 26}, {0X00E0, -32, 23}, {0X00F8, -32, 7},  {0X0100, 1, 48},</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {0X0132, 1, 6},    {0X0139, 1, 16},   {0X014A, 1, 46},   {0X0179, 1, 6},</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {0X0182, 1, 4},    {0X01A0, 1, 6},    {0X01B3, 1, 4},    {0X01CD, 1, 16},</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {0X01DE, 1, 18},   {0X01F8, 1, 40},   {0X0222, 1, 18},   {0X0246, 1, 10},</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {0X03AD, -37, 3},  {0X03B1, -32, 17}, {0X03C3, -32, 9},  {0X03D8, 1, 24},</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {0X0430, -32, 32}, {0X0450, -80, 16}, {0X0460, 1, 34},   {0X048A, 1, 54},</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {0X04C1, 1, 14},   {0X04D0, 1, 68},   {0X0561, -48, 38}, {0X1E00, 1, 150},</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {0X1EA0, 1, 90},   {0X1F00, 8, 8},    {0X1F10, 8, 6},    {0X1F20, 8, 8},</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {0X1F30, 8, 8},    {0X1F40, 8, 6},    {0X1F60, 8, 8},    {0X1F70, 74, 2},</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {0X1F72, 86, 4},   {0X1F76, 100, 2},  {0X1F7A, 112, 2},  {0X1F7C, 126, 2},</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {0X1F80, 8, 8},    {0X1F90, 8, 8},    {0X1FA0, 8, 8},    {0X1FB0, 8, 2},</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {0X1FD0, 8, 2},    {0X1FE0, 8, 2},    {0X2170, -16, 16}, {0X24D0, -26, 26},</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {0X2C30, -48, 47}, {0X2C67, 1, 6},    {0X2C80, 1, 100},  {0X2D00, 0, 38},</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {0XFF41, -32, 26},</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#ae318c4d8b318b93f7498f155b22976e3">   70</a></span><span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="upcase_8cpp.html#ae318c4d8b318b93f7498f155b22976e3">MAP_DIM</a> = <span class="keyword">sizeof</span>(mapTable) / <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="upcase_8cpp.html#afaa4b73ac3941023a3dd32455a86045c">map16_t</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a> lookupTable[] <a class="code hl_define" href="upcase_8cpp.html#a715236fc98433cb8f2033dc8634cbb6f">TABLE_MEM</a> = {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {0X00FF, 0X0178}, {0X0180, 0X0243}, {0X0188, 0X0187}, {0X018C, 0X018B},</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {0X0192, 0X0191}, {0X0195, 0X01F6}, {0X0199, 0X0198}, {0X019A, 0X023D},</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {0X019E, 0X0220}, {0X01A8, 0X01A7}, {0X01AD, 0X01AC}, {0X01B0, 0X01AF},</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {0X01B9, 0X01B8}, {0X01BD, 0X01BC}, {0X01BF, 0X01F7}, {0X01C6, 0X01C4},</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {0X01C9, 0X01C7}, {0X01CC, 0X01CA}, {0X01DD, 0X018E}, {0X01F3, 0X01F1},</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {0X01F5, 0X01F4}, {0X023A, 0X2C65}, {0X023C, 0X023B}, {0X023E, 0X2C66},</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {0X0242, 0X0241}, {0X0253, 0X0181}, {0X0254, 0X0186}, {0X0256, 0X0189},</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {0X0257, 0X018A}, {0X0259, 0X018F}, {0X025B, 0X0190}, {0X0260, 0X0193},</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {0X0263, 0X0194}, {0X0268, 0X0197}, {0X0269, 0X0196}, {0X026B, 0X2C62},</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {0X026F, 0X019C}, {0X0272, 0X019D}, {0X0275, 0X019F}, {0X027D, 0X2C64},</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {0X0280, 0X01A6}, {0X0283, 0X01A9}, {0X0288, 0X01AE}, {0X0289, 0X0244},</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {0X028A, 0X01B1}, {0X028B, 0X01B2}, {0X028C, 0X0245}, {0X0292, 0X01B7},</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {0X037B, 0X03FD}, {0X037C, 0X03FE}, {0X037D, 0X03FF}, {0X03AC, 0X0386},</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {0X03C2, 0X03A3}, {0X03CC, 0X038C}, {0X03CD, 0X038E}, {0X03CE, 0X038F},</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {0X03F2, 0X03F9}, {0X03F8, 0X03F7}, {0X03FB, 0X03FA}, {0X04CF, 0X04C0},</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {0X1D7D, 0X2C63}, {0X1F51, 0X1F59}, {0X1F53, 0X1F5B}, {0X1F55, 0X1F5D},</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {0X1F57, 0X1F5F}, {0X1F78, 0X1FF8}, {0X1F79, 0X1FF9}, {0X1FB3, 0X1FBC},</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {0X1FCC, 0X1FC3}, {0X1FE5, 0X1FEC}, {0X1FFC, 0X1FF3}, {0X214E, 0X2132},</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {0X2184, 0X2183}, {0X2C61, 0X2C60}, {0X2C76, 0X2C75},</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#a156cdf0d43dc783fb0f9d7214bdc0081">   93</a></span><span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="upcase_8cpp.html#a156cdf0d43dc783fb0f9d7214bdc0081">LOOKUP_DIM</a> = <span class="keyword">sizeof</span>(lookupTable) / <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">static</span> <span class="keywordtype">size_t</span> searchPair16(<span class="keyword">const</span> <a class="code hl_typedef" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a>* table, <span class="keywordtype">size_t</span> size, uint16_t <a class="code hl_variable" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">key</a>) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a> = 0;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="ios_8h.html#a5c2656b1fa09ef8554f2bdc336b93e4b">right</a> = size;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">while</span> (<a class="code hl_function" href="ios_8h.html#a5c2656b1fa09ef8554f2bdc336b93e4b">right</a> - <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a> &gt; 1) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="_sd_card_info_8h.html#ae381e90eebf0c1dc5b5fd44dcc68ebbe">mid</a> = <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a> + (<a class="code hl_function" href="ios_8h.html#a5c2656b1fa09ef8554f2bdc336b93e4b">right</a> - <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a>) / 2;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">readTable16</a>(table[<a class="code hl_variable" href="_sd_card_info_8h.html#ae381e90eebf0c1dc5b5fd44dcc68ebbe">mid</a>].<a class="code hl_variable" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">key</a>) &lt;= <a class="code hl_variable" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">key</a>) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a> = <a class="code hl_variable" href="_sd_card_info_8h.html#ae381e90eebf0c1dc5b5fd44dcc68ebbe">mid</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <a class="code hl_function" href="ios_8h.html#a5c2656b1fa09ef8554f2bdc336b93e4b">right</a> = <a class="code hl_variable" href="_sd_card_info_8h.html#ae381e90eebf0c1dc5b5fd44dcc68ebbe">mid</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#a21b6d308ac42097fe276a6cb2f392818">  109</a></span>uint16_t <a class="code hl_function" href="upcase_8cpp.html#a21b6d308ac42097fe276a6cb2f392818">toUpcase</a>(uint16_t chr) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  uint16_t <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>, first;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// Optimize for simple ASCII.</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordflow">if</span> (chr &lt; 127) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> chr - (<span class="charliteral">&#39;a&#39;</span> &lt;= chr &amp;&amp; chr &lt;= <span class="charliteral">&#39;z&#39;</span> ? <span class="charliteral">&#39;a&#39;</span> - <span class="charliteral">&#39;A&#39;</span> : 0);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> = searchPair16(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a>*<span class="keyword">&gt;</span>(mapTable), <a class="code hl_variable" href="upcase_8cpp.html#ae318c4d8b318b93f7498f155b22976e3">MAP_DIM</a>, chr);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  first = <a class="code hl_define" href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">readTable16</a>(mapTable[<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>].base);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordflow">if</span> (first &lt;= chr &amp;&amp; (chr - first) &lt; <a class="code hl_define" href="upcase_8cpp.html#abd2ab3e0c56c26aead09b4d445825c72">readTable8</a>(mapTable[<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>].count)) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    int8_t off = <a class="code hl_define" href="upcase_8cpp.html#abd2ab3e0c56c26aead09b4d445825c72">readTable8</a>(mapTable[<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>].off);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (off == 1) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">return</span> chr - ((chr - first) &amp; 1);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> chr + (off ? off : -0x1C60);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a> = searchPair16(lookupTable, <a class="code hl_variable" href="upcase_8cpp.html#a156cdf0d43dc783fb0f9d7214bdc0081">LOOKUP_DIM</a>, chr);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">readTable16</a>(lookupTable[<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>].<a class="code hl_variable" href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">key</a>) == chr) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">readTable16</a>(lookupTable[<a class="code hl_variable" href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a>].<a class="code hl_variable" href="structpair16.html#a878ff9fb8d30fa9a1f8e72c22cfae5be">val</a>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">return</span> chr;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="upcase_8cpp.html#ab91fcfa451b693f62b40774a509b9ffe">  131</a></span>uint32_t <a class="code hl_function" href="upcase_8cpp.html#ab91fcfa451b693f62b40774a509b9ffe">upcaseChecksum</a>(uint16_t uc, uint32_t sum) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  sum = (sum &lt;&lt; 31) + (sum &gt;&gt; 1) + (uc &amp; 0XFF);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  sum = (sum &lt;&lt; 31) + (sum &gt;&gt; 1) + (uc &gt;&gt; 8);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_sd_card_info_8h_html_ae381e90eebf0c1dc5b5fd44dcc68ebbe"><div class="ttname"><a href="_sd_card_info_8h.html#ae381e90eebf0c1dc5b5fd44dcc68ebbe">mid</a></div><div class="ttdeci">uint8_t mid</div><div class="ttdef"><b>Definition</b> <a href="_sd_card_info_8h_source.html#l00002">SdCardInfo.h:2</a></div></div>
+<div class="ttc" id="aios_8h_html_a5c2656b1fa09ef8554f2bdc336b93e4b"><div class="ttname"><a href="ios_8h.html#a5c2656b1fa09ef8554f2bdc336b93e4b">right</a></div><div class="ttdeci">ios_base &amp; right(ios_base &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00333">ios.h:333</a></div></div>
+<div class="ttc" id="aios_8h_html_a86053192dca0759aeb201ff65725c7f0"><div class="ttname"><a href="ios_8h.html#a86053192dca0759aeb201ff65725c7f0">left</a></div><div class="ttdeci">ios_base &amp; left(ios_base &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="ios_8h_source.html#l00269">ios.h:269</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_aa0e5b670397c0b01582fc3e2ae4a0bfd"><div class="ttname"><a href="onewire__functions_8cpp.html#aa0e5b670397c0b01582fc3e2ae4a0bfd">i</a></div><div class="ttdeci">byte i</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00006">onewire_functions.cpp:6</a></div></div>
+<div class="ttc" id="astructmap16_html"><div class="ttname"><a href="structmap16.html">map16</a></div><div class="ttdef"><b>Definition</b> <a href="#l00041">upcase.cpp:41</a></div></div>
+<div class="ttc" id="astructmap16_html_a08504c03516d8b7161f7a259978d1a5e"><div class="ttname"><a href="structmap16.html#a08504c03516d8b7161f7a259978d1a5e">map16::base</a></div><div class="ttdeci">uint16_t base</div><div class="ttdef"><b>Definition</b> <a href="#l00042">upcase.cpp:42</a></div></div>
+<div class="ttc" id="astructmap16_html_a2027738e87a40666c3f21744aa8e396b"><div class="ttname"><a href="structmap16.html#a2027738e87a40666c3f21744aa8e396b">map16::count</a></div><div class="ttdeci">uint8_t count</div><div class="ttdef"><b>Definition</b> <a href="#l00044">upcase.cpp:44</a></div></div>
+<div class="ttc" id="astructmap16_html_a3611edfafab422578e3dd34f38b0d3e5"><div class="ttname"><a href="structmap16.html#a3611edfafab422578e3dd34f38b0d3e5">map16::off</a></div><div class="ttdeci">int8_t off</div><div class="ttdef"><b>Definition</b> <a href="#l00043">upcase.cpp:43</a></div></div>
+<div class="ttc" id="astructpair16_html"><div class="ttname"><a href="structpair16.html">pair16</a></div><div class="ttdef"><b>Definition</b> <a href="#l00048">upcase.cpp:48</a></div></div>
+<div class="ttc" id="astructpair16_html_a3d60b9d79eec3eab23cac710acbbd3ed"><div class="ttname"><a href="structpair16.html#a3d60b9d79eec3eab23cac710acbbd3ed">pair16::key</a></div><div class="ttdeci">uint16_t key</div><div class="ttdef"><b>Definition</b> <a href="#l00049">upcase.cpp:49</a></div></div>
+<div class="ttc" id="astructpair16_html_a878ff9fb8d30fa9a1f8e72c22cfae5be"><div class="ttname"><a href="structpair16.html#a878ff9fb8d30fa9a1f8e72c22cfae5be">pair16::val</a></div><div class="ttdeci">uint16_t val</div><div class="ttdef"><b>Definition</b> <a href="#l00050">upcase.cpp:50</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_a06a1b964d6d954469e848abec5abd465"><div class="ttname"><a href="upcase_8cpp.html#a06a1b964d6d954469e848abec5abd465">pair16_t</a></div><div class="ttdeci">struct pair16 pair16_t</div><div class="ttdef"><b>Definition</b> <a href="#l00052">upcase.cpp:52</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_a156cdf0d43dc783fb0f9d7214bdc0081"><div class="ttname"><a href="upcase_8cpp.html#a156cdf0d43dc783fb0f9d7214bdc0081">LOOKUP_DIM</a></div><div class="ttdeci">const size_t LOOKUP_DIM</div><div class="ttdef"><b>Definition</b> <a href="#l00093">upcase.cpp:93</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_a21b6d308ac42097fe276a6cb2f392818"><div class="ttname"><a href="upcase_8cpp.html#a21b6d308ac42097fe276a6cb2f392818">toUpcase</a></div><div class="ttdeci">uint16_t toUpcase(uint16_t chr)</div><div class="ttdef"><b>Definition</b> <a href="#l00109">upcase.cpp:109</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_a715236fc98433cb8f2033dc8634cbb6f"><div class="ttname"><a href="upcase_8cpp.html#a715236fc98433cb8f2033dc8634cbb6f">TABLE_MEM</a></div><div class="ttdeci">#define TABLE_MEM</div><div class="ttdef"><b>Definition</b> <a href="#l00036">upcase.cpp:36</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_ab91fcfa451b693f62b40774a509b9ffe"><div class="ttname"><a href="upcase_8cpp.html#ab91fcfa451b693f62b40774a509b9ffe">upcaseChecksum</a></div><div class="ttdeci">uint32_t upcaseChecksum(uint16_t uc, uint32_t sum)</div><div class="ttdef"><b>Definition</b> <a href="#l00131">upcase.cpp:131</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_abd2ab3e0c56c26aead09b4d445825c72"><div class="ttname"><a href="upcase_8cpp.html#abd2ab3e0c56c26aead09b4d445825c72">readTable8</a></div><div class="ttdeci">#define readTable8(sym)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">upcase.cpp:37</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_ac727692fd2a93ba8c23432ad3b00cc71"><div class="ttname"><a href="upcase_8cpp.html#ac727692fd2a93ba8c23432ad3b00cc71">readTable16</a></div><div class="ttdeci">#define readTable16(sym)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">upcase.cpp:38</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_ae318c4d8b318b93f7498f155b22976e3"><div class="ttname"><a href="upcase_8cpp.html#ae318c4d8b318b93f7498f155b22976e3">MAP_DIM</a></div><div class="ttdeci">const size_t MAP_DIM</div><div class="ttdef"><b>Definition</b> <a href="#l00070">upcase.cpp:70</a></div></div>
+<div class="ttc" id="aupcase_8cpp_html_afaa4b73ac3941023a3dd32455a86045c"><div class="ttname"><a href="upcase_8cpp.html#afaa4b73ac3941023a3dd32455a86045c">map16_t</a></div><div class="ttdeci">struct map16 map16_t</div><div class="ttdef"><b>Definition</b> <a href="#l00046">upcase.cpp:46</a></div></div>
+<div class="ttc" id="aupcase_8h_html"><div class="ttname"><a href="upcase_8h.html">upcase.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_3319115675f748350501b74316565a77.html">common</a></li><li class="navelem"><a href="upcase_8cpp.html">upcase.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

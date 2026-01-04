@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/nrf52/nrf_eth.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('nrf__eth_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">nrf_eth.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="nrf__eth_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//RAK13800 Ethernet Shield</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;configuration.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_nrf_e_t_h.html">NrfETH</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    String <a class="code hl_function" href="class_nrf_e_t_h.html#a97e30037642d3f27adec5ca2f50ff21d">getNodeIP</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a11927900a699d8cf773cc706d5531485">initETH_HW</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_nrf_e_t_h.html#ad8eaa1ac861e2492b5264247de178518">startETH</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a109b63c042d1ef0878b861ed1319d03e">checkDHCP</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_nrf_e_t_h.html#ad1fd4e9d989d7c7008c046ac764c6395">checkUDP</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a15e8f19546a88829675785c0aade2943">startUDP</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a5af576f2b60228b341dbf5c1fb5f233d">startFIXUDP</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#aec4be34e74d9c5e4d649ef8f453e485d">initethfixIP</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a16333e6bdc675e3ed95ff9471e730500">initethDHCP</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    String <a class="code hl_function" href="class_nrf_e_t_h.html#ae073d9795abe08e2a5e4e7c4553dd17d">udpUpdateTimeClient</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    String <a class="code hl_function" href="class_nrf_e_t_h.html#af1ae4c80f3b75b16911fb97533925287">udpGetTimeClient</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    String <a class="code hl_function" href="class_nrf_e_t_h.html#ad6fc26b859ff042653aa8c897b52ee89">udpGetDateClient</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a81b368221e45572c3c4930e42d090844">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#a81b368221e45572c3c4930e42d090844">hasIPaddress</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#ad42116b1a0280f44b735ef75371e865f">   32</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#ad42116b1a0280f44b735ef75371e865f">hasETHHardware</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#afd07ca453a53864481d4618c876c1946">   34</a></span>    IPAddress <a class="code hl_variable" href="class_nrf_e_t_h.html#afd07ca453a53864481d4618c876c1946">remoteIP</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_nrf_e_t_h.html#afb9b6efb6e99cea886fb9c1368b636c9">hasETHlink</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="nrf52__main_8cpp.html#ab5cfe96829f0227d3835cbf0ac8a4140">sendUDP</a>(uint8_t <a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a> [<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], uint16_t rx_buf_size);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a88aab8662437f88d5c3531a6c6af7171">getUDP</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a6e90b75937a85a10ad64c73ee1680094">fillUDP_RING_BUFFER</a>(uint8_t <a class="code hl_variable" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a> [<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], uint16_t rx_buf_size);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a697a999ba77c01a05cd04ebf0f4fe721">   44</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#a697a999ba77c01a05cd04ebf0f4fe721">lora_tx_msg_len</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a31e9a8653e906c370cca2e05951f152c">   46</a></span>    uint8_t <a class="code hl_variable" href="class_nrf_e_t_h.html#a31e9a8653e906c370cca2e05951f152c">lora_tx_buffer_eth</a> [<a class="code hl_define" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a0da5145b0d04253778ca2f9aa254256a">getMyMac</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#acc679528c7065d96f5e30d1985f29229">   50</a></span>    uint32_t <a class="code hl_variable" href="class_nrf_e_t_h.html#acc679528c7065d96f5e30d1985f29229">_GW_ID</a> = 0x99999999; <span class="comment">// ID of our Node</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#afb77bd11076ab7100a9e03dfbeae26d3">   52</a></span>    String <a class="code hl_variable" href="class_nrf_e_t_h.html#afb77bd11076ab7100a9e03dfbeae26d3">_longname</a> = <span class="stringliteral">&quot;SNIFFER&quot;</span>; <span class="comment">// our longanme, can be up to 20 chars ending with 0x00</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a76df4dc3142726198198c0d4632bbf49">   54</a></span>    String <a class="code hl_variable" href="class_nrf_e_t_h.html#a76df4dc3142726198198c0d4632bbf49">shortname</a> = <span class="stringliteral">&quot;XXXXX&quot;</span>;     <span class="comment">//our shortname</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a3d954b7beeac60a2c86f7306388d3860">   56</a></span>    uint32_t <a class="code hl_variable" href="class_nrf_e_t_h.html#a3d954b7beeac60a2c86f7306388d3860">_lat</a> = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a21f8b60370e34f7b8e7e00a1a77ef368">   57</a></span>    uint32_t <a class="code hl_variable" href="class_nrf_e_t_h.html#a21f8b60370e34f7b8e7e00a1a77ef368">_lon</a> = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a087c5232c36764d04cd82793e8d3001a">   58</a></span>    uint32_t <a class="code hl_variable" href="class_nrf_e_t_h.html#a087c5232c36764d04cd82793e8d3001a">_alt</a> = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a0114d2e00a29a1c22a0e90256dbfa90d">   60</a></span>    uint32_t <a class="code hl_variable" href="class_nrf_e_t_h.html#a0114d2e00a29a1c22a0e90256dbfa90d">_MSG_ID</a> = 0x00000000; <span class="comment">// ID for next MSG</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a9d871f72936ba6b0cb0155aac7d334ae">   62</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a9d871f72936ba6b0cb0155aac7d334ae">updateNTP</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a5b10212c89e8a36695ca87b131d43336">   64</a></span>    String <a class="code hl_function" href="class_nrf_e_t_h.html#a5b10212c89e8a36695ca87b131d43336">getNtpTime</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a89fbaeb8744332d73eae75db8d4555c5">   65</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a89fbaeb8744332d73eae75db8d4555c5">getNtpEpoch</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a24b59eb173e3cf35ec5b2d4478df6146">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_nrf_e_t_h.html#a24b59eb173e3cf35ec5b2d4478df6146">setFlashfromNtpTime</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#ab069e4602f7554c806128006fa27d91e">   69</a></span>    IPAddress <a class="code hl_variable" href="class_nrf_e_t_h.html#ab069e4602f7554c806128006fa27d91e">udp_dest_addr</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a79fbb2bbf068780d710b070623c20ae0">   71</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#a79fbb2bbf068780d710b070623c20ae0">last_upd_timer</a> = 0; <span class="comment">// last time we got a HB</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a893a9d638393122338669d2c8a66f2cf">   72</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#a893a9d638393122338669d2c8a66f2cf">had_initial_udp_conn</a> = <span class="keyword">false</span>;  <span class="comment">// indicator that we had already a udp connection</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//reset DHCP</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_nrf_e_t_h.html#abb762791a773fc2a3d388ab30d6e5909">resetDHCP</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">//flag indicates busy UDP RX or TX to avoid collisions</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_nrf_e_t_h.html#a0690bf47cb18bb110287a6e34ee43ecd">   78</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_nrf_e_t_h.html#a0690bf47cb18bb110287a6e34ee43ecd">udp_is_busy</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="ttc" id="aclass_nrf_e_t_h_html"><div class="ttname"><a href="class_nrf_e_t_h.html">NrfETH</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">nrf_eth.h:4</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a0114d2e00a29a1c22a0e90256dbfa90d"><div class="ttname"><a href="class_nrf_e_t_h.html#a0114d2e00a29a1c22a0e90256dbfa90d">NrfETH::_MSG_ID</a></div><div class="ttdeci">uint32_t _MSG_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00060">nrf_eth.h:60</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a0690bf47cb18bb110287a6e34ee43ecd"><div class="ttname"><a href="class_nrf_e_t_h.html#a0690bf47cb18bb110287a6e34ee43ecd">NrfETH::udp_is_busy</a></div><div class="ttdeci">bool udp_is_busy</div><div class="ttdef"><b>Definition</b> <a href="#l00078">nrf_eth.h:78</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a087c5232c36764d04cd82793e8d3001a"><div class="ttname"><a href="class_nrf_e_t_h.html#a087c5232c36764d04cd82793e8d3001a">NrfETH::_alt</a></div><div class="ttdeci">uint32_t _alt</div><div class="ttdef"><b>Definition</b> <a href="#l00058">nrf_eth.h:58</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a0da5145b0d04253778ca2f9aa254256a"><div class="ttname"><a href="class_nrf_e_t_h.html#a0da5145b0d04253778ca2f9aa254256a">NrfETH::getMyMac</a></div><div class="ttdeci">void getMyMac()</div><div class="ttdoc">Method to get HW ID of nrf chip and use it as mac address and set GW_ID with last 4 bytes.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00656">nrf_eth.cpp:656</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a109b63c042d1ef0878b861ed1319d03e"><div class="ttname"><a href="class_nrf_e_t_h.html#a109b63c042d1ef0878b861ed1319d03e">NrfETH::checkDHCP</a></div><div class="ttdeci">int checkDHCP()</div><div class="ttdoc">Check DHCP Service.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00817">nrf_eth.cpp:817</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a11927900a699d8cf773cc706d5531485"><div class="ttname"><a href="class_nrf_e_t_h.html#a11927900a699d8cf773cc706d5531485">NrfETH::initETH_HW</a></div><div class="ttdeci">void initETH_HW()</div><div class="ttdoc">Initialises the ETH HW.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00735">nrf_eth.cpp:735</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a15e8f19546a88829675785c0aade2943"><div class="ttname"><a href="class_nrf_e_t_h.html#a15e8f19546a88829675785c0aade2943">NrfETH::startUDP</a></div><div class="ttdeci">void startUDP()</div><div class="ttdoc">Start UDP Service.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00837">nrf_eth.cpp:837</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a16333e6bdc675e3ed95ff9471e730500"><div class="ttname"><a href="class_nrf_e_t_h.html#a16333e6bdc675e3ed95ff9471e730500">NrfETH::initethDHCP</a></div><div class="ttdeci">void initethDHCP()</div><div class="ttdoc">init of ETH board with DHCP</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00120">nrf_eth.cpp:120</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a21f8b60370e34f7b8e7e00a1a77ef368"><div class="ttname"><a href="class_nrf_e_t_h.html#a21f8b60370e34f7b8e7e00a1a77ef368">NrfETH::_lon</a></div><div class="ttdeci">uint32_t _lon</div><div class="ttdef"><b>Definition</b> <a href="#l00057">nrf_eth.h:57</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a24b59eb173e3cf35ec5b2d4478df6146"><div class="ttname"><a href="class_nrf_e_t_h.html#a24b59eb173e3cf35ec5b2d4478df6146">NrfETH::setFlashfromNtpTime</a></div><div class="ttdeci">void setFlashfromNtpTime()</div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a31e9a8653e906c370cca2e05951f152c"><div class="ttname"><a href="class_nrf_e_t_h.html#a31e9a8653e906c370cca2e05951f152c">NrfETH::lora_tx_buffer_eth</a></div><div class="ttdeci">uint8_t lora_tx_buffer_eth[UDP_TX_BUF_SIZE]</div><div class="ttdef"><b>Definition</b> <a href="#l00046">nrf_eth.h:46</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a3d954b7beeac60a2c86f7306388d3860"><div class="ttname"><a href="class_nrf_e_t_h.html#a3d954b7beeac60a2c86f7306388d3860">NrfETH::_lat</a></div><div class="ttdeci">uint32_t _lat</div><div class="ttdef"><b>Definition</b> <a href="#l00056">nrf_eth.h:56</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a5af576f2b60228b341dbf5c1fb5f233d"><div class="ttname"><a href="class_nrf_e_t_h.html#a5af576f2b60228b341dbf5c1fb5f233d">NrfETH::startFIXUDP</a></div><div class="ttdeci">void startFIXUDP()</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00949">nrf_eth.cpp:949</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a5b10212c89e8a36695ca87b131d43336"><div class="ttname"><a href="class_nrf_e_t_h.html#a5b10212c89e8a36695ca87b131d43336">NrfETH::getNtpTime</a></div><div class="ttdeci">String getNtpTime()</div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a697a999ba77c01a05cd04ebf0f4fe721"><div class="ttname"><a href="class_nrf_e_t_h.html#a697a999ba77c01a05cd04ebf0f4fe721">NrfETH::lora_tx_msg_len</a></div><div class="ttdeci">int lora_tx_msg_len</div><div class="ttdef"><b>Definition</b> <a href="#l00044">nrf_eth.h:44</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a6e90b75937a85a10ad64c73ee1680094"><div class="ttname"><a href="class_nrf_e_t_h.html#a6e90b75937a85a10ad64c73ee1680094">NrfETH::fillUDP_RING_BUFFER</a></div><div class="ttdeci">void fillUDP_RING_BUFFER(uint8_t buffer[UDP_TX_BUF_SIZE], uint16_t rx_buf_size)</div><div class="ttdoc">Method to receive UDP packets.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00616">nrf_eth.cpp:616</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a76df4dc3142726198198c0d4632bbf49"><div class="ttname"><a href="class_nrf_e_t_h.html#a76df4dc3142726198198c0d4632bbf49">NrfETH::shortname</a></div><div class="ttdeci">String shortname</div><div class="ttdef"><b>Definition</b> <a href="#l00054">nrf_eth.h:54</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a79fbb2bbf068780d710b070623c20ae0"><div class="ttname"><a href="class_nrf_e_t_h.html#a79fbb2bbf068780d710b070623c20ae0">NrfETH::last_upd_timer</a></div><div class="ttdeci">unsigned long last_upd_timer</div><div class="ttdef"><b>Definition</b> <a href="#l00071">nrf_eth.h:71</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a81b368221e45572c3c4930e42d090844"><div class="ttname"><a href="class_nrf_e_t_h.html#a81b368221e45572c3c4930e42d090844">NrfETH::hasIPaddress</a></div><div class="ttdeci">bool hasIPaddress</div><div class="ttdef"><b>Definition</b> <a href="#l00030">nrf_eth.h:30</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a88aab8662437f88d5c3531a6c6af7171"><div class="ttname"><a href="class_nrf_e_t_h.html#a88aab8662437f88d5c3531a6c6af7171">NrfETH::getUDP</a></div><div class="ttdeci">int getUDP()</div><div class="ttdoc">Method to receive UDP packets.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00203">nrf_eth.cpp:203</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a893a9d638393122338669d2c8a66f2cf"><div class="ttname"><a href="class_nrf_e_t_h.html#a893a9d638393122338669d2c8a66f2cf">NrfETH::had_initial_udp_conn</a></div><div class="ttdeci">bool had_initial_udp_conn</div><div class="ttdef"><b>Definition</b> <a href="#l00072">nrf_eth.h:72</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a89fbaeb8744332d73eae75db8d4555c5"><div class="ttname"><a href="class_nrf_e_t_h.html#a89fbaeb8744332d73eae75db8d4555c5">NrfETH::getNtpEpoch</a></div><div class="ttdeci">unsigned long getNtpEpoch()</div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a97e30037642d3f27adec5ca2f50ff21d"><div class="ttname"><a href="class_nrf_e_t_h.html#a97e30037642d3f27adec5ca2f50ff21d">NrfETH::getNodeIP</a></div><div class="ttdeci">String getNodeIP()</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00035">nrf_eth.cpp:35</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_a9d871f72936ba6b0cb0155aac7d334ae"><div class="ttname"><a href="class_nrf_e_t_h.html#a9d871f72936ba6b0cb0155aac7d334ae">NrfETH::updateNTP</a></div><div class="ttdeci">bool updateNTP()</div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ab069e4602f7554c806128006fa27d91e"><div class="ttname"><a href="class_nrf_e_t_h.html#ab069e4602f7554c806128006fa27d91e">NrfETH::udp_dest_addr</a></div><div class="ttdeci">IPAddress udp_dest_addr</div><div class="ttdef"><b>Definition</b> <a href="#l00069">nrf_eth.h:69</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_abb762791a773fc2a3d388ab30d6e5909"><div class="ttname"><a href="class_nrf_e_t_h.html#abb762791a773fc2a3d388ab30d6e5909">NrfETH::resetDHCP</a></div><div class="ttdeci">int resetDHCP()</div><div class="ttdoc">Method to renew/reset DHCP.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00698">nrf_eth.cpp:698</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_acc679528c7065d96f5e30d1985f29229"><div class="ttname"><a href="class_nrf_e_t_h.html#acc679528c7065d96f5e30d1985f29229">NrfETH::_GW_ID</a></div><div class="ttdeci">uint32_t _GW_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00050">nrf_eth.h:50</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ad1fd4e9d989d7c7008c046ac764c6395"><div class="ttname"><a href="class_nrf_e_t_h.html#ad1fd4e9d989d7c7008c046ac764c6395">NrfETH::checkUDP</a></div><div class="ttdeci">int checkUDP()</div><div class="ttdoc">Method to check UDP packets.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00189">nrf_eth.cpp:189</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ad42116b1a0280f44b735ef75371e865f"><div class="ttname"><a href="class_nrf_e_t_h.html#ad42116b1a0280f44b735ef75371e865f">NrfETH::hasETHHardware</a></div><div class="ttdeci">bool hasETHHardware</div><div class="ttdef"><b>Definition</b> <a href="#l00032">nrf_eth.h:32</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ad6fc26b859ff042653aa8c897b52ee89"><div class="ttname"><a href="class_nrf_e_t_h.html#ad6fc26b859ff042653aa8c897b52ee89">NrfETH::udpGetDateClient</a></div><div class="ttdeci">String udpGetDateClient()</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00941">nrf_eth.cpp:941</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ad8eaa1ac861e2492b5264247de178518"><div class="ttname"><a href="class_nrf_e_t_h.html#ad8eaa1ac861e2492b5264247de178518">NrfETH::startETH</a></div><div class="ttdeci">int startETH()</div><div class="ttdoc">Initialises the ETH HW.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00754">nrf_eth.cpp:754</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_ae073d9795abe08e2a5e4e7c4553dd17d"><div class="ttname"><a href="class_nrf_e_t_h.html#ae073d9795abe08e2a5e4e7c4553dd17d">NrfETH::udpUpdateTimeClient</a></div><div class="ttdeci">String udpUpdateTimeClient()</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00904">nrf_eth.cpp:904</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_aec4be34e74d9c5e4d649ef8f453e485d"><div class="ttname"><a href="class_nrf_e_t_h.html#aec4be34e74d9c5e4d649ef8f453e485d">NrfETH::initethfixIP</a></div><div class="ttdeci">void initethfixIP()</div><div class="ttdoc">init of ETH board with fix IP</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00042">nrf_eth.cpp:42</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_af1ae4c80f3b75b16911fb97533925287"><div class="ttname"><a href="class_nrf_e_t_h.html#af1ae4c80f3b75b16911fb97533925287">NrfETH::udpGetTimeClient</a></div><div class="ttdeci">String udpGetTimeClient()</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00933">nrf_eth.cpp:933</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_afb77bd11076ab7100a9e03dfbeae26d3"><div class="ttname"><a href="class_nrf_e_t_h.html#afb77bd11076ab7100a9e03dfbeae26d3">NrfETH::_longname</a></div><div class="ttdeci">String _longname</div><div class="ttdef"><b>Definition</b> <a href="#l00052">nrf_eth.h:52</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_afb9b6efb6e99cea886fb9c1368b636c9"><div class="ttname"><a href="class_nrf_e_t_h.html#afb9b6efb6e99cea886fb9c1368b636c9">NrfETH::hasETHlink</a></div><div class="ttdeci">bool hasETHlink()</div><div class="ttdoc">Method to check Link Status.</div><div class="ttdef"><b>Definition</b> <a href="nrf__eth_8cpp_source.html#l00634">nrf_eth.cpp:634</a></div></div>
+<div class="ttc" id="aclass_nrf_e_t_h_html_afd07ca453a53864481d4618c876c1946"><div class="ttname"><a href="class_nrf_e_t_h.html#afd07ca453a53864481d4618c876c1946">NrfETH::remoteIP</a></div><div class="ttdeci">IPAddress remoteIP</div><div class="ttdef"><b>Definition</b> <a href="#l00034">nrf_eth.h:34</a></div></div>
+<div class="ttc" id="aconfiguration__global_8h_html_a5d20473a838368ac190f608f4cf46f27"><div class="ttname"><a href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a></div><div class="ttdeci">#define UDP_TX_BUF_SIZE</div><div class="ttdef"><b>Definition</b> <a href="configuration__global_8h_source.html#l00043">configuration_global.h:43</a></div></div>
+<div class="ttc" id="anrf52__main_8cpp_html_ab5cfe96829f0227d3835cbf0ac8a4140"><div class="ttname"><a href="nrf52__main_8cpp.html#ab5cfe96829f0227d3835cbf0ac8a4140">sendUDP</a></div><div class="ttdeci">void sendUDP()</div><div class="ttdoc">UDP tx Routine.</div><div class="ttdef"><b>Definition</b> <a href="nrf52__main_8cpp_source.html#l01947">nrf52_main.cpp:1947</a></div></div>
+<div class="ttc" id="at-deck-pro_2peri__gps_8cpp_html_a7b13e39c43296f16ce75848767f94edc"><div class="ttname"><a href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a></div><div class="ttdeci">uint8_t buffer[256]</div><div class="ttdef"><b>Definition</b> <a href="t-deck-pro_2peri__gps_8cpp_source.html#l00024">peri_gps.cpp:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1854326490b7999d1bef60293bec4d48.html">nrf52</a></li><li class="navelem"><a href="nrf__eth_8h.html">nrf_eth.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

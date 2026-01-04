@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/SDWrapper/SdFat/SpiDriver/SdSpiBaseClass.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_sd_spi_base_class_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SdSpiBaseClass.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sd_spi_base_class_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef SdSpiBaseClass_h</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define SdSpiBaseClass_h</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sd_spi_base_class.html">SdSpiBaseClass</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#ace7d46253efcaaab8b6be50cc17233e4">   38</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#ace7d46253efcaaab8b6be50cc17233e4">activate</a>() {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#ad0cef6e2a3d21e438a2b7f428a218c03">   43</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#ad0cef6e2a3d21e438a2b7f428a218c03">begin</a>(<a class="code hl_class" href="class_sd_spi_config.html">SdSpiConfig</a> config) = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#ae3a5ede781e390263382fcf7765d665d">   45</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#ae3a5ede781e390263382fcf7765d665d">deactivate</a>() {}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a1ce0d8a794f41229ac0577f60c134308">   47</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#a1ce0d8a794f41229ac0577f60c134308">end</a>() {}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a537c71fb2cdb8a825215c0faeb6f7dbd">   52</a></span>  <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="class_sd_spi_base_class.html#a537c71fb2cdb8a825215c0faeb6f7dbd">receive</a>() = 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a45693c18a8bb44ec9e5b9b1dee39b393">   60</a></span>  <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="class_sd_spi_base_class.html#a45693c18a8bb44ec9e5b9b1dee39b393">receive</a>(uint8_t* buf, <span class="keywordtype">size_t</span> count) = 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a28001200e3d464f5c6e910837924c577">   65</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#a28001200e3d464f5c6e910837924c577">send</a>(uint8_t <a class="code hl_variable" href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a>) = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a51923b03f35af4bac7c3bb7c8d13303d">   71</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#a51923b03f35af4bac7c3bb7c8d13303d">send</a>(<span class="keyword">const</span> uint8_t* buf, <span class="keywordtype">size_t</span> count) = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_sd_spi_base_class.html#a937215f1dc238285bd140c11ab82bbc9">   76</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sd_spi_base_class.html#a937215f1dc238285bd140c11ab82bbc9">setSckSpeed</a>(uint32_t maxSck) { (void)maxSck; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif  </span><span class="comment">// SdSpiBaseClass_h</span></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html"><div class="ttname"><a href="class_sd_spi_base_class.html">SdSpiBaseClass</a></div><div class="ttdoc">Base class for external SPI drivers.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SdSpiBaseClass.h:35</a></div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a1ce0d8a794f41229ac0577f60c134308"><div class="ttname"><a href="class_sd_spi_base_class.html#a1ce0d8a794f41229ac0577f60c134308">SdSpiBaseClass::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdef"><b>Definition</b> <a href="#l00047">SdSpiBaseClass.h:47</a></div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a28001200e3d464f5c6e910837924c577"><div class="ttname"><a href="class_sd_spi_base_class.html#a28001200e3d464f5c6e910837924c577">SdSpiBaseClass::send</a></div><div class="ttdeci">virtual void send(uint8_t data)=0</div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a45693c18a8bb44ec9e5b9b1dee39b393"><div class="ttname"><a href="class_sd_spi_base_class.html#a45693c18a8bb44ec9e5b9b1dee39b393">SdSpiBaseClass::receive</a></div><div class="ttdeci">virtual uint8_t receive(uint8_t *buf, size_t count)=0</div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a51923b03f35af4bac7c3bb7c8d13303d"><div class="ttname"><a href="class_sd_spi_base_class.html#a51923b03f35af4bac7c3bb7c8d13303d">SdSpiBaseClass::send</a></div><div class="ttdeci">virtual void send(const uint8_t *buf, size_t count)=0</div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a537c71fb2cdb8a825215c0faeb6f7dbd"><div class="ttname"><a href="class_sd_spi_base_class.html#a537c71fb2cdb8a825215c0faeb6f7dbd">SdSpiBaseClass::receive</a></div><div class="ttdeci">virtual uint8_t receive()=0</div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_a937215f1dc238285bd140c11ab82bbc9"><div class="ttname"><a href="class_sd_spi_base_class.html#a937215f1dc238285bd140c11ab82bbc9">SdSpiBaseClass::setSckSpeed</a></div><div class="ttdeci">virtual void setSckSpeed(uint32_t maxSck)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">SdSpiBaseClass.h:76</a></div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_ace7d46253efcaaab8b6be50cc17233e4"><div class="ttname"><a href="class_sd_spi_base_class.html#ace7d46253efcaaab8b6be50cc17233e4">SdSpiBaseClass::activate</a></div><div class="ttdeci">virtual void activate()</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SdSpiBaseClass.h:38</a></div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_ad0cef6e2a3d21e438a2b7f428a218c03"><div class="ttname"><a href="class_sd_spi_base_class.html#ad0cef6e2a3d21e438a2b7f428a218c03">SdSpiBaseClass::begin</a></div><div class="ttdeci">virtual void begin(SdSpiConfig config)=0</div></div>
+<div class="ttc" id="aclass_sd_spi_base_class_html_ae3a5ede781e390263382fcf7765d665d"><div class="ttname"><a href="class_sd_spi_base_class.html#ae3a5ede781e390263382fcf7765d665d">SdSpiBaseClass::deactivate</a></div><div class="ttdeci">virtual void deactivate()</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SdSpiBaseClass.h:45</a></div></div>
+<div class="ttc" id="aclass_sd_spi_config_html"><div class="ttname"><a href="class_sd_spi_config.html">SdSpiConfig</a></div><div class="ttdoc">SPI card configuration.</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_driver_8h_source.html#l00109">SdSpiDriver.h:109</a></div></div>
+<div class="ttc" id="aonewire__functions_8cpp_html_ab96bbc0b9c1cec78058d5e387476c322"><div class="ttname"><a href="onewire__functions_8cpp.html#ab96bbc0b9c1cec78058d5e387476c322">data</a></div><div class="ttdeci">byte data[9]</div><div class="ttdef"><b>Definition</b> <a href="onewire__functions_8cpp_source.html#l00009">onewire_functions.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_f851fb0baf9cd444370ca13fd9a3367e.html">SDWrapper</a></li><li class="navelem"><a href="dir_db3e132d3c61a06210bc4a78845fc281.html">SdFat</a></li><li class="navelem"><a href="dir_1873fa8fa4cb97d6aaf2eb8f10a4beb8.html">SpiDriver</a></li><li class="navelem"><a href="_sd_spi_base_class_8h.html">SdSpiBaseClass.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/command_functions.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('command__functions_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">command_functions.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="command__functions_8h_source.html">command_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="batt__functions_8h_source.html">batt_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mheard__functions_8h_source.html">mheard_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="udp__functions_8h_source.html">udp_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="i2c__scanner_8h_source.html">i2c_scanner.h</a>&quot;</code><br />
+<code>#include &quot;ArduinoJson.h&quot;</code><br />
+<code>#include &quot;configuration.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="regex__functions_8h_source.html">regex_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spectral__scan_8h_source.html">spectral_scan.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rtc__functions_8h_source.html">rtc_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tinyxml__functions_8h_source.html">tinyxml_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clock_8h_source.html">clock.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bmx280_8h_source.html">bmx280.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bmp390_8h_source.html">bmp390.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aht20_8h_source.html">aht20.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sht21_8h_source.html">sht21.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mcu811_8h_source.html">mcu811.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__functions_8h_source.html">io_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="softser__functions_8h_source.html">softser_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="onewire__functions_8h_source.html">onewire_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="onebutton__functions_8h_source.html">onebutton_functions.h</a>&gt;</code><br />
+<code>#include &quot;INA226.h&quot;</code><br />
+</div>
+<p><a href="command__functions_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:aa51ffb47b46ad920b9dbae38b5260679" id="r_aa51ffb47b46ad920b9dbae38b5260679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa51ffb47b46ad920b9dbae38b5260679">sendNodeSetting</a> ()</td></tr>
+<tr class="memitem:a1c0572f08e4994fa3dcac40a59fa03e5" id="r_a1c0572f08e4994fa3dcac40a59fa03e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c0572f08e4994fa3dcac40a59fa03e5">sendGpsJson</a> ()</td></tr>
+<tr class="memitem:ae191d3d660e69410bb9a71e59990c472" id="r_ae191d3d660e69410bb9a71e59990c472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae191d3d660e69410bb9a71e59990c472">sendAPRSset</a> ()</td></tr>
+<tr class="memitem:a341e2580eba864783e43a34655417b4e" id="r_a341e2580eba864783e43a34655417b4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a341e2580eba864783e43a34655417b4e">sendConfigFinish</a> ()</td></tr>
+<tr class="memitem:af0b38a8f414afb798fab475e3ead8441" id="r_af0b38a8f414afb798fab475e3ead8441"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0b38a8f414afb798fab475e3ead8441">casecmp</a> (const char *s1, const char *s2)</td></tr>
+<tr class="memitem:a81597bcedfdb02943e23cebee5f35568" id="r_a81597bcedfdb02943e23cebee5f35568"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81597bcedfdb02943e23cebee5f35568">commandCheck</a> (char *msg, char *command)</td></tr>
+<tr class="memitem:a96efa1e93ca9366f26479eb774993c5b" id="r_a96efa1e93ca9366f26479eb774993c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96efa1e93ca9366f26479eb774993c5b">commandAction</a> (char *<a class="el" href="loop__functions_8cpp.html#abf2ced83928dc8f50f99f6774b4cf5fc">msg_text</a>, int iphone, bool rxFromPhone)</td></tr>
+<tr class="memitem:a18bfee6baef95fc27bd86b6d91efe5ad" id="r_a18bfee6baef95fc27bd86b6d91efe5ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bfee6baef95fc27bd86b6d91efe5ad">commandAction</a> (char *umsg_text, bool ble)</td></tr>
+<tr class="memitem:a899caf0702f3e9f2d2d80885490ab82b" id="r_a899caf0702f3e9f2d2d80885490ab82b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a899caf0702f3e9f2d2d80885490ab82b">sendAnalogSetting</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a0954ace0d8137309f95757739d43544b" id="r_a0954ace0d8137309f95757739d43544b"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0954ace0d8137309f95757739d43544b">rebootAuto</a> = 0</td></tr>
+<tr class="memitem:a2ef1fad9be1861760eea936221095d65" id="r_a2ef1fad9be1861760eea936221095d65"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef1fad9be1861760eea936221095d65">json_len</a> = 0</td></tr>
+<tr class="memitem:a09e6023b034c774cf13e638e3ce1cb97" id="r_a09e6023b034c774cf13e638e3ce1cb97"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e6023b034c774cf13e638e3ce1cb97">strMore</a></td></tr>
+<tr class="memitem:ae5d2e2c9447b877af60b9412fbca3dc0" id="r_ae5d2e2c9447b877af60b9412fbca3dc0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d2e2c9447b877af60b9412fbca3dc0">print_buff</a> [600]</td></tr>
+<tr class="memitem:a3c0a10de3c2dabefd0f892f17ff52f3a" id="r_a3c0a10de3c2dabefd0f892f17ff52f3a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a> [<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td></tr>
+<tr class="memitem:a6e346e10416bb5bade9c35d5d51a6cbe" id="r_a6e346e10416bb5bade9c35d5d51a6cbe"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e346e10416bb5bade9c35d5d51a6cbe">msg_detail</a> [300]</td></tr>
+<tr class="memitem:ae84fd1b36324010337c8bcf0aeea1bdd" id="r_ae84fd1b36324010337c8bcf0aeea1bdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84fd1b36324010337c8bcf0aeea1bdd">bRxFromPhone</a> = false</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="af0b38a8f414afb798fab475e3ead8441" name="af0b38a8f414afb798fab475e3ead8441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b38a8f414afb798fab475e3ead8441">&#9670;&#160;</a></span>casecmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int casecmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00074">74</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a96efa1e93ca9366f26479eb774993c5b" name="a96efa1e93ca9366f26479eb774993c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96efa1e93ca9366f26479eb774993c5b">&#9670;&#160;</a></span>commandAction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void commandAction </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg_text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iphone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rxFromPhone</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00109">109</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a18bfee6baef95fc27bd86b6d91efe5ad" name="a18bfee6baef95fc27bd86b6d91efe5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18bfee6baef95fc27bd86b6d91efe5ad">&#9670;&#160;</a></span>commandAction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void commandAction </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>umsg_text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ble</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00175">175</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a81597bcedfdb02943e23cebee5f35568" name="a81597bcedfdb02943e23cebee5f35568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81597bcedfdb02943e23cebee5f35568">&#9670;&#160;</a></span>commandCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int commandCheck </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00090">90</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a899caf0702f3e9f2d2d80885490ab82b" name="a899caf0702f3e9f2d2d80885490ab82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899caf0702f3e9f2d2d80885490ab82b">&#9670;&#160;</a></span>sendAnalogSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendAnalogSetting </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l04509">4509</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae191d3d660e69410bb9a71e59990c472" name="ae191d3d660e69410bb9a71e59990c472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae191d3d660e69410bb9a71e59990c472">&#9670;&#160;</a></span>sendAPRSset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendAPRSset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l04547">4547</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a341e2580eba864783e43a34655417b4e" name="a341e2580eba864783e43a34655417b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341e2580eba864783e43a34655417b4e">&#9670;&#160;</a></span>sendConfigFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendConfigFinish </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l04579">4579</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c0572f08e4994fa3dcac40a59fa03e5" name="a1c0572f08e4994fa3dcac40a59fa03e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0572f08e4994fa3dcac40a59fa03e5">&#9670;&#160;</a></span>sendGpsJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendGpsJson </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l04392">4392</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa51ffb47b46ad920b9dbae38b5260679" name="aa51ffb47b46ad920b9dbae38b5260679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51ffb47b46ad920b9dbae38b5260679">&#9670;&#160;</a></span>sendNodeSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendNodeSetting </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l04435">4435</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="ae84fd1b36324010337c8bcf0aeea1bdd" name="ae84fd1b36324010337c8bcf0aeea1bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84fd1b36324010337c8bcf0aeea1bdd">&#9670;&#160;</a></span>bRxFromPhone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bRxFromPhone = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00107">107</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ef1fad9be1861760eea936221095d65" name="a2ef1fad9be1861760eea936221095d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef1fad9be1861760eea936221095d65">&#9670;&#160;</a></span>json_len</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t json_len = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00066">66</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c0a10de3c2dabefd0f892f17ff52f3a" name="a3c0a10de3c2dabefd0f892f17ff52f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0a10de3c2dabefd0f892f17ff52f3a">&#9670;&#160;</a></span>msg_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t msg_buffer[<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00104">104</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e346e10416bb5bade9c35d5d51a6cbe" name="a6e346e10416bb5bade9c35d5d51a6cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e346e10416bb5bade9c35d5d51a6cbe">&#9670;&#160;</a></span>msg_detail</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char msg_detail[300]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00105">105</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae5d2e2c9447b877af60b9412fbca3dc0" name="ae5d2e2c9447b877af60b9412fbca3dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d2e2c9447b877af60b9412fbca3dc0">&#9670;&#160;</a></span>print_buff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char print_buff[600]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00102">102</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0954ace0d8137309f95757739d43544b" name="a0954ace0d8137309f95757739d43544b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0954ace0d8137309f95757739d43544b">&#9670;&#160;</a></span>rebootAuto</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long rebootAuto = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00041">41</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a09e6023b034c774cf13e638e3ce1cb97" name="a09e6023b034c774cf13e638e3ce1cb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e6023b034c774cf13e638e3ce1cb97">&#9670;&#160;</a></span>strMore</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strMore</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="command__functions_8cpp_source.html#l00072">72</a> der Datei <a class="el" href="command__functions_8cpp_source.html">command_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="command__functions_8cpp.html">command_functions.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

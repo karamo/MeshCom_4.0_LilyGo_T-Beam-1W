@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/clock.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('clock_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clock.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="clock_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> The MIT License (MIT)</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> Copyright (c) 2019-2023 Dirk Ohme</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> SOFTWARE.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;time.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_clock.html">   29</a></span><span class="keyword">class </span><a class="code hl_function" href="class_clock.html#adbc370eb6b5f8d01645cf440188160a8">Clock</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// events</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4a">   32</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4a">EEvent</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aacf2d9347b5b5c5434c4afc47247318d2">   34</a></span>        <a class="code hl_enumvalue" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aacf2d9347b5b5c5434c4afc47247318d2">eEventNone</a>  = 0,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3a1a9941854efed6177b0d7e3f9c2649">   35</a></span>        <a class="code hl_enumvalue" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3a1a9941854efed6177b0d7e3f9c2649">eEventMinute</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3528e05aebc23f5ba4f68e37a4cefd25">   36</a></span>        <a class="code hl_enumvalue" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3528e05aebc23f5ba4f68e37a4cefd25">eEventHour</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa6fee14bb082d2362089553d048d5ef6b">   37</a></span>        <a class="code hl_enumvalue" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa6fee14bb082d2362089553d048d5ef6b">eEventDay</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// month names</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_clock.html#a7acb890a0215245cd070fa1bad4196e4">Months</a>[];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// snooze time (minutes)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">//static const</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_clock.html#ac32737f334bbc02b312ae3ec8478af52">   45</a></span>    uint8_t <a class="code hl_variable" href="class_clock.html#ac32737f334bbc02b312ae3ec8478af52">SnoozeMinutes</a> = 5;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_clock.html#aeb4d4060c6a7240062ca887810e034c0">   48</a></span>    uint8_t     <a class="code hl_variable" href="class_clock.html#aeb4d4060c6a7240062ca887810e034c0">au8Alarm_m</a>[2];</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_clock.html#a36c72753fe853eacefd530a6ce0a1c55">   49</a></span>    uint8_t     <a class="code hl_variable" href="class_clock.html#a36c72753fe853eacefd530a6ce0a1c55">au8AlarmNext_m</a>[2];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_clock.html#a499aea8a66873a4cdedd8f0898359c2c">   50</a></span>    <span class="keywordtype">bool</span>        <a class="code hl_variable" href="class_clock.html#a499aea8a66873a4cdedd8f0898359c2c">boAlarm_m</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_clock.html#a37a5208d613462ebcbf555682f372453">   51</a></span>    <span class="keywordtype">bool</span>        <a class="code hl_variable" href="class_clock.html#a37a5208d613462ebcbf555682f372453">boAlarmEnable_m</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_clock.html#a8105481e58d3340b7f3e096947e6620d">   52</a></span>    <span class="keywordtype">bool</span>        <a class="code hl_variable" href="class_clock.html#a8105481e58d3340b7f3e096947e6620d">boAlarmValid_m</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">   53</a></span>    <span class="keyword">struct </span>tm   <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_clock.html#a262c828cc980cdf5179c1e971e10cd3a">   54</a></span>    <span class="keywordtype">char</span>        <a class="code hl_variable" href="class_clock.html#a262c828cc980cdf5179c1e971e10cd3a">szAlarmTime_m</a>[16];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_clock.html#a2bcf86b02d76133df668fd4e40eb54fb">   55</a></span>    <span class="keywordtype">char</span>        <a class="code hl_variable" href="class_clock.html#a2bcf86b02d76133df668fd4e40eb54fb">szDateStr_m</a>[16];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_clock.html#a7035959dd1ec0dbc65a900b0ef15b1e5">   56</a></span>    time_t      <a class="code hl_variable" href="class_clock.html#a7035959dd1ec0dbc65a900b0ef15b1e5">tsClock_m</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_clock.html#a192aa5537323238ae247611d04196f07">   57</a></span>    uint32_t    <a class="code hl_variable" href="class_clock.html#a192aa5537323238ae247611d04196f07">u32Next_m</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_clock.html#aba9184b7dbb05e7ba5bb780a09d00477">   58</a></span>    uint32_t    <a class="code hl_variable" href="class_clock.html#aba9184b7dbb05e7ba5bb780a09d00477">u32Start_m</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// save alarm time to EEPROM</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a671b9996c6ee091e62b6a501bf98316c">SaveAlarm</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// set alarm defaults</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clock.html#a888356ac0502a5b150b871d9d3ac10bb">SetAlarmDefaults</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// set clock defaults</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clock.html#a8fd1921510dac06daf2a0ad6472350e5">SetClockDefaults</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// constructor</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="class_clock.html#adbc370eb6b5f8d01645cf440188160a8">Clock</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// check for event</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// @return event type</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_enumeration" href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4a">EEvent</a> <a class="code hl_function" href="class_clock.html#ac0186ae4ec7d7b206d4f0134bb52b72e">CheckEvent</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// return current day</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// @return day (1..31)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_clock.html#aebc2e2b503e5917abae4001f5d8163e1">   81</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#aebc2e2b503e5917abae4001f5d8163e1">Day</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_mday; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// enable or disable alarm</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// @param boEnable true to enable, false to disable</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// @return true if enabled, false if disabled</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#af664f8099bbbe74c85d6658ae3cf9cdd">EnableAlarm</a>(<span class="comment">/*const*/</span> <span class="keywordtype">bool</span> boEnable = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// get alarm time as string</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// @return empty string if no alarm is set</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// @return string &#39; HH:MM&#39; for alarm time</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// @return string &#39;*HH:MM&#39; for snoozed alarm time</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">char</span>* <a class="code hl_function" href="class_clock.html#afc1d676d029d3eba9aa0414ecd4a31d2">GetAlarmTime</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// get current date as string &#39;day. month year&#39;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// @return string</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">char</span>* <a class="code hl_function" href="class_clock.html#a37dfb51c7f6f307c6c0994384f96eb4f">GetDateStr</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// return current hour</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// @return hour (0..23)</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_clock.html#ab79433ab6e40e93f18e56ae91174cb16">  103</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#ab79433ab6e40e93f18e56ae91174cb16">Hour</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_hour; }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// initialize class</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#aabe58b1a5d5f0a3cc03e2086f9dbac32">Init</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// check if alarm is pending</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// @return true on alarm, false if no alarm</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_clock.html#adae35a300bdb7b59170f944c448e44f9">  111</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#adae35a300bdb7b59170f944c448e44f9">IsAlarm</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a499aea8a66873a4cdedd8f0898359c2c">boAlarm_m</a>; }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// check if alarm is enabled</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">// @return true if enabled, false if disabled</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_clock.html#a699c7e929b041c963d9093f016138afb">  115</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a699c7e929b041c963d9093f016138afb">IsAlarmEnabled</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a37a5208d613462ebcbf555682f372453">boAlarmEnable_m</a>; }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// check if alarm time is valid</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// @return true if valid, false if invalid</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_clock.html#a2e7c4d6bb9f666a0ca0ab29fd0bc3cd8">  119</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a2e7c4d6bb9f666a0ca0ab29fd0bc3cd8">IsAlarmValid</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a8105481e58d3340b7f3e096947e6620d">boAlarmValid_m</a>; }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// check if day or night mode</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// @return true on day, false on night</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_clock.html#a7532ed4427f97568bae52f2dc9f11132">  123</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a7532ed4427f97568bae52f2dc9f11132">IsDay</a>() { <span class="keywordflow">return</span> ((<a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_hour &gt;= 6) &amp;&amp; (<a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_hour &lt;= 18)); }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">// loop operation - either call Loop() or CheckEvent() in order to keep the clock synchronized</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_clock.html#a23ee00a6ef689ec8f06d86899fadf307">  126</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_clock.html#a23ee00a6ef689ec8f06d86899fadf307">Loop</a>() { <a class="code hl_function" href="class_clock.html#ac0186ae4ec7d7b206d4f0134bb52b72e">CheckEvent</a>(); }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// return current minute</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// @return minute (0..59)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_clock.html#a9cea0937eb7fa053e46521f16c0f7ef4">  131</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#a9cea0937eb7fa053e46521f16c0f7ef4">Minute</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_min; }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// return current month</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="comment">// @return month (1..12)</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_clock.html#ade71c0fe07646354e448cb82cb8c8623">  136</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#ade71c0fe07646354e448cb82cb8c8623">Month</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_mon + 1; }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// save clock date and time to EEPROM</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a1be65ab92f3518aeb4ac0a70e335a22a">SaveClock</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// return current second</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="comment">// @return second (0..59)</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_clock.html#ad799b167caa949fd215b6cb3d21f65dc">  145</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#ad799b167caa949fd215b6cb3d21f65dc">Second</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_sec; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">// set alarm time</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// @param iHour hour (0..23)</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// @param iMin minute (0..59)</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a02d7e3f4604f23b2bbee9c07deeba961">SetAlarm</a>(<span class="comment">/*const*/</span> <span class="keywordtype">int</span> iHour, <span class="comment">/*const*/</span> <span class="keywordtype">int</span> iMin);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// set alarm time</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">// @param pszAlarm string &#39;hh:mm&#39;</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a02d7e3f4604f23b2bbee9c07deeba961">SetAlarm</a>(<span class="comment">/*const*/</span> <span class="keywordtype">char</span>* pszAlarm);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">// set alarm time (relative)</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// @param iHourRel relative hour (-1, 0, +1)</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="comment">// @param iMinRel relative minute (-59..0..+59)</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a1eb47e9a843980f6d7a90edd349ddfbf">SetAlarmRelative</a>(<span class="comment">/*const*/</span> <span class="keywordtype">int</span> iHourRel = 0, <span class="comment">/*const*/</span> <span class="keywordtype">int</span> iMinRel = 1);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// set (hardware) clock</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// @param suNow current date and time</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a7ca286ea753a408690ecb06d350eca40">SetClock</a>(<span class="comment">/*const*/</span> <span class="keyword">struct</span> tm suNow);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// set (hardware) clock</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// @param tsNow current timestamp for date and time</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment">// @param boUseUTC true for UTC, false for localtime</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a7ca286ea753a408690ecb06d350eca40">SetClock</a>(<span class="comment">/*const*/</span> time_t tsNow, <span class="comment">/*const*/</span> <span class="keywordtype">bool</span> boUseUTC = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// set (hardware) clock</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">// @return true on success, false on error</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a7ca286ea753a408690ecb06d350eca40">SetClock</a>();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clock.html#a9ddcb755bdbba2a248072d870970fce4">setCurrentTime</a>(<span class="keywordtype">float</span> fUTC, uint16_t <a class="code hl_function" href="class_clock.html#adc8cafd1b93da06fb339dad29b1c80c6">Year</a>, uint16_t <a class="code hl_function" href="class_clock.html#ade71c0fe07646354e448cb82cb8c8623">Month</a>, uint16_t <a class="code hl_function" href="class_clock.html#aebc2e2b503e5917abae4001f5d8163e1">Day</a>, uint16_t <a class="code hl_function" href="class_clock.html#ab79433ab6e40e93f18e56ae91174cb16">Hour</a>, uint16_t <a class="code hl_function" href="class_clock.html#a9cea0937eb7fa053e46521f16c0f7ef4">Minute</a>, uint16_t <a class="code hl_function" href="class_clock.html#ad799b167caa949fd215b6cb3d21f65dc">Second</a>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="comment">// set snooze</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// @param bo24Hours true if snooze for 24 hours, false for snooze time</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clock.html#a69d9dc40bfaae2885e639155ab640e58">Snooze</a>(<span class="keywordtype">bool</span> bo24Hours = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="comment">// toogle alarm</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="comment">// @return true if enabled, false if disabled</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_clock.html#a2f86cff21f8f251459e9d63bd2f1abba">  187</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_clock.html#a2f86cff21f8f251459e9d63bd2f1abba">ToggleAlarm</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_clock.html#af664f8099bbbe74c85d6658ae3cf9cdd">EnableAlarm</a>(!<a class="code hl_variable" href="class_clock.html#a37a5208d613462ebcbf555682f372453">boAlarmEnable_m</a>); }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">// return current year</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="comment">// @return year (1970..2099)</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">//const</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="class_clock.html#adc8cafd1b93da06fb339dad29b1c80c6">  192</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clock.html#adc8cafd1b93da06fb339dad29b1c80c6">Year</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">suClock_m</a>.tm_year + 1900; }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>};</div>
+</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword">extern</span> <a class="code hl_class" href="class_clock.html">Clock</a> <a class="code hl_variable" href="clock_8cpp.html#a3885f9b29efe208f280a7a87d3344b0e">MyClock</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">//===| eof - end of file |====================================================</span></div>
+<div class="ttc" id="aclass_clock_html"><div class="ttname"><a href="class_clock.html">Clock</a></div><div class="ttdef"><b>Definition</b> <a href="#l00029">clock.h:29</a></div></div>
+<div class="ttc" id="aclass_clock_html_a02d7e3f4604f23b2bbee9c07deeba961"><div class="ttname"><a href="class_clock.html#a02d7e3f4604f23b2bbee9c07deeba961">Clock::SetAlarm</a></div><div class="ttdeci">bool SetAlarm(int iHour, int iMin)</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00225">clock.cpp:225</a></div></div>
+<div class="ttc" id="aclass_clock_html_a180e26c29fa8b35f9b3caa0cded66f4a"><div class="ttname"><a href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4a">Clock::EEvent</a></div><div class="ttdeci">EEvent</div><div class="ttdef"><b>Definition</b> <a href="#l00032">clock.h:33</a></div></div>
+<div class="ttc" id="aclass_clock_html_a180e26c29fa8b35f9b3caa0cded66f4aa3528e05aebc23f5ba4f68e37a4cefd25"><div class="ttname"><a href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3528e05aebc23f5ba4f68e37a4cefd25">Clock::eEventHour</a></div><div class="ttdeci">@ eEventHour</div><div class="ttdef"><b>Definition</b> <a href="#l00036">clock.h:36</a></div></div>
+<div class="ttc" id="aclass_clock_html_a180e26c29fa8b35f9b3caa0cded66f4aa3a1a9941854efed6177b0d7e3f9c2649"><div class="ttname"><a href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa3a1a9941854efed6177b0d7e3f9c2649">Clock::eEventMinute</a></div><div class="ttdeci">@ eEventMinute</div><div class="ttdef"><b>Definition</b> <a href="#l00035">clock.h:35</a></div></div>
+<div class="ttc" id="aclass_clock_html_a180e26c29fa8b35f9b3caa0cded66f4aa6fee14bb082d2362089553d048d5ef6b"><div class="ttname"><a href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aa6fee14bb082d2362089553d048d5ef6b">Clock::eEventDay</a></div><div class="ttdeci">@ eEventDay</div><div class="ttdef"><b>Definition</b> <a href="#l00037">clock.h:37</a></div></div>
+<div class="ttc" id="aclass_clock_html_a180e26c29fa8b35f9b3caa0cded66f4aacf2d9347b5b5c5434c4afc47247318d2"><div class="ttname"><a href="class_clock.html#a180e26c29fa8b35f9b3caa0cded66f4aacf2d9347b5b5c5434c4afc47247318d2">Clock::eEventNone</a></div><div class="ttdeci">@ eEventNone</div><div class="ttdef"><b>Definition</b> <a href="#l00034">clock.h:34</a></div></div>
+<div class="ttc" id="aclass_clock_html_a192aa5537323238ae247611d04196f07"><div class="ttname"><a href="class_clock.html#a192aa5537323238ae247611d04196f07">Clock::u32Next_m</a></div><div class="ttdeci">uint32_t u32Next_m</div><div class="ttdef"><b>Definition</b> <a href="#l00057">clock.h:57</a></div></div>
+<div class="ttc" id="aclass_clock_html_a1be65ab92f3518aeb4ac0a70e335a22a"><div class="ttname"><a href="class_clock.html#a1be65ab92f3518aeb4ac0a70e335a22a">Clock::SaveClock</a></div><div class="ttdeci">bool SaveClock()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00217">clock.cpp:217</a></div></div>
+<div class="ttc" id="aclass_clock_html_a1d090ce5d50cf02360d8af7caf352f80"><div class="ttname"><a href="class_clock.html#a1d090ce5d50cf02360d8af7caf352f80">Clock::suClock_m</a></div><div class="ttdeci">struct tm suClock_m</div><div class="ttdef"><b>Definition</b> <a href="#l00053">clock.h:53</a></div></div>
+<div class="ttc" id="aclass_clock_html_a1eb47e9a843980f6d7a90edd349ddfbf"><div class="ttname"><a href="class_clock.html#a1eb47e9a843980f6d7a90edd349ddfbf">Clock::SetAlarmRelative</a></div><div class="ttdeci">bool SetAlarmRelative(int iHourRel=0, int iMinRel=1)</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00277">clock.cpp:277</a></div></div>
+<div class="ttc" id="aclass_clock_html_a23ee00a6ef689ec8f06d86899fadf307"><div class="ttname"><a href="class_clock.html#a23ee00a6ef689ec8f06d86899fadf307">Clock::Loop</a></div><div class="ttdeci">void Loop()</div><div class="ttdef"><b>Definition</b> <a href="#l00126">clock.h:126</a></div></div>
+<div class="ttc" id="aclass_clock_html_a262c828cc980cdf5179c1e971e10cd3a"><div class="ttname"><a href="class_clock.html#a262c828cc980cdf5179c1e971e10cd3a">Clock::szAlarmTime_m</a></div><div class="ttdeci">char szAlarmTime_m[16]</div><div class="ttdef"><b>Definition</b> <a href="#l00054">clock.h:54</a></div></div>
+<div class="ttc" id="aclass_clock_html_a2bcf86b02d76133df668fd4e40eb54fb"><div class="ttname"><a href="class_clock.html#a2bcf86b02d76133df668fd4e40eb54fb">Clock::szDateStr_m</a></div><div class="ttdeci">char szDateStr_m[16]</div><div class="ttdef"><b>Definition</b> <a href="#l00055">clock.h:55</a></div></div>
+<div class="ttc" id="aclass_clock_html_a2e7c4d6bb9f666a0ca0ab29fd0bc3cd8"><div class="ttname"><a href="class_clock.html#a2e7c4d6bb9f666a0ca0ab29fd0bc3cd8">Clock::IsAlarmValid</a></div><div class="ttdeci">bool IsAlarmValid()</div><div class="ttdef"><b>Definition</b> <a href="#l00119">clock.h:119</a></div></div>
+<div class="ttc" id="aclass_clock_html_a2f86cff21f8f251459e9d63bd2f1abba"><div class="ttname"><a href="class_clock.html#a2f86cff21f8f251459e9d63bd2f1abba">Clock::ToggleAlarm</a></div><div class="ttdeci">bool ToggleAlarm()</div><div class="ttdef"><b>Definition</b> <a href="#l00187">clock.h:187</a></div></div>
+<div class="ttc" id="aclass_clock_html_a36c72753fe853eacefd530a6ce0a1c55"><div class="ttname"><a href="class_clock.html#a36c72753fe853eacefd530a6ce0a1c55">Clock::au8AlarmNext_m</a></div><div class="ttdeci">uint8_t au8AlarmNext_m[2]</div><div class="ttdef"><b>Definition</b> <a href="#l00049">clock.h:49</a></div></div>
+<div class="ttc" id="aclass_clock_html_a37a5208d613462ebcbf555682f372453"><div class="ttname"><a href="class_clock.html#a37a5208d613462ebcbf555682f372453">Clock::boAlarmEnable_m</a></div><div class="ttdeci">bool boAlarmEnable_m</div><div class="ttdef"><b>Definition</b> <a href="#l00051">clock.h:51</a></div></div>
+<div class="ttc" id="aclass_clock_html_a37dfb51c7f6f307c6c0994384f96eb4f"><div class="ttname"><a href="class_clock.html#a37dfb51c7f6f307c6c0994384f96eb4f">Clock::GetDateStr</a></div><div class="ttdeci">char * GetDateStr()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00152">clock.cpp:152</a></div></div>
+<div class="ttc" id="aclass_clock_html_a499aea8a66873a4cdedd8f0898359c2c"><div class="ttname"><a href="class_clock.html#a499aea8a66873a4cdedd8f0898359c2c">Clock::boAlarm_m</a></div><div class="ttdeci">bool boAlarm_m</div><div class="ttdef"><b>Definition</b> <a href="#l00050">clock.h:50</a></div></div>
+<div class="ttc" id="aclass_clock_html_a671b9996c6ee091e62b6a501bf98316c"><div class="ttname"><a href="class_clock.html#a671b9996c6ee091e62b6a501bf98316c">Clock::SaveAlarm</a></div><div class="ttdeci">bool SaveAlarm()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00209">clock.cpp:209</a></div></div>
+<div class="ttc" id="aclass_clock_html_a699c7e929b041c963d9093f016138afb"><div class="ttname"><a href="class_clock.html#a699c7e929b041c963d9093f016138afb">Clock::IsAlarmEnabled</a></div><div class="ttdeci">bool IsAlarmEnabled()</div><div class="ttdef"><b>Definition</b> <a href="#l00115">clock.h:115</a></div></div>
+<div class="ttc" id="aclass_clock_html_a69d9dc40bfaae2885e639155ab640e58"><div class="ttname"><a href="class_clock.html#a69d9dc40bfaae2885e639155ab640e58">Clock::Snooze</a></div><div class="ttdeci">void Snooze(bool bo24Hours=false)</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00400">clock.cpp:400</a></div></div>
+<div class="ttc" id="aclass_clock_html_a7035959dd1ec0dbc65a900b0ef15b1e5"><div class="ttname"><a href="class_clock.html#a7035959dd1ec0dbc65a900b0ef15b1e5">Clock::tsClock_m</a></div><div class="ttdeci">time_t tsClock_m</div><div class="ttdef"><b>Definition</b> <a href="#l00056">clock.h:56</a></div></div>
+<div class="ttc" id="aclass_clock_html_a7532ed4427f97568bae52f2dc9f11132"><div class="ttname"><a href="class_clock.html#a7532ed4427f97568bae52f2dc9f11132">Clock::IsDay</a></div><div class="ttdeci">bool IsDay()</div><div class="ttdef"><b>Definition</b> <a href="#l00123">clock.h:123</a></div></div>
+<div class="ttc" id="aclass_clock_html_a7acb890a0215245cd070fa1bad4196e4"><div class="ttname"><a href="class_clock.html#a7acb890a0215245cd070fa1bad4196e4">Clock::Months</a></div><div class="ttdeci">static const char * Months[]</div><div class="ttdef"><b>Definition</b> <a href="#l00049">clock.h:49</a></div></div>
+<div class="ttc" id="aclass_clock_html_a7ca286ea753a408690ecb06d350eca40"><div class="ttname"><a href="class_clock.html#a7ca286ea753a408690ecb06d350eca40">Clock::SetClock</a></div><div class="ttdeci">bool SetClock()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00356">clock.cpp:356</a></div></div>
+<div class="ttc" id="aclass_clock_html_a8105481e58d3340b7f3e096947e6620d"><div class="ttname"><a href="class_clock.html#a8105481e58d3340b7f3e096947e6620d">Clock::boAlarmValid_m</a></div><div class="ttdeci">bool boAlarmValid_m</div><div class="ttdef"><b>Definition</b> <a href="#l00052">clock.h:52</a></div></div>
+<div class="ttc" id="aclass_clock_html_a888356ac0502a5b150b871d9d3ac10bb"><div class="ttname"><a href="class_clock.html#a888356ac0502a5b150b871d9d3ac10bb">Clock::SetAlarmDefaults</a></div><div class="ttdeci">void SetAlarmDefaults()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00374">clock.cpp:374</a></div></div>
+<div class="ttc" id="aclass_clock_html_a8fd1921510dac06daf2a0ad6472350e5"><div class="ttname"><a href="class_clock.html#a8fd1921510dac06daf2a0ad6472350e5">Clock::SetClockDefaults</a></div><div class="ttdeci">void SetClockDefaults()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00388">clock.cpp:388</a></div></div>
+<div class="ttc" id="aclass_clock_html_a9cea0937eb7fa053e46521f16c0f7ef4"><div class="ttname"><a href="class_clock.html#a9cea0937eb7fa053e46521f16c0f7ef4">Clock::Minute</a></div><div class="ttdeci">int Minute()</div><div class="ttdef"><b>Definition</b> <a href="#l00131">clock.h:131</a></div></div>
+<div class="ttc" id="aclass_clock_html_a9ddcb755bdbba2a248072d870970fce4"><div class="ttname"><a href="class_clock.html#a9ddcb755bdbba2a248072d870970fce4">Clock::setCurrentTime</a></div><div class="ttdeci">void setCurrentTime(float fUTC, uint16_t Year, uint16_t Month, uint16_t Day, uint16_t Hour, uint16_t Minute, uint16_t Second)</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00449">clock.cpp:449</a></div></div>
+<div class="ttc" id="aclass_clock_html_aabe58b1a5d5f0a3cc03e2086f9dbac32"><div class="ttname"><a href="class_clock.html#aabe58b1a5d5f0a3cc03e2086f9dbac32">Clock::Init</a></div><div class="ttdeci">bool Init()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00186">clock.cpp:186</a></div></div>
+<div class="ttc" id="aclass_clock_html_ab79433ab6e40e93f18e56ae91174cb16"><div class="ttname"><a href="class_clock.html#ab79433ab6e40e93f18e56ae91174cb16">Clock::Hour</a></div><div class="ttdeci">int Hour()</div><div class="ttdef"><b>Definition</b> <a href="#l00103">clock.h:103</a></div></div>
+<div class="ttc" id="aclass_clock_html_aba9184b7dbb05e7ba5bb780a09d00477"><div class="ttname"><a href="class_clock.html#aba9184b7dbb05e7ba5bb780a09d00477">Clock::u32Start_m</a></div><div class="ttdeci">uint32_t u32Start_m</div><div class="ttdef"><b>Definition</b> <a href="#l00058">clock.h:58</a></div></div>
+<div class="ttc" id="aclass_clock_html_ac0186ae4ec7d7b206d4f0134bb52b72e"><div class="ttname"><a href="class_clock.html#ac0186ae4ec7d7b206d4f0134bb52b72e">Clock::CheckEvent</a></div><div class="ttdeci">EEvent CheckEvent()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00068">clock.cpp:68</a></div></div>
+<div class="ttc" id="aclass_clock_html_ac32737f334bbc02b312ae3ec8478af52"><div class="ttname"><a href="class_clock.html#ac32737f334bbc02b312ae3ec8478af52">Clock::SnoozeMinutes</a></div><div class="ttdeci">uint8_t SnoozeMinutes</div><div class="ttdef"><b>Definition</b> <a href="#l00045">clock.h:45</a></div></div>
+<div class="ttc" id="aclass_clock_html_ad799b167caa949fd215b6cb3d21f65dc"><div class="ttname"><a href="class_clock.html#ad799b167caa949fd215b6cb3d21f65dc">Clock::Second</a></div><div class="ttdeci">int Second()</div><div class="ttdef"><b>Definition</b> <a href="#l00145">clock.h:145</a></div></div>
+<div class="ttc" id="aclass_clock_html_adae35a300bdb7b59170f944c448e44f9"><div class="ttname"><a href="class_clock.html#adae35a300bdb7b59170f944c448e44f9">Clock::IsAlarm</a></div><div class="ttdeci">bool IsAlarm()</div><div class="ttdef"><b>Definition</b> <a href="#l00111">clock.h:111</a></div></div>
+<div class="ttc" id="aclass_clock_html_adbc370eb6b5f8d01645cf440188160a8"><div class="ttname"><a href="class_clock.html#adbc370eb6b5f8d01645cf440188160a8">Clock::Clock</a></div><div class="ttdeci">Clock()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00056">clock.cpp:56</a></div></div>
+<div class="ttc" id="aclass_clock_html_adc8cafd1b93da06fb339dad29b1c80c6"><div class="ttname"><a href="class_clock.html#adc8cafd1b93da06fb339dad29b1c80c6">Clock::Year</a></div><div class="ttdeci">int Year()</div><div class="ttdef"><b>Definition</b> <a href="#l00192">clock.h:192</a></div></div>
+<div class="ttc" id="aclass_clock_html_ade71c0fe07646354e448cb82cb8c8623"><div class="ttname"><a href="class_clock.html#ade71c0fe07646354e448cb82cb8c8623">Clock::Month</a></div><div class="ttdeci">int Month()</div><div class="ttdef"><b>Definition</b> <a href="#l00136">clock.h:136</a></div></div>
+<div class="ttc" id="aclass_clock_html_aeb4d4060c6a7240062ca887810e034c0"><div class="ttname"><a href="class_clock.html#aeb4d4060c6a7240062ca887810e034c0">Clock::au8Alarm_m</a></div><div class="ttdeci">uint8_t au8Alarm_m[2]</div><div class="ttdef"><b>Definition</b> <a href="#l00048">clock.h:48</a></div></div>
+<div class="ttc" id="aclass_clock_html_aebc2e2b503e5917abae4001f5d8163e1"><div class="ttname"><a href="class_clock.html#aebc2e2b503e5917abae4001f5d8163e1">Clock::Day</a></div><div class="ttdeci">int Day()</div><div class="ttdef"><b>Definition</b> <a href="#l00081">clock.h:81</a></div></div>
+<div class="ttc" id="aclass_clock_html_af664f8099bbbe74c85d6658ae3cf9cdd"><div class="ttname"><a href="class_clock.html#af664f8099bbbe74c85d6658ae3cf9cdd">Clock::EnableAlarm</a></div><div class="ttdeci">bool EnableAlarm(bool boEnable=true)</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00135">clock.cpp:135</a></div></div>
+<div class="ttc" id="aclass_clock_html_afc1d676d029d3eba9aa0414ecd4a31d2"><div class="ttname"><a href="class_clock.html#afc1d676d029d3eba9aa0414ecd4a31d2">Clock::GetAlarmTime</a></div><div class="ttdeci">char * GetAlarmTime()</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00162">clock.cpp:162</a></div></div>
+<div class="ttc" id="aclock_8cpp_html_a3885f9b29efe208f280a7a87d3344b0e"><div class="ttname"><a href="clock_8cpp.html#a3885f9b29efe208f280a7a87d3344b0e">MyClock</a></div><div class="ttdeci">Clock MyClock</div><div class="ttdef"><b>Definition</b> <a href="clock_8cpp_source.html#l00477">clock.cpp:477</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="clock_8h.html">clock.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

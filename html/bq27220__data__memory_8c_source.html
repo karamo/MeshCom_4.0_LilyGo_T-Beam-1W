@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t-deck-pro/bq27220_data_memory.c Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bq27220__data__memory_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bq27220_data_memory.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bq27220__data__memory_8c.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="bq27220__data__memory_8h.html">bq27220_data_memory.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/* ******************************************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *              T-Embed-CC1101 CEDV Gauging Configuration</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> ***************************************************************************** */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// CEDV：Compensated End-of-Discharge Voltage</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="bq27220__data__memory_8c.html#af1e1623c47cf03a39c83e1b82f437368">    8</a></span><span class="keyword">const</span> <a class="code hl_struct" href="struct_b_q27220_d_m_gauging_config.html">BQ27220DMGaugingConfig</a> <a class="code hl_variable" href="bq27220__data__memory_8c.html#af1e1623c47cf03a39c83e1b82f437368">data_memory_gauging_config</a> = {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    .CCT = 1,        <span class="comment">// Use CC % of FullChargeCapacity().</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    .CSYNC = 0,      <span class="comment">// RM is not changed when charge termination is reached</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    .EDV_CMP = 0,    <span class="comment">// EDV compensation is disabled.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    .SC = 1,         <span class="comment">// Learning cycle is optimized for independent charger.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    .FIXED_EDV0 = 1, <span class="comment">// EDV0 will always use Fixed EDV0. EDV1 and EDV2 compensation will not go below Fixed EDV0</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    .FCC_LIM = 1,    <span class="comment">// FCC is limited to Design Capacity mAh.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    .FC_FOR_VDQ = 1, <span class="comment">// FC is required to get VDQ</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    .IGNORE_SD = 1,  <span class="comment">// Coulomb counter increments only if there is a real discharge</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    .SME0 = 0,       <span class="comment">// Smoothing towards EDV0 enable. Used with SMEN and SMEXT.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bq27220__data__memory_8c.html#a2daf7a95c5e26953fba7c1f825841ee6">   20</a></span><span class="keyword">const</span> <a class="code hl_struct" href="struct_b_q27220_d_m_data.html">BQ27220DMData</a> <a class="code hl_variable" href="bq27220__data__memory_8c.html#a2daf7a95c5e26953fba7c1f825841ee6">gauge_data_memory</a>[] = {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ad544ab00f2a7a865b765dacd2307ebb1">BQ27220DMAddressGasGaugingCEDVProfile1GaugingConfig</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba29426fe399798c87b191f4b2c805b757">BQ27220DMTypePtr16</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        .value.u32 = (uint32_t)&amp;<a class="code hl_variable" href="bq27220__data__memory_8c.html#af1e1623c47cf03a39c83e1b82f437368">data_memory_gauging_config</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    },</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a0aba52332edfcd3168d48a670c52a4fb">BQ27220DMAddressConfigurationRegistersOperationConfigA</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        .value.u16 = 0x0C8C,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    },</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a6ee53d41c87654e4b0057ac02fb2302a">BQ27220DMAddressConfigurationRegistersOperationConfigB</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf">BQ27220DMTypeU8</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        .value.u8 = 0x4C,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    },</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070aaaadae5badfcda04d13684911c844519">BQ27220DMAddressGasGaugingCEDVProfile1FullChargeCapacity</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        .value.u16 = 1500,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    },</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a9539fa5b0cdfe196caebe449089de9fd">BQ27220DMAddressGasGaugingCEDVProfile1DesignCapacity</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        .value.u16 = 1500,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    },</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a9cf26d81e40b035aa8f8166524c88e16">BQ27220DMAddressGasGaugingCEDVProfile1EMF</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        .value.u16 = 3743,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    },</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a70041e7ef3169e59d4316a3098e6190f">BQ27220DMAddressGasGaugingCEDVProfile1C0</a>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        .value.u16 = 149,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    },</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a8d2569a8368d1100e02e740463c26d37">BQ27220DMAddressGasGaugingCEDVProfile1R0</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        .value.u16 = 867,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    },</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ab17efc64ff365eb4d53d8abd6ed1bb20">BQ27220DMAddressGasGaugingCEDVProfile1T0</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        .value.u16 = 4030,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    },</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a2ba84aacd2081a9ad61f377807c850cc">BQ27220DMAddressGasGaugingCEDVProfile1R1</a>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        .value.u16 = 316,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    },</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a4e397e773d0a132e1e6c4a0611889fdc">BQ27220DMAddressGasGaugingCEDVProfile1TC</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf">BQ27220DMTypeU8</a>,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        .value.u8 = 9,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    },</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a644c3fc5102b7a53786c43e1b78dfd90">BQ27220DMAddressGasGaugingCEDVProfile1C1</a>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf">BQ27220DMTypeU8</a>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        .value.u8 = 0,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    },</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ac518bf465d6f38ed6fd90ac8ddc76806">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD0</a>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        .value.u16 = 4173,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    },</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5ee0ac9650d9ea632e74486842b6b2f9">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD10</a>,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        .value.u16 = 4043,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    },</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070aac2881e8db310bbad5df09a92aa9f13e">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD20</a>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        .value.u16 = 3925,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    },</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3c652a00152b32f84f84ad61528dfafb">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD30</a>,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        .value.u16 = 3821,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    },</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a98b7f41f93497777767ecc49e0e40cd0">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD40</a>,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        .value.u16 = 3725,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    },</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a763aadb7fd432db931e94050b54fcbe5">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD50</a>,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        .value.u16 = 3665,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    },</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5c8c3fe3374a9015f5be7d66fe5c6c5f">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD60</a>,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        .value.u16 = 3619,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    },</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a113c6a1b242382c997b93347d9fc88c5">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD70</a>,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        .value.u16 = 3585,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    },</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a1d0070625120cf5711a3e3a6bfd7c574">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD80</a>,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        .value.u16 = 3515,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    },</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a7e667882497582b1a5251545b7dbdfa6">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD90</a>,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        .value.u16 = 3439,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    },</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a23783ac4a51118a042116cff3f9149e2">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD100</a>,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        .value.u16 = 2713,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    },</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3dbaf13327e1881996a290c3a4b1e640">BQ27220DMAddressGasGaugingCEDVProfile1EDV0</a>,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        .value.u16 = 3031,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    },</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a974f7f8682f64bc40fbd1c234b69c3da">BQ27220DMAddressGasGaugingCEDVProfile1EDV1</a>,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        .value.u16 = 3385,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    },</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070af49b316ac995925b62ecd452f9311bbb">BQ27220DMAddressGasGaugingCEDVProfile1EDV2</a>,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a>,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        .value.u16 = 3501,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    },</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3f6ab43f36f61e6efae61dc96aec826a">BQ27220DMAddressCalibrationCurrentDeadband</a>,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf">BQ27220DMTypeU8</a>,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        .value.u8 = 1,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    },</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        .address = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5e46bf3b971e9ffbb2d61d51dead7811">BQ27220DMAddressConfigurationPowerSleepCurrent</a>,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbae29c5c9f38cb7ffcd04d200212314189">BQ27220DMTypeI16</a>,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        .value.i16 = 1,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    },</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        .type = <a class="code hl_enumvalue" href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba29ed6d7e15f41ea21682454395645ec0">BQ27220DMTypeEnd</a>,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    },</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>};</div>
+</div>
+<div class="ttc" id="abq27220__data__memory_8c_html_a2daf7a95c5e26953fba7c1f825841ee6"><div class="ttname"><a href="bq27220__data__memory_8c.html#a2daf7a95c5e26953fba7c1f825841ee6">gauge_data_memory</a></div><div class="ttdeci">const BQ27220DMData gauge_data_memory[]</div><div class="ttdef"><b>Definition</b> <a href="#l00020">bq27220_data_memory.c:20</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8c_html_af1e1623c47cf03a39c83e1b82f437368"><div class="ttname"><a href="bq27220__data__memory_8c.html#af1e1623c47cf03a39c83e1b82f437368">data_memory_gauging_config</a></div><div class="ttdeci">const BQ27220DMGaugingConfig data_memory_gauging_config</div><div class="ttdef"><b>Definition</b> <a href="#l00008">bq27220_data_memory.c:8</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html"><div class="ttname"><a href="bq27220__data__memory_8h.html">bq27220_data_memory.h</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a076f44504b781516efae697f482fbccba29426fe399798c87b191f4b2c805b757"><div class="ttname"><a href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba29426fe399798c87b191f4b2c805b757">BQ27220DMTypePtr16</a></div><div class="ttdeci">@ BQ27220DMTypePtr16</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00018">bq27220_data_memory.h:18</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a076f44504b781516efae697f482fbccba29ed6d7e15f41ea21682454395645ec0"><div class="ttname"><a href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba29ed6d7e15f41ea21682454395645ec0">BQ27220DMTypeEnd</a></div><div class="ttdeci">@ BQ27220DMTypeEnd</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00008">bq27220_data_memory.h:8</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf"><div class="ttname"><a href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccba328d0e7b8edcb1ed90cfb245645dfbbf">BQ27220DMTypeU8</a></div><div class="ttdeci">@ BQ27220DMTypeU8</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00010">bq27220_data_memory.h:10</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7"><div class="ttname"><a href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbaa66404bacf7af25dfd45ff8310e43fd7">BQ27220DMTypeU16</a></div><div class="ttdeci">@ BQ27220DMTypeU16</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00011">bq27220_data_memory.h:11</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a076f44504b781516efae697f482fbccbae29c5c9f38cb7ffcd04d200212314189"><div class="ttname"><a href="bq27220__data__memory_8h.html#a076f44504b781516efae697f482fbccbae29c5c9f38cb7ffcd04d200212314189">BQ27220DMTypeI16</a></div><div class="ttdeci">@ BQ27220DMTypeI16</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00014">bq27220_data_memory.h:14</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a0aba52332edfcd3168d48a670c52a4fb"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a0aba52332edfcd3168d48a670c52a4fb">BQ27220DMAddressConfigurationRegistersOperationConfigA</a></div><div class="ttdeci">@ BQ27220DMAddressConfigurationRegistersOperationConfigA</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00024">bq27220_data_memory.h:24</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a113c6a1b242382c997b93347d9fc88c5"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a113c6a1b242382c997b93347d9fc88c5">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD70</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD70</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00046">bq27220_data_memory.h:46</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a1d0070625120cf5711a3e3a6bfd7c574"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a1d0070625120cf5711a3e3a6bfd7c574">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD80</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD80</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00047">bq27220_data_memory.h:47</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a23783ac4a51118a042116cff3f9149e2"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a23783ac4a51118a042116cff3f9149e2">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD100</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD100</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00049">bq27220_data_memory.h:49</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a2ba84aacd2081a9ad61f377807c850cc"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a2ba84aacd2081a9ad61f377807c850cc">BQ27220DMAddressGasGaugingCEDVProfile1R1</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1R1</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00033">bq27220_data_memory.h:33</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a3c652a00152b32f84f84ad61528dfafb"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3c652a00152b32f84f84ad61528dfafb">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD30</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD30</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00042">bq27220_data_memory.h:42</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a3dbaf13327e1881996a290c3a4b1e640"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3dbaf13327e1881996a290c3a4b1e640">BQ27220DMAddressGasGaugingCEDVProfile1EDV0</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1EDV0</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00036">bq27220_data_memory.h:36</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a3f6ab43f36f61e6efae61dc96aec826a"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a3f6ab43f36f61e6efae61dc96aec826a">BQ27220DMAddressCalibrationCurrentDeadband</a></div><div class="ttdeci">@ BQ27220DMAddressCalibrationCurrentDeadband</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00050">bq27220_data_memory.h:50</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a4e397e773d0a132e1e6c4a0611889fdc"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a4e397e773d0a132e1e6c4a0611889fdc">BQ27220DMAddressGasGaugingCEDVProfile1TC</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1TC</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00034">bq27220_data_memory.h:34</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a5c8c3fe3374a9015f5be7d66fe5c6c5f"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5c8c3fe3374a9015f5be7d66fe5c6c5f">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD60</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD60</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00045">bq27220_data_memory.h:45</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a5e46bf3b971e9ffbb2d61d51dead7811"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5e46bf3b971e9ffbb2d61d51dead7811">BQ27220DMAddressConfigurationPowerSleepCurrent</a></div><div class="ttdeci">@ BQ27220DMAddressConfigurationPowerSleepCurrent</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00051">bq27220_data_memory.h:51</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a5ee0ac9650d9ea632e74486842b6b2f9"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a5ee0ac9650d9ea632e74486842b6b2f9">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD10</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD10</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00040">bq27220_data_memory.h:40</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a644c3fc5102b7a53786c43e1b78dfd90"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a644c3fc5102b7a53786c43e1b78dfd90">BQ27220DMAddressGasGaugingCEDVProfile1C1</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1C1</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00035">bq27220_data_memory.h:35</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a6ee53d41c87654e4b0057ac02fb2302a"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a6ee53d41c87654e4b0057ac02fb2302a">BQ27220DMAddressConfigurationRegistersOperationConfigB</a></div><div class="ttdeci">@ BQ27220DMAddressConfigurationRegistersOperationConfigB</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00025">bq27220_data_memory.h:25</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a70041e7ef3169e59d4316a3098e6190f"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a70041e7ef3169e59d4316a3098e6190f">BQ27220DMAddressGasGaugingCEDVProfile1C0</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1C0</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00030">bq27220_data_memory.h:30</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a763aadb7fd432db931e94050b54fcbe5"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a763aadb7fd432db931e94050b54fcbe5">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD50</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD50</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00044">bq27220_data_memory.h:44</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a7e667882497582b1a5251545b7dbdfa6"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a7e667882497582b1a5251545b7dbdfa6">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD90</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD90</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00048">bq27220_data_memory.h:48</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a8d2569a8368d1100e02e740463c26d37"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a8d2569a8368d1100e02e740463c26d37">BQ27220DMAddressGasGaugingCEDVProfile1R0</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1R0</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00031">bq27220_data_memory.h:31</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a9539fa5b0cdfe196caebe449089de9fd"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a9539fa5b0cdfe196caebe449089de9fd">BQ27220DMAddressGasGaugingCEDVProfile1DesignCapacity</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1DesignCapacity</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00028">bq27220_data_memory.h:28</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a974f7f8682f64bc40fbd1c234b69c3da"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a974f7f8682f64bc40fbd1c234b69c3da">BQ27220DMAddressGasGaugingCEDVProfile1EDV1</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1EDV1</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00037">bq27220_data_memory.h:37</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a98b7f41f93497777767ecc49e0e40cd0"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a98b7f41f93497777767ecc49e0e40cd0">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD40</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD40</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00043">bq27220_data_memory.h:43</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070a9cf26d81e40b035aa8f8166524c88e16"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070a9cf26d81e40b035aa8f8166524c88e16">BQ27220DMAddressGasGaugingCEDVProfile1EMF</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1EMF</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00029">bq27220_data_memory.h:29</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070aaaadae5badfcda04d13684911c844519"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070aaaadae5badfcda04d13684911c844519">BQ27220DMAddressGasGaugingCEDVProfile1FullChargeCapacity</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1FullChargeCapacity</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00027">bq27220_data_memory.h:27</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070aac2881e8db310bbad5df09a92aa9f13e"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070aac2881e8db310bbad5df09a92aa9f13e">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD20</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD20</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00041">bq27220_data_memory.h:41</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070ab17efc64ff365eb4d53d8abd6ed1bb20"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ab17efc64ff365eb4d53d8abd6ed1bb20">BQ27220DMAddressGasGaugingCEDVProfile1T0</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1T0</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00032">bq27220_data_memory.h:32</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070ac518bf465d6f38ed6fd90ac8ddc76806"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ac518bf465d6f38ed6fd90ac8ddc76806">BQ27220DMAddressGasGaugingCEDVProfile1StartDOD0</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1StartDOD0</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00039">bq27220_data_memory.h:39</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070ad544ab00f2a7a865b765dacd2307ebb1"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070ad544ab00f2a7a865b765dacd2307ebb1">BQ27220DMAddressGasGaugingCEDVProfile1GaugingConfig</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1GaugingConfig</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00026">bq27220_data_memory.h:26</a></div></div>
+<div class="ttc" id="abq27220__data__memory_8h_html_a10c63ff1a2f0ae8258f95f9160e59070af49b316ac995925b62ecd452f9311bbb"><div class="ttname"><a href="bq27220__data__memory_8h.html#a10c63ff1a2f0ae8258f95f9160e59070af49b316ac995925b62ecd452f9311bbb">BQ27220DMAddressGasGaugingCEDVProfile1EDV2</a></div><div class="ttdeci">@ BQ27220DMAddressGasGaugingCEDVProfile1EDV2</div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00038">bq27220_data_memory.h:38</a></div></div>
+<div class="ttc" id="astruct_b_q27220_d_m_data_html"><div class="ttname"><a href="struct_b_q27220_d_m_data.html">BQ27220DMData</a></div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00056">bq27220_data_memory.h:57</a></div></div>
+<div class="ttc" id="astruct_b_q27220_d_m_gauging_config_html"><div class="ttname"><a href="struct_b_q27220_d_m_gauging_config.html">BQ27220DMGaugingConfig</a></div><div class="ttdef"><b>Definition</b> <a href="bq27220__data__memory_8h_source.html#l00074">bq27220_data_memory.h:75</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_9ab235b9a1467ce2a3b0de0718712492.html">t-deck-pro</a></li><li class="navelem"><a href="bq27220__data__memory_8c.html">bq27220_data_memory.c</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

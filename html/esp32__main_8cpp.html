@@ -1,0 +1,1304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/esp32/esp32_main.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('esp32__main_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">esp32_main.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;RadioLib.h&gt;</code><br />
+<code>#include &lt;Wire.h&gt;</code><br />
+<code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="esp32__gps_8h_source.html">esp32_gps.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="esp32__flash_8h_source.html">esp32_flash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bmx280_8h_source.html">bmx280.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bmp390_8h_source.html">bmp390.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aht20_8h_source.html">aht20.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sht21_8h_source.html">sht21.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bme680_8h_source.html">bme680.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mcu811_8h_source.html">mcu811.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__functions_8h_source.html">io_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ina226__functions_8h_source.html">ina226_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="softser__functions_8h_source.html">softser_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="command__functions_8h_source.html">command_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="phone__commands_8h_source.html">phone_commands.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="aprs__functions_8h_source.html">aprs_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="batt__functions_8h_source.html">batt_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__functions_8h_source.html">lora_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="udp__functions_8h_source.html">udp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="web__functions_8h_source.html">web_functions/web_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mheard__functions_8h_source.html">mheard_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="clock_8h_source.html">clock.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="onewire__functions_8h_source.html">onewire_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="onebutton__functions_8h_source.html">onebutton_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="adc__functions_8h_source.html">adc_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="esp32__functions_8h_source.html">esp32_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tft__display__functions_8h_source.html">tft_display_functions.h</a>&quot;</code><br />
+<code>#include &lt;esp_adc_cal.h&gt;</code><br />
+<code>#include &lt;OneButton.h&gt;</code><br />
+<code>#include &lt;NimBLEDevice.h&gt;</code><br />
+</div>
+<p><a href="esp32__main_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:MyServerCallbacks" id="r_MyServerCallbacks"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_server_callbacks.html">MyServerCallbacks</a></td></tr>
+<tr class="memitem:CharacteristicCallbacks" id="r_CharacteristicCallbacks"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_characteristic_callbacks.html">CharacteristicCallbacks</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a445125ee8c34695376c85f10b38844d6" id="r_a445125ee8c34695376c85f10b38844d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a445125ee8c34695376c85f10b38844d6">SERVICE_UUID</a>&#160;&#160;&#160;&quot;6E400001-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td></tr>
+<tr class="memitem:a9f4f730f861639550d7d03224aa0abff" id="r_a9f4f730f861639550d7d03224aa0abff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f4f730f861639550d7d03224aa0abff">CHARACTERISTIC_UUID_RX</a>&#160;&#160;&#160;&quot;6E400002-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td></tr>
+<tr class="memitem:ad4181a351a9048aaca17ef09f91f15d7" id="r_ad4181a351a9048aaca17ef09f91f15d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4181a351a9048aaca17ef09f91f15d7">CHARACTERISTIC_UUID_TX</a>&#160;&#160;&#160;&quot;6E400003-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a8dc9482bafec25c72689631311de6e66" id="r_a8dc9482bafec25c72689631311de6e66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc9482bafec25c72689631311de6e66">checkRX</a> (bool <a class="el" href="loop__functions_8cpp.html#a4a8b6c794ce55251a7124174fa389c71">bRadio</a>)</td></tr>
+<tr class="memitem:a778428b4a41c3df53ca2922d09d4266d" id="r_a778428b4a41c3df53ca2922d09d4266d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a778428b4a41c3df53ca2922d09d4266d">setFlagReceive</a> (void)</td></tr>
+<tr class="memitem:aa28c2ba01bda57eee97fe555028a49b7" id="r_aa28c2ba01bda57eee97fe555028a49b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa28c2ba01bda57eee97fe555028a49b7">setFlagSent</a> (void)</td></tr>
+<tr class="memitem:aa60aaaeadbd4b099cb442c2dac30efc0" id="r_aa60aaaeadbd4b099cb442c2dac30efc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60aaaeadbd4b099cb442c2dac30efc0">asm</a> (&quot;.global _scanf_float&quot;)</td></tr>
+<tr class="memitem:abf9daa62d261abcac1e4cb27c9e72adf" id="r_abf9daa62d261abcac1e4cb27c9e72adf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9daa62d261abcac1e4cb27c9e72adf">asm</a> (&quot;.global _printf_float&quot;)</td></tr>
+<tr class="memitem:a5badc0ee7c0a22ff61cfa036498c5a21" id="r_a5badc0ee7c0a22ff61cfa036498c5a21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5badc0ee7c0a22ff61cfa036498c5a21">is_new_packet</a> (uint8_t compBuffer[4])</td></tr>
+<tr class="memdesc:a5badc0ee7c0a22ff61cfa036498c5a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check if we have a Lora packet already received.  <br /></td></tr>
+<tr class="memitem:aba6642ae46716880afdcb50dce40f8a4" id="r_aba6642ae46716880afdcb50dce40f8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba6642ae46716880afdcb50dce40f8a4">checkSerialCommand</a> (void)</td></tr>
+<tr class="memitem:ac874e2464c65fd98f56a8e54cf3c9ca3" id="r_ac874e2464c65fd98f56a8e54cf3c9ca3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac874e2464c65fd98f56a8e54cf3c9ca3">getMacAddr</a> (void)</td></tr>
+<tr class="memitem:aeac1945f7a054fccb501b9424159907e" id="r_aeac1945f7a054fccb501b9424159907e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac1945f7a054fccb501b9424159907e">esp32setup</a> ()</td></tr>
+<tr class="memitem:af19d5624c60d2f3d03c5c58a040015ca" id="r_af19d5624c60d2f3d03c5c58a040015ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af19d5624c60d2f3d03c5c58a040015ca">esp32_write_ble</a> (uint8_t confBuff[300], uint8_t conf_len)</td></tr>
+<tr class="memitem:aa824e5f3422d363fcb0137fde917b3e9" id="r_aa824e5f3422d363fcb0137fde917b3e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa824e5f3422d363fcb0137fde917b3e9">esp32loop</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:ac015cd7d20948ab9a504ae13833dedb9" id="r_ac015cd7d20948ab9a504ae13833dedb9"><td class="memItemLeft" align="right" valign="top">OneButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac015cd7d20948ab9a504ae13833dedb9">btn</a></td></tr>
+<tr class="memitem:af26741e86061aa4466b11420af4b7ef4" id="r_af26741e86061aa4466b11420af4b7ef4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26741e86061aa4466b11420af4b7ef4">bPosFirst</a> = true</td></tr>
+<tr class="memitem:a21cb1a99e627b4d9ed7410da8b453687" id="r_a21cb1a99e627b4d9ed7410da8b453687"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21cb1a99e627b4d9ed7410da8b453687">bHeyFirst</a> = true</td></tr>
+<tr class="memitem:ae6f860f484e9ee3867530240e488f13d" id="r_ae6f860f484e9ee3867530240e488f13d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6f860f484e9ee3867530240e488f13d">bTeleFirst</a> = true</td></tr>
+<tr class="memitem:ad1a0049acf738115af18ace1fc7af373" id="r_ad1a0049acf738115af18ace1fc7af373"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1a0049acf738115af18ace1fc7af373">bAllStarted</a> = true</td></tr>
+<tr class="memitem:ae7919a5a33dc114f962ce17667156789" id="r_ae7919a5a33dc114f962ce17667156789"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7919a5a33dc114f962ce17667156789">strTime</a></td></tr>
+<tr class="memitem:a31457e98263dfd64879d4f957a30b365" id="r_a31457e98263dfd64879d4f957a30b365"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31457e98263dfd64879d4f957a30b365">strDate</a></td></tr>
+<tr class="memitem:a8975bd293643341b62e4e5a7810d2efc" id="r_a8975bd293643341b62e4e5a7810d2efc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8975bd293643341b62e4e5a7810d2efc">strText</a> = &quot;&quot;</td></tr>
+<tr class="memitem:a27f3fd6bae71e73f3c13bb57945845a6" id="r_a27f3fd6bae71e73f3c13bb57945845a6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27f3fd6bae71e73f3c13bb57945845a6">str</a></td></tr>
+<tr class="memitem:a2cb3f94db4417fc943e9c495a41bbbd4" id="r_a2cb3f94db4417fc943e9c495a41bbbd4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cb3f94db4417fc943e9c495a41bbbd4">textbuff_phone</a> [<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td></tr>
+<tr class="memitem:ad31ead5d96c93e83de7b07604d25a819" id="r_ad31ead5d96c93e83de7b07604d25a819"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31ead5d96c93e83de7b07604d25a819">txt_msg_len_phone</a></td></tr>
+<tr class="memitem:a9669d1fd176877827aff8789f184e2ee" id="r_a9669d1fd176877827aff8789f184e2ee"><td class="memItemLeft" align="right" valign="top">NimBLEServer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9669d1fd176877827aff8789f184e2ee">pServer</a> = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:a8f559f553962ab796601b4aff0573c8c" id="r_a8f559f553962ab796601b4aff0573c8c"><td class="memItemLeft" align="right" valign="top">NimBLECharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f559f553962ab796601b4aff0573c8c">pTxCharacteristic</a></td></tr>
+<tr class="memitem:a04ade24a0002c1ba23ec5f6120ab1150" id="r_a04ade24a0002c1ba23ec5f6120ab1150"><td class="memItemLeft" align="right" valign="top">NimBLEService *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ade24a0002c1ba23ec5f6120ab1150">pService</a></td></tr>
+<tr class="memitem:a82ce0016b020197f9b0356800edae57a" id="r_a82ce0016b020197f9b0356800edae57a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82ce0016b020197f9b0356800edae57a">deviceConnected</a> = false</td></tr>
+<tr class="memitem:a75192623c088d57de02f8803296eaa96" id="r_a75192623c088d57de02f8803296eaa96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75192623c088d57de02f8803296eaa96">oldDeviceConnected</a> = false</td></tr>
+<tr class="memitem:a91ee63dd24a702a6b71474783c75a66c" id="r_a91ee63dd24a702a6b71474783c75a66c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91ee63dd24a702a6b71474783c75a66c">PIN</a> = 000000</td></tr>
+<tr class="memitem:ad220f1f9076203037c387a45880b69d6" id="r_ad220f1f9076203037c387a45880b69d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad220f1f9076203037c387a45880b69d6">config_to_phone_prepare</a> = false</td></tr>
+<tr class="memitem:ae4e94b31f41d9ba9bc675c036be013bf" id="r_ae4e94b31f41d9ba9bc675c036be013bf"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e94b31f41d9ba9bc675c036be013bf">config_to_phone_prepare_timer</a> = 0</td></tr>
+<tr class="memitem:aab93e1f518ed4dee5c4dc3e29f5cfed6" id="r_aab93e1f518ed4dee5c4dc3e29f5cfed6"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab93e1f518ed4dee5c4dc3e29f5cfed6">config_to_phone_datetime_timer</a> = 0</td></tr>
+<tr class="memitem:a109350d008f8b716eb29304e580fb1fd" id="r_a109350d008f8b716eb29304e580fb1fd"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a> = 10</td></tr>
+<tr class="memitem:ace05aafcdae78fd3af5be55ebd2ed7d7" id="r_ace05aafcdae78fd3af5be55ebd2ed7d7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace05aafcdae78fd3af5be55ebd2ed7d7">config_cmds</a> [<a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a>][20] = {&quot;--info&quot;, &quot;--seset&quot;, &quot;--wifiset&quot;, &quot;--nodeset&quot;, &quot;--wx&quot;, &quot;--pos&quot;, &quot;--aprsset&quot;, &quot;--io&quot;, &quot;--tel&quot;, &quot;--analogset&quot;}</td></tr>
+<tr class="memitem:adb87b824b648737112878050d60993e6" id="r_adb87b824b648737112878050d60993e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb87b824b648737112878050d60993e6">config_cmds_index</a> = 0</td></tr>
+<tr class="memitem:a7e4c7699a9f44b4c1313e128892baeee" id="r_a7e4c7699a9f44b4c1313e128892baeee"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e4c7699a9f44b4c1313e128892baeee">iPhoneState</a> =0</td></tr>
+<tr class="memitem:a152060ba19a098c1e50083622adf909e" id="r_a152060ba19a098c1e50083622adf909e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_my_server_callbacks.html">MyServerCallbacks</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152060ba19a098c1e50083622adf909e">serverCallbacks</a></td></tr>
+<tr class="memitem:a2c4e114c6e8c64671f8623521b5ce2be" id="r_a2c4e114c6e8c64671f8623521b5ce2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_characteristic_callbacks.html">CharacteristicCallbacks</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c4e114c6e8c64671f8623521b5ce2be">chrCallbacks</a></td></tr>
+<tr class="memitem:a12e6be2c9c597bd4b486715097191a92" id="r_a12e6be2c9c597bd4b486715097191a92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e6be2c9c597bd4b486715097191a92">transmissionState</a> = RADIOLIB_ERR_UNKNOWN</td></tr>
+<tr class="memitem:ac82d0af9ee9d53af2b2c5855453a1175" id="r_ac82d0af9ee9d53af2b2c5855453a1175"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac82d0af9ee9d53af2b2c5855453a1175">receiveFlag</a> = false</td></tr>
+<tr class="memitem:a5af254fded37b1fb2b27bc595da75394" id="r_a5af254fded37b1fb2b27bc595da75394"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5af254fded37b1fb2b27bc595da75394">bEnableInterruptReceive</a> = true</td></tr>
+<tr class="memitem:a04d82117ceb8d728b5f3db7b99e034dc" id="r_a04d82117ceb8d728b5f3db7b99e034dc"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d82117ceb8d728b5f3db7b99e034dc">iReceiveTimeOutTime</a> = 0</td></tr>
+<tr class="memitem:a417b07be95808363aedabfd577701a8d" id="r_a417b07be95808363aedabfd577701a8d"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a417b07be95808363aedabfd577701a8d">inoReceiveTimeOutTime</a> = 0</td></tr>
+<tr class="memitem:a6682447b91460a8d30e5034572f22010" id="r_a6682447b91460a8d30e5034572f22010"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6682447b91460a8d30e5034572f22010">transmittedFlag</a> = false</td></tr>
+<tr class="memitem:aa39424b8d5bd2a672aace05b8059382b" id="r_aa39424b8d5bd2a672aace05b8059382b"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa39424b8d5bd2a672aace05b8059382b">bEnableInterruptTransmit</a> = false</td></tr>
+<tr class="memitem:a5f6d3eb21f11205975454cd1b78718c6" id="r_a5f6d3eb21f11205975454cd1b78718c6"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f6d3eb21f11205975454cd1b78718c6">scanFlag</a> = false</td></tr>
+<tr class="memitem:a53253f0dabe019100f1caff56bd9c5ac" id="r_a53253f0dabe019100f1caff56bd9c5ac"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53253f0dabe019100f1caff56bd9c5ac">retransmit_timer</a> = 0</td></tr>
+<tr class="memitem:a6ba6987f7ee99e600f0dbf6fbca49db1" id="r_a6ba6987f7ee99e600f0dbf6fbca49db1"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ba6987f7ee99e600f0dbf6fbca49db1">led_timer</a> = 0</td></tr>
+<tr class="memitem:a91006b281784fe6edf06581cad7f4cb4" id="r_a91006b281784fe6edf06581cad7f4cb4"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91006b281784fe6edf06581cad7f4cb4">updateTimeClient</a> = 0</td></tr>
+<tr class="memitem:aedc61e0173a3e38b63e60dfcdca22e78" id="r_aedc61e0173a3e38b63e60dfcdca22e78"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc61e0173a3e38b63e60dfcdca22e78">g_ble_dev_name</a> [10] = &quot;C&quot;</td></tr>
+<tr class="memitem:a90f2bff1452c67c82041a8227baa0076" id="r_a90f2bff1452c67c82041a8227baa0076"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90f2bff1452c67c82041a8227baa0076">timeStamp</a> = 0</td></tr>
+<tr class="memitem:af75c5d3cc3d10d24fdef9dbfd0c3b21c" id="r_af75c5d3cc3d10d24fdef9dbfd0c3b21c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af75c5d3cc3d10d24fdef9dbfd0c3b21c">g_ble_uart_is_connected</a> = false</td></tr>
+<tr class="memitem:ac77639d3bbdc03ab2d0fcee1829e3cc3" id="r_ac77639d3bbdc03ab2d0fcee1829e3cc3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77639d3bbdc03ab2d0fcee1829e3cc3">dmac</a> [6] = {0}</td></tr>
+<tr class="memitem:ac2a8dfb1eb66f960781d464dccbeb787" id="r_ac2a8dfb1eb66f960781d464dccbeb787"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a8dfb1eb66f960781d464dccbeb787">gps_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:a28e564f1010b28d3e1ccc91e2f48c2d0" id="r_a28e564f1010b28d3e1ccc91e2f48c2d0"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e564f1010b28d3e1ccc91e2f48c2d0">mcp_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:a9768ebf0af3d7969f21011c3a709ad3b" id="r_a9768ebf0af3d7969f21011c3a709ad3b"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9768ebf0af3d7969f21011c3a709ad3b">softser_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:ac4d927d50eea8431ab8f8844176f2200" id="r_ac4d927d50eea8431ab8f8844176f2200"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4d927d50eea8431ab8f8844176f2200">rtc_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:ab78f175d770cd73c0c2aa86834f65dd4" id="r_ab78f175d770cd73c0c2aa86834f65dd4"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab78f175d770cd73c0c2aa86834f65dd4">pixels_delay</a> = 0</td></tr>
+<tr class="memitem:aaeb45d7c8ade16045f1e00b5ae3d8a48" id="r_aaeb45d7c8ade16045f1e00b5ae3d8a48"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeb45d7c8ade16045f1e00b5ae3d8a48">ble_wait</a> = 0</td></tr>
+<tr class="memitem:acc98d8c6f3701a5a0c2e749cf2512b20" id="r_acc98d8c6f3701a5a0c2e749cf2512b20"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc98d8c6f3701a5a0c2e749cf2512b20">wifi_active_timer</a> = 0</td></tr>
+<tr class="memitem:abf4b9baa37b267ea00f8b5c68dbb82d8" id="r_abf4b9baa37b267ea00f8b5c68dbb82d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4b9baa37b267ea00f8b5c68dbb82d8">g_meshcom_initialized</a></td></tr>
+<tr class="memitem:a06f528dc9abac6bdb3b67735ba38f19d" id="r_a06f528dc9abac6bdb3b67735ba38f19d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06f528dc9abac6bdb3b67735ba38f19d">init_flash_done</a> =false</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="a9f4f730f861639550d7d03224aa0abff" name="a9f4f730f861639550d7d03224aa0abff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4f730f861639550d7d03224aa0abff">&#9670;&#160;</a></span>CHARACTERISTIC_UUID_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHARACTERISTIC_UUID_RX&#160;&#160;&#160;&quot;6E400002-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4181a351a9048aaca17ef09f91f15d7" name="ad4181a351a9048aaca17ef09f91f15d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4181a351a9048aaca17ef09f91f15d7">&#9670;&#160;</a></span>CHARACTERISTIC_UUID_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHARACTERISTIC_UUID_TX&#160;&#160;&#160;&quot;6E400003-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a445125ee8c34695376c85f10b38844d6" name="a445125ee8c34695376c85f10b38844d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445125ee8c34695376c85f10b38844d6">&#9670;&#160;</a></span>SERVICE_UUID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERVICE_UUID&#160;&#160;&#160;&quot;6E400001-B5A3-F393-E0A9-E50E24DCCA9E&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="abf9daa62d261abcac1e4cb27c9e72adf" name="abf9daa62d261abcac1e4cb27c9e72adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9daa62d261abcac1e4cb27c9e72adf">&#9670;&#160;</a></span>asm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;.global _printf_float&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60aaaeadbd4b099cb442c2dac30efc0" name="aa60aaaeadbd4b099cb442c2dac30efc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60aaaeadbd4b099cb442c2dac30efc0">&#9670;&#160;</a></span>asm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;.global _scanf_float&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dc9482bafec25c72689631311de6e66" name="a8dc9482bafec25c72689631311de6e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc9482bafec25c72689631311de6e66">&#9670;&#160;</a></span>checkRX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkRX </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bRadio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l02618">2618</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aba6642ae46716880afdcb50dce40f8a4" name="aba6642ae46716880afdcb50dce40f8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6642ae46716880afdcb50dce40f8a4">&#9670;&#160;</a></span>checkSerialCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkSerialCommand </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l02689">2689</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af19d5624c60d2f3d03c5c58a040015ca" name="af19d5624c60d2f3d03c5c58a040015ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19d5624c60d2f3d03c5c58a040015ca">&#9670;&#160;</a></span>esp32_write_ble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp32_write_ble </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>confBuff</em></span>[300], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>conf_len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l01324">1324</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa824e5f3422d363fcb0137fde917b3e9" name="aa824e5f3422d363fcb0137fde917b3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa824e5f3422d363fcb0137fde917b3e9">&#9670;&#160;</a></span>esp32loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp32loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l01335">1335</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeac1945f7a054fccb501b9424159907e" name="aeac1945f7a054fccb501b9424159907e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac1945f7a054fccb501b9424159907e">&#9670;&#160;</a></span>esp32setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp32setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00462">462</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac874e2464c65fd98f56a8e54cf3c9ca3" name="ac874e2464c65fd98f56a8e54cf3c9ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac874e2464c65fd98f56a8e54cf3c9ca3">&#9670;&#160;</a></span>getMacAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int getMacAddr </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00440">440</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5badc0ee7c0a22ff61cfa036498c5a21" name="a5badc0ee7c0a22ff61cfa036498c5a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5badc0ee7c0a22ff61cfa036498c5a21">&#9670;&#160;</a></span>is_new_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_new_packet </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>compBuffer</em></span>[4]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to check if we have a Lora packet already received. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="lora__functions_8cpp_source.html#l00902">902</a> der Datei <a class="el" href="lora__functions_8cpp_source.html">lora_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a778428b4a41c3df53ca2922d09d4266d" name="a778428b4a41c3df53ca2922d09d4266d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778428b4a41c3df53ca2922d09d4266d">&#9670;&#160;</a></span>setFlagReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFlagReceive </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00381">381</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa28c2ba01bda57eee97fe555028a49b7" name="aa28c2ba01bda57eee97fe555028a49b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28c2ba01bda57eee97fe555028a49b7">&#9670;&#160;</a></span>setFlagSent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFlagSent </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00397">397</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="ad1a0049acf738115af18ace1fc7af373" name="ad1a0049acf738115af18ace1fc7af373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a0049acf738115af18ace1fc7af373">&#9670;&#160;</a></span>bAllStarted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bAllStarted = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00137">137</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5af254fded37b1fb2b27bc595da75394" name="a5af254fded37b1fb2b27bc595da75394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af254fded37b1fb2b27bc595da75394">&#9670;&#160;</a></span>bEnableInterruptReceive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool bEnableInterruptReceive = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00356">356</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa39424b8d5bd2a672aace05b8059382b" name="aa39424b8d5bd2a672aace05b8059382b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39424b8d5bd2a672aace05b8059382b">&#9670;&#160;</a></span>bEnableInterruptTransmit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool bEnableInterruptTransmit = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00364">364</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a21cb1a99e627b4d9ed7410da8b453687" name="a21cb1a99e627b4d9ed7410da8b453687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cb1a99e627b4d9ed7410da8b453687">&#9670;&#160;</a></span>bHeyFirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bHeyFirst = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00134">134</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaeb45d7c8ade16045f1e00b5ae3d8a48" name="aaeb45d7c8ade16045f1e00b5ae3d8a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb45d7c8ade16045f1e00b5ae3d8a48">&#9670;&#160;</a></span>ble_wait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long ble_wait = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00431">431</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af26741e86061aa4466b11420af4b7ef4" name="af26741e86061aa4466b11420af4b7ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26741e86061aa4466b11420af4b7ef4">&#9670;&#160;</a></span>bPosFirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bPosFirst = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RadioLib Infos und Examples: SX127x: <a href="https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Settings/SX127x_Settings.ino">https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Settings/SX127x_Settings.ino</a> <a href="https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Receive/SX127x_Receive.ino">https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Receive/SX127x_Receive.ino</a> <a href="https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Transmit/SX127x_Transmit.ino">https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_Transmit/SX127x_Transmit.ino</a> <a href="https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_PingPong/SX127x_PingPong.ino">https://github.com/jgromes/RadioLib/blob/master/examples/SX127x/SX127x_PingPong/SX127x_PingPong.ino</a> Flash Examples <a href="https://microcontrollerslab.com/save-data-esp32-flash-permanently-preferences-library/">https://microcontrollerslab.com/save-data-esp32-flash-permanently-preferences-library/</a> LoRa Sync Word für Meshcom definieren! 2b SX127x Chips haben nur ein Byte als Syncowrd, SX126x haben zwei Byte Alle Funktionen Setter, Getter, etc finden sich in den korrspondierenden Libraries SX1278 zB: <a href="https://github.com/jgromes/RadioLib/blob/master/src/modules/SX127x/SX1278.h">https://github.com/jgromes/RadioLib/blob/master/src/modules/SX127x/SX1278.h</a> </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00133">133</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae6f860f484e9ee3867530240e488f13d" name="ae6f860f484e9ee3867530240e488f13d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f860f484e9ee3867530240e488f13d">&#9670;&#160;</a></span>bTeleFirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bTeleFirst = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00135">135</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac015cd7d20948ab9a504ae13833dedb9" name="ac015cd7d20948ab9a504ae13833dedb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac015cd7d20948ab9a504ae13833dedb9">&#9670;&#160;</a></span>btn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OneButton btn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00109">109</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c4e114c6e8c64671f8623521b5ce2be" name="a2c4e114c6e8c64671f8623521b5ce2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4e114c6e8c64671f8623521b5ce2be">&#9670;&#160;</a></span>chrCallbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_characteristic_callbacks.html">CharacteristicCallbacks</a> chrCallbacks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace05aafcdae78fd3af5be55ebd2ed7d7" name="ace05aafcdae78fd3af5be55ebd2ed7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace05aafcdae78fd3af5be55ebd2ed7d7">&#9670;&#160;</a></span>config_cmds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char config_cmds[<a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a>][20] = {&quot;--info&quot;, &quot;--seset&quot;, &quot;--wifiset&quot;, &quot;--nodeset&quot;, &quot;--wx&quot;, &quot;--pos&quot;, &quot;--aprsset&quot;, &quot;--io&quot;, &quot;--tel&quot;, &quot;--analogset&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00180">180</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adb87b824b648737112878050d60993e6" name="adb87b824b648737112878050d60993e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb87b824b648737112878050d60993e6">&#9670;&#160;</a></span>config_cmds_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t config_cmds_index = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00181">181</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aab93e1f518ed4dee5c4dc3e29f5cfed6" name="aab93e1f518ed4dee5c4dc3e29f5cfed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab93e1f518ed4dee5c4dc3e29f5cfed6">&#9670;&#160;</a></span>config_to_phone_datetime_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long config_to_phone_datetime_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00178">178</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad220f1f9076203037c387a45880b69d6" name="ad220f1f9076203037c387a45880b69d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad220f1f9076203037c387a45880b69d6">&#9670;&#160;</a></span>config_to_phone_prepare</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool config_to_phone_prepare = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00176">176</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4e94b31f41d9ba9bc675c036be013bf" name="ae4e94b31f41d9ba9bc675c036be013bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e94b31f41d9ba9bc675c036be013bf">&#9670;&#160;</a></span>config_to_phone_prepare_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long config_to_phone_prepare_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00177">177</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a82ce0016b020197f9b0356800edae57a" name="a82ce0016b020197f9b0356800edae57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ce0016b020197f9b0356800edae57a">&#9670;&#160;</a></span>deviceConnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool deviceConnected = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00170">170</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac77639d3bbdc03ab2d0fcee1829e3cc3" name="ac77639d3bbdc03ab2d0fcee1829e3cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77639d3bbdc03ab2d0fcee1829e3cc3">&#9670;&#160;</a></span>dmac</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dmac[6] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00424">424</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aedc61e0173a3e38b63e60dfcdca22e78" name="aedc61e0173a3e38b63e60dfcdca22e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc61e0173a3e38b63e60dfcdca22e78">&#9670;&#160;</a></span>g_ble_dev_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char g_ble_dev_name[10] = &quot;C&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the device name, max length is 10 characters </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00416">416</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af75c5d3cc3d10d24fdef9dbfd0c3b21c" name="af75c5d3cc3d10d24fdef9dbfd0c3b21c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af75c5d3cc3d10d24fdef9dbfd0c3b21c">&#9670;&#160;</a></span>g_ble_uart_is_connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_ble_uart_is_connected = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flag if BLE UART is connected </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00421">421</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abf4b9baa37b267ea00f8b5c68dbb82d8" name="abf4b9baa37b267ea00f8b5c68dbb82d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4b9baa37b267ea00f8b5c68dbb82d8">&#9670;&#160;</a></span>g_meshcom_initialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_meshcom_initialized</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00437">437</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2a8dfb1eb66f960781d464dccbeb787" name="ac2a8dfb1eb66f960781d464dccbeb787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a8dfb1eb66f960781d464dccbeb787">&#9670;&#160;</a></span>gps_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long gps_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00426">426</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a06f528dc9abac6bdb3b67735ba38f19d" name="a06f528dc9abac6bdb3b67735ba38f19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f528dc9abac6bdb3b67735ba38f19d">&#9670;&#160;</a></span>init_flash_done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool init_flash_done =false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00438">438</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a417b07be95808363aedabfd577701a8d" name="a417b07be95808363aedabfd577701a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417b07be95808363aedabfd577701a8d">&#9670;&#160;</a></span>inoReceiveTimeOutTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long inoReceiveTimeOutTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00360">360</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e4c7699a9f44b4c1313e128892baeee" name="a7e4c7699a9f44b4c1313e128892baeee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4c7699a9f44b4c1313e128892baeee">&#9670;&#160;</a></span>iPhoneState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t iPhoneState =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00182">182</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a04d82117ceb8d728b5f3db7b99e034dc" name="a04d82117ceb8d728b5f3db7b99e034dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d82117ceb8d728b5f3db7b99e034dc">&#9670;&#160;</a></span>iReceiveTimeOutTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long iReceiveTimeOutTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00359">359</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a109350d008f8b716eb29304e580fb1fd" name="a109350d008f8b716eb29304e580fb1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109350d008f8b716eb29304e580fb1fd">&#9670;&#160;</a></span>json_configs_cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t json_configs_cnt = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00179">179</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6ba6987f7ee99e600f0dbf6fbca49db1" name="a6ba6987f7ee99e600f0dbf6fbca49db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba6987f7ee99e600f0dbf6fbca49db1">&#9670;&#160;</a></span>led_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long led_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00373">373</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a28e564f1010b28d3e1ccc91e2f48c2d0" name="a28e564f1010b28d3e1ccc91e2f48c2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e564f1010b28d3e1ccc91e2f48c2d0">&#9670;&#160;</a></span>mcp_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long mcp_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00427">427</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a75192623c088d57de02f8803296eaa96" name="a75192623c088d57de02f8803296eaa96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75192623c088d57de02f8803296eaa96">&#9670;&#160;</a></span>oldDeviceConnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool oldDeviceConnected = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00171">171</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a91ee63dd24a702a6b71474783c75a66c" name="a91ee63dd24a702a6b71474783c75a66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ee63dd24a702a6b71474783c75a66c">&#9670;&#160;</a></span>PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PIN = 000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00173">173</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab78f175d770cd73c0c2aa86834f65dd4" name="ab78f175d770cd73c0c2aa86834f65dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78f175d770cd73c0c2aa86834f65dd4">&#9670;&#160;</a></span>pixels_delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long pixels_delay = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00430">430</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9669d1fd176877827aff8789f184e2ee" name="a9669d1fd176877827aff8789f184e2ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9669d1fd176877827aff8789f184e2ee">&#9670;&#160;</a></span>pServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NimBLEServer* pServer = <a class="el" href="_stdio_stream_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00167">167</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a04ade24a0002c1ba23ec5f6120ab1150" name="a04ade24a0002c1ba23ec5f6120ab1150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ade24a0002c1ba23ec5f6120ab1150">&#9670;&#160;</a></span>pService</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NimBLEService* pService</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00169">169</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8f559f553962ab796601b4aff0573c8c" name="a8f559f553962ab796601b4aff0573c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f559f553962ab796601b4aff0573c8c">&#9670;&#160;</a></span>pTxCharacteristic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NimBLECharacteristic* pTxCharacteristic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00168">168</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac82d0af9ee9d53af2b2c5855453a1175" name="ac82d0af9ee9d53af2b2c5855453a1175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac82d0af9ee9d53af2b2c5855453a1175">&#9670;&#160;</a></span>receiveFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool receiveFlag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00355">355</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a53253f0dabe019100f1caff56bd9c5ac" name="a53253f0dabe019100f1caff56bd9c5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53253f0dabe019100f1caff56bd9c5ac">&#9670;&#160;</a></span>retransmit_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long retransmit_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00370">370</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4d927d50eea8431ab8f8844176f2200" name="ac4d927d50eea8431ab8f8844176f2200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d927d50eea8431ab8f8844176f2200">&#9670;&#160;</a></span>rtc_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long rtc_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00429">429</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5f6d3eb21f11205975454cd1b78718c6" name="a5f6d3eb21f11205975454cd1b78718c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6d3eb21f11205975454cd1b78718c6">&#9670;&#160;</a></span>scanFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool scanFlag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00367">367</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a152060ba19a098c1e50083622adf909e" name="a152060ba19a098c1e50083622adf909e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152060ba19a098c1e50083622adf909e">&#9670;&#160;</a></span>serverCallbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_my_server_callbacks.html">MyServerCallbacks</a> serverCallbacks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9768ebf0af3d7969f21011c3a709ad3b" name="a9768ebf0af3d7969f21011c3a709ad3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9768ebf0af3d7969f21011c3a709ad3b">&#9670;&#160;</a></span>softser_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long softser_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00428">428</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a27f3fd6bae71e73f3c13bb57945845a6" name="a27f3fd6bae71e73f3c13bb57945845a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f3fd6bae71e73f3c13bb57945845a6">&#9670;&#160;</a></span>str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String str</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00142">142</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a31457e98263dfd64879d4f957a30b365" name="a31457e98263dfd64879d4f957a30b365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31457e98263dfd64879d4f957a30b365">&#9670;&#160;</a></span>strDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00140">140</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8975bd293643341b62e4e5a7810d2efc" name="a8975bd293643341b62e4e5a7810d2efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8975bd293643341b62e4e5a7810d2efc">&#9670;&#160;</a></span>strText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strText = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00141">141</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae7919a5a33dc114f962ce17667156789" name="ae7919a5a33dc114f962ce17667156789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7919a5a33dc114f962ce17667156789">&#9670;&#160;</a></span>strTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00139">139</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2cb3f94db4417fc943e9c495a41bbbd4" name="a2cb3f94db4417fc943e9c495a41bbbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb3f94db4417fc943e9c495a41bbbd4">&#9670;&#160;</a></span>textbuff_phone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char textbuff_phone[<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="phone__commands_8cpp_source.html#l00017">17</a> der Datei <a class="el" href="phone__commands_8cpp_source.html">phone_commands.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a90f2bff1452c67c82041a8227baa0076" name="a90f2bff1452c67c82041a8227baa0076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f2bff1452c67c82041a8227baa0076">&#9670;&#160;</a></span>timeStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t timeStamp = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00418">418</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a12e6be2c9c597bd4b486715097191a92" name="a12e6be2c9c597bd4b486715097191a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e6be2c9c597bd4b486715097191a92">&#9670;&#160;</a></span>transmissionState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int transmissionState = RADIOLIB_ERR_UNKNOWN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00352">352</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6682447b91460a8d30e5034572f22010" name="a6682447b91460a8d30e5034572f22010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6682447b91460a8d30e5034572f22010">&#9670;&#160;</a></span>transmittedFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool transmittedFlag = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00363">363</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad31ead5d96c93e83de7b07604d25a819" name="ad31ead5d96c93e83de7b07604d25a819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31ead5d96c93e83de7b07604d25a819">&#9670;&#160;</a></span>txt_msg_len_phone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t txt_msg_len_phone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="phone__commands_8cpp_source.html#l00018">18</a> der Datei <a class="el" href="phone__commands_8cpp_source.html">phone_commands.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a91006b281784fe6edf06581cad7f4cb4" name="a91006b281784fe6edf06581cad7f4cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91006b281784fe6edf06581cad7f4cb4">&#9670;&#160;</a></span>updateTimeClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long updateTimeClient = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00376">376</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc98d8c6f3701a5a0c2e749cf2512b20" name="acc98d8c6f3701a5a0c2e749cf2512b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc98d8c6f3701a5a0c2e749cf2512b20">&#9670;&#160;</a></span>wifi_active_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long wifi_active_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="esp32__main_8cpp_source.html#l00432">432</a> der Datei <a class="el" href="esp32__main_8cpp_source.html">esp32_main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_d35e8d9c847c512a0480f8070ffef7ed.html">esp32</a></li><li class="navelem"><a href="esp32__main_8cpp.html">esp32_main.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

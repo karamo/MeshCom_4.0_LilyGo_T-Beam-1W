@@ -1,0 +1,1372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/nrf52/nrf52_main.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('nrf52__main_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">nrf52_main.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;SX126x-RAK4630.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="nrf52__functions_8h_source.html">nrf52_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="extudp__functions_8h_source.html">extudp_functions.h</a>&gt;</code><br />
+<code>#include &lt;TinyGPSPlus.h&gt;</code><br />
+<code>#include &quot;Adafruit_SHTC3.h&quot;</code><br />
+<code>#include &quot;Adafruit_LPS2X.h&quot;</code><br />
+<code>#include &lt;RAK13800_W5100S.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_wis_block-_a_p_i_8h_source.html">WisBlock-API.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="nrf__eth_8h_source.html">nrf_eth.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="onebutton__functions_8h_source.html">onebutton_functions.h</a>&quot;</code><br />
+<code>#include &lt;OneButton.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__setchip_8h_source.html">lora_setchip.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions_8h_source.html">loop_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loop__functions__extern_8h_source.html">loop_functions_extern.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="command__functions_8h_source.html">command_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="aprs__functions_8h_source.html">aprs_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="batt__functions_8h_source.html">batt_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lora__functions_8h_source.html">lora_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="udp__functions_8h_source.html">udp_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="web__functions_8h_source.html">web_functions/web_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="phone__commands_8h_source.html">phone_commands.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mheard__functions_8h_source.html">mheard_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="clock_8h_source.html">clock.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="bmx280_8h_source.html">bmx280.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="bme680_8h_source.html">bme680.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mcu811_8h_source.html">mcu811.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io__functions_8h_source.html">io_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ina226__functions_8h_source.html">ina226_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rtc__functions_8h_source.html">rtc_functions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="softser__functions_8h_source.html">softser_functions.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="onewire__functions_8h_source.html">onewire_functions.h</a>&gt;</code><br />
+<code>#include &lt;SparkFun_u-blox_GNSS_Arduino_Library.h&gt;</code><br />
+<code>#include &lt;U8g2lib.h&gt;</code><br />
+</div>
+<p><a href="nrf52__main_8cpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a43cd45f2cfaa27c04cd9e8268ec40a2b" id="r_a43cd45f2cfaa27c04cd9e8268ec40a2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43cd45f2cfaa27c04cd9e8268ec40a2b">POWER_ENABLE</a>&#160;&#160;&#160;WB_IO2</td></tr>
+<tr class="memitem:abbc8382ae4ea521f03c119a14478b759" id="r_abbc8382ae4ea521f03c119a14478b759"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc8382ae4ea521f03c119a14478b759">LEFT_BUTTON</a>&#160;&#160;&#160;WB_IO3</td></tr>
+<tr class="memitem:aea4935ff922fa4fbbc0f03fc250e268b" id="r_aea4935ff922fa4fbbc0f03fc250e268b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea4935ff922fa4fbbc0f03fc250e268b">MIDDLE_BUTTON</a>&#160;&#160;&#160;WB_IO5</td></tr>
+<tr class="memitem:aeb17351958162535ab6af2cd6b030955" id="r_aeb17351958162535ab6af2cd6b030955"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb17351958162535ab6af2cd6b030955">RIGHT_BUTTON</a>&#160;&#160;&#160;WB_IO6</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:ab5cfe96829f0227d3835cbf0ac8a4140" id="r_ab5cfe96829f0227d3835cbf0ac8a4140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5cfe96829f0227d3835cbf0ac8a4140">sendUDP</a> ()</td></tr>
+<tr class="memdesc:ab5cfe96829f0227d3835cbf0ac8a4140"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP tx Routine.  <br /></td></tr>
+<tr class="memitem:ab5aff384aaf666fd757c28f72b72b40a" id="r_ab5aff384aaf666fd757c28f72b72b40a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5aff384aaf666fd757c28f72b72b40a">sendHeartbeat</a> ()</td></tr>
+<tr class="memdesc:ab5aff384aaf666fd757c28f72b72b40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to send our heartbeat longanme0x000xAABBCCDDKEEPGW0110x00 GW_ID.  <br /></td></tr>
+<tr class="memitem:aa60aaaeadbd4b099cb442c2dac30efc0" id="r_aa60aaaeadbd4b099cb442c2dac30efc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60aaaeadbd4b099cb442c2dac30efc0">asm</a> (&quot;.global _scanf_float&quot;)</td></tr>
+<tr class="memitem:abf9daa62d261abcac1e4cb27c9e72adf" id="r_abf9daa62d261abcac1e4cb27c9e72adf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9daa62d261abcac1e4cb27c9e72adf">asm</a> (&quot;.global _printf_float&quot;)</td></tr>
+<tr class="memitem:a39160e976b345ba90c29d939fac873ae" id="r_a39160e976b345ba90c29d939fac873ae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39160e976b345ba90c29d939fac873ae">getGPS</a> (void)</td></tr>
+<tr class="memdesc:a39160e976b345ba90c29d939fac873ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for handling a LoRa tx timer timeout event.  <br /></td></tr>
+<tr class="memitem:a9f723ab62a1a631dc528dbf44ca7d671" id="r_a9f723ab62a1a631dc528dbf44ca7d671"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f723ab62a1a631dc528dbf44ca7d671">getTEMP</a> (void)</td></tr>
+<tr class="memdesc:a9f723ab62a1a631dc528dbf44ca7d671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for handling a LoRa tx timer timeout event.  <br /></td></tr>
+<tr class="memitem:a7b7cddc355a93e6cc6149338dd032026" id="r_a7b7cddc355a93e6cc6149338dd032026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b7cddc355a93e6cc6149338dd032026">getPRESSURE</a> (void)</td></tr>
+<tr class="memdesc:a7b7cddc355a93e6cc6149338dd032026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for handling a LoRa tx timer timeout event.  <br /></td></tr>
+<tr class="memitem:a89210437ebf619f1f7feb6d503e52120" id="r_a89210437ebf619f1f7feb6d503e52120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89210437ebf619f1f7feb6d503e52120">interruptHandle1</a> ()</td></tr>
+<tr class="memitem:aa8aa83676440ba8962b3697bdd87dec7" id="r_aa8aa83676440ba8962b3697bdd87dec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8aa83676440ba8962b3697bdd87dec7">interruptHandle2</a> ()</td></tr>
+<tr class="memitem:a7110b649d8a12b4cd32399960aaf3f8d" id="r_a7110b649d8a12b4cd32399960aaf3f8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7110b649d8a12b4cd32399960aaf3f8d">interruptHandle3</a> ()</td></tr>
+<tr class="memitem:a24dcb17fef248ad0395942962b347f3a" id="r_a24dcb17fef248ad0395942962b347f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24dcb17fef248ad0395942962b347f3a">blinkLED</a> ()</td></tr>
+<tr class="memdesc:a24dcb17fef248ad0395942962b347f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check if the modem detected a preamble.  <br /></td></tr>
+<tr class="memitem:acc4493d766e8543d1e194445ef2b69b1" id="r_acc4493d766e8543d1e194445ef2b69b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc4493d766e8543d1e194445ef2b69b1">blinkLED2</a> ()</td></tr>
+<tr class="memitem:aba6642ae46716880afdcb50dce40f8a4" id="r_aba6642ae46716880afdcb50dce40f8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba6642ae46716880afdcb50dce40f8a4">checkSerialCommand</a> (void)</td></tr>
+<tr class="memitem:a631a62700a8a5c69bdc326c953d7e5ee" id="r_a631a62700a8a5c69bdc326c953d7e5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631a62700a8a5c69bdc326c953d7e5ee">getMacAddr</a> (uint8_t *<a class="el" href="#ac77639d3bbdc03ab2d0fcee1829e3cc3">dmac</a>)</td></tr>
+<tr class="memitem:ac5977b3237b6f96b58d3fdf2e4470a63" id="r_ac5977b3237b6f96b58d3fdf2e4470a63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5977b3237b6f96b58d3fdf2e4470a63">RadioInit</a> ()</td></tr>
+<tr class="memitem:a299970f9ef308f01c93baef0bc11c72f" id="r_a299970f9ef308f01c93baef0bc11c72f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a299970f9ef308f01c93baef0bc11c72f">nrf52setup</a> ()</td></tr>
+<tr class="memitem:a084481218b3b2e9e863e347e4041abcc" id="r_a084481218b3b2e9e863e347e4041abcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a084481218b3b2e9e863e347e4041abcc">nrf52loop</a> ()</td></tr>
+<tr class="memitem:a0858beff952b934215ca017a97844f05" id="r_a0858beff952b934215ca017a97844f05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0858beff952b934215ca017a97844f05">direction_parse</a> (String tmp)</td></tr>
+<tr class="memdesc:a0858beff952b934215ca017a97844f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for analytical direction.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:ac015cd7d20948ab9a504ae13833dedb9" id="r_ac015cd7d20948ab9a504ae13833dedb9"><td class="memItemLeft" align="right" valign="top">OneButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac015cd7d20948ab9a504ae13833dedb9">btn</a></td></tr>
+<tr class="memitem:a30fd61ba1e7e2fbbbd8776bffc99f291" id="r_a30fd61ba1e7e2fbbbd8776bffc99f291"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_nrf_e_t_h.html">NrfETH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30fd61ba1e7e2fbbbd8776bffc99f291">neth</a></td></tr>
+<tr class="memitem:a53253f0dabe019100f1caff56bd9c5ac" id="r_a53253f0dabe019100f1caff56bd9c5ac"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53253f0dabe019100f1caff56bd9c5ac">retransmit_timer</a> = 0</td></tr>
+<tr class="memitem:a91006b281784fe6edf06581cad7f4cb4" id="r_a91006b281784fe6edf06581cad7f4cb4"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91006b281784fe6edf06581cad7f4cb4">updateTimeClient</a> = 0</td></tr>
+<tr class="memitem:a6887d37aff4bc9ff5fc98dcf0580c1cd" id="r_a6887d37aff4bc9ff5fc98dcf0580c1cd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6887d37aff4bc9ff5fc98dcf0580c1cd">dhcp_timer</a> = 0</td></tr>
+<tr class="memitem:afab5dbed6e50124d1429bcc52a27b787" id="r_afab5dbed6e50124d1429bcc52a27b787"><td class="memItemLeft" align="right" valign="top">SFE_UBLOX_GNSS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afab5dbed6e50124d1429bcc52a27b787">myGPS</a></td></tr>
+<tr class="memitem:a89f234133d3efe315836311cbf21c64b" id="r_a89f234133d3efe315836311cbf21c64b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89f234133d3efe315836311cbf21c64b">state</a> = 0</td></tr>
+<tr class="memitem:abb22c0bf1747d1fb0b61c165ff381874" id="r_abb22c0bf1747d1fb0b61c165ff381874"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb22c0bf1747d1fb0b61c165ff381874">bMitHardReset</a> = false</td></tr>
+<tr class="memitem:ae7919a5a33dc114f962ce17667156789" id="r_ae7919a5a33dc114f962ce17667156789"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7919a5a33dc114f962ce17667156789">strTime</a></td></tr>
+<tr class="memitem:a31457e98263dfd64879d4f957a30b365" id="r_a31457e98263dfd64879d4f957a30b365"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31457e98263dfd64879d4f957a30b365">strDate</a></td></tr>
+<tr class="memitem:a04d82117ceb8d728b5f3db7b99e034dc" id="r_a04d82117ceb8d728b5f3db7b99e034dc"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d82117ceb8d728b5f3db7b99e034dc">iReceiveTimeOutTime</a> = 0</td></tr>
+<tr class="memitem:abf4b9baa37b267ea00f8b5c68dbb82d8" id="r_abf4b9baa37b267ea00f8b5c68dbb82d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4b9baa37b267ea00f8b5c68dbb82d8">g_meshcom_initialized</a></td></tr>
+<tr class="memitem:a06f528dc9abac6bdb3b67735ba38f19d" id="r_a06f528dc9abac6bdb3b67735ba38f19d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06f528dc9abac6bdb3b67735ba38f19d">init_flash_done</a> =false</td></tr>
+<tr class="memitem:af26741e86061aa4466b11420af4b7ef4" id="r_af26741e86061aa4466b11420af4b7ef4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26741e86061aa4466b11420af4b7ef4">bPosFirst</a> = true</td></tr>
+<tr class="memitem:a21cb1a99e627b4d9ed7410da8b453687" id="r_a21cb1a99e627b4d9ed7410da8b453687"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21cb1a99e627b4d9ed7410da8b453687">bHeyFirst</a> = true</td></tr>
+<tr class="memitem:a7e4c7699a9f44b4c1313e128892baeee" id="r_a7e4c7699a9f44b4c1313e128892baeee"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e4c7699a9f44b4c1313e128892baeee">iPhoneState</a> = 0</td></tr>
+<tr class="memitem:ad220f1f9076203037c387a45880b69d6" id="r_ad220f1f9076203037c387a45880b69d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad220f1f9076203037c387a45880b69d6">config_to_phone_prepare</a> = false</td></tr>
+<tr class="memitem:ae4e94b31f41d9ba9bc675c036be013bf" id="r_ae4e94b31f41d9ba9bc675c036be013bf"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e94b31f41d9ba9bc675c036be013bf">config_to_phone_prepare_timer</a> = 0</td></tr>
+<tr class="memitem:aab93e1f518ed4dee5c4dc3e29f5cfed6" id="r_aab93e1f518ed4dee5c4dc3e29f5cfed6"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab93e1f518ed4dee5c4dc3e29f5cfed6">config_to_phone_datetime_timer</a> = 0</td></tr>
+<tr class="memitem:a109350d008f8b716eb29304e580fb1fd" id="r_a109350d008f8b716eb29304e580fb1fd"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a> = 9</td></tr>
+<tr class="memitem:ace05aafcdae78fd3af5be55ebd2ed7d7" id="r_ace05aafcdae78fd3af5be55ebd2ed7d7"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace05aafcdae78fd3af5be55ebd2ed7d7">config_cmds</a> [<a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a>][20] = {&quot;--info&quot;, &quot;--seset&quot;, &quot;--wifiset&quot;, &quot;--nodeset&quot;, &quot;--wx&quot;, &quot;--pos&quot;, &quot;--aprsset&quot;, &quot;--io&quot;, &quot;--tel&quot;}</td></tr>
+<tr class="memitem:adb87b824b648737112878050d60993e6" id="r_adb87b824b648737112878050d60993e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb87b824b648737112878050d60993e6">config_cmds_index</a> = 0</td></tr>
+<tr class="memitem:a2cb3f94db4417fc943e9c495a41bbbd4" id="r_a2cb3f94db4417fc943e9c495a41bbbd4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cb3f94db4417fc943e9c495a41bbbd4">textbuff_phone</a> [<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td></tr>
+<tr class="memitem:ad31ead5d96c93e83de7b07604d25a819" id="r_ad31ead5d96c93e83de7b07604d25a819"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31ead5d96c93e83de7b07604d25a819">txt_msg_len_phone</a></td></tr>
+<tr class="memitem:a9e428739fffdb3984fde235544ec779b" id="r_a9e428739fffdb3984fde235544ec779b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e428739fffdb3984fde235544ec779b">ble_busy_flag</a></td></tr>
+<tr class="memitem:a5aa24bdce5877534cc1750a7b833095d" id="r_a5aa24bdce5877534cc1750a7b833095d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aa24bdce5877534cc1750a7b833095d">err_cnt_udp_tx</a> = 0</td></tr>
+<tr class="memitem:a8975bd293643341b62e4e5a7810d2efc" id="r_a8975bd293643341b62e4e5a7810d2efc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8975bd293643341b62e4e5a7810d2efc">strText</a> =&quot;&quot;</td></tr>
+<tr class="memitem:ad955f4a2531e8970deddd93fe984cbd9" id="r_ad955f4a2531e8970deddd93fe984cbd9"><td class="memItemLeft" align="right" valign="top">TinyGPSPlus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad955f4a2531e8970deddd93fe984cbd9">tinyGPSPlus</a></td></tr>
+<tr class="memitem:afd4a60a157c317d09bc5cd2e5b4ea2ce" id="r_afd4a60a157c317d09bc5cd2e5b4ea2ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd4a60a157c317d09bc5cd2e5b4ea2ce">direction_S_N</a> = 0</td></tr>
+<tr class="memitem:a8cb2826154872e8a150a025b6de5008b" id="r_a8cb2826154872e8a150a025b6de5008b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cb2826154872e8a150a025b6de5008b">direction_E_W</a> = 0</td></tr>
+<tr class="memitem:a0b38626c9460b6f2be0f4e91d5ba2f50" id="r_a0b38626c9460b6f2be0f4e91d5ba2f50"><td class="memItemLeft" align="right" valign="top">Adafruit_SHTC3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b38626c9460b6f2be0f4e91d5ba2f50">shtc3</a> = Adafruit_SHTC3()</td></tr>
+<tr class="memitem:a3cc4b8edb547c9dad3ac80bd4516d338" id="r_a3cc4b8edb547c9dad3ac80bd4516d338"><td class="memItemLeft" align="right" valign="top">Adafruit_LPS22&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cc4b8edb547c9dad3ac80bd4516d338">g_lps22hb</a></td></tr>
+<tr class="memitem:a57ec03b024119d0f364fa7c0d1a0691e" id="r_a57ec03b024119d0f364fa7c0d1a0691e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57ec03b024119d0f364fa7c0d1a0691e">gKeyNum</a> = 0</td></tr>
+<tr class="memitem:abfaf3fc2d75d33eea8d318f76ec53066" id="r_abfaf3fc2d75d33eea8d318f76ec53066"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfaf3fc2d75d33eea8d318f76ec53066">iGPSCount</a> =0</td></tr>
+<tr class="memitem:a2c99c95e3023a1f842690c05143d9598" id="r_a2c99c95e3023a1f842690c05143d9598"><td class="memItemLeft" align="right" valign="top">U8G2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c99c95e3023a1f842690c05143d9598">u8g2</a></td></tr>
+<tr class="memitem:a71ce8de5b00a8ade5457e12b4aed2660" id="r_a71ce8de5b00a8ade5457e12b4aed2660"><td class="memItemLeft" align="right" valign="top">U8G2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71ce8de5b00a8ade5457e12b4aed2660">u8g2_1</a></td></tr>
+<tr class="memitem:ace375fe6a53c08c916fe29674a1ef540" id="r_ace375fe6a53c08c916fe29674a1ef540"><td class="memItemLeft" align="right" valign="top">U8G2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace375fe6a53c08c916fe29674a1ef540">u8g2_2</a></td></tr>
+<tr class="memitem:ac2a8dfb1eb66f960781d464dccbeb787" id="r_ac2a8dfb1eb66f960781d464dccbeb787"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a8dfb1eb66f960781d464dccbeb787">gps_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:a28e564f1010b28d3e1ccc91e2f48c2d0" id="r_a28e564f1010b28d3e1ccc91e2f48c2d0"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e564f1010b28d3e1ccc91e2f48c2d0">mcp_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:a9768ebf0af3d7969f21011c3a709ad3b" id="r_a9768ebf0af3d7969f21011c3a709ad3b"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9768ebf0af3d7969f21011c3a709ad3b">softser_refresh_timer</a> = 0</td></tr>
+<tr class="memitem:ac77639d3bbdc03ab2d0fcee1829e3cc3" id="r_ac77639d3bbdc03ab2d0fcee1829e3cc3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77639d3bbdc03ab2d0fcee1829e3cc3">dmac</a> [6]</td></tr>
+<tr class="memitem:aedc61e0173a3e38b63e60dfcdca22e78" id="r_aedc61e0173a3e38b63e60dfcdca22e78"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc61e0173a3e38b63e60dfcdca22e78">g_ble_dev_name</a> [10] = &quot;MC&quot;</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="abbc8382ae4ea521f03c119a14478b759" name="abbc8382ae4ea521f03c119a14478b759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc8382ae4ea521f03c119a14478b759">&#9670;&#160;</a></span>LEFT_BUTTON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFT_BUTTON&#160;&#160;&#160;WB_IO3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00233">233</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aea4935ff922fa4fbbc0f03fc250e268b" name="aea4935ff922fa4fbbc0f03fc250e268b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4935ff922fa4fbbc0f03fc250e268b">&#9670;&#160;</a></span>MIDDLE_BUTTON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIDDLE_BUTTON&#160;&#160;&#160;WB_IO5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00234">234</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a43cd45f2cfaa27c04cd9e8268ec40a2b" name="a43cd45f2cfaa27c04cd9e8268ec40a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43cd45f2cfaa27c04cd9e8268ec40a2b">&#9670;&#160;</a></span>POWER_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWER_ENABLE&#160;&#160;&#160;WB_IO2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00231">231</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeb17351958162535ab6af2cd6b030955" name="aeb17351958162535ab6af2cd6b030955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb17351958162535ab6af2cd6b030955">&#9670;&#160;</a></span>RIGHT_BUTTON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHT_BUTTON&#160;&#160;&#160;WB_IO6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00235">235</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="abf9daa62d261abcac1e4cb27c9e72adf" name="abf9daa62d261abcac1e4cb27c9e72adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9daa62d261abcac1e4cb27c9e72adf">&#9670;&#160;</a></span>asm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;.global _printf_float&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60aaaeadbd4b099cb442c2dac30efc0" name="aa60aaaeadbd4b099cb442c2dac30efc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60aaaeadbd4b099cb442c2dac30efc0">&#9670;&#160;</a></span>asm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;.global _scanf_float&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24dcb17fef248ad0395942962b347f3a" name="a24dcb17fef248ad0395942962b347f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dcb17fef248ad0395942962b347f3a">&#9670;&#160;</a></span>blinkLED()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void blinkLED </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to check if the modem detected a preamble. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01700">1700</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc4493d766e8543d1e194445ef2b69b1" name="acc4493d766e8543d1e194445ef2b69b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4493d766e8543d1e194445ef2b69b1">&#9670;&#160;</a></span>blinkLED2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void blinkLED2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01707">1707</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aba6642ae46716880afdcb50dce40f8a4" name="aba6642ae46716880afdcb50dce40f8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6642ae46716880afdcb50dce40f8a4">&#9670;&#160;</a></span>checkSerialCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkSerialCommand </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01870">1870</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0858beff952b934215ca017a97844f05" name="a0858beff952b934215ca017a97844f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0858beff952b934215ca017a97844f05">&#9670;&#160;</a></span>direction_parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void direction_parse </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>tmp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for analytical direction. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01769">1769</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a39160e976b345ba90c29d939fac873ae" name="a39160e976b345ba90c29d939fac873ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39160e976b345ba90c29d939fac873ae">&#9670;&#160;</a></span>getGPS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int getGPS </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for handling a LoRa tx timer timeout event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01792">1792</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a631a62700a8a5c69bdc326c953d7e5ee" name="a631a62700a8a5c69bdc326c953d7e5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631a62700a8a5c69bdc326c953d7e5ee">&#9670;&#160;</a></span>getMacAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getMacAddr </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dmac</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00291">291</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b7cddc355a93e6cc6149338dd032026" name="a7b7cddc355a93e6cc6149338dd032026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7cddc355a93e6cc6149338dd032026">&#9670;&#160;</a></span>getPRESSURE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getPRESSURE </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for handling a LoRa tx timer timeout event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01735">1735</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9f723ab62a1a631dc528dbf44ca7d671" name="a9f723ab62a1a631dc528dbf44ca7d671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f723ab62a1a631dc528dbf44ca7d671">&#9670;&#160;</a></span>getTEMP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getTEMP </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for handling a LoRa tx timer timeout event. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01717">1717</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a89210437ebf619f1f7feb6d503e52120" name="a89210437ebf619f1f7feb6d503e52120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89210437ebf619f1f7feb6d503e52120">&#9670;&#160;</a></span>interruptHandle1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interruptHandle1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00241">241</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa8aa83676440ba8962b3697bdd87dec7" name="aa8aa83676440ba8962b3697bdd87dec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8aa83676440ba8962b3697bdd87dec7">&#9670;&#160;</a></span>interruptHandle2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interruptHandle2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00250">250</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7110b649d8a12b4cd32399960aaf3f8d" name="a7110b649d8a12b4cd32399960aaf3f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7110b649d8a12b4cd32399960aaf3f8d">&#9670;&#160;</a></span>interruptHandle3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interruptHandle3 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00259">259</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a084481218b3b2e9e863e347e4041abcc" name="a084481218b3b2e9e863e347e4041abcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084481218b3b2e9e863e347e4041abcc">&#9670;&#160;</a></span>nrf52loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nrf52loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00901">901</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a299970f9ef308f01c93baef0bc11c72f" name="a299970f9ef308f01c93baef0bc11c72f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299970f9ef308f01c93baef0bc11c72f">&#9670;&#160;</a></span>nrf52setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nrf52setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00308">308</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac5977b3237b6f96b58d3fdf2e4470a63" name="ac5977b3237b6f96b58d3fdf2e4470a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5977b3237b6f96b58d3fdf2e4470a63">&#9670;&#160;</a></span>RadioInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RadioInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00302">302</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab5aff384aaf666fd757c28f72b72b40a" name="ab5aff384aaf666fd757c28f72b72b40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5aff384aaf666fd757c28f72b72b40a">&#9670;&#160;</a></span>sendHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to send our heartbeat longanme0x000xAABBCCDDKEEPGW0110x00 GW_ID. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l02028">2028</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab5cfe96829f0227d3835cbf0ac8a4140" name="ab5cfe96829f0227d3835cbf0ac8a4140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cfe96829f0227d3835cbf0ac8a4140">&#9670;&#160;</a></span>sendUDP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendUDP </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UDP tx Routine. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l01947">1947</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="a21cb1a99e627b4d9ed7410da8b453687" name="a21cb1a99e627b4d9ed7410da8b453687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cb1a99e627b4d9ed7410da8b453687">&#9670;&#160;</a></span>bHeyFirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bHeyFirst = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00169">169</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e428739fffdb3984fde235544ec779b" name="a9e428739fffdb3984fde235544ec779b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e428739fffdb3984fde235544ec779b">&#9670;&#160;</a></span>ble_busy_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ble_busy_flag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="phone__commands_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="phone__commands_8cpp_source.html">phone_commands.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb22c0bf1747d1fb0b61c165ff381874" name="abb22c0bf1747d1fb0b61c165ff381874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb22c0bf1747d1fb0b61c165ff381874">&#9670;&#160;</a></span>bMitHardReset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bMitHardReset = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00081">81</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af26741e86061aa4466b11420af4b7ef4" name="af26741e86061aa4466b11420af4b7ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26741e86061aa4466b11420af4b7ef4">&#9670;&#160;</a></span>bPosFirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bPosFirst = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00168">168</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac015cd7d20948ab9a504ae13833dedb9" name="ac015cd7d20948ab9a504ae13833dedb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac015cd7d20948ab9a504ae13833dedb9">&#9670;&#160;</a></span>btn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OneButton btn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00028">28</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ace05aafcdae78fd3af5be55ebd2ed7d7" name="ace05aafcdae78fd3af5be55ebd2ed7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace05aafcdae78fd3af5be55ebd2ed7d7">&#9670;&#160;</a></span>config_cmds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char config_cmds[<a class="el" href="#a109350d008f8b716eb29304e580fb1fd">json_configs_cnt</a>][20] = {&quot;--info&quot;, &quot;--seset&quot;, &quot;--wifiset&quot;, &quot;--nodeset&quot;, &quot;--wx&quot;, &quot;--pos&quot;, &quot;--aprsset&quot;, &quot;--io&quot;, &quot;--tel&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00177">177</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adb87b824b648737112878050d60993e6" name="adb87b824b648737112878050d60993e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb87b824b648737112878050d60993e6">&#9670;&#160;</a></span>config_cmds_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t config_cmds_index = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00178">178</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aab93e1f518ed4dee5c4dc3e29f5cfed6" name="aab93e1f518ed4dee5c4dc3e29f5cfed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab93e1f518ed4dee5c4dc3e29f5cfed6">&#9670;&#160;</a></span>config_to_phone_datetime_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long config_to_phone_datetime_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00175">175</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad220f1f9076203037c387a45880b69d6" name="ad220f1f9076203037c387a45880b69d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad220f1f9076203037c387a45880b69d6">&#9670;&#160;</a></span>config_to_phone_prepare</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool config_to_phone_prepare = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00173">173</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4e94b31f41d9ba9bc675c036be013bf" name="ae4e94b31f41d9ba9bc675c036be013bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e94b31f41d9ba9bc675c036be013bf">&#9670;&#160;</a></span>config_to_phone_prepare_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long config_to_phone_prepare_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00174">174</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6887d37aff4bc9ff5fc98dcf0580c1cd" name="a6887d37aff4bc9ff5fc98dcf0580c1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6887d37aff4bc9ff5fc98dcf0580c1cd">&#9670;&#160;</a></span>dhcp_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dhcp_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00040">40</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8cb2826154872e8a150a025b6de5008b" name="a8cb2826154872e8a150a025b6de5008b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb2826154872e8a150a025b6de5008b">&#9670;&#160;</a></span>direction_E_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int direction_E_W = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00211">211</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afd4a60a157c317d09bc5cd2e5b4ea2ce" name="afd4a60a157c317d09bc5cd2e5b4ea2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4a60a157c317d09bc5cd2e5b4ea2ce">&#9670;&#160;</a></span>direction_S_N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int direction_S_N = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00210">210</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac77639d3bbdc03ab2d0fcee1829e3cc3" name="ac77639d3bbdc03ab2d0fcee1829e3cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77639d3bbdc03ab2d0fcee1829e3cc3">&#9670;&#160;</a></span>dmac</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dmac[6]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00286">286</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5aa24bdce5877534cc1750a7b833095d" name="a5aa24bdce5877534cc1750a7b833095d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa24bdce5877534cc1750a7b833095d">&#9670;&#160;</a></span>err_cnt_udp_tx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t err_cnt_udp_tx = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00203">203</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aedc61e0173a3e38b63e60dfcdca22e78" name="aedc61e0173a3e38b63e60dfcdca22e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc61e0173a3e38b63e60dfcdca22e78">&#9670;&#160;</a></span>g_ble_dev_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char g_ble_dev_name[10] = &quot;MC&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the device name, max length is 10 characters </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00289">289</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3cc4b8edb547c9dad3ac80bd4516d338" name="a3cc4b8edb547c9dad3ac80bd4516d338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc4b8edb547c9dad3ac80bd4516d338">&#9670;&#160;</a></span>g_lps22hb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_LPS22 g_lps22hb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00220">220</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abf4b9baa37b267ea00f8b5c68dbb82d8" name="abf4b9baa37b267ea00f8b5c68dbb82d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4b9baa37b267ea00f8b5c68dbb82d8">&#9670;&#160;</a></span>g_meshcom_initialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_meshcom_initialized</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00165">165</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a57ec03b024119d0f364fa7c0d1a0691e" name="a57ec03b024119d0f364fa7c0d1a0691e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ec03b024119d0f364fa7c0d1a0691e">&#9670;&#160;</a></span>gKeyNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gKeyNum = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00237">237</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2a8dfb1eb66f960781d464dccbeb787" name="ac2a8dfb1eb66f960781d464dccbeb787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a8dfb1eb66f960781d464dccbeb787">&#9670;&#160;</a></span>gps_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long gps_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00281">281</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abfaf3fc2d75d33eea8d318f76ec53066" name="abfaf3fc2d75d33eea8d318f76ec53066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfaf3fc2d75d33eea8d318f76ec53066">&#9670;&#160;</a></span>iGPSCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iGPSCount =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00238">238</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a06f528dc9abac6bdb3b67735ba38f19d" name="a06f528dc9abac6bdb3b67735ba38f19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f528dc9abac6bdb3b67735ba38f19d">&#9670;&#160;</a></span>init_flash_done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool init_flash_done =false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00166">166</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e4c7699a9f44b4c1313e128892baeee" name="a7e4c7699a9f44b4c1313e128892baeee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4c7699a9f44b4c1313e128892baeee">&#9670;&#160;</a></span>iPhoneState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t iPhoneState = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00172">172</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a04d82117ceb8d728b5f3db7b99e034dc" name="a04d82117ceb8d728b5f3db7b99e034dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d82117ceb8d728b5f3db7b99e034dc">&#9670;&#160;</a></span>iReceiveTimeOutTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long iReceiveTimeOutTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00163">163</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a109350d008f8b716eb29304e580fb1fd" name="a109350d008f8b716eb29304e580fb1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109350d008f8b716eb29304e580fb1fd">&#9670;&#160;</a></span>json_configs_cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t json_configs_cnt = 9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00176">176</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a28e564f1010b28d3e1ccc91e2f48c2d0" name="a28e564f1010b28d3e1ccc91e2f48c2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e564f1010b28d3e1ccc91e2f48c2d0">&#9670;&#160;</a></span>mcp_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long mcp_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00282">282</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afab5dbed6e50124d1429bcc52a27b787" name="afab5dbed6e50124d1429bcc52a27b787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab5dbed6e50124d1429bcc52a27b787">&#9670;&#160;</a></span>myGPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SFE_UBLOX_GNSS myGPS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00074">74</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a30fd61ba1e7e2fbbbd8776bffc99f291" name="a30fd61ba1e7e2fbbbd8776bffc99f291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fd61ba1e7e2fbbbd8776bffc99f291">&#9670;&#160;</a></span>neth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_nrf_e_t_h.html">NrfETH</a> neth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00031">31</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a53253f0dabe019100f1caff56bd9c5ac" name="a53253f0dabe019100f1caff56bd9c5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53253f0dabe019100f1caff56bd9c5ac">&#9670;&#160;</a></span>retransmit_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long retransmit_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00034">34</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0b38626c9460b6f2be0f4e91d5ba2f50" name="a0b38626c9460b6f2be0f4e91d5ba2f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b38626c9460b6f2be0f4e91d5ba2f50">&#9670;&#160;</a></span>shtc3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_SHTC3 shtc3 = Adafruit_SHTC3()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00216">216</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9768ebf0af3d7969f21011c3a709ad3b" name="a9768ebf0af3d7969f21011c3a709ad3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9768ebf0af3d7969f21011c3a709ad3b">&#9670;&#160;</a></span>softser_refresh_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long softser_refresh_timer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00283">283</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a89f234133d3efe315836311cbf21c64b" name="a89f234133d3efe315836311cbf21c64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f234133d3efe315836311cbf21c64b">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int state = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00080">80</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a31457e98263dfd64879d4f957a30b365" name="a31457e98263dfd64879d4f957a30b365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31457e98263dfd64879d4f957a30b365">&#9670;&#160;</a></span>strDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strDate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00084">84</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8975bd293643341b62e4e5a7810d2efc" name="a8975bd293643341b62e4e5a7810d2efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8975bd293643341b62e4e5a7810d2efc">&#9670;&#160;</a></span>strText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strText =&quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00205">205</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae7919a5a33dc114f962ce17667156789" name="ae7919a5a33dc114f962ce17667156789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7919a5a33dc114f962ce17667156789">&#9670;&#160;</a></span>strTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String strTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00083">83</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2cb3f94db4417fc943e9c495a41bbbd4" name="a2cb3f94db4417fc943e9c495a41bbbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb3f94db4417fc943e9c495a41bbbd4">&#9670;&#160;</a></span>textbuff_phone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char textbuff_phone[<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>BLE Spec Messages to and from the phone need to have flag if it is a Text, Pos Msg or it is a configuration Text/Pos flag: 0x40 Config Flag: 0x80</p>
+<p>Config Message Parameters: Callsign, Lat, Lon, altitude Text/Pos Msg Format: LENGTH 2B - FLAG 1B - MSG xB Config Format: LENGTH 2B - FLAG 1B - LENCALL 1B - Callsign - LAT 4B(Float) - LON 4B(Float) - ALT 4B(INT)</p>
+<p>Hello Message from Phone is: "XXaaYYzz" Config of this device is sent to phone after hello msg from phone </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="phone__commands_8cpp_source.html#l00017">17</a> der Datei <a class="el" href="phone__commands_8cpp_source.html">phone_commands.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad955f4a2531e8970deddd93fe984cbd9" name="ad955f4a2531e8970deddd93fe984cbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad955f4a2531e8970deddd93fe984cbd9">&#9670;&#160;</a></span>tinyGPSPlus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TinyGPSPlus tinyGPSPlus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00208">208</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad31ead5d96c93e83de7b07604d25a819" name="ad31ead5d96c93e83de7b07604d25a819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31ead5d96c93e83de7b07604d25a819">&#9670;&#160;</a></span>txt_msg_len_phone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t txt_msg_len_phone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="phone__commands_8cpp_source.html#l00018">18</a> der Datei <a class="el" href="phone__commands_8cpp_source.html">phone_commands.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c99c95e3023a1f842690c05143d9598" name="a2c99c95e3023a1f842690c05143d9598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c99c95e3023a1f842690c05143d9598">&#9670;&#160;</a></span>u8g2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">U8G2* u8g2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00210">210</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a71ce8de5b00a8ade5457e12b4aed2660" name="a71ce8de5b00a8ade5457e12b4aed2660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ce8de5b00a8ade5457e12b4aed2660">&#9670;&#160;</a></span>u8g2_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">U8G2 u8g2_1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace375fe6a53c08c916fe29674a1ef540" name="ace375fe6a53c08c916fe29674a1ef540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace375fe6a53c08c916fe29674a1ef540">&#9670;&#160;</a></span>u8g2_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">U8G2 u8g2_2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91006b281784fe6edf06581cad7f4cb4" name="a91006b281784fe6edf06581cad7f4cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91006b281784fe6edf06581cad7f4cb4">&#9670;&#160;</a></span>updateTimeClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long updateTimeClient = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="nrf52__main_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="nrf52__main_8cpp_source.html">nrf52_main.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1854326490b7999d1bef60293bec4d48.html">nrf52</a></li><li class="navelem"><a href="nrf52__main_8cpp.html">nrf52_main.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: FatFormatter Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_fat_formatter.html','','class_fat_formatter-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FatFormatter Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Format a FAT volume.  
+ <a href="#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a9ba8056488dcc360aa5d21e02fdc52a2" id="r_a9ba8056488dcc360aa5d21e02fdc52a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ba8056488dcc360aa5d21e02fdc52a2">FatFormatter</a> ()=default</td></tr>
+<tr class="memitem:ab225be993dcdd0220b88ced1e794f6fa" id="r_ab225be993dcdd0220b88ced1e794f6fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab225be993dcdd0220b88ced1e794f6fa">format</a> (<a class="el" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a> *dev, uint8_t *secBuffer, print_t *pr=<a class="el" href="_sys_call_8h.html#ab979d9d4b4923f7c54d6caa6e1a61936">nullptr</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:afb65ae6ae8d5dc13720955643451aaa4" id="r_afb65ae6ae8d5dc13720955643451aaa4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb65ae6ae8d5dc13720955643451aaa4">initFatDir</a> (uint8_t fatType, uint32_t sectorCount)</td></tr>
+<tr class="memitem:a119d530132839305fb40e12ff989dab8" id="r_a119d530132839305fb40e12ff989dab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a119d530132839305fb40e12ff989dab8">initPbs</a> ()</td></tr>
+<tr class="memitem:a24d2c65f32499933ade3fe1dd0addce4" id="r_a24d2c65f32499933ade3fe1dd0addce4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d2c65f32499933ade3fe1dd0addce4">makeFat16</a> ()</td></tr>
+<tr class="memitem:a60d2c3809e3abbcfa6b4bed82bada8f1" id="r_a60d2c3809e3abbcfa6b4bed82bada8f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60d2c3809e3abbcfa6b4bed82bada8f1">makeFat32</a> ()</td></tr>
+<tr class="memitem:abca37f702400b0cb277970b8fc0af980" id="r_abca37f702400b0cb277970b8fc0af980"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abca37f702400b0cb277970b8fc0af980">writeMbr</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a677f58bfde679d61c3a8b46bb3e510c6" id="r_a677f58bfde679d61c3a8b46bb3e510c6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a677f58bfde679d61c3a8b46bb3e510c6">m_capacityMB</a></td></tr>
+<tr class="memitem:a0a5f67f4cd89a40d807043dd93dce91f" id="r_a0a5f67f4cd89a40d807043dd93dce91f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a5f67f4cd89a40d807043dd93dce91f">m_dataStart</a></td></tr>
+<tr class="memitem:a6837953b4a2c80ee094ba3f1e837f8e7" id="r_a6837953b4a2c80ee094ba3f1e837f8e7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6837953b4a2c80ee094ba3f1e837f8e7">m_fatSize</a></td></tr>
+<tr class="memitem:afcc3ff7d4c358cb7ef076e258aab102a" id="r_afcc3ff7d4c358cb7ef076e258aab102a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc3ff7d4c358cb7ef076e258aab102a">m_fatStart</a></td></tr>
+<tr class="memitem:a7194452d4812d0cf3e5873c834390fff" id="r_a7194452d4812d0cf3e5873c834390fff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7194452d4812d0cf3e5873c834390fff">m_relativeSectors</a></td></tr>
+<tr class="memitem:a692d90a3f241a83cf588a81a06a198f2" id="r_a692d90a3f241a83cf588a81a06a198f2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a692d90a3f241a83cf588a81a06a198f2">m_sectorCount</a></td></tr>
+<tr class="memitem:abd223e175fc78d24020f5f81ccdc4b60" id="r_abd223e175fc78d24020f5f81ccdc4b60"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd223e175fc78d24020f5f81ccdc4b60">m_totalSectors</a></td></tr>
+<tr class="memitem:a97f7d14cb74101b78e525fdaf614a672" id="r_a97f7d14cb74101b78e525fdaf614a672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f7d14cb74101b78e525fdaf614a672">m_dev</a></td></tr>
+<tr class="memitem:ad2dff539b758f50dfaeabe3f6e9e9192" id="r_ad2dff539b758f50dfaeabe3f6e9e9192"><td class="memItemLeft" align="right" valign="top">print_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2dff539b758f50dfaeabe3f6e9e9192">m_pr</a></td></tr>
+<tr class="memitem:a6bfbe9316dcb83d2d0be2f749713698d" id="r_a6bfbe9316dcb83d2d0be2f749713698d"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bfbe9316dcb83d2d0be2f749713698d">m_secBuf</a></td></tr>
+<tr class="memitem:a788d846f30a76383525fe7240a672077" id="r_a788d846f30a76383525fe7240a672077"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a788d846f30a76383525fe7240a672077">m_reservedSectorCount</a></td></tr>
+<tr class="memitem:aaee8fdde7c82446d5d009d77cb9722cc" id="r_aaee8fdde7c82446d5d009d77cb9722cc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaee8fdde7c82446d5d009d77cb9722cc">m_partType</a></td></tr>
+<tr class="memitem:af728c3e549143dc20988495490dd12d2" id="r_af728c3e549143dc20988495490dd12d2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af728c3e549143dc20988495490dd12d2">m_sectorsPerCluster</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Format a FAT volume. </p>
+<p>Copyright (c) 2011-2022 Bill Greiman This file is part of the <a class="el" href="_sd_fat_8h.html#a6e295d38f798fdc044c3282818cdb064">SdFat</a> library for SD memory cards.</p>
+<p>MIT License</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00033">33</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a9ba8056488dcc360aa5d21e02fdc52a2" name="a9ba8056488dcc360aa5d21e02fdc52a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba8056488dcc360aa5d21e02fdc52a2">&#9670;&#160;</a></span>FatFormatter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FatFormatter::FatFormatter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ab225be993dcdd0220b88ced1e794f6fa" name="ab225be993dcdd0220b88ced1e794f6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab225be993dcdd0220b88ced1e794f6fa">&#9670;&#160;</a></span>format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FatFormatter::format </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a> *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>secBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">print_t *</td>          <td class="paramname"><span class="paramname"><em>pr</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_sys_call_8h.html#ab979d9d4b4923f7c54d6caa6e1a61936">nullptr</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Format a FAT volume.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev</td><td>Block device for volume. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">secBuffer</td><td>buffer for writing to volume. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pr</td><td>Print device for progress output.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>true for success or false for failure. </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00052">52</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afb65ae6ae8d5dc13720955643451aaa4" name="afb65ae6ae8d5dc13720955643451aaa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb65ae6ae8d5dc13720955643451aaa4">&#9670;&#160;</a></span>initFatDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FatFormatter::initFatDir </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>fatType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>sectorCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00088">88</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a119d530132839305fb40e12ff989dab8" name="a119d530132839305fb40e12ff989dab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119d530132839305fb40e12ff989dab8">&#9670;&#160;</a></span>initPbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FatFormatter::initPbs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00111">111</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a24d2c65f32499933ade3fe1dd0addce4" name="a24d2c65f32499933ade3fe1dd0addce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d2c65f32499933ade3fe1dd0addce4">&#9670;&#160;</a></span>makeFat16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FatFormatter::makeFat16 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00136">136</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60d2c3809e3abbcfa6b4bed82bada8f1" name="a60d2c3809e3abbcfa6b4bed82bada8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d2c3809e3abbcfa6b4bed82bada8f1">&#9670;&#160;</a></span>makeFat32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FatFormatter::makeFat32 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00187">187</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abca37f702400b0cb277970b8fc0af980" name="abca37f702400b0cb277970b8fc0af980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abca37f702400b0cb277970b8fc0af980">&#9670;&#160;</a></span>writeMbr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FatFormatter::writeMbr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8cpp_source.html#l00260">260</a> der Datei <a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a677f58bfde679d61c3a8b46bb3e510c6" name="a677f58bfde679d61c3a8b46bb3e510c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677f58bfde679d61c3a8b46bb3e510c6">&#9670;&#160;</a></span>m_capacityMB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_capacityMB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00054">54</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a5f67f4cd89a40d807043dd93dce91f" name="a0a5f67f4cd89a40d807043dd93dce91f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5f67f4cd89a40d807043dd93dce91f">&#9670;&#160;</a></span>m_dataStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_dataStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00055">55</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a97f7d14cb74101b78e525fdaf614a672" name="a97f7d14cb74101b78e525fdaf614a672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f7d14cb74101b78e525fdaf614a672">&#9670;&#160;</a></span>m_dev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_fs_block_device_8h.html#a129378d5231b132338fe06a03e7671ad">FsBlockDevice</a>* FatFormatter::m_dev</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00061">61</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a6837953b4a2c80ee094ba3f1e837f8e7" name="a6837953b4a2c80ee094ba3f1e837f8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6837953b4a2c80ee094ba3f1e837f8e7">&#9670;&#160;</a></span>m_fatSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_fatSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00056">56</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="afcc3ff7d4c358cb7ef076e258aab102a" name="afcc3ff7d4c358cb7ef076e258aab102a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc3ff7d4c358cb7ef076e258aab102a">&#9670;&#160;</a></span>m_fatStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_fatStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00057">57</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="aaee8fdde7c82446d5d009d77cb9722cc" name="aaee8fdde7c82446d5d009d77cb9722cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee8fdde7c82446d5d009d77cb9722cc">&#9670;&#160;</a></span>m_partType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t FatFormatter::m_partType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00065">65</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="ad2dff539b758f50dfaeabe3f6e9e9192" name="ad2dff539b758f50dfaeabe3f6e9e9192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2dff539b758f50dfaeabe3f6e9e9192">&#9670;&#160;</a></span>m_pr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">print_t* FatFormatter::m_pr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00062">62</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a7194452d4812d0cf3e5873c834390fff" name="a7194452d4812d0cf3e5873c834390fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7194452d4812d0cf3e5873c834390fff">&#9670;&#160;</a></span>m_relativeSectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_relativeSectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00058">58</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a788d846f30a76383525fe7240a672077" name="a788d846f30a76383525fe7240a672077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788d846f30a76383525fe7240a672077">&#9670;&#160;</a></span>m_reservedSectorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t FatFormatter::m_reservedSectorCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00064">64</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a6bfbe9316dcb83d2d0be2f749713698d" name="a6bfbe9316dcb83d2d0be2f749713698d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfbe9316dcb83d2d0be2f749713698d">&#9670;&#160;</a></span>m_secBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* FatFormatter::m_secBuf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00063">63</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="a692d90a3f241a83cf588a81a06a198f2" name="a692d90a3f241a83cf588a81a06a198f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692d90a3f241a83cf588a81a06a198f2">&#9670;&#160;</a></span>m_sectorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_sectorCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00059">59</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="af728c3e549143dc20988495490dd12d2" name="af728c3e549143dc20988495490dd12d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af728c3e549143dc20988495490dd12d2">&#9670;&#160;</a></span>m_sectorsPerCluster</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t FatFormatter::m_sectorsPerCluster</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00066">66</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<a id="abd223e175fc78d24020f5f81ccdc4b60" name="abd223e175fc78d24020f5f81ccdc4b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd223e175fc78d24020f5f81ccdc4b60">&#9670;&#160;</a></span>m_totalSectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t FatFormatter::m_totalSectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_fat_formatter_8h_source.html#l00060">60</a> der Datei <a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li>src/SDWrapper/SdFat/FatLib/<a class="el" href="_fat_formatter_8h_source.html">FatFormatter.h</a></li>
+<li>src/SDWrapper/SdFat/FatLib/<a class="el" href="_fat_formatter_8cpp_source.html">FatFormatter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_fat_formatter.html">FatFormatter</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

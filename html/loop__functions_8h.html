@@ -1,0 +1,1385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/loop_functions.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('loop__functions_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">loop_functions.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="debugconf_8h_source.html">debugconf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="aprs__functions_8h_source.html">aprs_functions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_wis_block-_a_p_i_8h_source.html">nrf52/WisBlock-API.h</a>&gt;</code><br />
+<code>#include &lt;U8g2lib.h&gt;</code><br />
+</div>
+<p><a href="loop__functions_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a30dc76b04ff471f224cf15591e48c6b0" id="r_a30dc76b04ff471f224cf15591e48c6b0"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30dc76b04ff471f224cf15591e48c6b0">getUnixClock</a> ()</td></tr>
+<tr class="memitem:a0a2eb7ea02f59830711d1accca089af2" id="r_a0a2eb7ea02f59830711d1accca089af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2eb7ea02f59830711d1accca089af2">sendDisplay1306</a> (bool bClear, bool bTransfer, int x, int y, char *text)</td></tr>
+<tr class="memitem:ae3688e7fc22c3b71c1a036762fc2753b" id="r_ae3688e7fc22c3b71c1a036762fc2753b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3688e7fc22c3b71c1a036762fc2753b">sendDisplayHead</a> (bool bInit)</td></tr>
+<tr class="memitem:a246e1964eb74f3ebf246f8f479f5d03f" id="r_a246e1964eb74f3ebf246f8f479f5d03f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a246e1964eb74f3ebf246f8f479f5d03f">sendDisplayTrack</a> ()</td></tr>
+<tr class="memitem:a1ed5080d73b3f48b1f206a09947e5023" id="r_a1ed5080d73b3f48b1f206a09947e5023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ed5080d73b3f48b1f206a09947e5023">sendDisplayWX</a> ()</td></tr>
+<tr class="memitem:aaf42f2c6a358758806cf112187fb7e53" id="r_aaf42f2c6a358758806cf112187fb7e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf42f2c6a358758806cf112187fb7e53">sendDisplayMainline</a> ()</td></tr>
+<tr class="memitem:a3c050e403c5d7ed8c84efe5bc0a6406f" id="r_a3c050e403c5d7ed8c84efe5bc0a6406f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c050e403c5d7ed8c84efe5bc0a6406f">sendDisplayTime</a> ()</td></tr>
+<tr class="memitem:ad7111852f49931a3403d408a4c93b070" id="r_ad7111852f49931a3403d408a4c93b070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7111852f49931a3403d408a4c93b070">mainStartTimeLoop</a> ()</td></tr>
+<tr class="memitem:a4d48ff4495c67247fad471f18c244b4a" id="r_a4d48ff4495c67247fad471f18c244b4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d48ff4495c67247fad471f18c244b4a">E290DisplayUpdate</a> ()</td></tr>
+<tr class="memitem:a5e06d377d73b5dbb3d55cb86f9458a09" id="r_a5e06d377d73b5dbb3d55cb86f9458a09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e06d377d73b5dbb3d55cb86f9458a09">init_loop_function</a> ()</td></tr>
+<tr class="memitem:aa2609faed73d8ce345e4678ae8f73d8b" id="r_aa2609faed73d8ce345e4678ae8f73d8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2609faed73d8ce345e4678ae8f73d8b">initAnalogPin</a> ()</td></tr>
+<tr class="memitem:a308f376be3cd8a138c0e3f4bef2f2fb1" id="r_a308f376be3cd8a138c0e3f4bef2f2fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a308f376be3cd8a138c0e3f4bef2f2fb1">sendDisplayText</a> (struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg, int16_t rssi, int8_t snr)</td></tr>
+<tr class="memitem:a5678f33ef1385fe7c0685d076d2fc302" id="r_a5678f33ef1385fe7c0685d076d2fc302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5678f33ef1385fe7c0685d076d2fc302">sendDisplayPosition</a> (struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg, int16_t rssi, int8_t snr)</td></tr>
+<tr class="memitem:a33f71d20ac08ffa62a306a1e60cd810d" id="r_a33f71d20ac08ffa62a306a1e60cd810d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33f71d20ac08ffa62a306a1e60cd810d">getDateString</a> ()</td></tr>
+<tr class="memitem:aca080c88b69ab110a45bd061c7dc7efa" id="r_aca080c88b69ab110a45bd061c7dc7efa"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca080c88b69ab110a45bd061c7dc7efa">getTimeString</a> ()</td></tr>
+<tr class="memitem:a924eb40e27b9a26ab4fd39d31a80c185" id="r_a924eb40e27b9a26ab4fd39d31a80c185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a924eb40e27b9a26ab4fd39d31a80c185">printBuffer</a> (uint8_t *<a class="el" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, int len)</td></tr>
+<tr class="memdesc:a924eb40e27b9a26ab4fd39d31a80c185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to print our buffers.  <br /></td></tr>
+<tr class="memitem:a5c8e5c3b74e15a411567e133270fd90b" id="r_a5c8e5c3b74e15a411567e133270fd90b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c8e5c3b74e15a411567e133270fd90b">printAsciiBuffer</a> (uint8_t *<a class="el" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, int len)</td></tr>
+<tr class="memitem:a2785bfa0157d878c6082f2ec7d31c4cc" id="r_a2785bfa0157d878c6082f2ec7d31c4cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2785bfa0157d878c6082f2ec7d31c4cc">printBuffer_aprs</a> (char *msg_source, struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;<a class="el" href="structaprs_message.html">aprsMessage</a>)</td></tr>
+<tr class="memitem:a96375eb94b911939f4cf97a704727693" id="r_a96375eb94b911939f4cf97a704727693"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96375eb94b911939f4cf97a704727693">charBuffer_aprs</a> (char *msg_source, struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;<a class="el" href="structaprs_message.html">aprsMessage</a>)</td></tr>
+<tr class="memitem:add288d6c7090a2f1d1065a650762cd36" id="r_add288d6c7090a2f1d1065a650762cd36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add288d6c7090a2f1d1065a650762cd36">printBuffer_ack</a> (char *msgSource, uint8_t payload[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>+10], int8_t size)</td></tr>
+<tr class="memitem:af2a7f7e5f55d97a8eb7162373c934bd0" id="r_af2a7f7e5f55d97a8eb7162373c934bd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2a7f7e5f55d97a8eb7162373c934bd0">addBLEOutBuffer</a> (uint8_t *<a class="el" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, uint16_t len)</td></tr>
+<tr class="memdesc:af2a7f7e5f55d97a8eb7162373c934bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer.  <br /></td></tr>
+<tr class="memitem:a38bce470595d4a236a37188e911864c7" id="r_a38bce470595d4a236a37188e911864c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38bce470595d4a236a37188e911864c7">addBLEComToOutBuffer</a> (uint8_t *<a class="el" href="t-deck-pro_2peri__gps_8cpp.html#a7b13e39c43296f16ce75848767f94edc">buffer</a>, uint16_t len)</td></tr>
+<tr class="memdesc:a38bce470595d4a236a37188e911864c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer.  <br /></td></tr>
+<tr class="memitem:a05ead5354c4f17c41856d9bc62d91838" id="r_a05ead5354c4f17c41856d9bc62d91838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05ead5354c4f17c41856d9bc62d91838">addBLECommandBack</a> (char *text)</td></tr>
+<tr class="memitem:a9b313a5f26ebdecf14eb451faf9bbfbc" id="r_a9b313a5f26ebdecf14eb451faf9bbfbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b313a5f26ebdecf14eb451faf9bbfbc">addLoraRxBuffer</a> (unsigned int msg_id, bool msg_server)</td></tr>
+<tr class="memdesc:a9b313a5f26ebdecf14eb451faf9bbfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function adding messages into outgoing UDP ringbuffer.  <br /></td></tr>
+<tr class="memitem:a589a347ec3321d1ee522eefd2e1e2378" id="r_a589a347ec3321d1ee522eefd2e1e2378"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a589a347ec3321d1ee522eefd2e1e2378">checkOwnRx</a> (uint8_t compBuffer[4])</td></tr>
+<tr class="memitem:a20b750964a32a6cfc6367cfa72c1d62a" id="r_a20b750964a32a6cfc6367cfa72c1d62a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b750964a32a6cfc6367cfa72c1d62a">checkServerRx</a> (uint8_t compBuffer[4])</td></tr>
+<tr class="memitem:a10097564cefcf1b09b64fc096888f5b1" id="r_a10097564cefcf1b09b64fc096888f5b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10097564cefcf1b09b64fc096888f5b1">checkOwnTx</a> (unsigned int msg_id)</td></tr>
+<tr class="memitem:ae07254fdec7b2fb86fa49e80bb752e9f" id="r_ae07254fdec7b2fb86fa49e80bb752e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae07254fdec7b2fb86fa49e80bb752e9f">insertOwnTx</a> (unsigned int id)</td></tr>
+<tr class="memitem:a9d3679214bd57f572342b87d0b97ba43" id="r_a9d3679214bd57f572342b87d0b97ba43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d3679214bd57f572342b87d0b97ba43">esp32_isSSD1306</a> (int address)</td></tr>
+<tr class="memitem:a7c8c897daefce843b5e95704a0469a13" id="r_a7c8c897daefce843b5e95704a0469a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8c897daefce843b5e95704a0469a13">sendMessage</a> (char *<a class="el" href="loop__functions_8cpp.html#abf2ced83928dc8f50f99f6774b4cf5fc">msg_text</a>, int len)</td></tr>
+<tr class="memitem:aa78315df1c6efadf15eee92e78ad361d" id="r_aa78315df1c6efadf15eee92e78ad361d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa78315df1c6efadf15eee92e78ad361d">PositionToAPRS</a> (bool bConvPos, bool bWeather, bool bFuss, double lat, char lat_c, double lon, char lon_c, int alt, float press, float hum, float temp, float temp2, float gasres, int qfe, float qnh)</td></tr>
+<tr class="memitem:ae42df391be12b1f625af20abe0165fe5" id="r_ae42df391be12b1f625af20abe0165fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42df391be12b1f625af20abe0165fe5">sendPosition</a> (unsigned int intervall, double lat, char lat_c, double lon, char lon_c, int alt, float press, float hum, float temp, float temp2, float gasres, float co2, int qfe, float qnh)</td></tr>
+<tr class="memitem:aa1915cadf1bedf5f867b13f94159d8f5" id="r_aa1915cadf1bedf5f867b13f94159d8f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1915cadf1bedf5f867b13f94159d8f5">sendAPPPosition</a> (double lat, char lat_c, double lon, char lon_c, float temp2)</td></tr>
+<tr class="memitem:a8b3e61e99f59684a3e9aac1b91d7df65" id="r_a8b3e61e99f59684a3e9aac1b91d7df65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b3e61e99f59684a3e9aac1b91d7df65">SendAckMessage</a> (String dest_call, unsigned int iAckId)</td></tr>
+<tr class="memitem:a1b4712eb4f1bf887575b06822a6b7a4a" id="r_a1b4712eb4f1bf887575b06822a6b7a4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4712eb4f1bf887575b06822a6b7a4a">sendHey</a> ()</td></tr>
+<tr class="memitem:a59c481e895e314b155ca2183b9f30afb" id="r_a59c481e895e314b155ca2183b9f30afb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c481e895e314b155ca2183b9f30afb">sendTelemetry</a> (int ID)</td></tr>
+<tr class="memitem:a6236cc13879f09bb6a2ae4e46e63e20a" id="r_a6236cc13879f09bb6a2ae4e46e63e20a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6236cc13879f09bb6a2ae4e46e63e20a">checkMesh</a> ()</td></tr>
+<tr class="memitem:aa37110f574f07bbcf7972fa455b5d5be" id="r_aa37110f574f07bbcf7972fa455b5d5be"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa37110f574f07bbcf7972fa455b5d5be">setSMartBeaconing</a> (double flat, double flon)</td></tr>
+<tr class="memitem:ae31b831a8f7c8e7a4306e8ab28999b3e" id="r_ae31b831a8f7c8e7a4306e8ab28999b3e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae31b831a8f7c8e7a4306e8ab28999b3e">convertCallToShort</a> (char callsign[10])</td></tr>
+<tr class="memitem:a8d4ea39f574f89a0d16f23e1a5ee2998" id="r_a8d4ea39f574f89a0d16f23e1a5ee2998"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d4ea39f574f89a0d16f23e1a5ee2998">shortVERSION</a> ()</td></tr>
+<tr class="memitem:a08d8c58b23a1d0ad1f4dad2fd19b0556" id="r_a08d8c58b23a1d0ad1f4dad2fd19b0556"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08d8c58b23a1d0ad1f4dad2fd19b0556">cround4</a> (double dvar)</td></tr>
+<tr class="memitem:a556c69d68b9382b6352e27f8e79dd7f5" id="r_a556c69d68b9382b6352e27f8e79dd7f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a556c69d68b9382b6352e27f8e79dd7f5">cround4abs</a> (double dvar)</td></tr>
+<tr class="memitem:ad614fc3f465472543e68eb1b507abbdd" id="r_ad614fc3f465472543e68eb1b507abbdd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad614fc3f465472543e68eb1b507abbdd">conv_fuss</a> (int alt_meter)</td></tr>
+<tr class="memitem:ab70f72dc1b55d1a7545129106da88d0b" id="r_ab70f72dc1b55d1a7545129106da88d0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab70f72dc1b55d1a7545129106da88d0b">conv_meter</a> (int alt_fuss)</td></tr>
+<tr class="memitem:ac87167e353134b0435c61dfd715ae17d" id="r_ac87167e353134b0435c61dfd715ae17d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_regexp_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac87167e353134b0435c61dfd715ae17d">utf8ascii</a> (<a class="el" href="_regexp_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> ascii)</td></tr>
+<tr class="memitem:a99b829a6725d3c55768a8357f825b1f4" id="r_a99b829a6725d3c55768a8357f825b1f4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99b829a6725d3c55768a8357f825b1f4">utf8ascii</a> (String s)</td></tr>
+<tr class="memitem:aa04789b7a7de1498268973eefff545f0" id="r_aa04789b7a7de1498268973eefff545f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa04789b7a7de1498268973eefff545f0">utf8ascii</a> (char *s)</td></tr>
+<tr class="memitem:a263263f9fa122dc6722f8f0e74aa04dc" id="r_a263263f9fa122dc6722f8f0e74aa04dc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a263263f9fa122dc6722f8f0e74aa04dc">getTimeZone</a> ()</td></tr>
+<tr class="memitem:a7521f4b657d9ba224cfad0a0ad7f76ca" id="r_a7521f4b657d9ba224cfad0a0ad7f76ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7521f4b657d9ba224cfad0a0ad7f76ca">count_char</a> (String s, char c)</td></tr>
+<tr class="memitem:a49012e0304ff0b48800dca643f90ed27" id="r_a49012e0304ff0b48800dca643f90ed27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49012e0304ff0b48800dca643f90ed27">addRingPointer</a> (int &amp;toWrite, int &amp;toRead, int iMAX)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a05ead5354c4f17c41856d9bc62d91838" name="a05ead5354c4f17c41856d9bc62d91838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ead5354c4f17c41856d9bc62d91838">&#9670;&#160;</a></span>addBLECommandBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addBLECommandBack </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38bce470595d4a236a37188e911864c7" name="a38bce470595d4a236a37188e911864c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38bce470595d4a236a37188e911864c7">&#9670;&#160;</a></span>addBLEComToOutBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addBLEComToOutBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00398">398</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af2a7f7e5f55d97a8eb7162373c934bd0" name="af2a7f7e5f55d97a8eb7162373c934bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a7f7e5f55d97a8eb7162373c934bd0">&#9670;&#160;</a></span>addBLEOutBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addBLEOutBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function adding messages into outgoing BLE ringbuffer BLE to PHONE Buffer. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00349">349</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9b313a5f26ebdecf14eb451faf9bbfbc" name="a9b313a5f26ebdecf14eb451faf9bbfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b313a5f26ebdecf14eb451faf9bbfbc">&#9670;&#160;</a></span>addLoraRxBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addLoraRxBuffer </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>msg_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>msg_server</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function adding messages into outgoing UDP ringbuffer. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00447">447</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a49012e0304ff0b48800dca643f90ed27" name="a49012e0304ff0b48800dca643f90ed27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49012e0304ff0b48800dca643f90ed27">&#9670;&#160;</a></span>addRingPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addRingPointer </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>toWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>toRead</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iMAX</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03690">3690</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a96375eb94b911939f4cf97a704727693" name="a96375eb94b911939f4cf97a704727693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96375eb94b911939f4cf97a704727693">&#9670;&#160;</a></span>charBuffer_aprs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String charBuffer_aprs </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg_source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsMessage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02053">2053</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6236cc13879f09bb6a2ae4e46e63e20a" name="a6236cc13879f09bb6a2ae4e46e63e20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6236cc13879f09bb6a2ae4e46e63e20a">&#9670;&#160;</a></span>checkMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool checkMesh </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03558">3558</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a589a347ec3321d1ee522eefd2e1e2378" name="a589a347ec3321d1ee522eefd2e1e2378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589a347ec3321d1ee522eefd2e1e2378">&#9670;&#160;</a></span>checkOwnRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkOwnRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>compBuffer</em></span>[4]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00465">465</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a10097564cefcf1b09b64fc096888f5b1" name="a10097564cefcf1b09b64fc096888f5b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10097564cefcf1b09b64fc096888f5b1">&#9670;&#160;</a></span>checkOwnTx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkOwnTx </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>msg_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00493">493</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a20b750964a32a6cfc6367cfa72c1d62a" name="a20b750964a32a6cfc6367cfa72c1d62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b750964a32a6cfc6367cfa72c1d62a">&#9670;&#160;</a></span>checkServerRx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool checkServerRx </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>compBuffer</em></span>[4]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00476">476</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad614fc3f465472543e68eb1b507abbdd" name="ad614fc3f465472543e68eb1b507abbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad614fc3f465472543e68eb1b507abbdd">&#9670;&#160;</a></span>conv_fuss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int conv_fuss </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt_meter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03545">3545</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab70f72dc1b55d1a7545129106da88d0b" name="ab70f72dc1b55d1a7545129106da88d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70f72dc1b55d1a7545129106da88d0b">&#9670;&#160;</a></span>conv_meter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int conv_meter </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt_fuss</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03553">3553</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae31b831a8f7c8e7a4306e8ab28999b3e" name="ae31b831a8f7c8e7a4306e8ab28999b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31b831a8f7c8e7a4306e8ab28999b3e">&#9670;&#160;</a></span>convertCallToShort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String convertCallToShort </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span>[10]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03502">3502</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7521f4b657d9ba224cfad0a0ad7f76ca" name="a7521f4b657d9ba224cfad0a0ad7f76ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7521f4b657d9ba224cfad0a0ad7f76ca">&#9670;&#160;</a></span>count_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int count_char </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03679">3679</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a08d8c58b23a1d0ad1f4dad2fd19b0556" name="a08d8c58b23a1d0ad1f4dad2fd19b0556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d8c58b23a1d0ad1f4dad2fd19b0556">&#9670;&#160;</a></span>cround4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cround4 </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dvar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03523">3523</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a556c69d68b9382b6352e27f8e79dd7f5" name="a556c69d68b9382b6352e27f8e79dd7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556c69d68b9382b6352e27f8e79dd7f5">&#9670;&#160;</a></span>cround4abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cround4abs </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dvar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03533">3533</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d48ff4495c67247fad471f18c244b4a" name="a4d48ff4495c67247fad471f18c244b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d48ff4495c67247fad471f18c244b4a">&#9670;&#160;</a></span>E290DisplayUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void E290DisplayUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00642">642</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9d3679214bd57f572342b87d0b97ba43" name="a9d3679214bd57f572342b87d0b97ba43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3679214bd57f572342b87d0b97ba43">&#9670;&#160;</a></span>esp32_isSSD1306()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int esp32_isSSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00563">563</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a33f71d20ac08ffa62a306a1e60cd810d" name="a33f71d20ac08ffa62a306a1e60cd810d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f71d20ac08ffa62a306a1e60cd810d">&#9670;&#160;</a></span>getDateString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getDateString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02037">2037</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aca080c88b69ab110a45bd061c7dc7efa" name="aca080c88b69ab110a45bd061c7dc7efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca080c88b69ab110a45bd061c7dc7efa">&#9670;&#160;</a></span>getTimeString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTimeString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02045">2045</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a263263f9fa122dc6722f8f0e74aa04dc" name="a263263f9fa122dc6722f8f0e74aa04dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263263f9fa122dc6722f8f0e74aa04dc">&#9670;&#160;</a></span>getTimeZone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTimeZone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03671">3671</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a30dc76b04ff471f224cf15591e48c6b0" name="a30dc76b04ff471f224cf15591e48c6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dc76b04ff471f224cf15591e48c6b0">&#9670;&#160;</a></span>getUnixClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long getUnixClock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00324">324</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5e06d377d73b5dbb3d55cb86f9458a09" name="a5e06d377d73b5dbb3d55cb86f9458a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e06d377d73b5dbb3d55cb86f9458a09">&#9670;&#160;</a></span>init_loop_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_loop_function </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01716">1716</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa2609faed73d8ce345e4678ae8f73d8b" name="aa2609faed73d8ce345e4678ae8f73d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2609faed73d8ce345e4678ae8f73d8b">&#9670;&#160;</a></span>initAnalogPin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initAnalogPin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01725">1725</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae07254fdec7b2fb86fa49e80bb752e9f" name="ae07254fdec7b2fb86fa49e80bb752e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07254fdec7b2fb86fa49e80bb752e9f">&#9670;&#160;</a></span>insertOwnTx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insertOwnTx </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00518">518</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad7111852f49931a3403d408a4c93b070" name="ad7111852f49931a3403d408a4c93b070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7111852f49931a3403d408a4c93b070">&#9670;&#160;</a></span>mainStartTimeLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mainStartTimeLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01193">1193</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa78315df1c6efadf15eee92e78ad361d" name="aa78315df1c6efadf15eee92e78ad361d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78315df1c6efadf15eee92e78ad361d">&#9670;&#160;</a></span>PositionToAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String PositionToAPRS </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bConvPos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bWeather</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bFuss</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>press</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>hum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gasres</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>qfe</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>qnh</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c8e5c3b74e15a411567e133270fd90b" name="a5c8e5c3b74e15a411567e133270fd90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8e5c3b74e15a411567e133270fd90b">&#9670;&#160;</a></span>printAsciiBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printAsciiBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02018">2018</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a924eb40e27b9a26ab4fd39d31a80c185" name="a924eb40e27b9a26ab4fd39d31a80c185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924eb40e27b9a26ab4fd39d31a80c185">&#9670;&#160;</a></span>printBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printBuffer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to print our buffers. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02009">2009</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="add288d6c7090a2f1d1065a650762cd36" name="add288d6c7090a2f1d1065a650762cd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add288d6c7090a2f1d1065a650762cd36">&#9670;&#160;</a></span>printBuffer_ack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printBuffer_ack </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msgSource</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>payload</em></span>[UDP_TX_BUF_SIZE+10], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02081">2081</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2785bfa0157d878c6082f2ec7d31c4cc" name="a2785bfa0157d878c6082f2ec7d31c4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2785bfa0157d878c6082f2ec7d31c4cc">&#9670;&#160;</a></span>printBuffer_aprs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printBuffer_aprs </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg_source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsMessage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02074">2074</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8b3e61e99f59684a3e9aac1b91d7df65" name="a8b3e61e99f59684a3e9aac1b91d7df65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3e61e99f59684a3e9aac1b91d7df65">&#9670;&#160;</a></span>SendAckMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SendAckMessage </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>dest_call</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>iAckId</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02935">2935</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa1915cadf1bedf5f867b13f94159d8f5" name="aa1915cadf1bedf5f867b13f94159d8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1915cadf1bedf5f867b13f94159d8f5">&#9670;&#160;</a></span>sendAPPPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendAPPPosition </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02872">2872</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a2eb7ea02f59830711d1accca089af2" name="a0a2eb7ea02f59830711d1accca089af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2eb7ea02f59830711d1accca089af2">&#9670;&#160;</a></span>sendDisplay1306()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplay1306 </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bClear</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bTransfer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00649">649</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae3688e7fc22c3b71c1a036762fc2753b" name="ae3688e7fc22c3b71c1a036762fc2753b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3688e7fc22c3b71c1a036762fc2753b">&#9670;&#160;</a></span>sendDisplayHead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayHead </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>bInit</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00922">922</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaf42f2c6a358758806cf112187fb7e53" name="aaf42f2c6a358758806cf112187fb7e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf42f2c6a358758806cf112187fb7e53">&#9670;&#160;</a></span>sendDisplayMainline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayMainline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01153">1153</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5678f33ef1385fe7c0685d076d2fc302" name="a5678f33ef1385fe7c0685d076d2fc302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5678f33ef1385fe7c0685d076d2fc302">&#9670;&#160;</a></span>sendDisplayPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayPosition </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsmsg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>snr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01750">1750</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a308f376be3cd8a138c0e3f4bef2f2fb1" name="a308f376be3cd8a138c0e3f4bef2f2fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308f376be3cd8a138c0e3f4bef2f2fb1">&#9670;&#160;</a></span>sendDisplayText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayText </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsmsg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>rssi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>snr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01282">1282</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c050e403c5d7ed8c84efe5bc0a6406f" name="a3c050e403c5d7ed8c84efe5bc0a6406f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c050e403c5d7ed8c84efe5bc0a6406f">&#9670;&#160;</a></span>sendDisplayTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01072">1072</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a246e1964eb74f3ebf246f8f479f5d03f" name="a246e1964eb74f3ebf246f8f479f5d03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246e1964eb74f3ebf246f8f479f5d03f">&#9670;&#160;</a></span>sendDisplayTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayTrack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l00971">971</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1ed5080d73b3f48b1f206a09947e5023" name="a1ed5080d73b3f48b1f206a09947e5023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed5080d73b3f48b1f206a09947e5023">&#9670;&#160;</a></span>sendDisplayWX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendDisplayWX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l01028">1028</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b4712eb4f1bf887575b06822a6b7a4a" name="a1b4712eb4f1bf887575b06822a6b7a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4712eb4f1bf887575b06822a6b7a4a">&#9670;&#160;</a></span>sendHey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendHey </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03006">3006</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7c8c897daefce843b5e95704a0469a13" name="a7c8c897daefce843b5e95704a0469a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8c897daefce843b5e95704a0469a13">&#9670;&#160;</a></span>sendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendMessage </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg_text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02093">2093</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae42df391be12b1f625af20abe0165fe5" name="ae42df391be12b1f625af20abe0165fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42df391be12b1f625af20abe0165fe5">&#9670;&#160;</a></span>sendPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendPosition </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>intervall</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>press</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>hum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gasres</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>co2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>qfe</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>qnh</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l02632">2632</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a59c481e895e314b155ca2183b9f30afb" name="a59c481e895e314b155ca2183b9f30afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c481e895e314b155ca2183b9f30afb">&#9670;&#160;</a></span>sendTelemetry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendTelemetry </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03071">3071</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa37110f574f07bbcf7972fa455b5d5be" name="aa37110f574f07bbcf7972fa455b5d5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37110f574f07bbcf7972fa455b5d5be">&#9670;&#160;</a></span>setSMartBeaconing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int setSMartBeaconing </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>flat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>flon</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03361">3361</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8d4ea39f574f89a0d16f23e1a5ee2998" name="a8d4ea39f574f89a0d16f23e1a5ee2998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4ea39f574f89a0d16f23e1a5ee2998">&#9670;&#160;</a></span>shortVERSION()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t shortVERSION </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00016">16</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac87167e353134b0435c61dfd715ae17d" name="ac87167e353134b0435c61dfd715ae17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87167e353134b0435c61dfd715ae17d">&#9670;&#160;</a></span>utf8ascii() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_regexp_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> utf8ascii </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_regexp_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td>          <td class="paramname"><span class="paramname"><em>ascii</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03568">3568</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa04789b7a7de1498268973eefff545f0" name="aa04789b7a7de1498268973eefff545f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04789b7a7de1498268973eefff545f0">&#9670;&#160;</a></span>utf8ascii() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utf8ascii </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03658">3658</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a99b829a6725d3c55768a8357f825b1f4" name="a99b829a6725d3c55768a8357f825b1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b829a6725d3c55768a8357f825b1f4">&#9670;&#160;</a></span>utf8ascii() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String utf8ascii </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="loop__functions_8cpp_source.html#l03618">3618</a> der Datei <a class="el" href="loop__functions_8cpp_source.html">loop_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="loop__functions_8h.html">loop_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

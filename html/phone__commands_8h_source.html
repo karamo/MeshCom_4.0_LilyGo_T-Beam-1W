@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/phone_commands.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('phone__commands_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">phone_commands.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="phone__commands_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _PHONE_COMMANDS_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _PHONE_COMMANDS_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keywordtype">void</span> <a class="code hl_function" href="phone__commands_8h.html#a1d9c61aad0f2525fcc89d63c16b71e04">readPhoneCommand</a>(uint8_t conf_data[<a class="code hl_define" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>]);</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">void</span> <a class="code hl_function" href="phone__commands_8h.html#aca8129e67963a480c13933972b17739e">sendToPhone</a>();</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">void</span> <a class="code hl_function" href="phone__commands_8h.html#a5896ee4bae218e0111c833375c9ddd9c">sendComToPhone</a>();</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> <a class="code hl_function" href="phone__commands_8h.html#a2441f26e7731852832dd98dd5b85c0a9">sendConfigToPhone</a> ();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconfiguration__global_8h_html_a8b8c824d38702a4457c6af2203b09485"><div class="ttname"><a href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a></div><div class="ttdeci">#define MAX_MSG_LEN_PHONE</div><div class="ttdef"><b>Definition</b> <a href="configuration__global_8h_source.html#l00100">configuration_global.h:100</a></div></div>
+<div class="ttc" id="aphone__commands_8h_html_a1d9c61aad0f2525fcc89d63c16b71e04"><div class="ttname"><a href="phone__commands_8h.html#a1d9c61aad0f2525fcc89d63c16b71e04">readPhoneCommand</a></div><div class="ttdeci">void readPhoneCommand(uint8_t conf_data[MAX_MSG_LEN_PHONE])</div><div class="ttdef"><b>Definition</b> <a href="phone__commands_8cpp_source.html#l00368">phone_commands.cpp:368</a></div></div>
+<div class="ttc" id="aphone__commands_8h_html_a2441f26e7731852832dd98dd5b85c0a9"><div class="ttname"><a href="phone__commands_8h.html#a2441f26e7731852832dd98dd5b85c0a9">sendConfigToPhone</a></div><div class="ttdeci">void sendConfigToPhone()</div><div class="ttdoc">Method to send configuration to phone Config Format: LENGTH 2B - FLAG 1B - LENCALL 1B - Callsign - LA...</div><div class="ttdef"><b>Definition</b> <a href="phone__commands_8cpp_source.html#l00047">phone_commands.cpp:47</a></div></div>
+<div class="ttc" id="aphone__commands_8h_html_a5896ee4bae218e0111c833375c9ddd9c"><div class="ttname"><a href="phone__commands_8h.html#a5896ee4bae218e0111c833375c9ddd9c">sendComToPhone</a></div><div class="ttdeci">void sendComToPhone()</div><div class="ttdoc">Method to send incoming LoRa messages to BLE connected device.</div><div class="ttdef"><b>Definition</b> <a href="phone__commands_8cpp_source.html#l00304">phone_commands.cpp:304</a></div></div>
+<div class="ttc" id="aphone__commands_8h_html_aca8129e67963a480c13933972b17739e"><div class="ttname"><a href="phone__commands_8h.html#aca8129e67963a480c13933972b17739e">sendToPhone</a></div><div class="ttdeci">void sendToPhone()</div><div class="ttdoc">Method to send incoming LoRa messages to BLE connected device.</div><div class="ttdef"><b>Definition</b> <a href="phone__commands_8cpp_source.html#l00236">phone_commands.cpp:236</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="phone__commands_8h.html">phone_commands.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

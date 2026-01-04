@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/t5-epaper/t5epaper_main.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('t5epaper__main_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">t5epaper_main.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="t5-epaper_2utilities_8h_source.html">utilities.h</a>&quot;</code><br />
+<code>#include &quot;esp_adc_cal.h&quot;</code><br />
+<code>#include &lt;Wire.h&gt;</code><br />
+<code>#include &quot;TouchDrvGT911.hpp&quot;</code><br />
+<code>#include &lt;SensorPCF8563.hpp&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
+<code>#include &lt;esp_sntp.h&gt;</code><br />
+<code>#include &lt;RadioLib.h&gt;</code><br />
+<code>#include &lt;FS.h&gt;</code><br />
+<code>#include &lt;SPI.h&gt;</code><br />
+<code>#include &lt;SD.h&gt;</code><br />
+<code>#include &lt;EEPROM.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="bq27220_8h_source.html">bq27220.h</a>&quot;</code><br />
+<code>#include &lt;XPowersLib.h&gt;</code><br />
+<code>#include &quot;board/pca9555.h&quot;</code><br />
+<code>#include &lt;TinyGPS++.h&gt;</code><br />
+</div>
+<p><a href="t5epaper__main_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:a2083be6a990605d065733dea84a419ae" id="r_a2083be6a990605d065733dea84a419ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2083be6a990605d065733dea84a419ae">XPOWERS_CHIP_BQ25896</a></td></tr>
+<tr class="memitem:a5b1f1e65d2093088bfbf14cc60ad56fb" id="r_a5b1f1e65d2093088bfbf14cc60ad56fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b1f1e65d2093088bfbf14cc60ad56fb">GLOBAL_BUF_LEN</a>&#160;&#160;&#160;48</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr class="memitem:af186d7238ba4a89a3ad33176ebe73f55" id="r_af186d7238ba4a89a3ad33176ebe73f55"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631">E_PERI_INK_POWER</a> = 0
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a824f80cf370d485c398759ffafcaedf6">E_PERI_BQ25896</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a21d8bc3aa25bf426952bd4c251873854">E_PERI_BQ27220</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e">E_PERI_RTC</a>
+, <br />
+&#160;&#160;<a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55aed439bd46f1760ada81f203988d6ccaf">E_PERI_TOUCH</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a0e6924494dd23cc7ae47a5ffe614386c">E_PERI_LORA</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5">E_PERI_SD_CARD</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55acb145fa77b3831e0a340ed08c2f0bdc9">E_PERI_GPS</a>
+, <br />
+&#160;&#160;<a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286">E_PERI_WIFI</a>
+, <a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a518392d3fd144e40865844a8cad6b8ce" id="r_a518392d3fd144e40865844a8cad6b8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a518392d3fd144e40865844a8cad6b8ce">io_extend_lora_gps_power_on</a> (bool en)</td></tr>
+<tr class="memitem:ad85a93f3f550d8333aab9e7c16f02b06" id="r_ad85a93f3f550d8333aab9e7c16f02b06"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85a93f3f550d8333aab9e7c16f02b06">read_io</a> (int io)</td></tr>
+<tr class="memitem:a15b6fa8c673193dced813ab6081a5eae" id="r_a15b6fa8c673193dced813ab6081a5eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b6fa8c673193dced813ab6081a5eae">set_config</a> (i2c_port_t <a class="el" href="safeboot_2main_8cpp.html#a2ac307bc5772df716f29e0e8375035ba">port</a>, uint8_t config_value, int high_port)</td></tr>
+<tr class="memitem:af79bf6d54c03a8a6095100d0889569c6" id="r_af79bf6d54c03a8a6095100d0889569c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af79bf6d54c03a8a6095100d0889569c6">button_read</a> (void)</td></tr>
+<tr class="memitem:a4cf4fa6a00ac739365cf04b522b4be64" id="r_a4cf4fa6a00ac739365cf04b522b4be64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cf4fa6a00ac739365cf04b522b4be64">disp_full_refresh</a> (void)</td></tr>
+<tr class="memitem:a3dd4efaa5974c738a6c66735718d322d" id="r_a3dd4efaa5974c738a6c66735718d322d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dd4efaa5974c738a6c66735718d322d">disp_full_clean</a> (void)</td></tr>
+<tr class="memitem:a3a50ff18d34056a205f76fb45a2a3e5e" id="r_a3a50ff18d34056a205f76fb45a2a3e5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a50ff18d34056a205f76fb45a2a3e5e">disp_clean</a> (void)</td></tr>
+<tr class="memitem:a116a748f2b6b167a883eda499f98721a" id="r_a116a748f2b6b167a883eda499f98721a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116a748f2b6b167a883eda499f98721a">disp_refresh_screen</a> (void)</td></tr>
+<tr class="memitem:a295e3092aeaed003574c949586023b63" id="r_a295e3092aeaed003574c949586023b63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a295e3092aeaed003574c949586023b63">idf_setup</a> ()</td></tr>
+<tr class="memitem:aeeaa485eb26a4818fddfd00ea074332b" id="r_aeeaa485eb26a4818fddfd00ea074332b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeeaa485eb26a4818fddfd00ea074332b">idf_loop</a> ()</td></tr>
+<tr class="memitem:a0c7b6ddcddc7beb81f258d9409c62d94" id="r_a0c7b6ddcddc7beb81f258d9409c62d94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c7b6ddcddc7beb81f258d9409c62d94">disp_next_status</a> (String name, int *x, int *y, bool font_large)</td></tr>
+<tr class="memitem:aff8e2fa97f53ee7fe5702f26ac75a539" id="r_aff8e2fa97f53ee7fe5702f26ac75a539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8e2fa97f53ee7fe5702f26ac75a539">disp_next_power</a> (bool power)</td></tr>
+<tr class="memitem:accd685bfc76121c612ae189f1d149dc4" id="r_accd685bfc76121c612ae189f1d149dc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd685bfc76121c612ae189f1d149dc4">indev_touch_en</a> ()</td></tr>
+<tr class="memitem:a9133f9d5bc98603c74978628218f49e0" id="r_a9133f9d5bc98603c74978628218f49e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9133f9d5bc98603c74978628218f49e0">indev_touch_dis</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a16ffd5d4412ac457dfafdf535c57ac76" id="r_a16ffd5d4412ac457dfafdf535c57ac76"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16ffd5d4412ac457dfafdf535c57ac76">global_buf</a> [<a class="el" href="#a5b1f1e65d2093088bfbf14cc60ad56fb">GLOBAL_BUF_LEN</a>]</td></tr>
+<tr class="memitem:a810a5c9fb2ee91307d90db51cd610b1c" id="r_a810a5c9fb2ee91307d90db51cd610b1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a810a5c9fb2ee91307d90db51cd610b1c">peri_buf</a> [<a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a>]</td></tr>
+<tr class="memitem:a9bc92cc72d6ac50f3937b35d1906b3df" id="r_a9bc92cc72d6ac50f3937b35d1906b3df"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bc92cc72d6ac50f3937b35d1906b3df">gps_handle</a></td></tr>
+<tr class="memitem:a169c53997a7da1d0fb99aec1b4675ce8" id="r_a169c53997a7da1d0fb99aec1b4675ce8"><td class="memItemLeft" align="right" valign="top">TinyGPSPlus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169c53997a7da1d0fb99aec1b4675ce8">gps</a></td></tr>
+<tr class="memitem:afd7ba5ae58feb6f95aa6f3bf7ee8dd34" id="r_afd7ba5ae58feb6f95aa6f3bf7ee8dd34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd7ba5ae58feb6f95aa6f3bf7ee8dd34">gps_lat</a></td></tr>
+<tr class="memitem:aaeb329bf029c305771c3b6d2d88c451d" id="r_aaeb329bf029c305771c3b6d2d88c451d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeb329bf029c305771c3b6d2d88c451d">gps_lng</a></td></tr>
+<tr class="memitem:ab8a12f659147895fc954a6f040f968b2" id="r_ab8a12f659147895fc954a6f040f968b2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8a12f659147895fc954a6f040f968b2">gps_year</a></td></tr>
+<tr class="memitem:a9f5a92083dec34469378b776d4df91d5" id="r_a9f5a92083dec34469378b776d4df91d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5a92083dec34469378b776d4df91d5">gps_month</a></td></tr>
+<tr class="memitem:a2489c945958ebe1f9c5be9bada11cbdc" id="r_a2489c945958ebe1f9c5be9bada11cbdc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2489c945958ebe1f9c5be9bada11cbdc">gps_day</a></td></tr>
+<tr class="memitem:aa89ec29a9f67d3f85030b75ab83c6211" id="r_aa89ec29a9f67d3f85030b75ab83c6211"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89ec29a9f67d3f85030b75ab83c6211">gps_hour</a></td></tr>
+<tr class="memitem:aa289d11e830a6cac5d3d21bb6057520f" id="r_aa289d11e830a6cac5d3d21bb6057520f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa289d11e830a6cac5d3d21bb6057520f">gps_minute</a></td></tr>
+<tr class="memitem:add8bff6a727c463c04fe01deedbfb6c8" id="r_add8bff6a727c463c04fe01deedbfb6c8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add8bff6a727c463c04fe01deedbfb6c8">gps_second</a></td></tr>
+<tr class="memitem:acc0d526f8e8d1cd9e0ae705c3b7fcfbc" id="r_acc0d526f8e8d1cd9e0ae705c3b7fcfbc"><td class="memItemLeft" align="right" valign="top">SX1262&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc0d526f8e8d1cd9e0ae705c3b7fcfbc">radio</a></td></tr>
+<tr class="memitem:ab2d8f8edf2caedad43af660c0a591cf1" id="r_ab2d8f8edf2caedad43af660c0a591cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_q27220.html">BQ27220</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d8f8edf2caedad43af660c0a591cf1">bq27220</a></td></tr>
+<tr class="memitem:aa1521db18c0543a39d476baf5e4efc16" id="r_aa1521db18c0543a39d476baf5e4efc16"><td class="memItemLeft" align="right" valign="top">XPowersPPM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1521db18c0543a39d476baf5e4efc16">PPM</a></td></tr>
+<tr class="memitem:a4d800e4b376e17e765ac6e9053eb241d" id="r_a4d800e4b376e17e765ac6e9053eb241d"><td class="memItemLeft" align="right" valign="top">TouchDrvGT911&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d800e4b376e17e765ac6e9053eb241d">touch</a></td></tr>
+<tr class="memitem:a0b86871732ae64714bd3d4b291e04db9" id="r_a0b86871732ae64714bd3d4b291e04db9"><td class="memItemLeft" align="right" valign="top">SensorPCF8563&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b86871732ae64714bd3d4b291e04db9">rtc</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makro-Dokumentation</h2>
+<a id="a5b1f1e65d2093088bfbf14cc60ad56fb" name="a5b1f1e65d2093088bfbf14cc60ad56fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1f1e65d2093088bfbf14cc60ad56fb">&#9670;&#160;</a></span>GLOBAL_BUF_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GLOBAL_BUF_LEN&#160;&#160;&#160;48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00028">28</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a id="a2083be6a990605d065733dea84a419ae" name="a2083be6a990605d065733dea84a419ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2083be6a990605d065733dea84a419ae">&#9670;&#160;</a></span>XPOWERS_CHIP_BQ25896</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XPOWERS_CHIP_BQ25896</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00019">19</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="af186d7238ba4a89a3ad33176ebe73f55" name="af186d7238ba4a89a3ad33176ebe73f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af186d7238ba4a89a3ad33176ebe73f55">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631" name="af186d7238ba4a89a3ad33176ebe73f55a967441e935bc38854bcdc0a2c9240631"></a>E_PERI_INK_POWER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a824f80cf370d485c398759ffafcaedf6" name="af186d7238ba4a89a3ad33176ebe73f55a824f80cf370d485c398759ffafcaedf6"></a>E_PERI_BQ25896&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a21d8bc3aa25bf426952bd4c251873854" name="af186d7238ba4a89a3ad33176ebe73f55a21d8bc3aa25bf426952bd4c251873854"></a>E_PERI_BQ27220&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e" name="af186d7238ba4a89a3ad33176ebe73f55ac8d6effe938b0af8bb0275d106c0b48e"></a>E_PERI_RTC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55aed439bd46f1760ada81f203988d6ccaf" name="af186d7238ba4a89a3ad33176ebe73f55aed439bd46f1760ada81f203988d6ccaf"></a>E_PERI_TOUCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a0e6924494dd23cc7ae47a5ffe614386c" name="af186d7238ba4a89a3ad33176ebe73f55a0e6924494dd23cc7ae47a5ffe614386c"></a>E_PERI_LORA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5" name="af186d7238ba4a89a3ad33176ebe73f55a3834a2d34803c4b83bc29606867d46d5"></a>E_PERI_SD_CARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55acb145fa77b3831e0a340ed08c2f0bdc9" name="af186d7238ba4a89a3ad33176ebe73f55acb145fa77b3831e0a340ed08c2f0bdc9"></a>E_PERI_GPS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286" name="af186d7238ba4a89a3ad33176ebe73f55a1b5459390d7d1148abbf2714e716a286"></a>E_PERI_WIFI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241" name="af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241"></a>E_PERI_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00050">50</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="af79bf6d54c03a8a6095100d0889569c6" name="af79bf6d54c03a8a6095100d0889569c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79bf6d54c03a8a6095100d0889569c6">&#9670;&#160;</a></span>button_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool button_read </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="io__extend_8c_source.html#l00067">67</a> der Datei <a class="el" href="io__extend_8c_source.html">io_extend.c</a>.</p>
+
+</div>
+</div>
+<a id="a3a50ff18d34056a205f76fb45a2a3e5e" name="a3a50ff18d34056a205f76fb45a2a3e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a50ff18d34056a205f76fb45a2a3e5e">&#9670;&#160;</a></span>disp_clean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_clean </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00137">137</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3dd4efaa5974c738a6c66735718d322d" name="a3dd4efaa5974c738a6c66735718d322d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd4efaa5974c738a6c66735718d322d">&#9670;&#160;</a></span>disp_full_clean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_full_clean </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00117">117</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4cf4fa6a00ac739365cf04b522b4be64" name="a4cf4fa6a00ac739365cf04b522b4be64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf4fa6a00ac739365cf04b522b4be64">&#9670;&#160;</a></span>disp_full_refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_full_refresh </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00109">109</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aff8e2fa97f53ee7fe5702f26ac75a539" name="aff8e2fa97f53ee7fe5702f26ac75a539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8e2fa97f53ee7fe5702f26ac75a539">&#9670;&#160;</a></span>disp_next_power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_next_power </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>power</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00350">350</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0c7b6ddcddc7beb81f258d9409c62d94" name="a0c7b6ddcddc7beb81f258d9409c62d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7b6ddcddc7beb81f258d9409c62d94">&#9670;&#160;</a></span>disp_next_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_next_status </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>font_large</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00384">384</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a116a748f2b6b167a883eda499f98721a" name="a116a748f2b6b167a883eda499f98721a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116a748f2b6b167a883eda499f98721a">&#9670;&#160;</a></span>disp_refresh_screen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disp_refresh_screen </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00142">142</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeeaa485eb26a4818fddfd00ea074332b" name="aeeaa485eb26a4818fddfd00ea074332b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeaa485eb26a4818fddfd00ea074332b">&#9670;&#160;</a></span>idf_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void idf_loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00666">666</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a295e3092aeaed003574c949586023b63" name="a295e3092aeaed003574c949586023b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295e3092aeaed003574c949586023b63">&#9670;&#160;</a></span>idf_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void idf_setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00569">569</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9133f9d5bc98603c74978628218f49e0" name="a9133f9d5bc98603c74978628218f49e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9133f9d5bc98603c74978628218f49e0">&#9670;&#160;</a></span>indev_touch_dis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void indev_touch_dis </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00104">104</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="accd685bfc76121c612ae189f1d149dc4" name="accd685bfc76121c612ae189f1d149dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd685bfc76121c612ae189f1d149dc4">&#9670;&#160;</a></span>indev_touch_en()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void indev_touch_en </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00099">99</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a518392d3fd144e40865844a8cad6b8ce" name="a518392d3fd144e40865844a8cad6b8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518392d3fd144e40865844a8cad6b8ce">&#9670;&#160;</a></span>io_extend_lora_gps_power_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void io_extend_lora_gps_power_on </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>en</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="io__extend_8c_source.html#l00035">35</a> der Datei <a class="el" href="io__extend_8c_source.html">io_extend.c</a>.</p>
+
+</div>
+</div>
+<a id="ad85a93f3f550d8333aab9e7c16f02b06" name="ad85a93f3f550d8333aab9e7c16f02b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85a93f3f550d8333aab9e7c16f02b06">&#9670;&#160;</a></span>read_io()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t read_io </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>io</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="io__extend_8c_source.html#l00075">75</a> der Datei <a class="el" href="io__extend_8c_source.html">io_extend.c</a>.</p>
+
+</div>
+</div>
+<a id="a15b6fa8c673193dced813ab6081a5eae" name="a15b6fa8c673193dced813ab6081a5eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b6fa8c673193dced813ab6081a5eae">&#9670;&#160;</a></span>set_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_config </td>
+          <td>(</td>
+          <td class="paramtype">i2c_port_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>config_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>high_port</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="io__extend_8c_source.html#l00081">81</a> der Datei <a class="el" href="io__extend_8c_source.html">io_extend.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variablen-Dokumentation</h2>
+<a id="ab2d8f8edf2caedad43af660c0a591cf1" name="ab2d8f8edf2caedad43af660c0a591cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d8f8edf2caedad43af660c0a591cf1">&#9670;&#160;</a></span>bq27220</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_q27220.html">BQ27220</a> bq27220</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="tdeck__pro_8cpp_source.html#l00033">33</a> der Datei <a class="el" href="tdeck__pro_8cpp_source.html">tdeck_pro.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a16ffd5d4412ac457dfafdf535c57ac76" name="a16ffd5d4412ac457dfafdf535c57ac76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ffd5d4412ac457dfafdf535c57ac76">&#9670;&#160;</a></span>global_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char global_buf[<a class="el" href="#a5b1f1e65d2093088bfbf14cc60ad56fb">GLOBAL_BUF_LEN</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a169c53997a7da1d0fb99aec1b4675ce8" name="a169c53997a7da1d0fb99aec1b4675ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169c53997a7da1d0fb99aec1b4675ce8">&#9670;&#160;</a></span>gps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TinyGPSPlus gps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html#l00011">11</a> der Datei <a class="el" href="t-deck-pro_2peri__gps_8cpp_source.html">peri_gps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2489c945958ebe1f9c5be9bada11cbdc" name="a2489c945958ebe1f9c5be9bada11cbdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2489c945958ebe1f9c5be9bada11cbdc">&#9670;&#160;</a></span>gps_day</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gps_day</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00070">70</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a id="a9bc92cc72d6ac50f3937b35d1906b3df" name="a9bc92cc72d6ac50f3937b35d1906b3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc92cc72d6ac50f3937b35d1906b3df">&#9670;&#160;</a></span>gps_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t gps_handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa89ec29a9f67d3f85030b75ab83c6211" name="aa89ec29a9f67d3f85030b75ab83c6211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89ec29a9f67d3f85030b75ab83c6211">&#9670;&#160;</a></span>gps_hour</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gps_hour</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd7ba5ae58feb6f95aa6f3bf7ee8dd34" name="afd7ba5ae58feb6f95aa6f3bf7ee8dd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7ba5ae58feb6f95aa6f3bf7ee8dd34">&#9670;&#160;</a></span>gps_lat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double gps_lat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeb329bf029c305771c3b6d2d88c451d" name="aaeb329bf029c305771c3b6d2d88c451d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb329bf029c305771c3b6d2d88c451d">&#9670;&#160;</a></span>gps_lng</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double gps_lng</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00068">68</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a id="aa289d11e830a6cac5d3d21bb6057520f" name="aa289d11e830a6cac5d3d21bb6057520f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa289d11e830a6cac5d3d21bb6057520f">&#9670;&#160;</a></span>gps_minute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gps_minute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00071">71</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a id="a9f5a92083dec34469378b776d4df91d5" name="a9f5a92083dec34469378b776d4df91d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5a92083dec34469378b776d4df91d5">&#9670;&#160;</a></span>gps_month</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gps_month</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add8bff6a727c463c04fe01deedbfb6c8" name="add8bff6a727c463c04fe01deedbfb6c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8bff6a727c463c04fe01deedbfb6c8">&#9670;&#160;</a></span>gps_second</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t gps_second</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8h_source.html#l00071">71</a> der Datei <a class="el" href="t5epaper__main_8h_source.html">t5epaper_main.h</a>.</p>
+
+</div>
+</div>
+<a id="ab8a12f659147895fc954a6f040f968b2" name="ab8a12f659147895fc954a6f040f968b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a12f659147895fc954a6f040f968b2">&#9670;&#160;</a></span>gps_year</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t gps_year</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a810a5c9fb2ee91307d90db51cd610b1c" name="a810a5c9fb2ee91307d90db51cd610b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810a5c9fb2ee91307d90db51cd610b1c">&#9670;&#160;</a></span>peri_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool peri_buf[<a class="el" href="#af186d7238ba4a89a3ad33176ebe73f55a86f08e03a4a7e342e448531a66dd6241">E_PERI_MAX</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00042">42</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa1521db18c0543a39d476baf5e4efc16" name="aa1521db18c0543a39d476baf5e4efc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1521db18c0543a39d476baf5e4efc16">&#9670;&#160;</a></span>PPM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XPowersPPM PPM</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="tdeck__pro_8cpp_source.html#l00032">32</a> der Datei <a class="el" href="tdeck__pro_8cpp_source.html">tdeck_pro.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc0d526f8e8d1cd9e0ae705c3b7fcfbc" name="acc0d526f8e8d1cd9e0ae705c3b7fcfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0d526f8e8d1cd9e0ae705c3b7fcfbc">&#9670;&#160;</a></span>radio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SX1262 radio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5-epaper_2peri__lora_8cpp_source.html#l00012">12</a> der Datei <a class="el" href="t5-epaper_2peri__lora_8cpp_source.html">peri_lora.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0b86871732ae64714bd3d4b291e04db9" name="a0b86871732ae64714bd3d4b291e04db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b86871732ae64714bd3d4b291e04db9">&#9670;&#160;</a></span>rtc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SensorPCF8563 rtc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="t5epaper__main_8cpp_source.html#l00059">59</a> der Datei <a class="el" href="t5epaper__main_8cpp_source.html">t5epaper_main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d800e4b376e17e765ac6e9053eb241d" name="a4d800e4b376e17e765ac6e9053eb241d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d800e4b376e17e765ac6e9053eb241d">&#9670;&#160;</a></span>touch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TouchDrvGT911 touch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="tdeck__pro_8cpp_source.html#l00036">36</a> der Datei <a class="el" href="tdeck__pro_8cpp_source.html">tdeck_pro.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_714212d465512d3ace82412a0d29f011.html">t5-epaper</a></li><li class="navelem"><a href="t5epaper__main_8h.html">t5epaper_main.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

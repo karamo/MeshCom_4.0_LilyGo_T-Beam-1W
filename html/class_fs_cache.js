@@ -1,0 +1,25 @@
+var class_fs_cache =
+[
+    [ "FsCache", "class_fs_cache.html#ac1ba5f5bcb9fb9e017a5355cb0acb216", null ],
+    [ "cacheBuffer", "class_fs_cache.html#aed103e18beeae07a930ccce69490cfcc", null ],
+    [ "cacheSafeRead", "class_fs_cache.html#abdfa349477d43542829c4d58b355efa6", null ],
+    [ "cacheSafeRead", "class_fs_cache.html#aa0e4acbeaa5a438f0f51ae415db7bc89", null ],
+    [ "cacheSafeWrite", "class_fs_cache.html#a9f4dbc38bec3bb67e8a00ebcb6fd1c81", null ],
+    [ "cacheSafeWrite", "class_fs_cache.html#ab98f8564c715a9b081587c4ae8d343cc", null ],
+    [ "clear", "class_fs_cache.html#a1f06585b0a7d2646b6e375e618591d49", null ],
+    [ "dirty", "class_fs_cache.html#af50f564561a2db190280769d4641147b", null ],
+    [ "init", "class_fs_cache.html#a56724bd91ce82c962b7b6002185d01d3", null ],
+    [ "invalidate", "class_fs_cache.html#a963ea866ca2a9c4f63afd57cf287733d", null ],
+    [ "isCached", "class_fs_cache.html#a9d9880fe717b35c3dd46a2faf5172371", null ],
+    [ "isCached", "class_fs_cache.html#a65201542fbb006396a42ccfd90814c60", null ],
+    [ "isDirty", "class_fs_cache.html#a22f4284aefd18f569d962d37f4a5db70", null ],
+    [ "prepare", "class_fs_cache.html#a8c11f064a2ce0a380f522392f09d63cb", null ],
+    [ "sector", "class_fs_cache.html#a5b90e145400de8687d9f34536b134130", null ],
+    [ "setMirrorOffset", "class_fs_cache.html#a84e91f8d006b8ba521805bb3bc6e83e6", null ],
+    [ "sync", "class_fs_cache.html#a5a2c8fb432d7b7590ebb43200ca21893", null ],
+    [ "m_blockDev", "class_fs_cache.html#a8ba998759665306f7c8745f52c4f8015", null ],
+    [ "m_buffer", "class_fs_cache.html#a915e90145cf2b709c2093e571341efc7", null ],
+    [ "m_mirrorOffset", "class_fs_cache.html#aec4f4c6f83426487e159e7ba3f1758bd", null ],
+    [ "m_sector", "class_fs_cache.html#a435caa2a11bf798ea873e4baa93cfdbb", null ],
+    [ "m_status", "class_fs_cache.html#a0638a314a5456e3535ec57c25c35cb49", null ]
+];

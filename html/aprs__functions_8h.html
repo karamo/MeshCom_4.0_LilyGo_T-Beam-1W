@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/aprs_functions.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('aprs__functions_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">aprs_functions.h-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;configuration.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="aprs__structures_8h_source.html">aprs_structures.h</a>&gt;</code><br />
+</div>
+<p><a href="aprs__functions_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:aca04e119423b87ae4683dd46924c513f" id="r_aca04e119423b87ae4683dd46924c513f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca04e119423b87ae4683dd46924c513f">initAPRS</a> (struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;<a class="el" href="structaprs_message.html">aprsMessage</a>, char msgType)</td></tr>
+<tr class="memitem:ac30f6e48cf0f824f1fd38de474342dfd" id="r_ac30f6e48cf0f824f1fd38de474342dfd"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30f6e48cf0f824f1fd38de474342dfd">decodeAPRS</a> (uint8_t <a class="el" href="loop__functions_8cpp.html#a1ebf31fe871960d95af837609585d684">RcvBuffer</a>[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], uint16_t size, struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;<a class="el" href="structaprs_message.html">aprsMessage</a>)</td></tr>
+<tr class="memitem:aa0d1fd9c33db08548ca16ae744c80b00" id="r_aa0d1fd9c33db08548ca16ae744c80b00"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0d1fd9c33db08548ca16ae744c80b00">encodeAPRS</a> (uint8_t <a class="el" href="loop__functions_8cpp.html#a1ebf31fe871960d95af837609585d684">RcvBuffer</a>[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;<a class="el" href="structaprs_message.html">aprsMessage</a>)</td></tr>
+<tr class="memitem:a2197686ae474d7c9809fdcf76742c505" id="r_a2197686ae474d7c9809fdcf76742c505"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2197686ae474d7c9809fdcf76742c505">encodeStartAPRS</a> (uint8_t <a class="el" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>], struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg)</td></tr>
+<tr class="memitem:a32292f3a0d7bb14607b7afb158a50c24" id="r_a32292f3a0d7bb14607b7afb158a50c24"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32292f3a0d7bb14607b7afb158a50c24">encodePayloadAPRS</a> (uint8_t <a class="el" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="el" href="configuration__global_8h.html#a8b8c824d38702a4457c6af2203b09485">MAX_MSG_LEN_PHONE</a>], struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;aprsmsg)</td></tr>
+<tr class="memitem:aa72f1993a81ffb2d2c6195fb00e52769" id="r_aa72f1993a81ffb2d2c6195fb00e52769"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa72f1993a81ffb2d2c6195fb00e52769">initAPRSPOS</a> (struct <a class="el" href="structaprs_position.html">aprsPosition</a> &amp;<a class="el" href="structaprs_position.html">aprsPosition</a>)</td></tr>
+<tr class="memitem:aa76156605bcebfaac6adbb4431f73ffb" id="r_aa76156605bcebfaac6adbb4431f73ffb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa76156605bcebfaac6adbb4431f73ffb">decodeAPRSPOS</a> (String PayloadBuffer, struct <a class="el" href="structaprs_position.html">aprsPosition</a> &amp;<a class="el" href="structaprs_position.html">aprsPosition</a>)</td></tr>
+<tr class="memitem:a26e4a69d6a3f6ca0ea1f9cd01721b60d" id="r_a26e4a69d6a3f6ca0ea1f9cd01721b60d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e4a69d6a3f6ca0ea1f9cd01721b60d">encodeLoRaAPRS</a> (uint8_t <a class="el" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], char strSourceCall[10], double lat, char lat_c, double lon, char lon_c, int alt)</td></tr>
+<tr class="memitem:a53865f9d1f7873a4d161fe3f5602abaf" id="r_a53865f9d1f7873a4d161fe3f5602abaf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53865f9d1f7873a4d161fe3f5602abaf">encodeLoRaAPRScompressed</a> (uint8_t <a class="el" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], char cSourceCall[10], double lat, char lat_c, double lon, char lon_c, int alt)</td></tr>
+<tr class="memitem:aec0f21f5fb90713e295286682438acd2" id="r_aec0f21f5fb90713e295286682438acd2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec0f21f5fb90713e295286682438acd2">encodeLoRaAPRSText</a> (uint8_t <a class="el" href="command__functions_8cpp.html#a3c0a10de3c2dabefd0f892f17ff52f3a">msg_buffer</a>[<a class="el" href="configuration__global_8h.html#a5d20473a838368ac190f608f4cf46f27">UDP_TX_BUF_SIZE</a>], char cSourceCall[10], char cText[100])</td></tr>
+<tr class="memitem:aad106ca2831e0b6d70819849b1664aab" id="r_aad106ca2831e0b6d70819849b1664aab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad106ca2831e0b6d70819849b1664aab">conv_coord_to_dec</a> (double coord)</td></tr>
+<tr class="memitem:ab300495df101ab218d19b20c7a66856a" id="r_ab300495df101ab218d19b20c7a66856a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab300495df101ab218d19b20c7a66856a">CheckGroup</a> (String callsign)</td></tr>
+<tr class="memitem:a06de0b07eafc826f98494c4b7b3bdcc9" id="r_a06de0b07eafc826f98494c4b7b3bdcc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06de0b07eafc826f98494c4b7b3bdcc9">CheckOwnGroup</a> (String callsign)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="ab300495df101ab218d19b20c7a66856a" name="ab300495df101ab218d19b20c7a66856a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab300495df101ab218d19b20c7a66856a">&#9670;&#160;</a></span>CheckGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckGroup </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00025">25</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a06de0b07eafc826f98494c4b7b3bdcc9" name="a06de0b07eafc826f98494c4b7b3bdcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06de0b07eafc826f98494c4b7b3bdcc9">&#9670;&#160;</a></span>CheckOwnGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckOwnGroup </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>callsign</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00050">50</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aad106ca2831e0b6d70819849b1664aab" name="aad106ca2831e0b6d70819849b1664aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad106ca2831e0b6d70819849b1664aab">&#9670;&#160;</a></span>conv_coord_to_dec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double conv_coord_to_dec </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>coord</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l01228">1228</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac30f6e48cf0f824f1fd38de474342dfd" name="ac30f6e48cf0f824f1fd38de474342dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30f6e48cf0f824f1fd38de474342dfd">&#9670;&#160;</a></span>decodeAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t decodeAPRS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>RcvBuffer</em></span>[UDP_TX_BUF_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsMessage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00120">120</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa76156605bcebfaac6adbb4431f73ffb" name="aa76156605bcebfaac6adbb4431f73ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76156605bcebfaac6adbb4431f73ffb">&#9670;&#160;</a></span>decodeAPRSPOS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t decodeAPRSPOS </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>PayloadBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_position.html">aprsPosition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsPosition</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00479">479</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0d1fd9c33db08548ca16ae744c80b00" name="aa0d1fd9c33db08548ca16ae744c80b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d1fd9c33db08548ca16ae744c80b00">&#9670;&#160;</a></span>encodeAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodeAPRS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>RcvBuffer</em></span>[UDP_TX_BUF_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsMessage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00968">968</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a26e4a69d6a3f6ca0ea1f9cd01721b60d" name="a26e4a69d6a3f6ca0ea1f9cd01721b60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e4a69d6a3f6ca0ea1f9cd01721b60d">&#9670;&#160;</a></span>encodeLoRaAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodeLoRaAPRS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>msg_buffer</em></span>[UDP_TX_BUF_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>strSourceCall</em></span>[10], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l01031">1031</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a53865f9d1f7873a4d161fe3f5602abaf" name="a53865f9d1f7873a4d161fe3f5602abaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53865f9d1f7873a4d161fe3f5602abaf">&#9670;&#160;</a></span>encodeLoRaAPRScompressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodeLoRaAPRScompressed </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>msg_buffer</em></span>[UDP_TX_BUF_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>cSourceCall</em></span>[10], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lat_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>lon_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l01084">1084</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aec0f21f5fb90713e295286682438acd2" name="aec0f21f5fb90713e295286682438acd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0f21f5fb90713e295286682438acd2">&#9670;&#160;</a></span>encodeLoRaAPRSText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodeLoRaAPRSText </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>msg_buffer</em></span>[UDP_TX_BUF_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>cSourceCall</em></span>[10], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>cText</em></span>[100]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l01193">1193</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a32292f3a0d7bb14607b7afb158a50c24" name="a32292f3a0d7bb14607b7afb158a50c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32292f3a0d7bb14607b7afb158a50c24">&#9670;&#160;</a></span>encodePayloadAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodePayloadAPRS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>msg_buffer</em></span>[MAX_MSG_LEN_PHONE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsmsg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00948">948</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2197686ae474d7c9809fdcf76742c505" name="a2197686ae474d7c9809fdcf76742c505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2197686ae474d7c9809fdcf76742c505">&#9670;&#160;</a></span>encodeStartAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t encodeStartAPRS </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>msg_buffer</em></span>[MAX_MSG_LEN_PHONE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsmsg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca04e119423b87ae4683dd46924c513f" name="aca04e119423b87ae4683dd46924c513f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca04e119423b87ae4683dd46924c513f">&#9670;&#160;</a></span>initAPRS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initAPRS </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structaprs_message.html">aprsMessage</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsMessage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>msgType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00091">91</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa72f1993a81ffb2d2c6195fb00e52769" name="aa72f1993a81ffb2d2c6195fb00e52769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72f1993a81ffb2d2c6195fb00e52769">&#9670;&#160;</a></span>initAPRSPOS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initAPRSPOS </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structaprs_position.html">aprsPosition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aprsPosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="aprs__functions_8cpp_source.html#l00450">450</a> der Datei <a class="el" href="aprs__functions_8cpp_source.html">aprs_functions.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="aprs__functions_8h.html">aprs_functions.h</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

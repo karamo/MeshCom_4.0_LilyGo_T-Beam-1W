@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MeshCom 4.: src/Displays/BaseDisplay/setup.cpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MeshCom 4.<span id="projectnumber">&#160;35i</span>
+   </div>
+   <div id="projectbrief">LilyGo T-Beam-1W</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_base_display_2setup_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">setup.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_base_display_2setup_8cpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">    File: setup.cpp</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">        - Constructor, init, setup methods</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="base_8h.html">base.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_base_display.html#a655a6a868d93b5af22ce3a0678d777a5">    9</a></span><a class="code hl_function" href="class_base_display.html#a655a6a868d93b5af22ce3a0678d777a5">BaseDisplay::BaseDisplay</a>(   uint8_t <a class="code hl_variable" href="class_base_display.html#a181757bc62ef0abdcef1fff6a178a3f7">pin_dc</a>, </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                            uint8_t <a class="code hl_variable" href="class_base_display.html#aec64f174d16677497889bcb5f07a3ca4">pin_cs</a>, </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                            uint8_t <a class="code hl_variable" href="class_base_display.html#a0152e272d296fc44c1bb6d9977191306">pin_busy</a>, </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                            uint8_t <a class="code hl_variable" href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">pin_sdi</a>, </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                            uint8_t <a class="code hl_variable" href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">pin_clk</a>, </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                            int16_t page_height ) </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                                : <a class="code hl_function" href="class_base_display.html#a4e57356c5ca5f1d921edd59ec29eb64e">GFX</a>(0, 0)                   </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Store config from the derived class</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    this-&gt;pin_dc = <a class="code hl_variable" href="class_base_display.html#a181757bc62ef0abdcef1fff6a178a3f7">pin_dc</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    this-&gt;pin_cs = <a class="code hl_variable" href="class_base_display.html#aec64f174d16677497889bcb5f07a3ca4">pin_cs</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    this-&gt;pin_busy = <a class="code hl_variable" href="class_base_display.html#a0152e272d296fc44c1bb6d9977191306">pin_busy</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    this-&gt;pin_sdi = <a class="code hl_variable" href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">pin_sdi</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    this-&gt;pin_clk = <a class="code hl_variable" href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">pin_clk</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    this-&gt;<a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a> = page_height;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}        </div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_base_display.html#aa823be09eb53d0fb81b191a2119c9ad8">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_base_display.html#aa823be09eb53d0fb81b191a2119c9ad8">BaseDisplay::begin</a>() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Only begin() once</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_base_display.html#a420ec6a752901001c5148a0c5bad053e">begun</a>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="class_base_display.html#a420ec6a752901001c5148a0c5bad053e">begun</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Set the digital pins that supplement the SPI interface</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    pinMode(<a class="code hl_variable" href="class_base_display.html#aec64f174d16677497889bcb5f07a3ca4">pin_cs</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    pinMode(<a class="code hl_variable" href="class_base_display.html#a181757bc62ef0abdcef1fff6a178a3f7">pin_dc</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    pinMode(<a class="code hl_variable" href="class_base_display.html#a0152e272d296fc44c1bb6d9977191306">pin_busy</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a>);       <span class="comment">// NOTE: do not use internal pullups: incompatible logic levels</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Prepare SPI</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_base_display.html#aa2acfa70f34ec68b13e02ab6716b4042">display_spi</a> = <a class="code hl_function" href="namespace_platform.html#a647d33ca30d155546af7c585d54b12ec">Platform::getSPI</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    digitalWrite(<a class="code hl_variable" href="class_base_display.html#aec64f174d16677497889bcb5f07a3ca4">pin_cs</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="namespace_platform.html#a1329e836fe3d072e61ba58eeecec3426">Platform::beginSPI</a>(<a class="code hl_variable" href="class_base_display.html#aa2acfa70f34ec68b13e02ab6716b4042">display_spi</a>, <a class="code hl_variable" href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">pin_sdi</a>, <a class="code hl_variable" href="class_base_display.html#acb79872c4bd57b7f8047fd6d5364a270">pin_miso</a>, <a class="code hl_variable" href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">pin_clk</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// SAMD21: change SPI pins if requested</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    #ifdef __SAMD21G18A__</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">pin_sdi</a> != <a class="code hl_define" href="fallback_8h.html#aecbf1644810a3520f791d6188bdb6979">DEFAULT_SDI</a> || <a class="code hl_variable" href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">pin_clk</a> != <a class="code hl_define" href="fallback_8h.html#a8c956b82934bb437f43a62821ce8199a">DEFAULT_CLK</a>)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="class_base_display.html#acb79872c4bd57b7f8047fd6d5364a270">pin_miso</a> = Platform::setSPIPins(<a class="code hl_variable" href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">pin_sdi</a>, <a class="code hl_variable" href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">pin_clk</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// All in one boards: power on the peripherals, and hard reset to clear away whatever traumatic experience the display has been through</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #if ALL_IN_ONE</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        Platform::VExtOn();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        Platform::toggleResetPin();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="class_base_display.html#aab64c0b667d674a4637fb134765ffcbf">wait</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// If PRESERVE_IMAGE possible, memory was allocated in constructor</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="fallback_8h.html#a1c3bb2947d10599491ee6107c2cdffaa">PRESERVE_IMAGE</a> &amp;&amp; <a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a> == <a class="code hl_variable" href="class_base_display.html#a37d68fccb3b990332a98f64f81d03cd9">panel_height</a>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="class_base_display.html#a79811bbd01199c17a19c103d8730185c">writePage</a>();    <span class="comment">// Make sure display memory is also blanked</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// Get the Bounds() subclass ready early, so it can be used to initialize globals</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_base_display.html#a221f99c967c64f0cd02f5f2bd46d2178">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_base_display.html#a221f99c967c64f0cd02f5f2bd46d2178">BaseDisplay::instantiateBounds</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// We lied to GFX about dimensions in the constructor, but now we do have the information.</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// I&#39;m not sure it matters, but..</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="class_g_f_x.html#a9114fbcb9c6dc3355da3af5011ab4d21">_width</a> = <a class="code hl_variable" href="class_g_f_x.html#abe59a8c2a07f1c1ecbfcd6ba5645430f">WIDTH</a> = <a class="code hl_variable" href="class_base_display.html#a1aa62659f2f669678f69c7eca5f91c0b">drawing_width</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="class_g_f_x.html#a746d386bc63d503a02decacd2b02377a">_height</a> = <a class="code hl_variable" href="class_g_f_x.html#ac932c31066202f9b0b9fe530164fb485">HEIGHT</a> = <a class="code hl_variable" href="class_base_display.html#a821c06452e7569d72eb71e0fada8bac7">drawing_height</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Instantiate the &quot;Bounds&quot; subclass system, and pass references</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    this-&gt;<a class="code hl_variable" href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">bounds</a> = <a class="code hl_class" href="class_bounds.html">Bounds</a>(  <a class="code hl_variable" href="class_base_display.html#a1aa62659f2f669678f69c7eca5f91c0b">drawing_width</a>,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                            <a class="code hl_variable" href="class_base_display.html#a821c06452e7569d72eb71e0fada8bac7">drawing_height</a>,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                            &amp;<a class="code hl_variable" href="class_base_display.html#a0e6a81eb3ee56301b4f54b004cb5c86f">winrot_top</a>, </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                            &amp;<a class="code hl_variable" href="class_base_display.html#a300de505dcca8410a18fc3be1ece12c1">winrot_right</a>, </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                            &amp;<a class="code hl_variable" href="class_base_display.html#a588ef5410945fe2bfb2cbb00b79a7b05">winrot_bottom</a>, </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                            &amp;<a class="code hl_variable" href="class_base_display.html#a3eeddb871495b5c08e1bc45e3ca0d698">winrot_left</a>, </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                            &amp;<a class="code hl_variable" href="class_g_f_x.html#a5ca656957c8e1079b8399585121ac4d1">rotation</a>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                            &amp;<a class="code hl_variable" href="class_base_display.html#a7c65eca5955b2c6aedabc681cd551c42">imgflip</a>    );</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_base_display.html#a9d935ff23d191fb8a210c155322d6898">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_base_display.html#a9d935ff23d191fb8a210c155322d6898">BaseDisplay::initDrawingParams</a>() {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Default drawing config must be set early, as user-config may be issued before begin() is auto-called.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Calculate pagefile size</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a> = constrain(<a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a>, (uint16_t)1, (uint16_t)<a class="code hl_define" href="fallback_8h.html#a032664b29795adab2a260a8f28d7c160">MAX_PAGE_HEIGHT</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="class_base_display.html#a12f340d7acce532f780c2298e5b54b52">page_bytecount</a> = <a class="code hl_variable" href="class_base_display.html#a627faea7ef23ab594889b0b7aa98c89f">panel_width</a> * <a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a> / 8;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// If unpaged drawing possible, allocate the memory, and set library to draw fullscreen</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="fallback_8h.html#a1c3bb2947d10599491ee6107c2cdffaa">PRESERVE_IMAGE</a> &amp;&amp; <a class="code hl_variable" href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">pagefile_height</a> == <a class="code hl_variable" href="class_base_display.html#a37d68fccb3b990332a98f64f81d03cd9">panel_height</a>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="class_base_display.html#a79f14929859af54c65dfc450699f5a95">grabPageMemory</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Default GFX options</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="class_base_display.html#ad34f17494b16058978bea6b709cf7d7c">fullscreen</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_function" href="class_base_display.html#a98d69e8832ad0dcc827aa3ea66979a9d">setBackgroundColor</a>(<a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_function" href="class_g_f_x.html#af36503159f33d786db9170951375ce65">setTextColor</a>(<a class="code hl_enumvalue" href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// &quot;Custom power swiitching&quot; is disabled on Wireless Paper platforms - irrelevant and maybe the user will break something?</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#ifndef ALL_IN_ONE</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// Set configuration of custom power-swiching circuit, then power up</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> BaseDisplay::useCustomPowerSwitch(uint8_t pin, <a class="code hl_enumeration" href="enums_8h.html#aa5e1e02a2b4aaa352b023bd05aba3a6b">SwitchType</a> type) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        this-&gt;<a class="code hl_variable" href="class_base_display.html#a928829e98dcbe88abc1d3cc3c84ae913">pin_power</a> = pin;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        this-&gt;<a class="code hl_variable" href="class_base_display.html#a46589c95002dc0381763f45765905ce1">switch_type</a> = type;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="comment">// Start powered up</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        delay(50);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        pinMode(<a class="code hl_variable" href="class_base_display.html#a928829e98dcbe88abc1d3cc3c84ae913">pin_power</a>, <a class="code hl_define" href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        digitalWrite(<a class="code hl_variable" href="class_base_display.html#a928829e98dcbe88abc1d3cc3c84ae913">pin_power</a>, <a class="code hl_variable" href="class_base_display.html#a46589c95002dc0381763f45765905ce1">switch_type</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="comment">// Wait for powerup</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        delay(100);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a1bb283bd7893b9855e2f23013891fc82"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a1bb283bd7893b9855e2f23013891fc82">INPUT</a></div><div class="ttdeci">#define INPUT</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_bare_uno_driver_8h_source.html#l00043">SdSpiBareUnoDriver.h:43</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a5bb885982ff66a2e0a0a45a8ee9c35e2"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a></div><div class="ttdeci">#define HIGH</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_bare_uno_driver_8h_source.html#l00037">SdSpiBareUnoDriver.h:37</a></div></div>
+<div class="ttc" id="a_sd_spi_bare_uno_driver_8h_html_a61a3c9a18380aafb6e430e79bf596557"><div class="ttname"><a href="_sd_spi_bare_uno_driver_8h.html#a61a3c9a18380aafb6e430e79bf596557">OUTPUT</a></div><div class="ttdeci">#define OUTPUT</div><div class="ttdef"><b>Definition</b> <a href="_sd_spi_bare_uno_driver_8h_source.html#l00046">SdSpiBareUnoDriver.h:46</a></div></div>
+<div class="ttc" id="abase_8h_html"><div class="ttname"><a href="base_8h.html">base.h</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a0152e272d296fc44c1bb6d9977191306"><div class="ttname"><a href="class_base_display.html#a0152e272d296fc44c1bb6d9977191306">BaseDisplay::pin_busy</a></div><div class="ttdeci">uint8_t pin_busy</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00265">base.h:265</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a0e6a81eb3ee56301b4f54b004cb5c86f"><div class="ttname"><a href="class_base_display.html#a0e6a81eb3ee56301b4f54b004cb5c86f">BaseDisplay::winrot_top</a></div><div class="ttdeci">uint16_t winrot_top</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a12f340d7acce532f780c2298e5b54b52"><div class="ttname"><a href="class_base_display.html#a12f340d7acce532f780c2298e5b54b52">BaseDisplay::page_bytecount</a></div><div class="ttdeci">uint16_t page_bytecount</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00301">base.h:301</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a181757bc62ef0abdcef1fff6a178a3f7"><div class="ttname"><a href="class_base_display.html#a181757bc62ef0abdcef1fff6a178a3f7">BaseDisplay::pin_dc</a></div><div class="ttdeci">uint8_t pin_dc</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00263">base.h:263</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a1aa62659f2f669678f69c7eca5f91c0b"><div class="ttname"><a href="class_base_display.html#a1aa62659f2f669678f69c7eca5f91c0b">BaseDisplay::drawing_width</a></div><div class="ttdeci">uint16_t drawing_width</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00270">base.h:270</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a221f99c967c64f0cd02f5f2bd46d2178"><div class="ttname"><a href="class_base_display.html#a221f99c967c64f0cd02f5f2bd46d2178">BaseDisplay::instantiateBounds</a></div><div class="ttdeci">void instantiateBounds()</div><div class="ttdef"><b>Definition</b> <a href="#l00064">setup.cpp:64</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a300de505dcca8410a18fc3be1ece12c1"><div class="ttname"><a href="class_base_display.html#a300de505dcca8410a18fc3be1ece12c1">BaseDisplay::winrot_right</a></div><div class="ttdeci">uint16_t winrot_right</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a303d2372c0b9076d8213243f01ecbd89"><div class="ttname"><a href="class_base_display.html#a303d2372c0b9076d8213243f01ecbd89">BaseDisplay::pagefile_height</a></div><div class="ttdeci">uint16_t pagefile_height</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00268">base.h:268</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a37d68fccb3b990332a98f64f81d03cd9"><div class="ttname"><a href="class_base_display.html#a37d68fccb3b990332a98f64f81d03cd9">BaseDisplay::panel_height</a></div><div class="ttdeci">uint16_t panel_height</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00269">base.h:269</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a3eeddb871495b5c08e1bc45e3ca0d698"><div class="ttname"><a href="class_base_display.html#a3eeddb871495b5c08e1bc45e3ca0d698">BaseDisplay::winrot_left</a></div><div class="ttdeci">uint16_t winrot_left</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a420ec6a752901001c5148a0c5bad053e"><div class="ttname"><a href="class_base_display.html#a420ec6a752901001c5148a0c5bad053e">BaseDisplay::begun</a></div><div class="ttdeci">bool begun</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00277">base.h:277</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a46589c95002dc0381763f45765905ce1"><div class="ttname"><a href="class_base_display.html#a46589c95002dc0381763f45765905ce1">BaseDisplay::switch_type</a></div><div class="ttdeci">SwitchType switch_type</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00290">base.h:290</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a4e57356c5ca5f1d921edd59ec29eb64e"><div class="ttname"><a href="class_base_display.html#a4e57356c5ca5f1d921edd59ec29eb64e">BaseDisplay::GFX</a></div><div class="ttdeci">GFX(int16_t w, int16_t h)</div><div class="ttdoc">Instatiate a GFX context for graphics! Can only be done by a superclass.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8cpp_source.html#l00012">GFX.cpp:110</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a588ef5410945fe2bfb2cbb00b79a7b05"><div class="ttname"><a href="class_base_display.html#a588ef5410945fe2bfb2cbb00b79a7b05">BaseDisplay::winrot_bottom</a></div><div class="ttdeci">uint16_t winrot_bottom</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00325">base.h:325</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a627faea7ef23ab594889b0b7aa98c89f"><div class="ttname"><a href="class_base_display.html#a627faea7ef23ab594889b0b7aa98c89f">BaseDisplay::panel_width</a></div><div class="ttdeci">uint16_t panel_width</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00269">base.h:269</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a655a6a868d93b5af22ce3a0678d777a5"><div class="ttname"><a href="class_base_display.html#a655a6a868d93b5af22ce3a0678d777a5">BaseDisplay::BaseDisplay</a></div><div class="ttdeci">BaseDisplay(uint8_t pin_dc, uint8_t pin_cs, uint8_t pin_busy, uint8_t pin_sdi, uint8_t pin_clk, int16_t page_height)</div><div class="ttdef"><b>Definition</b> <a href="#l00009">setup.cpp:9</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a79811bbd01199c17a19c103d8730185c"><div class="ttname"><a href="class_base_display.html#a79811bbd01199c17a19c103d8730185c">BaseDisplay::writePage</a></div><div class="ttdeci">void writePage()</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2hardware_8cpp_source.html#l00070">hardware.cpp:70</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a79f14929859af54c65dfc450699f5a95"><div class="ttname"><a href="class_base_display.html#a79f14929859af54c65dfc450699f5a95">BaseDisplay::grabPageMemory</a></div><div class="ttdeci">void grabPageMemory()</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2hardware_8cpp_source.html#l00010">hardware.cpp:10</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a7c65eca5955b2c6aedabc681cd551c42"><div class="ttname"><a href="class_base_display.html#a7c65eca5955b2c6aedabc681cd551c42">BaseDisplay::imgflip</a></div><div class="ttdeci">Flip imgflip</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00296">base.h:296</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a7d1f44b3ec6b1921245304450364c11d"><div class="ttname"><a href="class_base_display.html#a7d1f44b3ec6b1921245304450364c11d">BaseDisplay::pin_clk</a></div><div class="ttdeci">uint8_t pin_clk</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00267">base.h:267</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a821c06452e7569d72eb71e0fada8bac7"><div class="ttname"><a href="class_base_display.html#a821c06452e7569d72eb71e0fada8bac7">BaseDisplay::drawing_height</a></div><div class="ttdeci">uint16_t drawing_height</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00270">base.h:270</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a92392bdffbc19fb1f1f97eaae23cbb09"><div class="ttname"><a href="class_base_display.html#a92392bdffbc19fb1f1f97eaae23cbb09">BaseDisplay::bounds</a></div><div class="ttdeci">Bounds bounds</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00160">base.h:160</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a928829e98dcbe88abc1d3cc3c84ae913"><div class="ttname"><a href="class_base_display.html#a928829e98dcbe88abc1d3cc3c84ae913">BaseDisplay::pin_power</a></div><div class="ttdeci">uint8_t pin_power</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00289">base.h:289</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a96c2475228e3aebcb63de2735119431b"><div class="ttname"><a href="class_base_display.html#a96c2475228e3aebcb63de2735119431b">BaseDisplay::pin_sdi</a></div><div class="ttdeci">uint8_t pin_sdi</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00266">base.h:266</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a98d69e8832ad0dcc827aa3ea66979a9d"><div class="ttname"><a href="class_base_display.html#a98d69e8832ad0dcc827aa3ea66979a9d">BaseDisplay::setBackgroundColor</a></div><div class="ttdeci">void setBackgroundColor(uint16_t bgcolor)</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2graphical_8cpp_source.html#l00082">graphical.cpp:82</a></div></div>
+<div class="ttc" id="aclass_base_display_html_a9d935ff23d191fb8a210c155322d6898"><div class="ttname"><a href="class_base_display.html#a9d935ff23d191fb8a210c155322d6898">BaseDisplay::initDrawingParams</a></div><div class="ttdeci">void initDrawingParams()</div><div class="ttdef"><b>Definition</b> <a href="#l00083">setup.cpp:83</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aa2acfa70f34ec68b13e02ab6716b4042"><div class="ttname"><a href="class_base_display.html#aa2acfa70f34ec68b13e02ab6716b4042">BaseDisplay::display_spi</a></div><div class="ttdeci">SPIClass * display_spi</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00275">base.h:275</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aa823be09eb53d0fb81b191a2119c9ad8"><div class="ttname"><a href="class_base_display.html#aa823be09eb53d0fb81b191a2119c9ad8">BaseDisplay::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition</b> <a href="#l00027">setup.cpp:27</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aab64c0b667d674a4637fb134765ffcbf"><div class="ttname"><a href="class_base_display.html#aab64c0b667d674a4637fb134765ffcbf">BaseDisplay::wait</a></div><div class="ttdeci">virtual void wait()</div><div class="ttdef"><b>Definition</b> <a href="_base_display_2hardware_8cpp_source.html#l00063">hardware.cpp:63</a></div></div>
+<div class="ttc" id="aclass_base_display_html_acb79872c4bd57b7f8047fd6d5364a270"><div class="ttname"><a href="class_base_display.html#acb79872c4bd57b7f8047fd6d5364a270">BaseDisplay::pin_miso</a></div><div class="ttdeci">uint8_t pin_miso</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00282">base.h:282</a></div></div>
+<div class="ttc" id="aclass_base_display_html_ad34f17494b16058978bea6b709cf7d7c"><div class="ttname"><a href="class_base_display.html#ad34f17494b16058978bea6b709cf7d7c">BaseDisplay::fullscreen</a></div><div class="ttdeci">void fullscreen()</div><div class="ttdef"><b>Definition</b> <a href="layout_8cpp_source.html#l00062">layout.cpp:62</a></div></div>
+<div class="ttc" id="aclass_base_display_html_aec64f174d16677497889bcb5f07a3ca4"><div class="ttname"><a href="class_base_display.html#aec64f174d16677497889bcb5f07a3ca4">BaseDisplay::pin_cs</a></div><div class="ttdeci">uint8_t pin_cs</div><div class="ttdef"><b>Definition</b> <a href="base_8h_source.html#l00264">base.h:264</a></div></div>
+<div class="ttc" id="aclass_bounds_html"><div class="ttname"><a href="class_bounds.html">Bounds</a></div><div class="ttdef"><b>Definition</b> <a href="bounds_8h_source.html#l00015">bounds.h:15</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_a5ca656957c8e1079b8399585121ac4d1"><div class="ttname"><a href="class_g_f_x.html#a5ca656957c8e1079b8399585121ac4d1">GFX::rotation</a></div><div class="ttdeci">uint8_t rotation</div><div class="ttdoc">Display rotation (0 thru 3).</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00213">GFX.h:213</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_a746d386bc63d503a02decacd2b02377a"><div class="ttname"><a href="class_g_f_x.html#a746d386bc63d503a02decacd2b02377a">GFX::_height</a></div><div class="ttdeci">int16_t _height</div><div class="ttdoc">Display height as modified by current rotation.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00206">GFX.h:206</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_a9114fbcb9c6dc3355da3af5011ab4d21"><div class="ttname"><a href="class_g_f_x.html#a9114fbcb9c6dc3355da3af5011ab4d21">GFX::_width</a></div><div class="ttdeci">int16_t _width</div><div class="ttdoc">Display width as modified by current rotation.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00205">GFX.h:205</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_abe59a8c2a07f1c1ecbfcd6ba5645430f"><div class="ttname"><a href="class_g_f_x.html#abe59a8c2a07f1c1ecbfcd6ba5645430f">GFX::WIDTH</a></div><div class="ttdeci">int16_t WIDTH</div><div class="ttdoc">This is the &#39;raw&#39; display width - never changes.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00203">GFX.h:203</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_ac932c31066202f9b0b9fe530164fb485"><div class="ttname"><a href="class_g_f_x.html#ac932c31066202f9b0b9fe530164fb485">GFX::HEIGHT</a></div><div class="ttdeci">int16_t HEIGHT</div><div class="ttdoc">This is the &#39;raw&#39; display height - never changes.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00204">GFX.h:204</a></div></div>
+<div class="ttc" id="aclass_g_f_x_html_af36503159f33d786db9170951375ce65"><div class="ttname"><a href="class_g_f_x.html#af36503159f33d786db9170951375ce65">GFX::setTextColor</a></div><div class="ttdeci">void setTextColor(uint16_t c)</div><div class="ttdoc">Set text font color with transparant background.</div><div class="ttdef"><b>Definition</b> <a href="_g_f_x_8h_source.html#l00091">GFX.h:91</a></div></div>
+<div class="ttc" id="aenums_8h_html_aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50"><div class="ttname"><a href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78a283fc479650da98250635b9c3c0e7e50">WHITE</a></div><div class="ttdeci">@ WHITE</div><div class="ttdef"><b>Definition</b> <a href="enums_8h_source.html#l00005">enums.h:5</a></div></div>
+<div class="ttc" id="aenums_8h_html_aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3"><div class="ttname"><a href="enums_8h.html#aa574175df6ec2a14da8226eb24c65c78af77fb67151d0c18d397069ad8c271ba3">BLACK</a></div><div class="ttdeci">@ BLACK</div><div class="ttdef"><b>Definition</b> <a href="enums_8h_source.html#l00005">enums.h:5</a></div></div>
+<div class="ttc" id="aenums_8h_html_aa5e1e02a2b4aaa352b023bd05aba3a6b"><div class="ttname"><a href="enums_8h.html#aa5e1e02a2b4aaa352b023bd05aba3a6b">SwitchType</a></div><div class="ttdeci">SwitchType</div><div class="ttdef"><b>Definition</b> <a href="enums_8h_source.html#l00006">enums.h:6</a></div></div>
+<div class="ttc" id="afallback_8h_html_a032664b29795adab2a260a8f28d7c160"><div class="ttname"><a href="fallback_8h.html#a032664b29795adab2a260a8f28d7c160">MAX_PAGE_HEIGHT</a></div><div class="ttdeci">#define MAX_PAGE_HEIGHT</div><div class="ttdef"><b>Definition</b> <a href="fallback_8h_source.html#l00024">fallback.h:24</a></div></div>
+<div class="ttc" id="afallback_8h_html_a1c3bb2947d10599491ee6107c2cdffaa"><div class="ttname"><a href="fallback_8h.html#a1c3bb2947d10599491ee6107c2cdffaa">PRESERVE_IMAGE</a></div><div class="ttdeci">#define PRESERVE_IMAGE</div><div class="ttdef"><b>Definition</b> <a href="fallback_8h_source.html#l00025">fallback.h:25</a></div></div>
+<div class="ttc" id="afallback_8h_html_a8c956b82934bb437f43a62821ce8199a"><div class="ttname"><a href="fallback_8h.html#a8c956b82934bb437f43a62821ce8199a">DEFAULT_CLK</a></div><div class="ttdeci">#define DEFAULT_CLK</div><div class="ttdef"><b>Definition</b> <a href="fallback_8h_source.html#l00019">fallback.h:19</a></div></div>
+<div class="ttc" id="afallback_8h_html_aecbf1644810a3520f791d6188bdb6979"><div class="ttname"><a href="fallback_8h.html#aecbf1644810a3520f791d6188bdb6979">DEFAULT_SDI</a></div><div class="ttdeci">#define DEFAULT_SDI</div><div class="ttdef"><b>Definition</b> <a href="fallback_8h_source.html#l00018">fallback.h:18</a></div></div>
+<div class="ttc" id="anamespace_platform_html_a1329e836fe3d072e61ba58eeecec3426"><div class="ttname"><a href="namespace_platform.html#a1329e836fe3d072e61ba58eeecec3426">Platform::beginSPI</a></div><div class="ttdeci">void beginSPI(SPIClass *spi, uint8_t pin_mosi, uint8_t pin_miso, uint8_t pin_clk)</div></div>
+<div class="ttc" id="anamespace_platform_html_a647d33ca30d155546af7c585d54b12ec"><div class="ttname"><a href="namespace_platform.html#a647d33ca30d155546af7c585d54b12ec">Platform::getSPI</a></div><div class="ttdeci">SPIClass * getSPI()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_32b6f4273c1202b2f07c43b5e6de1a39.html">Displays</a></li><li class="navelem"><a href="dir_e03b9a72512f2a5aa32cad58483b9db0.html">BaseDisplay</a></li><li class="navelem"><a href="_base_display_2setup_8cpp.html">setup.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
