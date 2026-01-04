@@ -1,7 +1,8 @@
 # MeshCom_4.0 for
 <h1 align = "center">🌟LilyGo T-Beam-1W🌟</h1>
 
-***Info: Start der Tests erst nach Erhalt des Moduls ab Ende Jan.2026***
+***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
+***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
 ### • Intention
 * Anpassung/Erweiterung der [**MeshCom-FW**](https://github.com/icssw-org/MeshCom-Firmware)  für den [**LilyGo T-Beam-1W**](https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md).  
