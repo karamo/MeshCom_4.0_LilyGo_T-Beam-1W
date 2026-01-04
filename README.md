@@ -16,8 +16,8 @@ Anpassung/Erweiterung der MeshCom FW für den LilyGo T-Beam-1W.
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [ ] **Examples** von der Xinyuan-LilyGo Seite testen
-- [ ] **variants** Dateien erstellen und einbauen
-- [ ] **pinning** anpassen
+- [ ] **Key-Components**
+- [ ] **pinning**
 - [ ] **Display**: ...
 - [ ] **LoRa**: SX12..
 - [ ] **GPS**: ...
