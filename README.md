@@ -88,5 +88,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Die Inbetriebnahme erfolgt eigenverantwortlich.
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
-***:copyright: 3.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 5.1.2026 by OE3WAS - Wolfgang***
 
