@@ -15,8 +15,8 @@
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
-- [~] **OLED Examples** vorbereitet
-- [ ] **Examples** von der Xinyuan-LilyGo Seite testen
+- [~] **OLED Examples** vorbereitet & getestet mit T3_V1.6.1
+- [ ] **SD-Card Examples** ...
 - [ ] **Key-Components** beschreiben
 - [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
 - [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
@@ -29,11 +29,17 @@
 1. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
 2. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
 3. anschließend VSC neu starten.
-4. ...
+4. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Prjektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
+5. Dateien bearbeiten ...
+6. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
+7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden)
+    
+
 
 ### • Wie Modul Flashen?
-* ...
-* ...
+* Variante 1: aus VSC/PlatformIO siehe Pkt. 7 zuvor
+* Variante 2: https://esptool.spacehuhn.com/ ...
+* Variante 3: nativ mit `esptool` auf Commandozeilen-Ebene z.B. mittels .bat-Datei ...
 
 ### • Pinning
 | Pin  | Beschreibung |
