@@ -29,7 +29,7 @@
 1. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
 2. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
 3. anschließend VSC neu starten.
-4. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Prjektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
+4. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
 5. Dateien bearbeiten ...
 6. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
 7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden)
