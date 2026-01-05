@@ -2,7 +2,7 @@
 
 #define UNUSED_PIN                   (0)
 
-///< TLORA
+///< ----- T3 V1.6.1 ----- https://lilygo.cc/products/lora3
 #if defined(T3_V1_6_SX1276) || defined(T3_V1_6_SX1278)
 
 #if   defined(T3_V1_6_SX1276)
@@ -13,7 +13,7 @@
 #ifndef USING_SX1278
 #define USING_SX1278
 #endif
-#endif // T3_V1_6_SX1276
+#endif // T3_V1_6_SX1276 || T3_V1_6_SX1278
 
 #define I2C_SDA                     21
 #define I2C_SCL                     22
@@ -53,7 +53,7 @@
 #define BAT_MAX_VOLTAGE             (4.2)
 #define BAT_VOL_COMPENSATION        (0.0)
 
-///< T-Beam 1W
+///< ----- T-Beam 1W ----- LoRa 2W
 #elif defined(T_BEAM_1W)
 
 #ifndef USING_SX1262
@@ -68,12 +68,12 @@
 #define GPS_PPS_PIN                 (7)
 #define GPS_EN_PIN                  (16)
 
-#define BUTTON_PIN                  (0)          /*BUTTON 1 = GPIO0*/
+#define BUTTON_PIN                  (0)          /*BUTTON 1 = GPIO0 (BOOT)*/
 #define BUTTON2_PIN                 (17)         /*BUTTON 2 = GPIO17*/
 
 #define BUTTON_PIN_MASK             GPIO_SEL_0
 #define BUTTON_COUNT                (2)
-#define BUTTON_ARRAY                {BUTTON_PIN,BUTTON2_PIN/*BUTTON 2 = GPIO3*/}
+#define BUTTON_ARRAY                {BUTTON_PIN,BUTTON2_PIN}
 
 #define SPI_MOSI                    (11)
 #define SPI_SCK                     (13)

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "configurations.h"
+#include "configuration.h"
 
 #ifdef HAS_SDCARD
 #include <SD.h>
