@@ -16,13 +16,17 @@
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
 - [~] **OLED Examples** vorbereitet & getestet mit **T3_V1.6.1**
-- [ ] **SD-Card Example** ...
-- [ ] **Key-Components** beschreiben
+- [~] **SD-Card Example** vorbereitet & getestet mit **T3_V1.6.1**
+- [ ] **GPS Examples**
+- [ ] **LoRa Examples**
+
+
+#### • Key-Components
 - [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
 - [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
 - [ ] **System Power**: SM8102ABC
 - [ ] **Display**: 1.3" SH1106 128 x 64
-- [ ] **LoRa**: SX1262
+- [ ] **LoRa**: SX1262 (MeshCom: 433.175 MHz BW: 250 CR: 4/6 SF: 11 SW: 0x2B Preamble: 32(8?))
 - [ ] **GPS**: L76K GNSS Module
 
 ### • Wie Kompilieren?
