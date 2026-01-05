@@ -32,7 +32,8 @@
 4. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
 5. Dateien bearbeiten ...
 6. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
-7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden)
+7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden: `upload_port = COM5` )  
+https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/upload_port.html#upload-port
     
 
 
