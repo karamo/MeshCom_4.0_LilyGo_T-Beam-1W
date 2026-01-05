@@ -15,6 +15,7 @@
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
+- [~] **OLED Examples** vorbereitet
 - [ ] **Examples** von der Xinyuan-LilyGo Seite testen
 - [ ] **Key-Components** beschreiben
 - [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
@@ -37,24 +38,28 @@
 ### • Pinning
 | Pin  | Beschreibung |
 | ------------- | ------------- |
-| IO0 | BOOT |
-| IO1 | LoRa DIO1 |
-| IO3 | LoRa NRESET |
-| IO4 | Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
-| IO8 | SDA |
-| IO9 | SCL |
-| IO10 | SD_CS |
-| IO11 | LoRa_MOSI & SD_MOSI |
-| IO12 | LoRa_MISO & SD_MISO |
-| IO13 | LoRa_SCK & SD_SCK |
-| IO14 | Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
-| IO15 | LoRa_CS |
-| IO17 | UserButton  |
-| IO18 | LED3 |
-| IO21 | LoRa CTL |
-| IO38 | LoRa_BUSY |
-| IO40 | LoRa LDO_EN |
-| IO41 | FANCTRL |
+| IO0 | BUTTON_PIN = BOOT_BUTTON |
+| IO1 | RADIO_DIO1_PIN (LoRa_DIO1) |
+| IO3 | RADIO_RST_PIN (LoRa_NRESET) |
+| IO4 | ADC_PIN = Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
+| IO5 | GPS_RX_PIN |
+| IO6 | GPS_TX_PIN |
+| IO7 | GPS_PPS_PIN |
+| IO8 | I2C_SDA |
+| IO9 | I2C_SCL |
+| IO10 | SPI_CS & SDCARD_CS |
+| IO11 | SPI_MOSI & SD_MOSI & RADIO_MOSI_PIN (LoRa) |
+| IO12 | SPI_MISO & SD_MISO & RADIO_MISO_PIN (LoRa) |
+| IO13 | SPI_SCK & SD_SCK & RADIO_SCLK_PIN (LoRa) |
+| IO14 | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
+| IO15 | RADIO_CS_PIN (LoRa) |
+| IO16 | GPS_EN_PIN |
+| IO17 | BUTTON2_PIN |
+| IO18 | BOARD_LED = LED3 |
+| IO21 | RADIO_CTRL (LoRa_CTL) |
+| IO38 | RADIO_BUSY_PIN (LoRa_BUSY) |
+| IO40 | RADIO_LDO_EN (LoRa_LDO_EN) |
+| IO41 | FAN_CTRL |
 | IO43 | TxD |
 | IO44 | RxD |
 | VBUS | von USB-C an Buchsenleiste verfügbar |
