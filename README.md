@@ -42,9 +42,7 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 
 
 ### • Wie Modul Flashen?
-* Variante 1: aus VSC/PlatformIO siehe Pkt. 7 zuvor
-* Variante 2: https://esptool.spacehuhn.com/ ...
-* Variante 3: nativ mit `esptool` auf Commandozeilen-Ebene z.B. mittels .bat-Datei ...
+siehe: ...
 
 ### • Pinning
 | Pin  | Beschreibung |
