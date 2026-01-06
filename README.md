@@ -42,7 +42,7 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 
 
 ### • Wie Modul Flashen?
-siehe: [examples/firmware/README.md]
+siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ### • Pinning
 | Pin  | Beschreibung |
