@@ -858,7 +858,11 @@ void setupBoards(bool disable_u8g2 )
     Serial.println("init done . ");
 }
 
-
+/**
+ * @brief Print Module Status
+ * 
+ * @param radio_online 
+ */
 void printResult(bool radio_online)
 {
     Serial.print("Radio        : ");
@@ -911,8 +915,7 @@ void printResult(bool radio_online)
 #endif
 
         u8g2->sendBuffer();
-
-        delay(2000);
+        delay(5000);
     }
 #endif
 #endif /*DISPLAY_MODEL*/
@@ -921,7 +924,7 @@ void printResult(bool radio_online)
 
 #ifdef BOARD_LED
 static uint8_t ledState = LOW;
-static const uint32_t debounceDelay = 50;
+static const uint32_t debounceDelay = 500;
 static uint32_t lastDebounceTime = 0;
 #endif
 

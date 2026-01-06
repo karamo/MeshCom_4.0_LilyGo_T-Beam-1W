@@ -18,6 +18,8 @@
 
 #include <RadioLib.h>
 #include "LoRaBoards.h"
+#include "Timeout.h"
+Timeout timeout_LED; // LED flash time
 
 #if     defined(USING_SX1276)
 #ifndef CONFIG_RADIO_FREQ
@@ -85,25 +87,29 @@ void setFlag(void)
 }
 
 //=======================================================================================
+/**
+ * @brief OLED draw RX, SNR, RSSI
+ * 
+ */
 void drawMain()
 {
     if (u8g2) {
         u8g2->clearBuffer();
         u8g2->drawRFrame(0, 0, 128, 64, 5);
         u8g2->setFont(u8g2_font_pxplusibmvga8_mr);
-        u8g2->setCursor(15, 20);
+        u8g2->setCursor(5, 20);
         u8g2->print("RX:");
-        u8g2->setCursor(15, 35);
+        u8g2->setCursor(5, 35);
         u8g2->print("SNR:");
-        u8g2->setCursor(15, 50);
+        u8g2->setCursor(5, 50);
         u8g2->print("RSSI:");
 
         u8g2->setFont(u8g2_font_crox1h_tr);
-        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(payload.c_str()) - 21, 20 );
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(payload.c_str()) - 5, 20 );
         u8g2->print(payload);
-        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(snr.c_str()) - 21, 35 );
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(snr.c_str()) - 5, 35 );
         u8g2->print(snr);
-        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(rssi.c_str()) - 21, 50 );
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(rssi.c_str()) - 5, 50 );
         u8g2->print(rssi);
         u8g2->sendBuffer();
     }
@@ -136,8 +142,7 @@ void setup()
     // set the function that will be called when new packet is received
     radio.setPacketReceivedAction(setFlag);
 
-    /*
-    *   Sets carrier frequency.
+    /*  Sets carrier frequency.
     *   SX1278/SX1276 : Allowed values range from 137.0 MHz to 525.0 MHz.
     *   SX1268/SX1262 : Allowed values are in range from 150.0 to 960.0 MHz.
     */
@@ -147,67 +152,54 @@ void setup()
         while (true);
     }
 
-    /*
-    *   Sets LoRa link bandwidth.
+    /*  Sets LoRa link bandwidth.
     *   SX1278/SX1276 : Allowed values are 10.4, 15.6, 20.8, 31.25, 41.7, 62.5, 125, 250 and 500 kHz. Only available in %LoRa mode.
     *   SX1268/SX1262 : Allowed values are 7.8, 10.4, 15.6, 20.8, 31.25, 41.7, 62.5, 125.0, 250.0 and 500.0 kHz.
-    *   SX1280        : Allowed values are 203.125, 406.25, 812.5 and 1625.0 kHz.
-    *   LR1121        : Allowed values are 62.5, 125.0, 250.0 and 500.0 kHz.
-    * * * */
+    */
     if (radio.setBandwidth(CONFIG_RADIO_BW) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
         Serial.println(F("Selected bandwidth is invalid for this module!"));
         while (true);
     }
 
-
-    /*
-    * Sets LoRa link spreading factor.
-    * SX1278/SX1276 :  Allowed values range from 6 to 12. Only available in LoRa mode.
-    * SX1262        :  Allowed values range from 5 to 12.
-    * SX1280        :  Allowed values range from 5 to 12.
-    * LR1121        :  Allowed values range from 5 to 12.
-    * * * */
+    /* Sets LoRa link spreading factor.
+    *  SX1278/SX1276 :  Allowed values range from 6 to 12. Only available in LoRa mode.
+    *  SX1262        :  Allowed values range from 5 to 12.
+    */
     if (radio.setSpreadingFactor(CONFIG_RADIO_SF) == RADIOLIB_ERR_INVALID_SPREADING_FACTOR) {
         Serial.println(F("Selected spreading factor is invalid for this module!"));
         while (true);
     }
 
-    /*
-    * Sets LoRa coding rate denominator.
+    /* Sets LoRa coding rate denominator.
     * SX1278/SX1276/SX1268/SX1262 : Allowed values range from 5 to 8. Only available in LoRa mode.
     * SX1280        :  Allowed values range from 5 to 8.
     * LR1121        :  Allowed values range from 5 to 8.
-    * * * */
+    */
     if (radio.setCodingRate(CONFIG_RADIO_CR) == RADIOLIB_ERR_INVALID_CODING_RATE) {
         Serial.println(F("Selected coding rate is invalid for this module!"));
         while (true);
     }
 
-    /*
-    * Sets LoRa sync word.
+    /* Sets LoRa sync word.
     * SX1278/SX1276/SX1268/SX1262/SX1280 : Sets LoRa sync word. Only available in LoRa mode.
-    * * */
+    */
     if (radio.setSyncWord(CONFIG_RADIO_SW) != RADIOLIB_ERR_NONE) {
         Serial.println(F("Unable to set sync word!"));
         while (true);
     }
 
-    /*
-    * Sets transmission output power.
+    /* Sets transmission output power.
     * SX1278/SX1276 :  Allowed values range from -3 to 15 dBm (RFO pin) or +2 to +17 dBm (PA_BOOST pin). High power +20 dBm operation is also supported, on the PA_BOOST pin. Defaults to PA_BOOST.
     * SX1262        :  Allowed values are in range from -9 to 22 dBm. This method is virtual to allow override from the SX1261 class.
     * SX1268        :  Allowed values are in range from -9 to 22 dBm.
-    * SX1280        :  Allowed values are in range from -18 to 13 dBm. PA Version range : -18 ~ 3dBm
-    * LR1121        :  Allowed values are in range from -17 to 22 dBm (high-power PA) or -18 to 13 dBm (High-frequency PA), PA Version range : -9 ~ 0dBm
-    * * * */
+    */
     if (radio.setOutputPower(CONFIG_RADIO_OUTPUT_POWER) == RADIOLIB_ERR_INVALID_OUTPUT_POWER) {
         Serial.println(F("Selected output power is invalid for this module!"));
         while (true);
     }
 
 #if !defined(USING_SX1280) && !defined(USING_LR1121) && !defined(USING_SX1280PA)
-    /*
-    * Sets current limit for over current protection at transmitter amplifier.
+    /* Sets current limit for over current protection at transmitter amplifier.
     * SX1278/SX1276 : Allowed values range from 45 to 120 mA in 5 mA steps and 120 to 240 mA in 10 mA steps.
     * SX1262/SX1268 : Allowed values range from 45 to 120 mA in 2.5 mA steps and 120 to 240 mA in 10 mA steps.
     * NOTE: set value to 0 to disable overcurrent protection
@@ -218,8 +210,7 @@ void setup()
     }
 #endif
 
-    /*
-    * Sets preamble length for LoRa or FSK modem.
+    /* Sets preamble length for LoRa or FSK modem.
     * SX1278/SX1276 : Allowed values range from 6 to 65535 in %LoRa mode or 0 to 65535 in FSK mode.
     * SX1262/SX1268 : Allowed values range from 1 to 65535.
     */
@@ -290,15 +281,24 @@ void setup()
     }
 
     drawMain();
+    #ifdef BOARD_LED
+    digitalWrite(BOARD_LED, !LED_ON);
+    #endif
 }
 
 //=======================================================================================
 void loop()
 {
+    #ifdef BOARD_LED
+    if (timeout_LED.time_over()) { digitalWrite(BOARD_LED, !LED_ON);}
+    #endif
+
     // check if the flag is set
     if (receivedFlag) {
-
         receivedFlag = false;  // reset flag
+        #ifdef BOARD_LED
+        timeout_LED.start(1000); // LED flash 1 second
+        #endif
 
         // you can read received data as an Arduino String
         int state = radio.readData(payload);
@@ -308,8 +308,6 @@ void loop()
           byte byteArr[8];
           int state = radio.readData(byteArr, 8);
         */
-
-        flashLed();
 
         if (state == RADIOLIB_ERR_NONE) {
 
@@ -322,28 +320,25 @@ void loop()
             Serial.printf("\nRadio Received packet!\n");
 
             // print data of the packet
-            Serial.print(F("Radio Data:\t\t"));
-            Serial.println(payload);
+            Serial.printf("Radio Data:\t\t%s\n", payload.c_str());
 
             // print RSSI (Received Signal Strength Indicator)
-            Serial.print(F("Radio RSSI:\t\t"));
-            Serial.println(rssi);
+            Serial.printf("Radio RSSI:\t\t%s\n", rssi.c_str());
 
             // print SNR (Signal-to-Noise Ratio)
-            Serial.print(F("Radio SNR:\t\t"));
-            Serial.println(snr);
+            Serial.printf("Radio SNR:\t\t%s\n", snr.c_str());
 
         } else if (state == RADIOLIB_ERR_CRC_MISMATCH) {
             // packet was received, but is malformed
             Serial.println(F("CRC error!"));
         } else {
             // some other error occurred
-            Serial.print(F("failed, code "));
-            Serial.println(state);
+            Serial.printf("failed, code %d\n", state);
         }
 
-        // put module back to listen mode
-        radio.startReceive();
-
+        radio.startReceive();  // put module back to listen mode
+        #ifdef BOARD_LED
+        digitalWrite(BOARD_LED, !LED_ON);
+        #endif
     }
 }
