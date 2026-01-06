@@ -5,7 +5,9 @@
 * Variante 3: https://esptool.spacehuhn.com/
 * * Für die verschiedenen Module gibt es dezitierte Verzeichnisse, in denen sich die FW-Dateien befinden, die im esptool ausgewählt werden müssen lt. Bild und anschließend **`[PROGRAM]`**
 
+**ESP32**  
 <img width="330" height="239" alt="grafik" src="https://github.com/user-attachments/assets/70ceea55-2270-4aac-90ce-d16d2afbb64a" />
 
-
+**ESP32-S3**  
+...
 
