@@ -261,9 +261,9 @@ void setup()
 #endif
 
 #ifdef RADIO_CTRL
-    Serial.println("Turn on LAN, Enter Rx mode.");
+    Serial.println("Turn on LNA, Enter Rx mode.");
     /*
-    * 2W and BPF LoRa LAN Control ,set HIGH turn on LAN ,RX Mode
+    * 2W and BPF LoRa LNA Control ,set HIGH turn on LNA ,RX Mode
     * */
     digitalWrite(RADIO_CTRL, HIGH);
 #endif /*RADIO_CTRL*/

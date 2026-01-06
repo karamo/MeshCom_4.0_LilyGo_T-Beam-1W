@@ -683,6 +683,7 @@ void setupBoards(bool disable_u8g2 )
 
     // while (!Serial);
 
+    delay(10000);
     Serial.println("setupBoards");
 
     getChipInfo();
@@ -815,9 +816,9 @@ void setupBoards(bool disable_u8g2 )
     }
 #endif
 
-    // scanWiFi();
+    scanWiFi();
 
-    // beginWiFi();
+    beginWiFi();
 
 #ifdef FAN_CTRL
     pinMode(FAN_CTRL, OUTPUT);
@@ -960,7 +961,7 @@ void scanDevices(TwoWire *w)
             nDevices++;
             switch (addr) {
             case 0x1C:
-                Serial.printf("\t0x%X found QMC6310 MAG Sensor!", addr);
+                Serial.printf("\t0x%X found QMC6310 MAG Sensor!\n", addr);
                 deviceOnline |= QMC6310_ONLINE;
                 break;
             case 0x20:
@@ -988,12 +989,12 @@ void scanDevices(TwoWire *w)
                 deviceOnline |= BME280_ONLINE;
                 break;
             default:
-                Serial.printf("\tother I2C device found at address 0x%X", addr);
+                Serial.printf("\tother I2C device found at address 0x%X\n", addr);
                 break;
             }
 
         } else if (err == 4) {
-            Serial.printf("Unknow error at address 0x%X", addr);
+            Serial.printf("Unknow error at address 0x%X\n", addr);
         }
     }
     if (nDevices == 0)
