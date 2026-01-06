@@ -613,7 +613,6 @@ void getChipInfo()
 
     printWakeupReason();
 
-
     if (psramFound()) {
         uint32_t psram = ESP.getPsramSize();
         devInfo.psramSize = psram / 1024.0 / 1024.0;
@@ -957,43 +956,41 @@ void scanDevices(TwoWire *w)
         if (err == 0) {
             nDevices++;
             switch (addr) {
-            case 0x77:
-            case 0x76:
-                Serial.println("\tFind BMX280 Sensor!");
-                deviceOnline |= BME280_ONLINE;
+            case 0x1C:
+                Serial.printf("\t0x%X found QMC6310 MAG Sensor!", addr);
+                deviceOnline |= QMC6310_ONLINE;
+                break;
+            case 0x20:
+                Serial.printf("\t0x%X found MCP23017 I/O-Expander\n", addr);
                 break;
             case 0x34:
-                Serial.println("\tFind AXP192/AXP2101 PMU!");
+                Serial.printf("\t0x%X found AXP192/AXP2101 PMU!\n", addr);
                 deviceOnline |= POWERMANAGE_ONLINE;
                 break;
             case 0x3C:
-                Serial.println("\tFind SSD1306/SH1106 dispaly!");
+            case 0x3D:
+                Serial.printf("\t0x%X found SSD1306/SH1106 display!\n", addr);
                 deviceOnline |= DISPLAY_ONLINE;
                 break;
             case 0x51:
-                Serial.println("\tFind PCF8563 RTC!");
+                Serial.printf("\t0x%X found PCF8563 RTC!\n", addr);
                 deviceOnline |= PCF8563_ONLINE;
                 break;
-            case 0x1C:
-                Serial.println("\tFind QMC6310 MAG Sensor!");
-                deviceOnline |= QMC6310_ONLINE;
+            case 0x5A:
+                Serial.printf("\t0x%X found CO2 Gas Sensor!\n", addr);
+                break;
+            case 0x76:
+            case 0x77:
+                Serial.printf("\t0x%X found BMx280/680... Sensor!\n", addr);
+                deviceOnline |= BME280_ONLINE;
                 break;
             default:
-                Serial.print("\tI2C device found at address 0x");
-                if (addr < 16) {
-                    Serial.print("0");
-                }
-                Serial.print(addr, HEX);
-                Serial.println(" !");
+                Serial.printf("\tother I2C device found at address 0x%X", addr);
                 break;
             }
 
         } else if (err == 4) {
-            Serial.print("Unknow error at address 0x");
-            if (addr < 16) {
-                Serial.print("0");
-            }
-            Serial.println(addr, HEX);
+            Serial.printf("Unknow error at address 0x%X", addr);
         }
     }
     if (nDevices == 0)
