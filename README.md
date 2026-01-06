@@ -42,7 +42,7 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 
 
 ### • Wie Modul Flashen?
-siehe: ...
+siehe: [examples/firmware/README.md]
 
 ### • Pinning
 | Pin  | Beschreibung |
