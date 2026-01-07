@@ -21,6 +21,7 @@
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
 - [-] **GPS Examples**
+- [ ] Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 
 
 #### • Key-Components
