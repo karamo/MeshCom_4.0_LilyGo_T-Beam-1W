@@ -17,8 +17,9 @@
 */
 
 #include <RadioLib.h>
-#include "LoRaBoards.h"
-#include "Timeout.h"
+#include "../../LoRaBoards.h"
+#include "../Timeout.h"
+
 Timeout timeout_LED; // LED flash time
 
 #if     defined(USING_SX1276)
