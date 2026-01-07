@@ -25,11 +25,11 @@
 
 
 #### • Key-Components
-- [ ] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
-- [ ] **LoRa Power**: TPS562208DDCR (LDO_EN)
-- [ ] **System Power**: SM8102ABC
-- [ ] **Display**: 1.3" SH1106 128 x 64
-- [ ] **LoRa**: SX1262 (MeshCom: 433.175 MHz BW: 250 CR: 4/6 SF: 11 SW: 0x2B Preamble: 32(8?))
+- [x] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash + 8MB PSRAM(OPI))
+- [x] **Display**: 1.3" SH1106 128 x 64
+- [x] **System Power**: SM8102ABC
+- [ ] **LoRa RX**: SX1262 (MeshCom: 433.175 MHz BW: 250 CR: 4/6 SF: 11 SW: 0x2B Preamble: 32(8?))
+- [ ] **LoRa TX-Power**: TPS562208DDCR (LDO_EN)
 - [ ] **GPS**: L76K GNSS Module
 
 ### • Wie Kompilieren?
