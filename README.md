@@ -39,10 +39,9 @@
 4. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
 5. Dateien bearbeiten ...
 6. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
-7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden: `upload_port = COM5` )  
+7. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der `platformio.ini` eingestellt werden: 🔌`upload_port = COM5` )  
 https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/upload_port.html#upload-port
-    
-
+<img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
 ### • Wie Modul Flashen?
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
