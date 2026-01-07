@@ -29,15 +29,14 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels)
     File file = root.openNextFile();
     while (file) {
         if (file.isDirectory()) {
-            Serial.print("  DIR : ");
-            Serial.println(file.name());
+            Serial.printf("  DIR : %s\n", file.name());
             if (levels) {
                 listDir(fs, file.path(), levels - 1);
             }
         } else {
             Serial.print("  FILE: ");
             Serial.print(file.name());
-            Serial.print("\t  SIZE: ");
+            Serial.print("  SIZE: ");
             Serial.println(file.size());
         }
         file = root.openNextFile();
@@ -256,7 +255,7 @@ void beginPower()
 void setup()
 {
     Serial.begin(115200);
-
+    delay(5000);
     beginPower();
 
     // SPI initialization, reserved for Radio use
