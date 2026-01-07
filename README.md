@@ -15,11 +15,12 @@
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
+- [ ] **examples**
 - [~] **OLED Examples** ... vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
-- [ ] **LoRa Example** `RadioLib_Transmit_Interrupt`
-- [ ] **GPS Examples**
+- [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
+- [-] **GPS Examples**
 
 
 #### • Key-Components
