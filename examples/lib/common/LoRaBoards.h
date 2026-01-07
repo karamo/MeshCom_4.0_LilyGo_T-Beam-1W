@@ -2,6 +2,11 @@
 
 #include "configuration.h"
 
+#include <Arduino.h>
+#include <SPI.h>
+#include <Wire.h>
+#include <esp_mac.h>
+
 #ifdef HAS_SDCARD
 #include <SD.h>
 #endif
@@ -11,10 +16,6 @@
 #include <WiFi.h>
 #endif
 
-#include <Arduino.h>
-#include <SPI.h>
-#include <Wire.h>
-
 #ifdef DISPLAY_MODEL
 #include <U8g2lib.h>
 #endif
@@ -23,15 +24,12 @@
 #include <XPowersLib.h>
 #endif
 
-#include <esp_mac.h>
-
-
 #ifndef DISPLAY_ADDR
 #define DISPLAY_ADDR               0x3C
 #endif
 
+#define ENABLE_BLE      //Enable BLE function
 
-// #define ENABLE_BLE      //Enable ble function
 
 enum {
     POWERMANAGE_ONLINE  = _BV(0),
@@ -51,7 +49,6 @@ enum {
 };
 
 
-
 typedef struct {
     String          chipModel;
     float           psramSize;
@@ -61,7 +58,11 @@ typedef struct {
     uint8_t         flashSpeed;
 } DevInfo_t;
 
-
+/**
+ * @brief Setup Boards Std. Functions
+ * 
+ * @param disable_u8g2 
+ */
 void setupBoards(bool disable_u8g2 = false);
 
 #ifdef HAS_SDCARD
@@ -74,7 +75,6 @@ bool beginSDCard();
 bool beginDisplay();
 #endif
 
-
 void printResult(bool radio_online);
 
 #ifdef BOARD_LED
@@ -86,7 +86,6 @@ void flashLed();
 void scanDevices(TwoWire *w);
 
 bool beginGPS();
-
 bool recoveryGPS();
 
 void scanWiFi();
@@ -110,7 +109,6 @@ extern DISPLAY_MODEL *u8g2;
 
 
 #if defined(ARDUINO_ARCH_ESP32)
-
 #if defined(HAS_SDCARD)
 extern SPIClass SDCardSPI;
 #endif
@@ -119,6 +117,7 @@ extern SPIClass SDCardSPI;
 #elif defined(ARDUINO_ARCH_STM32)
 extern HardwareSerial  SerialGPS;
 #endif
+
 
 #ifdef NTC_PIN
 float getTempForNTC();

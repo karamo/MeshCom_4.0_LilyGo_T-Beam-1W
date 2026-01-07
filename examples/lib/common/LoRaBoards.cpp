@@ -4,13 +4,13 @@
  * @license   MIT
  * @copyright Copyright (c) 2024  ShenZhen XinYuan Electronic Technology Co., Ltd
  * @date      2024-04-24
- * @modified OE3WAS
- *
+ * @modified  OE3WAS
  */
 
 #include "LoRaBoards.h"
 
 #include "soc/rtc.h"
+
 #ifdef ENABLE_BLE
 #include <BLEDevice.h>
 #include <BLEUtils.h>
@@ -21,7 +21,6 @@
 SPIClass SDCardSPI(HSPI);
 #endif
 
-
 #if defined(ARDUINO_ARCH_STM32)
 HardwareSerial  SerialGPS(GPS_RX_PIN, GPS_TX_PIN);
 #endif
@@ -30,15 +29,14 @@ HardwareSerial  SerialGPS(GPS_RX_PIN, GPS_TX_PIN);
 #if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5,0,0)
 #include "hal/gpio_hal.h"
 #endif
+
 #include "driver/gpio.h"
 #endif //ARDUINO_ARCH_ESP32
 
-#ifdef DISPLAY_MODEL
-DISPLAY_MODEL *u8g2 = NULL;
-#endif
-
 
 static DevInfo_t  devInfo;
+uint32_t deviceOnline = 0x00;
+static void enable_slow_clock();
 
 #ifdef HAS_GPS
 static bool find_gps = false;
@@ -46,11 +44,9 @@ String gps_model = "None";
 #endif
 
 
-uint32_t deviceOnline = 0x00;
-
-static void enable_slow_clock();
-
 #ifdef DISPLAY_MODEL
+DISPLAY_MODEL *u8g2 = NULL;
+
 bool beginDisplay()
 {
     Wire.beginTransmission(DISPLAY_ADDR);
@@ -72,7 +68,6 @@ bool beginDisplay()
         delay(3000);
         return true;
     }
-
     Serial.printf("Warning: Failed to find Display at 0x%0X address\n", DISPLAY_ADDR);
     return false;
 }
@@ -97,7 +92,6 @@ bool writeFile(const char *path, const char *buffer)
     file.close();
     return  rlst;
 }
-
 
 bool readFile(const char *path, uint8_t *buffer, size_t size)
 {
@@ -143,9 +137,7 @@ bool beginSDCard()
 
     if (rlst) {
         uint32_t cardSize = SD.cardSize() / (1024 * 1024);
-        Serial.print("Sd Card init succeeded, The current available capacity is ");
-        Serial.print(cardSize / 1024.0);
-        Serial.println(" GB");
+        Serial.printf("Sd Card init succeeded. The current available capacity is %.3f GB\n",cardSize / 1024.0);
         deviceOnline |= SDCARD_ONLINE;
         return testSDWriteAndRead();
     } else {
@@ -212,39 +204,30 @@ void getChipInfo()
 #if defined(ARDUINO_ARCH_ESP32)
 
     Serial.println("-----------------------------------");
-
     printWakeupReason();
 
     if (psramFound()) {
         uint32_t psram = ESP.getPsramSize();
         devInfo.psramSize = psram / 1024.0 / 1024.0;
-        Serial.printf("PSRAM is enable! PSRAM: %.2fMB\n", devInfo.psramSize);
+        Serial.printf("PSRAM is enable! PSRAM: %.2f MB\n", devInfo.psramSize);
         deviceOnline |= PSRAM_ONLINE;
     } else {
         Serial.println("PSRAM is disable!");
         devInfo.psramSize = 0;
     }
 
-
-    Serial.print("Flash:");
     devInfo.flashSize       = ESP.getFlashChipSize() / 1024.0 / 1024.0;
     devInfo.flashSpeed      = ESP.getFlashChipSpeed() / 1000 / 1000;
     devInfo.chipModel       = ESP.getChipModel();
     devInfo.chipModelRev    = ESP.getChipRevision();
     devInfo.chipFreq        = ESP.getCpuFreqMHz();
 
-    Serial.print(devInfo.flashSize);
-    Serial.println(" MB");
-    Serial.print("Flash speed:");
-    Serial.print(devInfo.flashSpeed);
-    Serial.println(" M");
-    Serial.print("Model:");
-
-    Serial.println(devInfo.chipModel);
+    Serial.printf("Flash: %u MB\n", devInfo.flashSize);
+    Serial.printf("Flash speed: %u M\n", devInfo.flashSpeed);
+    Serial.printf("Model: %s\n", devInfo.chipModel);
     Serial.printf("Chip Revision: %u\n", devInfo.chipModelRev);
     Serial.printf("Freq: %u MHz\n", devInfo.chipFreq);
-    Serial.print("SDK Ver:");
-    Serial.println(ESP.getSdkVersion());
+    Serial.printf("SDK Ver: %s", ESP.getSdkVersion());
     Serial.printf("DATE: %s\n", __DATE__);
     Serial.printf("TIME: %s\n", __TIME__);
 
@@ -252,15 +235,11 @@ void getChipInfo()
     char macStr[18] = { 0 };
     esp_efuse_mac_get_default(mac);
     sprintf(macStr, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
-    Serial.print("EFUSE MAC: ");
-    Serial.print(macStr);
-    Serial.println();
-
+    Serial.printf("EFUSE MAC: %s\n", macStr);
     Serial.println("-----------------------------------");
 
 #elif defined(ARDUINO_ARCH_STM32)
     uint32_t uid[3];
-
     uid[0] = HAL_GetUIDw0();
     uid[1] = HAL_GetUIDw1();
     uid[2] = HAL_GetUIDw2();
@@ -273,7 +252,11 @@ void getChipInfo()
 }
 
 
-
+/**
+ * @brief Setup Boards
+ * 
+ * @param disable_u8g2 
+ */
 void setupBoards(bool disable_u8g2 )
 {
     Serial.begin(115200);
@@ -292,7 +275,6 @@ void setupBoards(bool disable_u8g2 )
     SPI.begin();
 #endif
 
-
 #if defined(HAS_SDCARD)
 #if defined(SD_SHARE_SPI_BUS)
     // Share spi bus with lora , set lora cs,rst to high
@@ -305,8 +287,6 @@ void setupBoards(bool disable_u8g2 )
 #endif /*SD_SHARE_SPI_BUS*/
 #endif /*HAS_SDCARD*/
 
-
-
 #ifdef I2C1_SDA
     Wire1.begin(I2C1_SDA, I2C1_SCL);
     Serial.println("Scan Wire1...");
@@ -314,7 +294,6 @@ void setupBoards(bool disable_u8g2 )
 #endif
 
 #ifdef HAS_GPS
-
 #ifdef GPS_EN_PIN
     pinMode(GPS_EN_PIN, OUTPUT);
     digitalWrite(GPS_EN_PIN, HIGH);
@@ -347,11 +326,9 @@ void setupBoards(bool disable_u8g2 )
     gpio_hold_dis((gpio_num_t)BOARD_LED);
 #endif //ARDUINO_ARCH_ESP32
 #endif
-
     pinMode(BOARD_LED, OUTPUT);
     digitalWrite(BOARD_LED, LED_ON);
 #endif
-
 
 #ifdef GPS_RST_PIN
     pinMode(GPS_RST_PIN, OUTPUT);
@@ -366,23 +343,18 @@ void setupBoards(bool disable_u8g2 )
     SerialGPS.println("@GSR"); delay(300);
 #endif
 
-
 #ifdef RADIO_LDO_EN
-    /*
-    * 2W and BPF LoRa LDO enable , Control SX1262 , LNA
-    * 2W and BPF  Radio version must set LDO_EN to HIGH to initialize the Radio
-    * */
+    // 1W and BPF LoRa LDO enable , Control SX1262 , LNA
+    // 1W and BPF Radio version must set LDO_EN to HIGH to initialize the Radio
     pinMode(RADIO_LDO_EN, OUTPUT);
     digitalWrite(RADIO_LDO_EN, HIGH);
 #endif
 
 #ifdef RADIO_CTRL
-    /*
-    * 2W and BPF LoRa RX TX Control
-    * CTRL controls the LNA, not the PA.
-    * Only when RX DATA is on, set to 1 to turn on LNA
-    * When TX DATA is on, CTL is set to 0 and LNA is turned off.
-    * */
+    // 1W and BPF LoRa RX TX Control
+    // CTRL controls the LNA, not the PA.
+    // Only when RX DATA is on, set to 1 to turn on LNA.
+    // When TX DATA is on, CTL is set to 0 and LNA is turned off.
     pinMode(RADIO_CTRL, OUTPUT);
     digitalWrite(RADIO_CTRL, LOW);
 #endif
@@ -409,7 +381,6 @@ void setupBoards(bool disable_u8g2 )
 #endif
 
     scanWiFi();
-
     beginWiFi();
 
 #ifdef FAN_CTRL
@@ -458,53 +429,44 @@ void setupBoards(bool disable_u8g2 )
  */
 void printResult(bool radio_online)
 {
-    Serial.print("Radio        : ");
-    Serial.println((radio_online) ? "+" : "-");
+    Serial.printf("Radio        : %s\n", (radio_online) ? "+" : "-");
 
 #if defined(CONFIG_IDF_TARGET_ESP32)  ||  defined(CONFIG_IDF_TARGET_ESP32S3)
-
-    Serial.print("PSRAM        : ");
-    Serial.println((psramFound()) ? "+" : "-");
+    Serial.printf("PSRAM        : %s\n", (psramFound()) ? "+" : "-");
 
 #ifdef DISPLAY_MODEL
-    Serial.print("Display      : ");
-    Serial.println(( u8g2) ? "+" : "-");
+    Serial.printf("Display      : %s\n", (u8g2) ? "+" : "-");
 #endif
 
 #ifdef HAS_SDCARD
-    Serial.print("Sd Card      : ");
-    Serial.println((SD.cardSize() != 0) ? "+" : "-");
+    Serial.printf("Sd Card      : %s\n", (SD.cardSize() != 0) ? "+" : "-");
 #endif
 
 #ifdef HAS_PMU
-    Serial.print("Power        : ");
-    Serial.println(( PMU ) ? "+" : "-");
+    Serial.printf("Power        : %s\n", ( PMU ) ? "+" : "-");
 #endif
 
 #ifdef HAS_GPS
-    Serial.print("GPS          : ");
-    Serial.println(( find_gps ) ? "+" : "-");
+    Serial.printf("GPS          : %s\n", ( find_gps ) ? "+" : "-");
 #endif
 
 #ifdef DISPLAY_MODEL
     if (u8g2) {
-
         u8g2->clearBuffer();
         u8g2->setFont(u8g2_font_NokiaLargeBold_tf );
         uint16_t str_w =  u8g2->getStrWidth(BOARD_VARIANT_NAME);
         u8g2->drawStr((u8g2->getWidth() - str_w) / 2, 16, BOARD_VARIANT_NAME);
         u8g2->drawHLine(5, 21, u8g2->getWidth() - 5);
-
-        u8g2->drawStr( 0, 38, "Disp:");     u8g2->drawStr( 45, 38, ( u8g2) ? "+" : "-");
+        u8g2->drawStr( 0, 38, "Disp:");     u8g2->drawStr( 45, 38, (u8g2) ? "+" : "-");
 
 #ifdef HAS_SDCARD
         u8g2->drawStr( 0, 54, "SD :");      u8g2->drawStr( 45, 54, (SD.cardSize() != 0) ? "+" : "-");
 #endif
 
-        u8g2->drawStr( 62, 38, "Radio:");    u8g2->drawStr( 120, 38, ( radio_online ) ? "+" : "-");
+        u8g2->drawStr( 62, 38, "Radio:");    u8g2->drawStr( 120, 38, (radio_online) ? "+" : "-");
 
 #ifdef HAS_PMU
-        u8g2->drawStr( 62, 54, "Power:");    u8g2->drawStr( 120, 54, ( PMU ) ? "+" : "-");
+        u8g2->drawStr( 62, 54, "Power:");    u8g2->drawStr( 120, 54, (PMU) ? "+" : "-");
 #endif
 
         u8g2->sendBuffer();
@@ -563,6 +525,9 @@ void scanDevices(TwoWire *w)
                 Serial.printf("\t0x%X found AXP192/AXP2101 PMU!\n", addr);
                 deviceOnline |= POWERMANAGE_ONLINE;
                 break;
+            case 0x38:
+                Serial.printf("\t0x%X found AHT10/AHT20 Sensor!\n", addr);
+                break;
             case 0x3C:
             case 0x3D:
                 Serial.printf("\t0x%X found SSD1306/SH1106 display!\n", addr);
@@ -584,7 +549,6 @@ void scanDevices(TwoWire *w)
                 Serial.printf("\tother I2C device found at address 0x%X\n", addr);
                 break;
             }
-
         } else if (err == 4) {
             Serial.printf("Unknow error at address 0x%X\n", addr);
         }
@@ -592,8 +556,7 @@ void scanDevices(TwoWire *w)
     if (nDevices == 0)
         Serial.println("No I2C devices found\n");
 
-    Serial.println("Scan devices done.");
-    Serial.println("\n");
+    Serial.println("Scan devices done.\n");
 }
 
 
@@ -666,7 +629,6 @@ bool beginGPS()
 }
 
 
-
 static int getAck(uint8_t *buffer, uint16_t size, uint8_t requestedClass, uint8_t requestedID)
 {
     uint16_t    ubxFrameCounter = 0;
@@ -679,30 +641,19 @@ static int getAck(uint8_t *buffer, uint16_t size, uint8_t requestedClass, uint8_
             int c = SerialGPS.read();
             switch (ubxFrameCounter) {
             case 0:
-                if (c == 0xB5) {
-                    ubxFrameCounter++;
-                }
+                if (c == 0xB5) { ubxFrameCounter++; }
                 break;
             case 1:
-                if (c == 0x62) {
-                    ubxFrameCounter++;
-                } else {
-                    ubxFrameCounter = 0;
-                }
+                if (c == 0x62) { ubxFrameCounter++; }
+                else           { ubxFrameCounter = 0; }
                 break;
             case 2:
-                if (c == requestedClass) {
-                    ubxFrameCounter++;
-                } else {
-                    ubxFrameCounter = 0;
-                }
+                if (c == requestedClass) { ubxFrameCounter++; }
+                else                     { ubxFrameCounter = 0; }
                 break;
             case 3:
-                if (c == requestedID) {
-                    ubxFrameCounter++;
-                } else {
-                    ubxFrameCounter = 0;
-                }
+                if (c == requestedID) { ubxFrameCounter++; }
+                else                  { ubxFrameCounter = 0; }
                 break;
             case 4:
                 needRead = c;
@@ -724,8 +675,7 @@ static int getAck(uint8_t *buffer, uint16_t size, uint8_t requestedClass, uint8_
                 }
                 break;
 
-            default:
-                break;
+            default: break;
             }
         }
     }
@@ -761,7 +711,6 @@ bool recoveryGPS()
     }
     return true;
 }
-
 #endif
 
 
@@ -769,9 +718,9 @@ bool recoveryGPS()
 
 //NCP18XH103F03RB: https://item.szlcsc.com/14214.html
 // #define NTC_PIN 14 // NTC connection pins
-#define SERIES_RESISTOR 10000 // Series resistance value (10kΩ)
-#define B_COEFFICIENT 3950 // B value, set according to the NTC specification
-#define ROOM_TEMP 298.15 // 25°C absolute temperature (K)
+#define SERIES_RESISTOR 10000      // Series resistance value (10kΩ)
+#define B_COEFFICIENT 3950         // B value, set according to the NTC specification
+#define ROOM_TEMP 298.15           // 25°C absolute temperature (K)
 #define ROOM_TEMP_RESISTANCE 10000 // Resistance of NTC at 25°C (10kΩ)
 
 float getTempForNTC()
@@ -786,35 +735,28 @@ float getTempForNTC()
         // Calculate temperature using the Steinhart-Hart equation
         temperature = (1.0 / (log(resistance / ROOM_TEMP_RESISTANCE) / B_COEFFICIENT + 1.0 / ROOM_TEMP)) - 273.15;
 
-        // Serial.print("Temperature: ");
-        // Serial.print(temperature);
-        // Serial.println(" °C");
+        Serial.printf("Temperature: %.1f °C\n", temperature);
 
-        check_temperature  = millis() + 1000;
+        check_temperature  = millis() + 10000;
     }
 #endif
     return temperature;
 }
 
 #ifdef ENABLE_BLE
-
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
 #define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
 
 void setupBLE()
 {
-
     uint8_t mac[6];
     char macStr[18] = { 0 };
     esp_efuse_mac_get_default(mac);
     sprintf(macStr, "%02X:%02X", mac[0], mac[1]);
-
     String dev = BOARD_VARIANT_NAME;
     dev.concat('-');
     dev.concat(macStr);
-
-    Serial.print("Starting BLE:");
-    Serial.println(dev);
+    Serial.printf("Starting BLE: %s", dev.c_str());
 
     BLEDevice::init(dev.c_str());
     BLEServer *pServer = BLEDevice::createServer();
@@ -838,7 +780,6 @@ void setupBLE()
 #endif
 
 #define CALIBRATE_ONE(cali_clk) calibrate_one(cali_clk, #cali_clk)
-
 static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name)
 {
     const uint32_t cal_count = 1000;
@@ -877,25 +818,19 @@ void scanWiFi()
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
     Serial.println("WiFi Scan start");
-    // WiFi.scanNetworks will return the number of networks found.
-    int n = WiFi.scanNetworks();
+    int n = WiFi.scanNetworks();  // returns the number of networks found
     Serial.println("WiFi Scan done");
     if (n == 0) {
         Serial.println("no networks found");
     } else {
-        Serial.print(n);
-        Serial.println(" networks found");
+        Serial.printf("%u networks found", n);
         Serial.println("Nr | SSID                             | RSSI | CH | Encryption");
         for (int i = 0; i < n; ++i) {
             // Print SSID and RSSI for each network found
-            Serial.printf("%2d", i + 1);
-            Serial.print(" | ");
-            Serial.printf("%-32.32s", WiFi.SSID(i).c_str());
-            Serial.print(" | ");
-            Serial.printf("%4ld", WiFi.RSSI(i));
-            Serial.print(" | ");
-            Serial.printf("%2ld", WiFi.channel(i));
-            Serial.print(" | ");
+            Serial.printf("%2d | ", i + 1);
+            Serial.printf("%-32.32s | ", WiFi.SSID(i).c_str());
+            Serial.printf("%4ld | ", WiFi.RSSI(i));
+            Serial.printf("%2ld | ", WiFi.channel(i));
             switch (WiFi.encryptionType(i)) {
             case WIFI_AUTH_OPEN:            Serial.print("open"); break;
             case WIFI_AUTH_WEP:             Serial.print("WEP"); break;
@@ -912,11 +847,10 @@ void scanWiFi()
             delay(10);
         }
     }
-    Serial.println("");
+    Serial.println();
 
     // Delete the scan result to free memory for code below.
     WiFi.scanDelete();
 }
 
 #endif /*ARDUINO_ARCH_ESP32*/
-
