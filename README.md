@@ -13,7 +13,7 @@
 * Die Diskussion, Issues u.a. können auch hier erfolgen. Ihr seid herzlichst eingeladen, hier mitzumachen.
 
 ### • ToDo-List
-- [x] **Vorbereitung**: Start mit FW-Version 4.35i.01.03 (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
+- [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
 - [ ] **examples**
 - [~] **OLED Examples** ... vorbereitet & getestet mit **T3_V1.6.1**
