@@ -47,34 +47,34 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ### • Pinning
-| Pin  | Beschreibung |
-| ------------- | ------------- |
-| IO0 | BUTTON_PIN = BOOT_BUTTON |
-| IO1 | RADIO_DIO1_PIN (LoRa_DIO1) |
-| IO3 | RADIO_RST_PIN (LoRa_NRESET) |
-| IO4 | ADC_PIN = Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
-| IO5 | GPS_RX_PIN |
-| IO6 | GPS_TX_PIN |
-| IO7 | GPS_PPS_PIN |
-| IO8 | I2C_SDA |
-| IO9 | I2C_SCL |
-| IO10 | SPI_CS & SDCARD_CS |
-| IO11 | SPI_MOSI & SD_MOSI & RADIO_MOSI_PIN (LoRa) |
-| IO12 | SPI_MISO & SD_MISO & RADIO_MISO_PIN (LoRa) |
-| IO13 | SPI_SCK & SD_SCK & RADIO_SCLK_PIN (LoRa) |
-| IO14 | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
-| IO15 | RADIO_CS_PIN (LoRa) |
-| IO16 | GPS_EN_PIN |
-| IO17 | BUTTON2_PIN |
-| IO18 | BOARD_LED = LED3 |
-| IO21 | RADIO_CTRL (LoRa_CTL) |
-| IO38 | RADIO_BUSY_PIN (LoRa_BUSY) |
-| IO40 | RADIO_LDO_EN (LoRa_LDO_EN) |
-| IO41 | FAN_CTRL |
-| IO43 | TxD |
-| IO44 | RxD |
-| VBUS | von USB-C an Buchsenleiste verfügbar |
-| VBAT | IN/OUT max. 7,4 V |
+| Pin | I/O | Beschreibung |
+| --- | --- | ------------ |
+| IO0 | I | BUTTON_PIN = BOOT_BUTTON |
+| IO1 | | RADIO_DIO1_PIN (LoRa_DIO1) |
+| IO3 | O | RADIO_RST_PIN (LoRa_NRESET) |
+| IO4 | I | ADC_PIN = Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
+| IO5 | | GPS_RX_PIN |
+| IO6 | | GPS_TX_PIN |
+| IO7 | | GPS_PPS_PIN |
+| IO8 | | I2C_SDA |
+| IO9 | | I2C_SCL |
+| IO10 | | SPI_CS & SDCARD_CS |
+| IO11 | | SPI_MOSI & SD_MOSI & RADIO_MOSI_PIN (LoRa) |
+| IO12 | | SPI_MISO & SD_MISO & RADIO_MISO_PIN (LoRa) |
+| IO13 | | SPI_SCK & SD_SCK & RADIO_SCLK_PIN (LoRa) |
+| IO14 | I | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
+| IO15 | O | RADIO_CS_PIN (LoRa) |
+| IO16 | O | GPS_EN_PIN |
+| IO17 | I | BUTTON2_PIN |
+| IO18 | O | BOARD_LED = LED3 |
+| IO21 | O | RADIO_CTRL (LoRa_CTL) |
+| IO38 | | RADIO_BUSY_PIN (LoRa_BUSY) |
+| IO40 | O | RADIO_LDO_EN (LoRa_LDO_EN) |
+| IO41 | O | FAN_CTRL |
+| IO43 | | TxD |
+| IO44 | | RxD |
+| VBUS | O | von USB-C an Buchsenleiste verfügbar |
+| VBAT | IO | nom. 7,4 V (max. 8,4 V = 2S LiPo)|
 
 
 
@@ -93,5 +93,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Die Inbetriebnahme erfolgt eigenverantwortlich.
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
-***:copyright: 5.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 7.1.2026 by OE3WAS - Wolfgang***
 
