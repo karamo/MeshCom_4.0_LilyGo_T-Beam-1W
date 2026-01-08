@@ -47,34 +47,43 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ### 📍 Pin Map
-| Pin | I/O | ☑️ | Beschreibung |
-| --- |---|---| ------------ |
-| IO0 | I | ❌ | BUTTON_PIN = BOOT_BUTTON |
-| IO1 | | ❌ | RADIO_DIO1_PIN (LoRa_DIO1) |
-| IO3 | O | ❌ | RADIO_RST_PIN (LoRa_NRESET) |
-| IO4 | I | ❌ | ADC_PIN = Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
-| IO5 | | ❌ | GPS_RX_PIN |
-| IO6 | | ❌ | GPS_TX_PIN |
-| IO7 | | ❌ | GPS_PPS_PIN |
-| IO8 | | ❌ | I2C_SDA |
-| IO9 | | ❌ | I2C_SCL |
-| IO10 | | ❌ | SPI_CS & SDCARD_CS |
-| IO11 | | ❌ | SPI_MOSI & SD_MOSI & RADIO_MOSI_PIN (LoRa) |
-| IO12 | | ❌ | SPI_MISO & SD_MISO & RADIO_MISO_PIN (LoRa) |
-| IO13 | | ❌ | SPI_SCK & SD_SCK & RADIO_SCLK_PIN (LoRa) |
-| IO14 | I | ❌ | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
-| IO15 | O | ❌ | RADIO_CS_PIN (LoRa) |
-| IO16 | O | ❌ | GPS_EN_PIN |
-| IO17 | I | ❌ | BUTTON2_PIN |
-| IO18 | O | ❌ | BOARD_LED = LED3 |
-| IO21 | O | ❌ | RADIO_CTRL (LoRa_CTL) |
-| IO38 | | ❌ | RADIO_BUSY_PIN (LoRa_BUSY) |
-| IO40 | O | ❌ | RADIO_LDO_EN (LoRa_LDO_EN) |
-| IO41 | O | ❌ | FAN_CTRL |
-| IO43 | O | ✅ | TxD |
-| IO44 | I | ✅ | RxD |
-| VBUS | **O** | ✔️ | +5V von USB-C |
-| VBAT | **IO** | ✔️ | nom. 7,4 V (min. 5 V - max. 8,4 V = 2S LiPo)|
+| Pin | I/O | ☑️ | P5/P6 |Beschreibung |
+| --- |---|---|---| ------------ |
+| IO0 | I | ❌ | | BUTTON_PIN = BOOT_BUTTON |
+| IO1 | O | ❌ | | RADIO_DIO1_PIN (LoRa_DIO1) |
+| IO2 | x | ✅ | P5:15 ||
+| IO3 | O | ❌ | | RADIO_RST_PIN (LoRa_NRESET) |
+| IO4 | I | ❌✔️ | P6:13 | ADC_PIN = Battery Voltage sampling **VBAT**-300k1% -**IO4**- 150k1% - **GND** |
+| IO5 | O | ❌✔️ | P6:12 | GPS_RX_PIN |
+| IO6 | I | ❌✔️ | P6:11 | GPS_TX_PIN |
+| IO7 | I | ❌✔️ | P6:10 | GPS_PPS_PIN |
+| IO8 | | ❌✔️ | P5:5 | I2C_SDA |
+| IO9 | | ❌✔️ | P5:4 | I2C_SCL |
+| IO10 | O | ❌ | | SPI_CS & SDCARD_CS |
+| IO11 | | ❌✔️ | P6:3 | SPI_MOSI & SD_MOSI & RADIO_MOSI_PIN (LoRa) |
+| IO12 | | ❌✔️ | P6:1 | SPI_MISO & SD_MISO & RADIO_MISO_PIN (LoRa) |
+| IO13 | | ❌✔️ | P6:2 | SPI_SCK & SD_SCK & RADIO_SCLK_PIN (LoRa) |
+| IO14 | I | ❌✔️ | P6:5 | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
+| IO15 | O | ❌ | | RADIO_CS_PIN (LoRa) |
+| IO16 | O | ❌ | | GPS_EN_PIN |
+| IO17 | I | ❌✔️ | P6:7 | BUTTON2_PIN |
+| IO18 | O | ❌✔️ | P6:6 | BOARD_LED = LED3 |
+| IO21 | O | ❌✔️ | P6:8 | RADIO_CTRL (LoRa_CTL) |
+| IO38 | I | ❌ | | RADIO_BUSY_PIN (LoRa_BUSY) |
+| IO39 | x | ✅ | P5:9 ||
+| IO40 | O | ❌ | | RADIO_LDO_EN (LoRa_LDO_EN) |
+| IO41 | O | ❌✔️ | P6:9 | FAN_CTRL |
+| IO42 | x | ✅ | P5:10 ||
+| IO43 | O | ✅ | P5:14 | TxD |
+| IO44 | I | ✅ | P5:13 | RxD |
+| IO45 | x | ✅ | P5:8 ||
+| IO46 | x | ✅ | P6:4 ||
+| IO47 | x | ✅ | P5:6 ||
+| IO48 | x | ✅ | P5:7 ||
+| 3V3 | **O** | ✔️ | P5:11 P6:14 | +3,3 V |
+| VBUS | **O** | ✔️ | P5:1 | +5V (3,9 .. 6 V) von USB-C |
+| VBAT | **IO** | ✔️ | P5:2 | nom. 7,4 V (min. 5 V - max. 8,4 V = 2S LiPo)|
+| GND | **IO** | ✔️ | P5:3 P5:12 P6:15 | GND
 
 ✔️ = über Buchsen-/Stiftleiste herausgeführt  
 ✅ = frei verfügbar, über Buchsen-/Stiftleiste herausgeführt  
@@ -93,7 +102,9 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 > 
 > 1. When receiving data, set it to high level and turn on the LNA power;
 > 2. When transmitting data and sleeping, set it to low level and turn off the LNA power.
->
+
+<img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
+
 ### • Link zu den Originaldokumenten:  
 <ins>Hardware Overview:</ins>  
 https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md
