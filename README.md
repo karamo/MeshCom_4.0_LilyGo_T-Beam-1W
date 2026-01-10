@@ -34,13 +34,14 @@
 
 ### • Wie Kompilieren?
 1. [GitHub Desktop](https://desktop.github.com/download/) installieren.
-2. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
-3. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
-4. anschließend VSC neu starten.
-5. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
-6. Dateien bearbeiten ...
-7. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
-8. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der Statuszeile ausgewählt werden oder in `platformio.ini` eingestellt werden: 🔌`upload_port = COM5` )  
+2. `<>Code` > "**Open with GitHub Desktop**" <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />
+3. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
+5. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
+6. anschließend VSC neu starten.
+7. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
+8. Dateien bearbeiten ...
+9. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
+10. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der Statuszeile ausgewählt werden oder in `platformio.ini` eingestellt werden: 🔌`upload_port = COM5` )  
 https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/upload_port.html#upload-port
 <img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
