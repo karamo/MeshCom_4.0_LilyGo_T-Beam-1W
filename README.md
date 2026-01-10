@@ -28,20 +28,25 @@
 - [x] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash (QIO 80Mhz) + 8MB QSPI PSRAM (OPI))
 - [x] **Display**: 1.3" SH1106 128 x 64
 - [x] **System Power**: SM8102ABC
-- [ ] **LoRa RX**: SX1262 (MeshCom: 433.175 MHz BW: 250 CR: 4/6 SF: 11 SW: 0x2B Preamble: 32(8?))
+- [x] **LoRa RX**: SX1262 (MeshCom: 433.175 MHz BW: 250 CR: 4/6 SF: 11 SW: 0x2B Preamble: 32(8?))
 - [ ] **LoRa TX-Power**: TPS562208DDCR (LDO_EN)
 - [ ] **GPS**: L76K GNSS Module
 
 ### • Wie Kompilieren?
 1. [GitHub Desktop](https://desktop.github.com/download/) installieren.
-2. `<>Code` > "**Open with GitHub Desktop**" <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />
-3. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
-5. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
-6. anschließend VSC neu starten.
-7. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
-8. Dateien bearbeiten ...
-9. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
-10. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der Statuszeile ausgewählt werden oder in `platformio.ini` eingestellt werden: 🔌`upload_port = COM5` )  
+2. In einem Web-Browser das gewünschte Repository auf GitHub anzeigen und mit `<>Code🔻` > "**Open with GitHub Desktop**" wird ein Abbild (Clone) des Repositories am eigenen PC erstellt.
+3. <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />  
+4. Bei Änderungen auf GitHub diese mit [`Pull origin`] auf dem eigenen PC synchronisieren.
+5. <img width="452" height="318" alt="grafik" src="https://github.com/user-attachments/assets/41ec65ab-5a20-4a97-96a0-a519a3e32535" />
+
+
+6. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
+7. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
+8. anschließend VSC neu starten.
+9. In linker vertikaler Icon-Leiste **PlatformIO** > PIO Home > Open > [Open Project] > zum Projektverzeichnis navigieren wo eine `platformio.ini` existiert > [Open "..."]
+10. Dateien bearbeiten ...
+11. Kompilieren ohne Hochladen mit ✔️ in der Statusleiste unten
+12. Kompilieren + Hochladen mit ➡️ in der Statusleiste unten (bei mehreren verbundenen Boards muss u.U. zuerst noch das COM-Port in der Statuszeile ausgewählt werden oder in `platformio.ini` eingestellt werden: 🔌`upload_port = COM5` )  
 https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/upload_port.html#upload-port
 <img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
