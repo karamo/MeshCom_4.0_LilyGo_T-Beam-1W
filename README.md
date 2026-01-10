@@ -16,7 +16,7 @@
 - [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] **pinning**
 - [ ] **examples**
-- [~] **OLED Examples** ... vorbereitet & getestet mit **T3_V1.6.1**
+- [~] **OLED Examples** `OLED_SH1106_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
