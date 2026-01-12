@@ -20,7 +20,7 @@
 - [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
-- [-] **BLE Example**
+- [-] **WiFi & BLE Example**
 - [-] **GPS Examples**
 
 ### • Implementierung
