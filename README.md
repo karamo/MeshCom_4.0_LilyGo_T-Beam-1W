@@ -20,8 +20,20 @@
 - [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
+- [-] **BLE Example**
 - [-] **GPS Examples**
-- [ ] Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
+
+### • Implementierung
+Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
+- [ ] variants Datei
+- [ ] boards JSON-Datei
+- [ ] OLED SH1106
+- [ ] no PMU
+- [ ] WiFi & BLE
+- [ ] LoRa SX1262 (433 MHz)
+- [ ] GPS L76K
+- [ ] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
+- [ ] Feldtest
 
 
 #### • Key-Components
@@ -127,5 +139,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Die Inbetriebnahme erfolgt eigenverantwortlich.
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
-***:copyright: 10.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 12.1.2026 by OE3WAS - Wolfgang***
 
