@@ -4,7 +4,7 @@
 ***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
 ***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
-* [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-intention)
+* [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#intention)
 * [ToDo-List](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-todo-list)
 * [Implementierung](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-implementierung)
 * [Key-Components](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-key-components)
@@ -13,7 +13,7 @@
 * [Pin Map](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
 
 ---
-### • Intention
+### Intention
 * Anpassung/Erweiterung der [**MeshCom-FW**](https://github.com/icssw-org/MeshCom-Firmware)  für den [**LilyGo T-Beam-1W**](https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md) [**LilyGo T-Beam-1W**](https://lilygo.cc/products/t-beam-1w).  
 * Hier wird eine Linksammlung zu dem **LilyGo T-Beam-1W** entstehen; und auszugsweise deutsche Übersetzungen aus den Originaldokumenten.
 * [Beispielprogramme](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele) zum Test der einzelnen Komponenten.
