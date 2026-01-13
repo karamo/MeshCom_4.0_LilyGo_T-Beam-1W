@@ -255,7 +255,8 @@ void beginPower()
 void setup()
 {
     Serial.begin(115200);
-    delay(5000);
+    delay(10000);
+    Serial.println("SD-Card Test");
     beginPower();
 
     // SPI initialization, reserved for Radio use
