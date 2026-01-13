@@ -5,11 +5,11 @@
 ***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
 * [Intention](#intention)
-* [ToDo-List](todo-list)
-* [Implementierung](implementierung)
-* [Key-Components](key-components)
-* [Wie Kompilieren?](wie-kompilieren)
-* [Wie Modul Flashen?](wie-modul-flashen)
+* [ToDo-List](#todo-list)
+* [Implementierung](#implementierung)
+* [Key-Components](#key-components)
+* [Wie Kompilieren?](#wie-kompilieren)
+* [Wie Modul Flashen?](#wie-modul-flashen)
 * [Pin Map](#pin-map)
 
 https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
