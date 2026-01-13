@@ -26,12 +26,12 @@
 - [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
-- [~] **OLED Example** `OLED_SH1106_Test` vorbereitet & getestet mit **T3_V1.6.1**
-- [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
-- [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
+- [x] **OLED Example** `OLED_SH1106_Test` vorbereitet & getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
+- [x] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
+- [x] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
-- [-] **WiFi & BLE Example**
-- [-] **GPS Examples**
+- [~] **WiFi & BLE Example** AP auf `192.168.4.1` ok
+- [~] **GPS Examples** L76K wird richtig erkannt am   **LilyGo T-Beam-1W**
 
 ---
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
