@@ -80,7 +80,7 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ---
-### Pin Map
+### Pin Map [⬆️](#lilygo-t-beam-1w)
 | 📍Pin | I/O | ☑️ | P5/P6 |Beschreibung |
 | --- |---|---|---| ------------ |
 | IO0 | I | ❌ | | BUTTON_PIN = BOOT_BUTTON |
