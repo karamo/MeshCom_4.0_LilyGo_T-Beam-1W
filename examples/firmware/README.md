@@ -12,10 +12,13 @@
   * **❗⚠️ Die Adresse von bootloader.bin (ESP32) und bootloader-s3.bin (ESP32-S3) sind unterschiedlich.**
   * 🟢 **bei nachfolgenden FW-Updates ist nur mehr die `firmware.bin` zu flashen erforderlich.**
 
+----
 * **ESP32**  (`T3_V1_6_SX1278` u.ä.)  
 <img width="330" height="239" alt="grafik" src="https://github.com/user-attachments/assets/70ceea55-2270-4aac-90ce-d16d2afbb64a" />
 
+----
 * **ESP32-S3**  (`T_BEAM_1W_433M` u.ä.)  
 <img width="339" height="236" alt="grafik" src="https://github.com/user-attachments/assets/869b74d0-da1f-4b65-9130-b35545079fcb" />
 
-
+----
+***:copyright: 13.1.2026 by OE3WAS - Wolfgang***
