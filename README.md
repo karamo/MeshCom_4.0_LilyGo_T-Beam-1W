@@ -4,14 +4,13 @@
 ***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
 ***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
-* [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#intention)
 * [Intention](#intention)
-* [ToDo-List](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-todo-list)
-* [Implementierung](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-implementierung)
-* [Key-Components](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-key-components)
-* [Wie Kompilieren?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-kompilieren)
-* [Wie Modul Flashen?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-modul-flashen)
-* [Pin Map](#-pin-map)
+* [ToDo-List](todo-list)
+* [Implementierung](implementierung)
+* [Key-Components](key-components)
+* [Wie Kompilieren?](wie-kompilieren)
+* [Wie Modul Flashen?](wie-modul-flashen)
+* [Pin Map](#pin-map)
 
 https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 
@@ -25,7 +24,7 @@ https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 * Die Diskussion, Issues u.a. können auch hier erfolgen. Ihr seid herzlichst eingeladen, hier mitzumachen.
 
 ---
-### • ToDo-List
+### ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
@@ -37,7 +36,7 @@ https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 - [-] **GPS Examples**
 
 ---
-### • Implementierung
+### Implementierung
 Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
 - [ ] variants Datei
 - [ ] boards JSON-Datei
@@ -50,7 +49,7 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] Feldtest
 
 ---
-### • Key-Components
+### Key-Components
 - [x] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash (QIO 80Mhz) + 8MB QSPI PSRAM (OPI))
 - [x] **Display**: 1.3" SH1106 128 x 64
 - [x] **System Power**: SM8102ABC
@@ -59,7 +58,7 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] **GPS**: L76K GNSS Module
 
 ---
-### • Wie Kompilieren?
+### Wie Kompilieren?
 1. [GitHub Desktop](https://desktop.github.com/download/) installieren.
 2. In einem Web-Browser das gewünschte Repository auf GitHub anzeigen und mit `<>Code🔻` > "**Open with GitHub Desktop**" wird ein Abbild (Clone) des Repositories am eigenen PC erstellt.
 3. <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />  
@@ -77,12 +76,12 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 <img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
 ---
-### • Wie Modul Flashen?
+### Wie Modul Flashen?
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ---
-### • 📍 Pin Map
-| Pin | I/O | ☑️ | P5/P6 |Beschreibung |
+### Pin Map
+| 📍Pin | I/O | ☑️ | P5/P6 |Beschreibung |
 | --- |---|---|---| ------------ |
 | IO0 | I | ❌ | | BUTTON_PIN = BOOT_BUTTON |
 | IO1 | O | ❌ | | RADIO_DIO1_PIN (LoRa_DIO1) |
