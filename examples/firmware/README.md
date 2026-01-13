@@ -3,8 +3,8 @@
 * **Variante 1**: aus **VSC/PlatformIO** siehe [Pkt. 7](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-kompilieren)
 * **Variante 2**: nativ mit `esptool` auf Commandozeilen-Ebene z.B. mittels .bat-Datei ...
 * **Variante 3**: https://esptool.spacehuhn.com/ ❗ **Chrome-Browser** ❗
-  * ESP32-S3 u.a. Module, die keinen USB-Serial-Chip haben, müssen vor dem **`[CONNECT]`** in den **BOOT-Loader-Modus** gebracht werden:  
-  **BOOT-Taste halten - RESET-Taste drücken und loslassen - BOOT-Taste loslassen**
+  * ESP32-S3 u.a. Module, die **keinen USB-Serial-Chip** haben, müssen vor dem **`[CONNECT]`** in den **BOOT-Loader-Modus** gebracht werden:  
+  ➡️ **BOOT-Taste halten - RESET-Taste drücken und loslassen - BOOT-Taste loslassen**
   * Wenn nach **`[CONNECT]`** im Textfenster "`Couldn't sync to ESP`" auftritt, dann bedeutet das, dass der ESP32 **nicht** im BOOT-Loader-Modus war.
   * Für die verschiedenen Module gibt es dezitierte Verzeichnisse, in denen sich die FW-Dateien (`*.bin`) befinden, die im esptool lt. Bild auf richtiger Adresse ausgewählt werden müssen und anschließend **`[PROGRAM]`**
   * nach dem Flashen **RST/RESET**-Taste am Modul drücken.
