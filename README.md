@@ -8,9 +8,8 @@
 * [ToDo-List](#todo-list)
 * [Implementierung](#implementierung)
 * [Key-Components](#key-components)
-* [Wie Kompilieren?](#wie-kompilieren-)
+* [Wie Kompilieren?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#wie-kompilieren-%EF%B8%8F)
 * [Wie Modul Flashen?](#wie-modul-flashen)
-* [Pin Map](#pin-map-)
 * [Pin Map](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#pin-map-%EF%B8%8F)
 
 https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
