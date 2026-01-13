@@ -8,9 +8,9 @@
   * Wenn nach **`[CONNECT]`** im Textfenster "`Couldn't sync to ESP`" auftritt, dann bedeutet das, dass der ESP32 **nicht** im BOOT-Loader-Modus war.
   * Für die verschiedenen Module gibt es dezitierte Verzeichnisse, in denen sich die FW-Dateien (`*.bin`) befinden, die im esptool lt. Bild auf richtiger Adresse ausgewählt werden müssen und anschließend **`[PROGRAM]`**
   * nach dem Flashen **RST/RESET**-Taste am Modul drücken.
-  * **❗ Achtung ❗ Normaler Modus und BOOT-Loader-Modus sind auf verschiedenen COM-Ports (Windows).**
-  * **❗ Achtung ❗ Die Adresse von bootloader.bin (ESP32) und bootloader-s3.bin (ESP32-S3) sind unterschiedlich.**
-
+  * **❗⚠️ Normaler Modus und BOOT-Loader-Modus sind auf verschiedenen COM-Ports (Windows).**
+  * **❗⚠️ Die Adresse von bootloader.bin (ESP32) und bootloader-s3.bin (ESP32-S3) sind unterschiedlich.**
+  * 🟢 **bei nachfolgenden FW-Updates ist nur mehr die `firmware.bin` zu flashen erforderlich.**
 
 * **ESP32**  (`T3_V1_6_SX1278` u.ä.)  
 <img width="330" height="239" alt="grafik" src="https://github.com/user-attachments/assets/70ceea55-2270-4aac-90ce-d16d2afbb64a" />
