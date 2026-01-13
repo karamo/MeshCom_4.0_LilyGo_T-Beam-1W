@@ -4,18 +4,16 @@
 ***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
 ***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
-* [Intention](#intention)
-* [ToDo-List](#todo-list)
-* [Implementierung](#implementierung)
-* [Key-Components](#key-components)
+* [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#intention-%EF%B8%8F)
+* [ToDo-List](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#todo-list-%EF%B8%8F)
+* [Implementierung](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#implementierung-%EF%B8%8F)
+* [Key-Components](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#key-components-%EF%B8%8F)
 * [Wie Kompilieren?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#wie-kompilieren-%EF%B8%8F)
-* [Wie Modul Flashen?](#wie-modul-flashen)
+* [Wie Modul Flashen?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#wie-modul-flashen-%EF%B8%8F)
 * [Pin Map](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#pin-map-%EF%B8%8F)
 
-https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
-
 ---
-### Intention
+### Intention [⬆️](#lilygo-t-beam-1w)
 * Anpassung/Erweiterung der [**MeshCom-FW**](https://github.com/icssw-org/MeshCom-Firmware)  für den [**LilyGo T-Beam-1W**](https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md) [**LilyGo T-Beam-1W**](https://lilygo.cc/products/t-beam-1w).  
 * Hier wird eine Linksammlung zu dem **LilyGo T-Beam-1W** entstehen; und auszugsweise deutsche Übersetzungen aus den Originaldokumenten.
 * [Beispielprogramme](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele) zum Test der einzelnen Komponenten.
@@ -24,7 +22,7 @@ https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 * Die Diskussion, Issues u.a. können auch hier erfolgen. Ihr seid herzlichst eingeladen, hier mitzumachen.
 
 ---
-### ToDo-List
+### ToDo-List ⏫
 - [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
@@ -36,7 +34,7 @@ https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 - [-] **GPS Examples**
 
 ---
-### Implementierung
+### Implementierung [⬆️](#lilygo-t-beam-1w)
 Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
 - [ ] variants Datei
 - [ ] boards JSON-Datei
@@ -49,7 +47,7 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] Feldtest
 
 ---
-### Key-Components
+### Key-Components [⬆️](#lilygo-t-beam-1w)
 - [x] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash (QIO 80Mhz) + 8MB QSPI PSRAM (OPI))
 - [x] **Display**: 1.3" SH1106 128 x 64
 - [x] **System Power**: SM8102ABC
@@ -76,7 +74,7 @@ https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/up
 <img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
 ---
-### Wie Modul Flashen?
+### Wie Modul Flashen? [⬆️](#lilygo-t-beam-1w)
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
 ---
@@ -140,12 +138,12 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
 
 ---
-### • Link zu den Originaldokumenten:  
+### • Link zu den Originaldokumenten: [⬆️](#lilygo-t-beam-1w)  
 **<ins>Hardware Overview:</ins>**  
 https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md
 
 ---
-### • Disclaimer & Lizenz:
+### • Disclaimer & Lizenz: [⬆️](#lilygo-t-beam-1w)
 * **Dokumente:** Originaldokumente inkl. Links zu LilyGo und deren Lizenz
 * **Texte und speziell erstellte Dokumente hier:** grundsätzlich ***:copyright: by OE3WAS - Wolfgang***
 * **Sources & FW:** entsprechend der **Lizenz von** [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware)
