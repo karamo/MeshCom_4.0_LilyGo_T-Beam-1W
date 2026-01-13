@@ -8,9 +8,9 @@
 * [ToDo-List](#todo-list)
 * [Implementierung](#implementierung)
 * [Key-Components](#key-components)
-* [Wie Kompilieren?](#wie-kompilieren)
+* [Wie Kompilieren?](#wie-kompilieren-)
 * [Wie Modul Flashen?](#wie-modul-flashen)
-* [Pin Map](#pin-map)
+* [Pin Map](#pin-map-)
 
 https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 
@@ -58,7 +58,7 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] **GPS**: L76K GNSS Module
 
 ---
-### Wie Kompilieren?
+### Wie Kompilieren? [⬆️](#lilygo-t-beam-1w)
 1. [GitHub Desktop](https://desktop.github.com/download/) installieren.
 2. In einem Web-Browser das gewünschte Repository auf GitHub anzeigen und mit `<>Code🔻` > "**Open with GitHub Desktop**" wird ein Abbild (Clone) des Repositories am eigenen PC erstellt.
 3. <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />  
