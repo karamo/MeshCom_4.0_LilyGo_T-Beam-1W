@@ -4,6 +4,15 @@
 ***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
 ***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
 
+* [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-intention)
+* [ToDo-List](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-todo-list)
+* [Implementierung](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-implementierung)
+* [Key-Components](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-key-components)
+* [Wie Kompilieren?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-kompilieren)
+* [Wie Modul Flashen?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-modul-flashen)
+* [Pin Map](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
+
+---
 ### • Intention
 * Anpassung/Erweiterung der [**MeshCom-FW**](https://github.com/icssw-org/MeshCom-Firmware)  für den [**LilyGo T-Beam-1W**](https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md) [**LilyGo T-Beam-1W**](https://lilygo.cc/products/t-beam-1w).  
 * Hier wird eine Linksammlung zu dem **LilyGo T-Beam-1W** entstehen; und auszugsweise deutsche Übersetzungen aus den Originaldokumenten.
@@ -12,17 +21,19 @@
 * Dokumentation spezieller Details der **MeshCom-FW**.
 * Die Diskussion, Issues u.a. können auch hier erfolgen. Ihr seid herzlichst eingeladen, hier mitzumachen.
 
+---
 ### • ToDo-List
 - [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
-- [x] **pinning**
-- [ ] **examples**
-- [~] **OLED Examples** `OLED_SH1106_Test` vorbereitet & getestet mit **T3_V1.6.1**
+- [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
+- [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples)
+- [~] **OLED Example** `OLED_SH1106_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **SD-Card Example** `SD_Test` vorbereitet & getestet mit **T3_V1.6.1**
 - [~] **LoRa Example** `RadioLib_Receive_Interrupt` vorbereitet & getestet mit **T3_V1.6.1**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
 - [-] **WiFi & BLE Example**
 - [-] **GPS Examples**
 
+---
 ### • Implementierung
 Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
 - [ ] variants Datei
@@ -35,8 +46,8 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
 
-
-#### • Key-Components
+---
+### • Key-Components
 - [x] **SOC**: ESP32-S3-WROOM-1 N16R8 (16MB Flash (QIO 80Mhz) + 8MB QSPI PSRAM (OPI))
 - [x] **Display**: 1.3" SH1106 128 x 64
 - [x] **System Power**: SM8102ABC
@@ -44,13 +55,13 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 - [ ] **LoRa TX-Power**: TPS562208DDCR (LDO_EN)
 - [ ] **GPS**: L76K GNSS Module
 
+---
 ### • Wie Kompilieren?
 1. [GitHub Desktop](https://desktop.github.com/download/) installieren.
 2. In einem Web-Browser das gewünschte Repository auf GitHub anzeigen und mit `<>Code🔻` > "**Open with GitHub Desktop**" wird ein Abbild (Clone) des Repositories am eigenen PC erstellt.
 3. <img width="440" height="104" alt="grafik" src="https://github.com/user-attachments/assets/28c04706-c880-4be3-8fa8-4b05f585047e" />  
 4. Bei Änderungen auf GitHub diese mit [`Pull origin`] auf dem eigenen PC synchronisieren.
 5. <img width="452" height="318" alt="grafik" src="https://github.com/user-attachments/assets/41ec65ab-5a20-4a97-96a0-a519a3e32535" />
-
 
 6. [Visual Studio Code](https://code.visualstudio.com/) (VSC) and [Python](https://www.python.org/) installieren.
 7. In linker vertikaler Icon-Leiste **VSC Extentions** > `PlatformIO` plugin suchen und installieren.
@@ -62,10 +73,12 @@ Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)
 https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/upload_port.html#upload-port
 <img width="613" height="24" alt="grafik" src="https://github.com/user-attachments/assets/6b66f2bb-28b4-4b46-869b-2069e41118a0" />
 
+---
 ### • Wie Modul Flashen?
 siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples/firmware#firmware-upload)
 
-### 📍 Pin Map
+---
+### • 📍 Pin Map
 | Pin | I/O | ☑️ | P5/P6 |Beschreibung |
 | --- |---|---|---| ------------ |
 | IO0 | I | ❌ | | BUTTON_PIN = BOOT_BUTTON |
@@ -124,11 +137,12 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
 
+---
 ### • Link zu den Originaldokumenten:  
-<ins>Hardware Overview:</ins>  
+**<ins>Hardware Overview:</ins>**  
 https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_1w/t_beam_1w_hw.md
 
-
+---
 ### • Disclaimer & Lizenz:
 * **Dokumente:** Originaldokumente inkl. Links zu LilyGo und deren Lizenz
 * **Texte und speziell erstellte Dokumente hier:** grundsätzlich ***:copyright: by OE3WAS - Wolfgang***
@@ -139,5 +153,6 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Die Inbetriebnahme erfolgt eigenverantwortlich.
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
-***:copyright: 12.1.2026 by OE3WAS - Wolfgang***
+---
+***:copyright: 13.1.2026 by OE3WAS - Wolfgang***
 
