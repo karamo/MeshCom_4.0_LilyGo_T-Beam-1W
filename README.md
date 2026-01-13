@@ -10,7 +10,8 @@
 * [Key-Components](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-key-components)
 * [Wie Kompilieren?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-kompilieren)
 * [Wie Modul Flashen?](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-wie-modul-flashen)
-* [Pin Map](#pin-map)
+* [Pin Map](#-pin-map)
+
 https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map
 ---
 ### Intention
