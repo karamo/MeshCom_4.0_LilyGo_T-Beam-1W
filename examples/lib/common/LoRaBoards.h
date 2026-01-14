@@ -24,6 +24,7 @@
 #include <XPowersLib.h>
 #endif
 
+#include <esp_mac.h>
 #ifndef DISPLAY_ADDR
 #define DISPLAY_ADDR               0x3C
 #endif
@@ -42,10 +43,11 @@ enum {
     BME280_ONLINE       = _BV(7),
     BMP280_ONLINE       = _BV(8),
     BME680_ONLINE       = _BV(9),
-    QMC6310_ONLINE      = _BV(10),
-    QMI8658_ONLINE      = _BV(11),
-    PCF8563_ONLINE      = _BV(12),
-    OSC32768_ONLINE      = _BV(13),
+    QMC6310U_ONLINE      = _BV(10),
+    QMC6310N_ONLINE      = _BV(11),
+    QMI8658_ONLINE      = _BV(12),
+    PCF8563_ONLINE      = _BV(13),
+    OSC32768_ONLINE      = _BV(14)
 };
 
 

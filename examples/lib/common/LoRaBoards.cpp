@@ -4,6 +4,7 @@
  * @license   MIT
  * @copyright Copyright (c) 2024  ShenZhen XinYuan Electronic Technology Co., Ltd
  * @date      2024-04-24
+ * @last-update 2025-05-26
  * @modified  OE3WAS
  */
 
@@ -33,6 +34,10 @@ HardwareSerial  SerialGPS(GPS_RX_PIN, GPS_TX_PIN);
 #include "driver/gpio.h"
 #endif //ARDUINO_ARCH_ESP32
 
+#ifdef DISPLAY_MODEL
+U8G2 *disp = NULL;
+#endif
+
 
 static DevInfo_t  devInfo;
 uint32_t deviceOnline = 0x00;
@@ -45,30 +50,29 @@ String gps_model = "None";
 
 
 #ifdef DISPLAY_MODEL
-DISPLAY_MODEL *u8g2 = NULL;
-
 bool beginDisplay()
 {
-    Wire.beginTransmission(DISPLAY_ADDR);
+    Wire.beginTransmission(display_address);
     if (Wire.endTransmission() == 0) {
-        Serial.printf("Find Display model at 0x%X address\n", DISPLAY_ADDR);
-        u8g2 = new DISPLAY_MODEL(U8G2_R0, U8X8_PIN_NONE);
-        u8g2->begin();
-        u8g2->clearBuffer();
-        u8g2->setFont(u8g2_font_inb19_mr);
-        u8g2->drawStr(0, 30, "LilyGo");
-        u8g2->drawHLine(2, 35, 47);
-        u8g2->drawHLine(3, 36, 47);
-        u8g2->drawVLine(45, 32, 12);
-        u8g2->drawVLine(46, 33, 12);
-        u8g2->setFont(u8g2_font_inb19_mf);
-        u8g2->drawStr(58, 60, "LoRa");
-        u8g2->sendBuffer();
-        u8g2->setFont(u8g2_font_fur11_tf);
+        disp = new DISPLAY_MODEL(U8G2_R0, U8X8_PIN_NONE);
+        Serial.printf("Find Display model at 0x%X address\n", display_address);
+        disp->begin();
+        disp->clearBuffer();
+        disp->setFont(u8g2_font_inb19_mr);
+        disp->drawStr(0, 30, "LilyGo");
+        disp->drawHLine(2, 35, 47);
+        disp->drawHLine(3, 36, 47);
+        disp->drawVLine(45, 32, 12);
+        disp->drawVLine(46, 33, 12);
+        disp->setFont(u8g2_font_inb19_mf);
+        disp->drawStr(58, 60, "LoRa");
+        disp->sendBuffer();
+        disp->setFont(u8g2_font_fur11_tf);
         delay(3000);
         return true;
     }
-    Serial.printf("Warning: Failed to find Display at 0x%0X address\n", DISPLAY_ADDR);
+
+    Serial.printf("Warning: Failed to find Display at 0x%0X address\n", display_address);
     return false;
 }
 #endif
@@ -451,22 +455,24 @@ void printResult(bool radio_online)
 #endif
 
 #ifdef DISPLAY_MODEL
-    if (u8g2) {
-        u8g2->clearBuffer();
-        u8g2->setFont(u8g2_font_NokiaLargeBold_tf );
-        uint16_t str_w =  u8g2->getStrWidth(BOARD_VARIANT_NAME);
-        u8g2->drawStr((u8g2->getWidth() - str_w) / 2, 16, BOARD_VARIANT_NAME);
-        u8g2->drawHLine(5, 21, u8g2->getWidth() - 5);
-        u8g2->drawStr( 0, 38, "Disp:");     u8g2->drawStr( 45, 38, (u8g2) ? "+" : "-");
+    if (disp) {
+
+        disp->clearBuffer();
+        disp->setFont(u8g2_font_NokiaLargeBold_tf );
+        uint16_t str_w =  disp->getStrWidth(BOARD_VARIANT_NAME);
+        disp->drawStr((disp->getWidth() - str_w) / 2, 16, BOARD_VARIANT_NAME);
+        disp->drawHLine(5, 21, disp->getWidth() - 5);
+
+        disp->drawStr( 0, 38, "Disp:");     disp->drawStr( 45, 38, ( disp) ? "+" : "-");
 
 #ifdef HAS_SDCARD
-        u8g2->drawStr( 0, 54, "SD :");      u8g2->drawStr( 45, 54, (SD.cardSize() != 0) ? "+" : "-");
+        disp->drawStr( 0, 54, "SD :");      disp->drawStr( 45, 54, (SD.cardSize() != 0) ? "+" : "-");
 #endif
 
-        u8g2->drawStr( 62, 38, "Radio:");    u8g2->drawStr( 120, 38, (radio_online) ? "+" : "-");
+        disp->drawStr( 62, 38, "Radio:");    disp->drawStr( 120, 38, ( radio_online ) ? "+" : "-");
 
 #ifdef HAS_PMU
-        u8g2->drawStr( 62, 54, "Power:");    u8g2->drawStr( 120, 54, (PMU) ? "+" : "-");
+        disp->drawStr( 62, 54, "Power:");    disp->drawStr( 120, 54, ( PMU ) ? "+" : "-");
 #endif
 
         u8g2->sendBuffer();
@@ -515,8 +521,9 @@ void scanDevices(TwoWire *w)
             nDevices++;
             switch (addr) {
             case 0x1C:
-                Serial.printf("\t0x%X found QMC6310 MAG Sensor!\n", addr);
-                deviceOnline |= QMC6310_ONLINE;
+                Serial.printf("\t0x%X found QMC6310U MAG Sensor!\n", addr);
+                deviceOnline |= QMC6310U_ONLINE;
+                mag_address = addr;
                 break;
             case 0x20:
                 Serial.printf("\t0x%X found MCP23017 I/O-Expander\n", addr);
@@ -529,10 +536,23 @@ void scanDevices(TwoWire *w)
                 Serial.printf("\t0x%X found AHT10/AHT20 Sensor!\n", addr);
                 break;
             case 0x3C:
-            case 0x3D:
-                Serial.printf("\t0x%X found SSD1306/SH1106 display!\n", addr);
-                deviceOnline |= DISPLAY_ONLINE;
-                break;
+            case 0x3D: {
+                w->beginTransmission(addr);
+                w->write((uint8_t)0x00);
+                w->endTransmission();
+                w->requestFrom((int)addr, 1);
+                uint8_t r = w->read();
+                if (r == 0x80) {
+                    Serial.printf("\tFound QMC6310N MAG Sensor at address 0x%02X\n", addr);
+                    mag_address = addr;
+                    deviceOnline |= QMC6310N_ONLINE;
+                } else {
+                    Serial.printf("\tFound OLED display at address 0x%02X\n", addr);
+                    display_address = addr;
+                    deviceOnline |= DISPLAY_ONLINE;
+                }
+            }
+            break;
             case 0x51:
                 Serial.printf("\t0x%X found PCF8563 RTC!\n", addr);
                 deviceOnline |= PCF8563_ONLINE;
@@ -550,7 +570,7 @@ void scanDevices(TwoWire *w)
                 break;
             }
         } else if (err == 4) {
-            Serial.printf("Unknow error at address 0x%X\n", addr);
+            Serial.printf("Unknow error at address 0x%02X\n", addr);
         }
     }
     if (nDevices == 0)
@@ -779,8 +799,8 @@ void setupBLE()
 }
 #endif
 
-
 #define CALIBRATE_ONE(cali_clk) calibrate_one(cali_clk, #cali_clk)
+
 static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name)
 {
     const uint32_t cal_count = 1000;
