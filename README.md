@@ -46,7 +46,7 @@
 - [ ] WiFi & BLE
 - [ ] LoRa SX1262 (433 MHz)
 - [ ] GPS L76K
-- [ ] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
+- [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
 
 ---
