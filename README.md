@@ -35,7 +35,7 @@
 
 ---
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
-* [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom-FW (neue Nummerierung beginnend mit 4.35a)  
+* [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom-FW (neue Nummerierung beginnend mit **FW V 4.36a**)  
 * geändete Dateien und offene Fragen siehe https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/issues/3
 
 - [x] variants Verzeichnis + Dateien
