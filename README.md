@@ -40,7 +40,7 @@
 
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
-- [~] LilyGo_T-Beam-1W/configuration.h
+- [~] variants/LilyGo_T-Beam-1W/configuration.h
 - [ ] OLED SH1106
 - [ ] no PMU
 - [ ] WiFi & BLE
