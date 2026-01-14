@@ -35,10 +35,12 @@
 
 ---
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
-[Inplementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
-- [x] variants Datei
+* [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom-FW (neue Nummerierung beginnend mit **FW V 4.36a**)  
+* geändete Dateien und offene Fragen siehe https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/issues/3
+
+- [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
-- [~] spez. configuration.h
+- [~] LilyGo_T-Beam-1W/configuration.h
 - [ ] OLED SH1106
 - [ ] no PMU
 - [ ] WiFi & BLE
