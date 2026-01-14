@@ -1,44 +1,129 @@
-/*
-definitions for E22 + ESP32-S3_DevKitC-1_N16R8 Board
-*/
-
 #pragma once
+/*
+definitions for LilyGo T-BEAM 1W Board
+*/
 
 #include <Arduino.h>
 #include <configuration_global.h>
 
-// E22 specifig config
-#define MODUL_HARDWARE ESP32_S3_EBYTE_E22
+//original LilyGo T-Beam-1W mit MesCom definitions tw. andere Namen
 
-// bleibt auch bei E22-900 --> BOARD_COUNTRY schaltet um
+#define UNUSED_PIN                   (0)
+
+//#define SX126x_V3
+#ifndef USING_SX1262
+#define USING_SX1262
+#endif
+
+#define I2C_SDA                     (8)
+#define I2C_SCL                     (9)
+
+#define HAS_GPS
+#define GPS_SLEEP_HOLD_ON_LOW
+#define GPS_BAUD_RATE               9600
+#define GPS_RX_PIN                  (5)
+#define GPS_TX_PIN                  (6)
+#define GPS_PPS_PIN                 (7)
+#define GPS_EN_PIN                  (16)
+
+
+#define BOARD_LED 18    // LED_BUILTIN
+#define BUTTON_PIN                  (0)          /*BUTTON 1 = GPIO0 (BOOT)*/
+#define BUTTON2_PIN                 (17)         /*BUTTON 2 = GPIO17*/
+//#define BUTTON_EXT  17
+
+// SPI GPIOs
+#define SPI_MOSI                    (11)
+#define SPI_SCK                     (13)
+#define SPI_MISO                    (12)
+#define SPI_CS                      (10)
+//#define SCK 13
+//#define MISO 12
+//#define MOSI 11
+//#define SS 10
+
+#define SDCARD_CS                   SPI_CS
+
+#define RADIO_SCLK_PIN              (SPI_SCK)
+#define RADIO_MISO_PIN              (SPI_MISO)
+#define RADIO_MOSI_PIN              (SPI_MOSI)
+
+#define RADIO_CS_PIN                (15)
+#define RADIO_RST_PIN               (3)
+#define RADIO_LDO_EN                (40)
+#define RADIO_CTRL                  (21)
+#define RADIO_DIO1_PIN              (1)
+#define RADIO_BUSY_PIN              (38)
+
+// SX1262 alternative definitions - duplicates 433MHz/868MHz
+#define SX1262_CS RADIO_CS_PIN
+#define SX1262_CTL RADIO_CTRL
+#define SX126x_BUSY RADIO_BUSY_PIN
+#define SX126x_IRQ RADIO_DIO1_PIN
+#define SX126x_RST RADIO_RST_PIN
+
+#define BOARD_LED                   18
+#define LED_ON                      HIGH
+#define LED_OFF                     LOW
+
+#define NTC_PIN                     (14)
+#define FAN_CTRL                    (41)
+
+
+#define ANALOG_REFRESH_INTERVAL 30 // sec messure intervall
+
+//#define ANALOG_PIN 1
+#define ADC_PIN                     (4)
+
+//#define BATTERY_PIN 2 // A battery voltage measurement pin, voltage divider connected here to measure battery voltage
+//#define ADC_MULTIPLIER 5.7    // default and can be overwritten with Flash variable node_analog_batt_faktor Spannungsteiler 47k+10k
+#define BAT_ADC_PULLUP_RES          (300000.0)
+#define BAT_ADC_PULLDOWN_RES        (150000.0)
+#define BAT_MAX_VOLTAGE             (7.4)
+#define BAT_VOL_COMPENSATION        (0.25)
+
+#define HAS_SDCARD
+#define SDCARD_MOSI                 11
+#define SDCARD_MISO                 12
+#define SDCARD_SCLK                 13
+#define SDCARD_CS                   10
+#define SD_SHARE_SPI_BUS           // SD-CARD AND RADIO SHARE SPI BUS
+
+#define HAS_DISPLAY
+#define DISPLAY_MODEL               U8G2_SH1106_128X64_NONAME_F_HW_I2C
+#define DISPLAY_MODEL_SSD_LIB       SH1106Wire
+
+#define __HAS_SPI1__
+
+#define BOARD_VARIANT_NAME          "LoRa 1W"
+#define RADIO_TYPE_STR  "SX1262"
+// end original LilyGo T-Beam-1W
+
+
 #define RF_FREQUENCY 433.175000 // 432.900000   // Hz
 #define LORA_APRS_FREQUENCY 433.775000 // 432.900000   // Hz
-//
 
-#define BOARD_COUNTRY 5   // E22-900 -> 868
+//todo #define BOARD_COUNTRY 5   // ???
 
-#define ENABLE_GPS
-#define ENABLE_BMX280
-#define ENABLE_BMP390
-#define ENABLE_AHT20
-#define ENABLE_SHT21
-#define ENABLE_BMX680
-#define ENABLE_MCP23017
-#define ENABLE_INA226
-#define ENABLE_MC811
-#define ENABLE_RTC
-#define ENABLE_SOFTSER
+//#define ENABLE_GPS
+//#define ENABLE_BMX280
+//#define ENABLE_BMP390
+//#define ENABLE_AHT20
+//#define ENABLE_SHT21
+//#define ENABLE_BMX680
+//#define ENABLE_MCP23017
+//#define ENABLE_INA226
+//#define ENABLE_MC811
+//#define ENABLE_RTC
+//#define ENABLE_SOFTSER
 
-#define SX126x_V3
-#define SX1262_E22  // E22 900M30S/900M33S
 
 #define CURRENT_LIMIT 140 // in mA +20dBm are about 120mA -> check if enough headroom 
-
 #define TX_POWER_MAX 22  // max 22 dBm
 #define TX_POWER_MIN 2
 #define LORA_PREAMBLE_LENGTH DEFAULT_PREAMPLE_LENGTH  // Same for Tx and Rx
 
-#define WAIT_TX 5         // ticks waiting after Lora TX in doTX()
+//todo #define WAIT_TX x         // waiting after Lora TX in doTX() >800µs
 
 #define TX_OUTPUT_POWER 22
 
@@ -66,48 +151,7 @@ definitions for E22 + ESP32-S3_DevKitC-1_N16R8 Board
 #define LORA_SF 11
 
 // =============================================
-// Custom Board homemade E22-Ebyte Module + ESP32-S3 DevKitC-1-N16R8V
+// LilyGo T-BEAM 1W + ESP32-S3-WROOM-1-N16R8
+// spezielle externe User GPIO noch nicht voll ausdefiniert
 // ===== GPIOs =====
-#define ANALOG_PIN 1
-#define ANALOG_REFRESH_INTERVAL 30 // sec messure intervall
-
-#define BATTERY_PIN 2 // A battery voltage measurement pin, voltage divider connected here to measure battery voltage
-#define ADC_MULTIPLIER 5.7    // default and can be overwritten with Flash variable node_analog_batt_faktor Spannungsteiler 47k+10k
-
-#define BUTTON_PIN  0
-#define BUTTON_EXT  21
-
-#define LED_PIXEL 1     // NEOPIXEL
-#define LED_PIN 48      // NEOPIXEL
-#define BOARD_LED 38    // LED_BUILTIN
-
-#define OneWire_GPIO 47
-
-#define GPS_TX_PIN  15
-#define GPS_RX_PIN  16
-
-// I2C GPIOs
-#define I2C_SDA  8
-#define I2C_SCL  9
-
-// SPI GPIOs
-#define SCK 12
-#define MISO 13
-#define MOSI 11
-#define SS 10
-
-// E22 Module
-#define E22_RXEN 4
-#define E22_TXEN 5
-#define E22_DIO1 6
-#define E22_BUSY 7
-#define E22_NRST 17
-#define E22_SCK SCK
-#define E22_NSS SS
-#define LORA_RST E22_NRST // do be compatible with other config.h  
-
-// SX126x_V3 alternative definitions - duplicates 433MHz/868MHz
-#define SX126x_CS E22_NSS
-#define SX126x_IRQ E22_DIO1
-#define SX126x_RST E22_NRST
-#define SX126x_GPIO E22_BUSY
+//#define OneWire_GPIO 47
