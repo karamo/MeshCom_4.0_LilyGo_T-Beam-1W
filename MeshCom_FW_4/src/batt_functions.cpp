@@ -88,10 +88,9 @@ adc_channel_t channel = ADC_CHANNEL_6;     // GPIO7 if ADC1, GPIO17 if ADC2
 adc_bits_width_t width = ADC_WIDTH_BIT_13;
 #elif defined(CONFIG_IDF_TARGET_ESP32S3)
 //static const
-//adc_channel_t channel = ADC_CHANNEL_6;
+adc_channel_t channel = ADC_CHANNEL_6;
 //static const
 adc_bits_width_t width = ADC_WIDTH_BIT_12;
-
 #endif
 
 #endif
@@ -230,9 +229,8 @@ void init_batt(void)
 
 	analogReadResolution(12); // Can be 8, 10, 12 or 14
 
-#elif defined(BOARD_E22_S3)
+#elif defined(BOARD_E22_S3) || defined(BOARD_TBEAM_1W)
 	analogSetAttenuation(ADC_0db);
-
 	analogReadResolution(12);
 
 #elif defined(BOARD_TRACKER)

@@ -331,6 +331,11 @@ LLCC68 radio = new Module(LORA_CS, LORA_DIO0, LORA_RST, LORA_DIO1);
 
     //  begin(sck, miso, mosi, ss).
     SX1262 radio = new Module(SX1262X_CS, SX1262X_IRQ, SX1262X_RST, SX1262X_GPIO);
+#endif
+
+#ifdef USING_SX1262
+    //  begin(sck, miso, mosi, cs)
+    SX1262 radio = new Module(SX1262_CS, SX1262_IRQ, SX1262_RST, SX1262_CS);
 
 #endif
 
@@ -728,7 +733,9 @@ void esp32setup()
         SPI.begin(RF95_SCK, RF95_MISO, RF95_MOSI, RF95_NSS);
     #endif
 
+    #if defined (ENABLE_GPS)
     bool bSETGPS_POWER=false;
+    #endif
 
     #if defined(ENABLE_GPS)
         bSETGPS_POWER=true;
@@ -742,7 +749,9 @@ void esp32setup()
             switchL76KGPS();
         #elif defined (BOARD_T5_EPAPER)
         #else
+            #if defined (ENABLE_GPS)
             setupPMU(bSETGPS_POWER);
+            #endif
         #endif
     #endif
 
@@ -886,7 +895,7 @@ void esp32setup()
     Serial.print(F("[LoRa]...SX1262 V3 chip"));
     #endif
     
-    #ifdef SX1262_E22
+    #if defined(SX1262_E22) || defined(USING_SX1262)
     Serial.print(F("[LoRa]...SX1262 V3 chip"));
     #endif
 
@@ -969,7 +978,7 @@ void esp32setup()
     if(bRadio)
     {
         // set boosted gain
-        #if defined(SX1262_V3) || defined(SX126x_V3) || defined(SX1262_E290) || defined(SX1262X) || defined(SX126X)
+        #if defined(SX1262_V3) || defined(SX126x_V3) || defined(SX1262_E290) || defined(SX1262X) || defined(SX126X) || defined(USING_SX1262)
         Serial.printf("[LoRa]...RX_BOOSTED_GAIN: %d\n", (meshcom_settings.node_sset2 &  0x0800) == 0x0800);
         if (radio.setRxBoostedGainMode(meshcom_settings.node_sset2 & 0x0800)  != RADIOLIB_ERR_NONE ) {
             Serial.println(F("Boosted Gain is not available for this module!"));
@@ -1331,7 +1340,10 @@ void esp32_write_ble(uint8_t confBuff[300], uint8_t conf_len)
 }
 
 
-
+/**
+ * @brief main loop for ESP32-Boards
+ * 
+ */
 void esp32loop()
 {
     // loop T-Deck GUI
@@ -1437,7 +1449,6 @@ void esp32loop()
 
                 led_timer = millis();
             }
-
         }
     #endif
 
@@ -1637,8 +1648,9 @@ void esp32loop()
                 radio.clearPacketReceivedAction();  //KBC 0801
 
                 // set Transmit Interupt
-                bEnableInterruptTransmit = true; //KBC 0801
-                radio.setPacketSentAction(setFlagSent); //KBC 0801
+                // vorerst disable T-BEAM-1W
+                //bEnableInterruptTransmit = true; //KBC 0801
+                //radio.setPacketSentAction(setFlagSent); //KBC 0801
 
                 if(doTX())
                 {

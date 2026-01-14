@@ -25,7 +25,7 @@
     extern int transmissionState;
 #endif
 
-#ifdef SX1262_E22
+#if defined(SX1262_E22) || defined(USING_SX1262)
     #include <RadioLib.h>
     extern SX1262 radio;
     extern int transmissionState;

@@ -10,6 +10,9 @@ definitions for LilyGo T-BEAM 1W Board
 
 #define UNUSED_PIN                   (0)
 
+#define BOARD_VARIANT_NAME          "LoRa 1W"
+#define MODUL_HARDWARE T_BEAM_1W
+
 //#define SX126x_V3
 #ifndef USING_SX1262
 #define USING_SX1262
@@ -42,8 +45,6 @@ definitions for LilyGo T-BEAM 1W Board
 //#define MOSI 11
 //#define SS 10
 
-#define SDCARD_CS                   SPI_CS
-
 #define RADIO_SCLK_PIN              (SPI_SCK)
 #define RADIO_MISO_PIN              (SPI_MISO)
 #define RADIO_MOSI_PIN              (SPI_MOSI)
@@ -59,8 +60,8 @@ definitions for LilyGo T-BEAM 1W Board
 #define SX1262_CS RADIO_CS_PIN
 #define SX1262_CTL RADIO_CTRL
 #define SX126x_BUSY RADIO_BUSY_PIN
-#define SX126x_IRQ RADIO_DIO1_PIN
-#define SX126x_RST RADIO_RST_PIN
+#define SX1262_IRQ RADIO_DIO1_PIN
+#define SX1262_RST RADIO_RST_PIN
 
 #define BOARD_LED                   18
 #define LED_ON                      HIGH
@@ -69,11 +70,9 @@ definitions for LilyGo T-BEAM 1W Board
 #define NTC_PIN                     (14)
 #define FAN_CTRL                    (41)
 
-
-#define ANALOG_REFRESH_INTERVAL 30 // sec messure intervall
-
 //#define ANALOG_PIN 1
 #define ADC_PIN                     (4)
+#define ANALOG_REFRESH_INTERVAL 30 // sec messure intervall
 
 //#define BATTERY_PIN 2 // A battery voltage measurement pin, voltage divider connected here to measure battery voltage
 //#define ADC_MULTIPLIER 5.7    // default and can be overwritten with Flash variable node_analog_batt_faktor Spannungsteiler 47k+10k
@@ -83,10 +82,10 @@ definitions for LilyGo T-BEAM 1W Board
 #define BAT_VOL_COMPENSATION        (0.25)
 
 #define HAS_SDCARD
-#define SDCARD_MOSI                 11
-#define SDCARD_MISO                 12
-#define SDCARD_SCLK                 13
-#define SDCARD_CS                   10
+#define SDCARD_MOSI                 SPI_MOSI
+#define SDCARD_MISO                 SPI_MISO
+#define SDCARD_SCLK                 SPI_SCK
+#define SDCARD_CS                   SPI_CS
 #define SD_SHARE_SPI_BUS           // SD-CARD AND RADIO SHARE SPI BUS
 
 #define HAS_DISPLAY
