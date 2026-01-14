@@ -36,8 +36,9 @@
 ---
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
 Hinzufügen zur MeshCom-FW (neue Nummerierung der Versionen)  
-- [ ] variants Datei
-- [ ] boards JSON-Datei
+- [x] variants Datei
+- [x] boards JSON-Datei
+- [~] spez. configuration.h
 - [ ] OLED SH1106
 - [ ] no PMU
 - [ ] WiFi & BLE
