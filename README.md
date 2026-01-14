@@ -23,7 +23,7 @@
 
 ---
 ### ToDo-List [⬆️](#lilygo-t-beam-1w)
-- [x] **Vorbereitung**: Start mit FW-Version 4.35j (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
+- [x] **Vorbereitung**: Start mit FW-Version 4.35k (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
 - [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
 - [x] **OLED Example** `OLED_SH1106_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
@@ -35,18 +35,18 @@
 
 ---
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
-* [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom-FW (neue Nummerierung beginnend mit **FW V 4.36a**)  
+* [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom FW als **V 4.35l**, die ausschließlich für diese Implementierung gültig ist.  
 * geändete Dateien und offene Fragen siehe https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/issues/3
 
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
-- [~] LilyGo_T-Beam-1W/configuration.h
+- [~] variants/LilyGo_T-Beam-1W/configuration.h
 - [ ] OLED SH1106
 - [ ] no PMU
 - [ ] WiFi & BLE
 - [ ] LoRa SX1262 (433 MHz)
 - [ ] GPS L76K
-- [ ] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
+- [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
 
 ---
