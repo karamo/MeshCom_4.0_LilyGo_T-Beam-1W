@@ -17,7 +17,7 @@ default_envs =
 	;esp32-safeboot
 	;esp32-S3-safeboot
 	;E22_1262-DevKitC
-	;E22-DevKitC
+	E22-DevKitC
 	;E22_XML-DevKitC
 	;E22_1268_S3-DevKitC-1-N16R8
 	;E22_1262_S3-DevKitC-1-N16R8
@@ -31,7 +31,6 @@ default_envs =
 	;ttgo_tbeam_SX1268
 	;ttgo_tbeam_SX1262
 	;ttgo_tbeam_supreme_l76k
-	LILYGO_T-BEAM_1W
 	;t_deck
 	;t_deck_plus
 	;t_deck_pro
