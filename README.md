@@ -40,11 +40,14 @@
 
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
-- [~] variants/LilyGo_T-Beam-1W/configuration.h
-- [~] OLED SH1106
-- [~] no PMU
-- [ ] WiFi & BLE
-- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
+- [x] variants/LilyGo_T-Beam-1W/configuration.h
+- [x] OLED SH1106
+- [x] no PMU
+- [x] WiFi / Gateway
+- [ ] WebServer
+- [ ] OTA
+- [ ] BLE
+- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TCXO setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
@@ -150,14 +153,14 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 * Suggestion: Please give the internal PA stabilization time before transmitting data: For SX1262 chip, the recommended configuration value is >800us  
 <img width="447" height="308" alt="grafik" src="https://github.com/user-attachments/assets/9e8e0751-901b-4a4c-a545-17a5fddf39d9" />
 
-* When the module is ready to transmit/receive data, you need to switch the RF Switch on the module to the transmit/receive channel in advance. This switch is a single-pole double-throw switch. See the figure below for the truth table
+* Wenn das Modul bereit ist, Daten zu senden/empfangen, muss man den RF-Schalter des Moduls im Voraus auf den Sende-/Empfangskanal umschalten. Dieser Schalter ist ein einpoliger Doppeldrehschalter. Siehe die Wahrheitstabelle:
 
 | ❓ DIO2 PIN | CTRL PIN | RF Switch Status                                               |
 | -------- | -------- | -------------------------------------------------------------- |
 | 1        | 0        | ANT and TX channels connected, PA turned on, LNA powered off   |
 | 0        | 1        | ANT and RX channels are connected, PA is closed, LNA is opened |
 
-* **During TX DATA, if the switch is not switched to the correct position in advance, the PA chip inside the module is likely to be damaged.**
+* **Während des TX DATA ist es wahrscheinlich, dass der PA-Chip im Modul beschädigt wird, wenn der Schalter nicht vorher in die richtige Position geschaltet wird.**
 
 
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
@@ -179,5 +182,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
 ---
-***:copyright: 13.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 15.1.2026 by OE3WAS - Wolfgang***
 
