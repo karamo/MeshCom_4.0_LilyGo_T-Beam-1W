@@ -44,7 +44,7 @@
 - [ ] OLED SH1106
 - [ ] no PMU
 - [ ] WiFi & BLE
-- [ ] LoRa SX1262 (433 MHz)
+- [ ] LoRa SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
@@ -84,7 +84,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 ### Pin Map [⬆️](#lilygo-t-beam-1w)
 | 📍Pin | I/O | ☑️ | P5/P6 |Beschreibung |
 | --- |---|---|---| ------------ |
-| IO0 | I | ❌ | | BUTTON_PIN = BOOT_BUTTON |
+| IO0 | I | ❌🔷 | | BUTTON_PIN = BOOT_BUTTON |
 | IO1 | O | ❌ | | RADIO_DIO1_PIN (LoRa_DIO1) |
 | IO2 | x | ✅ | P5:15 ||
 | IO3 | O | ❌ | | RADIO_RST_PIN (LoRa_NRESET) |
@@ -123,6 +123,11 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 ✔️ = über Buchsen-/Stiftleiste herausgeführt  
 ✅ = frei verfügbar, über Buchsen-/Stiftleiste herausgeführt  
 ❌ = intern  
+🔷 = intern aber verwendbar
+
+❓ The PWR button is connected to the PMU:  
+* In shutdown mode, press the PWR button to turn on the power supply
+* In power-on mode, press the PWR button for 6 seconds (default time) to turn off the power supply
 
 〰️ ☑️⭕️🚫⚠️🔴🟠🟡🟢🔵🟣⚫️⚪️🟤🔷🔹❗  
 
@@ -137,6 +142,22 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 > 
 > 1. When receiving data, set it to high level and turn on the LNA power;
 > 2. When transmitting data and sleeping, set it to low level and turn off the LNA power.
+
+Frequently asked questions
+* When testing or using, connect the antenna first, then power on to transmit the signal.
+* The module uses a high-gain, high-efficiency power amplifier. When the output power of SX1262 is +22dBm (max), the module output power is maximum.
+* Suggestion: Please give the internal PA stabilization time before transmitting data: For SX1262 chip, the recommended configuration value is >800us  
+<img width="447" height="308" alt="grafik" src="https://github.com/user-attachments/assets/9e8e0751-901b-4a4c-a545-17a5fddf39d9" />
+
+* When the module is ready to transmit/receive data, you need to switch the RF Switch on the module to the transmit/receive channel in advance. This switch is a single-pole double-throw switch. See the figure below for the truth table
+
+| DIO2 PIN | CTRL PIN | RF Switch Status                                               |
+| -------- | -------- | -------------------------------------------------------------- |
+| 1        | 0        | ANT and TX channels connected, PA turned on, LNA powered off   |
+| 0        | 1        | ANT and RX channels are connected, PA is closed, LNA is opened |
+
+* **During TX DATA, if the switch is not switched to the correct position in advance, the PA chip inside the module is likely to be damaged.**
+
 
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
 
