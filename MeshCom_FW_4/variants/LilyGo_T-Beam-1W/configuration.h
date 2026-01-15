@@ -124,7 +124,7 @@ definitions for LilyGo T-BEAM 1W Board
 
 //todo #define WAIT_TX x         // waiting after Lora TX in doTX() >800µs
 
-#define TX_OUTPUT_POWER 22
+#define TX_OUTPUT_POWER 2
 
 /**
  * RadioLib Coding Rate: Allowed values range from 5 to 8.

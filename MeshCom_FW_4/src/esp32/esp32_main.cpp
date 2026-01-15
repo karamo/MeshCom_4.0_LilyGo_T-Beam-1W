@@ -1190,7 +1190,7 @@ void esp32setup()
                     Serial.println(state);
             }        
 
-            // enablee CRC
+            // enable CRC
             if (radio.setCRC(2) == RADIOLIB_ERR_INVALID_CRC_CONFIGURATION) {
                 Serial.println(F("Selected CRC is invalid for this module!"));
                 while (true);
@@ -1588,7 +1588,7 @@ void esp32loop()
                 // clean up after transmission is finished
                 // this will ensure transmitter is disabled,
                 // RF switch is powered down etc.
-                radio.finishTransmit();
+                //radio.finishTransmit();
 
                 #ifndef BOARD_TLORA_OLV216
                 // reset MeshCom now
