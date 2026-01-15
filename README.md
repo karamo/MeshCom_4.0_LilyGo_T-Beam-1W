@@ -41,9 +41,10 @@
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
 - [~] variants/LilyGo_T-Beam-1W/configuration.h
-- [~] OLED SH1106
-- [~] no PMU
-- [ ] WiFi & BLE
+- [x] OLED SH1106
+- [x] no PMU
+- [x] WiFi
+- [ ] BLE
 - [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
@@ -150,7 +151,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 * Suggestion: Please give the internal PA stabilization time before transmitting data: For SX1262 chip, the recommended configuration value is >800us  
 <img width="447" height="308" alt="grafik" src="https://github.com/user-attachments/assets/9e8e0751-901b-4a4c-a545-17a5fddf39d9" />
 
-* When the module is ready to transmit/receive data, you need to switch the RF Switch on the module to the transmit/receive channel in advance. This switch is a single-pole double-throw switch. See the figure below for the truth table
+* Wenn das Modul bereit ist, Daten zu senden/empfangen, muss man den RF-Schalter des Moduls im Voraus auf den Sende-/Empfangskanal umschalten. Dieser Schalter ist ein einpoliger Doppeldrehschalter. Siehe die Wahrheitstabelle:
 
 | ❓ DIO2 PIN | CTRL PIN | RF Switch Status                                               |
 | -------- | -------- | -------------------------------------------------------------- |
@@ -179,5 +180,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
 ---
-***:copyright: 13.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 15.1.2026 by OE3WAS - Wolfgang***
 
