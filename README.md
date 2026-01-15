@@ -40,12 +40,14 @@
 
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
-- [~] variants/LilyGo_T-Beam-1W/configuration.h
+- [x] variants/LilyGo_T-Beam-1W/configuration.h
 - [x] OLED SH1106
 - [x] no PMU
-- [x] WiFi
+- [x] WiFi / Gateway
+- [ ] WebServer
+- [ ] OTA
 - [ ] BLE
-- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
+- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TXCO setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
