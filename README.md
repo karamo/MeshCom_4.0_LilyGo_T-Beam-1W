@@ -157,7 +157,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 | 1        | 0        | ANT and TX channels connected, PA turned on, LNA powered off   |
 | 0        | 1        | ANT and RX channels are connected, PA is closed, LNA is opened |
 
-* **During TX DATA, if the switch is not switched to the correct position in advance, the PA chip inside the module is likely to be damaged.**
+* **Während des TX DATA ist es wahrscheinlich, dass der PA-Chip im Modul beschädigt wird, wenn der Schalter nicht vorher in die richtige Position geschaltet wird.**
 
 
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
