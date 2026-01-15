@@ -47,7 +47,7 @@
 - [ ] WebServer
 - [ ] OTA
 - [ ] BLE
-- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TXCO setzen]
+- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TCXO setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
