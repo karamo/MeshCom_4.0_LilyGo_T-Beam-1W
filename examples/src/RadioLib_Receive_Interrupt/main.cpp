@@ -46,7 +46,7 @@ SX1276 radio = new Module(RADIO_CS_PIN, RADIO_DIO0_PIN, RADIO_RST_PIN, RADIO_DIO
 #endif
 SX1278 radio = new Module(RADIO_CS_PIN, RADIO_DIO0_PIN, RADIO_RST_PIN, RADIO_DIO1_PIN);
 
-#if   defined(USING_SX1262)
+#elif   defined(USING_SX1262)
 #ifndef CONFIG_RADIO_FREQ
 #define CONFIG_RADIO_FREQ           850.0
 #endif

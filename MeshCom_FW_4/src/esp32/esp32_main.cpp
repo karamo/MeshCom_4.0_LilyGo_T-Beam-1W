@@ -347,7 +347,7 @@ LLCC68 radio = new Module(LORA_CS, LORA_DIO0, LORA_RST, LORA_DIO1);
 #endif
 
 #ifdef USING_SX1262 // T_BEAM_1W
-    //  begin(sck, miso, mosi, cs)
+    // !!!!! es wird nur ein SX1261 erkannt !!!!!
     SX1262 radio = new Module(RADIO_CS_PIN, RADIO_DIO1_PIN, RADIO_RST_PIN, RADIO_BUSY_PIN);    
 #endif
 
@@ -525,22 +525,6 @@ void esp32setup()
 
         #ifdef GPS_PPS_PIN
             pinMode(GPS_PPS_PIN, INPUT);
-        #endif
-
-        #ifdef RADIO_LDO_EN
-            // 1W LoRa LDO enable , Control SX1262 , LNA
-            // must set LDO_EN to HIGH to initialize the Radio
-            pinMode(RADIO_LDO_EN, OUTPUT);
-            digitalWrite(RADIO_LDO_EN, HIGH);
-        #endif
-
-        #ifdef RADIO_CTRL
-            // 1W LoRa RX TX Control
-            // CTRL controls the LNA, not the PA.
-            // Only when RX DATA is on, set to 1 to turn on LNA.
-            // When TX DATA is on, CTL is set to 0 and LNA is turned off.
-            pinMode(RADIO_CTRL, OUTPUT);
-            digitalWrite(RADIO_CTRL, HIGH);  // RX Mode
         #endif
 
         #ifdef FAN_CTRL
@@ -976,7 +960,26 @@ void esp32setup()
         int state = radio.begin(434.0F, 125.0F, 9, 7, SYNC_WORD_SX127x, 10, LORA_PREAMBLE_LENGTH, /*float tcxoVoltage = 0*/ 1.6F, /*bool useRegulatorLDO = false*/ false);
     #else
         Serial.print(F(" Initializing ... "));
-        int state = radio.begin(433.175F);
+
+        #if defined(BOARD_TBEAM_1W)
+        #ifdef RADIO_LDO_EN
+            // T-BEAM-1W Control SX1262, LNA, must set RADIO_LDO_EN to HIGH to power the Radio
+            pinMode(RADIO_LDO_EN, OUTPUT);
+            digitalWrite(RADIO_LDO_EN, HIGH);
+            delay(2);
+        #endif
+
+        #ifdef RADIO_CTRL
+            // T-BEAM-1W LoRa RX/TX Control. RADIO_CTRL controls the LNA, not the PA.
+            // Only when RX DATA is on, set to 1 to turn on LNA.
+            // When TX DATA is on, RADIO_CTRL is set to 0 and LNA is turned off.
+            pinMode(RADIO_CTRL, OUTPUT);
+            digitalWrite(RADIO_CTRL, HIGH);  // RX Mode
+            delay(2);
+        #endif
+        #endif
+
+        int state = radio.begin();
     #endif
     
     #if defined(BOARD_T5_EPAPER)
