@@ -14,6 +14,19 @@
 #include "esp32_gps.h"
 #include "esp32_flash.h"
 
+#ifdef HAS_SDCARD
+#include <SD.h>
+#endif
+
+#if defined(ARDUINO_ARCH_ESP32)
+#include <FS.h>
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5,0,0)
+#include "hal/gpio_hal.h"
+#endif
+#include "driver/gpio.h"
+#endif //ARDUINO_ARCH_ESP32
+
+
 #if defined (GPS_L76K)
     #include "gps_l76k.h"
 #elif defined (GPS_L76K_TDECK)
@@ -333,10 +346,9 @@ LLCC68 radio = new Module(LORA_CS, LORA_DIO0, LORA_RST, LORA_DIO1);
     SX1262 radio = new Module(SX1262X_CS, SX1262X_IRQ, SX1262X_RST, SX1262X_GPIO);
 #endif
 
-#ifdef USING_SX1262
+#ifdef USING_SX1262 // T_BEAM_1W
     //  begin(sck, miso, mosi, cs)
-    SX1262 radio = new Module(SX1262_CS, SX1262_IRQ, SX1262_RST, SX1262_CS);
-
+    SX1262 radio = new Module(RADIO_CS_PIN, RADIO_DIO1_PIN, RADIO_RST_PIN, RADIO_BUSY_PIN);    
 #endif
 
 #ifdef SX1262_E290
@@ -494,7 +506,50 @@ void esp32setup()
         #endif
     #endif
 
-    delay(500);
+    //======================================================
+    // hier mal alles reingepackt bez. der GPOIs für BOARD_TBEAM_1W
+    #if defined(BOARD_TBEAM_1W)
+
+        #if defined(HAS_SDCARD) && defined(SD_SHARE_SPI_BUS)
+            // Share spi bus with lora , set lora cs,rst to high
+            pinMode(RADIO_CS_PIN, OUTPUT);
+            pinMode(RADIO_RST_PIN, OUTPUT);
+            digitalWrite(RADIO_CS_PIN, HIGH);
+            digitalWrite(RADIO_RST_PIN, HIGH);
+        #endif
+
+        #if defined(HAS_GPS) && defined(GPS_EN_PIN)
+            pinMode(GPS_EN_PIN, OUTPUT);
+            digitalWrite(GPS_EN_PIN, HIGH);
+        #endif /*GPS_EN_PIN*/
+
+        #ifdef GPS_PPS_PIN
+            pinMode(GPS_PPS_PIN, INPUT);
+        #endif
+
+        #ifdef RADIO_LDO_EN
+            // 1W LoRa LDO enable , Control SX1262 , LNA
+            // must set LDO_EN to HIGH to initialize the Radio
+            pinMode(RADIO_LDO_EN, OUTPUT);
+            digitalWrite(RADIO_LDO_EN, HIGH);
+        #endif
+
+        #ifdef RADIO_CTRL
+            // 1W LoRa RX TX Control
+            // CTRL controls the LNA, not the PA.
+            // Only when RX DATA is on, set to 1 to turn on LNA.
+            // When TX DATA is on, CTL is set to 0 and LNA is turned off.
+            pinMode(RADIO_CTRL, OUTPUT);
+            digitalWrite(RADIO_CTRL, HIGH);  // RX Mode
+        #endif
+
+        #ifdef FAN_CTRL
+            pinMode(FAN_CTRL, OUTPUT);
+        #endif
+
+    #endif
+    //======================================================
+    delay(5000);  ///< delay for ESP32-S3 nativ USB [OE3WAS]
 
     Serial.println("");
     Serial.println("");
@@ -1588,7 +1643,7 @@ void esp32loop()
                 // clean up after transmission is finished
                 // this will ensure transmitter is disabled,
                 // RF switch is powered down etc.
-                //radio.finishTransmit();
+                //radio.finishTransmit(); // vorerst disable T-BEAM-1W
 
                 #ifndef BOARD_TLORA_OLV216
                 // reset MeshCom now

@@ -49,8 +49,8 @@ definitions for LilyGo T-BEAM 1W Board
 #define RADIO_MISO_PIN              (SPI_MISO)
 #define RADIO_MOSI_PIN              (SPI_MOSI)
 
-#define RADIO_CS_PIN                (15)
-#define RADIO_RST_PIN               (3)
+#define RADIO_CS_PIN                15
+#define RADIO_RST_PIN               3
 #define RADIO_LDO_EN                (40)
 #define RADIO_CTRL                  (21)
 #define RADIO_DIO1_PIN              (1)

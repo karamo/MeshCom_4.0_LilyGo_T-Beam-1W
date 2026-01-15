@@ -224,6 +224,9 @@ U8G2 *u8g2;
 #elif defined(BOARD_TBEAM_V3)
     U8G2_SSD1306_128X64_NONAME_1_SW_I2C u8g2_1(U8G2_R0, 18, 17, U8X8_PIN_NONE);
     U8G2_SH1106_128X64_NONAME_1_SW_I2C u8g2_2(U8G2_R0, 18, 17, U8X8_PIN_NONE);
+#elif defined(T_BEAM_1W)
+    U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2_1(U8G2_R0);  //RESET CLOCK DATA
+    DISPLAY_MODEL u8g2_2(U8G2_R0, U8X8_PIN_NONE);
 #else
     U8G2_SSD1306_128X64_NONAME_1_HW_I2C u8g2_1(U8G2_R0);
     U8G2_SH1106_128X64_NONAME_1_HW_I2C u8g2_2(U8G2_R0);
@@ -584,6 +587,10 @@ int esp32_isSSD1306(int address)
         return 2;
     #endif
 
+    #if defined (BOARD_TBEAM_1W)
+        return 1;  //SH1106
+    #endif
+
     TwoWire *w = NULL;
 
     w = &Wire;
@@ -619,7 +626,7 @@ int esp32_isSSD1306(int address)
     // 0x28 == T-BEAM 1.3" SUPREME 1306
 
     // 0x03 == T-BEAM 0.9" = SSD1306
-    // 0x04 == T-LORA 0.9" 868MHz = SH1106 √OE3WAS
+    // 0x04 == T-LORA 0.9" 868MHz = SH1106 ok OE3WAS
     // 0x06 == SSD1306
     // 0x07 == T-LORA 0.9" type 1 = SSD1306
     // 0x07 == T-LORA 0.9" type 2 = SSD1306

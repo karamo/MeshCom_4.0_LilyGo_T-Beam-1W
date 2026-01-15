@@ -46,7 +46,7 @@ SX1276 radio = new Module(RADIO_CS_PIN, RADIO_DIO0_PIN, RADIO_RST_PIN, RADIO_DIO
 #endif
 SX1278 radio = new Module(RADIO_CS_PIN, RADIO_DIO0_PIN, RADIO_RST_PIN, RADIO_DIO1_PIN);
 
-#elif   defined(USING_SX1262)
+#if   defined(USING_SX1262)
 #ifndef CONFIG_RADIO_FREQ
 #define CONFIG_RADIO_FREQ           850.0
 #endif
@@ -121,11 +121,6 @@ void setup()
 {
     setupBoards();
     delay(1500);  // When the power is turned on, a delay is required.
-
-#ifdef  RADIO_TCXO_ENABLE
-    pinMode(RADIO_TCXO_ENABLE, OUTPUT);
-    digitalWrite(RADIO_TCXO_ENABLE, HIGH);
-#endif
 
     int state = radio.begin();  // initialize radio with default settings
 
