@@ -41,10 +41,11 @@
 - [x] variants Verzeichnis + Dateien
 - [x] boards JSON-Datei
 - [~] variants/LilyGo_T-Beam-1W/configuration.h
-- [ ] OLED SH1106
-- [ ] no PMU
+- [~] OLED SH1106
+- [~] no PMU
 - [ ] WiFi & BLE
-- [ ] LoRa SX1262 TCXO XY16P354 (400..**433**..520 MHz)
+- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
+- [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
@@ -143,7 +144,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 > 1. When receiving data, set it to high level and turn on the LNA power;
 > 2. When transmitting data and sleeping, set it to low level and turn off the LNA power.
 
-Frequently asked questions
+**Frequently asked questions**
 * When testing or using, connect the antenna first, then power on to transmit the signal.
 * The module uses a high-gain, high-efficiency power amplifier. When the output power of SX1262 is +22dBm (max), the module output power is maximum.
 * Suggestion: Please give the internal PA stabilization time before transmitting data: For SX1262 chip, the recommended configuration value is >800us  
@@ -151,7 +152,7 @@ Frequently asked questions
 
 * When the module is ready to transmit/receive data, you need to switch the RF Switch on the module to the transmit/receive channel in advance. This switch is a single-pole double-throw switch. See the figure below for the truth table
 
-| DIO2 PIN | CTRL PIN | RF Switch Status                                               |
+| ❓ DIO2 PIN | CTRL PIN | RF Switch Status                                               |
 | -------- | -------- | -------------------------------------------------------------- |
 | 1        | 0        | ANT and TX channels connected, PA turned on, LNA powered off   |
 | 0        | 1        | ANT and RX channels are connected, PA is closed, LNA is opened |
