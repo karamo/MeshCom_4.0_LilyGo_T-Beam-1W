@@ -24,4 +24,6 @@ Mit 18650-Akkus, BMS und 3D-Druck-Teilen können DIY-Lösungen entstehen.
 * https://www.thingiverse.com/thing:6323710
 * ...
 
-![BMS](/assets/images/BMS-2S.jpg)
+<img alt="BMS-2S" src="/assets/images/BMS-2S.jpg" />
+
+
