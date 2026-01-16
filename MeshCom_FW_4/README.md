@@ -8,7 +8,7 @@
 - [x] **Display**: SH1106
 - [x] **WiFi** als Gateway only
 - [x] **Webserver** [**FW 4.35l.01.15c**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/Test-c)
-- [X] **BLE**
+- [X] **BLE** [**FW 4.35l.01.16a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/16.1.2026)
 - [ ] **LoRa**: SX1262 RX
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
