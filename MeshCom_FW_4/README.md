@@ -1,7 +1,6 @@
-# MeshCom_4.0 for
 <h1 align = "center">🌟LilyGo T-Beam-1W🌟</h1>
 
-## Implementierung
+## Implementierung - MeshCom FW 4.35l
 - [x] Start with Fork **FW-Version 4.35k** from [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware)
 - [x] **variants** files & include in platformio.ini [variants/LilyGo_T-Beam-1W/*]
 - [x] **boards** JSON-Datei [boards/esp32-s3-wroom-1-n16r8.json]
