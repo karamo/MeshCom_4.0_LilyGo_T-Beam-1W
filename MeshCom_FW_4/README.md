@@ -7,7 +7,7 @@
 - [x] **boards** JSON-Datei [boards/esp32-s3-wroom-1-n16r8.json]
 - [x] **pinning** anpassen
 - [x] **Display**: SH1106
-- [x] **WiFi** als Gateway only [**FW 4.35l.01.15c**]
+- [x] **WiFi** als Gateway only [**FW 4.35l.01.15c**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/Test-c)
 - [ ] **Webserver**
 - [ ] BLE
 - [ ] **LoRa**: SX1262 RX
