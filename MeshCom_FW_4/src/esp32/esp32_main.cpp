@@ -966,7 +966,7 @@ void esp32setup()
             // T-BEAM-1W Control SX1262, LNA, must set RADIO_LDO_EN to HIGH to power the Radio
             pinMode(RADIO_LDO_EN, OUTPUT);
             digitalWrite(RADIO_LDO_EN, HIGH);
-            delay(2);
+            delay(200);
         #endif
 
         #ifdef RADIO_CTRL
@@ -974,8 +974,8 @@ void esp32setup()
             // Only when RX DATA is on, set to 1 to turn on LNA.
             // When TX DATA is on, RADIO_CTRL is set to 0 and LNA is turned off.
             pinMode(RADIO_CTRL, OUTPUT);
-            digitalWrite(RADIO_CTRL, HIGH);  // RX Mode
-            delay(2);
+            digitalWrite(RADIO_CTRL, LOW);  // RX Mode
+            delay(200);
         #endif
         #endif
 
