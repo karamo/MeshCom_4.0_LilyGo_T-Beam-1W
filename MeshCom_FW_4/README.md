@@ -8,15 +8,16 @@
 - [x] **Display**: SH1106 [**FW 4.35l.01.15a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/Test)
 - [x] **WiFi** als Gateway only [**FW 4.35l.01.15c**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/Test-c)
 - [ ] **Webserver**
+- [ ] User-BUTTON
 - [ ] BLE
 - [ ] **LoRa**: SX1262 RX
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
 - [ ] OTA
 - [ ] Temperaturmessung und Lüfter-Steuerung
-- [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO setzen]
+- [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
-
+- [ ] 2x externe Steckanschlüsse ???
 
 ---
 ***16.1.2026 by OE3WAS - Wolfgang***
