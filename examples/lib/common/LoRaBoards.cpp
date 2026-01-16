@@ -269,7 +269,10 @@ void setupBoards(bool disable_u8g2 )
 {
     Serial.begin(115200);
     while (!Serial);
-    delay(10000);
+    for (int i=0;i<10;i++) {
+        Serial.print(".");
+        delay(10000);
+    }
     Serial.println("setupBoards");
 
     getChipInfo();
