@@ -23,3 +23,5 @@ Mit 18650-Akkus, BMS und 3D-Druck-Teilen können DIY-Lösungen entstehen.
 * https://www.yeggi.com/q/np+f550+battery/
 * https://www.thingiverse.com/thing:6323710
 * ...
+
+![BMS](/assets/images/BMS-2S.jpg)
