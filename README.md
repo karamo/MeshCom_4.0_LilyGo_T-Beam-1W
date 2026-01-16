@@ -47,6 +47,7 @@
 - [ ] WebServer
 - [ ] OTA
 - [ ] BLE
+- [ ] Temparaturmessung und Lüfter-Steuerung
 - [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TCXO setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
