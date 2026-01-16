@@ -24,6 +24,8 @@ Mit 18650-Akkus, BMS und 3D-Druck-Teilen können DIY-Lösungen entstehen.
 * https://www.thingiverse.com/thing:6323710
 * ...
 
-<img alt="BMS-2S" src="https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/NP-F550_AccuPack/BMS-2S.jpg" />
-
+BMS-2S HW-391  
+<img alt="BMS-2S" src="https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/NP-F550_AccuPack/BMS-2S.jpg" />  
+USB-C_Charge-Booster  
+<img alt="SB-C_Charge-Booster" src="https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/NP-F550_AccuPack/USB-C_Charge-Booster.jpg" />
 
