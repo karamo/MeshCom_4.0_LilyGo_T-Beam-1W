@@ -53,7 +53,7 @@
 #define BAT_MAX_VOLTAGE             (4.2)
 #define BAT_VOL_COMPENSATION        (0.0)
 
-///< ----- T-Beam 1W ----- LoRa 2W
+///< ----- T-Beam 1W ----- LoRa 1W
 #elif defined(T_BEAM_1W)
 
 #ifndef USING_SX1262
@@ -122,15 +122,9 @@
 
 #define __HAS_SPI1__
 
-#define BOARD_VARIANT_NAME          "LoRa 2W"
+#define BOARD_VARIANT_NAME          "LoRa 1W"
 
-#else
-#error "When using it for the first time, please define the board model in <utilities.h>"
 #endif
-
-
-
-
 
 #if  defined(USING_SX1262)
 #define RADIO_TYPE_STR  "SX1262"
@@ -138,12 +132,6 @@
 #define RADIO_TYPE_STR  "SX1276"
 #elif defined(USING_SX1278)
 #define RADIO_TYPE_STR  "SX1278"
-#elif defined(USING_LR1121)
-#define RADIO_TYPE_STR  "LR1121"
-#elif defined(USING_SX1280)
-#define RADIO_TYPE_STR  "SX1280"
-#elif defined(USING_SX1280PA)
-#define RADIO_TYPE_STR  "SX1280PA"
 #endif
 
 

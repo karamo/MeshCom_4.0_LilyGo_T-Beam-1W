@@ -63,14 +63,11 @@ typedef struct {
 /**
  * @brief Setup Boards Std. Functions
  * 
- * @param disable_u8g2 
  */
-void setupBoards(bool disable_u8g2 = false);
+void setupBoards();
 
 #ifdef HAS_SDCARD
 bool beginSDCard();
-#else
-#define beginSDCard()
 #endif
 
 #ifdef DISPLAY_MODEL
@@ -81,8 +78,6 @@ void printResult(bool radio_online);
 
 #ifdef BOARD_LED
 void flashLed();
-#else
-#define flashLed()
 #endif
 
 void scanDevices(TwoWire *w);

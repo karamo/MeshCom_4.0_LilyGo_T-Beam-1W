@@ -121,6 +121,10 @@ void setup()
 {
     setupBoards();
     delay(1500);  // When the power is turned on, a delay is required.
+    if (!u8g2) {
+        Serial.println("No SH1106 display found! Please check whether the connection is normal");
+        while (1);
+    }
 
     int state = radio.begin();  // initialize radio with default settings
 

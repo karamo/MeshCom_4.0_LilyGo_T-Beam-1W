@@ -22,10 +22,6 @@
 SPIClass SDCardSPI(HSPI);
 #endif
 
-#if defined(ARDUINO_ARCH_STM32)
-HardwareSerial  SerialGPS(GPS_RX_PIN, GPS_TX_PIN);
-#endif
-
 #if defined(ARDUINO_ARCH_ESP32)
 #if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5,0,0)
 #include "hal/gpio_hal.h"
@@ -38,7 +34,6 @@ HardwareSerial  SerialGPS(GPS_RX_PIN, GPS_TX_PIN);
 U8G2 *disp = NULL;
 #endif
 
-
 static DevInfo_t  devInfo;
 uint32_t deviceOnline = 0x00;
 static void enable_slow_clock();
@@ -49,8 +44,6 @@ String gps_model = "None";
 #endif
 
 // I2S Devices default address
-uint8_t  bme280_address = 0x77;     // It might be 0x76
-uint8_t  mag_address = 0x1C;        // QMC6310U=0x1C QMC6310N=0x3C
 uint8_t  display_address = 0x3c;    // It might be 0x3D
 
 #ifdef DISPLAY_MODEL
@@ -263,9 +256,8 @@ void getChipInfo()
 /**
  * @brief Setup Boards
  * 
- * @param disable_u8g2 
  */
-void setupBoards(bool disable_u8g2 )
+void setupBoards()
 {
     Serial.begin(115200);
     while (!Serial);
@@ -346,14 +338,6 @@ void setupBoards(bool disable_u8g2 )
     digitalWrite(GPS_RST_PIN, HIGH);
 #endif
 
-#if defined(ARDUINO_ARCH_STM32)
-    SerialGPS.println("@GSR"); delay(300);
-    SerialGPS.println("@GSR"); delay(300);
-    SerialGPS.println("@GSR"); delay(300);
-    SerialGPS.println("@GSR"); delay(300);
-    SerialGPS.println("@GSR"); delay(300);
-#endif
-
 #ifdef RADIO_LDO_EN
     // 1W and BPF LoRa LDO enable , Control SX1262 , LNA
     // 1W and BPF Radio version must set LDO_EN to HIGH to initialize the Radio
@@ -385,11 +369,7 @@ void setupBoards(bool disable_u8g2 )
 
     beginSDCard();
 
-#ifdef HAS_DISPLAY
-    if (!disable_u8g2) {
-        beginDisplay();
-    }
-#endif
+    beginDisplay();
 
     scanWiFi();
     beginWiFi();
@@ -527,11 +507,6 @@ void scanDevices(TwoWire *w)
         if (err == 0) {
             nDevices++;
             switch (addr) {
-            case 0x1C:
-                Serial.printf("\t0x%X found QMC6310U MAG Sensor!\n", addr);
-                deviceOnline |= QMC6310U_ONLINE;
-                mag_address = addr;
-                break;
             case 0x20:
                 Serial.printf("\t0x%X found MCP23017 I/O-Expander\n", addr);
                 break;
@@ -543,23 +518,11 @@ void scanDevices(TwoWire *w)
                 Serial.printf("\t0x%X found AHT10/AHT20 Sensor!\n", addr);
                 break;
             case 0x3C:
-            case 0x3D: {
-                w->beginTransmission(addr);
-                w->write((uint8_t)0x00);
-                w->endTransmission();
-                w->requestFrom((int)addr, 1);
-                uint8_t r = w->read();
-                if (r == 0x80) {
-                    Serial.printf("\tFound QMC6310N MAG Sensor at address 0x%02X\n", addr);
-                    mag_address = addr;
-                    deviceOnline |= QMC6310N_ONLINE;
-                } else {
-                    Serial.printf("\tFound OLED display at address 0x%02X\n", addr);
-                    display_address = addr;
-                    deviceOnline |= DISPLAY_ONLINE;
-                }
-            }
-            break;
+            case 0x3D: 
+                Serial.printf("\tFound OLED display at address 0x%02X\n", addr);
+                display_address = addr;
+                deviceOnline |= DISPLAY_ONLINE;
+                break;
             case 0x51:
                 Serial.printf("\t0x%X found PCF8563 RTC!\n", addr);
                 deviceOnline |= PCF8563_ONLINE;
