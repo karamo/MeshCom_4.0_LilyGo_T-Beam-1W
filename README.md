@@ -1,9 +1,6 @@
 # MeshCom_4.0 for
 <h1 align = "center">🌟LilyGo T-Beam-1W🌟</h1>
 
-***Info: Start der MeshCom-FW-Tests erst nach Erhalt des Moduls ab Ende Jan.2026***  
-***Vorab sind Test-FW geplant, um die einzelnen Key-Components zu testen***
-
 * [Intention](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#intention-%EF%B8%8F)
 * [ToDo-List](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#todo-list-%EF%B8%8F)
 * [Implementierung](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#implementierung-%EF%B8%8F)
