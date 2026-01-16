@@ -47,12 +47,14 @@
 - [ ] WebServer
 - [ ] OTA
 - [ ] BLE
-- [ ] Temparaturmessung und Lüfter-Steuerung
+- [ ] Temperaturmessung und Lüfter-Steuerung
 - [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TCXO setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
 - [ ] GPS L76K
 - [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
 - [ ] Feldtest
+- [ ] Akku-Pack
+- [ ] Gehäuse
 
 ---
 ### Key-Components [⬆️](#lilygo-t-beam-1w)
