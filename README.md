@@ -37,21 +37,10 @@
 ### Implementierung [⬆️](#lilygo-t-beam-1w)
 * [Implementierungsdateien](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/implementation/README.md#implementation-files) zum Hinzufügen zur MeshCom FW als **V 4.35l**, die ausschließlich für diese Implementierung gültig ist.  
 * geändete Dateien und offene Fragen siehe https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/issues/3
-
-- [x] variants Verzeichnis + Dateien
-- [x] boards JSON-Datei
-- [x] variants/LilyGo_T-Beam-1W/configuration.h
-- [x] OLED SH1106
-- [x] no PMU
-- [x] WiFi / Gateway
-- [ ] WebServer
-- [ ] OTA
-- [ ] BLE
-- [~] LoRa RX SX1262 TCXO XY16P354 (400..**433**..520 MHz) [DIO2 & TCXO setzen]
-- [ ] LoRa TX SX1262 TCXO XY16P354 (400..**433**..520 MHz)
-- [ ] GPS L76K
-- [~] LILYGO_T-BEAM-1W_433 => Überführung in die Standard FW 4.35_
+- [~] LILYGO_T-BEAM-1W_433 => [Überführung in die Standard FW 4.35l](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/MeshCom_FW_4/README.md#implementierung)
 - [ ] Feldtest
+- [ ] Akku-Pack
+- [ ] Gehäuse
 
 ---
 ### Key-Components [⬆️](#lilygo-t-beam-1w)
@@ -182,5 +171,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
 ---
-***:copyright: 15.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 16.1.2026 by OE3WAS - Wolfgang***
 
