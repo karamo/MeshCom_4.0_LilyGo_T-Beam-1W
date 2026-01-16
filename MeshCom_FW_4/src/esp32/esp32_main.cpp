@@ -317,7 +317,7 @@ LLCC68 radio = new Module(LORA_CS, LORA_DIO0, LORA_RST, LORA_DIO1);
 #endif
 
 #ifdef SX1262_E22
-    // RadioModule SX1268 
+    // RadioModule SX1262 
     // cs - irq - reset - interrupt gpio
     // If you have RESET of the E22 connected to a GPIO on the ESP you must initialize the GPIO as output and perform a LOW - HIGH cycle, 
     // otherwise your E22 is in an undefined state. RESET can be connected, but is not a must. IF so, make RESET before INIT!
@@ -947,7 +947,7 @@ void esp32setup()
     #endif
 
 
-    #if defined (BOARD_TRACKER)
+    #if defined (BOARD_TRACKER) || defined(BOARD_TBEAM_1W)
         SPI.begin(RADIO_SCLK_PIN, RADIO_MISO_PIN, RADIO_MOSI_PIN);
     #endif
 
@@ -979,6 +979,7 @@ void esp32setup()
         #endif
         #endif
 
+    
         int state = radio.begin();
     #endif
     
