@@ -9,6 +9,7 @@
 - [x] **WiFi** als Gateway only
 - [x] **Webserver**
 - [X] **BLE** [**FW 4.35l.01.16a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/16.1.2026)
+- [x] **HW-ID** 51 = TBEAM_1W [...16b]
 - [ ] **LoRa**: SX1262 RX
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
