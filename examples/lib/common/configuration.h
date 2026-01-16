@@ -80,8 +80,6 @@
 #define SPI_MISO                    (12)
 #define SPI_CS                      (10)
 
-#define SDCARD_CS                   SPI_CS
-
 #define RADIO_SCLK_PIN              (SPI_SCK)
 #define RADIO_MISO_PIN              (SPI_MISO)
 #define RADIO_MOSI_PIN              (SPI_MOSI)
@@ -110,10 +108,10 @@
 #define GPS_BAUD_RATE               9600
 
 #define HAS_SDCARD
-#define SDCARD_MOSI                 11
-#define SDCARD_MISO                 12
-#define SDCARD_SCLK                 13
-#define SDCARD_CS                   10
+#define SDCARD_MOSI                 SPI_MOSI
+#define SDCARD_MISO                 SPI_MISO
+#define SDCARD_SCLK                 SPI_SCK
+#define SDCARD_CS                   SPI_CS
 #define SD_SHARE_SPI_BUS           // SD-CARD AND RADIO SHARE SPI BUS
 
 #define HAS_GPS

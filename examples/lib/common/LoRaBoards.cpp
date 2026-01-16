@@ -48,6 +48,10 @@ static bool find_gps = false;
 String gps_model = "None";
 #endif
 
+// I2S Devices default address
+uint8_t  bme280_address = 0x77;     // It might be 0x76
+uint8_t  mag_address = 0x1C;        // QMC6310U=0x1C QMC6310N=0x3C
+uint8_t  display_address = 0x3c;    // It might be 0x3D
 
 #ifdef DISPLAY_MODEL
 bool beginDisplay()
@@ -360,7 +364,7 @@ void setupBoards(bool disable_u8g2 )
     // Only when RX DATA is on, set to 1 to turn on LNA.
     // When TX DATA is on, CTL is set to 0 and LNA is turned off.
     pinMode(RADIO_CTRL, OUTPUT);
-    digitalWrite(RADIO_CTRL, LOW);
+    digitalWrite(RADIO_CTRL, HIGH);
 #endif
 
 #ifdef RADIO_DIO2_PIN
