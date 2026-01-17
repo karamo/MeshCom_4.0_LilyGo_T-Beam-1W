@@ -27,7 +27,6 @@
 - [x] **SD-Card Example** `SD_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
 - [x] **LoRa Example** `RadioLib_Receive_Interrupt` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
 - [-] **LoRa Example** `RadioLib_Transmit_Interrupt`
-- [~] **WiFi & BLE Example** AP auf `192.168.4.1` ok
 - [~] **GPS Examples** L76K wird richtig erkannt am   **LilyGo T-Beam-1W**
 
 ---
@@ -168,5 +167,5 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
 
 ---
-***:copyright: 16.1.2026 by OE3WAS - Wolfgang***
+***:copyright: 17.1.2026 by OE3WAS - Wolfgang***
 
