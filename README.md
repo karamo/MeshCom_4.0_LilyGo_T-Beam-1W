@@ -37,7 +37,7 @@
 - [ ] Feldtest
 - [ ] Akku-Pack
 - [ ] Gehäuse
-- [ ] Sift-/Buchse Leiste
+- [ ] Stift-/Buchse Leiste
 - [ ] 2x externe 4-pol Stecker RX/TX & I2C
 
 
