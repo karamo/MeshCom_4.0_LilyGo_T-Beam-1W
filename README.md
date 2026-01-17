@@ -37,6 +37,9 @@
 - [ ] Feldtest
 - [ ] Akku-Pack
 - [ ] Gehäuse
+- [ ] Sift-/Buchse Leiste
+- [ ] 2x externe 4-pol Stecker RX/TX & I2C
+
 
 ---
 ### Key-Components [⬆️](#lilygo-t-beam-1w)
