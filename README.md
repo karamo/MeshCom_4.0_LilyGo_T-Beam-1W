@@ -150,6 +150,8 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 
 <img width="663" height="355" alt="grafik" src="https://github.com/user-attachments/assets/7821b069-caec-45c8-a940-28dc79163e76" />
 
+<img width="242" height="216" alt="grafik" src="https://github.com/user-attachments/assets/8e99959b-7b9b-415f-9cc3-98a9cf5135e7" />
+
 ---
 ### • Link zu den Originaldokumenten: [⬆️](#lilygo-t-beam-1w)  
 **<ins>Hardware Overview:</ins>**  
@@ -161,7 +163,8 @@ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/docs/en/t_beam_
 * **Texte und speziell erstellte Dokumente hier:** grundsätzlich ***:copyright: by OE3WAS - Wolfgang***
 * **Sources & FW:** entsprechend der **Lizenz von** [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware)
 
-* Die Hardware & Software sind nach den gängigen Regeln der Technik konzipiert und erstellt. Es wurde jedoch nicht geprüft ob allfällige Normen eingehalten werden.
+* Die Hardware & Software sind nach den gängigen Regeln der Technik konzipiert und erstellt. Es wurde jedoch nicht geprüft ob allfällige Normen u/o Schutzrechte eingehalten werden.
+* Alle hie angegebenen Inhalte sind frei im Internet verfügbar; außer die selbst ferfassten Texte, die mit ©️ gekennzeichnet sind.
 * Die hier angegebenen Hinweise sind lediglich eine Beschreibung einer Möglichkeit des Zusammenbaus bzw. der Firmware.
 * Die Inbetriebnahme erfolgt eigenverantwortlich.
 * Ich weise auf die gesetzlichen Bestimmungen bez. Elektrogeräten, Funkanlagen u.ä. hin, die von jedem Anwender selber einzuhalten sind.
