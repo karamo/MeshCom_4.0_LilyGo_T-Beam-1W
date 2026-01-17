@@ -6,11 +6,11 @@
 - [x] **boards** JSON-Datei [boards/esp32-s3-wroom-1-n16r8.json]
 - [x] **pinning** anpassen
 - [x] **Display**: SH1106
-- [x] **WiFi** als Gateway only
+- [x] **WiFi** als Gateway
 - [x] **Webserver**
-- [X] **BLE** [**FW 4.35l.01.16a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/16.1.2026)
-- [x] **HW-ID** 51 = TBEAM_1W [...16b]
-- [ ] **LoRa**: SX1262 RX
+- [X] **BLE**
+- [x] **HW-ID** 51 = TBEAM_1W
+- [x] **LoRa**: SX1262 RX [**FW 4.35l.01.17a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/4.35l.01.17a)
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
 - [ ] User-BUTTON
@@ -22,5 +22,5 @@
 - [ ] 2x externe Steckanschlüsse ???
 
 ---
-***16.1.2026 by OE3WAS - Wolfgang***
+***17.1.2026 by OE3WAS - Wolfgang***
 
