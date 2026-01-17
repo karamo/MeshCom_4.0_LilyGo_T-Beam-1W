@@ -41,6 +41,7 @@
     #define CONFIG_RADIO_OUTPUT_POWER   2
     #endif
 
+    // esp32_main.cpp 349
     SX1262 radio = new Module(RADIO_CS_PIN, RADIO_DIO1_PIN, RADIO_RST_PIN, RADIO_BUSY_PIN);
 
 #endif // Radio define end
