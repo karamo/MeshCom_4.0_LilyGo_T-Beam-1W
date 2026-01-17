@@ -40,11 +40,8 @@ definitions for LilyGo T-BEAM 1W Board
 #define SPI_SCK                     (13)
 #define SPI_MISO                    (12)
 #define SPI_CS                      (10)
-//#define SCK 13
-//#define MISO 12
-//#define MOSI 11
-//#define SS 10
 
+#define SDCARD_CS                   SPI_CS
 #define RADIO_SCLK_PIN              (SPI_SCK)
 #define RADIO_MISO_PIN              (SPI_MISO)
 #define RADIO_MOSI_PIN              (SPI_MOSI)
@@ -81,12 +78,16 @@ definitions for LilyGo T-BEAM 1W Board
 #define BAT_MAX_VOLTAGE             (7.4)
 #define BAT_VOL_COMPENSATION        (0.25)
 
+#define GPS_SLEEP_HOLD_ON_LOW
+#define GPS_BAUD_RATE               9600
 #define HAS_SDCARD
+#define HAS_GPS
 #define SDCARD_MOSI                 SPI_MOSI
 #define SDCARD_MISO                 SPI_MISO
 #define SDCARD_SCLK                 SPI_SCK
 #define SDCARD_CS                   SPI_CS
 #define SD_SHARE_SPI_BUS           // SD-CARD AND RADIO SHARE SPI BUS
+#define __HAS_SPI1__
 
 #define HAS_DISPLAY
 #define DISPLAY_MODEL               U8G2_SH1106_128X64_NONAME_F_HW_I2C

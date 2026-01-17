@@ -484,9 +484,10 @@ void esp32setup()
     while(!Serial && isc > 0)
     {
         delay(500);
-
         isc--;
     }
+    for (int i=0;i<10;i++) { //Zeit geben, um Terminal einzuschalten bei nativer USB
+        Serial.print("."); delay(1000); }
 
     #if defined BOARD_T5_EPAPER
         if (psramInit()) {
@@ -509,6 +510,8 @@ void esp32setup()
     //======================================================
     // hier mal alles reingepackt bez. der GPOIs für BOARD_TBEAM_1W
     #if defined(BOARD_TBEAM_1W)
+
+        SPI.begin(RADIO_SCLK_PIN, RADIO_MISO_PIN, RADIO_MOSI_PIN);
 
         #if defined(HAS_SDCARD) && defined(SD_SHARE_SPI_BUS)
             // Share spi bus with lora , set lora cs,rst to high
@@ -974,7 +977,7 @@ void esp32setup()
             // Only when RX DATA is on, set to 1 to turn on LNA.
             // When TX DATA is on, RADIO_CTRL is set to 0 and LNA is turned off.
             pinMode(RADIO_CTRL, OUTPUT);
-            digitalWrite(RADIO_CTRL, LOW);  // RX Mode
+            digitalWrite(RADIO_CTRL, HIGH);  // RX Mode
             delay(200);
         #endif
         #endif
@@ -1163,7 +1166,7 @@ void esp32setup()
         #endif
 
         // setup for SX126x, 1268_V3 Radios
-        #if defined(SX126X) || defined(SX126x_V3) || defined(SX1262X)
+        #if defined(SX126X) || defined(SX126x_V3) || defined(SX1262X) || defined(USING_SX1262)
         // set the function that will be called
         // when LoRa preamble is not detected within CAD timeout period
         // or when a packet is received
