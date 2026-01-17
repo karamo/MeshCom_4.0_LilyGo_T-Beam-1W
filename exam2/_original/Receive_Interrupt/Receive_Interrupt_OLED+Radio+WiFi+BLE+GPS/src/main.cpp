@@ -16,23 +16,8 @@
    https://jgromes.github.io/RadioLib/
 */
 
-#include <Arduino.h>
-#include <SPI.h>
-#include <Wire.h>
-#include <esp_mac.h>
-#include "soc/rtc.h"
-
-#if defined(ARDUINO_ARCH_ESP32)
-#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5,0,0)
-#include "hal/gpio_hal.h"
-#endif
-#include "driver/gpio.h"
-#endif //ARDUINO_ARCH_ESP32
-
-#include <U8g2lib.h>
 #include <RadioLib.h>
-
-#include "configuration.h"
+#include "LoRaBoards.h"
 
 
 #if   defined(USING_SX1262)
@@ -61,105 +46,38 @@ void setFlag(void)
     receivedFlag = true;
 }
 
-uint8_t  display_address = 0x3c;    // It might be 0x3D
-
-U8G2 *disp = NULL;
-#define U8G2_HOR_ALIGN_CENTER(t)    ((disp->getDisplayWidth() -  (disp->getUTF8Width(t))) / 2)
-#define U8G2_HOR_ALIGN_RIGHT(t)     ( disp->getDisplayWidth()  -  disp->getUTF8Width(t))
-
-bool beginDisplay()
-{
-    Wire.beginTransmission(display_address);
-    if (Wire.endTransmission() == 0) {
-        disp = new DISPLAY_MODEL(U8G2_R0, U8X8_PIN_NONE);
-        Serial.printf("Find Display model at 0x%X address\n", display_address);
-        disp->begin();
-        disp->clearBuffer();
-        disp->setFont(u8g2_font_inb19_mr);
-        disp->drawStr(0, 30, "LilyGo");
-        disp->drawHLine(2, 35, 47);
-        disp->drawHLine(3, 36, 47);
-        disp->drawVLine(45, 32, 12);
-        disp->drawVLine(46, 33, 12);
-        disp->setFont(u8g2_font_inb19_mf);
-        disp->drawStr(58, 60, "LoRa");
-        disp->sendBuffer();
-        disp->setFont(u8g2_font_fur11_tf);
-        delay(3000);
-        return true;
-    }
-
-    Serial.printf("Warning: Failed to find Display at 0x%0X address\n", display_address);
-    return false;
-}
-
 void drawMain()
 {
-    if (disp) {
-        disp->clearBuffer();
-        disp->drawRFrame(0, 0, 128, 64, 5);
-        disp->setFont(u8g2_font_pxplusibmvga8_mr);
-        disp->setCursor(15, 20);
-        disp->print("RX:");
-        disp->setCursor(15, 35);
-        disp->print("SNR:");
-        disp->setCursor(15, 50);
-        disp->print("RSSI:");
+    if (u8g2) {
+        u8g2->clearBuffer();
+        u8g2->drawRFrame(0, 0, 128, 64, 5);
+        u8g2->setFont(u8g2_font_pxplusibmvga8_mr);
+        u8g2->setCursor(15, 20);
+        u8g2->print("RX:");
+        u8g2->setCursor(15, 35);
+        u8g2->print("SNR:");
+        u8g2->setCursor(15, 50);
+        u8g2->print("RSSI:");
 
-        disp->setFont(u8g2_font_crox1h_tr);
-        disp->setCursor( U8G2_HOR_ALIGN_RIGHT(payload.c_str()) - 21, 20 );
-        disp->print(payload);
-        disp->setCursor( U8G2_HOR_ALIGN_RIGHT(snr.c_str()) - 21, 35 );
-        disp->print(snr);
-        disp->setCursor( U8G2_HOR_ALIGN_RIGHT(rssi.c_str()) - 21, 50 );
-        disp->print(rssi);
-        disp->sendBuffer();
+        u8g2->setFont(u8g2_font_crox1h_tr);
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(payload.c_str()) - 21, 20 );
+        u8g2->print(payload);
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(snr.c_str()) - 21, 35 );
+        u8g2->print(snr);
+        u8g2->setCursor( U8G2_HOR_ALIGN_RIGHT(rssi.c_str()) - 21, 50 );
+        u8g2->print(rssi);
+        u8g2->sendBuffer();
     }
 }
 
-//=======================================================================================
 void setup()
 {
-    Serial.begin(115200);
-    while (!Serial);
-    for (int i=0;i<10;i++) {
-        Serial.print(".");
-        delay(1000);
-    }
-    Serial.println("\nsetup Board");
-
-    #if defined(ARDUINO_ARCH_ESP32)
-        SPI.begin(RADIO_SCLK_PIN, RADIO_MISO_PIN, RADIO_MOSI_PIN);
-    #endif
-
-    #ifdef RADIO_LDO_EN
-        /*
-        * 1W and BPF LoRa LDO enable , Control SX1262 , LNA
-        * 1W and BPF  Radio version must set LDO_EN to HIGH to initialize the Radio
-        * */
-        pinMode(RADIO_LDO_EN, OUTPUT);
-        digitalWrite(RADIO_LDO_EN, HIGH);
-    #endif
-
-    #ifdef RADIO_CTRL
-        /*
-        * 1W and BPF LoRa RX TX Control
-        * CTRL controls the LNA, not the PA.
-        * Only when RX DATA is on, set to 1 to turn on LNA
-        * When TX DATA is on, CTL is set to 0 and LNA is turned off.
-        * */
-        pinMode(RADIO_CTRL, OUTPUT);
-        digitalWrite(RADIO_CTRL, LOW);
-    #endif
-
-    #ifdef I2C_SDA
-        Wire.begin(I2C_SDA, I2C_SCL);
-    #endif
-
-    beginDisplay();
+    setupBoards();
 
     // initialize radio with default settings
     int state = radio.begin();
+
+    printResult(state == RADIOLIB_ERR_NONE);
 
     Serial.printf("[%s]:", RADIO_TYPE_STR);
     Serial.print(F("Radio Initializing ... "));
@@ -263,10 +181,72 @@ void setup()
         while (true);
     }
 
+#if  defined(USING_LR1121)
+#if defined(USING_LR1121PA)
+    if (CONFIG_RADIO_FREQ < 2400) {
+        Serial.printf("LR1121 PA Version Using low frequency switch table for PA version\n");
+        radio.setRfSwitchTable(pa_version_rf_switch_dio_pins, low_freq_switch_table);
+    } else {
+        Serial.printf("LR1121 PA Version Using high frequency switch table for PA version\n");
+        radio.setRfSwitchTable(pa_version_rf_switch_dio_pins, high_freq_switch_table);
+    }
+#else   //  Version without PA rf switch table
+    Serial.println("LR1121 without PA Version");
+    static const uint32_t rfswitch_dio_pins[] = {
+        RADIOLIB_LR11X0_DIO5, RADIOLIB_LR11X0_DIO6,
+        RADIOLIB_NC, RADIOLIB_NC, RADIOLIB_NC
+    };
+    static const Module::RfSwitchMode_t rfswitch_table[] = {
+        // mode                  DIO5  DIO6
+        { LR11x0::MODE_STBY,   { LOW,  LOW  } },
+        { LR11x0::MODE_RX,     { HIGH, LOW  } },
+        { LR11x0::MODE_TX,     { LOW,  HIGH } },
+        { LR11x0::MODE_TX_HP,  { LOW,  HIGH } },
+        { LR11x0::MODE_TX_HF,  { LOW,  LOW  } },
+        { LR11x0::MODE_GNSS,   { LOW,  LOW  } },
+        { LR11x0::MODE_WIFI,   { LOW,  LOW  } },
+        END_OF_MODE_TABLE,
+    };
+    radio.setRfSwitchTable(rfswitch_dio_pins, rfswitch_table);
+#endif /*USING_LR1121PA*/
+
+    // LR1121 TCXO Voltage 2.85~3.15V
+    radio.setTCXO(3.0);
+
+#endif /*USING_LR1121*/
+
+#ifdef USING_DIO2_AS_RF_SWITCH
+#ifdef USING_SX1262
+    // Some SX126x modules use DIO2 as RF switch. To enable
+    // this feature, the following method can be used.
+    // NOTE: As long as DIO2 is configured to control RF switch,
+    //       it can't be used as interrupt pin!
+    if (radio.setDio2AsRfSwitch() != RADIOLIB_ERR_NONE) {
+        Serial.println(F("Failed to set DIO2 as RF switch!"));
+        while (true);
+    }
+#endif //USING_SX1262
+#endif //USING_DIO2_AS_RF_SWITCH
+
+
+
+#ifdef RADIO_SWITCH_PIN
+    // T-MOTION
+    const uint32_t pins[] = {
+        RADIO_SWITCH_PIN, RADIO_SWITCH_PIN, RADIOLIB_NC,
+    };
+    static const Module::RfSwitchMode_t table[] = {
+        {Module::MODE_IDLE,  {0,  0} },
+        {Module::MODE_RX,    {1, 0} },
+        {Module::MODE_TX,    {0, 1} },
+        END_OF_MODE_TABLE,
+    };
+    radio.setRfSwitchTable(pins, table);
+#endif
 
 #ifdef RADIO_CTRL
-    Serial.println("Turn on LNA, Enter Rx mode.");
-    // 1W LoRa LNA Control ,set HIGH turn on LNA ,RX Mode
+    Serial.println("Turn on LAN, Enter Rx mode.");
+    // 1W and BPF LoRa LAN Control ,set HIGH turn on LAN ,RX Mode
     digitalWrite(RADIO_CTRL, HIGH);
 #endif /*RADIO_CTRL*/
 
