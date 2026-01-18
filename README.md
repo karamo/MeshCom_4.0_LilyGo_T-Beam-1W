@@ -38,6 +38,8 @@
 - [ ] Akku-Pack
 - [ ] Gehäuse
 - [ ] Stift-/Buchse Leiste
+- [ ] Zusatz-PCBs
+- [ ] SD-Card
 - [ ] 2x externe 4-pol Stecker RX/TX & I2C
 
 
