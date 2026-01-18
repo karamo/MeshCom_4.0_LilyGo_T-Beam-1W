@@ -29,11 +29,12 @@ definitions for LilyGo T-BEAM 1W Board
 #define GPS_PPS_PIN                 (7)
 #define GPS_EN_PIN                  (16)
 
+#define BOARD_LED                   18
+#define LED_ON                      HIGH
+#define LED_OFF                     LOW
 
-#define BOARD_LED 18    // LED_BUILTIN
-#define BUTTON_PIN                  (0)          /*BUTTON 1 = GPIO0 (BOOT)*/
-#define BUTTON2_PIN                 (17)         /*BUTTON 2 = GPIO17*/
-//#define BUTTON_EXT  17
+#define BUTTON0_PIN                 (0)   /*BUTTON 0 = GPIO0 (BOOT)*/
+#define BUTTON_PIN                  17    /*BUTTON 1 = GPIO17*/
 
 // SPI GPIOs
 #define SPI_MOSI                    (11)
@@ -59,10 +60,6 @@ definitions for LilyGo T-BEAM 1W Board
 #define SX126x_BUSY RADIO_BUSY_PIN
 #define SX1262_IRQ RADIO_DIO1_PIN
 #define SX1262_RST RADIO_RST_PIN
-
-#define BOARD_LED                   18
-#define LED_ON                      HIGH
-#define LED_OFF                     LOW
 
 #define NTC_PIN                     (14)
 #define FAN_CTRL                    (41)
