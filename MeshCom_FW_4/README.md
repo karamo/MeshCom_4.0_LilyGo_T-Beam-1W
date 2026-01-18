@@ -11,7 +11,7 @@
 - [X] **BLE**
 - [x] **HW-ID** 51 = TBEAM_1W
 - [x] On-Board-**LED** (**`--board led {on|off}`**)
-- [x] User-**BUTTON** (**`--button gpio 17 --button on --reboot`**, LongPress = Display on/off, Click = Screens blättern, TrippleClick = POS-Anzeige on/off)
+- [x] User-**BUTTON** (**`--button gpio 17 --button on --reboot`**, LongPress = Display on/off, Click = Screens blättern, DoubleClick = Track POS sent, TrippleClick = POS-Anzeige on/off)
 - [x] **LoRa**: SX1262 RX [**FW 4.35l.01.18.b**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/4.35l.01.18.b)
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
