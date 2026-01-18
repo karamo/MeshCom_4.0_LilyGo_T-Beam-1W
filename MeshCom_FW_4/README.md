@@ -20,7 +20,7 @@
 - [ ] Temperaturmessung und Lüfter-Steuerung
 - [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
-- [ ] 2x externe Steckanschlüsse ???
+
 
 ---
 ***18.1.2026 by OE3WAS - Wolfgang***
