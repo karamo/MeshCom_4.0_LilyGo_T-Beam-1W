@@ -21,7 +21,7 @@
 ---
 ### ToDo-List [⬆️](#lilygo-t-beam-1w)
 - [x] **Vorbereitung**: Start mit FW-Version 4.35k (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
-- [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
+- [x] [**Pin Map**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#pin-map-%EF%B8%8F)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
 - [x] **OLED Example** `OLED_SH1106_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
 - [x] **SD-Card Example** `SD_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
