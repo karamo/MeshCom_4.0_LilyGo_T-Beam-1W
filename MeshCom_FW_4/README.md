@@ -1,6 +1,6 @@
 <h1 align = "center">🌟LilyGo T-Beam-1W🌟</h1>
 
-## Implementierung - MeshCom FW 4.35l
+## Implementierung - MeshCom FW 4.35l-dd.mm.α
 - [x] Start with Fork **FW-Version 4.35k** from [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware)
 - [x] **variants** files & include in platformio.ini [variants/LilyGo_T-Beam-1W/*]
 - [x] **boards** JSON-Datei [boards/esp32-s3-wroom-1-n16r8.json]
@@ -16,11 +16,12 @@
 - [ ] User-BUTTON
 - [ ] BATT
 - [ ] OTA
+- [ ] MQTT
 - [ ] Temperaturmessung und Lüfter-Steuerung
 - [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
 - [ ] LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
 - [ ] 2x externe Steckanschlüsse ???
 
 ---
-***17.1.2026 by OE3WAS - Wolfgang***
+***18.1.2026 by OE3WAS - Wolfgang***
 
