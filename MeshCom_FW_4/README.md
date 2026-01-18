@@ -20,8 +20,9 @@
 - [ ] Freigabe von Sensoren
 - [ ] MQTT (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/7)
 - [ ] Temperaturmessung und Lüfter-Steuerung (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/6)
-- [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
-- [ ] LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
+
+* LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
+* LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
 
 
 ---
