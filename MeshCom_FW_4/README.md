@@ -15,8 +15,9 @@
 - [x] **LoRa**: SX1262 RX [**FW 4.35l.01.18.b**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/4.35l.01.18.b)
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
-- [ ] BATT
-- [ ] OTA
+- [ ] **BATT**
+- [ ] **OTA** noch ausführlich testen
+- [ ] tools/download_meshcom.py u.a. noch anpassen
 - [ ] Freigabe von Sensoren
 - [ ] MQTT (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/7)
 - [ ] Temperaturmessung und Lüfter-Steuerung (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/6)
