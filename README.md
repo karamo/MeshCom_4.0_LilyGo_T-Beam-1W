@@ -95,7 +95,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 | IO14 | I | ❌✔️ | P6:5 | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
 | IO15 | O | ❌ | | RADIO_CS_PIN (LoRa) |
 | IO16 | O | ❌ | | GPS_EN_PIN |
-| IO17 | I | ❌✔️ | P6:7 | BUTTON2_PIN |
+| IO17 | I | ❌✔️ | P6:7 | BUTTON1_PIN |
 | IO18 | O | ❌✔️ | P6:6 | BOARD_LED = LED3 |
 | IO21 | O | ❌✔️ | P6:8 | RADIO_CTRL (LoRa_CTL) |
 | IO38 | I | ❌ | | RADIO_BUSY_PIN (LoRa_BUSY) |
