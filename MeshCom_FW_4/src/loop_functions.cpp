@@ -225,7 +225,7 @@ U8G2 *u8g2;
     U8G2_SSD1306_128X64_NONAME_1_SW_I2C u8g2_1(U8G2_R0, 18, 17, U8X8_PIN_NONE);
     U8G2_SH1106_128X64_NONAME_1_SW_I2C u8g2_2(U8G2_R0, 18, 17, U8X8_PIN_NONE);
 #elif defined(T_BEAM_1W)
-    U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2_1(U8G2_R0);  //RESET CLOCK DATA
+    DISPLAY_MODEL u8g2_1(U8G2_R0, U8X8_PIN_NONE);  //RESET CLOCK DATA
     DISPLAY_MODEL u8g2_2(U8G2_R0, U8X8_PIN_NONE);
 #else
     U8G2_SSD1306_128X64_NONAME_1_HW_I2C u8g2_1(U8G2_R0);
@@ -588,7 +588,7 @@ int esp32_isSSD1306(int address)
     #endif
 
     #if defined (BOARD_TBEAM_1W)
-        return 1;  //SH1106
+        return 1;  //SH1106 aber stimmt 1 wirklich?
     #endif
 
     TwoWire *w = NULL;
