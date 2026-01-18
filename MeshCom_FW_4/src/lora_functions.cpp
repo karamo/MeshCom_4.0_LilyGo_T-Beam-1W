@@ -934,6 +934,7 @@ bool is_new_packet(uint8_t compBuffer[4])
  */
 bool doTX()
 {
+    return false;  // vorerst disable T-BEAM-1W
     //#if not defined(BOARD_T_DECK_PRO)
 
     // next TX new TX-DELAY
@@ -995,7 +996,7 @@ bool doTX()
                         Radio.Send(lora_tx_buffer, sendlng);
                     #else
                         #ifndef BOARD_T5_EPAPER
-                        //transmissionState = radio.startTransmit(lora_tx_buffer, sendlng); // vorerst disable T-BEAM-1W
+                        transmissionState = radio.startTransmit(lora_tx_buffer, sendlng);
                         #endif
                         bLED_RED = true;
                     #endif
@@ -1017,7 +1018,7 @@ bool doTX()
                     Radio.Send(lora_tx_buffer, sendlng);
                 #else
                     #ifndef BOARD_T5_EPAPER
-                    //transmissionState = radio.startTransmit(lora_tx_buffer, sendlng); // vorerst disable T-BEAM-1W
+                    transmissionState = radio.startTransmit(lora_tx_buffer, sendlng);
                     #endif
                     bLED_ORANGE = true;
                 #endif
@@ -1078,7 +1079,7 @@ bool doTX()
                         Radio.Send(lora_tx_buffer, sendlng);
                     #else
                         #ifndef BOARD_T5_EPAPER
-                        //transmissionState = radio.startTransmit(lora_tx_buffer, sendlng); // vorerst disable T-BEAM-1W
+                        transmissionState = radio.startTransmit(lora_tx_buffer, sendlng);
                         #endif
                         bLED_RED = true;
                     #endif

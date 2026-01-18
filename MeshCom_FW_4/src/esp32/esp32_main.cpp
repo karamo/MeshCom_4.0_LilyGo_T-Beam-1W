@@ -487,7 +487,7 @@ void esp32setup()
         isc--;
     }
     for (int i=0;i<10;i++) { //Zeit geben, um Terminal einzuschalten bei nativer USB
-        Serial.print("."); delay(1000); }
+        Serial.println("."); delay(1000); }
 
     #if defined BOARD_T5_EPAPER
         if (psramInit()) {
@@ -983,7 +983,7 @@ void esp32setup()
         #endif
 
     
-        int state = radio.begin();
+        int state = radio.begin(433.175F);
     #endif
     
     #if defined(BOARD_T5_EPAPER)
@@ -1402,10 +1402,7 @@ void esp32_write_ble(uint8_t confBuff[300], uint8_t conf_len)
 }
 
 
-/**
- * @brief main loop for ESP32-Boards
- * 
- */
+
 void esp32loop()
 {
     // loop T-Deck GUI
@@ -1710,9 +1707,8 @@ void esp32loop()
                 radio.clearPacketReceivedAction();  //KBC 0801
 
                 // set Transmit Interupt
-                // vorerst disable T-BEAM-1W
-                //bEnableInterruptTransmit = true; //KBC 0801
-                //radio.setPacketSentAction(setFlagSent); //KBC 0801
+                bEnableInterruptTransmit = true; //KBC 0801
+                radio.setPacketSentAction(setFlagSent); //KBC 0801
 
                 if(doTX())
                 {
