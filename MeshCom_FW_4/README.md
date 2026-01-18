@@ -14,6 +14,7 @@
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
 - [ ] User-BUTTON
+- [ ] On-Board-LED
 - [ ] BATT
 - [ ] OTA
 - [ ] MQTT (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/7)
