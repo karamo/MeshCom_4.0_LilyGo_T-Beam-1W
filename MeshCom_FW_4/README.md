@@ -10,18 +10,19 @@
 - [x] **Webserver**
 - [X] **BLE**
 - [x] **HW-ID** 51 = TBEAM_1W
-- [x] **LoRa**: SX1262 RX [**FW 4.35l.01.17a**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/4.35l.01.17a)
+- [x] On-Board-LED (**`--board led {on|off}`**)
+- [x] **LoRa**: SX1262 RX [**FW 4.35l.01.18.b**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/releases/tag/4.35l.01.18.b)
 - [ ] **LoRa**: SX1262 TX
 - [ ] **GPS**: L76K
-- [ ] User-BUTTON
-- [ ] On-Board-LED
+- [~] User-BUTTON (**`--button gpio 17 --button on --reboot`**, nur longPress funktioniert)
 - [ ] BATT
 - [ ] OTA
 - [ ] Freigabe von Sensoren
 - [ ] MQTT (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/7)
 - [ ] Temperaturmessung und Lüfter-Steuerung (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/6)
-- [ ] LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
-- [ ] LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
+
+* LoRa RX SX1262 TCXO XY16P354 (400..433..520 MHz) [DIO2 & TCXO (DIO3) setzen]
+* LoRa TX SX1262 TCXO XY16P354 (400..433..520 MHz)
 
 
 ---

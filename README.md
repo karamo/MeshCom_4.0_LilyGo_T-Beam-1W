@@ -21,7 +21,7 @@
 ---
 ### ToDo-List [⬆️](#lilygo-t-beam-1w)
 - [x] **Vorbereitung**: Start mit FW-Version 4.35k (fork von [**MeshCom-FW**  ](https://github.com/icssw-org/MeshCom-Firmware))
-- [x] [**pinning**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W#-pin-map)
+- [x] [**Pin Map**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/blob/main/README.md#pin-map-%EF%B8%8F)
 - [ ] [**examples**](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/tree/main/examples#fw-beispiele)
 - [x] **OLED Example** `OLED_SH1106_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
 - [x] **SD-Card Example** `SD_Test` getestet mit **T3_V1.6.1** & **LilyGo T-Beam-1W**
@@ -95,7 +95,7 @@ siehe: [firmware-upload](https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/
 | IO14 | I | ❌✔️ | P6:5 | NTC_PIN = Fan TEMP-SAMP (**3V3** - NCP18XH103F03RB -**IO14**- 10k - **GND**) |
 | IO15 | O | ❌ | | RADIO_CS_PIN (LoRa) |
 | IO16 | O | ❌ | | GPS_EN_PIN |
-| IO17 | I | ❌✔️ | P6:7 | BUTTON2_PIN |
+| IO17 | I | ❌✔️ | P6:7 | BUTTON1_PIN |
 | IO18 | O | ❌✔️ | P6:6 | BOARD_LED = LED3 |
 | IO21 | O | ❌✔️ | P6:8 | RADIO_CTRL (LoRa_CTL) |
 | IO38 | I | ❌ | | RADIO_BUSY_PIN (LoRa_BUSY) |
