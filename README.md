@@ -39,7 +39,7 @@
 - [ ] Gehäuse
 - [ ] Stift-/Buchse Leiste
 - [ ] Zusatz-PCBs
-- [ ] SD-Card
+- [ ] SD-Card (siehe auch https://github.com/karamo/MeshCom_4.0_LilyGo_T-Beam-1W/discussions/7)
 - [ ] 2x externe 4-pol Stecker RX/TX & I2C
 
 
