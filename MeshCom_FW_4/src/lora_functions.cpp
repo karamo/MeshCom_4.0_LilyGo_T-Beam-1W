@@ -934,7 +934,6 @@ bool is_new_packet(uint8_t compBuffer[4])
  */
 bool doTX()
 {
-    return false;  // vorerst disable T-BEAM-1W
     //#if not defined(BOARD_T_DECK_PRO)
 
     // next TX new TX-DELAY
@@ -942,8 +941,8 @@ bool doTX()
     {
         cmd_counter--;
         
-        //if(bLORADEBUG)
-        //Serial.printf("cmd_counter > 0:%i \n", cmd_counter);
+        if(bLORADEBUG)
+        Serial.printf("cmd_counter > 0:%i \n", cmd_counter);
 
         return false;
     }

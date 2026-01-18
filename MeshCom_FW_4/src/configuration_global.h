@@ -32,7 +32,7 @@
 
 // Meshcom Params
 #define LONGNAME_MAXLEN 20 // maximum length of the longname
-#define TX_ENABLE 1        // switch to en/disable LoRa TX
+#define TX_ENABLE 0        // switch to en/disable LoRa TX
 #define MAX_CAD_WAIT 10    // maximum retries on channel free detection when we want to TX lora
 #define MAX_CALL_LEN 20     // max length of Callsign
 
